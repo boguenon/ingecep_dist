@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  server configuration ver 3.5
+-->
+<config>
+	<!-- 
+		server section
+		
+		defaultlocale : locale that used as default
+		session_expire : client session expires after (sec)
+		defaultdateformat : java style date format used by user's browser
+		
+		* separate schedule server information
+		serverhost : schedule server ip address
+		port : schedule server port
+		
+		* job : defines server type support, when launched on separate process
+		hadoop
+		app
+		schedule 
+	 -->
+    <server 
+		acceptcount="10" 
+		defaultlocale="ko_KR" 
+		enabled="true" 
+		idletimeout="0" 
+		ignore_error="false" 
+		maxthreads="30" 
+		minthreads="0" 
+		port="4504" 
+		serverhost="127.0.0.1" 
+		servername="mecsvr" 
+		session_expire="600">
+        <javahome><![CDATA[c:/Program Files (x86)/Java/jdk1.6.0_34]]></javahome>
+        <defaultdateformat><![CDATA[''yy-MM-dd hh:mm:ss a]]></defaultdateformat>
+        <job>
+            <job name="hadoop"/>
+            <job name="app"/>
+            <job name="schedule"/>
+        </job>
+    </server>
+	<!-- 
+		agent section
+		
+		: defines server detail information for each server type support. Used when launched on separate process
+	 -->
+    <agents>
+        <agent enabled="true" job="hadoop" name="hadoop" port="4504" serverhost="127.0.0.1" servername="hadoopbase"/>
+        <agent enabled="true" job="schedule" name="schedule" port="4504" serverhost="127.0.0.1" servername="hadoopbase"/>
+        <agent enabled="true" job="app" name="app" port="4504" serverhost="127.0.0.1" servername="hadoopbase"/>
+    </agents>
+	<!-- 
+		database connection information
+		
+		* connection_method
+		  - tomcat_dbcp
+		  - dbcp
+		  - hikari
+		  - direct
+		  
+		* userid / password is automatically encripted for security
+		
+		* database section
+		   database type / jdbcdriver / jdbcurl information
+		   
+		mysql
+		  com.mysql.jdbc.Driver
+		  jdbc:mysql://localhost:3306/{databasename}
+		  
+		oracle
+		  oracle.jdbc.OracleDriver
+		  jdbc:oracle:thin:@localhost:1521:{sid}
+		  
+		postgresql
+		  org.postgresql.Driver
+		  jdbc:postgresql://localhost:5432/{databasename}
+		  
+		apacheembd
+		  org.apache.derby.jdbc.EmbeddedDriver
+		  jdbc:derby:{databasefolder};create=true
+	 -->
+    <database connection_method="tomcat_dbcp" connectionpool="true">
+		<!-- 
+			meta database information
+			
+			last name=IGCBASE item will be used on server startup
+		 -->
+        <meta_connection>
+            <database databasetype="mysql" maxpoolsize="20" monitor="T" name="IGCBASE" userowlimit="0">
+                <jdbcdriver>com.mysql.jdbc.Driver</jdbcdriver>
+                <jdbcurl>jdbc:mysql://localhost:3306/{databasename}</jdbcurl>
+				<userid>userid</userid>
+                <password>password</password>
+                <schemaname/>
+                <validatesql>select 1</validatesql>
+            </database>
+			<!--
+            <database databasetype="oracle" maxpoolsize="20" monitor="T" name="IGCBASE" userowlimit="0">
+                <jdbcdriver>oracle.jdbc.OracleDriver</jdbcdriver>
+                <jdbcurl>jdbc:oracle:thin:@localhost:1521:{sid}</jdbcurl>
+                <userid>userid</userid>
+                <password>password</password>
+                <schemaname/>
+                <validatesql>select 1 from dual</validatesql>
+            </database>
+			-->
+			<!-- 
+            <database databasetype="postgresql" maxpoolsize="20" monitor="T" name="IGCBASE" userowlimit="0">
+                <jdbcdriver>org.postgresql.Driver</jdbcdriver>
+                <jdbcurl>jdbc:postgresql://localhost:5432/{databasename}</jdbcurl>
+                <userid>userid</userid>
+                <password>password</password>
+                <schemaname/>
+                <validatesql>select 1</validatesql>
+            </database>
+			-->
+			<!--
+			<database databasetype="sybase" maxpoolsize="20" monitor="T" name="IGCBASE" userowlimit="0">
+                <jdbcdriver>com.sybase.jdbc3.jdbc.SybDriver</jdbcdriver>
+                <jdbcurl>jdbc:sybase:Tds:localhost:7100</jdbcurl>
+                <userid>userid</userid>
+                <password>password</password>
+                <schemaname/>
+                <validatesql></validatesql>
+            </database>
+			-->
+			<!--
+            <database databasetype="apacheembd" maxpoolsize="20" monitor="T" name="IGCBASE" userowlimit="0">
+                <jdbcdriver>org.apache.derby.jdbc.EmbeddedDriver</jdbcdriver>
+                <jdbcurl>jdbc:derby:{databasefolder};create=true</jdbcurl>
+                <userid>userid</userid>
+                <password>password</password>
+                <schemaname/>
+                <validatesql>select 1 from sysibm.sysdummy1</validatesql>
+            </database>
+			-->
+        </meta_connection>
+		<!--
+			analysis database (datamart) information
+			
+			* cacheing
+			  enable_cache : "T" / "F"
+			  cache_interval : re-cache after first created
+			  cache_rule : "min" / 
+			
+			* other configuration
+			  maxpoolsize : connection pool max size (database initial connection count)
+			  query_timeout : protect long running query (sec)
+			  schedule_query_timeout : schedule service query timeout (sec)
+			  monitor : ("T" / "F") use to trace sql that executed
+		 -->
+        <data_connection>
+            <database 
+				name="foodmart" 
+				cache_interval="10" 
+				cache_rule="min" 
+				databasetype="mysql" 
+				maxpoolsize="20" 
+				enable_cache="T" 
+				monitor="T" 
+				query_timeout="20" 
+				schedule_query_timeout="30" 
+				userowlimit="0">
+                <jdbcdriver>org.gjt.mm.mysql.Driver</jdbcdriver>
+                <jdbcurl>jdbc:mysql://localhost/{database}</jdbcurl>
+                <userid>userid</userid>
+                <password>password</password>
+                <schemaname/>
+                <validatesql>select 1</validatesql>
+            </database>
+        </data_connection>
+		<!-- 
+			nosql database connection information
+		 -->
+        <nosqldb>
+            <database databasetype="mongodb" hostname="127.0.0.1" name="mongodb_main" nodename="mongodb_01">
+                <userid>userid</userid>
+                <password>password</password>
+            </database>
+            <database databasetype="mongodb" hostname="127.0.0.1" name="mongodb_main" nodename="mongodb_02">
+                <userid>userid</userid>
+                <password>password</password>
+            </database>
+            <database databasetype="mongodb" hostname="127.0.0.1" name="mongodb_main" nodename="mongodb_03">
+                <userid>userid</userid>
+                <password>password</password>
+            </database>
+            <database batchsize="1000" cachesize="1000" databasetype="hbase" hostname="192.168.190.175" name="hbase_main" nodename="hbase_01">
+                <userid>userid</userid>
+                <password>password</password>
+                <options>
+                    <option name="hbase.zookeeper.quorum">192.168.190.175</option>
+                    <option name="hbase.zookeeper.property.clientPort">2181</option>
+                    <option name="hbase.master">192.168.190.175:60000</option>
+                </options>
+            </database>
+        </nosqldb>
+    </database>
+	<!--
+		application settings
+		
+		* mainpage section : login redirect page url
+		  - protect system url from unsecured user
+		  "mdi" : main page
+		  "dashboard" : dashboard page
+		  
+		* disk_mirror : creates metacontent as local file
+		  -> easy to migrate from development server to production server
+		  
+		* pdf_codepage
+		
+		* excel_output
+		  -> excel output format and default font settings
+		  
+		* scheduler server
+		  server_mode : (internal / external) 
+		  engine_type : quartz
+		  
+		* python : system location to anaconda installation
+	 -->
+    <applications>
+        <mainpage>
+            <mdi>/mplix/launcher/analytics.jsp</mdi>
+            <dashboard>/mplix/launcher/dashboard.jsp</dashboard>
+        </mainpage>
+        <disk_mirror enabled="true">
+            <location>meta_files</location>
+            <filename>uid</filename>
+        </disk_mirror>
+        <pdf_codepage><![CDATA[Identity-H]]></pdf_codepage>
+        <excel_output type="xlsx">
+            <default_font><![CDATA[Verdana]]></default_font>
+        </excel_output>
+        <scheduler>
+        	<server_mode>internal</server_mode>
+            <engine_type>quartz</engine_type>
+        </scheduler>
+        <python>
+            <path><![CDATA[c:/ProgramData/Anaconda3/Scripts]]></path>
+        </python>
+    </applications>
+	<!--
+		security settings
+	 -->
+    <security>
+        <lock_login>snooze</lock_login>
+        <snooze_time>2</snooze_time>
+    </security>
+	<!-- 
+		single sign on section
+	 -->
+    <singlesignon enabled="true">
+        <ssoclass>com.mplix.sso.ibk.UserDBSync</ssoclass>
+        <ssomode>before_only</ssomode>
+    </singlesignon>
+	<!-- 
+		email notification
+	 -->
+    <email enabled="false">
+        <useauth>true</useauth>
+        <authuser>userid</authuser>
+		<password>password</password>
+        <hostname>smtp.gmail.com</hostname>
+        <port>587</port>
+        <protocol/>
+    </email>
+</config>

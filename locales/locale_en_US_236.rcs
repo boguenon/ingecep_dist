@@ -1,0 +1,12 @@
+﻿
+A;L_USE_CACHE;Use Cache
+A;L_CACHE_RULE;Cache Rule
+A;L_CACHE_PERI;Cache Period
+A;L_DB_MON;DB Monitoring
+A;L_CLC_HOUR;Clear At
+A;L_CLC_PERI;Expire After
+A;L_EV_MIN;Every Minutes
+A;L_EV_HOUR;Every Hour
+A;L_EV_DAY;Every Day on Hour
+A;L_BTN_TRG_ALL;Validate Filters
+A;L_BTN_TRGALLDESC;Recursively validate all filters including hidden panel

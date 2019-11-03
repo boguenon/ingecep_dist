@@ -1,0 +1,17 @@
+﻿
+A;L_OPT_TBAR;Title Bar Options
+A;L_TB_VCH;Change View
+A;L_TB_PRT_GRD;Export Grid
+A;L_TB_PRT;Export Buttons
+A;L_TB_PRT_T;Export Target(s)
+A;M_DETAIL;Details
+A;L_C_TOTAL;Total @
+A;L_C_DATE;Detail of @
+A;L_C_DCOUNT;@ Counts
+A;L_BB_STEP_1;Preparing datas
+A;L_BB_STEP_2;Create Folder Structures
+A;L_BB_STEP_3;Make Measures and Time Metrics
+A;L_BUILD_MODEL;Model Wizard
+A;L_BUILD_CUBE;Build Cube
+A;L_BUILD;Suggested Build Item
+A;B_B_CUBE;Click continue to start automatic cube build process.

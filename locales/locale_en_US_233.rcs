@@ -1,0 +1,16 @@
+﻿
+A;L_TB_BN;Found same node name used in this table. Would you like to change all names with changes?
+A;L_ML_C1;Chance Node
+A;L_ML_C2;Decision Node
+A;L_ML_C3;Utility Node
+A;L_ML_C4a;Inference
+A;L_ML_C4b;Editor
+A;L_ML_C5;Decision Tree
+A;L_ML_C6;Cases
+A;L_ML_C6a;Add Case
+A;L_ML_C6b;Remove Case
+A;L_ML_LEARN;Learn
+A;L_ML_CEFF;Cost Effectiveness Analysis
+A;L_ML_C7;Load PGMX
+A;L_ML_CEFF_S;Sensitivity Analysis
+A;L_ML_CEFF_D;Determistic Analysis

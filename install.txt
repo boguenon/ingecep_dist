@@ -1,0 +1,32 @@
+-- Installation instruction with war file.
+
+* Pre requirements and installation.
+  Install web server (apache tomcat)
+  (Optional) Install MySQL database
+
+
+1. unzip ingecep_app.zip on local drive (recommend c drive root directory)
+  unzip folder will look like c:\ingecep\server
+
+2. deploy ingecep.war on web server
+
+3. Modify WEB-INF\web.xml
+
+<context-param>
+	<param-name>IGC_HOME</param-name>
+	<param-value>c:\ingecep\server\</param-value>
+</context-param>
+
+4a. (No MySQL installed) - use default JavaDB
+    Remove c:\ingecep\server\install
+
+4b. (MySQL or RDBMS installed)
+ - Create database mechan for meta content storage.
+ - Open c:\ingecep\server\config\config.xml and modify for proper database settings
+ - Login as http://localhost:8080/ingecep/
+ - Click install or upgrade link shown.
+ - Follow instructions
+ - Remove c:\ingecep\server\install
+
+5. Completed.
+ Connect to http://localhost:8080/ingecep/

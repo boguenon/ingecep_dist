@@ -1,0 +1,36 @@
+A;L_DATA_LABEL;Data Labels
+A;L_LABEL_ALIGN;Label Align
+A;B_INSIDE;Inside
+A;B_ENABLE;Enable
+A;L_NEW_SHEET;New Sheet
+A;L_NEW_FILTER;New Filter
+A;L_NEW_TEXTAREA;New TextArea
+A;L_NEW_TABPANEL;New TabPanel
+A;L_SCHEMA;Schema
+A;L_ADV_OPTION;Advanced Options
+A;L_RENAME;Rename
+A;L_CODEMAPPING;CodeMapping
+A;T_DB_CON;Database Instances
+A;L_DB_NAME;Database Name
+A;L_DB_TYPE;Database Type
+A;L_APPLY_TMPL;Apply Template
+A;L_JDBC_DRV;JDBC Driver
+A;L_JDBC_URL;JDBC URL
+A;L_SCHEMA_NAME;Schema Name
+A;L_DB_UNAME;UserName
+A;L_DB_PWD;Password
+A;L_DB_CHARSET;DB CharSet
+A;L_OUTPUT_CHARSET;Output CharSet
+A;L_ROW_LIMIT_COUNT;Limit Count
+A;B_STATUS;Status
+A;L_ADD_NEW;Add New
+A;L_CSTEP_6;Bands
+A;L_BAND_TYPE;Band Type
+A;L_BAND_VALUE_1;Value
+A;L_BAND_VALUE_2;Value to
+A;L_BAND_COLOR;Color
+A;L_BAND_BORDER;Border
+A;T_CHART_PLOTBAND;Chart Plot Band
+A;L_GEO_FIELD;Geo Location
+A;L_LATITUDE;Latitude
+A;L_LONGITUDE;Longitude

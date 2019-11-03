@@ -1,0 +1,12 @@
+﻿
+A;L_P_export;출력하기
+A;L_REN_SCH;스키마명 변경
+A;M_S_S1;데이타베이스 인스턴스에의 조건에 만족하는 소스결과가 없습니다.
+A;M_S_S2;조건에 만족하는 등록된 테이블 결과가 없습니다.
+A;E_D_EVNT;@ 처리중 오류가 발생하였습니다.
+A;L_EVENT_WIZARD;액션 설정 마법사
+A;L_SHOW_VALUE;값 표시
+A;L_UNIT_TEXT;단위 설명
+A;L_C_FMT_VAL;포맷 적용값 사용
+A;L_EXPORT_CSV;CSV
+A;E_SC_LD;다이나믹 스크립트 로드중 오류가 발생했습니다.

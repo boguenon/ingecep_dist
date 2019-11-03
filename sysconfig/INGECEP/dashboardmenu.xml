@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item description="" manage="T" memo="" mid="54c1cce7-d7734fac" modifier="admin" mrev="7" name="dashboardmenu" nodepath="/SYS_Config/dashboardmenu" objinfo="" owner="admin" pid="9ab8310f-41534894" rev="7" sid="54c1cce7-d7734fac" type="PrivateContent" uid="a86fc829-274a4f6a" updatedate="1447122043746" updatedatefm="2015.11.10 11:20:43 오전" writable="T">
+   <menustructure>
+      <option />
+      <!-- menu description="" name="Dashboard" sid="0">
+         <option />
+      </menu -->
+      <menu description="" name="Features Demo" sid="1">
+         <option />
+      </menu>
+      <menu description="" name="Marketing" sid="2">
+         <option />
+      </menu>
+      <menu description="" name="R Statistics" sid="3">
+         <option />
+      </menu>
+   </menustructure>
+   <menuitems>
+      <!-- menuitem sid="0">
+         <menu name="1.Basic Features" nodepath="/Dashboard/1.Basic Features" type="Folder" uid="8caa2e72-dbd64bee" />
+         <menu name="2.Report" nodepath="/Dashboard/2.Report" type="Folder" uid="c1115b28-86974732" />
+         <menu name="3.Navigation" nodepath="/Dashboard/3.Navigation" type="Folder" uid="cd8376f1-c3854de0" />
+         <menu name="4.Layout" nodepath="/Dashboard/4.Layout" type="Folder" uid="21e145bb-ffdd4df0" />
+      </menuitem -->
+      <menuitem sid="1">
+         <menu name="1.Report and Pivots" nodepath="/Features Demo/1.Report and Pivots" type="Folder" uid="01349322-010613dd" />
+         <menu name="2.General Charting" nodepath="/Features Demo/2.General Charting" type="Folder" uid="01349323-01bdbada" />
+         <menu name="3.Analytic Visual" nodepath="/Features Demo/3.Analytic Visual" type="Folder" uid="01349324-010587f0" />
+         <menu name="4.Geographical Anal" nodepath="/Features Demo/4.Geographical Anal" type="Folder" uid="01349324-014fa157" />
+         <menu name="5.Dashboard" nodepath="/Features Demo/5.Dashboard" type="Folder" uid="013494bd-016749fd" />
+         <menu name="6.R Statistics" nodepath="/Features Demo/6.R Statistics" type="Folder" uid="0135f70e-01dd83a3" />
+         <menu name="7.User defined group" nodepath="/Features Demo/7.User defined group" type="Folder" uid="013883cd-014d5408" />
+      </menuitem>
+      <menuitem sid="2">
+         <menu name="1.Sales Overview" nodepath="/Marketing Demo/2.Reports/1.Sales Overview" type="Report" uid="01313881-011a69d4" />
+         <menu name="2.Products Sale" nodepath="/Marketing Demo/2.Reports/2.Products Sale" type="Report" uid="013138da-01f4ab0a" />
+         <menu name="3.Sales by month" nodepath="/Marketing Demo/2.Reports/3.Sales by month" type="Report" uid="013138e6-01890649" />
+         <menu name="4.Yearly product sales" nodepath="/Marketing Demo/2.Reports/4.Yearly product sales" type="Report" uid="013138ef-01908c9f" />
+         <menu name="5.Sales Increment" nodepath="/Marketing Demo/2.Reports/5.Sales Increment" type="Report" uid="013138f6-013f5da0" />
+         <menu name="6.Customer Changes" nodepath="/Marketing Demo/2.Reports/6.Customer Changes" type="Report" uid="013138fa-0112004f" />
+         <menu name="7.DrillDetail" nodepath="/Marketing Demo/2.Reports/7.DrillDetail" type="Report" uid="01313901-01b01380" />
+         <menu name="8.Product Ratios" nodepath="/Marketing Demo/2.Reports/8.Product Ratios" type="Report" uid="ccfa9646-633847be" />
+         <menu name="9.Spliced Report" nodepath="/Marketing Demo/2.Reports/9.Spliced Report" type="Report" uid="013155da-01462d4c" />
+         <menu name="10.Histogram" nodepath="/Marketing Demo/2.Reports/10.Histogram" type="Report" uid="0751de13-6aa5441e" />
+      </menuitem>
+      <menuitem sid="3">
+         <menu name="2.Graphs" nodepath="/R Statistics/2.Graphs" type="Folder" uid="0135fba1-01732584" />
+         <menu name="3.Statistics" nodepath="/R Statistics/3.Statistics" type="Folder" uid="0135fba9-01180a1c" />
+         <menu name="4.Regression" nodepath="/R Statistics/4.Regression" type="Folder" uid="0135fbb4-0169a326" />
+         <menu name="5.Time-series analysis" nodepath="/R Statistics/5.Time-series analysis" type="Folder" uid="0135fbbd-01342e91" />
+         <menu name="6.Forecasting" nodepath="/R Statistics/6.Forecasting" type="Folder" uid="01368e63-010129cb" />
+      </menuitem>
+   </menuitems>
+</item>

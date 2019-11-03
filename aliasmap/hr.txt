@@ -1,0 +1,13 @@
+PERSON_ID,Person
+ASSIGNMENT_ID,Assignment
+START_DATE,Start Date
+POSITION_ID,Position
+LOCATION_ID,Location
+ORGANIZATION_ID,Organization
+SUPERVISOR_ID,Supervisor
+JOB_ID,Job
+ANNUAL_SALARY,Annual Salary
+ASSIGNMENT_NUMBER,Assignment number
+ASSIGNMENT_TYPE,Assignment type
+EMPLOYEE_NUMBER,Employee number
+ORBHR_ASSIGNMENT_DATA,Assignment Data

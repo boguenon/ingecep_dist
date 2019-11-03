@@ -1,0 +1,20 @@
+﻿
+A;L_STACK_PERCENT;퍼센트 적산
+A;D_JAVAPACKAGE;자바 패키지
+A;M_ERROR;오류
+A;L_C_ITEMS;하위 항목
+A;L_BG_COL;배경색
+A;L_FONT_ST;폰트 스타일
+A;L_F_STR;스트링 포맷
+A;L_OPT_STYLE;스타일 옵션
+A;L_HL_CELL;셀 적용
+A;L_HL_ROW;행
+A;L_HL_COL;열
+A;B_ST_NAME;스타일
+A;L_APPL_R;적용 범위
+A;L_HL_DESC;변경할 셀을 클릭하시거나 신규 강조 옵션을 클릭해 주십시오.
+A;T_DRILL_CONFIG;상세 보기 설정
+A;L_DRILL_ON;상세 적용 컬럼
+A;L_DRILL_ON_DESC;링크로 표시하고 상세 컬럼을 지정하고자 하는 경우 체크박스를 선택해 주십시오.
+A;L_DRILL_PARAM;전달 파라미터 항목
+A;L_DRILL_PARAM_DESC;대상 쉬트에 필터로 지정할 항목을 체크박스 선택해 주십시오.

@@ -1,0 +1,16 @@
+{
+	"programs": [
+		{
+			"name": "Clear Temporary Folders",
+			"java_class": "com.ingecep.scheduler.CClearResources",
+			"input_items": [
+				{
+					"type": "integer",
+					"name": "olderthen",
+					"label": "Older then (sec)",
+					"value": "300"
+				}
+			]
+		}	
+	]
+}

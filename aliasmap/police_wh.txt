@@ -1,0 +1,32 @@
+year_id,연도
+quarter_id,분기
+month_id,월구분
+date_id,일구분
+age_cd,연령코드
+age,연령
+crime_l_cd,범죄대분류코드
+crime_l_nm,범죄대분류명
+crime_m_cd,범죄중분류코드
+crime_m_nm,범죄중분류명
+c_cd,범죄코드
+c_nm,범죄명
+c_sex,성별
+c_age,연령
+age_cd,연령코드
+job_l_cd,직업대분류코드
+job_nm,직업명
+job_m_cd,직업소분류코드
+state_cd,지역코드
+police_cd,경찰서코드
+dweek_id,요일코드
+fulldate,상세일자
+c_time,발생시각
+ex_con_yn,ex_con_yn
+mental_yn,멘털 여부
+std_yn,
+minor_yn,경범죄여부
+police_nm,경찰서명
+police_addr,경찰서 주소
+police_site,경찰서사이트
+c_quarter,분기코드
+c_quarter_nm,분기명

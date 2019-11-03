@@ -1,0 +1,22 @@
+{"rsamples": [
+	{
+		"label": "Blank",
+		"name": "blank",
+		"icon": "blank.png",
+		"script": ""
+	},
+	{
+		"label": "Plot",
+		"name": "plot",
+		"icon": "plot.png",
+		"script": [
+			""
+		]
+	},
+	{
+		"label": "Regression",
+		"name": "regression",
+		"icon": "regression.png",
+		"script": ""
+	}
+]}

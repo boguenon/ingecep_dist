@@ -1,0 +1,22 @@
+﻿
+A;L_DESIGN;디자인
+A;L_CONTROLLER;컨트롤
+A;L_RESOURCES;리소스
+A;L_C_CLOSE;닫기
+A;L_C_PREV;이전
+A;L_C_NEXT;다음
+A;L_C_CUR;현재,
+A;L_C_M_NAMES;1월#2월#3월#4월#5월#6월#7월#8월#9월#10월#11월#12월
+A;L_C_M_NAMES_S;1월#2월#3월#4월#5월#6월#7월#8월#9월#10월#11월#12월
+A;L_C_D_NAMES;일요일#월요일#화요일#수요일#목요일#금요일#토요일
+A;L_C_D_NAMES_S;일#월#화#수#목#금#토
+A;L_C_D_NAMES_M;일#월#화#수#목#금#토
+A;L_C_W_H;주일
+A;L_C_YR_SFX;년
+A;L_CLEAR_FLT;필터 초기화
+A;L_SEL_MODE;설정모듈을 선택해 주십시오.
+A;L_CLASS_MOD;클래스 모듈
+A;L_RESOURCE;리소스
+A;L_MENU;메뉴
+A;B_SAVE;저장
+A;L_FILENAME;파일이름

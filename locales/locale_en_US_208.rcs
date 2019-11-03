@@ -1,0 +1,11 @@
+A;L_EXPORT_PRINT;HTML Print
+A;D_TENANT;Tenant
+A;D_AUTH;Duty
+A;L_MENU_DB_MODEL;Database Model
+A;T_M_MEASURE;Make Measures
+A;D_CODEMAP;Code Mapping
+A;L_S_LK;Code Mapping Management
+A;I_MGR_DBD;Dashboard Logic Builder
+A;D_CLASSMODULE;ClassModule
+A;T_EXP_MC;Export Content
+A;T_EXP_MC_Q;Would you continue to export content to file?

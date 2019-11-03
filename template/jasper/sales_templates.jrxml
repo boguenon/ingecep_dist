@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sales_templates" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4719c762-5a86-44df-b9f5-5f0d49dd661e">
+	<property name="ireport.zoom" value="1.3310000000000006"/>
+	<property name="ireport.x" value="188"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Heading 1" fontSize="16" isBold="true"/>
+	<style name="Heading 2" fontSize="14" isBold="true" isItalic="true"/>
+	<style name="Heading 3" fontSize="14" isBold="true"/>
+	<style name="Default"/>
+	<style name="Text Body"/>
+	<subDataset name="dataset1" uuid="a8233c22-2b6e-484d-9bbf-5848955dc489">
+		<queryString language="xPath">
+			<![CDATA[/reportset/report_0/data]]>
+		</queryString>
+		<field name="text" class="java.lang.String">
+			<fieldDescription><![CDATA[column_0/text]]></fieldDescription>
+		</field>
+		<field name="text2" class="java.lang.String">
+			<fieldDescription><![CDATA[column_1/text]]></fieldDescription>
+		</field>
+		<field name="text3" class="java.lang.String">
+			<fieldDescription><![CDATA[column_2/text]]></fieldDescription>
+		</field>
+		<field name="text4" class="java.lang.String">
+			<fieldDescription><![CDATA[column_3/text]]></fieldDescription>
+		</field>
+		<field name="text5" class="java.lang.String">
+			<fieldDescription><![CDATA[column_4/text]]></fieldDescription>
+		</field>
+		<field name="text6" class="java.lang.String">
+			<fieldDescription><![CDATA[column_5/text]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="REPORT_NAME" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["Sales Overview"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[/reportset/report_0]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement style="Heading 1" x="0" y="0" width="157" height="27" uuid="90a32512-2576-44e0-9ce2-ce643b71d94a"/>
+				<text><![CDATA[Sales Report]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="Heading 3" x="381" y="7" width="174" height="20" uuid="a77a1d40-0d11-4cdb-8910-59492cfeb2cf"/>
+				<textElement>
+					<font fontName="Malgun Gothic" pdfEncoding="Identity-H" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_NAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<detail>
+		<band height="85" splitType="Stretch">
+			<frame>
+				<reportElement x="0" y="0" width="555" height="52" uuid="d3cc7df9-99db-4a4f-a18c-ca48cac4f50c"/>
+				<staticText>
+					<reportElement x="0" y="11" width="71" height="20" uuid="545ee74f-dfab-4958-ade0-7c25634e5d00"/>
+					<text><![CDATA[column 1]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="71" y="11" width="70" height="20" uuid="093d84c2-f5c7-4dc2-9cf0-5e96f17703e0"/>
+					<text><![CDATA[column 2]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="141" y="11" width="86" height="20" uuid="7061f7a9-8a8e-406c-821a-8962fe78695c"/>
+					<text><![CDATA[column 3]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="227" y="11" width="70" height="20" uuid="729879ec-53d3-413e-9e2a-bc55a070cf16"/>
+					<text><![CDATA[column 4]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="297" y="11" width="72" height="20" uuid="70a89d2d-ed89-4f57-9bcd-2faababd2691"/>
+					<text><![CDATA[column 5]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="369" y="11" width="100" height="20" uuid="2b0f1b7c-998d-4c82-b782-37392c282a99"/>
+					<text><![CDATA[column 6]]></text>
+				</staticText>
+				<componentElement>
+					<reportElement x="0" y="31" width="542" height="20" uuid="af3bc291-c065-4241-a78b-72c83d29aea4"/>
+					<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+						<datasetRun subDataset="dataset1" uuid="188d56c1-2f17-4d90-b05e-858ac0936b08">
+							<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).dataSource("/reportset/report_0/data")]]></dataSourceExpression>
+						</datasetRun>
+						<jr:listContents height="20" width="542">
+							<textField>
+								<reportElement x="0" y="0" width="71" height="20" uuid="c924ebc7-9beb-471b-a6a3-02381b1e8d1e"/>
+								<textFieldExpression><![CDATA[$F{text}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="71" y="0" width="70" height="20" uuid="b7733580-9bd9-4fd6-aad9-d408aa74c3e0"/>
+								<textFieldExpression><![CDATA[$F{text2}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="141" y="0" width="86" height="20" uuid="a8601212-9883-4065-9f1b-29a8c5f8829a"/>
+								<textFieldExpression><![CDATA[$F{text3}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="227" y="0" width="70" height="20" uuid="797fef6f-866b-4ece-8fae-a7196b60ba4c"/>
+								<textFieldExpression><![CDATA[$F{text4}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="297" y="0" width="72" height="20" uuid="5250578a-d779-463c-870d-eb3d5911568a"/>
+								<textFieldExpression><![CDATA[$F{text5}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="369" y="0" width="100" height="20" uuid="c2ccd874-7d25-4f2e-bb1a-69e4849c3e1d"/>
+								<textFieldExpression><![CDATA[$F{text6}]]></textFieldExpression>
+							</textField>
+						</jr:listContents>
+					</jr:list>
+				</componentElement>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

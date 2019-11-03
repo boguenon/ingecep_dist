@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+html, body {
+	overflow: auto;
+	background: #fff;
+}
+
+#main {
+	position: relative;
+	display: block;
+}
+

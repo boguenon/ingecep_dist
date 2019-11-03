@@ -1,0 +1,9 @@
+﻿
+A;L_SW_APP;어플리케이션 전환
+A;L_SWA_CFM;화면을 닫고 다른 어플리케이션으로 로그인하시겠습니까?
+A;E_SWA_CFM;전환할 어플리케이션을 선택해 주십시오.
+A;L_P_RELOAD;테이블을 새로고침 해주세요.
+A;L_P_RPT_C;리포트 속성
+A;L_DATE_FORMAT_SRC;원천 날짜형식
+A;L_DATE_FORMAT_TGT;표시 날짜형식
+A;L_DET_VIEW;상세 보기

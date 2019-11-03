@@ -1,0 +1,18 @@
+﻿
+A;L_OPT_TBAR;타이틀바 옵션
+A;L_TB_VCH;보기모드변경
+A;L_TB_PRT_GRD;그리드 출력
+A;L_TB_PRT;출력 버튼
+A;L_TB_PRT_T;출력 대상
+A;M_DETAIL;상세보기
+A;B_HEIGHT;높이
+A;L_C_TOTAL;@ 합계
+A;L_C_DATE;@ 시간구분
+A;L_C_DCOUNT;@ 개수
+A;L_BB_STEP_1;데이타를 준비하고 있습니다.
+A;L_BB_STEP_2;폴더 구조를 생성하고 있습니다.
+A;L_BB_STEP_3;메져와 시간함수를 생성하고 있습니다.
+A;L_BUILD_MODEL;큐브모델 생성
+A;L_BUILD_CUBE;큐브 생성
+A;L_BUILD;자동 생성을 위한 항목을 추천합니다.
+A;B_B_CUBE;큐브를 자동으로 생성하시겠습니까?

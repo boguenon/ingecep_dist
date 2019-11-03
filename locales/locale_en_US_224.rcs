@@ -1,0 +1,17 @@
+﻿
+A;M_NOT_EDITABLE;Not allowed to edit this item!
+A;B_APPLY;Apply
+A;L_A_USR;Active Users
+A;L_B_USR;Blocked Users
+A;T_RPT_PIVOT;Report Pivot
+A;L_OP_NOT;Not Operation
+A;L_F_EQ_NOT;Not Equal
+A;L_F_GE_NOT;Not Greater or Equal
+A;L_F_GT_NOT;Not Greater
+A;L_F_LE_NOT;Not Lesser or Equal
+A;L_F_LT_NOT;Not Lesser
+A;L_F_IN_NOT;Not Including
+A;L_F_LIKE_NOT;Not Like
+A;L_F_BETWEEN_NOT;Not Between
+A;L_F_SQL_IS_NOT;Not IS
+A;L_B_CUBE;Cube Processing

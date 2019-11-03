@@ -1,0 +1,128 @@
+
+
+body {
+	position: relative;
+	overflow: auto;
+	
+	background-color:#121212;
+
+}
+
+#report_1 {
+	float: left;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	/*margin: 20px;*/
+	
+}
+
+.igc-panel{
+	border: 0px;
+}
+
+.igc-container, .dock_inner{
+	/*background-color: #3e3e40;*/
+	border: 0px;
+	background: linear-gradient( to right, #343434, #3e3e40 );
+}
+
+.dock_inner{
+	/*background-color: #3e3e40;*/
+	/*border: 1px solid #111;*/
+	border: 0px;
+}
+
+
+.dock_title {
+	background-color: #222222;
+	border: 0px;
+}
+
+.dock_title_text {
+	color: #c7c7c7;
+}
+
+
+.igc-kpi-blk {
+	background: linear-gradient( to right, #343434, #3e3e40 );
+}
+
+.dock-splitter{
+	border: 0px;
+	background-color: #121212;
+}
+
+ .ui-draggable {
+	background-color: #121212;
+	border: 0px;
+	padding: 0px;
+}
+
+div.idv-dk-main {
+	background-color: #121212;
+	border: 0px;
+	padding: 0px;
+}
+
+.dock_content{
+	border: 0;
+}
+
+.igc-container{
+	border: 0;
+}
+
+.igc-container-body{
+	border: 0;
+}
+
+
+.igc-panel .idv-doc-base .idv-doc-layouter .idv-dk-main .dock_inner  {
+	border: 1px solid #121212;
+}
+
+.igc-panel .idv-doc-base .idv-doc-layouter .idv-dk-main .dock_inner .dock_content  .dock_inner   {
+	margin: 0;
+}
+
+.dock_inner .igc-panel .idv-doc-base .idv-doc-layouter .idv-dk-main   {
+	margin: 0;
+	padding: 0;
+}
+
+.igc-panel .idv-doc-base .idv-doc-layouter .idv-dk-main  .dock_content {
+	margin: 0;
+	padding: 0;
+}
+
+
+/**/
+
+
+.headerDiv {
+   padding: 20px 20px;
+	margin: 0 0 5px 0;
+   background-color: #222;
+   border-bottom: 1px solid #222;
+}
+
+.header {
+	width: 100%;
+	position: relative;
+}
+
+.header  h2{
+	font-size: 15px;
+	color: #c7c7c7;
+}
+
+.igc-rpt-view .igc-container, .dock_inner{
+	/*background-color: #3e3e40;*/
+	border: 0px;
+	background: #121212;
+}
+
+.igc-sheet-cntbox .igc-container {
+	background: linear-gradient( to right, #343434, #3e3e40 );
+}

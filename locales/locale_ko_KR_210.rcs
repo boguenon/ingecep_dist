@@ -1,0 +1,36 @@
+﻿A;L_DATA_LABEL;데이타 라벨
+A;L_LABEL_ALIGN;라벨 정렬
+A;B_INSIDE;안쪽
+A;B_ENABLE;사용
+A;L_NEW_SHEET;결과쉬트 추가
+A;L_NEW_FILTER;필터 추가
+A;L_NEW_TEXTAREA;텍스트 영역 추가
+A;L_NEW_TABPANEL;탭패널 추가
+A;L_SCHEMA;스키마
+A;L_ADV_OPTION;고급 설정
+A;L_RENAME;이름 변경
+A;L_CODEMAPPING;코드 맵핑
+A;T_DB_CON;데이타베이스 연결
+A;L_DB_NAME;데이타베이스 이름
+A;L_DB_TYPE;데이타베이스 유형
+A;L_APPLY_TMPL;템플릿 적요
+A;L_JDBC_DRV;JDBC 드라이버
+A;L_JDBC_URL;JDBC 경로
+A;L_SCHEMA_NAME;스키마 이름
+A;L_DB_UNAME;사용자 명
+A;L_DB_PWD;패스워드
+A;L_DB_CHARSET;DB 문자셋
+A;L_OUTPUT_CHARSET;DB 출력 문자셋
+A;L_ROW_LIMIT_COUNT;조회 건수 제한
+A;B_STATUS;상태
+A;L_ADD_NEW;항목 추가
+A;L_CSTEP_6;밴드
+A;L_BAND_TYPE;밴드 유형
+A;L_BAND_VALUE_1;값
+A;L_BAND_VALUE_2;종료 값
+A;L_BAND_COLOR;색상
+A;L_BAND_BORDER;라인 폭
+A;T_CHART_PLOTBAND;챠트 플롯 밴드
+A;L_GEO_FIELD;지도위치필드
+A;L_LATITUDE;위도
+A;L_LONGITUDE;경도

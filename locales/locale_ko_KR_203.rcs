@@ -1,0 +1,15 @@
+﻿A;T_SYS_RES;시스템 리소스
+A;L_EVENT_WIZARD;이벤트 마법사
+A;L_P_open_win;윈도우 열기
+A;T_M_Measure;메져 등록
+A;F_STOT;부분합
+A;F_AVG;평균
+A;F_RNK;순위
+A;F_P_TOT;전체에 대한 퍼센트
+A;F_P_CUM;누적 합계
+A;F_INC;증분
+A;F_DIFF;차이값
+A;F_MIN;최소
+A;F_MAX:최대
+A;L_R_ANAL_CUBE_L;분석큐브
+A;B_SEQUENCE;순서

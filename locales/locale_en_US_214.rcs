@@ -1,0 +1,5 @@
+A;W_SYNC_SAVE;Would you save user synchronize parameter in server?
+A;T_SYNC_USER;User Sync
+A;W_SYNC_GRP;Would you execute group synchronization in server?
+A;W_SYNC_USER;Would you execute user synchronization in server?
+A;L_EXPORT_HTML;HTML Print

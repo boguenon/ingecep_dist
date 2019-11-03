@@ -1,0 +1,12 @@
+
+A;L_USE_CACHE;캐쉬 사용
+A;L_CACHE_RULE;캐쉬 유효타입
+A;L_CACHE_PERI;캐쉬 유효시간
+A;L_DB_MON;DB 모니터링
+A;L_CLC_HOUR;적용 시(일중)
+A;L_CLC_PERI;이후 캐쉬 클리어
+A;L_EV_MIN;지정 분이후 캐쉬 클리어
+A;L_EV_HOUR;지정 시간이후 캐쉬 클리어
+A;L_EV_DAY;매일 지정 시에 캐쉬 클리어
+A;L_BTN_TRG_ALL;모든 필터 검증
+A;L_BTN_TRGALLDESC;숨겨진 패널을 포함해서 모든 필터를 업데이트

@@ -1,0 +1,12 @@
+A;D_SCHEMA;Schema
+A;L_F_LIKE;Like
+A;L_F_EQ;Equal
+A;L_F_GE;Greater or Equal
+A;L_F_GT;Greater then
+A;L_F_LE;Lesser or Equal
+A;L_F_LT;Lesser then
+A;L_F_IN;Including
+A;L_F_BETWEEN;Between Values
+A;L_F_NOTIN;Not Including
+A;B_NO_DATA;No Data
+A;L_R_ANAL_CUBE_LBL;Sheet Cube

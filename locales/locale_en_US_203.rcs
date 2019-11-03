@@ -1,0 +1,15 @@
+A;T_SYS_RES;System Resources
+A;L_EVENT_WIZARD;Event Wizard
+A;L_P_open_win;Open Window
+A;T_M_Measure;Register Measures
+A;F_STOT;Sub total
+A;F_AVG;Average
+A;F_RNK;Rank
+A;F_P_TOT;Percent of Total
+A;F_P_CUM;Cumulative Sum
+A;F_INC;Incremental
+A;F_DIFF;Difference
+A;F_MIN;Minimum
+A;F_MAX:Maximum
+A;L_R_ANAL_CUBE_L;Subject name
+A;B_SEQUENCE;Order

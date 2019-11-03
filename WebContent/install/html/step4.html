@@ -1,0 +1,239 @@
+<div id="right">
+	<div id="rightpad">
+		<div id="step">
+			<div class="far-right">
+				<div class="button1-right"><div class="prev"><a onclick="lm1(3)" alt="Previous">Previous</a></div></div>
+				<div class="button1-left"><div class="next"><a onclick="lm1(5)" alt="Next">Next</a></div></div>
+			</div>
+			<h2>Database Configuration</h2>
+		</div>
+
+		<div id="installer">
+			<div class="t">
+				<div class="t">
+					<div class="t"></div>
+				</div>
+			</div>
+			<div class="m">
+				<h2>Connection Settings:</h2>
+				<div class="install-text">
+					<p>Setting up INGECEP! to run on your server need to complete this setting.</p>	
+					<p>This step will guide your for easy database configuration. Choose your preferred settings: </p>
+					<h2>MetaDB Settings</h2>
+					<p>Select the type of database from the drop down list. This will generally be <strong>MySQL_5</strong>.</p>	
+					<p>Enter the hostname of the database server Orbit! will be installed on. This may not necessarily be the same as your Web server so check with your hosting provider if you are not sure.</p>
+					<p>Enter username, password and database name you wish to use with Orbit!. These must already exist for the database you are going to use.</p>
+					<p><button id="s4dbmeta">Config</button></p>
+					<h2>R-OLAP DB Settings</h2>	
+					<p>Add or modify your database assets to analyze with Orbit!</p>
+					<p>Click database poolname on the following list to modify connection parameter.</p>
+					<p>
+						<ul id="s4rolapdb"></ul>
+					</p>
+					<p>
+						<button id="s4btnadd">Add new db</button>
+					</p>
+				</div>
+				<div id="dboptions" class="install-body">
+					<div class="t">
+						<div class="t">
+							<div class="t"></div>
+						</div>
+					</div>
+					<div class="m">
+						<h3 class="title-smenu" title="Basic"><span id="s4dbname"></span> Settings</h3>
+						<div class="section-smenu">
+							<table class="content2">
+								<tr>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<label for="vars_dbname">
+											<span id="dbnamemsg">Connection Name</span>
+										</label>
+										<br />
+										<input id="s4dbnameinp" class="inputbox" type="text" name="s4dbnameinp" value="" />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<em>
+											This is database connection poolname to use on Orbit system. This shall be an alias and recognizable name for your distinguishing database system.
+										</em>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<label for="vars_dbtype">
+											Database Type
+										</label>
+										<br />
+										<select id="s4dbtype" class="inputbox" size="1">
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<em>
+											This is probably <strong>MySQL_5</strong>
+										</em>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<label for="vars_dbusername">
+											<span id="dbusernamemsg">Username</span>
+										</label>
+										<br />
+										<input id="s4dbuser" class="inputbox validate required none dbusernamemsg" type="text" name="s4dbuser" value="" />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<em>
+											This can be the default MySQL username <strong>root</strong>, a username provided by your hosting provider, or one that you created in setting up your database server.
+										</em>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<label for="vars_dbpassword">
+											Password
+										</label>
+										<br />
+										<input id="s4dbpwd" class="inputbox" type="password" name="s4dbpwd" value="" />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<em>
+											Using a password for the MySQL account is mandatory for site security. This is the same password used to access your database. This may be predefined by your hosting provider.
+										</em>
+									</td>
+								</tr>
+
+								
+							</table>
+							<br /><br />
+						</div>
+						
+						<p>
+							<button id="s4btnconfirm" class='button'>Confirm</button>&nbsp;&nbsp;&nbsp;&nbsp;
+							<button id="s4btncancel">Cancel</button>
+						</p>
+
+						<h3 class="title-smenu moofx-toggler" title="Advanced">Advanced Settings</h3>
+						<div class="section-smenu moofx-slider">
+							<table class="content2">
+								<tr>
+									<td></td>
+									<td></td>
+								</tr>
+
+								<tr>
+									<td colspan="2">
+										<label for="vars_dbhostname">
+											<span id="dbhostnamemsg">JDBC Driver</span>
+										</label>
+										<br />
+										<input id="s4jdbcdrv" class="inputbox" type="text" name="s4jdbcdrv" value="" />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<em>
+											By selecting database type on the basic settings, this will automatically changed with suggested Java class for connecting your database system.
+										</em>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<label for="vars_dbhostname">
+											<span id="dbhostnamemsg">JDBC Url</span>
+										</label>
+										<br />
+										<input id="s4jdbcurl" class="inputbox" type="text" name="s4jdbcurl" value="" />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<em>
+										By selecting database type on the basic settings, this will automatically changed with suggested Java class for connecting your database system. Modify and configure detailed information to connect your database system.
+										</em>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<label for="vars_dbname">
+											<span id="dbnamemsg">Schema Name</span>
+										</label>
+										<br />
+										<input id="s4schema" class="inputbox" type="text" name="s4schema" value="" />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<em>
+											Optional! Schema name is database name on <strong>MySQL</strong>. Analytical ROLAP service, SQL query is generated with this schemaname.
+										</em>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<label for="vars_dbname">
+											<span id="dbnamemsg">Validate SQL</span>
+										</label>
+										<br />
+										<input id="s4vsql" class="inputbox" type="text" name="s4vsql" value="" />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<em>
+											For consistency check on database connection with pool, this SQL query is used to validate the connection. If failed with this query then the connection is removed and new connection is generated automatically.
+										</em>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<label for="vars_dbname">
+											<span id="dbnamemsg">Use Row Limit</span>
+										</label>
+										<br />
+										<input id="s4rlimit" class="inputbox" type="text" name="s4rlimit" value="" />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<em>
+											To protect system from large data query, this limit the maximum rows fetched from AdHoc generated query.
+										</em>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="clr"></div>
+					</div>
+
+					<div class="b">
+						<div class="b">
+							<div class="b"></div>
+						</div>
+					</div>
+					<div class="clr"></div>
+				</div>
+				<div class="clr"></div>
+			</div>
+
+			<div class="b">
+				<div class="b">
+					<div class="b"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clr"></div>

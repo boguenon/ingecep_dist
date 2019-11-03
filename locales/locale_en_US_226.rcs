@@ -1,0 +1,20 @@
+﻿
+A;L_STACK_PERCENT;Stack by Percentage
+A;D_JAVAPACKAGE;Java Package
+A;M_ERROR;Error
+A;L_C_ITEMS;Sub Items
+A;L_BG_COL;Background Color
+A;L_FONT_ST;Font Style
+A;L_F_STR;String Format
+A;L_OPT_STYLE;Style Option
+A;L_HL_CELL;Cell Only
+A;L_HL_ROW;Rows
+A;L_HL_COL;Columns
+A;B_ST_NAME;Style
+A;L_APPL_R;Apply on
+A;L_HL_DESC;Click cell to edit or click New for make new highlight option.
+A;T_DRILL_CONFIG;Detail View Config
+A;L_DRILL_ON;Columns to Drill
+A;L_DRILL_ON_DESC;Check columns to show link. 
+A;L_DRILL_PARAM;Columns to Params
+A;L_DRILL_PARAM_DESC;Check columns to filter on target Sheet

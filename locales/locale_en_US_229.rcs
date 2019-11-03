@@ -1,0 +1,27 @@
+﻿
+A;B_ACTIVE;Active
+A;B_INACTIVE;Inactive
+A;L_SC_ACTION;Schedule Action
+A;L_NOTI_EMAIL;Notify Email
+A;L_OUTP_TYPE;Output Type
+A;L_MAIL_CC;Mail CC
+A;L_MAIL_BD;Content
+A;L_SC_C1;Run once after
+A;L_SC_C3;Run once at time
+A;L_SC_C2;Repeat Cron
+A;B_SECOND;Second
+A;L_SC_PR;Period to Run
+A;B_DT_FR;From Date
+A;B_DT_TO;To Date
+A;L_SCC_TYPE;Repeat Type
+A;L_SCC_DATE;Recurr on Time
+A;L_SCC_REC;Recurr with Interval
+A;B_T_FR;From Time
+A;B_T_TO;To Time
+A;L_JB_STAT;Job Status
+A;B_EVERY;Every
+A;L_SHOW_LABEL;Show Label
+A;L_AUTO_ROT;Rotate Text
+A;L_STG_LINE;Stagger Line
+A;L_L_STEP;Label Step
+A;L_TK_INTVL;Tick Interval

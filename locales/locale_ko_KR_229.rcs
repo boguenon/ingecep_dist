@@ -1,0 +1,27 @@
+﻿
+A;B_ACTIVE;활성
+A;B_INACTIVE;비활성
+A;L_SC_ACTION;후속작업 설정
+A;L_NOTI_EMAIL;이메일 알림
+A;L_OUTP_TYPE;출력 형식
+A;L_MAIL_CC;발송자 (CC)
+A;L_MAIL_BD;메일 내용
+A;L_SC_C1;경과 시간후에 한번수행
+A;L_SC_C3;지정 시간에 한번수행
+A;L_SC_C2;반복 작업으로 수행
+A;B_SECOND;초
+A;L_SC_PR;반복 수행 기간
+A;B_DT_FR;시작 일자
+A;B_DT_TO;종료 일자
+A;L_SCC_TYPE;반복 유형
+A;L_SCC_DATE;특정 시간에 매일 수행
+A;L_SCC_REC;특정 간격에 반복 수행
+A;B_T_FR;시작 시간
+A;B_T_TO;종료 시간
+A;L_JB_STAT;작업 상태
+A;B_EVERY;매
+A;L_SHOW_LABEL;라벨 보이기
+A;L_AUTO_ROT;텍스트 회전
+A;L_STG_LINE;여러줄 텍스트
+A;L_L_STEP;라벨의 간격
+A;L_TK_INTVL;값범위 간격

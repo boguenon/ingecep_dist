@@ -1,0 +1,18 @@
+body {
+	overflow-x: hidden;
+	background-color: #244477;
+}
+
+.section-photo {
+	background-position: 0px 0px;
+}
+
+.section-photo-fullscreen {
+	top: 0px;
+	left: 0px;
+}
+
+.with-example.column {
+	left: 10px;
+	top: 0px;
+}

@@ -1,0 +1,37 @@
+﻿
+A;L_RANK_OPTION;Rank Options
+A;L_TREEM_OPTION;TreeMap Options
+A;L_TM_ALG;Algorithms
+A;L_TM_CL;TreeMap Class
+A;L_B_ADC;DataFile Cube
+A;L_MONGODB;MongoDB
+A;L_MONGO_DPROC;MongoDB Process
+A;L_MONGO_DATA;MongoDB Data
+A;L_EMPTY;No Data.
+A;F_MAX;Maximum
+A;B_SHARE;Share
+A;L_OP_NOT;NOT Operation
+A;L_P_cls;Close Window
+A;L_FILEEXT;Extension
+A;L_EXPORT_DOCX;DOCX Export
+A;L_EXPORT_RTF;RTF Export
+A;L_EXPORT_XML;XML Export
+A;L_LD_SQL_D;SQL Source
+A;M_REPORT;Make Report
+A;D_TABDIMENSION;Data Separate Dimension
+A;L_JOIN;Join
+A;B_DELETE;Delete
+A;B_DELIMITER;Delimiter
+A;L_ST_NAME;Style name
+A;L_HL_RANGE;Apply on
+A;L_F_TMPL;Apply Template
+A;L_M_FILTER;Measure Filter
+A;B_BUILD;Create Cube
+A;L_TBL_ORD;Table Order
+A;T_CODE_MAPPING;Code Mapping
+A;B_COLOR;Color
+A;L_SHOW_TAB_BAR;Show Tab buttons
+A;L_SHOW_VIEW_CHANGE;Show ViewMode button
+A;L_SHOW_TOOL_BUTTON;Show Tool button
+A;L_SHEET_NUM;Sheet Number
+A;L_B_LAYOUT;Layout

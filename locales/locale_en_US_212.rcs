@@ -1,0 +1,12 @@
+A;E_NO_MATCH_FLD;Not found matching item from list.
+A;M_UNKNOWN;Unknown Error!
+A;M_ERROR;Error!
+A;M_WARNING;Warning!
+A;M_INFO;Info!
+A;M_SUCCESS;Success!
+A;L_V_PIVOT;Pivot Mode
+A;L_V_RPT;Composite Pivot Mode
+A;L_P_RPT;Composite Pivot
+A;L_P_RPT_RT;Composite Pivot
+A;L_P_PIVOT_UNIT;Unit Pivot
+A;L_MOVE;Move

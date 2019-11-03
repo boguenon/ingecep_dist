@@ -1,0 +1,26 @@
+﻿
+A;T_CHART_SERIES;Chart Series
+A;L_SERIES;Series Option
+A;D_FORMULAMEASURE;Formula
+A;L_SEARCH_KWD;Search
+A;L_F_EQ;Equal (=)
+A;L_F_GE;Greater or Equal (>=)
+A;L_F_GT;Greater then (>)
+A;L_F_LE;Less or Equal (<=)
+A;L_F_LT;Less then (<)
+A;L_F_IN;In List (IN)
+A;L_F_LIKE;Include keyword (LIKE)
+A;L_F_BETWEEN;Between values (BETWEEN)
+A;L_F_SQL_IS;SQL Is Operator (IS)
+A;L_F_EQ_NOT;Not Equal (<>)
+A;L_F_GE_NOT;Not Greater or Equal (<)
+A;L_F_GT_NOT;Not Greater then (<=)
+A;L_F_LE_NOT;Not Less or Equal (>)
+A;L_F_LT_NOT;Not Less then (>=)
+A;L_F_IN_NOT;Not In List (NOT IN)
+A;L_F_LIKE_NOT;Not Include keyword (NOT LIKE)
+A;L_F_BETWEEN_NOT;Not Between values (NOT BETWEEN)
+A;L_F_SQL_IS_NOT;SQL Is Not Operator (IS NOT)
+A;L_CD_DISP_2;* Drag Metric Item or Click Add button
+A;L_CLUSTER;Cluster
+A;L_P_CLUSTER;Cluster Dimension

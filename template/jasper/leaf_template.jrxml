@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="leaf_template" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6e43e060-99db-4e31-a0fa-5f1611560853">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<template><![CDATA["C:\\workspace\\_ingecep\\ingecep_sa\\template\\jasper\\grid_template_css_01.jrtx"]]></template>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<subDataset name="ing_xml" uuid="86073e41-2b2d-44f6-9890-dbcc6fbbf799">
+		<queryString language="xPath">
+			<![CDATA[/reportset/report_0/data]]>
+		</queryString>
+		<field name="text" class="java.lang.String">
+			<fieldDescription><![CDATA[column_0/text]]></fieldDescription>
+		</field>
+		<field name="text2" class="java.lang.String">
+			<fieldDescription><![CDATA[column_1/text]]></fieldDescription>
+		</field>
+		<field name="text3" class="java.lang.String">
+			<fieldDescription><![CDATA[column_2/text]]></fieldDescription>
+		</field>
+		<field name="text4" class="java.lang.String">
+			<fieldDescription><![CDATA[column_3/text]]></fieldDescription>
+		</field>
+		<field name="code" class="java.lang.String">
+			<fieldDescription><![CDATA[column_0/code]]></fieldDescription>
+		</field>
+		<field name="code2" class="java.lang.String">
+			<fieldDescription><![CDATA[column_1/code]]></fieldDescription>
+		</field>
+		<field name="code3" class="java.lang.String">
+			<fieldDescription><![CDATA[column_2/code]]></fieldDescription>
+		</field>
+		<field name="code4" class="java.lang.String">
+			<fieldDescription><![CDATA[column_3/code]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="dataset1" uuid="421b9571-270e-4534-80f7-29a3057cdf0c"/>
+	<subDataset name="dataset2" uuid="d28eaae7-6997-4689-8bc0-9d6aee85d8a3">
+		<queryString language="xPath">
+			<![CDATA[/reportset/report_1/data]]>
+		</queryString>
+		<field name="column_0" class="java.lang.String">
+			<fieldDescription><![CDATA[column_0]]></fieldDescription>
+		</field>
+		<field name="column_1" class="java.lang.String">
+			<fieldDescription><![CDATA[column_1]]></fieldDescription>
+		</field>
+		<field name="column_2" class="java.lang.String">
+			<fieldDescription><![CDATA[column_2]]></fieldDescription>
+		</field>
+		<field name="column_3" class="java.lang.String">
+			<fieldDescription><![CDATA[column_3]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="Table Dataset 1" uuid="a7e74f52-e59a-4356-ae76-4a4224312f94"/>
+	<parameter name="REPORT_NAME" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["테스트"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="xPath">
+		<![CDATA[/reportset/report_0]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<image>
+				<reportElement x="275" y="0" width="300" height="64" uuid="5f707bd0-c9c8-44fe-bbfb-4e36b59ed385"/>
+				<imageExpression><![CDATA["c:\\workspace\\_ingecep\\ingecep_sa\\template\\jasper\\leaf_banner_gray.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="0" y="13" width="263" height="33" uuid="7399afa0-c01f-4221-a8e5-7994e623738f"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Sales Report]]></text>
+			</staticText>
+			<textField>
+				<reportElement style="SubTitle" x="111" y="46" width="176" height="24" uuid="e0ac93a6-0e35-4e01-be4c-b80f3c7782a0"/>
+				<textElement>
+					<font fontName="Malgun Gothic" pdfFontName="fonts/malgun.ttf" pdfEncoding="Identity-H" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REPORT_NAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="60" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="34" width="555" height="1" uuid="64eed2c1-66c9-4536-bd95-8a46f1a1a527"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="77">
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="3" y="0" width="550" height="68" uuid="fffd42d7-257d-499b-824e-5c7d7b36e734"/>
+				<staticText>
+					<reportElement style="Column header" x="46" y="4" width="100" height="15" uuid="b7bc1133-6ba5-4e90-af70-985b018da035"/>
+					<text><![CDATA[Product Sales]]></text>
+				</staticText>
+				<rectangle>
+					<reportElement mode="Opaque" x="0" y="0" width="36" height="19" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="b9462127-eea4-4e4a-9771-87722382a8df"/>
+				</rectangle>
+				<staticText>
+					<reportElement style="grid_header" x="9" y="29" width="100" height="20" uuid="0eeb2792-b5ed-4db4-a4d7-953578fda8db"/>
+					<text><![CDATA[Category Name]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="grid_header" x="108" y="29" width="100" height="20" uuid="6b968a30-f4c2-412a-a304-9644fcfd023e"/>
+					<text><![CDATA[Ship Country]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="grid_header" x="208" y="29" width="100" height="20" uuid="51954986-a98b-4f7f-a911-be48cde81d92"/>
+					<text><![CDATA[Quantity]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="grid_header" x="308" y="29" width="100" height="20" uuid="89bc4886-38c5-49ce-bbfd-ce28001327e2"/>
+					<text><![CDATA[Order Count]]></text>
+				</staticText>
+				<componentElement>
+					<reportElement x="3" y="49" width="536" height="19" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="3d8b275c-2a3b-4875-98ac-268e304d1f23"/>
+					<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical" ignoreWidth="false">
+						<datasetRun subDataset="ing_xml" uuid="4130da9f-bcec-4bdc-b043-f3dc998292d2">
+							<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).dataSource("/reportset/report_0/data")]]></dataSourceExpression>
+						</datasetRun>
+						<jr:listContents height="19" width="536">
+							<textField>
+								<reportElement style="grid_data_alpha" stretchType="RelativeToBandHeight" x="0" y="0" width="100" height="19" isPrintInFirstWholeBand="true" uuid="df772d87-0674-471c-bd2d-db129b89ccb2"/>
+								<textFieldExpression><![CDATA[$F{text}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement style="grid_data_alpha" x="100" y="0" width="100" height="19" uuid="92505961-1099-46af-a6ff-2f81a4937053"/>
+								<textFieldExpression><![CDATA[$F{text2}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement style="grid_data_numeric" x="200" y="0" width="100" height="19" uuid="e98d0054-f5ff-4008-acde-96ef16cb42ca"/>
+								<textFieldExpression><![CDATA[$F{code3}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement style="grid_data_numeric" x="300" y="0" width="100" height="19" uuid="02cdb435-fe51-4ea1-ba30-d77bbf210b25"/>
+								<textFieldExpression><![CDATA[$F{code4}]]></textFieldExpression>
+							</textField>
+						</jr:listContents>
+					</jr:list>
+				</componentElement>
+			</frame>
+		</band>
+		<band height="106">
+			<frame>
+				<reportElement positionType="Float" x="0" y="0" width="555" height="68" uuid="dde5727f-410c-4418-8f49-31c0cca28ea0"/>
+				<rectangle>
+					<reportElement mode="Opaque" x="13" y="12" width="36" height="19" forecolor="#CCCCCC" backcolor="#CCCCCC" uuid="b4d5bd29-5b3f-46ec-b32a-a925fb21f12c"/>
+				</rectangle>
+				<staticText>
+					<reportElement style="Column header" x="62" y="16" width="177" height="15" uuid="8fce4235-6efe-45d8-a57c-0f22b6a9784e"/>
+					<text><![CDATA[Product Description]]></text>
+				</staticText>
+				<componentElement>
+					<reportElement mode="Transparent" x="13" y="41" width="464" height="20" uuid="551a60ba-6595-4fab-bcf6-64ad7eece099"/>
+					<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+						<datasetRun subDataset="dataset2" uuid="a1e7972e-d082-4425-b89f-b04c68528034">
+							<dataSourceExpression><![CDATA[((net.sf.jasperreports.engine.data.JRXmlDataSource)$P{REPORT_DATA_SOURCE}).dataSource("/reportset/report_1/data")]]></dataSourceExpression>
+						</datasetRun>
+						<jr:listContents height="20" width="464">
+							<textField>
+								<reportElement x="0" y="0" width="100" height="20" uuid="f1ccef6b-b1d5-41ce-a885-4877a8939e81"/>
+								<textFieldExpression><![CDATA[$F{column_0}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="99" y="0" width="100" height="20" uuid="f3af9378-ab3a-43b6-9cde-71ed4292e0c7"/>
+								<textFieldExpression><![CDATA[$F{column_1}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="199" y="0" width="100" height="20" uuid="199bf0a7-fd26-473b-9e94-2f0e69ede81f"/>
+								<textFieldExpression><![CDATA[$F{column_2}]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="299" y="0" width="100" height="20" uuid="fb216bc9-4edd-4cff-9c49-97b9bd1dffe1"/>
+								<textFieldExpression><![CDATA[$F{column_3}]]></textFieldExpression>
+							</textField>
+						</jr:listContents>
+					</jr:list>
+				</componentElement>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement style="Column header" x="433" y="0" width="80" height="20" uuid="e7a496ec-e85d-4406-98d3-ec80b48fab39"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="513" y="0" width="40" height="20" uuid="c55b349c-83ab-4725-aebe-42f92284b483"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="0" y="0" width="197" height="20" uuid="5a554e04-3ab8-4304-9cd9-a09e45f728a4"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="163" splitType="Immediate"/>
+	</summary>
+</jasperReport>

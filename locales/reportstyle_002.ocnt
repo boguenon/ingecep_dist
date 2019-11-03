@@ -1,0 +1,243 @@
+<smsg>
+   <item uid="ReportStyle" name="ReportStyle" nodepath="ReportStyle" type="AppOption">
+      <themes>
+         <Styles c_cset="" name="base_theme">
+            <Default name="Default">
+               <ItemStyle name="Formula" rptseq="0">
+                  <Header autowidth="T" backcolor="14211288" borderbottom="1" bordercolor="16053492" borderright="1" fontsize="11" fontstyle="0" name="Formula" nullvalue="" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="4" width="100" widthmode="0" />
+                  <Data autowidth="T" backcolor="16185078" borderbottom="1" bordercolor="16185078" borderright="1" fontsize="11" fontstyle="0" name="Formula" nullvalue="" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="6" width="100" widthmode="0">
+                     <formatstring><![CDATA[#,###]]></formatstring>
+					 <template><![CDATA[]]></template>
+                  </Data>
+               </ItemStyle>
+               <ItemStyle name="Dimension" rptseq="0">
+                  <Header autowidth="T" backcolor="14211288" borderbottom="1" bordercolor="16053492" borderright="1" fontsize="11" fontstyle="0" forecolor="3355494" name="Dimension" nullvalue="" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="4" width="100" widthmode="0" />
+                  <Data autowidth="T" backcolor="16185078" borderbottom="1" bordercolor="16053492" borderright="1" fontsize="11" fontstyle="0" name="Dimension" nullvalue="" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="4" width="100" widthmode="0">
+					<formatstring><![CDATA[]]></formatstring>
+					<template><![CDATA[]]></template>
+				  </Data>
+               </ItemStyle>
+               <ItemStyle name="Measure" rptseq="0">
+                  <Header autowidth="T" backcolor="14211288" borderbottom="1" bordercolor="16777215" borderright="1" cssname="" fontsize="11" fontstyle="0" forecolor="3355494" name="Measure" nullvalue="" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="4" width="100" widthmode="0" />
+                  <Data autowidth="T" backcolor="16777215" borderbottom="1" bordercolor="16777215" borderright="1" cssname="" fontsize="11" fontstyle="0" forecolor="255" name="Measure" nullvalue="-" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="6" width="100" widthmode="0">
+                     <formatstring><![CDATA[#,###]]></formatstring>
+					 <template><![CDATA[]]></template>
+                  </Data>
+               </ItemStyle>
+               <ItemStyle name="LineNumber" rptseq="0">
+                  <Header autowidth="T" backcolor="14211288" borderbottom="1" bordercolor="16053492" borderright="1" fontsize="11" fontstyle="0" forecolor="3355494" name="LineNumber" nullvalue="" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="4" width="100" widthmode="0" />
+                  <Data autowidth="T" backcolor="16777113" borderbottom="1" bordercolor="16053492" borderright="1" fontsize="11" fontstyle="0" forecolor="3355494" name="LineNumber" nullvalue="" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="4" width="100" widthmode="0">
+					<formatstring><![CDATA[]]></formatstring>
+					<template><![CDATA[]]></template>
+				  </Data>
+               </ItemStyle>
+            </Default>
+            <Custom name="Custom">
+               <ItemStyle basestylename="Dimension" name="cluster" rptseq="0">
+                  <Header />
+                  <Data />
+               </ItemStyle>
+               <ItemStyle basestylename="Measure" name="USD" rptseq="0">
+                  <Header />
+                  <Data>
+                     <formatstring><![CDATA[$ #,###]]></formatstring>
+					 <template><![CDATA[]]></template>
+                  </Data>
+               </ItemStyle>
+               <ItemStyle basestylename="Measure" name="Currency" rptseq="0">
+                  <Header />
+                  <Data>
+                     <formatstring><![CDATA[\ #,###]]></formatstring>
+                  </Data>
+               </ItemStyle>
+               <ItemStyle basestylename="Measure" name="Thousand" rptseq="0">
+                  <Header />
+                  <Data>
+                     <formatstring><![CDATA[#,###,]]></formatstring>
+                  </Data>
+               </ItemStyle>
+               <ItemStyle basestylename="Measure" name="Million" rptseq="0">
+                  <Header />
+                  <Data>
+                     <formatstring><![CDATA[#,###,,]]></formatstring>
+                  </Data>
+               </ItemStyle>
+               <ItemStyle basestylename="Measure" name="PercentSymbol" rptseq="0">
+               	  <Header />
+                  <Data>
+                     <formatstring><![CDATA[#,###.00 '%']]></formatstring>
+                  </Data>
+               </ItemStyle>
+               <ItemStyle basestylename="Measure" name="Percentage_2Decimal" rptseq="0">
+                  <Header />
+                  <Data>
+                     <formatstring><![CDATA[#,###.00 %]]></formatstring>
+                  </Data>
+               </ItemStyle>
+               <ItemStyle basestylename="Measure" name="PercentSymbol_2Decimal" rptseq="0">
+               	  <Header />
+                  <Data>
+                     <formatstring><![CDATA[#,###.00 '%']]></formatstring>
+                  </Data>
+               </ItemStyle>
+               <ItemStyle basestylename="Measure" name="Percentage" rptseq="0">
+                  <Header />
+                  <Data>
+                     <formatstring><![CDATA[#,### %]]></formatstring>
+                  </Data>
+               </ItemStyle>
+			   <ItemStyle basestylename="Measure" name="Arrow_Up" rptseq="0">
+				<Header/>
+				<Data>
+					<template><![CDATA[<span>TEXT</span><span style='font-family: fontawesome; color:#00ff00'>&#xf062;</span>]]></template>
+				</Data>
+			   </ItemStyle>
+			   <ItemStyle basestylename="Measure" name="Arrow_Down" rptseq="0">
+				<Header/>
+				<Data>
+					<template><![CDATA[<span>TEXT</span><span style='font-family: fontawesome; color:#ff0000'>&#xf063;</span>]]></template>
+				</Data>
+			   </ItemStyle>
+            </Custom>
+         </Styles>
+         <Styles c_cset="theme 3" name="DesertLight">
+            <Default name="Default">
+               <ItemStyle name="Formula" rptseq="0">
+                  <Header autowidth="T" backcolor="14211288" borderbottom="1" bordercolor="16053492" borderright="1" fontsize="11" fontstyle="0" nullvalue="" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="4" width="100" widthmode="0" />
+                  <Data autowidth="T" backcolor="16185078" borderbottom="1" bordercolor="16185078" borderright="1" fontsize="11" fontstyle="0" nullvalue="" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="6" width="100" widthmode="0">
+                     <formatstring><![CDATA[#,###]]></formatstring>
+                  </Data>
+               </ItemStyle>
+               <ItemStyle name="Dimension" rptseq="0">
+                  <Header autowidth="T" backcolor="9868950" borderbottom="1" bordercolor="16053492" borderright="1" cssname="" fontsize="11" fontstyle="0" forecolor="16763904" nullvalue="" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="4" width="100" widthmode="0" />
+                  <Data autowidth="T" backcolor="16185078" borderbottom="1" bordercolor="16053492" borderright="1" cssname="" fontsize="11" fontstyle="0" nullvalue="" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="4" width="100" widthmode="0" />
+               </ItemStyle>
+               <ItemStyle name="Measure" rptseq="0">
+                  <Header autowidth="T" backcolor="9868950" borderbottom="1" bordercolor="16777215" borderright="1" cssname="" fontsize="11" fontstyle="0" forecolor="16763904" nullvalue="" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="4" width="100" widthmode="0" />
+                  <Data autowidth="T" backcolor="13434879" borderbottom="1" bordercolor="16777215" borderright="1" cssname="" fontsize="11" fontstyle="0" forecolor="32768" nullvalue="-" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="6" width="100" widthmode="0">
+                     <formatstring><![CDATA[#,###]]></formatstring>
+                  </Data>
+               </ItemStyle>
+               <ItemStyle name="LineNumber" rptseq="0">
+                  <Header autowidth="T" backcolor="14211288" borderbottom="1" bordercolor="16053492" borderright="1" fontsize="11" fontstyle="0" forecolor="3355494" nullvalue="" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="4" width="100" widthmode="0" />
+                  <Data autowidth="T" backcolor="16777113" borderbottom="1" bordercolor="16053492" borderright="1" fontsize="11" fontstyle="0" forecolor="3355494" nullvalue="" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="4" width="100" widthmode="0" />
+               </ItemStyle>
+            </Default>
+            <Custom name="Custom">
+               <ItemStyle basestylename="Measure" name="Percentage_2Decimal" rptseq="0">
+                  <Header backcolor="12572147" />
+                  <Data>
+                     <formatstring><![CDATA[#,###.00 %]]></formatstring>
+                  </Data>
+               </ItemStyle>
+               <ItemStyle basestylename="Dimension" name="cluster" rptseq="0">
+                  <Header />
+                  <Data fontstyle="1" />
+               </ItemStyle>
+			   <ItemStyle basestylename="Measure" name="Arrow_Up" rptseq="0">
+				<Header/>
+				<Data>
+					<template><![CDATA[<span>TEXT</span><span style='font-family: fontawesome; color:#00ff00'>&#xf062;</span>]]></template>
+				</Data>
+			   </ItemStyle>
+			   <ItemStyle basestylename="Measure" name="Arrow_Down" rptseq="0">
+				<Header/>
+				<Data>
+					<template><![CDATA[<span>TEXT</span><span style='font-family: fontawesome; color:#ff0000'>&#xf063;</span>]]></template>
+				</Data>
+			   </ItemStyle>
+            </Custom>
+         </Styles>
+         <Styles c_cset="" name="DarkBrown">
+            <Default name="Default">
+               <ItemStyle name="Formula" rptseq="0">
+                  <Header autowidth="T" backcolor="14211288" borderbottom="1" bordercolor="16053492" borderright="1" cssname="" fontsize="11" fontstyle="0" nullvalue="" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="4" width="100" widthmode="0" />
+                  <Data autowidth="T" backcolor="16185078" borderbottom="1" bordercolor="16185078" borderright="1" cssname="" fontsize="11" fontstyle="0" nullvalue="" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="6" width="100" widthmode="0">
+                     <formatstring><![CDATA[#,###]]></formatstring>
+                  </Data>
+               </ItemStyle>
+               <ItemStyle name="Dimension" rptseq="0">
+                  <Header autowidth="T" backcolor="14211288" borderbottom="1" bordercolor="16053492" borderright="1" cssname="" fontsize="11" fontstyle="0" forecolor="3355494" nullvalue="" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="4" width="100" widthmode="0" />
+                  <Data autowidth="T" backcolor="16185078" borderbottom="1" bordercolor="16053492" borderright="1" cssname="" fontsize="11" fontstyle="0" nullvalue="" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="4" width="100" widthmode="0" />
+               </ItemStyle>
+               <ItemStyle name="Measure" rptseq="0">
+                  <Header autowidth="T" backcolor="16711935" borderbottom="1" bordercolor="16777215" borderright="1" cssname="" fontsize="11" fontstyle="0" forecolor="10079487" nullvalue="" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="4" width="100" widthmode="0" />
+                  <Data autowidth="T" backcolor="10079232" borderbottom="1" bordercolor="16777215" borderright="1" cssname="" fontsize="11" fontstyle="0" forecolor="8388608" nullvalue="-" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="6" width="100" widthmode="0">
+                     <formatstring><![CDATA[#,###]]></formatstring>
+                  </Data>
+               </ItemStyle>
+               <ItemStyle name="LineNumber" rptseq="0">
+                  <Header autowidth="T" backcolor="14211288" borderbottom="1" bordercolor="16053492" borderright="1" fontsize="11" fontstyle="0" forecolor="3355494" nullvalue="" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="4" width="100" widthmode="0" />
+                  <Data autowidth="T" backcolor="16777113" borderbottom="1" bordercolor="16053492" borderright="1" fontsize="11" fontstyle="0" forecolor="3355494" nullvalue="" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="4" width="100" widthmode="0" />
+               </ItemStyle>
+            </Default>
+            <Custom name="Custom">
+               <ItemStyle basestylename="Dimension" name="cluster" rptseq="0">
+                  <Header />
+                  <Data />
+               </ItemStyle>
+               <ItemStyle basestylename="Measure" name="USD" rptseq="0">
+                  <Header />
+                  <Data>
+                     <formatstring><![CDATA[$ #,###]]></formatstring>
+                  </Data>
+               </ItemStyle>
+               <ItemStyle basestylename="Measure" name="Currency" rptseq="0">
+                  <Header />
+                  <Data>
+                     <formatstring><![CDATA[\ #,###]]></formatstring>
+                  </Data>
+               </ItemStyle>
+               <ItemStyle basestylename="Measure" name="Thousand" rptseq="0">
+                  <Header />
+                  <Data>
+                     <formatstring><![CDATA[#,###,]]></formatstring>
+                  </Data>
+               </ItemStyle>
+               <ItemStyle basestylename="Measure" name="Million" rptseq="0">
+                  <Header />
+                  <Data>
+                     <formatstring><![CDATA[#,###,,]]></formatstring>
+                  </Data>
+               </ItemStyle>
+               <ItemStyle basestylename="Measure" name="PercentSymbol" rptseq="0">
+               	  <Header />
+                  <Data>
+                     <formatstring><![CDATA[#,###.00 '%']]></formatstring>
+                  </Data>
+               </ItemStyle>
+               <ItemStyle basestylename="Measure" name="Percentage_2Decimal" rptseq="0">
+                  <Header />
+                  <Data>
+                     <formatstring><![CDATA[#,###.00 %]]></formatstring>
+                  </Data>
+               </ItemStyle>
+               <ItemStyle basestylename="Measure" name="PercentSymbol_2Decimal" rptseq="0">
+               	  <Header />
+                  <Data>
+                     <formatstring><![CDATA[#,###.00 '%']]></formatstring>
+                  </Data>
+               </ItemStyle>
+               <ItemStyle basestylename="Measure" name="Percentage" rptseq="0">
+                  <Header />
+                  <Data>
+                     <formatstring><![CDATA[#,### %]]></formatstring>
+                  </Data>
+               </ItemStyle>
+			   <ItemStyle basestylename="Measure" name="Arrow_Up" rptseq="0">
+				<Header/>
+				<Data>
+					<template><![CDATA[<span>TEXT</span><span style='font-family: fontawesome; color:#00ff00'>&#xf062;</span>]]></template>
+				</Data>
+			   </ItemStyle>
+			   <ItemStyle basestylename="Measure" name="Arrow_Down" rptseq="0">
+				<Header/>
+				<Data>
+					<template><![CDATA[<span>TEXT</span><span style='font-family: fontawesome; color:#ff0000'>&#xf063;</span>]]></template>
+				</Data>
+			   </ItemStyle>
+            </Custom>
+         </Styles>
+      </themes>
+   </item>
+</smsg>

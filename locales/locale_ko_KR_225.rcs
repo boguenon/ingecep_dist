@@ -1,0 +1,26 @@
+﻿
+A;T_CHART_SERIES;챠트 시리즈
+A;L_SERIES;시리즈 옵션
+A;D_FORMULAMEASURE;수식
+A;L_SEARCH_KWD;검색
+A;L_F_EQ;같다 (=)
+A;L_F_GE;크거나 같다 (>=)
+A;L_F_GT;크다 (>)
+A;L_F_LE;작거나 같다 (<=)
+A;L_F_LT;작다 (<)
+A;L_F_IN;목록값에 포함 (IN)
+A;L_F_LIKE;키워드 포함 (LIKE)
+A;L_F_BETWEEN;두값의 사이에 있다 (BETWEEN)
+A;L_F_SQL_IS;SQL Is 연산자 (IS)
+A;L_F_EQ_NOT;같지 않다 (<>)
+A;L_F_GE_NOT;크거나 같지 않다 (<)
+A;L_F_GT_NOT;크지 않다 (<=)
+A;L_F_LE_NOT;작거나 같지 않다 (>)
+A;L_F_LT_NOT;작지 않다 (>=)
+A;L_F_IN_NOT;목록값에 없음 (NOT IN)
+A;L_F_LIKE_NOT;키워드를 포함하지 않음 (NOT LIKE)
+A;L_F_BETWEEN_NOT;두값 사이에 있지 않음 (NOT BETWEEN)
+A;L_F_SQL_IS_NOT;SQL IsNot 연산 (IS NOT)
+A;L_CD_DISP_2;* 메트릭 항목을 드래그 하거나 추가 버튼을 눌러서 추가해 주십시오.
+A;L_CLUSTER;클러스터링
+A;L_P_CLUSTER;클러스터 디멘젼

@@ -1,0 +1,173 @@
+<div id="right">
+	<div id="rightpad">
+		<div id="step">
+			<div class="far-right">
+				<div class="button1-right"><div class="prev"><a onclick="lm1(4)" alt="Previous">Previous</a></div></div>
+				<div class="button1-left"><div class="next"><a onclick="l9();" alt="Next">Next</a></div></div>
+			</div>
+			<h2>Server Configuration</h2>
+		</div>
+
+		<div id="installer">
+			<div class="t">
+				<div class="t">
+					<div class="t"></div>
+				</div>
+			</div>
+			<div class="m">
+				<h2>Server Settings:</h2>
+				<div class="install-text">
+					<p>Setting up AMPLIX! to run on your server involves admin email settings here.</p>	
+					<p>The first step is email configuration. Choose your preferred settings: </p>
+					<h2>Email Settings</h2>
+					<p>Email is used to notify password change as a given email address.</p>
+					<h2>Single Sign On(SSO) Settings</h2>
+					<p>SSO enables LDAP central login validation. The customized java class file for validating LDAP is necessary and load dynamically when Orbit starts.</p>
+				</div>
+				<div class="install-body">
+					<div class="t">
+						<div class="t">
+							<div class="t"></div>
+						</div>
+					</div>
+					<div class="m">
+						<h3 class="title-smenu" title="Basic">Email Settings</h3>
+						<div class="section-smenu">
+							<table class="content2">
+								<tr>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<label for="vars_dbtype">
+											SMTP Hostname
+										</label>
+										<br />
+										<input id="s5hostname" class="inputbox validate required none dbnamemsg" type="text" name="s5hostname" value="" />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<em>
+											This is SMTP email server that could send email from Orbit. Examples on Gmail is smtp.gmail.com
+										</em>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<label for="vars_dbtype">
+											SMTP Port number
+										</label>
+										<br />
+										<input id="s5portnumber" class="inputbox validate required none dbnamemsg" type="text" name="s5portnumber" value="" />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<em>
+											SMTP email server port number to connect with. Standard email SMTP server port number is 25 and Gmail is 587
+										</em>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<label for="vars_dbusername">
+											<span id="dbusernamemsg">Username</span>
+										</label>
+										<br />
+										<input id="s5authuser" class="inputbox validate required none dbusernamemsg" type="text" name="s5authuser" value="" />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<em>
+											This can be the default SMTP username, a username provided by your email provider.
+										</em>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<label for="vars_dbpassword">
+											Password
+										</label>
+										<br />
+										<input id="s5pwd" class="inputbox" type="password" name="s5pwd" value="" />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<em>
+											Using a password for the SMTP account is mandatory for site security. This is the same password used to access your email.
+										</em>
+									</td>
+								</tr>
+							</table>
+							<br /><br />
+						</div>
+
+						<h3 class="title-smenu moofx-toggler" title="Advanced">Advanced Settings</h3>
+						<div class="section-smenu moofx-slider">
+							<table class="content2">
+								<tr>
+									<td></td>
+									<td></td>
+								</tr>
+
+								<tr>
+									<td colspan="2">
+										<label for="vars_dbhostname">
+											<span id="dbhostnamemsg">Single Sign On</span>
+										</label>
+										<br />
+										<input id="s5sso" class="inputbox" type="checkbox" value="" /> Enable
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<em>
+											Use SingleSignOn class to varify username and password.
+										</em>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<label for="vars_dbhostname">
+											<span id="dbhostnamemsg">SSO Java Class</span>
+										</label>
+										<br />
+										<input id="s5ssoclass" class="inputbox" type="text" name="s5ssoclass" value="" />
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<em>
+											Customized Java class file. This class is loaded dynamically when server starts up. When user try to login server, this class varify username and password.
+										</em>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="clr"></div>
+					</div>
+
+					<div class="b">
+						<div class="b">
+							<div class="b"></div>
+						</div>
+					</div>
+					<div class="clr"></div>
+				</div>
+				<div class="clr"></div>
+			</div>
+
+			<div class="b">
+				<div class="b">
+					<div class="b"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clr"></div>

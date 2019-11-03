@@ -1,0 +1,12 @@
+﻿A;D_SCHEMA;스키마
+A;L_F_LIKE;포함 문자 비교
+A;L_F_EQ;같다
+A;L_F_GE;크거나 같다
+A;L_F_GT;크다
+A;L_F_LE;작거나 같다
+A;L_F_LT;작다
+A;L_F_IN;복수개 항목
+A;L_F_BETWEEN;두값 사이
+A;L_F_NOTIN;항목에 없음
+A;B_NO_DATA;조회 결과가 없습니다.
+A;L_R_ANAL_CUBE_LBL;쉬트 분석 주제

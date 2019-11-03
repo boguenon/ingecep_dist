@@ -1,0 +1,24 @@
+A;T_REVISION;Revision Control
+A;L_REVISION;Version Control
+A;B_SEL;Select
+A;B_OPT_LAYOUT;Layout
+A;L_HIDE_TITLE;Hide Title
+A;L_FIXED_W;Fix Width
+A;L_FIXED_H;Fix Height
+A;L_R_UPD_TGT;Drill Target
+A;L_R_UT_DRILL;Update Sheet
+A;L_R_UT_DESC;On check one or multi, only drill to selected.
+A;L_R_CMENU;External Drill Target
+A;B_ADD;Add
+A;B_REMOVE;Remove
+A;B_PATH;Path
+A;B_SHEET_NAME;Sheet name
+A;B_SEQUENCE;Sequence
+A;L_R_CM_SHOWTAB;Open in Tab
+A;L_R_RUN_PROP;Run Properties
+A;L_ONLOAD_RUN;Execute on loading
+A;L_R_ANAL_CUBE;Analysis Cube
+A;L_R_ANAL_CUBE_LB;Cube
+A;L_SET_DEF;Use Default
+A;L_OPT_GRID;Grid Option
+A;L_R_COLUMN_FIT;Fit column to panel

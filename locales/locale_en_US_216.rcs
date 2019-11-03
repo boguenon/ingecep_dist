@@ -1,0 +1,11 @@
+﻿A;L_P_export;Export
+A;L_REN_SCH;Change Name
+A;M_S_S1;No results found for selected database instance.
+A;M_S_S2;No results found for registered tables.
+A;E_D_EVNT;Error while processing evnet @.
+A;L_EVENT_WIZARD;Action Wizard
+A;L_SHOW_VALUE;Show Values
+A;L_UNIT_TEXT;Unit Text
+A;L_C_FMT_VAL;Use Formatted Value
+A;L_EXPORT_CSV;CSV
+A;E_SC_LD;Error while loading DynamicScript

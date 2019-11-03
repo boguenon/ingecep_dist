@@ -1,0 +1,169 @@
+A;L_SAVE_CHANGES;Save Changes?
+A;L_SAVE_C_MSG;You are closing a tab that has unsaved changes. Would you like to save your changes?
+A;L_P_ROW;Row Dimensions
+A;L_P_COL;Column Dimensios
+A;L_P_MEASURE;Measures
+A;L_VIEW_MODE;View Mode
+A;L_VIEW_MODE_LBL;Data query viewer
+A;L_M_POSITION;Measure Position
+A;L_MEASURE_ON;Measure On
+A;L_DISTINCT;Return distinct all rows
+A;L_FIX_COLUMN;Fix Column
+A;L_CUSTOM_FIX;Custom Fix
+A;L_M_FORMAT;Measure Format
+A;L_M_NAME;Measure Name
+A;L_PAGING;Paging
+A;L_USE_PAGING;Use pagination
+A;L_ROW_P_PAGE;Rows per Page
+A;L_PAGE_STYLE;Page Style
+A;L_TREE_VIEW;Tree View
+A;L_ENABLE_TREE_VIEW;Enable Tree View
+A;L_COL_TREE;Make Column Header Tree
+A;L_OTHER_OPTION;Other Options
+A;L_NUM_PREC;Number precision
+A;L_HIGH_PREC;High precision number
+A;L_MANAGEMENT;Management
+A;L_HELP_GUIDES;Help and Guides
+A;L_PREFERENCES;Preferences
+A;L_CH_PASSWD;Change Password
+A;L_LOGOUT;Log Out
+A;L_SYSTEM;System
+A;L_USER_MANAGEMENT;User Management
+A;L_LOOK_AND_FEEL;Look and Feel
+A;L_HELP_DOC;Help Documentation
+A;L_LOCALE_MANAGER;Locale Manager
+A;L_FEATURE_CTRL;Feature Controls
+A;L_ANALYSIS;Analysis
+A;L_DB_INSTANCE;Database Instance
+A;L_REG_TABLE;Table Register
+A;L_VARIABLES;Variables
+A;L_MGR_DASHBOARD;Dashaboard Mgr
+A;L_MONITORING;Monitoring
+A;L_META_IMPORT;Import Meta File
+A;L_SYS_LOG;System Log
+A;L_SYS_RES;System Resources
+A;L_EDITOR_TYPE;Editor Type
+A;L_E_VALUE;Type Values
+A;L_E_LIST;Select from Values
+A;L_VAL_DELIM;Value Delimiter
+A;L_PROMPT_TYPE;Prompt Type
+A;L_F_VALUE;Value
+A;L_F_VALUE_LNG;Values
+A;L_F_VALUE_TO;To Value
+A;T_VALUE_SELECT;Value Selection Wizard
+A;B_CODE;Code
+A;B_TEXT;Text
+A;L_CVAL_DESC;Type text with semi-colon delimiter
+A;B_VALUES;Values
+A;L_ALIGN_VERTICAL;Vertical Align
+A;L_PAGE_OPTIONS;Page Options
+A;L_SHEET_OPTIONS;Sheet Options
+A;L_OVF_DESC;Check overflow for draw scrolled grid
+A;B_HIDE;Hidden
+A;B_OVERFLOW;Overflow
+A;B_TITLE;Title
+A;B_ZOOM;Zoom
+A;L_MARKER;Marker
+A;L_SERIES_LAYOUT;Series Layout
+A;L_SERIES_TYPE;Series Type
+A;L_PLOT_STYLES;Plot Styles
+A;L_CLR_SET;Color Set
+A;L_BB_OPT;BubbleMap Options
+A;L_BB_SL;Show RowData legend
+A;L_BB_YA;Row data to Y Axis
+A;L_BB_SA;Bubble Size Axis
+A;L_BB_CA;Bubble Color Axis
+A;L_BB_MS;Max bubble size
+A;L_TC_TA;Time axis
+A;L_TC_DU;Duration (mili second)
+A;L_MAP_OPT;Map Options
+A;L_MAP_TYPE;Map Type
+A;L_MAP_AXIS;Map Axis
+A;L_YAXIS_TITLE;YAxis Title
+A;L_SORT_SEL;Methods to Sorting
+A;L_RANK_TOP;Rank Top
+A;L_RANK_BOTTOM;Rank Bottom
+A;L_RNK_CNT;Rank Count
+A;L_RNK_LST;Show all last rank
+A;L_RNK_VAL;Rank on Value
+A;L_RNK_PAR;Partition By
+A;L_SORT_SRC;Items to sort
+A;L_SORT_ORD;Sorting Orders
+A;B_METHOD;Method
+A;B_NUMERIC;Numeric
+A;B_ASC;Ascending
+A;B_DSC;Descending
+A;B_BACK;Back
+A;L_DATE_FORMAT;Date Format
+A;L_DF_OS;Order style
+A;L_DF_YF;Year Format
+A;L_DF_MF;Month Format
+A;L_DF_DF;Day Format
+A;L_DF_WF;Weekday Format
+A;L_DF_APM;AM/PM
+A;L_DF_WD;Weekday
+A;L_DF_WD_O;Weekday Order
+A;L_TIMEZONE;Timezone
+A;L_DF_DS;Date Separate
+A;L_DF_TS;Time Separate
+A;L_TZ_OFFSET;Time Offset
+A;L_APPL;Application
+A;L_APPL_TMPL;Application Template
+A;L_OPTIONS;Options
+A;L_SHOW_FIRST;Show First
+A;L_SHOW_TZ;Show Timezone
+A;T_REG_USER;Register User
+A;L_GROUP_NAME;Group Name
+A;L_USERID;User ID
+A;L_USERNAME;Name of User
+A;L_ACTIVATE;Activate
+A;L_DEPRIVATE;Lock User from Login
+A;L_EMAIL;Email
+A;L_USER_DUTY;User Duty
+A;L_LAST_UPD;Last updated time :  
+A;L_UD_DESC;Select user duty from list.
+A;L_MGR_UD;User Duty Management
+A;L_ADD_USER;Add User
+A;L_ADD_GROUP;Add Group
+A;L_PRIVILEGE;Privilege
+A;T_USER_GROUP;User Groups
+A;T_DUTY_LIST;Duty List
+A;L_ADD_DUTY;Add Duty
+A;T_M_TENANT;Multi Tenant
+A;L_ADD_TENANT;Add Tenant
+A;L_PANEL_W;Panel Width
+A;L_PANEL_H;Panel Height
+A;L_ENABLE_PIVOT;Enable Pivot
+A;L_ADD_DB_INST;Add Database Instance
+A;L_CREATE_ITEM;Create Item
+A;L_FOLDER_ITEMS;Folder Items
+A;L_TABLES;Table Source
+A;L_EMPTY_DATA;Empty in this list
+A;L_OBJECT_TYPE;Object Type
+A;L_RUN_BUTTON;Run Button
+A;L_COL_SIZE;Column Size
+A;L_ROW_SIZE;Row Size
+A;L_BTN_ROW_ON;Button at Row No.
+A;B_STRING;String
+A;L_SORT_TP;Sort Type
+A;L_AGGR;Aggregation
+A;L_DISP_TITLE;Display Title
+A;L_TIME_FMT;Time Format
+A;L_TIME_FMT_DSC;* Applied if date format item
+A;L_USE_MFMT;Use Measure Format
+A;L_S_TROW;Show on top row
+A;L_S_GRST;Group Results
+A;L_FORMAT;Format
+A;L_C_DIR;Calculate Direction
+A;L_SEP_COL;Separate Column
+A;L_COL_VIS;Column Visible
+A;L_FUNC;Function
+A;L_BASE_STYLE;Base Style
+A;L_REM_BLK;Remove Blank Values
+A;L_DATE_TYPE;Date Type Field
+A;L_F_DISP;Display Field
+A;L_F_SORT;Sort Field
+A;B_CLEAR;Clear
+A;L_BASE_METRIC;Base Metric
+A;L_RANGE_FIELD;Range Field
+A;E_NO_MATCH_FLD;Not found matching field for this column.

@@ -1,0 +1,9 @@
+
+A;L_SC_CT;스케쥴 유형
+A;L_CFIT_TYPE;회귀분석 유형
+A;L_CFIT_PORD;다차원 차원
+A;L_CFIT_LC;라인 스타일
+A;L_CFIT_FOR;수식 범례 표시
+A;L_CFIT_AS;모든 시리즈 분석
+A;L_CFIT_SS;전체 시리즈 분석
+A;L_CFIT_FCS;예측 추가 범위

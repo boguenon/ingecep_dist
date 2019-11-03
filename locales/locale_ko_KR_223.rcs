@@ -1,0 +1,9 @@
+﻿
+A;L_FETCH_ALL;전체 데이타 보기
+A;L_T_CUBE_SEL;데이타 선택 마법사
+A;L_M_CUBE_SEL;분석 주제를 선택해주십시오.
+A;L_M_SUBJ;분석주제:
+A;L_M_SUBJ_REC;자주 사용되는 항목
+A;L_LINE_NUM;라인번호 표시
+A;M_NA;허용되지 않습니다.
+A;L_C_SCH;스케쥴 결과가 로드 되어 있습니다. 서버에서 조회하시겠습니까?

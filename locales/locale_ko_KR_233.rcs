@@ -1,0 +1,16 @@
+
+A;L_TB_BN;동일한 노드명이 여러개 있습니다. 해당 노드명 전체를 변경하시겠습니까?
+A;L_ML_C1;기회 노드
+A;L_ML_C2;디시젼 노드
+A;L_ML_C3;유틸리티 노드
+A;L_ML_C4a;추론
+A;L_ML_C4b;편집
+A;L_ML_C5;디시젼 트리
+A;L_ML_C6;케이스
+A;L_ML_C6a;케이스 추가
+A;L_ML_C6b;케이스 삭제
+A;L_ML_LEARN;자동 학습
+A;L_ML_CEFF;비용 효과 분석
+A;L_ML_C7;PGMX 파일 불러오기
+A;L_ML_CEFF_S;감도 분석
+A;L_ML_CEFF_D;결정요인 분석

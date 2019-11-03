@@ -1,0 +1,37 @@
+<info>
+	<version>1.6.5</version>
+	<date>20140505</date>
+	<description>
+		<![CDATA[
+			This is default install script and database text. If you already installed on this server, then backup before click next button.
+		]]>
+	</description>
+	<preinstall>
+	</preinstall>
+	<install>
+		<necessary>
+			<file type="sql" name="meta_ini.msql" checkversion="all" error="ignore"/>
+			<file type="sql" name="meta_sch.msql"/>
+			<file type="sql" name="meta_dat1.msql"/>
+			<file type="sql" name="meta_dat2.msql"/>
+			<file type="sql" name="meta_dat3.msql"/>
+		</necessary>
+		<optional>
+			<file type="sql" name="sample_sch.msql" skip="85" description="Sample Northwind database"/>
+			<file type="sql" name="sample_dat1.msql" skip="85" description="Samples and Examples"/>
+			<file type="sql" name="sample_dat2.msql" skip="85" description="Samples and Examples"/>
+			<file type="sql" name="sample_dat3.msql" skip="85" description="Samples and Examples"/>
+			<file type="sql" name="sample_dat4.msql" skip="85" description="Samples and Examples"/>
+			<file type="sql" name="sample_dat5.msql" skip="85" description="Samples and Examples"/>
+			<file type="sql" name="sample_dat6.msql" skip="85" description="Samples and Examples"/>
+			<file type="sql" name="sample_dat7.msql" skip="85" description="Samples and Examples"/>
+			<file type="sql" name="sample_dat8.msql" skip="85" description="Samples and Examples"/>
+			<file type="sql" name="sample_dat9.msql" skip="85" description="Samples and Examples"/>
+			<file type="sql" name="sample_dat10.msql" skip="85" description="Samples and Examples"/>
+			<file type="sql" name="sample_dat11.msql" skip="85" description="Samples and Examples"/>
+			<file type="sql" name="sample_dat12.msql" skip="85" description="Samples and Examples"/>
+			<file type="sql" name="sample_idx.msql" skip="85" description="Samples and Examples"/>
+			<file type="sql" name="meta_fnl.msql"/>
+		</optional>
+	</install>
+</info>

@@ -1,0 +1,55 @@
+<email>
+	<reset_password>
+		<title><![CDATA[[INGECEP] Password reset notification]]></title>
+		<message type="text"><![CDATA[
+
+Your password is reset.
+
+		]]></message>
+	</reset_password>
+	<user_register>
+		<title><![CDATA[[INGECEP] Your account is created.]]></title>
+		<message type="text"><![CDATA[
+
+Your account is created by administrator.
+Please login and change your password to secure use of the INGECEP!
+
+Your temporary password is : {PASSWORD}
+
+		]]></message>
+	</user_register>
+	<user_update>
+		<title><![CDATA[[INGECEP] Your account is modified.]]></title>
+		<message type="text"><![CDATA[
+		
+Your account is modified by {USERNAME}.
+Please login and validate the change!
+
+${:PASSWORDCHANGE}
+Your temporary password is : {PASSWORD}
+
+		]]></message>
+	</user_update>
+	<schedule_notification>
+		<title><![CDATA[[INGECEP] Your schedule is processed.]]></title>
+		<message type="text"><![CDATA[
+		
+Your schedule is processed by {USERNAME}.
+Please login and view pages!
+
+http://localhost:8780/launcher/navi.jsp?mval=1&slink={SCHEDULE_LINK}
+
+		]]></message>
+	</schedule_notification>
+	<share_item>
+		<title><![CDATA[[INGECEP] Share Reports.]]></title>
+		<message type="text"><![CDATA[
+		
+You get shared report by user {USERNAME}.
+Please login and view pages!
+
+http://localhost:8780/launcher/navi.jsp?mval=1&slink={SCHEDULE_LINK}
+
+		]]></message>
+	</share_item>
+</email>

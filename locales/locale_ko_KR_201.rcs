@@ -1,0 +1,24 @@
+﻿A;T_REVISION;변경 이력  관리
+A;L_REVISION;버전 관리
+A;B_SEL;선택
+A;B_OPT_LAYOUT;레이아웃
+A;L_HIDE_TITLE;타이틀 숨김
+A;L_FIXED_W;폭 고정
+A;L_FIXED_H;높이 고정
+A;L_R_UPD_TGT;드릴 대상 항목
+A;L_R_UT_DRILL;업데이트 대상 쉬트
+A;L_R_UT_DESC;한개 이상 체크시, 체크된 항목만 드릴되어 조회됩니다.
+A;L_R_CMENU;외부 드릴 대상
+A;B_ADD;추가
+A;B_REMOVE;삭제
+A;B_PATH;경로
+A;B_SHEET_NAME;쉬트 명
+A;B_SEQUENCE;시퀀스
+A;L_R_CM_SHOWTAB;탭으로 열기
+A;L_R_RUN_PROP;프라퍼티 실행
+A;L_ONLOAD_RUN;로드 후 바로 조회 실행
+A;L_R_ANAL_CUBE;분석 주제
+A;L_R_ANAL_CUBE_LB;큐브
+A;L_SET_DEF;기본값 사용
+A;L_OPT_GRID;그리드 설정
+A;L_R_COLUMN_FIT;컬럼 폭을 패널에 맞추어 확장

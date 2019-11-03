@@ -1,0 +1,22 @@
+﻿A;L_DESIGN;Design
+A;L_CONTROLLER;Control
+A;L_RESOURCES;Resources
+A;L_C_CLOSE;Close
+A;L_C_PREV;Prev
+A;L_C_NEXT;Next
+A;L_C_CUR;Current,
+A;L_C_M_NAMES;January#February#March#April#May#June#July#August#September#October#November#December
+A;L_C_M_NAMES_S;JAN#FEB#MAR#APR#MAY#JUN#JUL#AUG#SEP#OCT#NOV#DEC
+A;L_C_D_NAMES;Sunday#Monday#Tuesday#Wednesday#Thursday#Friday#Saturday
+A;L_C_D_NAMES_S;Sun#Mon#Tue#Wed#Thu#Fri#Sat
+A;L_C_D_NAMES_M;SU#MO#TU#WE#TH#FR#SA
+A;L_C_W_H;Week
+A;L_C_YR_SFX;Year
+A;L_CLEAR_FLT;Clear Filter
+A;L_SEL_MODE;Select Mode
+A;L_CLASS_MOD;Class Module
+A;L_RESOURCE;Resources
+A;L_MENU;Menu
+A;B_SAVE;Save
+A;L_FILENAME;File Name
+A;L_C_ITEMS;Content Items

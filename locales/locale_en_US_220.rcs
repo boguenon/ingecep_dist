@@ -1,0 +1,9 @@
+﻿
+A;L_SW_APP;Switch Application
+A;L_SWA_CFM;Do you want to continue to logout and login in another project?
+A;E_SWA_CFM;Please select application name to switch to.
+A;L_P_RELOAD;Click Refresh to load.
+A;L_P_RPT_C;Report Options
+A;L_DATE_FORMAT_SRC;Source Date Format
+A;L_DATE_FORMAT_TGT;Display Date Format
+A;L_DET_VIEW;Detail View

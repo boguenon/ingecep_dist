@@ -1,0 +1,13 @@
+﻿
+A;E_NO_MATCH_FLD;해당하는 항목을 찾지 못했습니다.
+A;M_UNKNOWN;지정하지 않은 오류!
+A;M_ERROR;오류!
+A;M_WARNING;경고!
+A;M_INFO;정보!
+A;M_SUCCESS;성공!
+A;L_V_PIVOT;피봇 모드
+A;L_V_RPT;복합 피봇 모드
+A;L_P_RPT;복합 피봇 설정
+A;L_P_RPT_RT;복합 리포트 목록
+A;L_P_PIVOT_UNIT;단위 피봇 설계
+A;L_MOVE;이동

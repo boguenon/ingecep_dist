@@ -1,0 +1,27 @@
+A;L_DBD_MAP;Dashboard Mapping
+A;L_EVENT_WIZARD;Action Wizard
+A;L_P_onlinereport;Run Report
+A;L_P_valuelist;Fill Values
+A;L_P_sql;Run SQL
+A;L_P_execute_script;Run JavaScript
+A;L_P_open_win;Open Window
+A;L_P_inv_svc;Invoke Service
+A;L_P_open_dlg;Open Dialog
+A;T_Filter;Filter Data
+A;L_F_EQ;Equal
+A;L_F_GE;Great or Equal
+A;L_F_GT;Great then
+A;L_F_LE;Less or Equal
+A;L_F_LT;Less then
+A;L_F_IN;In Values
+A;L_F_LIKE;Like Keyword
+A;L_F_BETWEEN;Between values
+A;L_F_NOTIN;Not in values
+A;L_WAIT_1;Please wait while processing request
+A;M_ERR_C_REP_PROC;Error while processing Custom Report Handler
+A;B_REQ;Required Field
+A;L_MAP_ITEM;Map to Report Item
+A;L_EVENT_WIZARD;Action Wizard
+A;D_MCUBE;MultiDimension Cube
+A;D_NOSQL;NoSQL Database
+A;B_DISP_NAME;Display Name

@@ -1,0 +1,16 @@
+﻿
+A;L_DB_QUERYTIMEOUT;Query Timeout(S)
+A;L_DB_SCHEDULE_QUERYTIMEOUT;Query Timeout(Scheduler)
+A;L_LINK_FIELD;Link Field
+A;L_LNK_DRILL;Drill to Detail
+A;L_LNK_DOC;Download Export File
+A;L_LNK_EXT;External URL Link
+A;L_LNK_TMPL;Document Template
+A;L_LNK_TGT;Browser Target
+A;L_LNK_URL;URL Address
+A;L_P_PIVOT_UNIT;Pivot Unit
+A;L_GRID_HMENU;Hide Grid popup menu
+A;L_BTN_EVT;Run with event
+A;L_BTN_TRG;Trigger Run event
+A;L_BTN_EVTDESC;Disable user select value and run, and wait button click event.
+A;L_BTN_TRGDESC;When click on run button, trigger other filter box values.

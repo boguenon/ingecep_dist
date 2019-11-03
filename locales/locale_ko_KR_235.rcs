@@ -1,0 +1,16 @@
+
+A;L_DB_QUERYTIMEOUT;쿼리 제한시간(초)
+A;L_DB_SCHEDULE_QUERYTIMEOUT;쿼리 제한시간(스케쥴)
+A;L_LINK_FIELD;링크 필드
+A;L_LNK_DRILL;상세 드릴리포트 열기
+A;L_LNK_DOC;출력 파일 다운로드
+A;L_LNK_EXT;외부 URL 링크
+A;L_LNK_TMPL;문서 템플릿
+A;L_LNK_TGT;대상 브라우져 탭명
+A;L_LNK_URL;URL 주소
+A;L_P_PIVOT_UNIT;단위 피벗
+A;L_GRID_HMENU;그리드 팝업메뉴 숨김
+A;L_BTN_EVT;이벤트 발생시만 실행
+A;L_BTN_TRG;실행 이벤트 발생
+A;L_BTN_EVTDESC;사용자 값선택시 자동조회하지 않고 실행 버튼 클릭 이벤트시 실행한다.
+A;L_BTN_TRGDESC;실행버튼 클릭시 다른 필터 패널에 실행 이벤트를 전달한다.

@@ -1,0 +1,37 @@
+
+A;L_RANK_OPTION;순위 옵션
+A;L_TREEM_OPTION;트리맵 옵션
+A;L_TM_ALG;적용 알고리즘
+A;L_TM_CL;트리맵 적용
+A;L_B_ADC;데이타파일
+A;L_MONGODB;MongoDB
+A;L_MONGO_DPROC;MongoDB 프로세스
+A;L_MONGO_DATA;MongoDB 데이타
+A;L_EMPTY;데이타가 없습니다.
+A;F_MAX;최대값
+A;B_SHARE;공유하기
+A;L_OP_NOT;NOT 연산자
+A;L_P_cls;화면 닫기
+A;L_FILEEXT;파일 확장자
+A;L_EXPORT_DOCX;DOCX 파일출력
+A;L_EXPORT_RTF;RTF 파일출력
+A;L_EXPORT_XML;XML 파일출력
+A;L_LD_SQL_D;SQL 소스
+A;M_REPORT;리포트 생성
+A;D_TABDIMENSION;데이타파일 구분 디멘젼
+A;L_JOIN;조인
+A;B_DELETE;삭제
+A;B_DELIMITER;구분자
+A;L_ST_NAME;스타일명
+A;L_HL_RANGE;화면강조 적용범위
+A;L_F_TMPL;템플릿 적용
+A;L_M_FILTER;메져필터
+A;B_BUILD;큐브 생성
+A;L_TBL_ORD;테이블 우선순위
+A;T_CODE_MAPPING;코드맵핑
+A;B_COLOR;색상
+A;L_SHOW_TAB_BAR;탭버튼 보이기
+A;L_SHOW_VIEW_CHANGE;보기모드변경버튼 보이기
+A;L_SHOW_TOOL_BUTTON;도구버튼 보이기
+A;L_SHEET_NUM;쉬트번호
+A;L_B_LAYOUT;레이아웃

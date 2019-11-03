@@ -1,0 +1,11 @@
+<smsg>
+   <Export>
+      <ExportOption layout="portrait" pagesize="A4" fonttype="HELVETICA" title="" footertitle="" filterdesc="T" pagenumber="T" showtitle="T" footer="F" repeatheader="T" scaledown="T" alldata="T" margine_top="30" margine_bottom="30" margine_left="30" margine_right="30" startpage="1" endpage="20">
+         <jasper jasper_template="report1" pdf_output="T" html_output="T" />
+      </ExportOption>
+      <sheets>
+         <sheet docid="dock_0" jobid="29e56368-c0aa4726" />
+         <sheet docid="dock_2" jobid="579330d3-f9304fa1" />
+      </sheets>
+   </Export>
+</smsg>

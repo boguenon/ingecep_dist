@@ -1,0 +1,46 @@
+.loginWindow {
+}
+
+.fscreen {
+	position: absolute;
+	top: 0px; left: 0px; right: 0px; bottom: 0px;
+}
+
+.icon-custom-sample {
+    background: url(../images/ingecep_iconset.png) -220px -280px no-repeat !important;
+}
+
+.m_sGreen {
+	background: #fff url(../images/indicator/cloudy19.png) center center no-repeat !important; 
+}
+
+.m_sGreen .m-cell-text {
+	display: none;
+}
+
+.m_sRed {
+	background: #fff url(../images/indicator/raining3.png) center center no-repeat !important; 
+}
+
+.m_sRed .m-cell-text {
+	display: none;
+}
+
+.dt-btn-search {
+	padding: 5px 15px 5px;
+	min-width: 80px;
+}
+
+.innerLogo .ig-c-button {
+	background: url(../images/urosys_bweb_icon2.png) 0px 0px no-repeat !important;
+}
+
+.innerLogo {
+	background-image: url(../images/urosys_logo.png) !important;
+	background-repeat: no-repeat;
+}
+
+.innerLogo .ig-c-text {
+	color: #061f3e;
+	display: none !important;
+}
