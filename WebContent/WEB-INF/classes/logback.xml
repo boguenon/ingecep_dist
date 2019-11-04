@@ -37,10 +37,34 @@
 		</layout>
 	</appender>
 	<appender name="FILE" class="ch.qos.logback.core.FileAppender">
-		<file>${igc_home}/logs/console.out.log</file>
-		<encoder>
-			<Pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %level %logger{35} - %msg%n </Pattern>
-		</encoder>
+		<discriminator>
+			<key>logFileName</key>
+			<defaultValue>console.out</defaultValue>
+		</discriminator>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<level>DEBUG</level>
+		</filter>
+		<sift>
+			<appender name="FILE-${logFileName}"
+				class="ch.qos.logback.core.rolling.RollingFileAppender">
+				<file>${igc_home}/logs/${logFileName}.log</file>
+				<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+					<charset>UTF-8</charset>
+					<Pattern>
+						%d{yyyy-MM-dd HH:mm:ss} %level %logger{35} - %msg%n
+					</Pattern>
+				</encoder>
+				<rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+					<!-- daily rollover -->
+					<fileNamePattern>${igc_home}/logs/${logFileName}.%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+					<!-- or whenever the file size reaches 50MB -->
+					<maxFileSize>10MB</maxFileSize>
+					<totalSizeCap>10GB</totalSizeCap>
+					<!-- keep 30 days' worth of history -->
+					<maxHistory>30</maxHistory>
+				</rollingPolicy>
+			</appender>
+		</sift>
 	</appender>
 	<!-- configuration parameter : logging to database table -->
 	<!-- 
@@ -71,12 +95,7 @@
 	<logger name="com.zaxxer.hikari">
 		<level value="error" />
 	</logger>
-	<logger name="rootLogger" additivity="false">
-		<level value="info"/>
-		<appender-ref ref="STDOUT" />
-		<appender-ref ref="FILE" />
-	</logger>
-	<root level="info">
+	<root level="debug">
 		<appender-ref ref="STDOUT" />
 		<appender-ref ref="FILE" />
 	</root>
