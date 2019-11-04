@@ -1,1 +1,1 @@
-# ingecep_dist
+# INGECEP Enterprise Edition
