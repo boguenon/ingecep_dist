@@ -32,7 +32,7 @@
 			<Pattern>%d{yyyy-MM-dd HH:mm:ss} %level %msg%n </Pattern>
 		</layout>
 	</appender>
-	<appender name="FILE" class="ch.qos.logback.core.FileAppender">
+	<appender name="FILE" class="ch.qos.logback.classic.sift.SiftingAppender">
 		<discriminator>
 			<key>logFileName</key>
 			<defaultValue>console.out</defaultValue>
