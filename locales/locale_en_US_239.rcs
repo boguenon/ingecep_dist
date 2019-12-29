@@ -1,2 +1,5 @@
 ﻿
-A;L_ASYS_BACKSCH;Schedule Management
+A;L_AUTO_REFRESH;Auto Run
+A;L_REFRESH_CYCLE;Refresh Cycle(Sec)
+A;L_ROTATE_FIELD;Filter value rotation
+A;L_HIDE_LOADER_REF;Hide loading progress

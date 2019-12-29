@@ -1,2 +1,5 @@
 
-A;L_SYS_BACKSCH;스케쥴 관리
+A;L_AUTO_REFRESH;자동 조회 실행
+A;L_REFRESH_CYCLE;조회 사이클(초)
+A;L_ROTATE_FIELD;필터항목 로테이션
+A;L_HIDE_LOADER_REF;조회중 화면표시 숨김
