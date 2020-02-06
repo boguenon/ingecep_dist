@@ -291,7 +291,7 @@ function _btn_handler(view, key) {
 		</div>
 	</div>
 
- 	<div id="main"></div>
+ 	<div id="mainview"></div>
  	<div id="report_1"></div>
  	
  	<div id="igc_msr" class="igc-popup-main" style="display:none;">

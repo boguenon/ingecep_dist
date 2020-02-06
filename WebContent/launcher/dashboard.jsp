@@ -392,7 +392,7 @@ var m$_d = "";
 		</div>
 	</div>
 
- 	<div id="main"></div>
+ 	<div id="mainview"></div>
  	
  	<div id="navbar" class="navbar">
  		<div class="navbar-header">

@@ -169,7 +169,7 @@ window.IG$/*mainapp*/.__ep_ = "<%=tmp%>";
 		</div>
 	</div>
 
-	<div id="main"></div>
+	<div id="mainview"></div>
 	
  	<div id="igc_msr" class="igc-popup-main" style="display:none;">
  		<div class="igc-popup-bg"></div>

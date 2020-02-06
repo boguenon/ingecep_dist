@@ -162,6 +162,6 @@ window.IG$/*mainapp*/.__ep_ = "<%=tmp%>";
 		</div>
 	</div>
 
-	<div id="main"></div>
+	<div id="mainview"></div>
 </body>
 </html>
