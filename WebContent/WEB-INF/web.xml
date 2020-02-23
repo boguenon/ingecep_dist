@@ -40,6 +40,9 @@
   	<listener>
   		<listener-class>com.mplix.rpc.igcFileUploadListener</listener-class>
   	</listener>
+	<listener>
+  		<listener-class>com.mplix.rpc.igcContextListener</listener-class>
+  	</listener>
   	<filter>
 	    <filter-name>UrlRewriteFilter</filter-name>
 	    <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
