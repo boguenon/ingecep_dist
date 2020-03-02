@@ -1,1 +1,15741 @@
-IG$.__C=$s.extend($s.panel,{closable:true,layout:"border",bodyPadding:0,_IFd:function(){var a=this;a.L1()},L1:function(){var b=this,a=new IG$._I3e();a.init(b,{ack:"25",payload:IG$._I2d({address:"/"}),mbody:IG$._I2e({option:"standard"})},b,function(g){var k=this,d=[],f,j=IG$._I18(g,"/smsg/item"),e,c,l,h=k.down("[name=t_ds]");d.push({name:"Select Database Instance",poolname:""});if(j){e=IG$._I26(j);l=IG$._I83.jS2;for(f=0;f<e.length;f++){c=IG$._I1c(e[f]);if(l==true||(l==false&&c.name.toUpperCase()!="IGCBASE")){d.push({name:c.disp,poolname:c.name,uid:c.uid||"",isuserdb:(c.isuserdb=="T"?true:false),savepwd:(c.isuserdb=="T"&&c.savepwd=="F"?false:true)})}}}h.store.loadData(d);h.setValue("");k.a2()},function(){b.a2()});a._l()},a2:function(){var a=this,b;b=new IG$._I3e();b.init(a,{ack:"5",payload:IG$._I2d({uid:a.uid}),mbody:IG$._I2e({option:"standard"})},a,a.rs_a2,false);b._l()},rs_a2:function(f){var k=this,n=new IG$.ifg(f),l,e,d,m,c,b,a=[],g,j=k.down("[name=t_ds]");k.item=n;j.setValue(n.objinfo.ds||"");if(!window.ace){IG$.x03(ig$.scmap.igcg,new IG$._I3d(k,function(){this.rs_a2(f)}));return}l=$(k.down("[name=javasrc]").el.dom);e=$(".idv-jcl-edtr",l);e.empty();m=IG$.x_10._w(l);c=IG$.x_10._h(l);d=$("<div class='idv-jcl-view'></div>").appendTo(e);IG$.x_10._w(d,m);IG$.x_10._h(d,c);g=ace.edit(d[0]);g.getSession().setMode("ace/mode/java");k.scripteditor=g;k.scriptview=d;k.scriptview=d;k.scripteditor=g;l=$(k.down("[name=javasrc_all]").el.dom);e=$(".idv-jcl-edtr",l);e.empty();m=IG$.x_10._w(l);c=IG$.x_10._h(l);d=$("<div class='idv-jcl-view'></div>").appendTo(e);IG$.x_10._w(d,m);IG$.x_10._h(d,c);g=ace.edit(d[0]);g.getSession().setMode("ace/mode/java");k.scriptview_all=d;k.scripteditor_all=g;for(b=0;b<n.modules.length;b++){a.push({name:n.modules[b].name,description:n.modules[b].description})}k.down("[name=g_m]").store.loadData(a)},a3:function(e){var d=this,c=new IG$._I3e(),a,f="31",b=d.down("[name=t_ds]");d._c1();d.item.objinfo.ds=b.getValue();a=d.item.p2();if(e=="source"){f="73"}c.init(d,{ack:f,payload:IG$._I2d({uid:d.uid,option:(e=="source"?e:null)},"uid;option"),mbody:a},d,d.rs_a3,null,e);c._l()},rs_a3:function(a,d){var c=this,e,b;if(d=="source"){e=IG$._I18(a,"/smsg/item/source");b=(e?IG$._I24(e):"");c.scripteditor_all.setValue(b)}else{if(d=="compile"){c.a4()}else{IG$._I54(ig$.appname,IRm$.r1("M_SAVED"),null,null,0,"success")}}},a4:function(){var a=this,c=new IG$._I3e(),b;b=a.item.p2();c.init(a,{ack:"73",payload:IG$._I2d({uid:a.uid,option:"compile"},"uid;option"),mbody:b},a,a.rs_a4,null);c._l()},rs_a4:function(a){var b=this,c=IG$._I18(a,"/smsg/item/errormessage"),d;if(c){d=IG$._I24(c);d=Base64.decode(d);b.down("[name=compileres]").setValue(d);b._m1(1)}else{b.down("[name=compileres]").setValue("");IG$._I54(ig$.appname,"Compiled Successfully",null,null,0,"success")}},_t$:function(e){var c=this,h=c.down("[name=g_m]"),d,g,b,a;switch(e){case"cmd_save":c.a3();break;case"cmd_compile":c.a3("compile");break;case"cmd_source":c.a3("source");break;case"cmd_rename":case"cmd_delete":d=h.getSelectionModel().selected;if(d&&d.length>0){g=d.items[0]}if(g&&g.get("name")){for(a=0;a<c.item.modules.length;a++){if(c.item.modules[a].name==g.get("name")){if(e=="cmd_delete"){c.item.modules.splice(a,1)}else{b=c.item.modules[a]}break}}if(e=="cmd_delete"){h.store.remove(g);c._module=null;c.scripteditor.setValue("")}else{var f=new IG$._Icd({itemtype:"Module",itemname:b.name,description:b.description,$f3:function(){var k=this,o=k.down("[name=fitemname]"),q=k.down("[name=fitemname]").getValue(),n=k.down("[name=fdesc]").getValue(),j=k.down("[name=fhelpuid]").getValue()||null,m=k.down("[name=selitemtype]"),l;o.clearInvalid();if(!q){o.markInvalid([o.blankText]);return}if(q.indexOf(" ")>-1){o.markInvalid(["Space not allowed"]);return}g.set("name",q);g.set("description",n);b.name=q;b.description=n;k.close()}});IG$._I_5(this,f)}}break}},_c1:function(){var a=this;if(a._module){a._module.script=a.scripteditor.getValue();a._module.iparams=[];a._module.oparams=[];$.each(["iparams","oparams"],function(c,b){var d=a.down("[name=g_"+b+"]"),c,f,e=a._module[b];for(c=0;c<d.store.data.items.length;c++){f=d.store.data.items[c];if(f.get("name")){e.push({name:f.get("name")})}}})}},_e1:function(f){var e=this,c=f.get("name"),b,d=e.item,a;if(e._module){e._c1()}for(b=0;b<d.modules.length;b++){if(d.modules[b].name==c){a=d.modules[b];break}}if(a){e.down("[name=m_s]").show();e.scripteditor.setValue(a.script||"");e._module=a;$.each(["iparams","oparams"],function(j,h){var l=e.down("[name=g_"+h+"]"),j,n=[],m=e._module[h];if(m){for(j=0;j<m.length;j++){n.push({name:m[j].name})}}l.store.loadData(n)})}},_a1:function(f,e){var c=this,d=c.down("[name=g_m]"),b=true,a;if(c._module){c._c1()}for(a=0;a<c.item.modules.length;a++){if(c.item.modules[a].name==f){b=false;break}}if(b==true){d.store.add({name:f,description:e});c.item.modules.push({name:f,description:e,script:null,iparams:[],oparams:[]})}return b},_m1:function(d){var b=this,c=b.down("[name=mcard]"),a=b.down("[name=t_source]");if(d>-1){b.vcard=d}else{b.vcard=(b.vcard==0)?1:0}if(b.vcard==0){c.getLayout().setActiveItem(0);a.setText("View Source")}else{c.getLayout().setActiveItem(1);a.setText("Edit Code");b._t$("cmd_source")}},initComponent:function(){var a=this;a.vcard=0;$s.apply(this,{items:[{xtype:"panel",layout:"card",region:"center",flex:1,name:"mcard",items:[{xtype:"panel",layout:"border",items:[{xtype:"panel",title:"Module Functions",region:"west",layout:"fit",split:true,collapsible:true,collapseMode:"mini",width:300,tbar:[{text:"New",handler:function(){var b=new IG$._I6e({itemtype:"Module",$f3:function(){var d=this,h=d.down("[name=fitemname]"),j=d.down("[name=fitemname]").getValue(),g=d.down("[name=fdesc]").getValue(),c=d.down("[name=fhelpuid]").getValue()||null,f=d.down("[name=selitemtype]"),e;h.clearInvalid();if(!j){h.markInvalid([h.blankText]);return}if(j.indexOf(" ")>-1){h.markInvalid(["Space not allowed"]);return}e=a._a1.call(a,j,g);if(e==true){d.close()}}});IG$._I_5(this,b)},scope:this},{text:"Rename",handler:function(){this._t$("cmd_rename")},scope:this},{text:"Delete",handler:function(){this._t$("cmd_delete")},scope:this}],items:[{xtype:"gridpanel",name:"g_m",store:{xtype:"store",fields:["name","description"]},columns:[{text:IRm$.r1("B_NAME"),flex:1,dataIndex:"name"},{text:IRm$.r1("B_DESC"),flex:1,dataIndex:"description"},{xtype:"actioncolumn",width:30,menuDisabled:true,items:[{iconCls:"icon-grid-config",tooltip:IRm$.r1("L_EDIT"),handler:function(e,g,d){var b=e,c=b.store,f=c.getAt(g);this._e1(f)},scope:this}]}],listeners:{cellclick:function(d,k,c,b,g,j,h,f){if(c!=2){this._e1(b)}},scope:this}}]},{region:"center",xtype:"panel",flex:1,title:"Module Sources",layout:"fit",items:[{xtype:"panel",border:0,layout:"border",name:"m_s",hidden:true,items:[{name:"javasrc",region:"center",flex:1,html:"<div class='idv-jcl-edtr'></div>",split:true,listeners:{resize:function(c,b,e,d,g,f){if(a.scriptview&&a.scripteditor){IG$.x_10._w(a.scriptview,b);IG$.x_10._h(a.scriptview,e);a.scripteditor.resize(true)}}}},{xtype:"panel",region:"east",width:200,layout:{type:"vbox",align:"stretch"},items:[{xtype:"gridpanel",name:"g_iparams",title:"Input Parameters",flex:1,store:{xtype:"store",fields:["name"]},selType:"checkboxmodel",selModel:{checkSelector:".x-grid-cell",mode:"MULTI"},plugins:[{ptype:"cellediting",clicksToEdit:1}],columns:[{text:IRm$.r1("B_NAME"),flex:1,dataIndex:"name",editor:{xtype:"textfield",allowBlank:false}}],tbar:[{xtype:"button",text:IRm$.r1("B_ADD"),handler:function(){var c=this,b;b=c.down("[name=g_iparams]");b.store.add({name:"",value:""})},scope:this},{xtype:"button",text:IRm$.r1("B_REMOVE"),handler:function(){var e=this,c=e.down("[name=g_iparams]"),b=c.store,f=c.getSelectionModel().selected,d;for(d=f.length-1;d>=0;d--){b.remove(f.items[d])}},scope:this}]},{xtype:"gridpanel",title:"Output Parameters",name:"g_oparams",flex:1,store:{xtype:"store",fields:["name"]},selType:"checkboxmodel",selModel:{checkSelector:".x-grid-cell",mode:"MULTI"},plugins:[{ptype:"cellediting",clicksToEdit:1}],columns:[{text:IRm$.r1("B_NAME"),flex:1,dataIndex:"name",editor:{xtype:"textfield",allowBlank:false}}],tbar:[{xtype:"button",text:IRm$.r1("B_ADD"),handler:function(){var b=this,c;c=b.down("[name=g_oparams]");c.store.add({name:"",value:""})},scope:this},{xtype:"button",text:IRm$.r1("B_REMOVE"),handler:function(){var c=this,e=c.down("[name=g_oparams]"),f=e.store,d=e.getSelectionModel().selected,b;for(b=d.length-1;b>=0;b--){f.remove(d.items[b])}},scope:this}]}]}]}]}]},{xtype:"panel",title:"Source View (ReadOnly)",layout:"border",items:[{name:"javasrc_all",flex:1,region:"center",html:"<div class='idv-jcl-edtr'></div>",split:true,listeners:{resize:function(c,b,e,d,g,f){if(a.scriptview_all&&a.scripteditor_all){IG$.x_10._w(a.scriptview_all,b);IG$.x_10._h(a.scriptview_all,e);a.scripteditor_all.resize(true)}}}},{xtype:"panel",title:"Compile Messages",height:200,region:"south",layout:"fit",items:[{xtype:"textarea",name:"compileres"}]}]}]}],tbar:[{iconCls:"icon-toolbar-save",name:"t_save",tooltip:IRm$.r1("L_SAVE_CONTENT"),handler:function(){this._t$("cmd_save")},scope:this},{iconCls:"icon-toolbar-saveas",name:"t_save_as",tooltip:IRm$.r1("L_SAVE_CONTENT_AS"),handler:function(){this._t$("cmd_compile")},scope:this},{xtype:"combobox",name:"t_ds",tooltip:IRm$.r1("L_DATA_SOURCE"),fieldLabel:IRm$.r1("L_DATA_SOURCE"),labelPosition:"right",queryMode:"local",displayField:"name",valueField:"poolname",editable:false,autoSelect:true,store:{xtype:"store",fields:["name","uid","poolname","isuserdb","savepwd"]}},{text:"Package Lists",handler:function(){var b=this,c=new IG$.__C_({litem:b.item});c.show()},scope:this},"->",{name:"t_source",text:"View Source",handler:function(){this._m1(-1)},scope:this}]});IG$.__C.superclass.initComponent.call(this)},listeners:{afterrender:function(a){var b=this;b._IFd()}}});IG$.__C_=$s.extend($s.window,{width:300,height:200,modal:true,layout:"fit",closable:false,resizable:false,title:"Package Lists",_i1:function(){var b=this,c=b.down("[name=ltx]"),a=b.litem;if(a){c.setValue(a.cls||"")}},_IFf:function(){var b=this,c=b.down("[name=ltx]"),a=b.litem;if(a){a.cls=c.getValue()}b.close()},items:[{xtype:"panel",layout:{type:"vbox",align:"stretch"},items:[{xtype:"textarea",name:"ltx",flex:1},{xtype:"displayfield",value:"* Add class lists with Java : import java.util.*;"}]}],initComponent:function(){$s.apply(this,{buttons:["->",{text:IRm$.r1("B_CONFIRM"),handler:function(){this._IFf()},scope:this},{text:IRm$.r1("B_CANCEL"),handler:function(){this.close()},scope:this}]});IG$.__C_.superclass.initComponent.call(this)},listeners:{afterrender:function(a){a._i1()}}});(function(a,b){if(typeof exports==="object"){module.exports=b(require("jquery"))}else{if(typeof define==="function"&&define.amd){define(["jquery"],b)}else{b(a.jQuery)}}}(this,function(c){var a=function(e,o){var m;var f=document.createElement("canvas");e.appendChild(f);if(typeof(G_vmlCanvasManager)!=="undefined"){G_vmlCanvasManager.initElement(f)}var n=f.getContext("2d");f.width=f.height=o.size;var l=1;if(window.devicePixelRatio>1){l=window.devicePixelRatio;f.style.width=f.style.height=[o.size,"px"].join("");f.width=f.height=o.size*l;n.scale(l,l)}n.translate(o.size/2,o.size/2);n.rotate((-1/2+o.rotate/180)*Math.PI);var j=(o.size-o.lineWidth)/2;if(o.scaleColor&&o.scaleLength){j-=o.scaleLength+2}Date.now=Date.now||function(){return +(new Date())};var k=function(s,q,t){t=Math.min(Math.max(-1,t||0),1);var r=t<=0?true:false;n.beginPath();n.arc(0,0,j,0,Math.PI*2*t,r);n.strokeStyle=s;n.lineWidth=q;n.stroke()};var d=function(){var s;var r;n.lineWidth=1;n.fillStyle=o.scaleColor;n.save();for(var q=24;q>0;--q){if(q%6===0){r=o.scaleLength;s=0}else{r=o.scaleLength*0.6;s=o.scaleLength-r}n.fillRect(-o.size/2+s,0,r,1);n.rotate(Math.PI/12)}n.restore()};var h=(function(){return window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||function(q){window.setTimeout(q,1000/60)}}());var g=function(){if(o.scaleColor){d()}if(o.trackColor){k(o.trackColor,o.lineWidth,1)}};this.getCanvas=function(){return f};this.getCtx=function(){return n};this.clear=function(){n.clearRect(o.size/-2,o.size/-2,o.size,o.size)};this.draw=function(r){if(!!o.scaleColor||!!o.trackColor){if(n.getImageData&&n.putImageData){if(!m){g();m=n.getImageData(0,0,o.size*l,o.size*l)}else{n.putImageData(m,0,0)}}else{this.clear();g()}}else{this.clear()}n.lineCap=o.lineCap;var q;if(typeof(o.barColor)==="function"){q=o.barColor(r)}else{q=o.barColor}k(q,o.lineWidth,r/100)}.bind(this);this.animate=function(t,s){var q=Date.now();o.onStart(t,s);var r=function(){var v=Math.min(Date.now()-q,o.animate.duration);var u=o.easing(this,v,t,s-t,o.animate.duration);this.draw(u);o.onStep(t,s,u);if(v>=o.animate.duration){o.onStop(t,s)}else{h(r)}}.bind(this);h(r)}.bind(this)};var b=function(g,h){var d={barColor:"#ef1e25",trackColor:"#f9f9f9",scaleColor:"#dfe0e0",scaleLength:5,lineCap:"round",lineWidth:3,size:110,rotate:0,animate:{duration:1000,enabled:true},easing:function(l,m,k,o,n){m=m/(n/2);if(m<1){return o/2*m*m+k}return -o/2*((--m)*(m-2)-1)+k},onStart:function(l,k){return},onStep:function(m,l,k){return},onStop:function(l,k){return}};if(typeof(a)!=="undefined"){d.renderer=a}else{if(typeof(SVGRenderer)!=="undefined"){d.renderer=SVGRenderer}else{throw new Error("Please load either the SVG- or the CanvasRenderer")}}var e={};var f=0;var j=function(){this.el=g;this.options=e;for(var k in d){if(d.hasOwnProperty(k)){e[k]=h&&typeof(h[k])!=="undefined"?h[k]:d[k];if(typeof(e[k])==="function"){e[k]=e[k].bind(this)}}}if(typeof(e.easing)==="string"&&typeof(jQuery)!=="undefined"&&jQuery.isFunction(jQuery.easing[e.easing])){e.easing=jQuery.easing[e.easing]}else{e.easing=d.easing}if(typeof(e.animate)==="number"){e.animate={duration:e.animate,enabled:true}}if(typeof(e.animate)==="boolean"&&!e.animate){e.animate={duration:1000,enabled:e.animate}}this.renderer=new e.renderer(g,e);this.renderer.draw(f);if(g.dataset&&g.dataset.percent){this.update(parseFloat(g.dataset.percent))}else{if(g.getAttribute&&g.getAttribute("data-percent")){this.update(parseFloat(g.getAttribute("data-percent")))}}}.bind(this);this.update=function(k){k=parseFloat(k);if(e.animate.enabled){this.renderer.animate(f,k)}else{this.renderer.draw(k)}f=k;return this}.bind(this);this.disableAnimation=function(){e.animate.enabled=false;return this};this.enableAnimation=function(){e.animate.enabled=true;return this};j()};c.fn.easyPieChart=function(d){return this.each(function(){var e;if(!c.data(this,"easyPieChart")){e=c.extend({},d,c(this).data());c.data(this,"easyPieChart",new b(this,e))}})}}));IG$._I72=$s.extend($s.window,{modal:true,closable:false,resizable:true,layout:"fit",width:600,autoHeight:true,layout:{type:"fit"},bodyPadding:0,_1:function(c,b){var d=this,a=new IG$._I3e();a.init(d,{ack:"11",payload:IG$._I2d({uid:c||d.uid}),mbody:IG$._I2e({option:"relations",isdown:(d.isdown?"T":"F"),detail:"info"})},d,function(k){var n=this,h=n.down("[name="+(b||"grd_rel")+"]"),e=IG$._I18(k,"/smsg/item"),l=IG$._I26(e),g,m,j,o=n.down("[name=txtrel]"),f=[];if(!c){j=IG$._I1c(e);o.setValue("Relations : "+j.name+"("+j.nodepath+")")}for(g=0;g<l.length;g++){m=IG$._I1c(l[g]);m.iconcls=IG$._I11(m.type.toLowerCase());f.push(m)}h.store.loadData(f)},false);a._l()},initComponent:function(){var a=this;$s.apply(this,{title:IRm$.r1("T_Resources"),items:[{xtype:"panel",bodyPadding:10,minHeight:500,layout:{type:"vbox",align:"stretch"},items:[{xtype:"displayfield",name:"txtrel",value:"Relations"},{xtype:"gridpanel",name:"grd_rel",flex:1,store:{xtype:"store",fields:["name","nodepath","uid","type","iconcls"]},columns:[{xtype:"templatecolumn",text:IRm$.r1("B_NAME"),menuDisabled:true,flex:1,minWidth:160,tdCls:"ig-navi-namecol",tpl:"<div class='ig-navi-itemicon {iconcls}'></div><span title='{name} ({type})'>{name}</span>"},{text:"Location",flex:1,minWidth:200,dataIndex:"nodepath"}],listeners:{cellclick:function(c,d,m,f,l,n,h,j){var k=this,b=k.down("[name=png_rel_sub]"),g=f.get("uid");if(m==0){b.show();k._1(g,"grd_rel_sub")}},scope:this}},{xtype:"panel",name:"png_rel_sub",flex:1,hidden:true,layout:{type:"vbox",align:"stretch"},items:[{xtype:"displayfield",value:"Sub relations"},{xtype:"gridpanel",flex:1,name:"grd_rel_sub",store:{xtype:"store",fields:["name","nodepath","uid","type","iconcls"]},columns:[{xtype:"templatecolumn",text:IRm$.r1("B_NAME"),menuDisabled:true,flex:1,minWidth:160,tdCls:"ig-navi-namecol",tpl:"<div class='ig-navi-itemicon {iconcls}'></div><span title='{name} ({type})'>{name}</span>"},{text:"Location",flex:1,minWidth:200,dataIndex:"nodepath"}]}]}]}],buttons:[{text:IRm$.r1("B_CONFIRM"),handler:function(){this.close()},scope:this},{text:IRm$.r1("B_CLOSE"),handler:function(){this.close()},scope:this}]});IG$._I72.superclass.initComponent.call(this)},listeners:{afterrender:function(a){a._1()}}});IG$._I76a=$s.extend(IG$._I57,{scroll:false,closable:true,layout:"border",userinfo:null,groupinfo:null,iconCls:"icon-group",_1:function(){var a=this,b=new IG$._I3e();b.init(a,{ack:"28",payload:IG$._I2d({address:"/Auth"},"address"),mbody:IG$._I2e({option:"select"})},a,a._r1,false);b._l()},_r1:function(e){var c,a=IG$._I18(e,"/smsg/item"),d,j=[],g,f=this.down("[name=gridduty]"),h=f.getSelectionModel(),b;if(a){d=IG$._I26(a);for(c=0;c<d.length;c++){g=IG$._I1c(d[c]);g.active=g.status=="1"?"Active":"Disabled";switch(g.dutytype){case"A":b="Default";break;case"G":b="Group";break;case"C":b="Custom";break;case"U":b="User";break;default:b=g.dutytype;break}g.dutytype_d=b;j.push(g)}}f.store.loadData(j);this._2()},_2:function(){var a=this,b=new IG$._I3e();b.init(a,{ack:"28",payload:IG$._I2d({address:"/Features"},"address"),mbody:IG$._I2e({option:"get"})},a,a._r2,false);b._l()},_r2:function(xdoc){var me=this,tf=me.down("[name=tf]"),tnode=IG$._I18(xdoc,"/smsg/item"),tval=tnode?IG$._I24(tnode):null,mroot;if(tval){tval=Base64.decode(tval);tval=eval("("+tval+")");if(tval.menus){mroot={name:"Root",children:[]};this._r3(tval,mroot,"");tf.store.setRootNode(mroot);tf.store.getRootNode().expand(true);me._7=[];me._8(tf.store.getRootNode())}}},_r3:function(f,d,b){if(f.menus){d.children=d.children||[];var c,a,e;d.leaf=false;for(c=0;c<f.menus.length;c++){a=f.menus[c];a.clspath=(b?b+"-"+a.cls:a.cls);e={name:a.name,mcls:a.cls,clspath:a.clspath,leaf:true};d.children.push(e);this._r3(f.menus[c],e,f.menus[c].clspath)}}},_4:function(){var g=this,h=g.down("[name=gridduty]"),c=h.getSelectionModel().selected,d=g.down("[name=tf]"),f=d.store.getRootNode(),k=[],e,b;if(c&&c.length>0){b=c.items[0].get("sid");k.push("<smsg><item uid='"+b+"'><features>");g._5(f,k);k.push("</features></item></smsg>");var a=this,j=new IG$._I3e();j.init(a,{ack:"31",payload:IG$._I2d({uid:b,type:"feature"}),mbody:k.join("")},a,a._r4,false);j._l()}},_r4:function(a){IG$._I54(ig$.appname,IRm$.r1("M_SAVED"),null,null,0,"success")},_5:function(a,c){if(a.childNodes){var d=this,b,e;for(b=0;b<a.childNodes.length;b++){e=a.childNodes[b];if(e.get("mshow")){c.push("<feat cls='"+e.get("mcls")+"' clspath='"+e.get("clspath")+"' show='"+(e.get("mshow")?"T":"F")+"'/>")}d._5(e,c)}}},_6:function(){var f=this,c=f.down("[name=dfn]"),h=f.down("[name=btn_save]"),d=f.down("[name=gridduty]"),g=d.getSelectionModel().selected,b;if(g.length>0){f.setLoading(true);b=g.items[0].get("sid");c.setValue("Duty: "+g.items[0].get("name"));h.setDisabled(false);var a=this,e=new IG$._I3e();e.init(a,{ack:"28",payload:IG$._I2d({address:"/Features",sid:b},"address;sid"),mbody:IG$._I2e({option:"content"})},a,a._r6,false);e._l()}},_r6:function(j){var l=this,f=l._7,d=l.down("[name=tf]"),c=IG$._I18(j,"/smsg/item/features"),k=(c)?IG$._I26(c):null,g,b,e,m={},a,h;l.setLoading(false);if(k){for(g=0;g<k.length;g++){b=IG$._I1c(k[g]);m[b.clspath]=b}}d.suspendLayouts();d.suspendEvents(false);d.store.suspendEvents(false);for(g=0;g<f.length;g++){e=f[g];b=m[e.get("clspath")];a=b?b.show=="T":false;e.get("mshow")!=a&&e.set("mshow",a)}d.store.resumeEvents();d.resumeEvents();d.resumeLayouts()},_8:function(a){if(a.childNodes){var b,c=this,d;for(b=0;b<a.childNodes.length;b++){d=a.childNodes[b];c._7.push(d);c._8(d)}}},initComponent:function(){var a=this;a.title=IRm$.r1("T_FEATURES");$s.apply(this,{items:[{xtype:"panel",width:270,region:"west",title:"Duties",layout:"fit",items:[{xtype:"grid",name:"gridduty",selType:"checkboxmodel",selModel:{checkSelector:".x-grid-cell",mode:"SINGLE"},store:{xtype:"store",fields:["sid","name","active","status","dutytype","dutytype_d"]},columns:[{dataIndex:"dutytype_d",text:"Type",width:60},{dataIndex:"name",text:"Name",flex:1},{dataIndex:"active",width:80,text:"Status"}],tbar:[{text:"Load Auth",handler:function(){this._1()},scope:this},{text:"Refresh",handler:function(){this._2()},scope:this}],listeners:{selectionchange:function(b,d,c){this._6()},scope:this}}]},{xtype:"panel",region:"center",flex:1,title:"Features",layout:"fit",items:[{xtype:"treepanel",name:"tf",store:{xtype:"treestore",fields:["name","mcls","clspath","mshow"]},columns:[{xtype:"treecolumn",text:"Name",dataIndex:"name",flex:1},{xtype:"gridcolumn",dataIndex:"mcls"},{xtype:"checkcolumn",dataIndex:"mshow",text:"Show",width:80}],tbar:[{xtype:"displayfield",name:"dfn",value:"Click Duty to set features"},"-",{text:"Save",name:"btn_save",xtype:"button",disabled:true,iconCls:"icon-toolbar-save",handler:function(){this._4()},scope:this}]}]}]});IG$._I76a.superclass.initComponent.call(this)},listeners:{afterrender:function(){this._1()}}});IG$._I76b=$s.extend(IG$._I57,{scroll:false,closable:true,layout:"border",iconCls:"icon-group",_1:function(a){var c=this,b=new IG$._I3e();c.setLoading(true);b.init(c,{ack:"11",payload:IG$._I2d({uid:a}),mbody:IG$._I2e({option:"translate"})},c,function(d){c.setLoading(false);var e=IG$._I18(d,"/smsg/item");if(e){c._a=IG$._I1c(e);c._2.call(c)}},false);b._l()},_2:function(){var f=this,e=f._a,b=e.type.toLowerCase(),g=f.down("[name=f_1]"),d=f.down("[name=f_2]"),a=f.down("[name=_f1]"),c;c=f._6(b);f._k=[];g.setVisible(c!=0);if(c!=0){f._k.push(e);a.setValue(e.name);d.store.loadData([]);c==2&&f.down("[name=_f3]").show();this._5()}else{f._3(e.uid)}},_3:function(a){var c=this,b=new IG$._I3e();c.setLoading(true);c.__m=a;b.init(c,{ack:"72",payload:IG$._I2d({uid:a}),mbody:IG$._I2e({option:"get"})},c,function(h){c.setLoading(false);var f=IG$._I18(h,"/smsg/item"),k,m,r=c.down("[name=f_3]"),q=c.down("[name=f_4]"),o=c.down("[name=f_5]"),n=c.down("[name=f_6]"),l=c.down("[name=f_7]"),e=[],j,g;if(f){m=IG$._I1c(f);q.setValue(m.name);o.setValue(m.nodepath);n.setValue(m.description);l.setValue(m.rev);f=IG$._I18(f,"hist");if(f){k=IG$._I26(f);for(g=0;g<k.length;g++){j=IG$._I1c(k[g]);j.uid=m.uid;j.description=IG$._I24(k[g]);j.iscurrent=(m.rev==j.revision)?"YES":"";j.writable=m.writable;e.push(j)}}m.rh=e;c._c=m;r.store.loadData(e)}},false);b._l()},_4:function(){var h=this,c=h._c,b=h.down("[name=f_7]"),a,f=false,e,g,d=h._c.uid;b.clearInvalid();if(c){a=""+b.getValue();for(e=0;e<c.rh.length;e++){if(c.rh[e].revision==a){f=true;break}}if(f==false){b.markInvalid("Not valid revision");return}g=new IG$._I3e();h.setLoading(true);g.init(h,{ack:"72",payload:IG$._I2d({uid:d,revision:a},"uid;revision"),mbody:IG$._I2e({option:"setrevision"})},h,function(j){h.setLoading(false);h._3.call(h,d);IG$._I54(ig$.appname,IRm$.r1("M_SAVED"),null,null,0,"success")},false);g._l()}},_5:function(){var d=this,c=d._a,b=new IG$._I3e(),a=d.down("[name=_f1]");d.setLoading(true);a.setValue(c.name);b.init(d,{ack:"5",payload:IG$._I2d({uid:c.uid}),mbody:IG$._I2e({})},d,function(e){d.setLoading(false);var l=IG$._I18(e,"/smsg/item"),k=l?IG$._I26(l):null,j=d._k,f,m=[],h,g=d.down("[name=f_2]");if(k){for(f=0;f<k.length;f++){h=IG$._I1c(k[f]);m.push(h)}}g.store.loadData(m)},false);b._l()},_6:function(a){var b=0;if(a=="cubemodel"){b=0}else{if((/folder|workspace|javapackage/).test(a)){b=1}else{if((/datacube|cube|metrics|mcube|nosql|sqlcube|mdbcube/).test(a)){b=2}}}return b},_7:function(c){var b=this,a=new IG$._I3e();a.init(b,{ack:"72",payload:IG$._I2d({uid:c.get("uid"),revision:c.get("revision")},"uid;revision"),mbody:IG$._I2e({option:"updatedesc"},null,{name:"desc",value:c.get("description")})},b,function(d){},false);a._l()},_8:function(g,b){var e=this,c=e.down("[name=f_3]"),a=e._c,f=c.store.data.items[g],d=IG$._I7d;if(d&&a&&f&&f.get("uid")){d.m1$7.call(d,a.uid,a.type.toLowerCase(),a.name,a.nodepath,true,a.writable,{revision:f.get("revision")})}},mm3:function(f,a){var d=this,b=d.down("[name=f_3]"),e=b.store.ata.items[f],c;if(e&&e.get("uid")){c=new IG$._I3e();c.init(d,{ack:"72",payload:IG$._I2d({uid:e.get("uid"),revision:e.get("revision")},"uid;revision"),mbody:IG$._I2e({option:"clear_rev"},null,{})},d,function(g){if(d.__m){d._3(d.__m)}},false);c._l()}},initComponent:function(){var a=this;a.title=IRm$.r1("T_REVISION");$s.apply(this,{border:0,bodyPadding:5,items:[{xtype:"panel",title:"List of Items",region:"west",width:420,name:"f_1",layout:{type:"vbox",align:"stretch"},hidden:true,split:true,collapseMode:"mini",collapsible:true,items:[{xtype:"fieldset",title:"Folder Info",layout:{type:"hbox",align:"stretch"},items:[{xtype:"textfield",flex:1,fieldLabel:null,readOnly:true,name:"_f1"},{xtype:"button",text:"Up",hidden:true,name:"_f2",handler:function(){var e=this,f=e._k,c=e.down("[name=_f2]"),b=e.down("[name=_f3]"),d;f.splice(f.length-1,1);e._a=f[f.length-1];d=e._6(e._a.type.toLowerCase());c.setVisible(f.length>1);b.setVisible(d==2);e._5();(d==2)&&e._3(e._a.uid)},scope:this},{xtype:"button",text:"->",hidden:true,name:"_f3",handler:function(){var c=this,b=c._k[c._k.length-1];b&&c._3(b.uid)},scope:this}]},{xtype:"fieldset",title:"Search",hidden:true,layout:{type:"vbox",align:"stretch"},defaults:{labelWidth:70},items:[{xtype:"textfield",fieldLabel:"Keyword"},{xtype:"combobox",queryMode:"local",displayField:"name",valueField:"value",editable:false,fieldLabel:"Last Modified",value:"",store:{xtype:"store",fields:["name","value"],data:[{name:"Select",value:""},{name:"1 Day",value:"1d"},{name:"2 Day",value:"2d"},{name:"3 Day",value:"3d"},{name:"1 Week",value:"1w"}]}},{xtype:"fieldcontainer",layout:"hbox",items:[{xtype:"container",flex:1},{xtype:"button",text:"Run",handler:function(){this._5()},scope:this}]}]},{xtype:"gridpanel",name:"f_2",store:{xtype:"store",fields:["name","nodepath","revision","updatedate","updatedatefm","uid","type"]},flex:1,selType:"checkboxmodel",selModel:{checkSelector:".x-grid-cell",mode:"SINGLE"},$v:{scrollX:true},columns:[{text:"Name",dataIndex:"name",minWidth:120},{text:"Revision",dataIndex:"revision",minWidth:80},{text:"Path",dataIndex:"nodepath",flex:1,minWidth:300},{text:"Last Updated",dataIndex:"updatedatefm",minWidth:160}],listeners:{cellclick:function(b,d,n,g,l,q,j,c){var k=this,h=g.get("uid"),f=g.get("type"),m,r=k.down("[name=_f2]"),o=k.down("[name=_f3]");m=k._6(f.toLowerCase());if(m==0){k._3(h)}else{k._a={uid:h,name:g.get("name"),type:f,nodepath:g.get("nodepath")};k._k.push(k._a);r.setVisible(k._k.length>1);o.setVisible(m==2);k._5();(m==2)&&k._3(h)}},scope:this}}]},{xtype:"panel",region:"center",title:"Revision Management",flex:1,layout:{type:"vbox",align:"stretch"},items:[{xtype:"fieldset",title:"Information",layout:{type:"hbox",align:"stretch"},items:[{xtype:"panel",layout:"anchor",flex:1,border:1,padding:"0 5 0",bodyPadding:4,defaults:{labelAlign:"right"},items:[{xtype:"textfield",fieldLabel:"Name",readOnly:true,name:"f_4"},{xtype:"textfield",anchor:"100%",fieldLabel:"Location",readOnly:true,name:"f_5"},{xtype:"textarea",anchor:"100%",height:120,fieldLabel:"Description",readOnly:true,name:"f_6"}]},{xtype:"panel",layout:{type:"vbox",align:"stretch"},width:240,flex:1,border:1,padding:"0 5 0",bodyPadding:4,defaults:{labelAlign:"right"},items:[{xtype:"fieldcontainer",fieldLabel:"Current Revision",anchor:"100%",layout:"anchor",items:[{xtype:"numberfield",width:60,maxWidth:80,minValue:0,name:"f_7"},{xtype:"fieldcontainer",layout:"hbox",fieldLabel:null,items:[{xtype:"button",text:"Change Revision",handler:function(){this._4()},scope:this}]}]},{xtype:"container",flex:1}]}]},{xtype:"fieldcontainer",layout:{type:"hbox"},items:[{xtype:"button",text:"Refresh",width:80,margin:"0 4 0",handler:function(){var b=this;if(b.__m){b._3(b.__m)}},scope:this},{xtype:"button",text:"Clear",width:80,handler:function(){var c=this,b;if(c.__m){b=new IG$._I3e();b.init(c,{ack:"72",payload:IG$._I2d({uid:c.__m},"uid;revision"),mbody:IG$._I2e({option:"clear_hist"},null,{})},c,function(d){if(c.__m){c._3(c.__m)}},false);b._l()}},scope:this},{xtype:"displayfield",flex:1,value:"Clear previous revision history",padding:"0 5 0"}]},{xtype:"gridpanel",name:"f_3",selType:"checkboxmodel",selModel:{checkSelector:".x-grid-cell"},store:{xtype:"store",fields:["uid","revision","updatedate","updatedatefm","description","username","userid","iscurrent","writable"]},defaults:{menuDisabled:true},plugins:[{ptype:"cellediting",clicksToEdit:1}],columns:[{text:"Revision",dataIndex:"revision"},{text:"Updated Date",dataIndex:"updatedatefm",width:150},{text:"Modified By",dataIndex:"username"},{text:"Description",dataIndex:"description",flex:1,editor:{xtype:"textfield",allowBlank:true}},{text:"Current",dataIndex:"iscurrent"},{xtype:"actioncolumn",width:50,menuDisabled:true,items:[{iconCls:"icon-grid-add",tooltip:"Open This Revision",handler:function(c,d,b){a._8.call(a,d,b)}},{iconCls:"icon-grid-delete",tooltip:"Remove History",handler:function(c,d,b){a.mm3.call(a,d,b)}}]}],listeners:{edit:function(b,f,d){var c=this,g=f.record;c._7(g)},scope:this}}]}]});IG$._I76b.superclass.initComponent.call(this)},listeners:{afterrender:function(a){var b=this;b._1(b.uid)}}});IG$._Id3=$s.extend($s.window,{modal:true,region:"center",layout:"fit",closable:false,resizable:false,width:300,autoHeight:true,callback:null,c1:function(){var a=this,d=a.fielditems,f,c,b;for(b=0;b<d.length;b++){f=d[b].fname;c=a.down("[name="+f+"]").getValue();d[b].uvalue=c;if(d[b].optional!=true){if(!c){IG$._I54(ig$.appname,IRm$.r1("T_DB_BLANK"),null,a,null,null,1,"error");return}}}var e=a.c3();if(a.callback){a.callback.execute(e);a.close()}},c3:function(){var e=this,a=e.fieldvalue,f=e.fielditems,h,d,b,g={},c;for(b=0;b<f.length;b++){g[f[b].fname]=f[b].uvalue}c=e.c3a(a,g,false);return c},c3a:function(f,e,j){var l=this,n=[],h,k,o=false,g=false,m,d,b=false;for(h=0;h<f.length;h++){k=f[h];switch(k){case"<":if(g==true){d+=k}else{o=true;m=""}break;case"[":g=true;o=false;d="";break;case">":if(g==false&&o==true){if(e[m]){n.push(e[m]);b=true}o=false}else{if(g==true){d+=k}}break;case"]":g=false;var a=l.c3a(d,e,true);n.push(a);break;default:if(g==true){d+=k}else{if(o==true){m+=k}else{n.push(k)}}break}}if(b==false&&j==true){return""}return n.join("")},c2:function(g){var f=[],d,j,e,b,a=false,h=false;for(d=0;d<g.length;d++){j=g[d];switch(j){case"<":h=true;b=j;break;case"[":a=true;break;case">":if(h==true){h=false;b+=j;f.push({field:b,fname:b.substring(1,b.length-1),optional:a})}break;case"]":a=false;break;default:if(h==true){b+=j}break}}return f},_IG0:function(){this.close()},initComponent:function(){var d=this,b=[],a=d.fieldvalue,e,c;d.title=IRm$.r1("T_DB_TMPL");d.fielditems=e=d.c2(a);for(c=0;c<e.length;c++){b.push({fieldLabel:e[c].fname,name:e[c].fname,value:"",allowBlank:e[c].optional,blankText:"Item name is required!"})}var f=new IG$._I57({region:"center",flex:3,border:true,region:"center",id:"dlgmakemetaform",defaultType:"textfield",layout:"anchor",defaults:{anchor:"100%",labelWidth:80},items:b});$s.apply(this,{defaults:{bodyStyle:"padding:10px"},items:[f],buttons:[{text:IRm$.r1("B_CONFIRM"),handler:function(){this.c1()},scope:this},{text:IRm$.r1("B_CANCEL"),handler:function(){this.close()},scope:this}]});IG$._Id3.superclass.initComponent.apply(this,arguments)}});IG$._Id4=function(){};IG$._Id4.prototype={pX:function(b){var e=this,d,a;e.dbtype="";e.jdbcurl="";e.driver="";e.username="";e.passwd="";e.name="";e.savepwd=false;e.schemaname="";e.charset_out="";e.charset_db="";e.userowlimit=0;e.mongodb_hosts="";e.c_rule="min";e.cache=false;e.c_int=5;e.query_timeout=0;e.schedule_query_timeout=0;e.max_pool_size=0;e.c_dbmon=false;if(b){var g=IG$._I18(b,"/smsg/item"),f,h,c;e.uid=IG$._I1b(g,"uid");e.name=IG$._I1b(g,"name");e.memo=IG$._I1b(g,"memo");g=IG$._I18(b,"/smsg/item/connection");f=IG$._I26(g);for(d=0;d<f.length;d++){h=IG$._I29(f[d]);c=IG$._I24(f[d]);if(h=="savepwd"){c=(c=="T")?true:false}else{if(h=="userowlimit"){c=parseInt(c)}else{if(h=="cache"){c=(c=="T")?true:false}else{if(h=="c_int"){c=parseInt(c)||5}else{if(h=="c_dbmon"){c=(c=="T")?true:false}else{if(h=="max_pool_size"||h=="schedule_query_timeout"||h=="query_timeout"){c=parseInt(c)||0}}}}}}e[h]=c}}},gX:function(b){var d=[],c=this,a,e=c.mongodb_hosts;d.push("<smsg><item uid='"+c.uid+"'><connection>");d.push("<dbtype>"+c.dbtype+"</dbtype>");d.push("<jdbcurl><![CDATA["+c.jdbcurl+"]]></jdbcurl>");d.push("<driver><![CDATA["+c.driver+"]]></driver>");d.push("<username>"+c.username+"</username>");d.push("<savepwd>"+(c.savepwd?"T":"F")+"</savepwd>");d.push("<schemaname>"+(c.schemaname||"")+"</schemaname>");d.push("<charset_out>"+(c.charset_out||"")+"</charset_out>");d.push("<charset_db>"+(c.charset_db||"")+"</charset_db>");d.push("<userowlimit>"+(c.userowlimit||"0")+"</userowlimit>");if(b==false||c.savepwd==true){d.push("<passwd>"+c.passwd+"</passwd>")}d.push("<mongodb_hosts><![CDATA["+(c.mongodb_hosts||"")+"]]></mongodb_hosts>");d.push("<validateSql><![CDATA["+(c.validateSql||"")+"]]></validateSql>");d.push("<cache>"+(c.cache?"T":"F")+"</cache>");d.push("<c_rule>"+(c.c_rule||"min")+"</c_rule>");d.push("<c_int>"+(c.c_int||"5")+"</c_int>");d.push("<query_timeout>"+(c.query_timeout||"0")+"</query_timeout>");d.push("<schedule_query_timeout>"+(c.schedule_query_timeout||"0")+"</schedule_query_timeout>");d.push("<max_pool_size>"+(c.max_pool_size||"0")+"</max_pool_size>");d.push("<c_dbmon>"+(c.c_dbmon?"T":"F")+"</c_dbmon>");d.push("</connection></item></smsg>");return d.join("")}};IG$._I74=$s.extend(IG$._I57,{scroll:false,initialized:false,closable:true,hideMode:"offsets",layout:"fit",bodyPadding:5,iconCls:"icon-ing-docdef",_IFd:function(){if(window.dbtypelist){var a=this,b,f,d,c=[];for(d=0;d<window.dbtypelist.length;d++){b=window.dbtypelist[d];f={};IG$._I1d(b,f,"id;desc;driver;url");c.push(f)}a.dblist=c;a.ld2()}else{var a=this,e=new IG$._I3e();e.init(a,{ack:"11",payload:IG$._I2d({}),mbody:IG$._I2e({option:"dblist"})},a,a.rs_ld1,false);e._l()}},rs_ld1:function(a){var b=this,g=IG$._I18(a,"/smsg"),f=IG$._I26(g),e,d=[],c,h;window.dbtypelist=[];for(e=0;e<f.length;e++){c={id:IG$._I1b(f[e],"name"),desc:IG$._I24(IG$._I18(f[e],"desc")),driver:IG$._I24(IG$._I18(f[e],"driver")),url:IG$._I24(IG$._I18(f[e],"url"))};h={};IG$._I1d(c,h,"id;desc;driver;url");window.dbtypelist.push(h);d.push(c)}b.dblist=d;b.ld2()},ld2:function(){var a=this,b=new IG$._I3e();b.init(a,{ack:"29",payload:IG$._I2d({address:"/Connections",option:"list"},"address;option"),mbody:IG$._I2e({})},a,a.rs_ld2,false);b._l()},rs_ld2:function(a){var e=this,h=e.down("[name=dbgrid]"),g=IG$._I18(a,"/smsg/item"),f,b=[],d,c;if(g){e.rootnode=IG$._I1b(g,"uid");f=IG$._I26(g);for(c=0;c<f.length;c++){d=IG$._I1c(f[c]);b.push(d)}h.store.loadData(b)}},_t$:function(b){var a=this;switch(b){case"cmd_add_db":var c;c=new IG$.AkX({dbinfo:null,dblist:a.dblist,callback:new IG$._I3d(a,a.rs_MM)});c.show();break}},ld4:function(b){var a=this,c=new IG$._I3e();c.init(a,{ack:"5",payload:IG$._I2d({address:b}),mbody:IG$._I2e({})},a,a.rs_ld4,false);c._l()},rs_ld4:function(a){var b=this,d,c;c=new IG$._Id4();c.pX(a);d=new IG$.AkX({dbinfo:c,dblist:b.dblist,callback:new IG$._I3d(this,this.rs_MM)});d.show()},rs_MM:function(b){var a=this;a.dbinfo=null;a.ld2();b=="saved"&&IG$._I54(ig$.appname,IRm$.r1("M_SAVED"),null,null,0,"success");b=="deleted"&&IG$._I54(ig$.appname,IRm$.r1("M_DELETED"),null,null,0,"success")},initComponent:function(){var a=this;a.items=[{xtype:"panel",region:"center",layout:{type:"vbox",align:"stretch"},bodyPadding:4,items:[{xtype:"panel",flex:1,border:false,layout:{type:"vbox",align:"stretch"},items:[{xtype:"gridpanel",name:"dbgrid",flex:1,store:{xtype:"store",fields:["name","uid","memo","writable","manage","type","owner","modifier","updatedate"]},columns:[{text:IRm$.r1("B_TYPE"),width:80,sortable:false,hideable:false,dataIndex:"type"},{text:IRm$.r1("B_NAME"),flex:1,sortable:false,hideable:false,dataIndex:"memo"},{text:IRm$.r1("B_OWNER"),width:120,dataIndex:"owner"},{text:IRm$.r1("B_MODI"),width:120,dataIndex:"modifier"}],listeners:{itemclick:function(d,c,h,f,j,g){var b=c.get("uid");this.ld4(b)},scope:this}}],tbar:[{iconCls:"icon-toolbar-add",text:IRm$.r1("L_ADD_DB_INST"),handler:function(){this._t$("cmd_add_db")},scope:this}]}]}];this.listeners={afterrender:function(b){b._IFd.call(b)}};IG$._I74.superclass.initComponent.call(this)}});IG$.AkX=$s.extend($s.window,{name:"paneludetail",width:500,height:520,layout:"fit",defaults:{anchor:"100%"},in$t:function(){var b=this,c=b.down("[name=tdbtype]"),a=b.dblist;c.store.loadData(a);b.ld5()},ld5:function(){var q=this,j=q.dbinfo,s=IG$._I83.jS1,n=q.down("[name=tname]"),g=q.down("[name=tdbtype]"),A=q.down("[name=tdriver]"),x=IRm$.r1("L_LAST_UPD"),k=q.down("[name=turl]"),h=q.down("[name=tuname]"),o=q.down("[name=tpwd]"),d=q.down("[name=tusave]"),f=q.down("[name=tudate]"),r=q.down("[name=charset_out]"),w=q.down("[name=charset_db]"),v=q.down("[name=userowlimit]"),a=q.down("[name=c_rule]"),m=q.down("[name=cache]"),e=q.down("[name=c_int]"),b=q.down("[name=gm1]"),B=q.down("[name=qt1]"),z=q.down("[name=qt2]"),y=q.down("[name=qt3]"),t=q.down("[name=c_dbmon]"),c=q.down("[name=validateSql]");n.setReadOnly((j)?true:false);n.setValue(j?j.memo||"":"");g.setValue(j?j.dbtype||"":"");A.setValue(j?j.driver||"":"");k.setValue(j?j.jdbcurl||"":"");h.setValue(j?j.username||"":"");o.setValue(j?j.passwd||"":"");d.setValue(j?j.savepwd:false);m.setValue(j?j.cache:false);e.setValue(j?j.c_int||5:5);B.setValue(j?j.query_timeout||0:0);z.setValue(j?j.schedule_query_timeout||0:0);y.setValue(j?j.max_pool_size||0:0);c.setValue(j?j.validateSql||"":"");t.setValue(j?j.c_dbmon:false);r.setValue(j?j.charset_out||"":"");w.setValue(j?j.charset_db||"":"");v.setValue(j?j.userowlimit||0:0);a.setValue(j?j.c_rule||"min":"min");x=(j&&j.updatedate)?x+IG$._I40(j.updatedate):x;f.setValue(x);b.setValue(j&&j.mongodb_hosts?j.mongodb_hosts:"")},cH:function(){var c,e=this,b=window.dbtypelist,a,h=e.down("[name=tdbtype]"),d=e.down("[name=tdriver]"),f=e.down("[name=turl]"),g;if(e.changelock==true){return}g=h.getValue();for(c=0;c<b.length;c++){if(b[c].id==g){a=b[c];break}}d.setValue(a?a.driver:"");f.setValue(a?a.url:"")},cH1:function(){var a=this,b;b=new IG$._Id4();b.pX(null);a.lda(b);var a=this,c=new IG$._I3e();c.init(a,{ack:"29",payload:IG$._I2d({address:"/Connections",option:"testcon"},"address;option"),mbody:b.gX(false)},a,a.rs_cH1,false);c._l()},rs_cH1:function(a){IG$._I54(ig$.appname,IRm$.r1("M_SUC_DBCON"),null,null,0,"success")},cH2:function(c){var b=this,a=b.down("[name="+c+"]"),e=a.getValue(),d;d=new IG$._Id3({fieldvalue:e,callback:new IG$._I3d(this,this.rs_cH2,c)});IG$._I_5(this,d)},rs_cH2:function(d,c){var b=this,a=b.down("[name="+c+"]");a.setValue(d)},ld6:function(c){var a=this,g=new IG$._I3e(),b,j,e,h=a.dbinfo,k=a.down("[name=tname]"),d="",f;if(c=="confirm"){f=k.getValue();b="31";j=IG$._I2d({address:(h?h.uid:"/Connections/"+f),name:f,type:"UserDB",pid:a.rootnode,memo:k.getValue(),description:d},"address;name;type;pid;description;memo");if(!h){h=new IG$._Id4();h.pX(null)}a.lda(h);e=h.gX(true);g.init(a,{ack:b,payload:j,mbody:e},a,a.rs_ld6a,false);g._l()}else{if(c=="delete"){IG$._I55(IRm$.r1("B_CONFIRM"),IRm$.r1("B_C_DELETE"),function(l){if(l=="yes"){if(!h){return}b="7";j=IG$._I2d({address:h.uid,name:f,type:"UserDB",description:d},"address;name;type;pid;description;memo");e=IG$._I2e({});g.init(a,{ack:b,payload:j,mbody:e},a,a.rs_ld6b,false);g._l()}},this,this)}}},rs_ld6b:function(a){var b=this;b.callback&&b.callback.execute("saved");b.close()},rs_ld6a:function(a){var b=this;b.callback&&b.callback.execute("saved");b.close()},lda:function(f){var k=this,h=k.down("[name=tdbtype]"),v=k.down("[name=tdriver]"),l=k.down("[name=turl]"),j=k.down("[name=tuname]"),n=k.down("[name=tpwd]"),d=k.down("[name=tusave]"),o=k.down("[name=charset_out]"),t=k.down("[name=charset_db]"),s=k.down("[name=userowlimit]"),b=k.down("[name=gm1]"),a=k.down("[name=c_rule]"),m=k.down("[name=cache]"),e=k.down("[name=c_int]"),x=k.down("[name=qt1]"),w=k.down("[name=qt2]"),u=k.down("[name=qt3]"),c=k.down("[name=validateSql]"),q=k.down("[name=c_dbmon]"),g,r;f.dbtype=h.getValue();f.jdbcurl=l.getValue();f.driver=v.getValue();f.username=j.getValue();f.passwd=n.getValue();f.savepwd=true;f.charset_out=o.getValue();f.charset_db=t.getValue();f.userowlimit=s.getValue();f.mongodb_hosts=b.getValue();f.c_rule=a.getValue();f.cache=m.getValue();f.c_int=e.getValue();f.c_dbmon=q.getValue();f.query_timeout=x.getValue();f.schedule_query_timeout=w.getValue();f.max_pool_size=u.getValue();f.validateSql=c.getValue()},m1:function(){var c=this,e=c.down("[name=tdbtype]").getValue(),b=c.down("[name=m1]"),a=c.down("[name=m2]"),d=c.down("[name=m_a1]");b.setVisible(e!="mongodb");a.setVisible(e=="mongodb");d.setVisible(e!="mongodb")},initComponent:function(){var a=this;$s.apply(a,{title:IRm$.r1("T_DB_CON"),items:[{xtype:"panel",layout:"anchor",bodyPadding:10,autoScroll:true,items:[{xtype:"textfield",fieldLabel:IRm$.r1("L_DB_NAME"),name:"tname"},{xtype:"fieldcontainer",fieldLabel:IRm$.r1("L_DB_TYPE"),layout:"hbox",items:[{xtype:"combobox",labelField:"desc",valueField:"gid",name:"tdbtype",queryMode:"local",displayField:"desc",valueField:"id",editable:false,autoSelect:true,store:{fields:["id","desc","driver","url"]},listeners:{change:function(b,e,c,d){this.m1()},scope:this}},{xtype:"button",name:"m_a1",text:IRm$.r1("L_APPLY_TMPL"),handler:function(){var b=this;b.cH.call(b)},scope:this}]},{xtype:"fieldcontainer",layout:"anchor",hidden:true,name:"m1",defaults:{anchor:"100%"},items:[{xtype:"textfield",fieldLabel:IRm$.r1("L_JDBC_DRV"),name:"tdriver"},{xtype:"fieldcontainer",fieldLabel:IRm$.r1("L_JDBC_URL"),layout:"hbox",items:[{xtype:"textfield",fieldLabel:"",name:"turl",width:280},{xtype:"button",text:"Set",handler:function(){var b=this.down("[name=turl]");if(b.getValue()!=""){this.cH2("turl")}},scope:this}]},{xtype:"textfield",fieldLabel:IRm$.r1("L_DB_UNAME"),name:"tuname"},{xtype:"fieldcontainer",fieldLabel:IRm$.r1("L_DB_PWD"),layout:"hbox",items:[{xtype:"textfield",fieldLabel:"",inputType:"password",name:"tpwd",width:220},{xtype:"button",text:"Test",handler:function(){var b=this;b.cH1.call(b)},scope:this}]},{xtype:"checkbox",fieldLabel:"Save password",hidden:true,name:"tusave"},{xtype:"displayfield",value:IRm$.r1("L_LAST_UPD"),name:"tudate"},{xtype:"fieldset",title:IRm$.r1("L_ADV_OPTION"),layout:"anchor",items:[{xtype:"textarea",height:80,fieldLabel:IRm$.r1("L_DB_VAL"),name:"validateSql"},{xtype:"numberfield",name:"qt3",fieldLabel:"Max pool size",minValue:0,maxValue:1000},{xtype:"numberfield",name:"qt1",fieldLabel:IRm$.r1("L_DB_QUERYTIMEOUT"),minValue:0,maxValue:100000},{xtype:"numberfield",name:"qt2",fieldLabel:IRm$.r1("L_DB_SCHEDULE_QUERYTIMEOUT"),minValue:0,maxValue:100000},{xtype:"combobox",labelField:"name",valueField:"value",name:"charset_db",queryMode:"local",displayField:"name",editable:false,autoSelect:true,fieldLabel:IRm$.r1("L_DB_CHARSET"),store:{xtype:"store",fields:["name","value"],data:[{name:"Not use",value:""},{name:"UTF-8",value:"utf-8"},{name:"ksc5601",value:"ksc5601"},{name:"x-windows-949",value:"x-windows-949"},{name:"iso-8859-1",value:"iso-8859-1"},{name:"euc-kr",value:"euc-kr"}]}},{xtype:"combobox",labelField:"name",valueField:"value",name:"charset_out",queryMode:"local",displayField:"name",editable:false,autoSelect:true,fieldLabel:IRm$.r1("L_OUTPUT_CHARSET"),store:{xtype:"store",fields:["name","value"],data:[{name:"Not use",value:""},{name:"UTF-8",value:"utf-8"},{name:"ksc5601",value:"ksc5601"},{name:"x-windows-949",value:"x-windows-949"},{name:"iso-8859-1",value:"iso-8859-1"},{name:"euc-kr",value:"euc-kr"}]}},{xtype:"numberfield",name:"userowlimit",anchor:"50%",fieldLabel:IRm$.r1("L_ROW_LIMIT_COUNT"),minValue:0,maxValue:10000000},{xtype:"checkbox",fieldLabel:IRm$.r1("L_USE_CACHE"),name:"cache",boxLabel:IRm$.r1("B_ENABLED")},{xtype:"combobox",fieldLabel:IRm$.r1("L_CACHE_RULE"),name:"c_rule",displayField:"name",valueField:"value",queryMode:"local",editable:false,autoSelect:true,store:{xtype:"store",fields:["name","value"],data:[{name:IRm$.r1("L_EV_MIN"),value:"min"},{name:IRm$.r1("L_EV_HOUR"),value:"hour"},{name:IRm$.r1("L_EV_DAY"),value:"day"}]},listeners:{change:function(b){var e=this,d=e.down("[name=c_int]"),c=b.getValue();d.setFieldLabel(c=="day"?IRm$.r1("L_CLC_HOUR"):IRm$.r1("L_CLC_PERI"))},scope:this}},{xtype:"numberfield",fieldLabel:IRm$.r1("L_CACHE_PERI"),name:"c_int",value:5,minValue:1,maxValue:1000},{xtype:"checkbox",fieldLabel:IRm$.r1("L_DB_MON"),boxLabel:IRm$.r1("B_ENABLED"),name:"c_dbmon"}]}]},{xtype:"fieldcontainer",layout:"fit",height:280,hidden:true,name:"m2",items:[{xtype:"textarea",name:"gm1",flex:1,fieldLabel:"Connection String"}]},{xtype:"fieldcontainer",hidden:(a.dbinfo?false:true),items:[{xtype:"button",text:"Remove Connection",handler:function(){this.ld6("delete")},scope:this}]}]}],buttons:[{xtype:"button",text:IRm$.r1("B_CONFIRM"),handler:function(){this.ld6("confirm")},scope:this},{xtype:"button",text:IRm$.r1("B_CANCEL"),handler:function(){this.close()},scope:this}]});IG$.AkX.superclass.initComponent.call(this)},listeners:{afterrender:function(a){a.in$t()}}});IG$._Ice=$s.extend($s.window,{modal:true,region:"center",layout:"fit",closable:false,resizable:false,width:300,autoHeight:true,callback:null,poolname:null,c1:function(){var d=this,b=d.down("[name=tpwd]"),e=b.getValue();if(!e){IG$._I54(ig$.appname,IRm$.r1("T_DB_BLANK"),null,d,null,null,1,"error");return}var a=this,c=new IG$._I3e();c.init(a,{ack:"25",payload:IG$._I2d({address:d.poolname,pwd:e},"address;pwd"),mbody:IG$._I2e({option:"standard"})},a,a.rs_c1);c._l()},rs_c1:function(a){var c=this,b=c.down("[name=tpwd]"),d=b.getValue();if(c.callback){c.callback.execute(d);c.close()}},initComponent:function(){var a=this;a.title=IRm$.r1("T_DB_PWD");$s.apply(this,{defaults:{bodyStyle:"padding:10px"},items:[{xtype:"form",layout:"anchor",defaults:{anchor:"100%"},items:[{xtype:"textfield",fieldLabel:"Password",inputType:"password",enableKeyEvents:true,name:"tpwd",allowBlank:false,listeners:{keyup:function(c,d,b){if(d.keyCode==13){a.c1.call(a)}}}}]}],buttons:[{text:IRm$.r1("B_CONFIRM"),handler:function(){this.c1()},scope:this},{text:IRm$.r1("B_CANCEL"),handler:function(){this.close()},scope:this}]});IG$._Ice.superclass.initComponent.apply(this,arguments)}});IG$.Idm=$s.extend(IG$._I57,{closable:true,hideMode:"offsets",layout:"fit",bodyPadding:0,iconCls:"icon-ing-docdef",_b1:function(){var e=this,d=e.down("[name=_m4]"),g=d.body.dom,b,f,a,h,c;f=$("#fileupload",g);a=$("#dropzone",g);h=$("#d_progress",g);f.fileupload({url:ig$.servlet,dataType:"text",formData:{_mts_:IG$._g$a||""},done:function(r,n){var t=n.result||'<smsg errorcode="0xffff" errormsg="Server incorrect responding"/>',q=IG$._I13(t),j=IG$._I27(q),l,s,o,m=[],k;if(j){IG$._I51(q,e,null)}else{l=IG$._I18(q,"/smsg");if(l){s=IG$._I26(l);for(o=0;o<s.length;o++){k=IG$._I1c(s[o]);m.push(k)}}}e._l1.call(e,m)},progressall:function(m,l){var j=parseInt(l.loaded/l.total*100,10),k=$(".bar",h);k.css("width",j+"%");k.text("Loaded "+l.loaded+" / "+l.total)},dropZone:a}).bind("fileuploadsubmit",function(k,j){});f.fileupload("option","url",ig$.servlet)},_l1:function(e){var d=this,c=d.down("[name=_m5]"),b,a;if(e){for(b=0;b<e.length;b++){a=e[b];if(a.filename.substring(0,"{ENC}".length)=="{ENC}"){a.filename=a.filename.substring("{ENC}".length);a.filename=Base64.decode(a.filename)}}}c.store.loadData(e)},_l2:function(e,g){var d=this,c=new IG$._I3e(),a=null,f=null,b=null;d.setLoading(true,true);c.init(d,{ack:"27",payload:IG$._I2d({uid:e.uid,delimiter:a,uploadmode:"F",deletemode:"F",regfile:f,rowlimit:100,file_encoding:b},"uid;delimiter;uploadmode;deletemode;regfile;file_encoding;rowlimit"),mbody:IG$._I2e({option:"previewdatacontent"})},d,function(r){var h=IG$._I18(r,"/smsg"),s=h?IG$._I26(h):null,n,m,l=$("td",g),q=[],k,o,v,u,t;l.empty();for(n=0;n<s.length;n++){k=$("<div class='sh-info'><div class='sh-summary'></div><div class='sh-columns'></div></div>").appendTo(l);t=$(".sh-columns",k);o=IG$._I18(s[n],"Header");v=IG$._I26(o);u="";for(m=0;m<v.length;m++){u+=(m>0?", ":"")+IG$._I1b(v[m],"name")}t.text(u)}});c._l()},_l3:function(){var b=this,a=new IG$._I3e();b.setLoading(true,true);a.init(b,{ack:"11",payload:IG$._I2d({},""),mbody:IG$._I2e({option:"ftables"})},b,function(c){var h=IG$._I18(c,"/smsg/item"),g=h?IG$._I26(h):null,d=b.down("[name=m1]"),j=[],f,e;if(g){for(e=0;e<g.length;e++){f=IG$._I1c(g[e]);j.push(f)}}d.store.loadData(j)});a._l()},_l4:function(c){var b=this,a=new IG$._I3e(),d={uid:c.get("uid"),option:"StoredContent"};b._sb1=c;a.init(b,{ack:"25",payload:IG$._I2d(d,"uid;option"),mbody:IG$._I2e({option:d.option})},b,function(l){var f=IG$._I18(l,"/smsg/item"),m=f?IG$._I18(f,"objinfo"):null,o=f?IG$._I26(f,"Field"):null,j=m?IG$._I1c(m):null,k,e,h=[],g=0,q=b.down("[name=_mt]"),r=b.down("[name=m3]"),s=[];if(o){for(k=0;k<o.length;k++){e=IG$._I1c(o[k]);if(e.name==j.file_field||e.name==j.seq_field){continue}e.seq=++g;s.push(e.name);h.push(e)}}b._ltb={item:IG$._I1c(f),fields:h};r.store.loadData(h);q.setValue(s.join("\t"));b._l6(d.uid)},false);a._l()},_l6:function(a){var c=this,b=new IG$._I3e();c.setLoading(true,true);b.init(c,{ack:"11",payload:IG$._I2d({uid:a,option:"ftable_hist"},"uid;option"),mbody:IG$._I2e({option:"ftable_hist"})},c,function(k){var n=this,e=IG$._I18(k,"/smsg/item"),l=e?IG$._I26(e):null,s=n.down("[name=m2]"),h,g,f=[],d,r,m,q,o;if(l){for(h=0;h<l.length;h++){o=l[h];d=IG$._I1c(o);r=IG$._I26(o);if(r){for(g=0;g<r.length;g++){m=IG$._I29(r[g]);q=IG$._I24(r[g]);d[m]=q}}f.push(d)}}s.store.loadData(f)});b._l()},d1:function(d,a){var c=this,b=new IG$._I3e();c.setLoading(true,true);b.init(c,{ack:"11",payload:IG$._I2d({uid:d.get("uid"),option:"ftable_rm"},"uid;option"),mbody:IG$._I2e({option:"ftable_rm"})},c,function(e){if(c._sb1){c._l4(c._sb1)}});b._l()},_l7:function(d){var h=this,a=h._ltb,f=h.down("[name=_m5]"),j=f.getSelectionModel().selected,k=new IG$._I3e(),b=null,c=null,g=null,l=[],e;h.setLoading(true,true);if(d){l.push(d.get("uid"))}else{for(e=0;e<j.length;e++){l.push(j.items[e].get("uid"))}}if(l.length==0){return}k.init(h,{ack:"27",payload:IG$._I2d({tuid:a.item.uid,uid:l.join(";")},"uid;tuid"),mbody:IG$._I2e({option:"loaddatacontent"})},h,function(m){f.store.loadData([]);if(h._sb1){h._l4(h._sb1)}});k._l()},initComponent:function(){var a=this;$s.apply(a,{layout:"border",tbar:[{iconCls:"icon-refresh",tooltip:"Refresh",handler:function(){var b=this;b._l3.call(b)},scope:this}],items:[{xtype:"gridpanel",name:"m1",title:"Table List",region:"center",flex:1,store:{xtype:"store",fields:["type","name","uid"]},columns:[{text:"Type",dataIndex:"type",width:80},{text:"Name",dataIndex:"name",tdCls:"igc-td-link",flex:1},{xtype:"actioncolumn",width:30,items:[{iconCls:"icon-grid-config",tooltip:"Config item",handler:function(c,f,b){var d=this,e=c.store.getAt(f);d._l4.call(d,e)},scope:this}]}],listeners:{cellclick:function(b,c,k,d,j,l,f,g){var h=this;if(k==1){h._l4.call(h,d)}},scope:this}},{xtype:"panel",region:"south",flex:1,flex:1,layout:{type:"hbox",align:"stretch"},items:[{xtype:"panel",flex:1,layout:{type:"vbox",align:"stretch"},items:[{xtype:"gridpanel",title:"Uploaded File",flex:1,name:"_m5",store:{fields:["filename","uid"]},selType:"checkboxmodel",selModel:{mode:"MULTI"},tbar:[{iconCls:"icon-refresh",tooltip:"Load File",handler:function(){var b=this;b._l7()},scope:this}],columns:[{text:"Name",flex:1,dataIndex:"filename",tdCls:"igc-td-link"},{xtype:"actioncolumn",width:30,items:[{iconCls:"icon-grid-config",tooltip:"Config item",handler:function(c,f,b){var d=this,e=c.store.getAt(f);d._l7.call(d,e)},scope:this}]}]},{html:"<div class='igc-o-dzone' id='_tb_f'><input type='file' id='fileupload' name='files[]' data-url='upload' multiple></input><div class='filedropzone fade well' id='dropzone'>Drop files here</div><div class='file-progress' id='d_progress'><div class='bar' style='width: 0%;'></div></div></div>",name:"_m4",height:150}]},{xtype:"gridpanel",title:"File History",name:"m2",flex:1,store:{xtype:"store",fields:["tuid","cdate","mdate","cdate_user","mdate_user","cname","uname","fname","uid","type","rowcount"]},columns:[{text:"Name",dataIndex:"fname",flex:1},{text:"Updated",dataIndex:"mdate_user",width:150},{text:"Rows",dataIndex:"rowcount",width:80},{xtype:"actioncolumn",width:30,items:[{iconCls:"icon-grid-delete",tooltip:"Delete item",handler:function(c,e,b){var d=c.store.getAt(e);a.d1.call(a,d,c)}}]}]},{xtype:"panel",title:"Column Fields",flex:1,layout:{type:"vbox",align:"stretch"},items:[{xtype:"gridpanel",name:"m3",flex:1,store:{xtype:"store",fields:["seq","name","datatype","datasize","alias","decimaldigits","iskey","nodepath","tablename","type"]},columns:[{text:"No",dataIndex:"seq",width:40},{text:"Key",dataIndex:"iskey",width:40},{text:"Name",dataIndex:"name",minWidth:120,flex:1},{text:"DataType",dataIndex:"datatype",width:80},{text:"Size",width:60,dataIndex:"datasize"}]},{xtype:"textarea",fieldLabel:"Field Template",name:"_mt",height:100}]}]}]});IG$.Idm.superclass.initComponent.call(this)},listeners:{afterrender:function(a){a._b1.call(a);a._l3.call(a)}}});IG$._Icb=$s.extend($s.window,{modal:true,layout:"fit",closable:false,resizable:false,width:500,autoHeight:true,bodyPadding:10,bodyStyle:{background:"#ffffff"},callback:null,sel:null,_IG0:function(){this.close()},mm1:function(){if(this.callback){var c=this.down("[name=gridduty_sel]"),a,b=[];for(a=0;a<c.store.data.length;a++){b.push(c.store.data.items[a])}this.callback.execute(b)}this.close()},mm2:function(){var a=this,b=new IG$._I3e();b.init(a,{ack:"28",payload:IG$._I2d({address:"/Auth"},"address"),mbody:IG$._I2e({option:"select"})},a,a.rs_mm2,false);b._l()},rs_mm2:function(g){var e,b=IG$._I18(g,"/smsg/item"),f,l=[],c=[],d,j,h=this.down("[name=gridduty]"),k=this.down("[name=gridduty_sel]"),a={};if(this.sel){for(e=0;e<this.sel.length;e++){a[this.sel[e].sid]=this.sel[e]}}if(b){f=IG$._I26(b);for(e=0;e<f.length;e++){j=IG$._I1c(f[e]);if(a[j.sid]){c.push(j)}else{l.push(j)}}}h.store.loadData(l);k.store.loadData(c)},m1:function(a){var e=this,d,b=e.down("[name=gridduty"+(a==false?"_sel":"")+"]"),c=e.down("[name=gridduty"+(a==true?"_sel":"")+"]"),f=b.getSelectionModel().getSelection();if(f.length>0){for(d=0;d<f.length;d++){b.store.remove(f[d]);c.store.add(f[d])}}},initComponent:function(){this.title=IRm$.r1("L_MGR_UD");var a=[{xtype:"form",layout:"anchor",defaults:{anchor:"100%"},border:0,items:[{xtype:"displayfield",value:IRm$.r1("L_UD_DESC")},{xtype:"panel",layout:{type:"hbox",align:"stretch"},items:[{xtype:"gridpanel",name:"gridduty",flex:1,height:300,selType:"checkboxmodel",selModel:{checkSelector:".x-grid-cell",mode:"MULTI"},multiSelect:true,store:{fields:["name","dutytype","sid","status","type"]},columns:[{header:IRm$.r1("B_NAME"),dataIndex:"name",flex:1,sortable:true,hideable:false},{header:IRm$.r1("B_TYPE"),dataIndex:"type",flex:1,sortable:true,hideable:false}]},{xtype:"container",bodyPadding:"0 4 0 4",border:0,layout:{type:"vbox",align:"stretch"},items:[{xtype:"container",flex:1},{xtype:"button",text:">>",handler:function(){this.m1(true)},scope:this},{xtype:"button",text:"<<",handler:function(){this.m1(false)},scope:this},{xtype:"container",flex:1}]},{xtype:"gridpanel",name:"gridduty_sel",flex:1,height:300,selType:"checkboxmodel",selModel:{checkSelector:".x-grid-cell",mode:"MULTI"},multiSelect:true,store:{fields:["name","dutytype","sid","status","type"]},columns:[{header:IRm$.r1("B_NAME"),dataIndex:"name",flex:1,sortable:true,hideable:false},{header:IRm$.r1("B_TYPE"),dataIndex:"type",flex:1,sortable:true,hideable:false}]}]}]}];var b=[{text:IRm$.r1("B_CONFIRM"),handler:function(){this.mm1()},scope:this},{text:IRm$.r1("B_CANCEL"),handler:function(){this.close()},scope:this}];$s.apply(this,{items:a,buttons:b});IG$._Icb.superclass.initComponent.apply(this,arguments)},listeners:{afterrender:function(a){this.mm2()}}});IG$._Icc=$s.extend($s.window,{title:"Group Privilege Setting",modal:true,layout:"fit",closable:false,resizable:false,width:400,autoHeight:true,plain:true,bodyPadding:10,bodyStyle:{background:"#ffffff"},callback:null,_IG0:function(){this.close()},mm1:function(){this.close()},mm2_:function(b){var a=this,c=new IG$._I3e();c.init(a,{ack:28,payload:{address:"/usergroup",gid:b,action:"privilege"},mbody:{option:"standard"}},a,a.rs_mm2_,false);c._l()},rs_mm2_:function(a){},mm2:function(b){var a=this,e=new IG$._I3e(),c=this.groupname,d=this.gid;e.init(a,{ack:28,payload:{address:"/usergroup",action:b},mbody:{gid:d}},a,a.rs_mm2,false,[b]);e._l()},rs_mm2:function(a,f){var e=this,c=f[0],d=e.ugroup,b=e.down("[name=btn_erase]");switch(c){case"activate":d.set("status","Active");d.set("active","1");b.setVisible(false);break;case"delete":d.set("status","Blocked");d.set("active","0");b.setVisible(true);break;case"erase":d.remove();e.close();break}},initComponent:function(){$s.apply(this,{items:[{xtype:"form",layout:"anchor",defaults:{anchor:"100%"},border:0,items:[{xtype:"displayfield",value:"Check to allow each priviege."},{xtype:"textfield",readOnly:true,fieldLabel:"Group name",name:"groupname"},{xtype:"fieldset",title:"Options",collapsible:false,autoHeight:true,defaults:{labelWidth:80,anchor:"100%",layout:{type:"hbox",defaultMargins:{top:0,right:5,bottom:0,left:0}}},items:[{xtype:"checkbox",boxLabel:"Save data to file"},{xtype:"checkbox",boxLabel:"Add/edit user defined group"},{xtype:"checkbox",boxLabel:"Show chart"},{xtype:"checkbox",boxLabel:"Use dashboard"}]},{xtype:"fieldset",title:"Enable/Disable",name:"p_activate",hidden:false,layout:{type:"hbox",align:"stretch"},items:[{xtype:"button",iconCls:"icon-toolbar-activate",flex:1,text:"Activate",handler:function(){this.mm2("activate")},scope:this},{xtype:"container",width:10},{xtype:"button",iconCls:"icon-toolbar-deprivation",flex:1,text:"Deprivate",handler:function(){this.mm2("delete")},scope:this}]}]}],buttons:[{text:"Erase Group",name:"btn_erase",hidden:this.ugroup.get("active")=="1"?true:false,handler:function(){this.mm2("erase")},scope:this},"->",{text:IRm$.r1("B_CONFIRM"),handler:function(){this.mm1()},scope:this},{text:IRm$.r1("B_CANCEL"),handler:function(){this.close()},scope:this}],listeners:{afterrender:function(b){if(this.gid){this.mm2_(this.gid);var a=this.down("[name=groupname]");a.setValue(this.groupname||"")}}}});IG$._Icc.superclass.initComponent.apply(this,arguments)}});IG$._IcT=$s.extend($s.window,{title:"Tenant Setting",modal:true,layout:"fit",closable:false,resizable:false,width:400,autoHeight:true,plain:true,bodyPadding:10,bodyStyle:{background:"#ffffff"},callback:null,_IG0:function(){this.close()},mm1:function(){this.close()},mm2:function(b){var a=this,f=new IG$._I3e(),e,c=this.down("[name=tenantname]"),d=a.gid,g=a.mts;e="<smsg><tenant mts='"+g.get("uid")+"'"+(b=="rename"&&c.getValue()?" name='"+c.getValue()+"'":"")+" a1='"+this.down("[name=a1]").getValue()+"' a2='"+this.down("[name=a2]").getValue()+"'/></smsg>";f.init(a,{ack:"28",payload:IG$._I2d({address:"/tenants/"+g.get("name"),action:b},"address;action"),mbody:e},a,function(h,j){if(b=="rename"){g.set("a1",this.down("[name=a1]").getValue());g.set("a2",this.down("[name=a2]").getValue());g.set("name",c.getValue())}a.rs_mm2(h,j)},false,[b]);f._l()},rs_mm2:function(a,f){var e=this,c=f[0],d=e.mts,b=e.down("[name=btn_erase]");switch(c){case"activate":d.set("pstatname","Active");d.set("pstatus","1");b.setVisible(false);break;case"delete":d.set("pstatname","Blocked");d.set("pstatus","0");b.setVisible(true);break;case"erase":d.remove();e.close();break;case"rename":e.close();break}},_l1:function(){var a=this,b=new IG$._I3e();b.init(a,{ack:"11",payload:IG$._I2d({}),mbody:IG$._I2e({option:"timezone"})},a,function(k){var m=this,g,l,j,c=[],h=[],f,e=m.down("[name=a1]"),d=m.down("[name=a2]");g=IG$._I18(k,"/smsg/app_tmpl");c.push({name:"Select",value:""});if(g){l=IG$._I26(g);for(j=0;j<l.length;j++){f=IG$._I1c(l[j]);f.value=f.name;c.push(f)}}e.store.loadData(c);e.setValue(m.mts?m.mts.get("a1")||"":"");g=IG$._I18(k,"/smsg/themes");h.push({name:"Select",value:""});if(g){l=IG$._I26(g);for(j=0;j<l.length;j++){f=IG$._I1c(l[j]);f.value=f.name;h.push(f)}}d.store.loadData(h);d.setValue(m.mts?m.mts.get("a2")||"":"")});b._l()},initComponent:function(){$s.apply(this,{items:[{xtype:"form",layout:"anchor",defaults:{anchor:"100%"},border:0,items:[{xtype:"textfield",readOnly:this.mts&&this.mts.get("pstatus")=="A",fieldLabel:"Tenant name",name:"tenantname"},{xtype:"combobox",fieldLabel:"Templates",name:"a1",editable:false,queryMode:"local",valueField:"value",displayField:"name",store:{xtype:"store",fields:["name","value"]}},{xtype:"combobox",fieldLabel:"Themes",name:"a2",editable:false,queryMode:"local",valueField:"value",displayField:"name",store:{xtype:"store",fields:["name","value"]}},{xtype:"fieldset",title:"Enable/Disable",name:"p_activate",hidden:this.mts&&this.mts.get("pstatus")=="A",layout:{type:"hbox",align:"stretch"},items:[{xtype:"button",iconCls:"icon-toolbar-activate",flex:1,text:"Activate",handler:function(){this.mm2("activate")},scope:this},{xtype:"container",width:10},{xtype:"button",iconCls:"icon-toolbar-deprivation",flex:1,text:"Deprivate",handler:function(){this.mm2("delete")},scope:this}]},{xtype:"textfield",name:"turl",fieldLabel:"URL",readOnly:true}]}],buttons:[{text:"Erase Tenant",name:"btn_erase",hidden:this.mts.get("pstatus")=="1"||this.mts.get("pstatus")=="A"?true:false,handler:function(){this.mm2("erase")},scope:this},"->",{text:IRm$.r1("B_CONFIRM"),handler:function(){var a=this.down("[name=tenantname]");this.mm2("rename")},scope:this},{text:IRm$.r1("B_CANCEL"),handler:function(){this.close()},scope:this}],listeners:{afterrender:function(e){var c=this;if(c.mts){var b=c.down("[name=tenantname]"),d=c.down("[name=turl]"),a=c.mts.get("name");a=a.split(" ");a=a.join("%20");b.setValue(c.mts.get("name")||"");d.setValue("http://hostname.com/ingecep/?lang=en_US&mts="+a);c._l1()}}}});IG$._IcT.superclass.initComponent.apply(this,arguments)}});IG$._Ica=$s.extend($s.window,{modal:true,layout:"fit",closable:false,resizable:false,width:480,autoHeight:true,plain:true,bodyPadding:10,bodyStyle:{background:"#ffffff"},callback:null,i$:function(){var a=this,b=a.down("[name=pusergroup]");b.store.loadData(this.groupinfo);a.u1();a.ld5();a._l1()},u1:function(){var e=this,d=e.down("[name=c_area]"),b=IG$.uform,a,f,c;for(a=0;a<b.length;a++){f=b[a];c={xtype:f.type,fieldLabel:f.displayname,name:f.fieldname};d.add(c)}},ld5:function(){var e=this,r=e.userinfo,h=IG$._I83.jS1,d=e.down("[name=puserid]"),s=e.down("[name=pusername]"),j=e.down("[name=puseremail]"),n=e.down("[name=puserpasswd]"),o=e.down("[name=pusergroup]"),a=e.down("[name=pupdatedate]"),f=IRm$.r1("L_LAST_UPD"),t=e.down("[name=pdutygrid]"),g=(r&&r.auth)?r.auth:[],c=e.down("[name=btnaddduty]"),k=e.down("[name=fieldstatus]"),m,q,b;c.setVisible((r&&h.userid==r.id)?false:true);d.setReadOnly((r)?true:false);d.setValue(r?r.id||"":"");s.setValue(r?r.name||"":"");n.setValue(r?"":IG$._I45(10));j.setValue(r?r.email||"":"");o.setValue(r?r.gid||"":(e.Ld3||""));k.setVisible(r?true:false);f=(r&&r.updatedate)?f+r.updatedatefm:f;a.setValue(f);t.store.loadData(g);if(IG$.uform){for(m=0;m<IG$.uform.length;m++){b=IG$.uform[m];q=e.down("[name="+b.fieldname+"]");if(q){q.setValue(r?r[b.fieldname]:"")}}}},ld6:function(t){var z=this,j,c,s,h=false,k=this,r=IG$._I83.jS1,v,w=k.down("[name=puserid]"),b=k.down("[name=pusername]"),n=k.down("[name=puseremail]"),f=k.down("[name=puserpasswd]"),e=k.down("[name=pusergroup]"),q=k.down("[name=pdutygrid]"),u,x,o,d=f.getValue(),y=false,m;if(t=="confirm"){if(!IG$._I3a){var g=this,a=new IG$._I3e();a.init(g,{ack:"23",payload:"<smsg></smsg>",mbody:"<smsg></smsg>"},g,function(l){var C=IG$._I18(l,"/smsg/item"),B=(C?IG$._I1a(C,"p1"):null),A=(C?IG$._I1a(C,"p2"):null);if(B&&A){IG$._I3a=B;IG$._I3b=A;this.ld6("confirm")}},null);a._l();return}j="28";c=IG$._I2d({address:"/user/"+w.getValue(),updatemode:"change"},"address;updatemode");s="<smsg><user";$.each([w,b,e],function(A,l){l.clearInvalid();if(!l.getValue()){l.markInvalid("Required");y=true}});if(y){return}if(d){d=IG$._I3c([d])[0]}s+=IG$._I20({sid:(this.userinfo?this.userinfo.sid:""),wid:(this.userinfo?this.userinfo.wid:""),id:w.getValue(),name:b.getValue(),password:d,email:n.getValue(),gid:e.getValue(),a1:this.down("[name=a1]").getValue()},"sid;wid;id;name;password;email;gid;a1","s")+"";if(IG$.uform){for(u=0;u<IG$.uform.length;u++){m=IG$.uform[u];x=m.fieldname;o=z.down("[name="+x+"]");if(o){if(m.optional=="F"){o.clearInvalid();if(!o.getValue()){o.markInvalid("Required");return}}s+=" "+x+"='"+o.getValue()+"'"}}}s+=">";for(u=0;u<q.store.data.items.length;u++){v=q.store.data.items[u];s+="<auth"+IG$._I20({dutytype:v.get("dutytype"),name:v.get("name"),sid:v.get("sid"),status:v.get("status")},"dutytype;name;sid;status")+"/>"}s+="</user></smsg>"}else{if(t=="delete"){if(w.getValue()==r.userid){IG$._I52("You cannot remove yourself.",k);return}j="28";c=IG$._I2d({address:"/user/"+w.getValue(),updatemode:"delete"},"address;updatemode");s="<smsg><user sid='"+(this.userinfo?this.userinfo.sid:"")+"'";s+=">";s+="</user></smsg>"}else{return}}var g=this,a=new IG$._I3e();g.setLoading(true);a.init(g,{ack:j,payload:c,mbody:s},g,g.rs_ld6,null);a._l()},rs_ld6:function(a){var b=this;b.setLoading(false);if(b.callback){b.callback.execute()}IG$._I54(ig$.appname,IRm$.r1("M_SAVED"),null,null,0,"success");b.close()},mm2b:function(c,b){var a=this,e=new IG$._I3e(),d;if(b!="activate"&&(c.name=="admin")){IG$._I54(ig$.appname,IRm$.r1("M_NA"),null,null,0,"error");return}d=IG$._I2e({option:"changestatus",status:b,uid:c.sid},"option;status;uid");e.init(a,{ack:"28",payload:IG$._I2d({address:"/user/"+c.name},"address;action"),mbody:d},a,a.rs_mm2b,false,b);e._l()},rs_mm2b:function(a,b){if(this.drow){this.drow.set("status",(b=="1"?"Active":"Blocked"))}IG$._I54(ig$.appname,IRm$.r1("M_SAVED"),null,null,0,"success")},_t$:function(e){var a=this,b,g;switch(e){case"cmd_activate_user":b=this.userinfo;if(b){this.mm2b(b,"1")}break;case"cmd_deprivate_user":b=this.userinfo;if(b){this.mm2b(b,"2")}break;case"cmd_add_duty":var h=[],f,d=this.down("[name=pdutygrid]").store.data.items,c;for(c=0;c<d.length;c++){f=d[c];h.push({dutytype:f.get("dutytype"),name:f.get("name"),sid:f.get("sid"),type:f.get("type"),status:f.get("status")})}g=new IG$._Icb({sel:h,callback:new IG$._I3d(a,a.rs_mm3)});g.show(a);break}},rs_mm3:function(c){var b=this.down("[name=pdutygrid]"),e=[],d,a;for(a=0;a<c.length;a++){d=c[a];e.push({dutytype:d.get("dutytype"),name:d.get("name"),sid:d.get("sid"),type:d.get("type"),status:d.get("status")})}b.store.loadData(e)},_l1:function(){var a=this,b=new IG$._I3e();b.init(a,{ack:"11",payload:IG$._I2d({}),mbody:IG$._I2e({option:"timezone"})},a,function(c){var f=this,k,j,e,g=[],h,d=f.down("[name=a1]");k=IG$._I18(c,"/smsg/app_tmpl");j=IG$._I26(k);g.push({name:"Select",value:""});for(e=0;e<j.length;e++){h=IG$._I1c(j[e]);h.value=h.name;g.push(h)}d.store.loadData(g);d.setValue(f.userinfo?f.userinfo.a1||"":"")});b._l()},initComponent:function(){this.title=IRm$.r1("T_REG_USER");$s.apply(this,{items:[{xtype:"panel",layout:"anchor",bodyPadding:4,autoScroll:false,defaults:{anchor:"100%"},items:[{xtype:"textfield",fieldLabel:IRm$.r1("L_USERID"),name:"puserid"},{xtype:"textfield",fieldLabel:IRm$.r1("L_USERNAME"),name:"pusername"},{xtype:"textfield",fieldLabel:IRm$.r1("L_EMAIL"),name:"puseremail"},{xtype:"fieldcontainer",fieldLabel:IRm$.r1("L_INPUT_PASSWORD"),layout:"hbox",items:[{xtype:"textfield",name:"puserpasswd",readOnly:false,flex:1},{xtype:"button",name:"pgetpwd",text:"Generate",width:70,handler:function(){var c=this,b=c.down("[name=puserpasswd]"),a=IG$._I45(10);b.setValue(a)},scope:this}]},{xtype:"combobox",fieldLabel:IRm$.r1("L_GROUP_NAME"),labelField:"name",valueField:"gid",name:"pusergroup",queryMode:"local",displayField:"name",valueField:"gid",editable:false,autoSelect:true,store:{fields:["name","gid"]}},{xtype:"container",name:"c_area",layout:{type:"vbox",align:"stretch"}},{xtype:"combobox",name:"a1",fieldLabel:IRm$.r1("L_APPL_TMPL"),queryMode:"local",editable:false,valueField:"value",displayField:"name",store:{xtype:"store",fields:["name","value"]}},{xtype:"displayfield",value:IRm$.r1("L_LAST_UPD"),name:"pupdatedate"},{xtype:"fieldcontainer",fieldLabel:IRm$.r1("L_USER_DUTY"),layout:"hbox",items:[{xtype:"gridpanel",fieldLabel:"User Duty",flex:1,height:160,hideLabel:true,name:"pdutygrid",store:{xtype:"store",fields:["dutytype","name","sid","status"]},columns:[{header:IRm$.r1("B_NAME"),flex:1,sortable:false,hideable:false,dataIndex:"name"}]},{xtype:"button",iconCls:"icon-toolbar-add",tooltip:"Add Duty",name:"btnaddduty",hidden:true,handler:function(){this._t$("cmd_add_duty")},scope:this}]},{xtype:"fieldcontainer",fieldLabel:IRm$.r1("B_STATUS"),name:"fieldstatus",hidden:true,layout:"hbox",items:[{xtype:"button",text:IRm$.r1("L_ACTIVATE"),name:"btnactuser",handler:function(){this._t$("cmd_activate_user")},scope:this},{xtype:"button",text:IRm$.r1("L_DEPRIVATE"),name:"btndeprivuser",handler:function(){this._t$("cmd_deprivate_user")},scope:this}]}]}],buttons:[{xtype:"button",text:IRm$.r1("L_E_DEL"),handler:function(){this.ld6("delete")},scope:this},"->",{xtype:"button",text:IRm$.r1("B_CONFIRM"),handler:function(){this.ld6("confirm")},scope:this},{xtype:"button",text:IRm$.r1("B_CANCEL"),handler:function(){this.close()},scope:this}],listeners:{afterrender:function(a){this.i$()}}});IG$._Ica.superclass.initComponent.call(this)}});IG$._I76=$s.extend(IG$._I57,{scroll:false,closable:true,layout:"border",userinfo:null,groupinfo:null,iconCls:"icon-group",Ld3:null,_IFd:function(){this.ld1()},ld1:function(){var a=this,b=new IG$._I3e();b.init(a,{ack:"28",payload:IG$._I2d({address:"/userform"}),mbody:IG$._I2e({option:"standard"})},a,function(c){var f=this,j=IG$._I18(c,"/smsg/item"),h=(j?IG$._I26(j):null),g=IG$._I83.jS1,e,d=[],k;if(h){for(e=0;e<h.length;e++){k=IG$._I1c(h[e]);if(k.type=="textinput"){k.type="textfield"}d.push(k)}}IG$.uform=d;if(g.jS1("admins","A")==true){f.down("[name=mtsgrd]").show()}f.ldM();f.ldG();f.ld2("",null)},false);b._l()},ldM:function(){var a=this,b=new IG$._I3e();b.init(a,{ack:"28",payload:IG$._I2d({address:"/tenants",action:"get"},"address;action"),mbody:IG$._I2e({option:"select"})},a,function(d){var f,g=IG$._I18(d,"/smsg/item"),e,h,c=[];if(g){e=IG$._I26(g);for(f=0;f<e.length;f++){h=IG$._I1c(e[f]);switch(h.pstatus){case"A":h.pstatname="App";break;case"1":h.pstatname="Active";break;default:h.pstatname="Disabled";break}c.push(h)}}this.down("[name=mtsgrd]").store.loadData(c)},false);b._l()},ldG:function(){var a=this,b=new IG$._I3e();b.init(a,{ack:"28",payload:IG$._I2d({address:"/Auth"},"address"),mbody:IG$._I2e({option:"select"})},a,function(d){var h,j=IG$._I18(d,"/smsg/item"),g,k=[],f,e=this.down("[name=gridduty]"),c=e.getSelectionModel();if(j){g=IG$._I26(j);for(h=0;h<g.length;h++){f=IG$._I1c(g[h]);f.active=f.status=="1"?"Active":"Disabled";k.push(f)}}e.store.loadData(k)},false);b._l()},mm3:function(){var a=this,b=new IG$._I6e({itemtype:"Auth",callback:new IG$._I3d(a,a.rs_mm3)});b.show(a)},rs_mm3:function(a){this.ldG()},mm4:function(){var a=this,b=new IG$._I6e({itemtype:"tenant",callback:new IG$._I3d(a,function(c){this.ldM()})});b.show(a)},l1G:function(b){var a=this,c=new IG$._I3e();c.init(a,{ack:"28",payload:IG$._I2d({address:"/user"},"address"),mbody:IG$._I2e({option:"get",sid:b})},a,a.rs_ld3,null,true);c._l()},ld2:function(b,c){var a=this,d=new IG$._I3e(),e=IG$._I83.jS1;if(e.jS1("admins","A")==false&&e.jS1("LocalAdmin","A")==true){b=auth.gid}this.groupinfo=[];d.init(a,{ack:"28",payload:IG$._I2d({address:"/usergroup",action:"get",pid:b},"address;action;pid"),mbody:IG$._I2e({option:"standard"})},a,a.rs_ld2,null,[b,c]);d._l()},rs_ld2:function(k,d){var a=this,h=d[0],b=d[1],c=IG$._I18(k,"/smsg/item"),f,j=this.down("[name=grouptree]"),g,m,l,e;if(c){m=IG$._I1c(c);this.groupinfo.push(IG$._I1c(c));m.children=[];g=IG$._I26(c);this.ld2a(g,m,1);if(b==null){j.store.setRootNode(m)}}},ld2a:function(d,h,f){var c,b,e,g,a;for(c=0;c<d.length;c++){b=IG$._I1c(d[c]);b.loadData=false;e=IG$._I1c(d[c]);for(a=0;a<f;a++){e.name=(a==0?". ":"  ")+e.name}this.groupinfo.push(e);h.children.push(b);switch(b.active){case"1":b.status="Active";break;case"2":b.status="Blocked";break;default:b.status="Error";break}g=IG$._I26(d[c]);if(g&&g.length>0){b.children=[];this.ld2a(g,b,f+1)}}},ld3:function(b){var a=this,c=new IG$._I3e();c.init(a,{ack:"28",payload:IG$._I2d({address:"/user"},"address"),mbody:IG$._I2e({option:"get",gid:b})},a,a.rs_ld3,null);c._l()},rs_ld3:function(b,c){var g=IG$._I18(b,"/smsg/item"),f,e,d,h=[],a=this.down("[name=usergrid]");if(g){e=IG$._I26(g);for(f=0;f<e.length;f++){d=IG$._I1c(e[f]);switch(d.active){case"1":d.status="Active";d.change="Block user";break;case"3":d.status="Email Valid";d.change="Activate user";break;case"4":d.status="Email Process";d.change="Deprivate";break;default:d.status="Blocked";d.change="Activate";break}h.push(d)}}a.store.loadData(h)},ld4:function(c,b){var a=this,d=new IG$._I3e();d.init(a,{ack:"28",payload:IG$._I2d({address:"/user"},"address"),mbody:IG$._I2e({option:"detail",uid:c})},a,function(j,h){var e=this,f=IG$._I18(j,"/smsg/item");if(f){var k=IG$._I1c(f),m=IG$._I18(f,"d"),n=IG$._I26(m),g;k.auth=[];for(g=0;g<n.length;g++){k.auth.push(IG$._I1c(n[g]))}var l=new IG$._Ica({groupinfo:this.groupinfo,userinfo:k,drow:h,Ld3:this.Ld3,callback:new IG$._I3d(e,e.rs_um3)});IG$._I_5(this,l)}},null,b);d._l()},sKK:function(){var b=this.down("[name=grouptree]"),a=b.getSelectionModel();if(a&&a.selected&&a.selected.items&&a.selected.items.length>0){return a.selected.items[0]}return null},_t$:function(f){var a=this,d,b,g;switch(f){case"cmd_add_group":d=a.sKK();if(d){g=new IG$._I6e({itemtype:"Group",parentuid:d.get("gid"),parentnodepath:"",callback:new IG$._I3d(a,a.rs_mm1,d)});g.show(a)}break;case"cmd_edit_group":d=a.sKK();if(d){if(!d.isRoot()){g=new IG$._Icd({uid:d.get("gid"),itemname:d.get("name"),itemtype:"Group",groupid:d.get("groupid"),callback:new IG$._I3d(a,a.rs_mm1,d)});g.show(a)}else{IG$._I52(IRm$.r1("M_NOT_EDITABLE"),this)}}else{IG$._I52(IRm$.r1("M_SEL_ITEM"),this)}break;case"cmd_priv_group":d=a.sKK();if(d){if(!d.isRoot()){g=new IG$._Icc({gid:d.get("gid"),groupname:d.get("name"),ugroup:d});g.show(a)}else{IG$._I52(IRm$.r1("M_NOT_EDITABLE"),this)}}else{IG$._I52(IRm$.r1("M_SEL_ITEM"),this)}break;case"cmd_add_user":d=a.sKK();g=new IG$._Ica({groupinfo:a.groupinfo,userinfo:null,Ld3:a.Ld3,callback:new IG$._I3d(a,a.rs_um3)});IG$._I_5(a,g);break;case"cmd_sync_user":IG$._I65("CMD_SYNC_USER");break;case"cmd_new_duty":this.mm3();break;case"cmd_add_mts":this.mm4();break;case"cmd_edit_mts":var c=this.down("[name=mtsgrd]"),e=c.getSelectionModel().selected;if(e&&e.length>0){g=new IG$._IcT({mts:e.items[0],callback:new IG$._I3d(a,function(){this.ldM()})});IG$._I_5(this,g)}else{IG$._I52(IRm$.r1("M_SEL_ITEM"),this)}break}},rs_um3:function(){var a=this;a.Ld3&&a.ld3(a.Ld3)},rs_mm1:function(a,b){this.ld2("",null)},initComponent:function(){$s.apply(this,{items:[{xtype:"panel",border:0,layout:"accordion",region:"west",split:true,width:240,collapsible:false,hideHeaders:true,items:[{xtype:"treepanel",border:0,name:"grouptree",layout:"fit",title:IRm$.r1("T_USER_GROUP"),rootVisible:true,store:{xtype:"store",fields:["name","active","description","gid","updatedate","loadData","status","groupid"],data:[]},columns:[{xtype:"treecolumn",text:IRm$.r1("B_NAME"),flex:1,sortable:false,dataIndex:"name"},{text:"GroupID",width:60,sortable:false,dataIndex:"groupid"},{text:IRm$.r1("B_STATUS"),width:60,sortable:false,dataIndex:"status"}],dockedItems:[{xtype:"toolbar",dock:"top",items:[{iconCls:"icon-toolbar-add",text:IRm$.r1("L_ADD_GROUP"),tooltip:"Add",handler:function(){this._t$("cmd_add_group")},scope:this},{iconCls:"icon-toolbar-edit",tooltip:IRm$.r1("L_EDIT"),handler:function(){this._t$("cmd_edit_group")},scope:this},{iconCls:"icon-toolbar-grouppriv",tooltip:IRm$.r1("L_PRIVILEGE"),handler:function(){this._t$("cmd_priv_group")},scope:this}]}],listeners:{itemclick:function(b,a,g,c,h,d){var f=a.get("gid");this.Ld3=f;this.ld3(f)},beforeitemexpand:function(b,a){if(b.hasChildNodes()==false&&b.get("loadData")==false){}},scope:this}},{xtype:"gridpanel",title:IRm$.r1("T_DUTY_LIST"),name:"gridduty",hideHeaders:true,layout:"fit",border:0,store:{xtype:"store",fields:["sid","name","dutytype","status","type","active"]},tbar:[{iconCls:"icon-toolbar-add",text:IRm$.r1("L_ADD_DUTY"),tooltip:"Add duty",handler:function(){this._t$("cmd_new_duty")},scope:this},{iconCls:"icon-toolbar-remove",tooltip:"Remove",name:"btn_r_duty",hidden:true,handler:function(){this._t$("cmd_remove_duty")},scope:this},{xtype:"button",text:IRm$.r1("B_SHOW_ALL"),menu:{xtype:"menu",items:[{text:IRm$.r1("B_SHOW_ALL"),handler:function(){var a=this.down("[name=gridduty]");a.store.clearFilter()},scope:this},{text:"Pre defined",handler:function(){var a=this.down("[name=gridduty]");a.store.filter("dutytype","A")},scope:this},{text:"Custom duty",handler:function(){var a=this.down("[name=gridduty]");a.store.filter("dutytype","C")},scope:this},{text:"Group duty",handler:function(){var a=this.down("[name=gridduty]");a.store.filter("dutytype","G")},scope:this},{text:"User duty",handler:function(){var a=this.down("[name=gridduty]");a.store.filter("dutytype","U")},scope:this}]}}],columns:[{xtype:"gridcolumn",text:"Duty name",dataIndex:"name",flex:1},{xtype:"gridcolumn",text:IRm$.r1("B_STATUS"),dataIndex:"active",width:50}],listeners:{cellclick:function(a,b,l,d,k,m,f,g){if(d.get("sid")){var c=d.get("dutytype"),j=d.get("type"),h=this.down("[name=btn_r_duty]");h.setVisible(false);if(j!="PreDefined"){h.setVisible(true)}this.l1G(d.get("sid"))}},scope:this}},{xtype:"gridpanel",border:0,title:IRm$.r1("T_M_TENANT"),name:"mtsgrd",hidden:true,hideHeaders:true,store:{xtype:"store",fields:["name","pstatus","uid","pstatname","a1","a2"]},columns:[{text:IRm$.r1("B_NAME"),dataIndex:"name",flex:1},{text:IRm$.r1("B_STATUS"),width:60,dataIndex:"pstatname"}],dockedItems:[{xtype:"toolbar",dock:"top",items:[{iconCls:"icon-toolbar-add",text:IRm$.r1("L_ADD_TENANT"),tooltip:"Add",handler:function(){this._t$("cmd_add_mts")},scope:this},{iconCls:"icon-toolbar-edit",tooltip:IRm$.r1("L_EDIT"),handler:function(){this._t$("cmd_edit_mts")},scope:this}]}]}]},{xtype:"panel",region:"center",layout:"fit",bodyPadding:2,items:[{xtype:"panel",flex:1,border:false,layout:{type:"vbox",align:"stretch"},items:[{xtype:"gridpanel",title:"Users",name:"usergrid",border:0,flex:1,store:{xtype:"store",fields:["name","active","gid","groupname","id","sid","updatedate","status","email"]},columns:[{text:"ID",flex:1,sortable:true,hideable:false,dataIndex:"id"},{text:IRm$.r1("B_NAME"),flex:1,sortable:true,hideable:false,dataIndex:"name"},{text:IRm$.r1("L_GROUP_NAME"),flex:1,sortable:true,hideable:false,dataIndex:"groupname"},{text:"Email",flex:1,sortable:true,hideable:false,dataIndex:"email"},{text:IRm$.r1("B_STATUS"),flex:1,sortable:true,hideable:false,dataIndex:"status"}],listeners:{itemclick:function(c,b,g,d,h,f){var a=b.get("sid");this.ld4(a,b)},scope:this},tbar:[{text:IRm$.r1("L_ADD_USER"),iconCls:"icon-toolbar-add",handler:function(){this._t$("cmd_add_user")},scope:this},{xtype:"button",name:"t_1",text:IRm$.r1("B_SHOW_ALL"),menu:{xtype:"menu",items:[{text:IRm$.r1("B_SHOW_ALL"),handler:function(){var b=this,a=b.down("[name=usergrid]");a.store.clearFilter();b.down("[name=t_1]").setText(IRm$.r1("B_SHOW_ALL"))},scope:this},{text:IRm$.r1("L_A_USR"),handler:function(){var b=this,a=b.down("[name=usergrid]");a.store.filter("active","1");b.down("[name=t_1]").setText(IRm$.r1("L_A_USR"))},scope:this},{text:IRm$.r1("L_B_USR"),handler:function(){var b=this,a=b.down("[name=usergrid]");a.store.filterBy(function(c,d){if(c.get("active")!="1"){return true}return false},this);b.down("[name=t_1]").setText(IRm$.r1("L_B_USR"))},scope:this}]}},"->",{xtype:"button",text:"SyncUser",handler:function(){this._t$("cmd_sync_user")},scope:this}]}]}]}],listeners:{afterrender:function(){this._IFd()},scope:this}});IG$._I76.superclass.initComponent.call(this)}});IG$._I76n=$s.extend(IG$._I57,{layout:"fit",iconCls:"icon-group",closable:true,_t$:function(d){var c=this,a=null,b;switch(d){case"cmd_save":IG$._I55(ig$.appname,IRm$.r1("W_SYNC_SAVE"),function(e){if(e=="yes"){c._3.call(c)}},c,c);break;case"cmd_s_group":IG$._I55(ig$.appname,IRm$.r1("W_SYNC_GRP"),function(e){if(e=="yes"){c._3.call(c,"group")}},c,c);break;case"cmd_s_user":IG$._I55(ig$.appname,IRm$.r1("W_SYNC_USER"),function(e){if(e=="yes"){c._3.call(c,"user")}},c,c);break}},_a:function(){var b=this,a=new IG$._I3e();a.init(b,{ack:"25",payload:IG$._I2d({address:"/"}),mbody:IG$._I2e({option:"standard"})},b,function(c){var f=this,k=[],d,e=IG$._I18(c,"/smsg/item"),j,h,g=false;k.push({name:"Select Database Instance",poolname:""});if(e){j=IG$._I26(e);g=IG$._I83.jS2;for(d=0;d<j.length;d++){h=IG$._I1c(j[d]);if(g==true||(g==false&&h.name.toUpperCase()!="IGCBASE")){k.push({name:h.disp,poolname:h.name,uid:h.uid||"",isuserdb:(h.isuserdb=="T"?true:false),savepwd:(h.isuserdb=="T"&&h.savepwd=="F"?false:true)})}}}f.down("[name=dsource]").store.loadData(k);f._1()},false);a._l()},_1:function(){var c=this,a,d=this.down("[name=m_navi]"),b=new IG$._I3e();b.init(c,{ack:"5",payload:IG$._I2d({uid:"/SYS_Config/syncuser"}),mbody:IG$._I2e({option:""})},c,function(e){c._2(e)},function(e){c._2(null)});b.showerror=false;b._l()},_2:function(a){var c=this,d=a?IG$._I18(a,"/smsg/item"):null,b;c.mobj={grp:{},usr:{}};if(d){c.mobj=IG$._I1c(d);c.mobj.grp={};c.mobj.usr={};b=IG$._I18(d,"grp");if(b){c.mobj.dsource=IG$._I1b(b,"dsource");c.mobj.grp.eclear=IG$._I1b(b,"eclear")=="T";c.mobj.grp.ename=IG$._I1a(b,"ename");c.mobj.grp.esql=IG$._I1a(b,"esql")}b=IG$._I18(d,"usr");if(b){c.mobj.usr.eclear=IG$._I1b(b,"eclear")=="T";c.mobj.usr.ename=IG$._I1a(b,"ename");c.mobj.usr.esql=IG$._I1a(b,"esql")}c.down("[name=dsource]").setValue(c.mobj.dsource);c.down("[name=eclear_grp]").setValue(c.mobj.grp.eclear);c.down("[name=ename_grp]").setValue(c.mobj.grp.ename);c.down("[name=esql_grp]").setValue(c.mobj.grp.esql);c.down("[name=eclear_usr]").setValue(c.mobj.usr.eclear);c.down("[name=ename_usr]").setValue(c.mobj.usr.ename);c.down("[name=esql_usr]").setValue(c.mobj.usr.esql)}},_3:function(a){var d=this,b,c;if(d.mobj){d.mobj.dsource=d.down("[name=dsource]").getValue();d.mobj.grp.eclear=d.down("[name=eclear_grp]").getValue();d.mobj.grp.ename=d.down("[name=ename_grp]").getValue();d.mobj.grp.esql=d.down("[name=esql_grp]").getValue();d.mobj.usr.eclear=d.down("[name=eclear_usr]").getValue();d.mobj.usr.ename=d.down("[name=ename_usr]").getValue();d.mobj.usr.esql=d.down("[name=esql_usr]").getValue();b="<smsg><item uid='/SYS_Config/syncuser'><grp dsource='"+(d.mobj.dsource||"")+"' eclear='"+(d.mobj.grp.eclear?"T":"F")+"'><ename><![CDATA["+(d.mobj.grp.ename||"")+"]]></ename><esql><![CDATA["+(d.mobj.grp.esql||"")+"]]></esql></grp><usr eclear='"+(d.mobj.usr.eclear?"T":"F")+"'><ename><![CDATA["+(d.mobj.usr.ename||"")+"]]></ename><esql><![CDATA["+(d.mobj.usr.esql||"")+"]]></esql></usr></item></smsg>";c=new IG$._I3e();c.init(d,{ack:"31",payload:IG$._I2d({uid:"/SYS_Config/syncuser"}),mbody:b},d,function(e){if(!a){IG$._I54(ig$.appname,IRm$.r1("M_SAVED"),null,null,0,"success")}else{var f=new IG$._I3e();f.init(d,{ack:"74",payload:IG$._I2d({uid:"/SYS_Config/syncuser",option:a},"uid;option"),mbody:IG$._I2e({})},d,function(g){IG$._I54(ig$.appname,IRm$.r1("M_SAVED"),null,null,0,"success")},false);f._l()}},false);c._l()}},initComponent:function(){var a=this;$s.apply(a,{title:IRm$.r1("T_SYNC_USER"),bodyPadding:0,items:[{xtype:"panel",border:0,bodyPadding:10,layout:{type:"vbox",align:"stretch"},tbar:[{iconCls:"icon-toolbar-save",name:"t_save",tooltip:IRm$.r1("L_SAVE"),handler:function(){this._t$("cmd_save")},scope:this}],items:[{xtype:"fieldcontainer",layout:{type:"hbox",align:"stretch"},items:[{xtype:"combobox",fieldLabel:"Data Source",name:"dsource",fieldLabel:"Database Instances",valueField:"poolname",displayField:"name",queryMode:"local",editable:false,store:{fields:["name","poolname","uid","isuserdb","savepwd"]}}]},{xtype:"container",flex:2,layout:{type:"hbox",align:"stretch"},items:[{xtype:"fieldset",flex:1,title:"Group Syncronization",layout:{type:"vbox",align:"stretch"},items:[{xtype:"container",layout:{type:"vbox",align:"stretch"},items:[{xtype:"container",layout:{type:"hbox",align:"stretch"},items:[{xtype:"container",flex:1},{xtype:"button",text:"Execute",handler:function(){this._t$("cmd_s_group")},scope:this}]},{xtype:"checkbox",name:"eclear_grp",boxLabel:"Clear Groups"},{xtype:"textarea",height:40,name:"ename_grp",fieldLabel:"Exclude names"}]},{xtype:"container",layout:"fit",height:30,items:[{xtype:"displayfield",fieldLabel:"Format",value:"SELECT dept_id, dept_name, parent_dept_id, description FROM DEPT"}]},{xtype:"textarea",flex:1,fieldLabel:"Group SQL",name:"esql_grp"}]},{xtype:"container",width:10},{xtype:"fieldset",flex:1,title:"User Syncronization",layout:{type:"vbox",align:"stretch"},items:[{xtype:"container",layout:{type:"vbox",align:"stretch"},items:[{xtype:"container",layout:"hbox",items:[{xtype:"container",flex:1},{xtype:"button",text:"Execute",handler:function(){this._t$("cmd_s_user")},scope:this}]},{xtype:"checkbox",name:"eclear_usr",boxLabel:"Clear Groups"},{xtype:"textarea",height:40,name:"ename_usr",fieldLabel:"Exclude names"}]},{xtype:"container",layout:"fit",height:30,items:[{xtype:"displayfield",fieldLabel:"Format",value:"SELECT userid, passwd, fullname, email, dept_id FROM USER"}]},{xtype:"textarea",flex:2,name:"esql_usr",fieldLabel:"Group SQL"}]}]},{xtype:"fieldset",flex:1,title:"Execution Logs",layout:{type:"vbox",align:"stretch"},items:[{xtype:"gridpanel",flex:1,store:{fields:["d_seq"]},columns:[{dataIndex:"d_seq"}]}]}]}]});IG$._I76n.superclass.initComponent.call(this)},listeners:{afterrender:function(a){this._a()}}});IG$._I6f=$s.extend(IG$._I57,{scroll:false,closable:true,iconCls:"icon-helpmgr",layout:{type:"hbox",align:"stretch"},_t$:function(d){var c=this;switch(d){case"cmd_save":this.sk1();break;case"cmd_saveas":break;case"cmd_refresh":var b=c.down("[name=d_t]");b._II5.call(b);break;case"cmd_locale_enUS":this.u7l();this.u6m="en_US";this.u6l();break;case"cmd_locale_koKR":this.u7l();this.u6m="ko_KR";this.u6l();break;case"cmd_preview":if(this.u5m){var e=this.down("[name=helpdoc]"),a=new IG$._Id1({uid:this.u5m.i.uid,u6m:this.u6m,t:"",c:e.getValue()});IG$._I_5(this,a)}break}},sk1:function(){if(this.u5m){this.u7l();var e,f,d;f="<smsg><item uid='"+this.u5m.i.uid+"'>";for(e in this.u5m.c){d=this.u5m.c[e];f+='<HelpContent language="'+d.lang+'"><Title><![CDATA['+(d.t||"")+"]]></Title><Content><![CDATA["+(d.c||"")+"]]></Content></HelpContent>"}f+="</item></smsg>";var a=this,b=new IG$._I3e();b.init(a,{ack:"31",payload:IG$._I2d({uid:this.u5m.i.uid}),mbody:f},a,a.rs_fV6,null);b._l()}},rs_fV6:function(){IG$._I54(ig$.appname,IRm$.r1("M_SAVED"),null,null,0,"success")},u5m:null,u6m:"en_US",_IHc:function(f){var c=f.type.toLowerCase(),e=f.nodepath,b=f.uid,d,a=this;if(c=="help"){d=new IG$._I3e();d.init(a,{ack:"16",payload:IG$._I2d({uid:b}),mbody:IG$._I2e({option:"get"})},a,a.rs_u4x,null);d._l()}return true},rs_u4x:function(g){var h=this.down("[name=helpdoc]"),c,a,f,d,b,j,e=this.down("[name=helpitem]");this.u5m={i:{},c:{}};c=IG$._I18(g,"/smsg/item");IG$._I1f(this.u5m.i,c,"uid;name;nodepath;memo","s");e.setText(this.u5m.i.name+" ("+(this.u5m.i.memo||"")+")");a=IG$._I26(c);for(f=0;f<a.length;f++){b=IG$._I18(a[f],"Title");j=IG$._I18(a[f],"Content");d={lang:IG$._I1b(a[f],"language"),t:IG$._I24(b),c:IG$._I24(j)};this.u5m.c[d.lang]=d}if(!this.u5m.c.en_US){this.u5m.c.en_US={lang:"en_US",t:"",c:""}}if(!this.u5m.c.ko_KR){this.u5m.c.ko_KR={lang:"ko_KR",t:"",c:""}}this.u6l()},u6l:function(){if(this.u5m&&this.u6m){var a,b=this.u5m.c[this.u6m],c=this.down("[name=helpdoc]");c.setValue((b&&b.c?Base64.decode(b.c):""))}},u7l:function(){var b=this.down("[name=helpdoc]"),a=(this.u5m)?this.u5m.c[this.u6m]:null;if(a){a.c=Base64.encode(b.getValue())}},initComponent:function(){var a=new IG$._Ic5({width:180,rootuid:"/SYS_Documents",name:"d_t",documentviewer:true,root:{text:"Document",name:"Document",itemtype:"Workspace",type:"Workspace",nodepath:"/SYS_Documents",uid:"/SYS_Documents"},_IHb:this,_IHc:this._IHc});this.tbar=[{iconCls:"icon-toolbar-save",tooltip:IRm$.r1("L_SAVE_CONTENT"),handler:function(){this._t$("cmd_save")},scope:this},"-",{iconCls:"icon-refresh",tooltip:IRm$.r1("L_REFRESH"),handler:function(){this._t$("cmd_refresh")},scope:this},"-",{xtype:"splitbutton",text:IRm$.r1("L_SELECT_LOCALE"),menu:[{text:IRm$.r1("L_ENGLISH"),handler:function(){this._t$("cmd_locale_enUS")},scope:this},{text:IRm$.r1("L_KOREAN"),handler:function(){this._t$("cmd_locale_koKR")},scope:this}]},{text:IRm$.r1("L_PREVIEW"),tooltip:IRm$.r1("L_PREVIEW"),handler:function(){this._t$("cmd_preview")},scope:this},"->",{text:"",name:"helpitem"}];this.items=[a,{xtype:"panel",layout:"fit",flex:2,items:[{xtype:"htmleditor",name:"helpdoc"}]}];IG$._I6f.superclass.initComponent.call(this)}});IG$.mA$_s=$s.extend($s.window,{modal:true,region:"center",layout:"fit",closable:false,resizable:false,width:320,autoHeight:true,parentnodepath:null,callback:null,fV9:function(){var b=this,d,c=b.m_theme,e=b.down("[name=fitemname]"),a=e.getValue(),g=b.down("[name=basetypeselect]"),f=g.getValue();e.clearInvalid();g.clearInvalid();if(!a){e.setInvalid("Required Field");return}if(!c&&!f){return}if(c&&b.themes[a]){e.setInvalid("Duplicated");return}else{if(!c){for(d=0;d<b.styleinfo.length;d++){if(b.styleinfo[d].name==a){g.setInvalid("Duplicated");return false}}}}b.callback.execute([a,f]);b._IG0()},_IG0:function(){this.close()},_IFd:function(){var c=this,b,e=[],a=c.m_theme,d=c.down("[name=basetypeselect]");if(!a){for(b=0;b<c.styleinfo.length;b++){if(c.styleinfo[b].custom==false){e.push({name:c.styleinfo[b].name})}}d.store.loadData(e)}},initComponent:function(){this.title=IRm$.r1("L_MAKESTYLE");var a=this;$s.apply(this,{defaults:{bodyStyle:"padding:10px"},items:[{html:IRm$.r1("L_MAKESTYLE"),flex:1,border:0},{xtype:"panel",region:"center",flex:3,border:true,region:"center",height:120,defaultType:"textfield",layout:"anchor",defaults:{anchor:"100%"},items:[{fieldLabel:IRm$.r1("L_STYLENAME"),labelWidth:130,name:"fitemname",value:"",allowBlank:false,blankText:"Style name is required!",enableKeyEvents:true,listeners:{keyup:function(b,c){if(c.keyCode==13){this.fV9.call(this)}},scope:this}},{xtype:"combobox",name:"basetypeselect",hidden:a.m_theme?true:false,fieldLabel:"Inherit Style from",labelWidth:130,store:{fields:[{name:"name"}]},displayField:"name",valueField:"name",editable:false,queryMode:"local",selectOnTab:false}],listeners:{afterrender:function(){this._IFd()},scope:this}}],buttons:[{text:IRm$.r1("B_CONFIRM"),handler:function(){this.fV9()},scope:this},{text:IRm$.r1("B_CANCEL"),handler:function(){this.close()},scope:this}]});IG$.mA$_s.superclass.initComponent.apply(this,arguments)}});IG$._I78=$s.extend(IG$._I57,{layout:"border",closable:true,iconCls:"icon-style",_ILa:null,callback:null,Mb_1:function(){var b=this,a=b.down("[name=p_h]").getLayout(),c=new IG$._I3e();a.setActiveItem(0);c.init(b,{ack:"1",payload:IG$._I2d({address:"ReportStyle"}),mbody:IG$._I2e()},b,b.rs_Mb_1,null);c._l()},rs_Mb_1:function(v){var A=this,n=IG$._I18(v,"/smsg/item/themes"),q,e,k,l,h=A.down("[name=c_themes]"),u=A.down("[name=stylelist]"),z,d,m,w,g,r,o,y,B,c=[],x,b=[],f={},s={},a={},C=[];A.themes={};if(n){w={name:"Default",leaf:false,expanded:true,children:[]};f[w.name]=w;b.push(w);w={name:"Custom",leaf:false,expanded:true,children:[]};f[w.name]=w;b.push(w);q=IG$._I26(n);for(k=0;k<q.length;k++){e=q[k];l=IG$._I1b(e,"name");B=IG$._I1b(e,"c_cset");x={name:l,c_cset:B,gs_enable:IG$._I1b(e,"gs_enable")=="T",gs_col:Number(IG$._I1b(e,"gs_col"))||0,gs_opa:IG$._I1b(e,"gs_opa")||0.6,styleinfo:[]};c.push({name:x.name,value:x.name});A.themes[x.name]=x;$.each([{name:"Default",custom:false},{name:"Custom",custom:true}],function(D,E){var I=IG$._I18(e,E.name),G,j,t,H,F,K,J;if(I){j=f[E.name];t=IG$._I26(I);for(G=0;G<t.length;G++){H=new IG$._IF7(t[G],E.name.toLowerCase(),E.custom);F={name:H.name,leaf:true,custom:E.custom};x.styleinfo.push(H);K=E.name.toLowerCase()+"_"+H.name;if(!s[K]){j.children.push(F);s[K]=F;if(E.custom&&!a[H.name]){a[H.name]=t[G];C.push({name:H.name,kname:E.name,custom:E.custom,node:t[G]})}}}}})}$.each(A.themes,function(t,I){var F,E,H,D,G=0,J;for(F=0;F<C.length;F++){H=C[F];G=0;for(E=0;E<I.styleinfo.length;E++){D=I.styleinfo[E];if(D.custom&&D.name==H.name){G=1;break}}if(G==0){J=new IG$._IF7(H.node,H.kname.toLowerCase(),H.custom);I.styleinfo.push(J)}}for(F=0;F<I.styleinfo.length;F++){H=I.styleinfo[F];if(H.custom==true&&H.basestylename){for(E=0;E<I.styleinfo.length;E++){if(I.styleinfo[E].name==H.basestylename){D=I.styleinfo[E];H._IFb.call(H,D);break}}}}})}u.store.setRootNode({expanded:true,text:"Style",name:"Style",children:b});h.store.loadData(c);h.setValue(c.length?c[0].value:null)},_m1:function(){var h=this,g=h.down("[name=c_themes]"),d=g.getValue(),j=h.themes,f=j[d],b,c=h.down("[name=c_cset]"),m=h.down("[name=gs_enable]"),a=h.down("[name=gs_col]"),l=h.down("[name=gs_opa]"),k=h.down("[name=p_h]"),e=h.down("[name=b_r]");if(h.__cth){h.__cth.c_cset=c.getValue();h.__cth.gs_enable=m.getValue();h.__cth.gs_col=IG$.$gc(a.getValue());h.__cth.gs_opa=l.getValue();h.Mb_4()}if(f){h.__cth=f;c.setValue(f.c_cset||"");m.setValue(f.gs_enable);a.setValue(IG$.$gv(f.gs_col));l.setValue(f.gs_opa);k.getLayout().setActiveItem(0);e.setVisible(false)}},Mb_3:function(e){var d=this,b=d.__cth,a,c=d.down("[name=form_header]"),f=d.down("[name=form_data]");if(b){d.Mb_4();for(a=0;a<b.styleinfo.length;a++){if(b.styleinfo[a].name==e){c.Mb_6.call(c,b.styleinfo[a].hs);f.Mb_6.call(f,b.styleinfo[a].ds);break}}}},Mb_4:function(){var c=this,a=c.__cth,b=c.down("[name=form_header]"),d=c.down("[name=form_data]");d.Mb_7.call(d);b.Mb_7.call(b)},_IG0:function(){this.callback&&this.callback.execute()},_IFf:function(){var b=this,e=b.down("[name=c_cset]"),a=b.down("[name=gs_enable]"),d=b.down("[name=gs_col]"),c=b.down("[name=gs_opa]");if(b.__cth){b.__cth.c_cset=e.getValue();b.__cth.gs_enable=a.getValue();b.__cth.gs_col=IG$.$gc(d.getValue());b.__cth.gs_opa=c.getValue()}b.Mb_4();b.Mb_5()},Mb_5:function(){var b=this,e=new IG$._I3e(),d=[],a=b.themes,c;d.push("<smsg><item nodepath='ReportStyle' name='ReportStyle' type='AppOption' uid='ReportStyle'><themes>");$.each(a,function(f,l){var h,j={},g;for(h=0;h<l.styleinfo.length;h++){j[l.styleinfo[h].name]=l.styleinfo[h]}d.push("<Styles name='"+l.name+"' c_cset='"+(l.c_cset||"")+"'");d.push(" gs_enable='"+(l.gs_enable?"T":"F")+"' gs_opa='"+(l.gs_opa||0.6)+"' gs_col='"+(l.gs_col||"")+"'>");d.push("<Default name='Default'>");for(h=0;h<l.styleinfo.length;h++){if(l.styleinfo[h].custom==false){d.push(l.styleinfo[h].tx.call(l.styleinfo[h]))}}d.push("</Default>");d.push("<Custom name='Custom'>");for(h=0;h<l.styleinfo.length;h++){if(l.styleinfo[h].custom==true){g=j[l.styleinfo[h].basestylename];d.push(l.styleinfo[h].tx.call(l.styleinfo[h],g))}}d.push("</Custom>");d.push("</Styles>")});d.push("</themes></item></smsg>");e.init(b,{ack:"1",payload:IG$._I2d({address:"ReportStyle",option:"updatecontent"},"address;option"),mbody:d.join("")},b,b.rs_Mb_5,null);e._l()},rs_Mb_5:function(a){IG$._I54(ig$.appname,IRm$.r1("M_SAVED"),null,null,0,"success")},c1:function(d,e){var b,c,a;for(b=0;b<d.styleinfo.length;b++){c=d.styleinfo[b];a=new IG$._IF7(null,c.itemtype,c.custom);a.name=c.name;a.nodename=c.nodename;a.basestylename=c.basestylename;a.hs=new IG$._IF8(null,"Header");a.ds=new IG$._IF8(null,"Data");a._IFb.call(a,c);e.styleinfo.push(a)}},_t$:function(f){var e=this,d,a=e.down("[name=stylelist]"),b=e.styleinfo,h;switch(f){case"cmd_refresh":e.Mb_1();break;case"cmd_add_custom":var g=new IG$.mA$_s({styleinfo:e.__cth.styleinfo,callback:new IG$._I3d(e,e.rs__sK3a)});IG$._I_5(e,g);break;case"cmd_add_theme":var g=new IG$.mA$_s({m_theme:1,themes:e.themes,callback:new IG$._I3d(e,function(o){var l=this,m=o[0],k=o[1],n,j=l.down("[name=c_themes]");if(m){n={name:m,c_cset:null,gs_enable:false,gs_col:0,gs_opa:0.6,styleinfo:[]};l.c1(l.__cth,n);l.themes[n.name]=n;j.store.add({name:m,value:m})}})});IG$._I_5(e,g);break;case"cmd_remove_theme":IG$._I55(null,null,function(l){if(l=="yes"){var k,j=e.down("[name=c_themes]"),n,m;if(e.__cth&&j.store.data.items.length>1){for(k=0;k<j.store.data.items.length;k++){n=j.store.data.items[k];if(n.get("name")==e.__cth.name){j.store.remove(n);break}}delete e.themes[e.__cth.name];e.__cth=null;j.setValue(j.store.data.items[0].get("value"))}}},e,e);break;case"cmd_remove":var c=e.down("[name=b_r]").setVisible(false);h=a.getSelectionModel().getSelection();h=h&&h.length>0?h[0]:null;if(h&&h.get("custom")==true){stylename=h.get("name");$.each(e.themes,function(m,l){var k,j=l.styleinfo;for(k=0;k<j.length;k++){if(j[k].custom&&j[k].name==stylename){j.splice(k,1);break}}});h.remove()}break}},rs__sK3a:function(a){var f=this,j=a[0],d=a[1],b;if(d&&j){$.each(f.themes,function(m,r){var n,q,l=r.styleinfo,o;for(n=0;n<l.length;n++){if(l[n].name==d){q=l[n];break}}if(q){o=new IG$._IF7(null,"item",true);o.name=j;o.nodename="ItemStyle";o.basestylename=d;o.hs=new IG$._IF8(null,"Header");o.ds=new IG$._IF8(null,"Data");l.push(o);o._IFb.call(o,q)}});var c=f.down("[name=stylelist]"),e,h,g=c.store.getRootNode();for(b=0;b<g.childNodes.length;b++){if(g.childNodes[b].data.name=="Custom"){h=g.childNodes[b];break}}e={name:j,leaf:true,custom:true};h.appendChild(e)}},initComponent:function(){var a=this,d=new IG$._Id0({title:IRm$.r1("L_STYLE_TITLE"),name:"form_header",htype:"hd",flex:1}),e=new IG$._Id0({title:IRm$.r1("L_STYLE_DATA"),name:"form_data",htype:"dt",flex:1}),f=[{name:"Select",value:""}],c=IG$.__c_.chartcolors,b;for(b in c){f.push({name:b,value:b})}a.title=IRm$.r1("T_STYLE_WIZARD");$s.apply(this,{defaults:{bodyStyle:"padding:3px"},dockedItems:[{xtype:"toolbar",dock:"top",plain:true,items:[{iconCls:"icon-toolbar-save",tooltip:IRm$.r1("L_SAVE_CONTENT"),handler:function(){this._IFf()},scope:this},"-",{xtype:"combobox",fieldLabel:"Themes",name:"c_themes",displayField:"name",labelWidth:60,labelAlign:"right",valueField:"value",editable:false,queryMode:"local",store:{fields:["name","value"]},listeners:{change:function(g,h,k,j){this._m1()},scope:this}},{iconCls:"icon-toolbar-add",tooltip:"Add Theme",text:"Add Theme",handler:function(){this._t$("cmd_add_theme")},scope:this},{iconCls:"icon-toolbar-remove",tooltip:"Remove Theme",handler:function(){this._t$("cmd_remove_theme")},scope:this}]}],items:[{xtype:"panel",width:270,border:1,region:"west",layout:"anchor",tbar:[{xtype:"displayfield",value:"Basic Options"}],items:[{xtype:"combobox",fieldLabel:"Chart Style",name:"c_cset",displayField:"name",labelAlign:"right",labelWidth:60,valueField:"value",editable:false,queryMode:"local",store:{fields:["name","value"],data:f}},{xtype:"fieldset",title:"Grid stripe",anchor:"100%",layout:"anchor",items:[{xtype:"checkbox",fieldLabel:IRm$.r1("L_GS_ENABLED"),name:"gs_enable",boxLabel:IRm$.r1("B_ENABLED")},{xtype:"fieldcontainer",anchor:"100%",fieldLabel:IRm$.r1("L_ALT_COLOR"),layout:"hbox",items:[{xtype:"textfield",name:"gs_col",width:60},{xtype:"splitter"},{xtype:"splitbutton",width:30,menu:{showSeparator:false,items:[{xtype:"colorpicker",listeners:{select:function(j,g){var h=this.down("[name=gs_col]");h.setValue("#"+g)},scope:a}},"-"]}}]},{xtype:"numberfield",fieldLabel:"Opacity",name:"gs_opa",width:200,minValue:0,maxValue:1,step:0.1,value:0.4}]},{xtype:"container",flex:1}]},{xtype:"treepanel",title:"Style",name:"stylelist",preventHeader:true,region:"west",width:220,split:true,border:1,rootVisible:false,hideHeaders:true,autoScroll:true,store:{xtype:"treestore",fields:["name","text","custom"],root:{expanded:true,name:"Style",children:[]},folderSort:false},columns:[{xtype:"treecolumn",text:"text",flex:1,sortable:false,dataIndex:"name"}],listeners:{itemclick:function(r,m,v,n,o){var q=this,t=m.get("name"),h=a.down("[name=b_r]"),s=a.down("[name=p_h]"),u=a.down("[name=p_d]"),k,g=a.__cth?a.__cth.styleinfo:null,j=false,l=false;if(g){for(k=0;k<g.length;k++){if(g[k].name==t){j=true;break}}if(j){if(m.get("custom")==true){l=true}u.setTitle("Edit : "+t);a.Mb_3.call(a,t)}s.getLayout().setActiveItem(j?1:0);h.setVisible(l)}}},tbar:[{iconCls:"icon-refresh",tooltip:IRm$.r1("L_REFRESH"),handler:function(){this._t$("cmd_refresh")},scope:this},"-",{iconCls:"icon-toolbar-add",tooltip:"Add Custom Style",text:"Add Style",handler:function(){this._t$("cmd_add_custom")},scope:this},{iconCls:"icon-toolbar-remove",tooltip:"Remove Style",name:"b_r",hidden:true,handler:function(){this._t$("cmd_remove")},scope:this}]},{xtype:"panel",region:"center",layout:"card",name:"p_h",items:[{html:"Click stylename to edit"},{xtype:"tabpanel",title:"Edit :",name:"p_d",layout:{type:"fit",align:"stretch"},items:[e,d]}]}],listeners:{afterrender:function(){if(this.styletype=="g"){this.Mb_1()}}}});IG$._I78.superclass.initComponent.apply(this,arguments)}});IG$._I9c=$s.extend($s.window,{modal:true,layout:"border",closable:false,resizable:true,width:650,height:500,_ILa:null,callback:null,globalstyle:null,globalstylemap:null,styleinfo:null,Mb_1:function(){var a=this,b=new IG$._I3e();b.init(a,{ack:"1",payload:IG$._I2d({address:"ReportStyle"}),mbody:IG$._I2e()},a,a.rs_Mb_1,null);b._l()},rs_Mb_1:function(h){var g=IG$._I18(h,"/smsg/item/themes"),n,o,k,q,m=[{name:"Select Item",value:""}],c,f=ig$.theme_id,a,b,e,d,r,l=["Global","Default","Custom","Item"];this.globalstyle=[];this.globalstylemap={};if(g){n=IG$._I26(g);if(!f){c=n[0]}else{for(e=0;e<n.length;e++){if(IG$._I1b(n[e],"name")==n){c=n[e];break}}if(!c){c=n[0]}}}if(c){for(e=0;e<l.length;e++){q=l[e];o=IG$._I18(c,q);if(o){b=IG$._I26(o);for(d=0;d<b.length;d++){k=new IG$._IF7(b[d],"global",false);this.globalstyle.push(k);m.push({name:k.name,value:k.name});this.globalstylemap[k.name]=k}}}for(q in this.globalstylemap){k=this.globalstylemap[q];if(k.custom==true&&k.basestylename&&this.globalstylemap[k.basestylename]){r=this.globalstylemap[k.basestylename];k._IFb.call(k,r)}}}this.down("[name=base_style]").store.loadData(m);this.Mb_2()},Mb_2:function(){var g=this,c,h,e,j,d=g.down("[name=stylelist]"),f=[],b,a;g.down("[name=c_cset]").setValue(g.c_cset||"");if(g.styleinfo){a={name:"LocalStyle",leaf:false,children:[]};f.push(a);for(c=0;c<g.styleinfo.length;c++){e=g.styleinfo[c];b={name:e.name,leaf:true,custom:false};if(e.basestylename&&g.globalstylemap[e.basestylename]){j=g.globalstylemap[e.basestylename];e._IFb.call(e,j)}a.children.push(b)}d.store.setRootNode({expanded:true,text:"Style",name:"Style",title:"Style",children:f})}},Mb_3:function(d){var a,c=this,b=c.down("[name=form_header]"),e=c.down("[name=form_data]");c.Mb_4();for(a=0;a<c.styleinfo.length;a++){if(c.styleinfo[a].name==d){c.__e1=c.styleinfo[a];c.__e2=1;c.down("[name=base_style]").setValue(c.styleinfo[a].basestylename||"");b.Mb_6.call(b,c.styleinfo[a].hs);e.Mb_6.call(e,c.styleinfo[a].ds);c.__e2=0;break}}},Mb_4:function(){var b=this,a=b.down("[name=form_header]"),d=b.down("[name=form_data]"),c=b.down("[name=base_style]").getValue();if(b.__e1&&c){b.__e1.basestylename=c;d.Mb_7.call(d);a.Mb_7.call(a)}},_IG0:function(){var a=this;a.callback&&a.callback.execute(a);a.close()},_IFf:function(){var c=this,a,d,b;c.Mb_4();for(a=0;a<c.styleinfo.length;a++){b=c.styleinfo[a];if(b.basestylename&&c.globalstylemap[b.basestylename]){d=c.globalstylemap[b.basestylename];b.Mb_16(d)}}c.c_cset=c.down("[name=c_cset]").getValue();c._IG0()},_t$:function(e){var d=this;switch(e){case"cmd_add_custom":var g=new IG$.mA$_s({styleinfo:this.globalstyle,callback:new IG$._I3d(this,this.rs__sK3a)});IG$._I_5(this,g);break;case"cmd_delete":var b,a=this.down("[name=stylelist]"),f=a.getSelectionModel().selected,c=f&&f.length>0?f.items[0]:null;if(c){for(b=0;b<d.styleinfo.length;b++){if(c.get("name")==d.styleinfo[b].name){d.styleinfo.splice(b,1);c.remove();break}}}break}},rs__sK3a:function(b){var n=b[0],h=b[1];if(h&&n){var c,e;e=this.globalstylemap[h];if(e){var d=this.down("[name=stylelist]"),j=d.store.getProxy(),f=j.getReader(),g,k,m,l=d.store.getRootNode();m=l.childNodes[l.childNodes.length-1];k={name:n,leaf:true,custom:true};g=new IG$._IF7(null,"item",true);g.name=n;g.nodename="ItemStyle";g.basestylename=h;g.hs=new IG$._IF8(null,"Header");g.ds=new IG$._IF8(null,"Data");this.styleinfo.push(g);g._IFb.call(g,e);var a=f.extractData.call(f,[k],true);d.store.fillNode.call(d.store,m,a)}}},initComponent:function(){var a=this,d=new IG$._Id0({title:IRm$.r1("L_STYLE_TITLE"),name:"form_header",htype:"hd"}),e=new IG$._Id0({title:IRm$.r1("L_STYLE_DATA"),name:"form_data",htype:"dt"}),f=[{name:"Default",value:""}],c=IG$.__c_.chartcolors,b;for(b in c){f.push({name:b,value:b})}a.title=IRm$.r1("T_STYLE_WIZARD");$s.apply(this,{defaults:{bodyStyle:"padding:3px"},items:[{xtype:"treepanel",title:"Style",name:"stylelist",preventHeader:true,region:"west",width:160,split:true,border:false,rootVisible:false,hideHeaders:true,autoScroll:true,store:{xtype:"treestore",fields:["name","text","type","pname","region","custom"],root:{expanded:true,name:"Style",children:[]},folderSort:false},useArrows:true,dockedItems:[{xtype:"toolbar",dock:"top",plain:true,items:[{iconCls:"icon-toolbar-add",tooltip:"Add Custom Style",text:"Add New",handler:function(){this._t$("cmd_add_custom")},scope:this},{iconCls:"icon-grid-delete",tooltip:"Delete",handler:function(){this._t$("cmd_delete")},scope:this}]}],columns:[{xtype:"treecolumn",text:"text",flex:2,sortable:false,dataIndex:"name"},{xtype:"actioncolumn",width:26,items:[{iconCls:"icon-grid-delete",tooltip:"Delete item",handler:function(h,k,g){var j=h.store.getAt(k)},getClass:function(h,k,l,m,j,g){if(m==0||l.isLeaf()==false||(l.data&&l.data.custom==false)){return"idv-hd-val"}return""}}]}],listeners:{afterrender:function(){var g=this},itemclick:function(h,g,k,j,m){var l=g.get("name");if(g.isRoot()==false&&l){a.Mb_3.call(a,l)}}}},{xtype:"form",region:"center",layout:{type:"vbox",align:"stretch"},items:[{xtype:"combobox",fieldLabel:"Inherit",name:"base_style",displayField:"name",valueField:"value",editable:false,queryMode:"local",store:{fields:["name","value"]},listeners:{change:function(g,j,n){var m=this,h=m.down("[name=base_style]").getValue(),k,l=m.down("[name=form_header]"),o=m.down("[name=form_data]");if(m.__e2){return}if(h){k=m.globalstylemap[h];if(k){l.Mb_6.call(l,k.hs);o.Mb_6.call(o,k.ds)}}},scope:this}},{xtype:"tabpanel",plain:true,flex:1,items:[e,d],bbar:[{xtype:"toolbar",items:[{xtype:"combobox",fieldLabel:"Chart Style",name:"c_cset",displayField:"name",valueField:"value",editable:false,queryMode:"local",store:{fields:["name","value"],data:f}}]}]}]}],buttons:[{text:IRm$.r1("B_CONFIRM"),handler:function(){this._IFf()},scope:this},{text:IRm$.r1("B_CANCEL"),handler:function(){this.close()},scope:this}],listeners:{afterrender:function(){this.Mb_1()}}});IG$._I9c.superclass.initComponent.apply(this,arguments)}});IG$._IC0=$s.extend($s.panel,{autoScroll:false,collapseFirst:false,layout:"fit",closable:true,autoScroll:true,initComponent:function(){$s.apply(this,{tbar:[{text:"Save Content",handler:function(){this.l1()},scope:this}]});IG$._IC0.superclass.initComponent.call(this)},items:[{xtype:"textarea",name:"metaview"}],listeners:{render:function(b){var a=b;if(a.uid&&a.uid.length>0){this.Mmk(a.uid,a.itemtype)}},resize:function(c,e,b,a,d){c.Mm11.call(c,e,b)}},l1:function(){var a=this;a.setLoading(true);var e=a.down("[name=metaview]"),c=new IG$._I3e(),d="31",b=e.getValue();c.init(a,{ack:d,payload:IG$._I2d({uid:a.uid}),mbody:b},a,a.rs_l1(),null);c._l()},rs_l1:function(a){IG$._I54(ig$.appname,IRm$.r1("M_SAVED"),null,null,0,"success")},Mmk:function(e,b){var a=this;a.uid=e;a.setLoading(true);var f=new IG$._I3e(),d=(b=="cube")?true:false,g=(d)?"6":"5",c=(d)?'<smsg><info option="CubeContent"/></smsg>':"<smsg></smsg>";if(b=="datacube"){g="5";c="<smsg><info option='content'/></smsg>"}f.init(a,{ack:g,payload:IG$._I2d({uid:e}),mbody:c},a,a.rs_Mmk,null);f._l()},rs_Mmk:function(a){var b=this;doc=IG$._I25(a),content=IG$._I16(doc),metaview=this.down("[name=metaview]");metaview.setValue(content)},Mm11:function(a,c,b){}});IG$.ApM$m=function(){IG$.ApM$m.superclass.constructor.call(this,{id:"doc-body",region:"center",margins:"0 5 5 0",resizeTabs:true,minTabWidth:135,tabWidth:135,enableTabScroll:true,activeTab:0,layout:"fit",items:[{id:"welcome-panel",title:"MetaEditor",autoLoad:{url:"./html/metaeditor.html",callback:null,scope:this},iconCls:"icon-docs",autoScroll:true}]})};IG$.ApM$m=$s.extend($s.tabpanel,{initEvents:function(){IG$.ApM$m.superclass.initEvents.call(this);this.body.on("click",this.onClick,this)},m1$7:function(b,a,g,d){var c=this.getComponent(d);if(c){this.setActiveTab(c)}else{var e=IG$._I61(b,"metaeditor",g,d,null);if(e!=null){e.uid=b;e.address=d;e.itemtype=a;e.title=g;var f=this.add(e);this.setActiveTab(f)}}}});IG$._I7a=$s.extend(IG$._I57,{title:"System Logs",region:"center",layout:"fit",closable:true,resizable:false,autoHeight:true,callback:null,bodyPadding:10,iconCls:"icon-ing-docdef",in$t:function(){var b=this,a=b.down("[name=status]");a.setValue("");b.down("[name=e_stat]").setValue("F")},l1:function(f,c){var b=this,d=new IG$._I3e(),a=b.down("[name=status]"),g=b.down("[name=ellapsetime]"),e=b.down("[name=bufsize]");d.init(b,{ack:"11",payload:IG$._I2d({vopt:(c||"1")},"vopt"),mbody:IG$._I2e({option:"sysmon",ellapsetime:g.getValue(),bufsize:e.getValue(),status:a.getValue()})},b,b.rs_l1,false,[f,c]);d._l()},rs_l1:function(q,b){var s=this,c=b[0],e=b[1],a=IG$._I18(q,"/smsg"),r,d,l,g,n=[],k,f,h=s.down("[name=grdjoblist]"),m=s.down("[name=grd_sql]"),o=s.down("[name=grd_esql]");if(e=="2"){a=IG$._I18(q,"/smsg/sql");if(a){r=IG$._I26(a);for(l=0;l<r.length;l++){d=IG$._I26(r[l]);k={};for(g=0;g<d.length;g++){f=IG$._I29(d[g]);k[f]=IG$._I24(d[g])}n.push(k)}}m.store.loadData(n);n=[];a=IG$._I18(q,"/smsg/sqlexec");if(a){r=IG$._I26(a);for(l=0;l<r.length;l++){d=IG$._I26(r[l]);k={};for(g=0;g<d.length;g++){f=IG$._I29(d[g]);k[f]=IG$._I24(d[g])}n.push(k)}}o.store.loadData(n)}else{if(a){r=IG$._I26(a);for(l=0;l<r.length;l++){k=IG$._I1c(r[l]);n.push(k)}}h.store.loadData(n)}if(c&&c>0){s.rtimer=setTimeout(function(){s.l1.call(s,c,e)},c)}},l2:function(c){var a=this,b=new IG$._I3e();b.init(a,{ack:"11",payload:IG$._I2d({jobid:c},"jobid"),mbody:IG$._I2e({option:"jobdetail"})},a,a.rs_l2,false);b._l()},rs_l2:function(f){var h=this,j=IG$._I18(f,"/smsg/Job"),b=IG$._I18(f,"/smsg/Job/process"),g,d,e=[],c,a=this.down("[name=grdjobdetail]");h.jobdetail=(j)?IG$._I1c(j):null;if(b){g=IG$._I26(b);for(d=0;d<g.length;d++){c=IG$._I1c(g[d]);e.push(c)}}a.store.loadData(e)},_IG0:function(){this.close()},dQ:function(){var a=this,b=new IG$._I3e();if(a.jobdetail&&a.jobdetail.uid){b.init(a,{ack:"18",payload:"<smsg><item jobid='"+a.jobdetail.uid+"' option='cancel'/></smsg>",mbody:"<smsg></smsg>"},a,a.r_IP5,null);b.showerror=false;b._l()}},r_IP5:function(){var a=this;if(a.jobdetail&&a.jobdetail.uid){a.l2(a.jobdetail.uid)}},sc:function(b,a){var d=this,f=d.down("[name=btn_start]"),g=d.down("[name=btn_stop]"),e=d.down("[name=btn_refresh]"),c=d.down("[name=rsec]"),h=c.getValue()*1000;g.setDisabled(b?false:true);f.setDisabled(b);e.setDisabled(b);c.setDisabled(b);clearTimeout(d.rtimer);d.rtimer=-1;if(b==true){d.rtimer=setTimeout(function(){d.l1.call(d,h,a)},h)}},eM2:{A:"Waiting",F:"Failed",S:"Success",P:"Processing"},eM1:function(){var c=this,a=c.down("[name=grd_email]"),b=new IG$._I3e();b.init(c,{ack:"11",payload:IG$._I2d({stat:c.down("[name=e_stat]").getValue()},"stat"),mbody:IG$._I2e({option:"mail_stat"})},c,function(e){var j=IG$._I18(e,"/smsg"),h=IG$._I26(j),f,d=[],k=c.eM2,g;for(f=0;f<h.length;f++){g=IG$._I1c(h[f]);g.subject=IG$._I1a(h[f],"subject");g.stat=k[g.mstat]||"Unknown";d.push(g)}a.store.loadData(d)},false);b._l()},s1:function(a){var c=this,b=new IG$._I3e();b.init(c,{ack:"11",payload:IG$._I2d({sid:a},"sid"),mbody:IG$._I2e({option:"mail_content"})},c,function(j){var l=this,d=IG$._I18(j,"/smsg/mail"),h=[],m=l.eM2,g={},f=l.down("[name=m_d1]"),e=l.down("[name=m_d2]"),k=$("#ig_mail",e.body.dom);if(d){g=IG$._I1c(d);g.subject=IG$._I1a(d,"subject");g.content=IG$._I1a(d,"content");g.stat=m[g.mstat]||"Unknown"}k.contents().find("html").html(g?g.content:"");f.show()},false);b._l()},initComponent:function(){var a=this;$s.apply(this,{items:[{xtype:"tabpanel",items:[{xtype:"container",title:"Report Logs",layout:{type:"vbox",align:"stretch"},items:[{xtype:"fieldset",title:"System Monitoring and Control",layout:{type:"vbox",align:"stretch"},items:[{xtype:"fieldcontainer",layout:{type:"hbox",align:"stretch",defaultMargins:{top:0,left:0,right:10,bottom:0}},items:[{xtype:"numberfield",labelAlign:"right",name:"rsec",fieldLabel:"Auto Refresh (sec)",value:60},{xtype:"button",name:"btn_start",text:"Start",handler:function(){var c=this,b=c.down("[name=rsec]");if(b.getValue()>0){this.sc(true)}},scope:this},{xtype:"button",name:"btn_stop",text:"Stop",disabled:true,handler:function(){this.sc(false)},scope:this},{xtype:"container",flex:1},{xtype:"button",text:"Refresh",name:"btn_refresh",handler:function(){this.l1()},scope:this}]},{xtype:"fieldcontainer",layout:{type:"hbox",defaultMargins:{top:0,left:0,right:10,bottom:0}},items:[{xtype:"combobox",queryMode:"local",fieldLabel:"Conditions",name:"status",labelAlign:"right",displayField:"name",valueField:"value",editable:false,autoSelect:true,store:{xtype:"store",fields:["name","value"],data:[{name:"All",value:""},{name:"STAT_START",value:"STAT_START"},{name:"STAT_FAILED_ERROR",value:"STAT_FAILED_ERROR"},{name:"STAT_PREPARE_STATEMENT",value:"STAT_PREPARE_STATEMENT"},{name:"STAT_BEFORE_EXECUTE_QRY",value:"STAT_BEFORE_EXECUTE_QRY"},{name:"STAT_END_QUERY_EXECUTION",value:"STAT_END_QUERY_EXECUTION"},{name:"STAT_CANCELED",value:"STAT_CANCELED"},{name:"STAT_FINISHED_WITH_ERROR",value:"STAT_FINISHED_WITH_ERROR"},{name:"STAT_FINISHED",value:"STAT_FINISHED"}]}},{xtype:"numberfield",name:"ellapsetime",labelAlign:"right",fieldLabel:"Ellapsed more then (second)",labelWidth:180,value:60},{xtype:"numberfield",name:"bufsize",labelAlign:"right",fieldLabel:"Buffer Size",minValue:10,maxValue:1000,value:100}]}]},{xtype:"gridpanel",name:"grdjoblist",flex:1,store:{xtype:"store",fields:["uid","userid","status","statuscode","totalellapsed","haserror","errormsg","starttime","endtime","objectname","objectpath","objectuid"]},columns:[{xtype:"gridcolumn",text:"UserID",dataIndex:"userid",flex:1},{xtype:"gridcolumn",text:"Status",dataIndex:"status",width:120},{xtype:"gridcolumn",text:"Name",dataIndex:"objectname",width:120},{xtype:"gridcolumn",text:"Path",dataIndex:"objectpath",width:200},{xtype:"gridcolumn",text:"JobID",hidden:true,dataIndex:"uid",width:80},{xtype:"gridcolumn",text:"Ellapsed",width:60,dataIndex:"totalellapsed"},{xtype:"gridcolumn",text:"Start",width:80,dataIndex:"starttime"},{xtype:"gridcolumn",text:"End",width:80,dataIndex:"endtime"},{xtype:"gridcolumn",text:"Error",width:40,dataIndex:"haserror"}],listeners:{itemclick:function(c,b,g,d,h,f){var j=b.get("uid");this.l2(j)},scope:this}},{xtype:"fieldset",collapsible:false,flex:1,layout:"fit",title:"Action Detail",items:[{xtype:"gridpanel",name:"grdjobdetail",store:{xtype:"store",fields:["status","statuscode","ellapsed"]},buttons:[{xtype:"button",text:"Cancel Job",handler:function(){this.dQ()},scope:this},{xtype:"button",text:"Open in folder",handler:function(){if(IG$._I7d&&window.api&&this.jobdetail&&this.jobdetail.objectpath){api._IHd.call(api,{name:this.jobdetail.objectname,nodepath:this.jobdetail.objectpath,uid:this.jobdetail.objectuid})}},scope:this}],columns:[{xtype:"gridcolumn",flex:1,text:"Action type",dataIndex:"status"},{xtype:"gridcolumn",text:"Ellapsed time",dataIndex:"ellapsed"}]}]}]},{xtype:"container",title:"JDBC Monitoring",layout:"border",items:[{xtype:"panel",region:"north",layout:"vbox",items:[{xtype:"button",text:"Refresh",handler:function(){this.l1(null,"2")},scope:this}]},{xtype:"container",flex:1,layout:{type:"vbox",align:"stretch"},region:"center",items:[{xtype:"gridpanel",flex:1,title:"SQL Details",name:"grd_sql",store:{xtype:"store",fields:["c0","c1","c2","c4","c5"]},columns:[{text:"No.",dataIndex:"c0",width:40},{text:"Date",dataIndex:"c1"},{text:"ExecTime",dataIndex:"c2",width:50},{text:"SQL",dataIndex:"c4",flex:1},{text:"Error",dataIndex:"c5",flex:1}]},{xtype:"gridpanel",flex:1,title:"Exec SQL",name:"grd_esql",store:{xtype:"store",fields:["c0","c1","c2","c4"]},columns:[{text:"No.",dataIndex:"c0",width:40},{text:"Date",dataIndex:"c1"},{text:"ExecTime",dataIndex:"c2",width:50},{text:"SQL",dataIndex:"c4",flex:1}]}]},{xtype:"container",region:"east",flex:1,layout:{type:"vbox",align:"stretch"},items:[{xtype:"panel",flex:1,title:"Request Count"},{xtype:"panel",flex:1,title:"Running"}]}]},{xtype:"container",title:"Email Sender Logs",layout:{type:"vbox",align:"stretch"},items:[{xtype:"fieldset",layout:"hbox",items:[{xtype:"fieldcontainer",flex:1,layout:"hbox",items:[{xtype:"combobox",queryMode:"local",fieldLabel:"Status",name:"e_stat",labelAlign:"right",displayField:"name",valueField:"value",editable:false,autoSelect:true,store:{xtype:"store",fields:["name","value"],data:[{name:"Failed",value:"F"},{name:"Sending",value:"P"},{name:"Waiting",value:"A"},{name:"Success",value:"S"},{name:"All",value:""}]}}]},{xtype:"button",text:"Run",handler:function(){this.eM1()},scope:this}]},{xtype:"gridpanel",flex:1,title:"Email Logs",name:"grd_email",store:{xtype:"store",fields:["sid","iuid","snder","email","cdate","mdate","mstat","stat","msgtype","subject"]},columns:[{text:"Sender",dataIndex:"snder",width:120},{text:"Email",dataIndex:"email",width:120},{text:"Modified Date",dataIndex:"mdate",width:50},{text:"Created Date",dataIndex:"cdate",width:50},{text:"Subject",dataIndex:"subject",tdCls:"igc-td-link",flex:1},{text:"Status",dataIndex:"stat",width:80}],listeners:{cellclick:function(b,c,k,d,j,l,f,g){var h=this;if(k==4){h.s1(d.get("sid"))}},scope:this}},{xtype:"panel",layout:"fit",hidden:true,flex:1,name:"m_d1",items:[{name:"m_d2",html:"<div class='igc-mail-detail'><iframe id='ig_mail' class='igc-mail-detail-if'></iframe></div>"}]}]}]}],listeners:{afterrender:function(b){this.in$t()}}});IG$._I7a.superclass.initComponent.apply(this,arguments)}});IG$._I7b=$s.extend(IG$._I57,{region:"center",layout:"fit",closable:true,resizable:false,autoHeight:true,callback:null,bodyPadding:10,iconCls:"icon-ing-docdef",in$t:function(){this.l1()},l1b:function(){var b=this,a=new IG$._I3e();a.init(b,{ack:"12",payload:IG$._I2d({address:"/resources"}),mbody:IG$._I2e({option:"getrs"})},b,b.rs_l1,false);a._l()},l1:function(){var b=this,a=new IG$._I3e();a.init(b,{ack:"12",payload:IG$._I2d({address:"/serverinfo"}),mbody:IG$._I2e({option:"getrs"})},b,b.rs_l1a,false);a._l()},rs_l1a:function(a){var c=this,e,d,b;e=IG$._I18(a,"/smsg/item/info");c.licinfo=IG$._I1c(e);e=IG$._I18(a,"/smsg/item/info/access_ip");if(e){c.licinfo.access_ip=[];d=IG$._I26(e);for(b=0;b<d.length;b++){c.licinfo.access_ip.push(IG$._I24(d[b]))}}c.l1b()},rs_l1:function(a){var b=this,c;c=IG$._I18(a,"/smsg/results/meminfo");b.s1(c);c=IG$._I18(a,"/smsg/results/diskinfo");b.s2(c);c=IG$._I18(a,"/smsg/results/osinfo");b.s3(c)},m1:function(b){var c="b",e=1,a=b;if(a>1000){c="M";a=a/1000;if(a>1000){c="G";a=a/1000}}return a.format("#,###")+" "+c},s1:function(e){var n=this,l,a,b=n.down("[name=g_mem]"),g=[],h;if(!n.m_charts){var c=n.down("[name=p_mem]"),d=$(".idv-rcs-mem",c.el.dom),f=[{name:"free",title:"Free Memory"},{name:"allocated",title:"Allocated"},{name:"appfree",title:"Application Free"},{name:"max",title:"Max Memory",chart:false},{name:"totalfree",title:"Free Total",chart:false}];d.empty();n.clen=0;$.each(f,function(o,k){if(k.chart!=false){var q=$("<div class='idv-rcs-pnl'><div class='idv-rcs-title'>"+k.title+"</div><div class='idv-rcs-chart'></div></div>").appendTo(d);k.el=q;k.dc=$(".idv-rcs-chart",k.el);k.clabel=$("<div class='idv-rcs-label'></div>").appendTo(k.dc);k.chart=k.dc.easyPieChart({size:IG$.x_10._w(k.dc)});n.clen++}});n.m_charts=f;n.s1s()}l=n.m_charts;if(e){a=IG$._I1c(e);var m=Number(a.totalfree),j=Number(a.max);$.each(l,function(q,o){var k=Number(a[o.name]),r;g.push({name:o.title,value:k});switch(o.name){case"free":case"appfree":o.value=100*k/m;r=n.m1(k)+"<br>"+n.m1(m);break;case"allocated":o.value=100*k/j;r=n.m1(k)+"<br>"+n.m1(j);break}if(o.chart){o.chart.data("easyPieChart").update(o.value);o.clabel.html(r)}})}b.store.loadData(g)},s1s:function(){var j=this,c=j.down("[name=p_mem]"),g=$(c.body.dom),a=$(".idv-rcs-mem",g),m=IG$.x_10._w(g),e=IG$.x_10._h(g),f=j.m_charts,d,b,l=0,k;IG$.x_10._w(a,m);IG$.x_10._h(a,e);if(f){b=m/j.clen;for(d=0;d<f.length;d++){k=f[d];if(k.chart){IG$.x_10._w(k.el,b);IG$.x_10._h(k.el,e);k.el.css("left",l);k.dc.css({left:(b-90)/2,top:(e-90)/2+20});l+=b}}}},s2:function(a){var h=this,e=h.down("[name=g_disk]"),g=a?IG$._I26(a):null,c=[],f=h.down("[name=p_dsk]"),b=$(".idv-rcs-dsk",f.el.dom),l,j,d,k;h.dlen=0;h.m_dsks=[];h.h_dsks=h.h_dsks||{};if(g){for(d=0;d<g.length;d++){p=IG$._I1c(g[d]);if(h.h_dsks[p.name]){j=h.h_dsks[p.name]}else{l=$("<div class='idv-rcs-pnl-dsk'><div class='idv-rcs-title'>"+p.name+"</div><div class='idv-rcs-chart'></div></div>").appendTo(b);j={el:l,dc:$(".idv-rcs-chart",l)};j.clabel=$("<div class='idv-rcs-label'></div>").appendTo(j.dc);j.chart=j.dc.easyPieChart({size:IG$.x_10._w(j.dc)});h.h_dsks[p.name]=j}k=Number(p.total)-Number(p.usable);k=(Number(p.total)>0?k*100/Number(p.total):0);j.chart.data("easyPieChart").update(k);j.clabel.text(p.name+" : "+k.format("###")+"%");h.dlen++;c.push(p);h.m_dsks.push(j)}h.s2s()}e.store.loadData(c)},s2s:function(){var g=this,e=g.down("[name=p_dsk]"),f=$(e.body.dom),b=$(".idv-rcs-dsk",f),l=IG$.x_10._w(f),d=IG$.x_10._h(f),m=g.m_dsks,c,a,j=0,k;IG$.x_10._w(b,l);IG$.x_10._h(b,d);if(m){for(c=0;c<m.length;c++){k=m[c];if(k.chart){IG$.x_10._w(k.el,l);a=IG$.x_10._h(k.el);k.dc.css({left:(l-90)/2,top:(a-90)/2+20})}}}},s3:function(b){var h=this,k=h.down("[name=p_os]"),c=$(".idv-os-pnl",k.el.dom),g=b?IG$._I26(b):null,j,l,d,a,e,f=h.licinfo;c.empty();if(g){ul=$("<ul class='idv-os-ul'></ul>").appendTo(c);for(e=0;e<g.length;e++){a=IG$._I1b(g[e],"name");l=$("<li><span class='idv-os-type'>"+a+"</span> : <span class='idv-os-val'>"+IG$._I24(g[e])+"</span></li>");ul.append(l)}ul=$("<div class='idv-lic-dv'><span>License Information</span></div>").appendTo(c);ul=$("<ul class='idv-lic-ul'></ul>").appendTo(ul);if(f){for(a in f){if(a!="access_ip"){l=$("<li><span class='idv-os-type'>"+a+"</span> : <span class='idv-os-val'>"+f[a]+"</span></li>");ul.append(l)}}if(f.access_ip){ul=$("<div class='idv-lic-dv'><span>Accessed IP</span></div>").appendTo(c);for(e=0;e<f.access_ip.length;e++){l=$("<li><span class='idv-os-val'>"+f.access_ip[e]+"</span></li>");ul.append(l)}}}}},initComponent:function(){var a=this;a.title=IRm$.r1("T_SYS_RES");$s.apply(this,{tbar:[{xtype:"button",iconCls:"icon-refresh",tooltip:IRm$.r1("L_REFRESH"),handler:function(){this.l1()},scope:this}],items:[{xtype:"panel",layout:"border",border:0,items:[{xtype:"panel",region:"north",height:200,border:0,layout:{type:"hbox",align:"stretch"},items:[{xtype:"panel",name:"p_mem",title:"Memory Resources",layout:"fit",flex:1,html:"<div class='idv-rcs-mem'></div>",listeners:{resize:function(){this.s1s()},scope:this}}]},{xtype:"panel",region:"center",border:0,layout:{type:"hbox",align:"stretch"},flex:1,items:[{xtype:"panel",flex:1,layout:{type:"vbox",align:"stretch"},items:[{xtype:"gridpanel",title:"Memory",name:"g_mem",flex:1,store:{xtype:"store",fields:["name","value"]},columns:[{xtype:"gridcolumn",text:"Name",flex:1,dataIndex:"name"},{xtype:"gridcolumn",text:"Value",dataIndex:"value",flex:1}]},{xtype:"gridpanel",title:"Disk",name:"g_disk",flex:1,store:{xtype:"store",fields:["name","total","free","usable"]},columns:[{xtype:"gridcolumn",text:"Name",flex:1,dataIndex:"name"},{xtype:"gridcolumn",text:"Total",dataIndex:"total",flex:1},{xtype:"gridcolumn",text:"Free",dataIndex:"free",flex:1},{xtype:"gridcolumn",text:"usable",dataIndex:"usable",flex:1}]}]},{xtype:"panel",name:"p_dsk",flex:1,layout:"fit",html:"<div class='idv-rcs-dsk'></div>",listeners:{resize:function(){this.s2s()},scope:this}},{xtype:"panel",title:"System Info",name:"p_os",layout:"fit",flex:1,html:"<div class='idv-os-pnl'></div>"}]}]}],listeners:{afterrender:function(b){this.in$t()}}});IG$._I7b.superclass.initComponent.apply(this,arguments)}});IG$.CI7_=function(a){var b=this;b.sid=0;b._a={map:{},root:{name:"Menu",sid:99,level:-1,option:{},description:"Top Menu",expanded:true,children:[]}};b._a.map[99]=b._a.root;a&&b._1(a)};IG$.CI7_.prototype={_1:function(h){var l=this,c=IG$._I18(h,"/smsg/item"),d,k,e,b,g,f,a,m;if(c){l.item=IG$._I1c(c);d=IG$._I18(c,"menustructure");d&&l._4(l._a.root,d);d=IG$._I18(c,"menuitems");if(d){k=IG$._I26(d);for(g=0;g<k.length;g++){a=IG$._I1b(k[g],"sid");m=l._a.map[a];if(m){e=IG$._I26(k[g]);m.items=[];for(f=0;f<e.length;f++){b=IG$._I1c(e[f]);m.items.push(b)}}}}}},_2:function(){var c=this,b=[],a=[];b.push("<menustructure>");b.push(c._3(c._a.root,a));b.push("</menustructure>");b.push("<menuitems>");b.push(a.join(""));b.push("</menuitems>");return b.join("")},_3:function(g,a){var e=this,c,b,f,d="";d+="<option>";for(b in g.option){d+=(g.option[b])?"<opt name='"+b+"'><![CDATA["+g.option[b]+"]]></opt>":""}d+="</option>";if(g.children){for(c=0;c<g.children.length;c++){f=g.children[c];d+="<menu"+IG$._I20(f,"sid;name;description")+">";d+=e._3(f,a);d+="</menu>";if(f.items){a.push("<menuitem sid='"+f.sid+"'>");for(b=0;b<f.items.length;b++){a.push("<menu"+IG$._I20(f.items[b],"uid;name;type;nodepath")+"/>")}a.push("</menuitem>")}}}return d},_4:function(c,b){var h=this,g=IG$._I26(b),d,f,e,a,k;for(f=0;f<g.length;f++){k=IG$._I29(g[f]);if(k=="menu"){a=IG$._I1c(g[f]);a.children=[];a.option={};a.level=c.level+1;h._a.map[a.sid]=a;h.sid=Math.max(h.sid,parseInt(a.sid)+1);c.children.push(a);h._4(a,g[f])}else{if(k=="option"){d=IG$._I26(g[f]);for(e=0;e<d.length;e++){c.option[IG$._I1b(d[e],"name")]=IG$._I24(d[e])}}}}}};if(window.Ext){IG$._I7a_=$s.extend($s.window,{modal:true,title:"Page Config",layout:"fit",width:400,autoHeight:true,_1:function(){var b=this,a;if(b.item){a=b.item.option;b.down("[name=ltype]").setValue(a.ltype||"");b.down("[name=_h]").setValue(a.html);b.down("[name=_t]").setValue(a.tmpl);b.down("[name=_ra]").setValue(a.rptl);b.rptl_uid=a.rptl_uid;b.down("[name=_s]").setValue(a.scrp)}},_2:function(){var b=this,a=b.down("[name=ltype]").getValue();$.each(["_h","_r","_t"],function(d,c){b.down("[name="+c+"]").setVisible(a&&"_"+a.charAt(0)==c?true:false)})},_3:function(){var b=this,a;if(b.item){a=b.item.option;a.ltype=b.down("[name=ltype]").getValue();a.html=b.down("[name=_h]").getValue();a.tmpl=b.down("[name=_t]").getValue();a.rptl=b.down("[name=_ra]").getValue();a.rptl_uid=b.rptl_uid;a.scrp=b.down("[name=_s]").getValue()}this.close()},initComponent:function(){var a=this;$s.apply(this,{items:[{xtype:"panel",layout:"anchor",bodyPadding:10,defaults:{anchor:"100%"},items:[{xtype:"combobox",fieldLabel:"Load Type",name:"ltype",queryMode:"local",editable:false,valueField:"value",displayField:"name",store:{xtype:"store",fields:["name","value"],data:[{name:"No Action",value:""},{name:"Template",value:"template"},{name:"Load HTML",value:"html"},{name:"Open Report",value:"report"}]},listeners:{change:function(){this._2()},scope:this}},{xtype:"textfield",name:"_h",fieldLabel:"Default HTMLPage"},{xtype:"fieldcontainer",name:"_r",layout:"hbox",fieldLabel:"Report",items:[{xtype:"textfield",name:"_ra",readOnly:true,flex:1},{xtype:"button",text:"..",handler:function(){var b=this,c=new IG$._I96({visibleItems:"workspace;folder;report;dashboard",u5x:{cubebrowse:false},callback:new IG$._I3d(b,function(e){var d=b.down("[name=_ra]");d.setValue(e.name);b.rptl_uid=e.uid})});IG$._I_5(this,c)},scope:this}]},{xtype:"combobox",name:"_t",queryMode:"local",fieldLabel:"Template Name",editable:false,valueField:"value",displayField:"name",store:{xtype:"store",fields:["name","value"]}},{xtype:"textfield",fieldLabel:"After Javascript",name:"_s"}]}],buttons:[{text:IRm$.r1("B_CONFIRM"),handler:function(){var b=this;b._3()},scope:this},{text:IRm$.r1("B_CLOSE"),handler:function(){this.close()},scope:this}]});IG$._I7a_.superclass.initComponent.call(this)},listeners:{afterrender:function(a){this._1()}}})}IG$._I7_=$s.extend(IG$._I57,{scroll:false,initialized:false,hideMode:"offsets",layout:"fit",bodyPadding:5,border:0,l1:function(){var c=this,b,a="/SYS_Config/dashboardmenu";b=new IG$._I3e();b.showerror=false;b.init(c,{ack:"5",payload:IG$._I2d({uid:a}),mbody:IG$._I2e({option:""})},c,c._l1,function(d){var g=true,f,e=IG$._I27(d);if(e=="0x1400"){f=new IG$._I3e();f.init(c,{ack:"31",payload:IG$._I2d({address:a,name:"dashboardmenu",type:"PrivateContent"}),mbody:"<smsg></smsg>"},c,c.l1);f._l();g=false}return g});b._l()},_l1:function(a){var c=this,b=c.down("[name=menust]");c.c1=new IG$.CI7_(a);b.store.setRootNode(c.c1._a.root)},_l2:function(h){var j=this,d=j.down("[name=menust]"),a=d.getSelectionModel().selected,e=j.c1,b=e._a,f,g,c;switch(h){case 0:if(a&&a.length>0){f={name:"New Menu",sid:""+(j.c1.sid++)};b.map[f.sid]=f;a.items[0].appendChild(f,false,true);a.items[0].expand()}break;case 1:if(a&&a.length>0){c=a.items[0];if(!c.isRoot()){g=c.get("sid");delete b.map[g];c.remove()}}break;case 2:j._m3(d,-1,false);break;case 3:j._m3(d,1,false);break;case 4:j._m3(d,1,true);break}},_l3:function(){var f=this,b=f.down("[name=menust]"),c=b.store.getRootNode(),a={children:[]},g=f.c1,e,d=g._a;f._l8();f._l5(d,c,a);d.root.children=a.children},_l5:function(d,b,a){var c,c,f,e=[],g;for(c=0;c<b.childNodes.length;c++){f=b.childNodes[c];g={name:f.get("name"),sid:f.get("sid"),description:f.get("description"),items:[],children:[],level:a.level+1,option:{}};if(d.map[g.sid]){g.items=d.map[g.sid].items;g.option=d.map[g.sid].option}a.children.push(g);if(f.hasChildNodes()){this._l5(d,f,g)}}},l4:function(b){var a=this;switch(b){case 0:a._l3();a._l6();break}},_l6:function(){var c=this,b=new IG$._I3e(),d=c.c1,a;a="<smsg><item>";a+=d._2.call(d);a+="</item></smsg>";b.init(c,{ack:"31",payload:IG$._I2d({uid:d.item.uid}),mbody:a},c,function(e){IG$._I54(ig$.appname,IRm$.r1("M_SAVED"),null,null,0,"success")});b._l()},_m2:function(d,e){var b=d.getSelectionModel().getSelection(),a=b&&b.length?b[0]:null;if(!a){return}var c=d.getStore().indexOf(a);if(e<0){c--;if(c<0){return}}else{c++;if(c>=d.getStore().getCount()){return}}d.getStore().remove(a);d.getStore().insert(c,a);d.getSelectionModel().select(a,true)},_m3:function(e,h,d){var b=e.getSelectionModel().getSelection(),a=b&&b.length?b[0]:null;if(!a){return}var g=a.parentNode,c=g.indexOf(a),f;if(d){f=g.parentNode;if(!f){return}g.remove(a);f.insert(f.childNodes.length,a);e.getSelectionModel().select(a,true)}else{if(h<0){c--;if(c<0){return}}else{c++;if(c>=g.childNodes.length){return}}g.remove(a);g.insert(c,a);e.getSelectionModel().select(a,true)}},_l7:function(k){var l=this,h=l.down("[name=mgrid]"),a,c,f=l.c1,b=f._a,g,d,e;switch(k){case 0:break;case 1:a=h.getSelectionModel().selected;for(g=0;g<a.length;g++){c=a.items[g];h.store.remove(c);e=b.map[c.get("sid")];if(e){for(d=0;d<e.items.length;d++){if(e.items[d].uid==c.get("uid")){e.items.splice(d,1);break}}}}break;case 2:l._m2(h,-1);break;case 3:l._m2(h,1);break}},_IQ9:function(a,f){var e=this,d=e.down("[name=mg]"),c,g=[],b;for(c=0;c<a.length;c++){b=a[c].type.toLowerCase();if((/report|folder/).test(b)){g.push(a[c])}}d.store.loadData(g)},_l8:function(){var k=this,f=k.down("[name=menust]"),c=f.getSelectionModel().selected,j=k.down("[name=mgrid]"),g=k.c1,d=g._a,b,h,e,a;if(c&&c.length>0){a=c.items[0].get("sid");b=d.map[a];b.items=[];for(h=0;h<j.store.data.items.length;h++){e=j.store.data.items[h];b.items.push({uid:e.get("uid"),name:e.get("name"),type:e.get("type"),sid:a,nodepath:e.get("nodepath")})}}},_1:function(f){var b=this,d=b.c1,c=d._a.map,a=f.get("sid");var e=new IG$._I7a_({item:(a=="")?d._a.root:c[a]});IG$._I_5(this,e)},initComponent:function(){var a=this;$s.apply(this,{items:[{xtype:"panel",layout:{type:"vbox",align:"stretch"},border:0,defaults:{anchor:"100%"},items:[{xtype:"panel",border:0,flex:1,layout:{type:"border"},tbar:[{text:IRm$.r1("B_SAVE"),handler:function(){this.l4(0)},scope:this},{text:IRm$.r1("L_REFRESH"),handler:function(){this.l1()},scope:this}],items:[{xtype:"panel",region:"center",flex:2,border:0,layout:"border",items:[{xtype:"treepanel",region:"center",flex:1,title:"Menu Structures",name:"menust",rootVisible:true,plugins:[{ptype:"cellediting"}],store:{xtype:"treestore",proxy:{type:"memory"},fields:["name","description","sid"]},columns:[{xtype:"treecolumn",text:IRm$.r1("B_TITLE"),dataIndex:"name",editor:"textfield",minWidth:200},{text:IRm$.r1("B_DESC"),dataIndex:"description",editor:"textfield",flex:1,minWidth:200},{xtype:"actioncolumn",width:50,items:[{iconCls:"icon-grid-config",tooltip:IRm$.r1("B_CONFIG_ITEM"),handler:function(d,h,c,f,g,b){this._1(b)},scope:this}]}],listeners:{beforeselect:function(c,b,d,e){this._l8()},cellclick:function(c,f,s,k,r,t,n,o){var q=this,b=k.get("sid"),l=q.down("[name=mgrid]"),j=q.c1,d=j._a,g=[],h;if(d.map[b]){g=d.map[b].items||[]}for(h=0;h<g.length;h++){g[h].sid=b}l.store.loadData(g)},scope:this},tbar:[{text:IRm$.r1("L_ADD_NEW"),handler:function(){a._l2.call(a,0)}},{text:IRm$.r1("L_REMOVE_SELECTED"),handler:function(){a._l2.call(a,1)}},{text:IRm$.r1("B_MOVE_UP"),handler:function(){a._l2.call(a,2)}},{text:IRm$.r1("B_MOVE_DOWN"),handler:function(){a._l2.call(a,3)}},{text:"Move Left",hidden:true,handler:function(){a._l2.call(a,4)}}]},{xtype:"gridpanel",region:"south",name:"mgrid",selModel:{selection:"checkboxmodel",checkSelector:".x-grid-cell"},viewConfig:{plugins:[{ptype:"gridviewdragdrop",ddGroup:"_I$RD_G_",enableDrop:true,enableDrag:false}]},split:true,flex:1,title:IRm$.r1("L_C_ITEMS"),tbar:[{text:IRm$.r1("L_ADD_NEW"),hidden:true,handler:function(){this._l7(0)},scope:this},{text:IRm$.r1("L_REMOVE_SELECTED"),handler:function(){this._l7(1)},scope:this},{text:IRm$.r1("B_MOVE_UP"),handler:function(){this._l7(2)},scope:this},{text:IRm$.r1("B_MOVE_DOWN"),handler:function(){this._l7(3)},scope:this}],store:{xtype:"store",fields:["uid","name","nodepath","type","sid"]},columns:[{text:IRm$.r1("B_NAME"),dataIndex:"name"},{text:IRm$.r1("B_TYPE"),dataIndex:"type"},{text:IRm$.r1("B_DESC"),dataIndex:"description"},{text:IRm$.r1("B_LOC"),dataIndex:"nodepath",flex:1}]}]},{xtype:"panel",region:"east",split:true,collapsible:true,collapsed:false,flex:1,title:IRm$.r1("L_NAVIGATOR"),layout:{type:"vbox",align:"stretch"},items:[new IG$._Idd({name:"mtree",flex:1,gridupdate:{handler:a._IQ9,scope:a}}),{xtype:"gridpanel",name:"mg",viewConfig:{plugins:[{ptype:"gridviewdragdrop",ddGroup:"_I$RD_G_",enableDrop:false,enableDrag:true}]},flex:1,store:{xtype:"store",fields:["uid","name","type","nodepath"]},columns:[{text:IRm$.r1("B_NAME"),dataIndex:"name"},{text:IRm$.r1("B_TYPE"),dataIndex:"type"},{text:IRm$.r1("B_LOC"),dataIndex:"nodepath"}]}]}]}]}]});IG$._I7_.superclass.initComponent.call(this)},listeners:{afterrender:function(a){this.l1()}}});IG$._dRp=$s.extend($s.window,{title:IRm$.r1("L_PRV_DATA"),modal:true,width:400,height:350,layout:"fit",_1:function(){var b=this,a=new IG$._I3e();a.init(b,{ack:"5",payload:IG$._I2d({uid:b.uid}),mbody:IG$._I2e({option:""})},b,function(c){var d=IG$._I18(c,"/smsg/item")},false);a._l()},initComponent:function(){var a=this;$s.apply(this,{items:[{xtype:"panel",bodyPadding:10,layout:{type:"vbox",align:"stretch"},items:[{html:"<div style='height: 200px;overflow: auto;'><img src='"+ig$.servlet+"?sreq=resource&_rcs_="+a.uid+"&_mts_="+IG$._g$a+"'></img></div>",name:"img_prev"}]}],buttons:[{text:IRm$.r1("B_CLOSE"),handler:function(){this.close()},scope:this}]});IG$._dRp.superclass.initComponent.call(this)},listeners:{afterrender:function(a){if(a.uid){a._1.call(a)}}}});IG$._dR=$s.extend(IG$._I57,{layout:"fit",_9:null,m1$9:function(){if(this.m1$12()==true){this.callback&&this.callback.execute();this._IG0()}},_IFe1:function(){},commitCode:function(){var e=this,d=true,b=e._9,a=b?b.rcs:null,c,h=e.down("[name=dgrid]"),f,g;if(b){if(a.length){a.splice(0,a.length)}for(c=0;c<h.store.data.items.length;c++){g=h.store.data.items[c];f={uid:g.get("uid"),name:g.get("name")};a.push(f)}}return d},refreshCode:function(){},_IFe:function(){var a=this;a._m3(9)},_t$:function(b){var a=this;switch(b){case"cmd_import":a.down("[name=d_file]").show();break;case"cmd_reload":a._m3();break;case"cmd_mgr_rcs":break;case"cmd_c_files":a._m2();break}},_m1:function(){var e=this,d=e.down("[name=d_file]"),g=d.el.dom,c=$(".m_fileupload",g),b=e.down("[name=d_upfiles]"),f,a,h;c.empty();f=$("<input type='file' name='files[]' data-url='upload' multiple></input>").appendTo(c);a=$("<div class='filedropzone fade well'>Drop files here</div>").appendTo(c);h=$("<div class='file-progress'><div class='bar' style='width: 0%;'></div></div>").appendTo(c);f.fileupload({url:ig$.servlet,dataType:"text",done:function(r,n){var t=n.result||'<smsg errorcode="0xffff" errormsg="Server incorrect responding"/>',q=IG$._I13(t),j=IG$._I27(q),l,s,o,m=[],k;if(j){IG$._I51(q,e,null)}else{l=IG$._I18(q,"/smsg");if(l){s=IG$._I26(l);for(o=0;o<s.length;o++){k=IG$._I1c(s[o]);m.push(k)}}}if(m&&m.length){b.show();for(o=0;o<m.length;o++){b.store.add(m[o])}}},progressall:function(m,l){var j=parseInt(l.loaded/l.total*100,10),k=$(".bar",h);k.css("width",j+"%");k.text("Loaded "+l.loaded+" / "+l.total)},dropZone:a}).bind("fileuploadsubmit",function(k,j){});f.fileupload("option","url",ig$.servlet);e._m3()},_m2:function(){var g=this,e,a=g.down("[name=d_upfiles]"),c=g.down("[name=dgrid]"),j=a.store,d,f=[],h=new IG$._I3e(),b=c.store,k={};for(e=0;e<b.data.items.length;e++){d=b.data.items[e];k[d.get("name")]=d.get("uid")}for(e=0;e<j.data.items.length;e++){d=j.data.items[e];f.push("<item uid='"+d.get("uid")+"' name='"+d.get("filename")+"'"+(k[d.get("filename")]?" ouid='"+k[d.get("filename")]+"'":"")+"/>")}if(f.length){f="<smsg>"+f.join("")+"</smsg>";h.init(g,{ack:"11",payload:f,mbody:IG$._I2e({option:"reg_rcs",buid:g.uid})},g,function(l){g._m3(1)},false);h._l()}},_m3:function(a){var c=this,e=c.down("[name=dgrid]"),b=new IG$._I3e(),d="DashboardResources";if(a==1){d_upfiles=c.down("[name=d_upfiles]");d_upfiles.store.removeAll();d_upfiles.hide();c.down("[name=d_file]").hide()}if(!c.gobj){b.init(c,{ack:"11",payload:IG$._I2d({uid:"/"+d,name:d,type:"Workspace",post:"create",duty:"everyone",mode:"s"},"uid;type;name;post;duty;mode"),mbody:IG$._I2e({option:"translate"})},c,function(f){var g=IG$._I18(f,"/smsg/item");if(g){c.gobj=IG$._I1c(g);c._m3a(c.gobj.uid,a,"global",new IG$._I3d(c,function(){var h=this;if(h.uid&&h.cmode=="page"){h._m3a(h.gobj.uid,a,"page")}}))}},false);b._l()}else{c._m3a(c.gobj.uid,a,"global",new IG$._I3d(c,function(){var f=this;if(f.uid&&f.cmode=="page"){f._m3a(f.gobj.uid,a,"page")}}))}},_m3a:function(e,a,b,g){var d=this,c=new IG$._I3e(),f=d.down("[name=dgrid]");c.init(d,{ack:"5",payload:IG$._I2d({uid:e}),mbody:IG$._I2e({option:"folder"})},d,function(h){var n=IG$._I18(h,"/smsg/item"),m=n?IG$._I26(n):null,j,o=[],k,l;if(m){for(j=0;j<m.length;j++){k=IG$._I1c(m[j]);k.btype=b;if(k.name.indexOf(".")>-1){k.fileext=k.name.substring(k.name.lastIndexOf(".")+1)}o.push(k)}}for(j=f.store.data.items.length-1;j>=0;j--){l=f.store.data.items[j];if(l.get("btype")==b){f.store.remove(l)}}for(j=0;j<o.length;j++){f.store.add(o[j])}if(a==9){d.commitCode()}g&&g.execute()},false);c._l()},_l2:function(d){var c=this,b=new IG$._I3e(),a="<smsg><item uid='"+d.get("uid")+"'/></smsg>",e=c.down("[name=dgrid]");b.init(c,{ack:"30",payload:a,mbody:IG$._I2e({option:"delete"})},c,function(f){e.store.remove(d)},null);b._l()},initComponent:function(){var a=this;$s.apply(this,{tbar:[{iconCls:"icon-toolbar-import",tooltip:IRm$.r1("L_IMPORT_FILE"),text:IRm$.r1("L_IMPORT_FILE"),handler:function(){this._t$("cmd_import")},scope:this},{iconCls:"icon-refresh",tooltip:"Reload",handler:function(){this._t$("cmd_reload")},scope:this},"-",{iconCls:"icon-toolbar-runreport",tooltip:"Open Dashboard Resources",handler:function(){this._t$("cmd_mgr_rcs")},scope:this}],items:[{xtype:"container",layout:{type:"vbox",align:"stretch"},items:[{html:"<div class='m_fileupload'></div>",name:"d_file",height:120,hidden:true,bodyPadding:10},{name:"d_upfiles",xtype:"gridpanel",height:120,hidden:true,selType:"checkboxmodel",selModel:{mode:"MULTI"},store:{fields:["uid","filename","fileext"]},columns:[{text:IRm$.r1("L_FILENAME"),dataIndex:"filename",flex:1},{text:IRm$.r1("L_FILEEXT"),dataIndex:"fileext",flex:1},{xtype:"actioncolumn",width:20,items:[{iconCls:"icon-grid-delete",tooltip:"Delete item",handler:function(c,e,b){var d=c.store.getAt(e);c.store.remove(d)}}]}],fbar:["->",{xtype:"button",text:"Commit All Files",handler:function(){this._t$("cmd_c_files")},scope:this},{xtype:"button",text:"Cancel All Files",handler:function(){var c=this,b=c.down("[name=d_upfiles]");b.store.removeAll();b.hide();c.down("[name=d_file]").hide()},scope:this}]},{xtype:"gridpanel",name:"dgrid",flex:1,selType:"checkboxmodel",selModel:{mode:"MULTI"},store:{fields:["uid","name","type","filename","btype","memo","imgwidth","imgheight","fileext"]},columns:[{text:IRm$.r1("B_TYPE"),width:100,dataIndex:"btype"},{text:IRm$.r1("B_NAME"),flex:1,dataIndex:"name"},{text:IRm$.r1("L_FILENAME"),flex:1,dataIndex:"memo"},{text:IRm$.r1("L_FILEEXT"),width:120,dataIndex:"fileext"},{text:IRm$.r1("B_WIDTH"),dataIndex:"imgwidth",width:80},{text:IRm$.r1("B_HEIGHT"),dataIndex:"imgheight",width:80},{xtype:"actioncolumn",width:40,items:[{iconCls:"icon-grid-delete",tooltip:"Delete item",handler:function(c,f,b){var d=this,e=c.store.getAt(f);IG$._I55(IRm$.r1("B_CONFIRM"),IRm$.r1("B_CD_MHS",e.get("name")),function(g){if(g=="yes"){e&&d._l2(e)}})},scope:this}]}],listeners:{cellclick:function(b,c,m,d,l,n,g,h){var k=this,f=d.get("fileext"),o=(/png|gif|jpg|jpeg/).test(f);if(m==2&&o){var j=new IG$._dRp({uid:d.get("uid")});IG$._I_5(this,j)}},scope:this}}]}]});IG$._dR.superclass.initComponent.apply(this,arguments)},listeners:{afterrender:function(a){a._m1()}}});IG$._xA=$s.extend(IG$._I57,{scroll:false,initialized:false,closable:true,layout:"fit",bodyPadding:5,iconCls:"icon-ing-docdef",curnode:null,cursop:null,_1:function(){var a=this;if(a._cmode==2){a._IFd("BusinessLogic",0)}else{a._IFd("BusinessProcess",0);a._IFd("DashboardResources",1)}},_IFd:function(f,d){var c=this,a,e=this.down("[name=m_navi]"),b=new IG$._I3e();b.init(c,{ack:"11",payload:IG$._I2d({uid:"/"+f,name:f,type:"Workspace",post:"create",duty:"everyone",mode:"s"},"uid;type;name;post;duty;mode"),mbody:IG$._I2e({option:"translate"})},c,function(g){var j=this,l=IG$._I18(g,"/smsg/item"),k=l?IG$._I1b(l,"uid"):null,h;if(k){if(d==0){a=new IG$._Idd({name:"mtree",rootuid:k,_s1:function(s){var w=this,n=this.customMenu,t=s.get("type").toLowerCase(),v=s.get("name"),o=s.get("nodepath"),y=s.get("uid"),q=s.get("type"),x=(s.get("writable")=="T"||s.get("manage")=="T")?true:false,u=(s.get("manage")=="T")?true:false,m=false;n.removeAll();if(x||u){m=true;n.add({text:IRm$.r1("B_FOLDER"),hidden:ig$.fm.ig_n_f_f,handler:function(){this._I90.call(this,"Folder",y,o,s)},scope:this});if(t=="folder"){n.add({text:IRm$.r1("L_REMOVE"),hidden:ig$.fm.ig_n_f_f,handler:function(){this._IHf.call(this,y,s)},scope:this})}}return m},_i4:new IG$._I3d(j,j.rs__i3),_i3:new IG$._I3d(j,j.rs__i3)});e.add(a)}else{if(d==1){h=j.down("[name=m_1]");h.uid=k;h._IFe.call(h)}}}});b._l()},rs__i3:function(b){var a=this,c=a.down("[name=t_btn]");c.setDisabled(true);a._s1=b;if(b.get("writable")=="T"||b.get("manageable")=="T"){c.setDisabled(false)}a.l1(b)},l1:function(c){var a=this,b=new IG$._I3e();b.init(a,{ack:"5",payload:IG$._I2d({uid:c.get("uid")}),mbody:IG$._I2e({option:""})},a,function(d){var j=IG$._I18(d,"/smsg/item"),h=(j)?IG$._I26(j):null,k=[],e=this.down("[name=g1]"),f,g;if(h){for(f=0;f<h.length;f++){g=IG$._I1c(h[f]);if((a._cmode==2&&g.type=="JavaClass")||(a._cmode!=2&&g.type=="ClassModule")){k.push(g)}}}e.store.loadData(k)},false);b._l()},_d:function(a){var c=this,b=c.down("[name=mtree]");if(c._s1){b._I90.call(b,a,c._s1.get("uid"),c._s1.get("nodepath"),c._s1)}},initComponent:function(){var a=this;a.title=IRm$.r1("I_MGR_DBD");a.items=[{xtype:"panel",layout:"card",border:0,defaults:{deferredRender:false},name:"n_c",dockedItems:[{xtype:"toolbar",dock:"top",hidden:a._cmode==2,items:[{xtype:"displayfield",value:IRm$.r1("L_SEL_MODE")},"-",{xtype:"button",text:IRm$.r1("L_CLASS_MOD"),name:"b_0",pressed:1,handler:function(){var c=this,b=c.down("[name=n_c]").getLayout();c.down("[name=b_0]").toggle(true);c.down("[name=b_1]").toggle(false);c.down("[name=b_2]").toggle(false);b.setActiveItem(0)},scope:this},{xtype:"button",name:"b_1",text:IRm$.r1("L_RESOURCE"),handler:function(){var c=this,b=c.down("[name=n_c]").getLayout();c.down("[name=b_0]").toggle(false);c.down("[name=b_1]").toggle(true);c.down("[name=b_2]").toggle(false);b.setActiveItem(1)},scope:this},{xtype:"button",name:"b_2",text:IRm$.r1("L_MENU"),handler:function(){var c=this,b=c.down("[name=n_c]").getLayout();c.down("[name=b_0]").toggle(false);c.down("[name=b_1]").toggle(false);c.down("[name=b_2]").toggle(true);b.setActiveItem(2)},scope:this}]}],items:[{xtype:"panel",layout:"border",name:"m_0",border:false,title:IRm$.r1("L_CLASS_MOD"),items:[{xtype:"panel",layout:"fit",region:"west",collapsed:false,width:200,title:IRm$.r1("L_NAVIGATOR"),name:"m_navi",tbar:[{xtype:"button",name:"t_btn",text:IRm$.r1("L_CREATE_ITEM"),disabled:true,menu:{xtype:"menu",items:a._cmode==2?[{text:IRm$.r1("D_JAVAPACKAGE"),hidden:ig$.fm.ig_n_f_f,handler:function(){this._d("JavaPackage")},scope:this},"-",{text:IRm$.r1("D_JAVACLASS"),hidden:ig$.fm.ig_n_jcm,handler:function(){this._d("JavaClass")},scope:this}]:[{text:IRm$.r1("B_FOLDER"),hidden:ig$.fm.ig_n_f_f,handler:function(){this._d("Folder")},scope:this},"-",{text:IRm$.r1("D_CLASSMODULE"),hidden:ig$.fm.ig_n_jcm,handler:function(){this._d("ClassModule")},scope:this}]}},{xtype:"button",iconCls:"icon-refresh",tooltip:IRm$.r1("L_REFRESH"),handler:function(){var c=this,b=c.down("[name=mtree]"),d=b.getRootNode();b._I92.call(b,d)},scope:this}],items:[]},{xtype:"panel",region:"center",flex:1,layout:"fit",tbar:[{text:"Compile",handler:function(){var c=this,d=c.down("[name=g1]"),b="<smsg>",g=d.getSelectionModel().selected,h,e=0,f=new IG$._I3e();IG$._I55(ig$.appname,"Confirm to compile selected content?",function(j){if(j=="yes"){if(g.length>0){for(i=0;i<g.length;i++){h=g.items[i];b+="<item uid='"+h.get("uid")+"' option='compile'/>";e++}b+="</smsg>";if(e>0){c.setLoading(true);f.init(c,{ack:"73",payload:b,mbody:IG$._I2e({option:"compile"})},c,function(q){var o,n,k=c.down("[name=g1]"),l=IG$._I18(q,"/smsg"),s=IG$._I26(l),m,r,t;for(o=0;o<s.length;o++){r=IG$._I1b(s[o],"uid");t=IG$._I1b(s[o],"status");m=null;for(n=0;n<k.store.data.items.length;n++){if(k.store.data.items[n].get("uid")==r){m=k.store.data.items[n];break}}if(m){m.set("msg",t=="S"?"Success":"Error")}}},null);f._l()}}}})},scope:this},{text:IRm$.r1("B_REMOVE"),handler:function(){var c=this,d=c.down("[name=g1]"),b="<smsg>",g=d.getSelectionModel().selected,h,e=0,f=new IG$._I3e();IG$._I55(ig$.appname,"Confirm to delete content?",function(j){if(j=="yes"){if(g.length>0){for(i=0;i<g.length;i++){h=g.items[i];b+="<item uid='"+h.get("uid")+"'/>";e++}b+="</smsg>";if(e>0){c.setLoading(true);f.init(c,{ack:"30",payload:b,mbody:IG$._I2e({option:"delete"})},c,function(k){var l;for(l=g.length-1;l>=0;l--){d.store.remove(g.items[l])}},null);f._l()}}}})},scope:this}],items:[{xtype:"gridpanel",name:"g1",selType:"checkboxmodel",selModel:{checkSelector:".x-grid-cell",mode:"MULTI"},store:{xtype:"store",fields:["uid","name","description","nodepath","type","writable","msg"]},columns:[{text:IRm$.r1("B_NAME"),dataIndex:"name",width:250},{text:IRm$.r1("B_DESC"),dataIndex:"description",flex:1},{text:"Message",dataIndex:"msg",width:80},{xtype:"actioncolumn",width:30,menuDisabled:true,items:[{iconCls:"icon-grid-config",tooltip:IRm$.r1("L_EDIT"),handler:function(e,h,d){var b=e,c=b.store,g=c.getAt(h),f=IG$._I7d;if(f){f.m1$7.call(f,g.get("uid"),g.get("type").toLowerCase(),g.get("name"),g.get("nodepath"),true,g.get("writable")=="T")}},scope:this}]}],listeners:{cellclick:function(b,f,m,j,l,n,k,d){if(m==3){var h=b,o=h.store,g=o.getAt(n),c=IG$._I7d;if(c){c.m1$7.call(c,g.get("uid"),g.get("type").toLowerCase(),g.get("name"),g.get("nodepath"),true,g.get("writable")=="T")}}},scope:this}}]}]},new IG$._dR({cmode:"global",title:IRm$.r1("L_RESOURCE"),name:"m_1"}),new IG$._I7_({title:IRm$.r1("L_MENU"),name:"m_2"})]}];this.listeners={afterrender:function(b){b._1.call(b)}};IG$._xA.superclass.initComponent.call(this)}});IG$._I7k=$s.extend(IG$._I57,{scroll:false,initialized:false,closable:true,layout:"fit",bodyPadding:5,iconCls:"icon-ing-docdef",curnode:null,cursop:null,_IFd:function(){var c=this,a,d=this.down("[name=m_navi]"),b=new IG$._I3e();b.init(c,{ack:"11",payload:IG$._I2d({uid:"/SYS_Lookup",name:"SYS_Lookup",type:"Workspace",post:"create",duty:"everyone",mode:"s"},"uid;type;name;post;duty;mode"),mbody:IG$._I2e({option:"translate"})},c,function(e){var g=IG$._I18(e,"/smsg/item"),f=g?IG$._I1b(g,"uid"):null;if(f){c.tuid=f;a=new IG$._Idd({name:"mtree",rootuid:f,rootname:"Code Mapping",_s1:function(m){var s=this,j=this.customMenu,n=m.get("type").toLowerCase(),q=m.get("name"),k=m.get("nodepath"),u=m.get("uid"),l=m.get("type"),t=(m.get("writable")=="T"||m.get("manage")=="T")?true:false,o=(m.get("manage")=="T")?true:false,h=false;j.removeAll();if(t||o){h=true;j.add({text:IRm$.r1("B_FOLDER"),hidden:ig$.fm.ig_n_f_f,handler:function(){this._I90.call(this,"Folder",u,k,m)},scope:this});j.add({text:IRm$.r1("L_RENAME_ITEM",q),hidden:ig$.fm.ig_n_ren,handler:function(){this._I91.call(this,q,u,k,record)},scope:this})}return h},_i4:new IG$._I3d(c,c.rs__i3),_i3:new IG$._I3d(c,c.rs__i3)});d.add(a)}});b._l()},rs__i3:function(b){var a=this,c=a.down("[name=t_btn]");c.setDisabled(true);a._s1=b;if(b.get("writable")=="T"||b.get("manageable")=="T"){c.setDisabled(false)}a.l1(b)},l1:function(c){var a=this,b=new IG$._I3e();b.init(a,{ack:"5",payload:IG$._I2d({uid:c.get("uid")}),mbody:IG$._I2e({option:""})},a,function(d){var j=IG$._I18(d,"/smsg/item"),h=(j)?IG$._I26(j):null,k=[],e=this.down("[name=g1]"),f,g;if(h){for(f=0;f<h.length;f++){g=IG$._I1c(h[f]);if(g.type=="CodeMap"){k.push(g)}}}e.store.loadData(k)},false);b._l()},_d:function(a){var c=this,b=c.down("[name=mtree]");if(c._s1){b._I90.call(b,a,c._s1.get("uid"),c._s1.get("nodepath"),c._s1)}},_t$:function(c){var h=this,a,b,f,g=0,d=false;switch(c){case"cmd_rename":a=h.down("[name=g1]");b=a.getSelectionModel().selected;if(b&&b.length>0){f=b.items[0];var e=new IG$._Icd({itemname:f.get("name"),uid:f.get("uid"),nodepath:f.get("nodepath"),itemtype:f.get("type"),memo:f.get("memo")||"",callback:new IG$._I3d(h,function(k){})});IG$._I_5(this,e)}break;case"cmd_move":a=h.down("[name=g1]");b=a.getSelectionModel().selected;if(b&&b.length>0){var h=this,j=new IG$._I96({visibleItems:"workspace;folder",targetobj:"folder",u5x:{cubebrowse:false,rootuid:h.tuid},callback:new IG$._I3d(h,function(k){if(k){IG$._I55(IRm$.r1("B_CONFIRM"),IRm$.r1("B_CD_MHS",k.name),function(l){if(l=="yes"){address="<smsg>";g=0;for(i=0;i<b.length;i++){f=b.items[i];if(f.get("writable")=="T"||f.get("manage")=="T"){address+="<item uid='"+f.get("uid")+"'/>";g++}}address+="</smsg>";if(g>0){h.setLoading(true);req=new IG$._I3e();req.init(h,{ack:"11",payload:address,mbody:IG$._I2e({option:(d==true?"copy":"move"),target:k.uid})},h,function(m){var o=this,n=o.down("[name=mtree]"),q=n.getRootNode();n._I92.call(n,q)},null,null);req._l()}}})}})});IG$._I_5(this,j)}break;case"cmd_delete":a=h.down("[name=g1]");b=a.getSelectionModel().selected;if(b&&b.length>0){f=b.items[0];IG$._I55(ig$.appname,"Confirm to delete content?",function(l){if(l=="yes"){var k=new IG$._I3e();k.init(h,{ack:"7",payload:"<smsg><item uid='"+f.get("uid")+"'/></smsg>",mbody:IG$._I2e()},h,function(m){a.store.remove(f)},null);k._l()}})}break;case"cmd_export_meta":IG$._I55(IRm$.r1("T_EXP_MC"),IRm$.r1("T_EXP_MC_Q"),function(r){var k=h,o,m=new IG$._I3e(),l,q,n;o={uid:k.tuid,name:"SYS_Lookup",type:"Workspace",nodepath:"/SYS_Lookup"};if(o&&o.uid&&r=="yes"){n="<smsg>";n+="<item"+IG$._I20(o,"uid;nodepath;name;type","s")+"/>";n+="</smsg>";m.init(k,{ack:"5",payload:n,mbody:IG$._I2e({output:"file"})},k,function(s){var v=IG$._I18(s,"/smsg/item"),u,t;if(v){u=IG$._I1b(v,"luid");t=IG$._I1b(v,"filename");if(u&&t){$.download(ig$.servlet,[{name:"ack",value:"35"},{name:"payload",value:u},{name:"mbody",value:t},{name:"_mts_",value:(IG$._g$a||"")}],"POST")}}},null);m._l()}},h,h);break}},initComponent:function(){var a=this;a.items=[{xtype:"panel",layout:"border",border:false,items:[{xtype:"panel",layout:"fit",region:"west",collapsed:false,width:200,title:"Navigator",name:"m_navi",tbar:[{xtype:"button",name:"t_btn",text:IRm$.r1("B_CR"),disabled:true,menu:{xtype:"menu",items:[{text:IRm$.r1("B_FOLDER"),hidden:ig$.fm.ig_n_f_f,handler:function(){this._d("Folder")},scope:this},"-",{text:IRm$.r1("L_CODEMAPPING"),hidden:ig$.fm.ig_n_lk,handler:function(){this._d("CodeMap")},scope:this}]}},{xtype:"button",iconCls:"icon-refresh",tooltip:IRm$.r1("L_REFRESH"),handler:function(){var c=this,b=c.down("[name=mtree]"),d=b.getRootNode();b._I92.call(b,d)},scope:this}],items:[]},{xtype:"panel",region:"center",flex:1,layout:"fit",tbar:[{xtype:"button",text:IRm$.r1("L_RENAME"),handler:function(){this._t$("cmd_rename")},scope:this},{xtype:"button",text:IRm$.r1("L_MOVE"),handler:function(){this._t$("cmd_move")},scope:this},{xtype:"button",text:IRm$.r1("L_REMOVE"),handler:function(){this._t$("cmd_delete")},scope:this},"->",{text:IRm$.r1("L_EXPORT_META"),handler:function(){this._t$("cmd_export_meta")},scope:this}],items:[{xtype:"gridpanel",name:"g1",store:{xtype:"store",fields:["uid","name","description","nodepath","type","writable"]},selType:"checkboxmodel",selModel:{checkSelector:".x-grid-cell",mode:"SINGLE"},columns:[{text:IRm$.r1("B_NAME"),dataIndex:"name",tdCls:"igc-td-link"},{text:IRm$.r1("B_DESC"),dataIndex:"description",flex:1},{xtype:"actioncolumn",width:30,menuDisabled:true,items:[{iconCls:"icon-grid-config",tooltip:IRm$.r1("L_EDIT"),handler:function(e,h,d){var b=e,c=b.store,g=c.getAt(h),f=IG$._I7d;if(f){f.m1$7.call(f,g.get("uid"),g.get("type").toLowerCase(),g.get("name"),g.get("nodepath"),false,g.get("writable")=="T")}},scope:this}]}],listeners:{cellclick:function(b,f,m,j,l,n,k,d){if(m==1){var h=b,o=h.store,g=o.getAt(n),c=IG$._I7d;if(c){c.m1$7.call(c,g.get("uid"),g.get("type").toLowerCase(),g.get("name"),g.get("nodepath"),false,g.get("writable")=="T")}}},scope:this}}]}]}];this.listeners={afterrender:function(b){b._IFd.call(b)}};IG$._I7k.superclass.initComponent.call(this)}});IG$._I70=$s.extend($s.panel,{closable:true,iconCls:"icon-ing-docdef",layout:"fit",bodyPadding:10,_IFd:function(){var b=this,a=new IG$._I3e();a.showerror=false;a.init(b,{ack:"5",payload:IG$._I2d({uid:b.pp}),mbody:IG$._I2e({option:""})},b,b.rs_l1,b.rs_l1);a._l()},rs_l1:function(f){var h=this,c=f?IG$._I18(f,"/smsg/item"):null,g=c?IG$._I26(c):null,b=h.down("[name=c_loc]"),e=h.down("[name=c_loc2]"),d,j,a=[{name:"Select locale",value:""}];if(g&&g.length){for(d=0;d<g.length;d++){j=IG$._I1c(g[d]);a.push({name:j.name,value:j.uid})}}b.store.loadData(a);b.setValue("");e.store.loadData(a);e.setValue("")},c1:function(e){var d=this,h=d.down("[name=c_loc"+(e?"2":"")+"]"),f=d.down("[name=grdrcs]"),b=d.down("[name=vcol1]"),a=d.down("[name=vcol2]"),c,g=h.getValue();if(g){d.F1(g,e)}else{if(e){a.setText("-");for(c=0;c<f.store.data.items.length;c++){f.store.data.items[c].set("value2","")}for(c=0;c<f.__dp.length;c++){f.__dp[c].value2=""}}else{b.setText("-");a.setText("-");d._gl([])}}},_gl:function(b){var f=this,j=f.down("[name=grdrcs]"),d=f.down("[name=_pb_d]"),e=f.down("[name=_pb_c]"),g=100,h=Math.ceil(b.length/g),a=[],c;j.__dp=b;j.__p=0;for(c=0;c<h;c++){a.push({name:""+(c+1),value:c})}e.store.loadData(a);e.setValue(0);e.setDisabled(h>1?false:true);d.setValue("Count : "+b.length);f._g2()},_g2:function(d){var j=this,m=j.down("[name=grdrcs]"),h=j.down("[name=_pb_c]"),l=j.down("[name=_pb_p]"),g=j.down("[name=_pb_d]"),n=j.down("[name=_pb_n]"),e=m.__dp,a=m.__p,c=[],f,k=100,b=Math.ceil(e.length/k);if(d==2){m.__p=a=a+1}else{if(d==1&&a>0){m.__p=a=a-1}}if(d==3){g.setValue("Count : "+e.length)}if(a*k>e.length){m.__p=a=b}h.setValue(m.__p);for(f=a*k;f<Math.min(e.length,(a+1)*k);f++){c.push(e[f])}l.setDisabled(a>0?false:true);n.setDisabled(b>0&&b>a?false:true);m.store.loadData(c)},F1:function(a,d){var c=this,b;b=new IG$._I3e();b.init(c,{ack:"5",payload:IG$._I2d({uid:a}),mbody:IG$._I2e({option:""})},c,c._IM9,null,d);b._l()},_IM9:function(j,h){var m=this,q=m.down("[name=grdrcs]"),a=IG$._I18(j,"/smsg/item"),l,k,o,f=m.down("[name=vcol1]"),c=m.down("[name=vcol2]"),n={},e,g,d=[],b;if(a){k=IG$._I1b(a,"uid");o=IG$._I1b(a,"name");l=IG$._I26(a);for(g=0;g<l.length;g++){b={locale:o,name:IG$._I1b(l[g],"name"),group:IG$._I1b(l[g],"group"),value:IG$._I24(l[g])};d.push(b)}}if(h){for(g=0;g<q.__dp.length;g++){e=q.__dp[g];n[e.name]=e}for(g=0;g<q.store.data.length;g++){e=q.__dp[g];n[e.name]=e}for(g=0;g<d.length;g++){e=n[d[g].name];if(e){e.value2=d[g].value}}m._g2();c.setText(o)}else{f.setText(o);c.setText("-");m._gl(d)}},_t$:function(e){var j=this;switch(e){case"cmd_save":j.s1();break;case"cmd_refresh":j._IFd();break;case"cmd_delete":var l=j.down("[name=grdrcs]"),c=l.getSelectionModel().selected,g,d=l.__dp,b=l.__p*100,h,a;for(h=0;h<c.length;h++){g=c.items[h];a=l.store.indexOf(g);l.store.remove(g);d.splice(a,1)}j._g2(3);break;case"cmd_add_lcs":var l=j.down("[name=grdrcs]"),d=l.__dp;d.splice(0,0,{name:"",value:""});l.__p=0;j._g2(3);break;case"cmd_add_lang":var f=new IG$._I6e({parentnodepath:j.pp,itemtype:"PrivateContent",parentuid:j.pp});f.callback=new IG$._I3d(this,this.r_I90);IG$._I_5(this,f);break;case"cmd_import":var k=j.down("[name=pimp]");k.setVisible(true);break;case"cmd_export":var k=j.down("[name=pimp]");k.setVisible(true);j.x1();break}},r_I90:function(a){this._IFd()},s1:function(){var a=this,b=a.down("[name=c_loc]").getValue();this.ss1(b,true)},ss1:function(d,a){var f=this,j=f.down("[name=grdrcs]"),c,b,h,e,g;if(d){cnt="<smsg><item>";for(c=0;c<j.__dp.length;c++){b=j.__dp[c];e=b.name;h=(a?b.value:b.value2);if(e&&h){cnt+="<li name='"+e+"' group='"+(b.group||"")+"'><![CDATA["+h+"]]></li>"}}cnt+="</item></smsg>";g=new IG$._I3e();g.init(f,{ack:"31",payload:IG$._I2d({uid:d,is_locale:"T"},"uid;is_locale"),mbody:cnt},f,f.rs_s1,null,a);g._l()}else{a&&IG$._I54(null,IRm$.r1("E_LM_SEL"),null,null,1,"error")}},rs_s1:function(a,b){var d=this;if(b){var c=d.down("[name=c_loc2]").getValue();if(c){d.ss1(c,false);return}}IG$._I54(ig$.appname,IRm$.r1("M_SAVED"),null,d,0,"success")},ca:function(){var f=this,g=f.down("[name=timp]").getValue(),l=f.down("[name=grdrcs]"),m,h,k,j,b,e,a,d={},c=[];a="group";m=g.split("\n");for(e=0;e<m.length;e++){h=m[e];if(h){if(h.charAt(0)==";"){a=h.replace(/;/g,"");a=IG$.trim12(a)}else{k=h.split("\t");if(k.length>1){j=IG$.trim12(k[1]);b=IG$.trim12(k[0]);if(!d[b]){if(j.charAt(0)=='"'&&j.charAt(j.length-1)=='"'){j=j.substring(1,j.length-1)}c.push({group:a,name:b,value:j});d[b]=1}}}}}f._gl(c)},x1:function(){var f=this,g=f.down("[name=timp]"),l=f.down("[name=grdrcs]"),m,d,j,h,b,e,a,c=[],k=[];for(e=0;e<l.__dp.length;e++){d=l.__dp[e];c.push({group:d.group,value:d.name+"\t"+d.value})}c.sort(function(o,n){var q=0;if(o.group!=n.group){q=o.group>n.group?-1:1}return q});a=null;for(e=0;e<c.length;e++){if(c[e].group!=a){k.push(";;; "+c[e].group);a=c[e].group}k.push(c[e].value)}g.setValue(k.join("\n"))},a1:function(e){var d=this,c,h,f=d.down("[name=grdrcs]"),a=f.store,b=[],g=[];for(c=0;c<e.records.length;c++){h=e.records[c];g.push({uid:h.get("uid"),name:h.get("name"),type:h.get("type")})}for(c=0;c<a.data.items.length;c++){h=a.data.items[c];b[h.get("name")]=1}d.a3(g,b)},a3:function(g,a){var e=this,d=[];$.each(g,function(h,l){var j=e.a2(l),k;if(!a[l.name]){d.push({name:l.name,value:""});a[l.name]=1}if(j){k=new IG$._I3e();k.init(e,{ack:"5",payload:"<smsg><item"+IG$._I20({uid:l.uid,name:l.name,type:l.type},"uid;nodepath;name;type","s")+"/></smsg>",mbody:IG$._I2e({option:"metrics"})},e,function(m){var s=[],r=IG$._I18(m,"/smsg/item"),q=IG$._I26(r),o,n;for(n=0;n<q.length;n++){o=IG$._I1c(q[n]);s.push(o)}if(s.length){e.a3(s,a)}},null);k._l()}});if(d.length){var f=e.down("[name=grdrcs]"),c=f.__dp,b;for(b=0;b<d.length;b++){c.splice(0,0,d[b])}f.__p=0;e._g2(3)}},a2:function(a){var c=a.type.toLowerCase(),b=0;if((/workspace|folder|cube|sqlcube|datacube/).test(c)){b=1}return b},initComponent:function(){var a=this;a.pp="/SYS_Config/"+(a.dicmode?"dictionary":"locale"),$s.apply(this,{items:[{xtype:"form",layout:{type:"vbox",align:"stretch"},border:0,items:[{xtype:"fieldset",name:"pimp",title:"Copy-paste your locale document here",hidden:true,flex:2,layout:{type:"vbox",align:"stretch"},items:[{xtype:"textarea",name:"timp",flex:1},{xtype:"fieldcontainer",layout:{type:"hbox",align:"stretch"},items:[{xtype:"button",text:"Import",handler:function(){this.ca()},scope:this},{xtype:"button",text:"Close",handler:function(){var b=this,c=b.down("[name=pimp]");c.setVisible(false)},scope:this},{xtype:"container",flex:1}]}]},{xtype:"gridpanel",name:"grdrcs",store:{xtype:"store",fields:["name","value","value2","locale","group"]},selType:"checkboxmodel",selModel:{checkSelector:".x-grid-cell"},flex:3,plugins:[{ptype:"cellediting",clicksToEdit:false,listeners:{edit:function(h,j,f){var k=this,g=j.record,m=j.field,o=j.value,q=k.down("[name=grdrcs]"),b=q.store.indexOf(g),d=q.__dp,l=q.__p,c=100,g;g=d[c*l+b];g[m]=o},scope:this}}],viewConfig:a.dicmode?{plugins:{ptype:"gridviewdragdrop",ddGroup:"_I$RD_G_1"},__ing:1,listeners:{beforedrop:function(e,f,h,k,j){var c=false,g,b,d=a.down("[name=c_loc]");f.copy=true;if(d.getValue()){a.a1.call(a,f)}return c},drop:function(d,e,g,b){var f=false,c=this;return f}}}:null,bbar:{xtype:"toolbar",name:"_pb_",items:[{xtype:"button",name:"_pb_p",disabled:true,iconCls:"x-tbar-page-prev",handler:function(){this._g2(1)},scope:this},"-",{xtype:"combobox",name:"_pb_c",fieldLabel:"Page",labelWidth:50,width:120,queryMode:"local",displayField:"name",labelField:"name",valueField:"value",editable:false,autoSelect:true,disabled:true,store:{fields:["name","value"]},listeners:{select:function(b,g,c,d){var e=this,f=e.down("[name=grdrcs]");f.__p=Number(b.getValue());e._g2()},scope:this}},"-",{xtype:"button",name:"_pb_n",disabled:true,iconCls:"x-tbar-page-next",handler:function(){this._g2(2)},scope:this},"->",{xtype:"displayfield",name:"_pb_d",value:"No data to display"}]},columns:[{xtype:"gridcolumn",text:"Group",dataIndex:"group",width:200,editor:{allowBlank:true}},{xtype:"gridcolumn",text:"Name",dataIndex:"name",width:200,editor:{allowBlank:false}},{xtype:"gridcolumn",text:"Value",name:"vcol1",flex:1,dataIndex:"value",editor:{allowBlank:true}},{xtype:"gridcolumn",text:"Value",name:"vcol2",flex:1,dataIndex:"value2",editor:{allowBlank:true}}]}]}],tbar:[{iconCls:"icon-toolbar-save",tooltip:IRm$.r1("L_SAVE_CONTENT"),handler:function(){this._t$("cmd_save")},scope:this},"-",{iconCls:"icon-toolbar-add",tooltip:IRm$.r1("L_LM_ADD"),handler:function(){this._t$("cmd_add_lang")},scope:this},{xtype:"combobox",name:"c_loc",fieldLabel:"Base Language",labelWidth:100,queryMode:"local",displayField:"name",labelField:"name",valueField:"value",editable:false,autoSelect:true,store:{fields:["name","value"]},listeners:{change:function(b,e,c,d){this.c1()},scope:this}},{iconCls:"icon-refresh",tooltip:IRm$.r1("L_REFRESH"),handler:function(){this._t$("cmd_refresh")},scope:this},{iconCls:"icon-toolbar-remove",tooltip:IRm$.r1("B_DELETE_ITEM"),handler:function(){this._t$("cmd_delete")},scope:this},"-",{iconCls:"icon-toolbar-add",tooltip:IRm$.r1("L_LM_LCS"),handler:function(){this._t$("cmd_add_lcs")},scope:this},"-",{iconCls:"icon-ing-dwn",tooltip:IRm$.r1("L_LM_IMP"),handler:function(){this._t$("cmd_import")},scope:this},{iconCls:"icon-ing-upl",tooltip:IRm$.r1("L_LM_EXP"),handler:function(){this._t$("cmd_export")},scope:this},"-",{xtype:"combobox",name:"c_loc2",fieldLabel:"Second Language",labelWidth:100,queryMode:"local",displayField:"name",labelField:"name",valueField:"value",editable:false,autoSelect:true,store:{fields:["name","value"]},listeners:{change:function(b,e,c,d){this.c1(true)},scope:this}},]});IG$._I70.superclass.initComponent.call(this)},listeners:{afterrender:function(a){var b=this;b._IFd()}}});IG$._Ia5=$s.extend(IG$._I57,{padding:0,closable:true,layout:"fit",_IFd:function(){var c=this,b,a=c.down("[name=t_save]"),d=c.down("[name=t_save_as]");if(this.writable==true||this.uid==""){a.setVisible(true)}d.setVisible(true);b=new IG$._I3e();b.init(c,{ack:"5",payload:IG$._I2d({uid:c.uid}),mbody:IG$._I2e({option:"standard"})},c,c._IM9,false);b._l()},_IM9:function(a){},_t$:function(d){var c=this;switch(d){case"cmd_save":var a=this.uid;if(!a){this._IJ5(false)}else{var b=null;this.fV6(a,b,target)}break;case"cmd_saveas":this.$f1(false);break}},fV6:function(b,e,c){var a=this;var d=new IG$._I3e();d.init(a,{ack:"31",payload:IG$._I2d({uid:b}),mbody:e},a,a.rs_fV6,null,[c]);d._l()},r_IJ6:function(a,b){var c=(b?b[0]:false);if(c==true){this._IM8()}else{this._ILb_=false;IG$._I54(ig$.appname,IRm$.r1("M_SAVED"),null,null,0,"success")}},$f1:function(a){var b=new IG$._I96({mode:"newitem",initpath:this.nodepath});b.callback=new IG$._I3d(this,this.$f2,a);IG$._I_5(this,b)},$f2:function(d,b){var a=this,e=this._ILa._IJ1.call(this._ILa),c=new IG$._I3e();c.init(a,{ack:"31",payload:"<smsg><item address='"+d.nodepath+"/"+d.name+"' name='"+d.name+"' type='"+(this.itemtype?this.itemtype:"Report")+"' pid='"+d.uid+"' description=''/></smsg>",mbody:e},a,a._IO5,a._IO6,[d.name,b,d.nodepath,d.uid,e]);c.showerror=false;c._l()},_IO6:function(f,c){var b=this,g=c[0],j=c[1],d=c[2],h=c[3],e=c[4],a=IG$._I27(f);if(a=="0x12e0"){IG$._I55(ig$.appname,g+" already exist on the server. Would you overwrite existing item with this copy?",function(l){if(l=="yes"){var k=new IG$._I3e();k.init(b,{ack:"31",payload:"<smsg><item address='"+d+"/"+g+"' name='"+g+"' type='"+(this.itemtype?this.itemtype:"UIPage")+"' pid='"+h+"' description='' overwrite='T'/></smsg>",mbody:e},b,b._IO5,null,[g,j,d]);k._l()}},b,b)}else{IG$._I51(f,b)}},_IO5:function(a,d){var c,g=d[0],e=d[1],f=IG$._I18(a,"/smsg/item"),b=IG$._I1b(f,"name");if(e==true){this._IM8();return}this._ILb_=false;this.uid=IG$._I1b(f,"uid");this.uid=this.uid;this.setTitle(b)},_IM8:function(c){var b=this;if(c=="no"){var a=new IG$._I3e();a.init(b,{ack:"11",payload:IG$._I2d({uid:b.uid}),mbody:IG$._I2e({option:"lock",detail:"close"})},b,function(d){this._IM8()},false);a._l()}else{if(c=="yes"){var a=new IG$._I3e();a.init(b,{ack:"11",payload:IG$._I2d({uid:b.uid}),mbody:IG$._I2e({option:"lock",detail:"close"})},b,function(d){this._t$("cmd_save",true)},false);a._l()}}},initComponent:function(){var b=this,a=[];b.items=[{xtype:"panel",padding:10,layout:{type:"vbox",align:"stretch"},border:0,items:[{xtype:"fieldset",title:"Global Filter",layout:{type:"vbox",align:"none"},items:[{xtype:"fieldcontainer",fieldLabel:"Filter Item",layout:{type:"hbox",align:"stretch"},items:[{xtype:"textfield",name:"gfilter"},{xtype:"button",text:".."}]},{xtype:"combobox",fieldLabel:"Selection type",labelField:"disp",valueField:"type",store:{xtype:"store",fields:["disp","type"],data:a}}]},{xtype:"fieldset",title:"Dashboard Items",layout:"fit",flex:1,items:[{xtype:"gridpanel",store:{xtype:"store",fields:["title","type","dispoption","nodepath","uid","name"]},selType:"checkboxmodel",selModel:{checkSelector:".x-grid-cell"},columns:[{xtype:"gridcolumn",text:"Title"},{xtype:"gridcolumn",text:"Display type"},{xtype:"gridcolumn",text:"Display Option"},{xtype:"gridcolumn",text:"Bind report",flex:1}],tbar:[{xtype:"button",text:"Add View",handler:function(){var c=new IG$._Ia8({});IG$._I_5(this,c)},scope:this},{xtype:"button",text:"Add Filter",handler:function(){var c=new IG$._Ia7({});IG$._I_5(this,c)},scope:this},{xtype:"button",text:"Edit",handler:function(){var c=new IG$._Ia8({});IG$._I_5(this,c)},scope:this}]}]},{xtype:"textarea",name:"layouthtml",fieldLabel:"Layout HTML",height:200}]}];b.tbar=[{iconCls:"icon-toolbar-save",name:"t_save",tooltip:IRm$.r1("L_SAVE_CONTENT"),hidden:true,handler:function(){this._t$("cmd_save")},scope:this},{iconCls:"icon-toolbar-saveas",name:"t_save_as",tooltip:IRm$.r1("L_SAVE_REPORT_AS"),hidden:true,handler:function(){this._t$("cmd_saveas")},scope:this}];IG$._Ia5.superclass.initComponent.call(this)},listeners:{afterrender:function(a){a._IFd()}}});IG$._Ia8=$s.extend($s.window,{modal:true,region:"center",layout:"fit",closable:false,resizable:false,width:360,height:400,autoHeight:false,parentnodepath:null,itemtype:null,parentuid:null,callback:null,fV9:function(){},initComponent:function(){var a=this;a.title=IRm$.r1("L_MAKEITEM");$s.apply(this,{defaults:{bodyStyle:"padding:10px"},items:[{xtype:"form",layout:"anchor",autoScroll:true,defaults:{anchor:"100%"},items:[{xtype:"fieldset",title:"Basic Option",layout:"anchor",defaults:{anchor:"100%"},items:[{xtype:"combobox",fieldLabel:"View type",labelField:"label",displayField:"label",valueField:"value",editable:false,store:{xtype:"store",fields:["label","value"],data:[{label:"Chart",value:"chart"},{label:"Report",value:"report"},{label:"As saved",value:"saved"},{label:"R statistics",value:"R"},{label:"Filter",value:"filter"}]}},{xtype:"fieldcontainer",fieldLabel:"Report Item",layout:{type:"hbox",align:"stretch"},items:[{xtype:"textfield"},{xtype:"button",text:".."}]}]},{xtype:"fieldset",title:"Size option",layout:"anchor",defaults:{anchor:"100%"},items:[{xtype:"numberfield",fieldLabel:"Height",minValue:50}]}]}],buttons:[{text:IRm$.r1("B_CONFIRM"),handler:function(){this.fV9()},scope:this},{text:IRm$.r1("B_CANCEL"),handler:function(){this.close()},scope:this}]});IG$._Ia8.superclass.initComponent.apply(this,arguments)}});IG$._Ia6=function(a){this.container=a;this.table=$("<table></table>").appendTo(a)};IG$._Ia6.prototype={};IG$._Ia7=$s.extend($s.window,{modal:true,region:"center",layout:"fit",closable:false,resizable:false,width:400,autoHeight:true,callback:null,fV9:function(){},r1:function(){var c=this,d,a,b=c.R1;if(!b){d=c.down("[name=filterarea]");a=$("[name=filterdiv]",d.el.dom);b=c.R1=new IG$._Ia6(a)}b.table.empty()},initComponent:function(){var a=this;a.title=IRm$.r1("L_MAKEITEM");$s.apply(this,{defaults:{bodyStyle:"padding:10px"},items:[{xtype:"form",layout:"anchor",autoScroll:true,defaults:{anchor:"100%"},items:[{xtype:"fieldset",title:"Basic Option",layout:"anchor",defaults:{anchor:"100%"},items:[{xtype:"combobox",fieldLabel:"View type",labelField:"label",displayField:"label",valueField:"value",editable:false,store:{xtype:"store",fields:["label","value"],data:[{label:"Chart",value:"chart"},{label:"Report",value:"report"},{label:"As saved",value:"saved"},{label:"R statistics",value:"R"},{label:"Filter",value:"filter"}]}},{html:"<div name='filterdiv'></div>",name:"filterarea",height:300},{xtype:"fieldcontainer",fieldLabel:"Report Item",layout:{type:"hbox",align:"stretch"},items:[{xtype:"textfield"},{xtype:"button",text:".."}]}]},{xtype:"fieldset",title:"Size option",layout:"anchor",defaults:{anchor:"100%"},items:[{xtype:"numberfield",fieldLabel:"Height",minValue:50}]}]}],buttons:[{text:IRm$.r1("B_CONFIRM"),handler:function(){this.fV9()},scope:this},{text:IRm$.r1("B_CANCEL"),handler:function(){this.close()},scope:this}],listeners:{afterrender:function(c){var b=this;b.r1()}}});IG$._Ia7.superclass.initComponent.apply(this,arguments)}});IG$._I71=$s.extend($s.panel,{bodyStyle:"padding:5px",closable:true,iconCls:"icon-ing-docdef",layout:{type:"vbox",align:"stretch"},defaults:{anchor:"100%"},ul1:function(){var a=this.down("[name=mform]");if(a.getForm().isValid()){a.getForm().submit({url:ig$.servlet,waitMsg:"Uploading your data file",success:function(b,e){var d=IG$._I18(b.errorReader.xmlData,"/smsg/result");var c=IG$._I1b(d,"uid");a.customowner.sKK1.call(a.customowner,c)},failure:function(b,c){}})}},sKK1:function(c){var a=this,b=this.down("[name=uploadset]"),d=new IG$._I3e();b.setVisible(false);a.uid=c;a.setLoading(true,true);d.init(a,{ack:"27",payload:IG$._I2d({uid:c},"uid"),mbody:IG$._I2e({option:"meta_imp"})},a,a.rs_sK3b,null);d._l()},rs_sK3b:function(n){var b=this,f=IG$._I18(n,"/smsg"),c=IG$._I26(f),k,q=b.down("[name=metadata]"),m=q.store,a=m.getRootNode(),r=[],o,g={},e,l,j,h;for(k=0;k<c.length;k++){o=IG$._I1c(c[k]);h=o.type.toLowerCase();o.iconCls=IG$._I11(h,null);o.checked=false;if(/(cube|mcube|metrics|folder|datacube|rfolder|datemetric|nosql|mdbcube|sqlcube|javapackage)/.test(h)==true&&h!="cubemodel"){o.leaf=false}else{if(/(folder|workspace|datemetric|table|schema|pool)/.test(h)==false){o.leaf=true}}g[o.nodepath]=o;if(k==0){r.push(o)}else{if(h=="localdata"){e=g._data_contents_;if(!e){e={uid:"",type:"data_contents_",name:"_data_contents_",leaf:false,checked:false};g[e.name]=e;r.push(e)}}else{j=o.nodepath.split("/");j.splice(j.length-1,1);l=j.join("/");e=g[l]}if(e){if(e.children){e.children.push(o)}else{e.children=[o]}}else{if(j.length==1){r.push(o)}}}}while(a.firstChild){a.removeChild(a.firstChild)}for(k=0;k<r.length;k++){a.appendChild(r[k])}},_t$:function(c){var a=this,b=a;switch(c){case"cmd_imp":if(a.uid){IG$._I55("ImportMeta","Would you include meta to server?",b.do_mEp,b,b)}break}},append_node:function(c,b){var a=this;if(c.childNodes){$.each(c.childNodes,function(d,e){b.push(e);a.append_node(e,b)})}},do_mEp:function(h){if(h=="yes"){var a=this,c,g=[],k=a.down("[name=metadata]"),m=k.store,l=m.getRootNode(),b=[],o={},n,f,j=new IG$._I3e(),e=[];a.append_node(l.childNodes[0],b);if(b&&b.length>0){a.setLoading(true,true);e.push("<smsg>");e.push("<info"+IG$._I20({option:"imp_load"},"option","s")+">");for(c=0;c<b.length;c++){f=b[c];o[f.get("uid")]=f;n={name:f.get("name"),uid:f.get("uid"),nodepath:f.get("nodepath"),type:f.get("type")};e.push("<item"+IG$._I20(n,"name;uid;type","s")+"/>");g.push(n)}e.push("</info>");e.push("</smsg>");j.init(a,{ack:"27",payload:IG$._I2d({uid:a.uid},"uid"),mbody:e.join("")},a,a.rs_mEp,null,o);j._l()}}},rs_mEp:function(f,k){var b=IG$._I18(f,"/smsg"),h=IG$._I26(b),d,j,e,c,g=0,a;for(d=0;d<h.length;d++){j=IG$._I1c(h[d]);e=k[j.uid];if(e){a=parseInt(j.status);switch(a){case 0:c="Not processed";break;case 1:c="Success";break;case 5:c="STAT_CONTENT_MISSING";break;case 6:c="STAT_FAILE_PARENT";break;case 7:c="STAT_UPPER_NODE_MISSING";break;case 8:c="STAT_NO_PARENT";break;default:c="Unknown "+j.status;break}if(a!=1){g++}e.set("logresult",c)}}if(g>0){IG$._I54(ig$.appname,""+g+" item failed to import!",null,null,1,"error")}else{IG$._I54(ig$.appname,IRm$.r1("M_SAVED"),null,null,0,"success")}},uX:function(c,b){var a,d;for(a=0;a<c.childNodes.length;a++){d=c.childNodes[a];d.set("checked",b);this.uX(d,b)}},initComponent:function(){var a=this;this.items=[{xtype:"fieldset",title:"Load File",region:"north",name:"uploadset",layout:"anchor",collapsible:true,items:[{xtype:"form",name:"mform",border:0,customowner:this,layout:{type:"hbox",align:"stretch"},items:[{xtype:"hiddenfield",name:"_mts_",value:IG$._g$a},{xtype:"fileuploadfield",name:"photo",flex:1,fieldLabel:"Data",msgTarget:"side",allowBlank:false,anchor:"100%",buttonText:IRm$.r1("L_SELECT_FILE"),buttonConfig:{margin:"0 2 0"}},{xtype:"button",text:"Upload file",handler:function(){a.ul1.call(a)}}]}]},{xtype:"form",layout:{type:"vbox",align:"stretch"},flex:1,border:0,defaults:{anchor:"100%"},items:[{xtype:"fieldcontainer",border:0,layout:{type:"hbox",align:"stretch"},items:[{xtype:"displayfield",value:"Items on file",flex:1},{xtype:"button",plain:true,text:"Import Selected",handler:function(){this._t$("cmd_imp")},scope:this}]},{xtype:"treepanel",flex:1,name:"metadata",resizable:false,collapsible:false,rootVisible:false,useArrows:true,store:{type:"treestore",root:{expanded:true},fields:["name","uid","type","nodepath","exist","existname","checked","logresult","iconCls"]},tbar:[{xtype:"button",text:"Select All",handler:function(){var c=this.down("[name=metadata]"),d=c.getRootNode(),b;for(b=0;b<d.childNodes.length;b++){d.childNodes[b].set("checked",true)}},scope:this}],columns:[{xtype:"treecolumn",flex:1,width:120,text:"Data name",dataIndex:"name",editor:{allowBlank:false}},{xtype:"gridcolumn",width:40,text:"Exist",dataIndex:"exist",editor:{allowBlank:false}},{xtype:"gridcolumn",flex:1,text:"Type",dataIndex:"type",width:80,editor:{allowBlank:false}},{xtype:"gridcolumn",flex:1,text:"Path",dataIndex:"nodepath",editor:{allowBlank:false}},{xtype:"gridcolumn",flex:1,text:"Log Result",dataIndex:"logresult"}],listeners:{checkchange:function(d,c,b){d.expand();this.uX(d,c)},scope:this}}]}];IG$._I71.superclass.initComponent.apply(this,arguments)},listeners:{afterrender:function(){var b=this,a=b.down("[name=mform]");a.getForm().errorReader=new IG$.m2ER();a.customowner=b}}});IG$.cMb3p=$s.extend($s.window,{width:400,autoHeight:true,layout:"fit",initComponent:function(){this.title=IRm$.r1("T_META_IMP");this.items=[new IG$._I71()];this.buttons=[{text:IRm$.r1("B_CLOSE"),handler:function(){this.close()},scope:this}];IG$.cMb3p.superclass.initComponent.apply(this,arguments)}});
+/*
+amplixbi.com on MPLIX project
+Copyright(c) 2011 amplixbi.com
+http://www.amplixbi.com/
+*/
+/*
+This file is part of INGECEP
+
+Copyright (c) 2011-2013 INGECEP Inc
+
+Contact:  http://www.ingecep.com/contact
+
+If you are unsure which license is appropriate for your use, please contact the sales department
+at http://www.ingecep.com/contact.
+
+*/
+IG$/*mainapp*/.__C/*classmodule*/ = $s.extend($s.panel, {
+	closable: true,
+	
+	layout: "border",
+	bodyPadding: 0,
+	
+	_IFd/*init_f*/: function() {
+		var me = this;
+		
+		me.L1/*loadDataSource*/();
+	},
+	
+	L1/*loadDataSource*/: function() {
+		var me = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		
+		// me.setLoading(true);
+		
+		req.init(me, 
+			{
+	            ack: "25",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: "/"}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'standard'})
+	        }, me, function(xdoc) {
+	        	var me = this,
+					dp = [],
+					i, cnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"), 
+					snodes, p,
+					isadmin,
+					t_ds = me.down("[name=t_ds]");				
+				
+				dp.push({name:"Select Database Instance", poolname:""}); 
+				
+				if (cnode)
+				{
+					snodes = IG$/*mainapp*/._I26/*getChildNodes*/(cnode);
+					isadmin = IG$/*mainapp*/._I83/*dlgLogin*/.jS2/*isAdmin*/;
+					
+					for (i=0; i < snodes.length; i++)
+					{
+						p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(snodes[i]);
+						if (isadmin == true || (isadmin == false && p.name.toUpperCase() != "IGCBASE"))
+						{
+							dp.push({
+								name:p.disp, 
+								poolname: p.name,
+								uid: p.uid || "",
+								isuserdb: (p.isuserdb == "T" ? true : false),
+								savepwd: (p.isuserdb == "T" && p.savepwd == "F" ? false : true)
+							});
+						}
+					}
+				}
+				
+				t_ds.store.loadData(dp);
+				t_ds.setValue("");
+				
+				me.a2/*loadItemContent*/();
+	        }, function() {
+	        	me.a2/*loadItemContent*/();
+	        });
+		req._l/*request*/();
+	},
+	
+	a2/*loadItemContent*/: function() {
+		var panel = this,
+			req;
+			
+		req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.init(panel, 
+			{
+	            ack: "5",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: panel.uid}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'standard'})
+	        }, panel, panel.rs_a2/*loadItemContent*/, false);
+		req._l/*request*/();
+	},
+	
+	rs_a2/*loadItemContent*/: function(xdoc) {
+		var me = this,
+			item = new IG$/*mainapp*/.ifg/*classmodule*/(xdoc),
+			jdom,
+			jdomeditor,
+			jview,
+			w, h, i,
+			dp = [],
+			editor,
+			t_ds = me.down("[name=t_ds]");
+			
+		me.item = item;
+		t_ds.setValue(item.objinfo.ds || "");
+		
+		if (!window.ace)
+		{
+			IG$/*mainapp*/.x03/*getScriptCache*/(ig$/*appoption*/.scmap.igcg, new IG$/*mainapp*/._I3d/*callBackObj*/(me, function() {
+				this.rs_a2/*loadItemContent*/(xdoc);
+			}));
+			
+			return;
+		}
+
+		jdom = $(me.down("[name=javasrc]").el.dom);
+		jdomeditor = $(".idv-jcl-edtr", jdom);
+		jdomeditor.empty();
+		
+		w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(jdom);
+		h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(jdom);
+		
+		jview = $("<div class='idv-jcl-view'></div>").appendTo(jdomeditor);
+		IG$/*mainapp*/.x_10/*jqueryExtension*/._w(jview, w);
+		IG$/*mainapp*/.x_10/*jqueryExtension*/._h(jview, h);
+		
+		editor = ace.edit(jview[0]);
+	    editor.getSession().setMode("ace/mode/java");
+	    
+	    me.scripteditor = editor;
+	    me.scriptview = jview;
+		
+		me.scriptview = jview;
+		me.scripteditor = editor;
+		
+		jdom = $(me.down("[name=javasrc_all]").el.dom);
+		jdomeditor = $(".idv-jcl-edtr", jdom);
+		jdomeditor.empty();
+		
+		w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(jdom);
+		h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(jdom);
+		
+		jview = $("<div class='idv-jcl-view'></div>").appendTo(jdomeditor);
+		IG$/*mainapp*/.x_10/*jqueryExtension*/._w(jview, w);
+		IG$/*mainapp*/.x_10/*jqueryExtension*/._h(jview, h);
+		
+		editor = ace.edit(jview[0]);
+		editor.getSession().setMode("ace/mode/java");
+		
+		me.scriptview_all = jview;
+		me.scripteditor_all = editor;
+		
+		for (i=0; i < item.modules.length; i++)
+		{
+			dp.push({
+				name: item.modules[i].name,
+				description: item.modules[i].description
+			});
+		}
+		
+		me.down("[name=g_m]").store.loadData(dp);
+	},
+	
+	a3/*saveMetaContent*/: function(smode) {
+		var me = this,
+    		req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+    		cnt,
+			ack = "31",
+			t_ds = me.down("[name=t_ds]");
+			
+		me._c1/*commitModule*/();
+    	
+    	me.item.objinfo.ds = t_ds.getValue();
+    	cnt = me.item.p2/*getXML*/();
+		
+		if (smode == "source")
+		{
+			ack = "73";
+		}
+    	
+    	req.init(me, 
+			{
+	            ack: ack,
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: me.uid, option: (smode == "source" ? smode : null)}, "uid;option"),
+	            mbody: cnt
+	        }, me, me.rs_a3/*saveMetaContent*/, null, smode);
+		req._l/*request*/();
+	},
+	
+	rs_a3/*saveMetaContent*/: function(xdoc, smode) {
+		var me = this,
+			tnode,
+			scode;
+		
+		if (smode == "source")
+		{
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item/source");
+			scode = (tnode ? IG$/*mainapp*/._I24/*getTextContent*/(tnode) : "");
+			me.scripteditor_all.setValue(scode);
+		}
+		else if (smode == "compile")
+		{
+			me.a4/*doCompile*/();
+		}
+		else
+		{
+			IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1("M_SAVED"), null, null, 0, "success");
+		}
+	},
+	
+	a4/*doCompile*/: function() {
+		var panel = this,
+    		req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+    		cnt;
+    	
+    	cnt = panel.item.p2/*getXML*/();
+    	
+    	req.init(panel, 
+			{
+	            ack: "73",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: panel.uid, option: "compile"}, "uid;option"),
+	            mbody: cnt
+	        }, panel, panel.rs_a4/*doCompile*/, null);
+		req._l/*request*/();
+	},
+	
+	rs_a4/*doCompile*/: function(xdoc) {
+		var me = this,
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item/errormessage"),
+			errmsg;
+			
+		if (tnode)
+		{
+			errmsg = IG$/*mainapp*/._I24/*getTextContent*/(tnode);
+			errmsg = Base64.decode(errmsg);
+			me.down("[name=compileres]").setValue(errmsg);
+			
+			me._m1/*setViewMode*/(1);
+		}
+		else
+		{
+			me.down("[name=compileres]").setValue("");
+			IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, "Compiled Successfully", null, null, 0, "success");
+		}
+	},
+	
+	_t$/*toolbarHandler*/: function(cmd) {
+		var me = this,
+			g_m = me.down("[name=g_m]"),
+			sel, rec, module,
+			i;
+		
+		switch (cmd)
+		{
+		case "cmd_save":
+			me.a3/*saveMetaContent*/();
+			break;
+		case "cmd_compile":
+			me.a3/*saveMetaContent*/("compile");
+			break;
+		case "cmd_source":
+			me.a3/*saveMetaContent*/("source");
+			break;
+		case "cmd_rename":
+		case "cmd_delete":
+			sel = g_m.getSelectionModel().selected;
+			if (sel && sel.length > 0)
+			{
+				rec = sel.items[0];
+			}
+			
+			if (rec && rec.get("name"))
+			{
+				for (i=0; i < me.item.modules.length; i++)
+				{
+					if (me.item.modules[i].name == rec.get("name"))
+					{
+						if (cmd == "cmd_delete")
+						{
+							me.item.modules.splice(i, 1);
+						}
+						else
+						{
+							module = me.item.modules[i];
+						}
+						break;
+					}
+				}
+				
+				if (cmd == "cmd_delete")
+				{
+					g_m.store.remove(rec);
+					me._module = null;
+					me.scripteditor.setValue("");
+				}
+				else
+				{
+					var dlg = new IG$/*mainapp*/._Icd/*makeItemEditor*/({
+						itemtype: "Module",
+						itemname: module.name,
+						description: module.description,
+						$f3/*processMakeMetaItem*/: function() {
+							var _m = this,
+								citemname = _m.down("[name=fitemname]"),
+								itemname = _m.down("[name=fitemname]").getValue(),
+								desc = _m.down("[name=fdesc]").getValue(),
+								fhelpuid = _m.down("[name=fhelpuid]").getValue() || null,
+								selitemtype = _m.down("[name=selitemtype]"),
+								r;
+								
+							citemname.clearInvalid();
+							
+							if (!itemname)
+							{
+								citemname.markInvalid([citemname.blankText]);
+								return;
+							}
+							
+							if (itemname.indexOf(" ") > -1)
+							{
+								citemname.markInvalid(["Space not allowed"]);
+								return;
+							}
+							
+							rec.set("name", itemname);
+							rec.set("description", desc);
+							module.name = itemname;
+							module.description = desc;
+							
+							_m.close();
+						}
+					});
+					IG$/*mainapp*/._I_5/*checkLogin*/(this, dlg);
+				}
+			}
+			break;
+		}
+	},
+	
+	_c1/*commitModule*/: function() {
+		var me = this;
+		
+		if (me._module)
+		{
+			me._module.script = me.scripteditor.getValue();
+			me._module.iparams = [];
+			me._module.oparams = [];
+			
+			$.each(["iparams", "oparams"], function(i, k) {
+				var g = me.down("[name=g_" + k + "]"),
+					i,
+					rec,
+					p = me._module[k];
+					
+				for (i=0; i < g.store.data.items.length; i++)
+				{
+					rec = g.store.data.items[i];
+					if (rec.get("name"))
+					{
+						p.push({
+							name: rec.get("name")
+						});
+					}
+				}
+			});
+		}
+	},
+	
+	_e1/*editModule*/: function(rec) {
+		var me = this,
+			ename = rec.get("name"),
+			i, item = me.item,
+			module;
+			
+		if (me._module)
+		{
+			me._c1/*commitModule*/();
+		}
+			
+		for (i=0; i < item.modules.length; i++)
+		{
+			if (item.modules[i].name == ename)
+			{
+				module = item.modules[i];
+				break;
+			}
+		}
+		
+		if (module)
+		{
+			me.down("[name=m_s]").show();
+			me.scripteditor.setValue(module.script || "");
+			me._module = module;
+			
+			$.each(["iparams", "oparams"], function(i, k) {
+				var g = me.down("[name=g_" + k + "]"),
+					i,
+					dp = [],
+					p = me._module[k];
+					
+				if (p)
+				{
+					for (i=0; i < p.length; i++)
+					{
+						dp.push({
+							name: p[i].name
+						});
+					}
+				}
+				
+				g.store.loadData(dp);
+			});
+		}
+	},
+	
+	_a1/*addModule*/: function(itemname, desc) {
+		var me = this,
+			g_m = me.down("[name=g_m]"),
+			r = true,
+			i;
+		
+		if (me._module)
+		{
+			me._c1/*commitModule*/();
+		}
+		
+		for (i=0; i < me.item.modules.length; i++)
+		{
+			if (me.item.modules[i].name == itemname)
+			{
+				r = false;
+				break;
+			}
+		}
+		
+		if (r == true)
+		{
+			g_m.store.add({
+				name: itemname,
+				description: desc
+			});
+			
+			me.item.modules.push({
+				name: itemname,
+				description: desc,
+				script: null,
+				iparams: [],
+				oparams: []
+			});
+		}
+		
+		return r;
+	},
+	
+	_m1/*setViewMode*/: function(mode) {
+		var me = this,
+			mcard = me.down("[name=mcard]"),
+			t_source = me.down("[name=t_source]");
+		
+		if (mode > -1)
+		{
+			me.vcard = mode;
+		}
+		else
+		{
+			me.vcard = (me.vcard == 0) ? 1 : 0;
+		}
+		
+		if (me.vcard == 0)
+		{
+			mcard.getLayout().setActiveItem(0);
+			t_source.setText("View Source");
+		}
+		else
+		{
+			mcard.getLayout().setActiveItem(1);
+			t_source.setText("Edit Code");
+			me._t$/*toolbarHandler*/('cmd_source'); 
+		}
+	},
+
+	initComponent: function() {
+		var me = this;
+		
+		me.vcard = 0;
+		
+		$s.apply(this, {
+			items: [
+				{
+					xtype: "panel",
+					layout: "card",
+					region: "center",
+					flex: 1,
+					name: "mcard",
+					items: [
+						{
+							xtype: "panel",
+							layout: "border",
+							items: [
+								{
+									xtype: "panel",
+									title: "Module Functions",
+									region: "west",
+									layout: "fit",
+									split: true,
+									collapsible: true,
+									collapseMode: "mini",
+									width: 300,
+									tbar: [
+										{
+											text: "New",
+											handler: function() {
+												var dlg = new IG$/*mainapp*/._I6e/*makeItem*/({
+													itemtype: "Module",
+													$f3/*processMakeMetaItem*/: function() {
+														var _m = this,
+															citemname = _m.down("[name=fitemname]"),
+															itemname = _m.down("[name=fitemname]").getValue(),
+															desc = _m.down("[name=fdesc]").getValue(),
+															fhelpuid = _m.down("[name=fhelpuid]").getValue() || null,
+															selitemtype = _m.down("[name=selitemtype]"),
+															r;
+															
+														citemname.clearInvalid();
+														
+														if (!itemname)
+														{
+															citemname.markInvalid([citemname.blankText]);
+															return;
+														}
+														
+														if (itemname.indexOf(" ") > -1)
+														{
+															citemname.markInvalid(["Space not allowed"]);
+															return;
+														}
+														
+														r = me._a1/*addModule*/.call(me, itemname, desc);
+														
+														if (r == true)
+														{
+															_m.close();
+														}
+													}
+												});
+												IG$/*mainapp*/._I_5/*checkLogin*/(this, dlg);
+											},
+											scope: this
+										},
+										{
+											text: "Rename",
+											handler: function() {
+												this._t$/*toolbarHandler*/("cmd_rename");
+											},
+											scope: this
+										},
+										{
+											text: "Delete",
+											handler: function() {
+												this._t$/*toolbarHandler*/("cmd_delete");
+											},
+											scope: this
+										}
+									],
+									items: [
+										{
+											xtype: "gridpanel",
+											name: "g_m",
+											store: {
+												xtype: "store",
+												fields: [
+													"name", "description"
+												]
+											},
+											columns: [
+												{
+													text: IRm$/*resources*/.r1("B_NAME"),
+													flex: 1,
+													dataIndex: "name"
+												},
+												{
+													text: IRm$/*resources*/.r1("B_DESC"),
+													flex: 1,
+													dataIndex: "description"
+												},
+												{
+													xtype: "actioncolumn",
+													width: 30,
+													menuDisabled: true,
+													items: [
+														{
+															iconCls: "icon-grid-config",
+															tooltip: IRm$/*resources*/.r1('L_EDIT'),
+															handler: function (grid, rowIndex, colIndex) {
+																var grd = grid,
+																	store = grd.store,
+																	rec = store.getAt(rowIndex);
+																	
+																this._e1/*editModule*/(rec);
+															},
+															scope: this
+														}
+													]
+												}
+											],
+											listeners: {
+												cellclick: function(grid, td, cellIndex, record, tr, rowIndex, e, eopts) {
+													if (cellIndex != 2)
+													{
+														this._e1/*editModule*/(record);
+													}
+												},
+												scope: this
+											}
+										}
+									]
+								},
+								{
+									region: "center",
+									xtype: "panel",
+									flex: 1,
+									title: "Module Sources",
+									layout: "fit",
+									items: [
+										{
+											xtype: "panel",
+											border: 0,
+											layout: "border",
+											name: "m_s",
+											hidden: true,
+											items: [
+												{
+													name: "javasrc",
+													region: "center",
+													flex: 1,
+													html: "<div class='idv-jcl-edtr'></div>",
+													split: true,
+													listeners: {
+														resize: function(tobj, w, h, ow, oh, opts) {
+															if (me.scriptview && me.scripteditor)
+															{
+																IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.scriptview, w);
+																IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.scriptview, h);
+																me.scripteditor.resize(true);
+															}
+														}
+													}
+												},
+												{
+													xtype: "panel",
+													region: "east",
+													width: 200,
+													layout: {
+														type: "vbox",
+														align: "stretch"
+													},
+													items: [
+														{
+															xtype: "gridpanel",
+															name: "g_iparams",
+															title: "Input Parameters",
+															flex: 1,
+															store: {
+																xtype: "store",
+																fields: [
+																	"name"
+																]
+															},
+															selType: "checkboxmodel",
+															selModel: {
+																checkSelector: ".x-grid-cell",
+																mode: "MULTI"
+															},
+															plugins: [
+																{
+																	ptype: "cellediting",
+																	clicksToEdit: 1
+																}
+															],
+															columns: [
+																{
+																	text: IRm$/*resources*/.r1("B_NAME"),
+																	flex: 1,
+																	dataIndex: "name",
+																	editor: {
+																		xtype: "textfield",
+																		allowBlank: false
+																	}
+																}
+															],
+															tbar: [
+																{
+																	xtype: "button",
+																	text: IRm$/*resources*/.r1("B_ADD"),
+																	handler: function() {
+																		var me = this,
+																			g_iparams;
+																		
+																		g_iparams = me.down("[name=g_iparams]");
+																		g_iparams.store.add({
+																			name: "",
+																			value: ""
+																		});
+																	},
+																	scope: this
+																},
+																{
+																	xtype: "button",
+																	text: IRm$/*resources*/.r1("B_REMOVE"),
+																	handler: function() {
+																		var me = this,
+																			g_iparams = me.down("[name=g_iparams]"),
+																			g_iparams_st = g_iparams.store,
+																			sel = g_iparams.getSelectionModel().selected,
+																			i;
+																		
+																		for (i=sel.length-1; i >= 0; i--)
+																		{
+																			g_iparams_st.remove(sel.items[i]);
+																		}
+																	},
+																	scope: this
+																}
+															]
+														},
+														{
+															xtype: "gridpanel",
+															title: "Output Parameters",
+															name: "g_oparams",
+															flex: 1,
+															store: {
+																xtype: "store",
+																fields: [
+																	"name"
+																]
+															},
+															selType: "checkboxmodel",
+															selModel: {
+																checkSelector: ".x-grid-cell",
+																mode: "MULTI"
+															},
+															plugins: [
+																{
+																	ptype: "cellediting",
+																	clicksToEdit: 1
+																}
+															],
+															columns: [
+																{
+																	text: IRm$/*resources*/.r1("B_NAME"),
+																	flex: 1,
+																	dataIndex: "name",
+																	editor: {
+																		xtype: "textfield",
+																		allowBlank: false
+																	}
+																}
+															],
+															tbar: [
+																{
+																	xtype: "button",
+																	text: IRm$/*resources*/.r1("B_ADD"),
+																	handler: function() {
+																		var me = this,
+																			g_oparams;
+																		
+																		g_oparams = me.down("[name=g_oparams]");
+																		g_oparams.store.add({
+																			name: "",
+																			value: ""
+																		});
+																	},
+																	scope: this
+																},
+																{
+																	xtype: "button",
+																	text: IRm$/*resources*/.r1("B_REMOVE"),
+																	handler: function() {
+																		var me = this,
+																			g_oparams = me.down("[name=g_oparams]"),
+																			g_oparams_st = g_oparams.store,
+																			sel = g_oparams.getSelectionModel().selected,
+																			i;
+																		
+																		for (i=sel.length-1; i >= 0; i--)
+																		{
+																			g_oparams_st.remove(sel.items[i]);
+																		}
+																	},
+																	scope: this
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							xtype: "panel",
+							title: "Source View (ReadOnly)",
+							layout: "border",
+							items: [
+								{
+									name: "javasrc_all",
+									flex: 1,
+									region: "center",
+									html: "<div class='idv-jcl-edtr'></div>",
+									split: true,
+									listeners: {
+										resize: function(tobj, w, h, ow, oh, opts) {
+											if (me.scriptview_all && me.scripteditor_all)
+											{
+												IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.scriptview_all, w);
+												IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.scriptview_all, h);
+												me.scripteditor_all.resize(true);
+											}
+										}
+									}
+								},
+								{
+									xtype: "panel",
+									title: "Compile Messages",
+									height: 200,
+									region: "south",
+									layout: "fit",
+									items: [
+										{
+											xtype: "textarea",
+											name: "compileres"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			tbar: [
+				{
+			    	iconCls: 'icon-toolbar-save',
+			    	name: "t_save",
+	            	tooltip: IRm$/*resources*/.r1('L_SAVE_CONTENT'),
+	            	handler: function() {
+			    		this._t$/*toolbarHandler*/('cmd_save'); 
+			    	},
+	            	scope: this
+			    },
+			    {
+		        	iconCls: 'icon-toolbar-saveas',
+		        	name: "t_save_as",
+		        	tooltip: IRm$/*resources*/.r1('L_SAVE_CONTENT_AS'),
+		        	handler: function() {
+			    		this._t$/*toolbarHandler*/('cmd_compile'); 
+			    	},
+		        	scope: this
+		        },
+		        {
+		        	xtype: "combobox",
+		        	name: "t_ds",
+		        	tooltip: IRm$/*resources*/.r1('L_DATA_SOURCE'),
+		        	fieldLabel: IRm$/*resources*/.r1("L_DATA_SOURCE"),
+		        	labelPosition: "right",
+					queryMode: 'local',
+					displayField: 'name',
+					valueField: 'poolname',
+					editable: false,
+					autoSelect: true,
+					store: {
+						xtype: 'store',
+						fields: [
+							"name", "uid", "poolname", "isuserdb", "savepwd"
+						]
+					}
+		        },
+		        {
+		        	text: "Package Lists",
+		        	handler: function() {
+		        		var me = this,
+		        			dlg = new IG$/*mainapp*/.__C_/*classmodule_clsimport*/({
+		        				litem: me.item
+		        			});
+		        		dlg.show();
+		        	},
+		        	scope: this
+		        },
+				"->",
+				{
+					name: "t_source",
+					text: "View Source",
+					handler: function() {
+						this._m1/*setViewMode*/(-1);
+					},
+					scope: this
+				}
+			]
+	    });
+	          
+		IG$/*mainapp*/.__C/*classmodule*/.superclass.initComponent.call(this);
+	},
+	
+	listeners: {
+		afterrender: function(tobj) {
+			var me = this;
+			me._IFd/*init_f*/();
+		}
+	}
+});
+
+IG$/*mainapp*/.__C_/*classmodule_clsimport*/ = $s.extend($s.window, {
+	width: 300,
+	height: 200,
+	modal: true,
+	"layout": "fit",
+	closable: false,
+	resizable:false,
+	title: "Package Lists",
+	
+	_i1/*init*/: function() {
+		var me = this,
+			ltx = me.down("[name=ltx]"),
+			litem = me.litem;
+		if (litem)
+		{
+			ltx.setValue(litem.cls || "");
+		}
+	},
+	_IFf/*confirmDialog*/: function() {
+		var me = this,
+			ltx = me.down("[name=ltx]"),
+			litem = me.litem;
+			
+		if (litem)
+		{
+			litem.cls = ltx.getValue();
+		}
+		
+		me.close();
+	},
+	items: [
+		{
+			xtype: "panel",
+			layout: {
+				type: "vbox",
+				align: "stretch"
+			},
+			items: [
+				{
+					xtype: "textarea",
+					name: "ltx",
+					flex: 1
+				},
+				{
+					xtype: "displayfield",
+					value: "* Add class lists with Java : import java.util.*;"
+				}
+			]
+		}
+	],
+	initComponent: function() {
+		$s.apply(this, {
+			buttons:[
+				'->',
+				{
+					text: IRm$/*resources*/.r1('B_CONFIRM'),
+					handler: function() {
+						this._IFf/*confirmDialog*/();
+					},
+					scope: this
+				}, 
+				{
+					text: IRm$/*resources*/.r1('B_CANCEL'),
+					handler:function() {
+						this.close();
+					},
+					scope: this
+				}
+			]
+		});
+		IG$/*mainapp*/.__C_/*classmodule_clsimport*/.superclass.initComponent.call(this);
+	},
+	
+	listeners: {
+		afterrender: function(tobj) {
+			tobj._i1/*init*/();
+		}
+	}
+});
+/**!
+ * easyPieChart
+ * Lightweight plugin to render simple, animated and retina optimized pie charts
+ *
+ * @license 
+ * @author Robert Fleischmann <rendro87@gmail.com> (http://robert-fleischmann.de)
+ * @version 2.1.5
+ **/
+
+(function(root, factory) {
+    if(typeof exports === 'object') {
+        module.exports = factory(require('jquery'));
+    }
+    else if(typeof define === 'function' && define.amd) {
+        define(['jquery'], factory);
+    }
+    else {
+        factory(root.jQuery);
+    }
+}(this, function($) {
+
+/**
+ * Renderer to render the chart on a canvas object
+ * @param {DOMElement} el      DOM element to host the canvas (root of the plugin)
+ * @param {object}     options options object of the plugin
+ */
+var CanvasRenderer = function(el, options) {
+	var cachedBackground;
+	var canvas = document.createElement('canvas');
+
+	el.appendChild(canvas);
+
+	if (typeof(G_vmlCanvasManager) !== 'undefined') {
+		G_vmlCanvasManager.initElement(canvas);
+	}
+
+	var ctx = canvas.getContext('2d');
+
+	canvas.width = canvas.height = options.size;
+
+	// canvas on retina devices
+	var scaleBy = 1;
+	if (window.devicePixelRatio > 1) {
+		scaleBy = window.devicePixelRatio;
+		canvas.style.width = canvas.style.height = [options.size, 'px'].join('');
+		canvas.width = canvas.height = options.size * scaleBy;
+		ctx.scale(scaleBy, scaleBy);
+	}
+
+	// move 0,0 coordinates to the center
+	ctx.translate(options.size / 2, options.size / 2);
+
+	// rotate canvas -90deg
+	ctx.rotate((-1 / 2 + options.rotate / 180) * Math.PI);
+
+	var radius = (options.size - options.lineWidth) / 2;
+	if (options.scaleColor && options.scaleLength) {
+		radius -= options.scaleLength + 2; // 2 is the distance between scale and bar
+	}
+
+	// IE polyfill for Date
+	Date.now = Date.now || function() {
+		return +(new Date());
+	};
+
+	/**
+	 * Draw a circle around the center of the canvas
+	 * @param {strong} color     Valid CSS color string
+	 * @param {number} lineWidth Width of the line in px
+	 * @param {number} percent   Percentage to draw (float between -1 and 1)
+	 */
+	var drawCircle = function(color, lineWidth, percent) {
+		percent = Math.min(Math.max(-1, percent || 0), 1);
+		var isNegative = percent <= 0 ? true : false;
+
+		ctx.beginPath();
+		ctx.arc(0, 0, radius, 0, Math.PI * 2 * percent, isNegative);
+
+		ctx.strokeStyle = color;
+		ctx.lineWidth = lineWidth;
+
+		ctx.stroke();
+	};
+
+	/**
+	 * Draw the scale of the chart
+	 */
+	var drawScale = function() {
+		var offset;
+		var length;
+
+		ctx.lineWidth = 1;
+		ctx.fillStyle = options.scaleColor;
+
+		ctx.save();
+		for (var i = 24; i > 0; --i) {
+			if (i % 6 === 0) {
+				length = options.scaleLength;
+				offset = 0;
+			} else {
+				length = options.scaleLength * 0.6;
+				offset = options.scaleLength - length;
+			}
+			ctx.fillRect(-options.size/2 + offset, 0, length, 1);
+			ctx.rotate(Math.PI / 12);
+		}
+		ctx.restore();
+	};
+
+	/**
+	 * Request animation frame wrapper with polyfill
+	 * @return {function} Request animation frame method or timeout fallback
+	 */
+	var reqAnimationFrame = (function() {
+		return  window.requestAnimationFrame ||
+				window.webkitRequestAnimationFrame ||
+				window.mozRequestAnimationFrame ||
+				function(callback) {
+					window.setTimeout(callback, 1000 / 60);
+				};
+	}());
+
+	/**
+	 * Draw the background of the plugin including the scale and the track
+	 */
+	var drawBackground = function() {
+		if(options.scaleColor) drawScale();
+		if(options.trackColor) drawCircle(options.trackColor, options.lineWidth, 1);
+	};
+
+  /**
+    * Canvas accessor
+   */
+  this.getCanvas = function() {
+    return canvas;
+  };
+  
+  /**
+    * Canvas 2D context 'ctx' accessor
+   */
+  this.getCtx = function() {
+    return ctx;
+  };
+
+	/**
+	 * Clear the complete canvas
+	 */
+	this.clear = function() {
+		ctx.clearRect(options.size / -2, options.size / -2, options.size, options.size);
+	};
+
+	/**
+	 * Draw the complete chart
+	 * @param {number} percent Percent shown by the chart between -100 and 100
+	 */
+	this.draw = function(percent) {
+		// do we need to render a background
+		if (!!options.scaleColor || !!options.trackColor) {
+			// getImageData and putImageData are supported
+			if (ctx.getImageData && ctx.putImageData) {
+				if (!cachedBackground) {
+					drawBackground();
+					cachedBackground = ctx.getImageData(0, 0, options.size * scaleBy, options.size * scaleBy);
+				} else {
+					ctx.putImageData(cachedBackground, 0, 0);
+				}
+			} else {
+				this.clear();
+				drawBackground();
+			}
+		} else {
+			this.clear();
+		}
+
+		ctx.lineCap = options.lineCap;
+
+		// if barcolor is a function execute it and pass the percent as a value
+		var color;
+		if (typeof(options.barColor) === 'function') {
+			color = options.barColor(percent);
+		} else {
+			color = options.barColor;
+		}
+
+		// draw bar
+		drawCircle(color, options.lineWidth, percent / 100);
+	}.bind(this);
+
+	/**
+	 * Animate from some percent to some other percentage
+	 * @param {number} from Starting percentage
+	 * @param {number} to   Final percentage
+	 */
+	this.animate = function(from, to) {
+		var startTime = Date.now();
+		options.onStart(from, to);
+		var animation = function() {
+			var process = Math.min(Date.now() - startTime, options.animate.duration);
+			var currentValue = options.easing(this, process, from, to - from, options.animate.duration);
+			this.draw(currentValue);
+			options.onStep(from, to, currentValue);
+			if (process >= options.animate.duration) {
+				options.onStop(from, to);
+			} else {
+				reqAnimationFrame(animation);
+			}
+		}.bind(this);
+
+		reqAnimationFrame(animation);
+	}.bind(this);
+};
+
+var EasyPieChart = function(el, opts) {
+	var defaultOptions = {
+		barColor: '#ef1e25',
+		trackColor: '#f9f9f9',
+		scaleColor: '#dfe0e0',
+		scaleLength: 5,
+		lineCap: 'round',
+		lineWidth: 3,
+		size: 110,
+		rotate: 0,
+		animate: {
+			duration: 1000,
+			enabled: true
+		},
+		easing: function (x, t, b, c, d) { // more can be found here: http://gsgd.co.uk/sandbox/jquery/easing/
+			t = t / (d/2);
+			if (t < 1) {
+				return c / 2 * t * t + b;
+			}
+			return -c/2 * ((--t)*(t-2) - 1) + b;
+		},
+		onStart: function(from, to) {
+			return;
+		},
+		onStep: function(from, to, currentValue) {
+			return;
+		},
+		onStop: function(from, to) {
+			return;
+		}
+	};
+
+	// detect present renderer
+	if (typeof(CanvasRenderer) !== 'undefined') {
+		defaultOptions.renderer = CanvasRenderer;
+	} else if (typeof(SVGRenderer) !== 'undefined') {
+		defaultOptions.renderer = SVGRenderer;
+	} else {
+		throw new Error('Please load either the SVG- or the CanvasRenderer');
+	}
+
+	var options = {};
+	var currentValue = 0;
+
+	/**
+	 * Initialize the plugin by creating the options object and initialize rendering
+	 */
+	var init = function() {
+		this.el = el;
+		this.options = options;
+
+		// merge user options into default options
+		for (var i in defaultOptions) {
+			if (defaultOptions.hasOwnProperty(i)) {
+				options[i] = opts && typeof(opts[i]) !== 'undefined' ? opts[i] : defaultOptions[i];
+				if (typeof(options[i]) === 'function') {
+					options[i] = options[i].bind(this);
+				}
+			}
+		}
+
+		// check for jQuery easing
+		if (typeof(options.easing) === 'string' && typeof(jQuery) !== 'undefined' && jQuery.isFunction(jQuery.easing[options.easing])) {
+			options.easing = jQuery.easing[options.easing];
+		} else {
+			options.easing = defaultOptions.easing;
+		}
+
+		// process earlier animate option to avoid bc breaks
+		if (typeof(options.animate) === 'number') {
+			options.animate = {
+				duration: options.animate,
+				enabled: true
+			};
+		}
+
+		if (typeof(options.animate) === 'boolean' && !options.animate) {
+			options.animate = {
+				duration: 1000,
+				enabled: options.animate
+			};
+		}
+
+		// create renderer
+		this.renderer = new options.renderer(el, options);
+
+		// initial draw
+		this.renderer.draw(currentValue);
+
+		// initial update
+		if (el.dataset && el.dataset.percent) {
+			this.update(parseFloat(el.dataset.percent));
+		} else if (el.getAttribute && el.getAttribute('data-percent')) {
+			this.update(parseFloat(el.getAttribute('data-percent')));
+		}
+	}.bind(this);
+
+	/**
+	 * Update the value of the chart
+	 * @param  {number} newValue Number between 0 and 100
+	 * @return {object}          Instance of the plugin for method chaining
+	 */
+	this.update = function(newValue) {
+		newValue = parseFloat(newValue);
+		if (options.animate.enabled) {
+			this.renderer.animate(currentValue, newValue);
+		} else {
+			this.renderer.draw(newValue);
+		}
+		currentValue = newValue;
+		return this;
+	}.bind(this);
+
+	/**
+	 * Disable animation
+	 * @return {object} Instance of the plugin for method chaining
+	 */
+	this.disableAnimation = function() {
+		options.animate.enabled = false;
+		return this;
+	};
+
+	/**
+	 * Enable animation
+	 * @return {object} Instance of the plugin for method chaining
+	 */
+	this.enableAnimation = function() {
+		options.animate.enabled = true;
+		return this;
+	};
+
+	init();
+};
+
+$.fn.easyPieChart = function(options) {
+	return this.each(function() {
+		var instanceOptions;
+
+		if (!$.data(this, 'easyPieChart')) {
+			instanceOptions = $.extend({}, options, $(this).data());
+			$.data(this, 'easyPieChart', new EasyPieChart(this, instanceOptions));
+		}
+	});
+};
+
+
+}));
+
+IG$/*mainapp*/._I72/*relationMgr*/ = $s.extend($s.window, {
+	modal: true,
+	closable: false,
+	resizable:true,
+	layout: "fit",
+	width: 600,
+	autoHeight: true,
+	
+    "layout": {
+		type: 'fit'
+	},
+	
+	bodyPadding: 0,
+	
+	_1/*loadRelation*/: function(uid, grd) {
+		var me = this,
+			lreq = new IG$/*mainapp*/._I3e/*requestServer*/();
+		
+		lreq.init(me, 
+			{
+	            ack: "11",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: uid || me.uid}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "relations", isdown: (me.isdown ? "T" : "F"), detail: "info"})
+			}, me, function(xdoc) {
+				var me = this,
+					grd_rel = me.down("[name=" + (grd || "grd_rel") + "]"),
+					tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+					tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode),
+					i, d, dm,
+					txtrel = me.down("[name=txtrel]"),
+					dp = [];
+				
+				if (!uid)
+				{
+					dm = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnode);
+					txtrel.setValue("Relations : " + dm.name + "(" + dm.nodepath + ")");
+				}
+				for (i=0; i < tnodes.length; i++)
+				{
+					d = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+					d.iconcls = IG$/*mainapp*/._I11/*getMetaItemClass*/(d.type.toLowerCase());
+					dp.push(d);
+				}
+				
+				grd_rel.store.loadData(dp);
+			}, false);
+			
+		lreq._l/*request*/();
+	},
+	
+    initComponent: function(){
+    	var me = this;
+    	
+    	$s.apply(this, {
+    		title: IRm$/*resources*/.r1("T_Resources"),
+			items: [
+				{
+					xtype: "panel",
+					bodyPadding: 10,
+					minHeight: 500,
+					layout: {
+						type: "vbox",
+						align: "stretch"
+					},
+					items: [
+						{
+							xtype: "displayfield",
+							name: "txtrel",
+							value: "Relations"
+						},
+						{
+							xtype: "gridpanel",
+							name: "grd_rel",
+							flex: 1,
+							store: {
+								xtype: "store",
+								fields: [
+									"name", "nodepath", "uid", "type", "iconcls"
+								]
+							},
+							columns: [
+								{
+									xtype: "templatecolumn",
+									text: IRm$/*resources*/.r1("B_NAME"),
+									menuDisabled: true,
+									flex: 1,
+									minWidth: 160,
+									tdCls: "ig-navi-namecol",
+									tpl: "<div class='ig-navi-itemicon {iconcls}'></div><span title='{name} ({type})'>{name}</span>"
+								},
+								{
+									text: "Location",
+									flex: 1,
+									minWidth: 200,
+									dataIndex: "nodepath"
+								}
+							],
+							listeners: {
+								cellclick: function(tobj, td, cellIndex, record, tr, rowIndex, e, eOpts) {
+									var me = this,
+										png_rel_sub = me.down("[name=png_rel_sub]"),
+										uid = record.get("uid");
+									
+									if (cellIndex == 0)
+									{
+										png_rel_sub.show();
+										me._1/*loadRelation*/(uid, "grd_rel_sub");
+									}
+								},
+								scope: this
+							}
+						},
+						{
+							xtype: "panel",
+							name: "png_rel_sub",
+							flex: 1,
+							hidden: true,
+							layout: {
+								type: "vbox",
+								align: "stretch"
+							},
+							items: [
+								{
+									xtype: "displayfield",
+									value: "Sub relations"
+								},
+								{
+									xtype: "gridpanel",
+									flex: 1,
+									name: "grd_rel_sub",
+									store: {
+										xtype: "store",
+										fields: [
+											"name", "nodepath", "uid", "type", "iconcls"
+										]
+									},
+									columns: [
+										{
+											xtype: "templatecolumn",
+											text: IRm$/*resources*/.r1("B_NAME"),
+											menuDisabled: true,
+											flex: 1,
+											minWidth: 160,
+											tdCls: "ig-navi-namecol",
+											tpl: "<div class='ig-navi-itemicon {iconcls}'></div><span title='{name} ({type})'>{name}</span>"
+										},
+										{
+											text: "Location",
+											flex: 1,
+											minWidth: 200,
+											dataIndex: "nodepath"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			buttons: [
+			    {
+					text: IRm$/*resources*/.r1("B_CONFIRM"),
+					handler:function() {
+						this.close();
+					},
+					scope: this
+				},
+				{
+					text: IRm$/*resources*/.r1("B_CLOSE"),
+					handler:function() {
+						this.close();
+					},
+					scope: this
+				}
+			]
+		});
+		
+        IG$/*mainapp*/._I72/*relationMgr*/.superclass.initComponent.call(this);
+    },
+    
+    listeners: {
+    	afterrender: function(tobj) {
+    		tobj._1/*loadRelation*/();
+    	}
+    }
+});
+IG$/*mainapp*/._I76a/*mgrFeatures*/ = $s.extend(IG$/*mainapp*/._I57/*IngPanel*/, {
+	scroll: false,
+	closable: true,
+	"layout": "border",
+	
+	userinfo: null,
+	groupinfo: null,
+	
+	iconCls: "icon-group",
+	
+	_1/*loadAuth*/: function() {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.init(panel, 
+			{
+	            ack: "28",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: "/Auth"}, "address"),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'select'})
+	        }, panel, panel._r1/*loadAuth*/, false);
+		req._l/*request*/();
+	},
+	
+	_r1/*loadAuth*/: function(xdoc) {
+		var i,
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+			cnodes,
+			duties = [], 
+			duty,
+			gridduty = this.down("[name=gridduty]"),
+			smodel = gridduty.getSelectionModel(),
+			dn;
+		
+		if (tnode)
+		{
+			cnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+			
+			for (i=0; i < cnodes.length; i++)
+			{
+				duty = IG$/*mainapp*/._I1c/*XGetAttrProp*/(cnodes[i]);
+				duty.active = duty.status == "1" ? "Active" : "Disabled";
+				switch (duty.dutytype)
+				{
+				case "A":
+					dn = "Default";
+					break;
+				case "G":
+					dn = "Group";
+					break;
+				case "C":
+					dn = "Custom";
+					break;
+				case "U":
+					dn = "User";
+					break;
+				default:
+					dn = duty.dutytype;
+					break;
+				}
+				duty.dutytype_d = dn;
+				duties.push(duty);
+			}
+		}
+		
+		gridduty.store.loadData(duties);
+		
+		this._2/*loadFeatures*/();
+	},
+	
+	_2/*loadFeatures*/: function() {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.init(panel, 
+			{
+	            ack: "28",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: "/Features"}, "address"),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'get'})
+	        }, panel, panel._r2/*loadFeatures*/, false);
+		req._l/*request*/();
+	},
+	
+	_r2/*loadFeatures*/: function(xdoc) {
+		var me = this,
+			tf = me.down("[name=tf]"),
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+			tval = tnode ? IG$/*mainapp*/._I24/*getTextContent*/(tnode) : null,
+			mroot;
+			
+		if (tval)
+		{
+			tval = Base64.decode(tval);
+			tval = eval("(" + tval + ")");
+			
+			if (tval.menus)
+			{
+				mroot = {
+					name: "Root",
+					children: []
+				};
+				this._r3/*formatData*/(tval, mroot, "");
+				tf.store.setRootNode(mroot);
+				tf.store.getRootNode().expand(true);
+				
+				me._7/*recordmap*/ = [];
+				
+				me._8/*getRecordMap*/(tf.store.getRootNode());
+			}
+		}
+	},
+	
+	_r3/*formatData*/: function(mp, mr, mpath) {
+		if (mp.menus)
+		{
+			mr.children = mr.children || [];
+			var i,
+				m,
+				sr;
+			mr.leaf = false;
+			
+			for (i=0; i < mp.menus.length; i++)
+			{
+				m = mp.menus[i];
+				m.clspath = (mpath ? mpath + "-" + m.cls : m.cls);
+				sr = {
+					name: m.name,
+					mcls: m.cls,
+					clspath: m.clspath,
+					leaf: true
+				};
+				mr.children.push(sr);
+				this._r3/*formatData*/(mp.menus[i], sr, mp.menus[i].clspath);
+			}
+		}
+	},
+	
+	_4/*saveFeatures*/: function() {
+		var me = this,
+			gridduty = me.down("[name=gridduty]"),
+			sel = gridduty.getSelectionModel().selected,
+			tf = me.down("[name=tf]"),
+			troot = tf.store.getRootNode(),
+			feature = [],
+			i,
+			sid;
+		
+		if (sel && sel.length > 0)
+		{
+			sid = sel.items[0].get("sid");
+			feature.push("<smsg><item uid='" + sid + "'><features>");
+			me._5/*updateFeature*/(troot, feature);
+			feature.push("</features></item></smsg>");
+			
+			var panel = this,
+				req = new IG$/*mainapp*/._I3e/*requestServer*/();
+			req.init(panel, 
+				{
+		            ack: "31",
+		            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: sid, type: "feature"}),
+		            mbody: feature.join("")
+		        }, panel, panel._r4/*saveFeatures*/, false);
+			req._l/*request*/();
+		}
+	},
+	
+	_r4/*saveFeatures*/: function(xdoc) {
+		IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1("M_SAVED"), null, null, 0, "success");
+	},
+	
+	_5/*updateFeature*/: function(tparent, feature) {
+		if (tparent.childNodes)
+		{
+			var me = this,
+				i,
+				rec;
+			for (i=0; i < tparent.childNodes.length; i++)
+			{
+				rec = tparent.childNodes[i];
+				if (rec.get("mshow"))
+				{
+					feature.push("<feat cls='" + rec.get("mcls") + "' clspath='" + rec.get("clspath") + "' show='" + (rec.get("mshow") ? "T" : "F") + "'/>");
+				}
+				me._5/*updateFeature*/(rec, feature);
+			}
+		}
+	},
+	
+	_6/*loadFeature*/: function() {
+		var me = this,
+			dfn = me.down("[name=dfn]"),
+			btn_save = me.down("[name=btn_save]"),
+			gridduty = me.down("[name=gridduty]"),
+			sel = gridduty.getSelectionModel().selected,
+			sid;
+			
+		if (sel.length > 0)
+		{
+			me.setLoading(true);
+			
+			sid = sel.items[0].get("sid");
+			dfn.setValue("Duty: " + sel.items[0].get("name"));
+			btn_save.setDisabled(false);
+			var panel = this,
+				req = new IG$/*mainapp*/._I3e/*requestServer*/();
+			req.init(panel, 
+				{
+		            ack: "28",
+		            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: "/Features", sid: sid}, "address;sid"),
+		            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'content'})
+		        }, panel, panel._r6/*loadFeature*/, false);
+			req._l/*request*/();
+		}
+	},
+	
+	_r6/*loadFeature*/: function(xdoc) {
+		var me = this,
+			recmap = me._7/*recordmap*/,
+			tf = me.down("[name=tf]"),
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item/features"),
+			tnodes = (tnode) ? IG$/*mainapp*/._I26/*getChildNodes*/(tnode) : null,
+			i, p, rec, pmap = {},
+			ps, ph;
+			
+		me.setLoading(false);
+		
+		if (tnodes)
+		{	
+			for (i=0; i < tnodes.length; i++)
+			{
+				p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+				pmap[p.clspath] = p;
+			}
+		}
+		
+		tf.suspendLayouts();
+		tf.suspendEvents(false);
+		tf.store.suspendEvents(false);
+		
+		for (i=0; i < recmap.length; i++)
+		{
+			rec = recmap[i];
+			p = pmap[rec.get("clspath")];
+			ps = p ? p.show == "T" : false;
+			rec.get("mshow") != ps && rec.set("mshow", ps);
+		}
+		tf.store.resumeEvents();
+		tf.resumeEvents();
+		tf.resumeLayouts();
+	},
+	
+	_8/*getRecordMap*/: function(trec) {
+		if (trec.childNodes)
+		{
+			var i,
+				me = this,
+				rec;
+			
+			for (i=0; i < trec.childNodes.length; i++)
+			{
+				rec = trec.childNodes[i];
+				me._7/*recordmap*/.push(rec);
+				
+				me._8/*getRecordMap*/(rec);
+			}
+		}
+	},
+	
+	initComponent: function(){
+		var me = this;
+		
+		me.title = IRm$/*resources*/.r1('T_FEATURES');
+		
+		$s.apply(this, {
+			items: [
+				{
+					xtype: "panel",
+					width: 270,
+					region: "west",
+					title: "Duties",
+					layout: "fit",
+					items: [
+						{
+							xtype: "grid",
+							name: "gridduty",
+							// hideHeaders: true,
+							selType: "checkboxmodel",
+							selModel: {
+								checkSelector: ".x-grid-cell",
+								mode: "SINGLE"
+							},
+							store: {
+								xtype: "store",
+								fields: [
+									"sid", "name", "active", "status", "dutytype", "dutytype_d"
+								]
+							},
+							columns: [
+								{
+									dataIndex: "dutytype_d",
+									text: "Type",
+									width: 60
+								},
+								{
+									dataIndex: "name",
+									text: "Name",
+									flex: 1
+								},
+								{
+									dataIndex: "active",
+									width: 80,
+									text: "Status"
+								}
+							],
+							tbar: [
+								{
+									text: "Load Auth",
+									handler: function() {
+										this._1/*loadAuth*/();
+									},
+									scope: this
+								},
+								{
+									text: "Refresh",
+									handler: function() {
+										this._2/*loadFeatures*/();
+									},
+									scope: this
+								}
+							],
+							listeners: {
+								selectionchange: function(tobj, selected, eOpts) {
+									this._6/*loadFeature*/();
+								},
+								scope: this
+							}
+						}
+					]
+				},
+				{
+					xtype: "panel",
+					region: "center",
+					flex: 1,
+					title: "Features",
+					layout: "fit",
+					items: [
+						{
+							xtype: "treepanel",
+							name: "tf",
+							// hidden: true,
+							store: {
+								xtype: "treestore",
+								fields: [
+									"name", "mcls", "clspath", "mshow"
+								]
+							},
+							columns: [
+								{
+									xtype: "treecolumn",
+									text: "Name",
+									dataIndex: "name",
+									flex: 1
+								},
+								{
+									xtype: "gridcolumn",
+									dataIndex: "mcls"
+								},
+								{
+									xtype: "checkcolumn",
+									dataIndex: "mshow",
+									text: "Show",
+									width: 80
+								}
+							],
+							tbar: [
+								{
+									xtype: "displayfield",
+									name: "dfn",
+									value: "Click Duty to set features"
+								},
+								"-",
+								{
+									text: "Save",
+									name: "btn_save",
+									xtype: "button",
+									disabled: true,
+									iconCls: 'icon-toolbar-save',
+									handler: function() {
+										this._4/*saveFeatures*/();
+									},
+									scope: this
+								}
+							]
+						}
+					]
+				}
+			]
+		});
+		
+		IG$/*mainapp*/._I76a/*mgrFeatures*/.superclass.initComponent.call(this);
+	},
+	listeners: {
+		afterrender: function() {
+			this._1/*loadAuth*/();
+		}
+	}
+});
+IG$/*mainapp*/._I76b/*mgrRevision*/ = $s.extend(IG$/*mainapp*/._I57/*IngPanel*/, {
+	scroll: false,
+	closable: true,
+	"layout": "border",
+	
+	iconCls: "icon-group",
+	
+	_1/*loadUID*/: function(uid) {
+		var me = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		
+		me.setLoading(true);
+		
+		req.init(me, 
+			{
+	            ack: "11",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: uid}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'translate'})
+			}, me, function(xdoc) {
+				me.setLoading(false);
+				
+				var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item");
+				
+				if (tnode)
+				{
+					me._a/*metaobj*/ = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnode);
+					me._2/*applyMetaObj*/.call(me);
+				}
+			}, false);
+			
+		req._l/*request*/();
+	},
+	
+	_2/*applyMetaObj*/: function() {
+		var me = this,
+			metaobj = me._a/*metaobj*/,
+			typename = metaobj.type.toLowerCase(),
+			f_1 = me.down("[name=f_1]"),
+			f_2 = me.down("[name=f_2]"),
+			_f1 = me.down("[name=_f1]"),
+			isfolder;
+		
+		isfolder = me._6/*checkfoldertype*/(typename);
+		me._k/*folderhierarchy*/ = [];
+		
+		f_1.setVisible(isfolder != 0);
+		
+		if (isfolder != 0)
+		{
+			me._k/*folderhierarchy*/.push(metaobj);
+			_f1.setValue(metaobj.name);
+			f_2.store.loadData([]);
+			isfolder == 2 && me.down("[name=_f3]").show();
+			
+			this._5/*loadFolderContent*/();
+		}
+		else
+		{
+			me._3/*loadRevision*/(metaobj.uid);
+		}
+	},
+	
+	_3/*loadRevision*/: function(uid) {
+		var me = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		
+		me.setLoading(true);
+		
+		me.__m/*loadedUID*/ = uid;
+			
+		req.init(me, 
+			{
+	            ack: "72",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: uid}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'get'})
+			}, me, function(xdoc) {
+				me.setLoading(false);
+				
+				var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+					tnodes,
+					minfo,
+					f_3 = me.down("[name=f_3]"),
+					f_4 = me.down("[name=f_4]"),
+					f_5 = me.down("[name=f_5]"),
+					f_6 = me.down("[name=f_6]"),
+					f_7 = me.down("[name=f_7]"),
+					dt = [], d,
+					i;
+				
+				if (tnode)
+				{
+					minfo = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnode);
+					f_4.setValue(minfo.name);
+					f_5.setValue(minfo.nodepath);
+					f_6.setValue(minfo.description);
+					f_7.setValue(minfo.rev);
+					
+					tnode = IG$/*mainapp*/._I18/*XGetNode*/(tnode, "hist");
+					
+					if (tnode)
+					{
+						tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+						for (i=0; i < tnodes.length; i++)
+						{
+							d = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+							d.uid = minfo.uid;
+							d.description = IG$/*mainapp*/._I24/*getTextContent*/(tnodes[i]);
+							d.iscurrent = (minfo.rev == d.revision) ? "YES" : "";
+							d.writable = minfo.writable;
+							dt.push(d);
+						}
+					}
+					minfo.rh/*history*/ = dt;
+					me._c/*minfo*/ = minfo;
+					f_3.store.loadData(dt);
+				}
+			}, false);
+			
+		req._l/*request*/();
+	},
+	
+	_4/*updateRevision*/: function() {
+		var me = this,
+			minfo = me._c/*minfo*/,
+			f_7 = me.down("[name=f_7]"),
+			nrev,
+			bf = false,
+			i,
+			req,
+			uid = me._c/*minfo*/.uid;
+		
+		f_7.clearInvalid();
+		
+		if (minfo)
+		{
+			nrev = "" + f_7.getValue();
+			for (i=0; i < minfo.rh/*history*/.length; i++)
+			{
+				if (minfo.rh/*history*/[i].revision == nrev)
+				{
+					bf = true;
+					break;
+				}
+			}
+			
+			if (bf == false)
+			{
+				f_7.markInvalid("Not valid revision");
+				return;
+			}
+			
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		
+			me.setLoading(true);
+			
+			req.init(me, 
+				{
+		            ack: "72",
+		            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: uid, revision: nrev}, "uid;revision"),
+		            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'setrevision'})
+				}, me, function(xdoc) {
+					me.setLoading(false);
+					me._3/*loadRevision*/.call(me, uid);
+					IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1("M_SAVED"), null, null, 0, "success");
+				}, false);
+				
+			req._l/*request*/();
+		}
+	},
+	
+	_5/*loadFolderContent*/: function() {
+		var me = this,
+			metaobj = me._a/*metaobj*/,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+			_f1 = me.down("[name=_f1]");
+		
+		me.setLoading(true);
+		_f1.setValue(metaobj.name);
+		
+		req.init(me, 
+			{
+	            ack: "5",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: metaobj.uid}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({})
+			}, me, function(xdoc) {
+				me.setLoading(false);
+				var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+					tnodes = tnode ? IG$/*mainapp*/._I26/*getChildNodes*/(tnode) : null,
+					folderhierarchy = me._k/*folderhierarchy*/,
+					i,
+					dp = [], p,
+					f_2 = me.down("[name=f_2]");
+
+				if (tnodes)
+				{
+					for (i=0; i < tnodes.length; i++)
+					{
+						p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+						dp.push(p);
+					}
+				}
+				
+				f_2.store.loadData(dp);
+					
+			}, false);
+			
+		req._l/*request*/();
+	},
+	
+	_6/*checkfoldertype*/: function(typename) {
+		var r = 0;
+		
+		if (typename == "cubemodel")
+		{
+			r = 0;
+		}
+		else if ((/folder|workspace|javapackage/).test(typename))
+		{
+			r = 1;
+		}
+		else if ((/datacube|cube|metrics|mcube|nosql|sqlcube|mdbcube/).test(typename))
+		{
+			r = 2;
+		}
+		
+		return r;
+	},
+	
+	_7/*updaterevisiondesc*/: function(rec) {
+		var me = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+			
+		req.init(me, 
+			{
+	            ack: "72",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: rec.get("uid"), revision: rec.get("revision")}, "uid;revision"),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "updatedesc"}, null, {name: "desc", value:rec.get("description")})
+			}, me, function(xdoc) {
+			}, false);
+			
+		req._l/*request*/();
+	},
+	
+	_8/*openRevision*/: function(row, col) {
+		var me = this,
+			f_3 = me.down("[name=f_3]"),
+			minfo = me._c/*minfo*/,
+			rec = f_3.store.data.items[row],
+			mp = IG$/*mainapp*/._I7d/*mainPanel*/;
+			
+		if (mp && minfo && rec && rec.get("uid"))
+		{
+			mp.m1$7/*navigateApp*/.call(mp, minfo.uid, minfo.type.toLowerCase(), 
+				minfo.name, minfo.nodepath, true, minfo.writable, 
+				{revision: rec.get("revision")}
+			);
+		}
+	},
+	
+	mm3/*removeItem*/: function(row, col) {
+		var me = this,
+			f_3 = me.down("[name=f_3]"),
+			rec = f_3.store.ata.items[row],
+			req;
+			
+		if (rec && rec.get("uid"))
+		{
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+			
+			req.init(me, 
+				{
+		            ack: "72",
+		            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: rec.get("uid"), revision: rec.get("revision")}, "uid;revision"),
+		            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "clear_rev"}, null, {})
+				}, me, function(xdoc) {
+					if (me.__m/*loadedUID*/)
+		    		{
+		    			me._3/*loadRevision*/(me.__m/*loadedUID*/);
+		    		}
+				}, false);
+				
+			req._l/*request*/();
+		}
+	},
+	
+	initComponent: function(){
+		var me = this;
+		
+		me.title = IRm$/*resources*/.r1('T_REVISION');
+		
+		$s.apply(this, {
+			border: 0,
+			bodyPadding: 5,
+			
+			items: [
+				{
+					xtype: "panel",
+					title: "List of Items",
+					region: "west",
+					width: 420,
+					
+					name: "f_1",
+					layout: {
+						type: "vbox",
+						align: "stretch"
+					},
+					hidden: true,
+					split: true,
+					collapseMode: "mini",
+					collapsible: true,
+					items: [
+						{
+							xtype: "fieldset",
+							title: "Folder Info",
+							layout: {
+								type: "hbox",
+								align: "stretch"
+							},
+							items: [
+								{
+									xtype: "textfield",
+									flex: 1,
+									fieldLabel: null,
+									readOnly: true,
+									name: "_f1"
+								},
+								{
+									xtype: "button",
+									text: "Up",
+									hidden: true,
+									name: "_f2",
+									handler: function() {
+										var me = this,
+											folderhierarchy = me._k/*folderhierarchy*/,
+											_f2 = me.down("[name=_f2]"),
+											_f3 = me.down("[name=_f3]"),
+											isfolder;
+											
+										folderhierarchy.splice(folderhierarchy.length - 1, 1);
+										me._a/*metaobj*/ = folderhierarchy[folderhierarchy.length - 1];
+										
+										isfolder = me._6/*checkfoldertype*/(me._a/*metaobj*/.type.toLowerCase());
+										
+										_f2.setVisible(folderhierarchy.length > 1);
+										_f3.setVisible(isfolder == 2);
+										
+										me._5/*loadFolderContent*/();
+										(isfolder == 2) && me._3/*loadRevision*/(me._a/*metaobj*/.uid);
+									},
+									scope: this
+								},
+								{
+									xtype: "button",
+									text: "->",
+									hidden: true,
+									name: "_f3",
+									handler: function() {
+										var me = this,
+											minfo = me._k/*folderhierarchy*/[me._k/*folderhierarchy*/.length - 1];
+											
+										minfo && me._3/*loadRevision*/(minfo.uid);
+									},
+									scope: this
+								}
+							]
+						},
+						{
+							xtype: "fieldset",
+							title: "Search",
+							hidden: true,
+							layout: {
+								type: "vbox",
+								align: "stretch"
+							},
+							defaults: {
+								labelWidth: 70
+							},
+							items: [
+								{
+									xtype: "textfield",
+									fieldLabel: "Keyword"
+								},
+								{
+									xtype: "combobox",
+									queryMode: "local",
+									displayField: "name",
+									valueField: "value",
+									editable: false,
+									fieldLabel: "Last Modified",
+									value: "",
+									store: {
+										xtype: "store",
+										fields: ["name", "value"],
+										data: [
+											{name: "Select", value: ""},
+											{name: "1 Day", value: "1d"},
+											{name: "2 Day", value: "2d"},
+											{name: "3 Day", value: "3d"},
+											{name: "1 Week", value: "1w"}
+										]
+									}
+								},
+								{
+									xtype: "fieldcontainer",
+									layout: "hbox",
+									items: [
+										{
+											xtype: "container",
+											flex: 1
+										},
+										{
+											xtype: "button",
+											text: "Run",
+											handler: function() {
+												this._5/*loadFolderContent*/();
+											},
+											scope: this
+										}
+									]
+								}
+							]
+						},
+						{
+							xtype: "gridpanel",
+							name: "f_2",
+							store: {
+								xtype: "store",
+								fields: [
+									"name", "nodepath", "revision", "updatedate", "updatedatefm", "uid", "type"
+								]
+							},
+							flex: 1,
+							selType: "checkboxmodel",
+							selModel: {
+								checkSelector: ".x-grid-cell",
+								mode: "SINGLE"
+							},
+							$v: {
+								scrollX: true
+							},
+							columns: [
+								{
+									text: "Name",
+									dataIndex: "name",
+									minWidth: 120
+								},
+								{
+									text: "Revision",
+									dataIndex: "revision",
+									minWidth: 80
+								},
+								{
+									text: "Path",
+									dataIndex: "nodepath",
+									flex: 1,
+									minWidth: 300
+								},
+								{
+									text: "Last Updated",
+									dataIndex: "updatedatefm",
+									minWidth: 160
+								}
+							],
+							listeners: {
+								cellclick: function(tobj, td, cellindex, record, tr, rowindex, e, eopts) {
+									var me = this,
+										uid = record.get("uid"),
+										typename = record.get("type"),
+										isfolder,
+										_f2 = me.down("[name=_f2]"),
+										_f3 = me.down("[name=_f3]");
+									
+									isfolder = me._6/*checkfoldertype*/(typename.toLowerCase());
+									
+									if (isfolder == 0)
+									{
+										me._3/*loadRevision*/(uid);
+									}
+									else
+									{
+										me._a/*metaobj*/ = {
+											uid: uid,
+											name: record.get("name"),
+											type: typename,
+											nodepath: record.get("nodepath")
+										};
+										me._k/*folderhierarchy*/.push(me._a/*metaobj*/);
+										_f2.setVisible(me._k/*folderhierarchy*/.length > 1);
+										_f3.setVisible(isfolder == 2);
+										me._5/*loadFolderContent*/();
+										(isfolder == 2) && me._3/*loadRevision*/(uid);
+									}
+								},
+								scope: this
+							}
+						}
+					]
+				},
+				{
+					xtype: "panel",
+					region: "center",
+					title: "Revision Management",
+					flex: 1,
+					layout: {
+						type: "vbox",
+						align: "stretch"
+					},
+					items: [
+						{
+							xtype: "fieldset",
+							title: "Information",
+							layout: {
+								type: "hbox",
+								align: "stretch"
+							},
+							items: [
+								{
+									xtype: "panel",
+									layout: "anchor",
+									flex: 1,
+									border: 1,
+									padding: "0 5 0",
+									bodyPadding: 4,
+									defaults: {
+										labelAlign: "right"
+									},
+									items: [
+										{
+											xtype: "textfield",
+											fieldLabel: "Name",
+											readOnly: true,
+											name: "f_4"
+										},
+										{
+											xtype: "textfield",
+											anchor: "100%",
+											fieldLabel: "Location",
+											readOnly: true,
+											name: "f_5"
+										},
+										{
+											xtype: "textarea",
+											anchor: "100%",
+											height: 120,
+											fieldLabel: "Description",
+											readOnly: true,
+											name: "f_6"
+										}
+									]
+								},
+								{
+									xtype: "panel",
+									layout: {
+										type: "vbox",
+										align: "stretch"
+									},
+									width: 240,
+									flex: 1,
+									border: 1,
+									padding: "0 5 0",
+									bodyPadding: 4,
+									defaults: {
+										labelAlign: "right"
+									},
+									items: [
+										{
+											xtype: "fieldcontainer",
+											fieldLabel: "Current Revision",
+											anchor: "100%",
+											layout: "anchor",
+											items: [
+												{
+													xtype: "numberfield",
+													width: 60,
+													maxWidth: 80,
+													minValue: 0,
+													name: "f_7"
+												},
+												{
+													xtype: "fieldcontainer",
+													layout: "hbox",
+													fieldLabel: null,
+													items: [
+														{
+															xtype: "button",
+															text: "Change Revision",
+															handler: function() {
+																this._4/*updateRevision*/();
+															},
+															scope: this
+														}
+													]
+												}
+											]
+										},
+										{
+											xtype: "container",
+											flex: 1
+										}
+									]
+								}
+							]
+						},
+						{
+							xtype: "fieldcontainer",
+							layout: {
+								type: "hbox"
+							},
+							items: [
+							    {
+							    	xtype: "button",
+							    	text: "Refresh",
+							    	width: 80,
+							    	margin: "0 4 0",
+							    	handler: function() {
+							    		var me = this;
+							    		if (me.__m/*loadedUID*/)
+							    		{
+							    			me._3/*loadRevision*/(me.__m/*loadedUID*/);
+							    		}
+							    	},
+							    	scope: this
+							    },
+								{
+									xtype: "button",
+									text: "Clear",
+									width: 80,
+									handler: function() {
+										var me = this,
+											req;
+										
+										if (me.__m/*loadedUID*/)
+										{
+											req = new IG$/*mainapp*/._I3e/*requestServer*/();
+			
+											req.init(me, 
+												{
+										            ack: "72",
+										            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: me.__m/*loadedUID*/}, "uid;revision"),
+										            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "clear_hist"}, null, {})
+												}, me, function(xdoc) {
+													if (me.__m/*loadedUID*/)
+										    		{
+										    			me._3/*loadRevision*/(me.__m/*loadedUID*/);
+										    		}
+												}, false);
+												
+											req._l/*request*/();
+										}
+									},
+									scope: this
+								},
+								{
+									xtype: "displayfield",
+									flex: 1,
+									value: "Clear previous revision history",
+									padding: "0 5 0"
+								}
+							]
+						},
+						{
+							xtype: "gridpanel",
+							name: "f_3",
+							selType: "checkboxmodel",
+							selModel: {
+								checkSelector: ".x-grid-cell"
+							},
+							store: {
+								xtype: "store",
+								fields: [
+									"uid", "revision", "updatedate", "updatedatefm", "description", "username", "userid", "iscurrent", "writable"
+								]
+							},
+							defaults: {
+								menuDisabled: true
+							},
+							plugins: [
+						        {
+						        	ptype: "cellediting",
+						            clicksToEdit: 1
+						        }
+						    ],
+							columns: [
+								{
+									text: "Revision",
+									dataIndex: "revision"
+								},
+								{
+									text: "Updated Date",
+									dataIndex: "updatedatefm",
+									width: 150
+								},
+								{
+									text: "Modified By",
+									dataIndex: "username"
+								},
+								{
+									text: "Description",
+									dataIndex: "description",
+									flex: 1,
+									editor: {
+										xtype: "textfield",
+										allowBlank: true
+									}
+								},
+								{
+									text: "Current",
+									dataIndex: "iscurrent"
+								},
+								{
+									xtype: "actioncolumn",
+									width: 50,
+									menuDisabled: true,
+									items: [
+										{
+											// icon: "./images/delete.png",
+											iconCls: "icon-grid-add",
+											tooltip: "Open This Revision",
+											handler: function (grid, rowIndex, colIndex) {
+												me._8/*openRevision*/.call(me, rowIndex, colIndex);
+											}
+										},
+										{
+											// icon: "./images/delete.png",
+											iconCls: "icon-grid-delete",
+											tooltip: "Remove History",
+											handler: function (grid, rowIndex, colIndex) {
+												// var rec = store.getAt(rowIndex);
+												me.mm3/*removeItem*/.call(me, rowIndex, colIndex);
+											}
+										}
+									]
+								}
+							],
+							listeners: {
+								edit: function(editor, e, eopts) {
+									var me = this,
+										rec = e.record;
+									
+									me._7/*updaterevisiondesc*/(rec);
+								},
+								scope: this
+							}
+						}
+					]
+				}
+			]
+		});
+		
+		IG$/*mainapp*/._I76b/*mgrRevision*/.superclass.initComponent.call(this);
+	},
+	listeners: {
+		afterrender: function(tobj) {
+			var me = this;
+			me._1/*loadUID*/(me.uid);
+		}
+	}
+});
+IG$/*mainapp*/._Id3/*userDBTemplate*/ = $s.extend($s.window, {
+	
+	modal: true,
+	region:'center',
+	layout: "fit",
+	closable: false,
+	resizable:false,
+	width: 300,
+	autoHeight: true,
+	
+	callback: null,
+	
+	c1/*confirm*/: function(){
+		var panel = this,
+			fielditems = panel.fielditems,
+			fname, fvalue,
+			i;
+		
+		for (i=0; i < fielditems.length; i++)
+		{
+			fname = fielditems[i].fname;
+			fvalue = panel.down("[name=" + fname + "]").getValue();
+			
+			fielditems[i].uvalue = fvalue;
+			
+			if (fielditems[i].optional != true)
+			{
+				if (!fvalue)
+				{
+					IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1('T_DB_BLANK'), null, panel, null, null, 1, "error");
+					return;
+				}
+			}
+		}
+		
+		var nvalue = panel.c3/*applyValue*/();
+			
+		if (panel.callback)
+		{
+			panel.callback.execute(nvalue);
+			panel.close();
+		}
+	},
+	
+	c3/*applyValue*/: function() {
+		var me = this,
+			fieldvalue = me.fieldvalue,
+			fielditems = me.fielditems,
+			fname, fvalue, i,
+			fieldmap = {},
+			rvalue;
+		
+		for (i=0; i < fielditems.length; i++)
+		{
+			fieldmap[fielditems[i].fname] = fielditems[i].uvalue;
+		}
+		
+		rvalue = me.c3a/*processValue*/(fieldvalue, fieldmap, false);
+		
+		return rvalue;
+	},
+	
+	c3a/*processValue*/: function(fieldvalue, fieldmap, isblock) {
+		var me = this,
+			rvalue = [],
+			i,
+			c,
+			inblock = false,
+			inoptblock = false,
+			mval,
+			mbval, 
+			hasvalue = false;
+		
+		for (i=0; i < fieldvalue.length; i++)
+		{
+			c = fieldvalue[i];
+			switch (c)
+			{
+			case "<":
+				if (inoptblock == true)
+				{
+					mbval += c;
+				}
+				else
+				{
+					inblock = true;
+					mval = "";
+				}
+				break;
+			case "[":
+				inoptblock = true;
+				inblock = false;
+				mbval = "";
+				break;
+			case ">":
+				if (inoptblock == false && inblock == true)
+				{
+					if (fieldmap[mval])
+					{
+						rvalue.push(fieldmap[mval]);
+						hasvalue = true;
+					}
+					inblock = false;
+				}
+				else if (inoptblock == true)
+				{
+					mbval += c;
+				}
+				break;
+			case "]":
+				inoptblock = false;
+				var optproc = me.c3a/*processValue*/(mbval, fieldmap, true);
+				rvalue.push(optproc);
+				break;
+			default:
+				if (inoptblock == true)
+				{
+					mbval += c;
+				}
+				else if (inblock == true)
+				{
+					mval += c;
+				}
+				else
+				{
+					rvalue.push(c);
+				}
+				break;
+			}
+		}
+		
+		if (hasvalue == false && isblock == true)
+		{
+			return "";
+		}
+		
+		return rvalue.join("");
+	},
+	
+	c2/*parseValue*/: function(value) {
+		var fielditems = [],
+			i, c, item, mval, isoptional = false, inblock = false;
+		
+		for (i=0; i < value.length; i++)
+		{
+			c = value[i];
+			switch (c)
+			{
+			case "<":
+				inblock = true;
+				mval = c;
+				break;
+			case "[":
+				isoptional = true;
+				break;
+			case ">":
+				if (inblock == true)
+				{
+					inblock = false;
+					mval += c;
+					fielditems.push({
+						field: mval,
+						fname: mval.substring(1, mval.length-1),
+						optional: isoptional
+					});
+				}
+				break;
+			case "]":
+				isoptional = false;
+				break;
+			default:
+				if (inblock == true)
+				{
+					mval += c;
+				}
+				break;
+			}
+		}
+		
+		return fielditems;
+	},
+	
+	_IG0/*closeDlgProc*/: function() {
+		this.close();
+	},
+	
+	initComponent : function() {
+		var me = this,
+			items = [],
+			fieldvalue = me.fieldvalue,
+			fielditems,
+			i;
+			
+		me.title = IRm$/*resources*/.r1('T_DB_TMPL');
+		
+		me.fielditems = fielditems = me.c2/*parseValue*/(fieldvalue);
+		
+		for (i=0; i < fielditems.length; i++)
+		{
+			items.push({
+				fieldLabel: fielditems[i].fname,
+	            name: fielditems[i].fname,
+	            value: '',
+	            allowBlank: fielditems[i].optional,
+	            blankText: 'Item name is required!'
+			});
+		}
+		
+		var inputpanel = new IG$/*mainapp*/._I57/*IngPanel*/({
+			region:'center',
+			flex: 3,
+	        border:true,
+	        region:'center',
+	        id: 'dlgmakemetaform',
+	        defaultType: 'textfield',
+	        layout: 'anchor',
+	        defaults: {
+	        	anchor: '100%',
+	        	labelWidth: 80
+	        },
+	        items: items
+	    });
+		
+		$s.apply(this, {
+			defaults:{bodyStyle:'padding:10px'},
+			
+			items: [
+			    inputpanel
+			],
+			buttons:[
+				{
+					text: IRm$/*resources*/.r1('B_CONFIRM'),
+					handler: function() {
+						this.c1/*confirm*/();
+					},
+					scope: this
+				}, 
+				{
+					text: IRm$/*resources*/.r1('B_CANCEL'),
+					handler:function() {
+						this.close();
+					},
+					scope: this
+				}
+			]
+		});
+		
+		IG$/*mainapp*/._Id3/*userDBTemplate*/.superclass.initComponent.apply(this, arguments);
+	}
+});
+IG$/*mainapp*/._Id4/*dbObject*/ = function() {
+	
+}
+
+IG$/*mainapp*/._Id4/*dbObject*/.prototype = {
+	pX/*parseXML*/: function(xdoc) {
+		var me = this,
+			i,
+			m;
+			
+		me.dbtype = "";
+		me.jdbcurl = "";
+		me.driver = "";
+		me.username = "";
+		me.passwd = "";
+		me.name = "";
+		me.savepwd = false;
+		me.schemaname = "";
+		me.charset_out = "";
+		me.charset_db = "";
+		me.userowlimit = 0;
+		me.mongodb_hosts = "";
+		me.c_rule = "min";
+		me.cache = false;
+		me.c_int = 5;
+		me.query_timeout = 0;
+		me.schedule_query_timeout = 0;
+		me.max_pool_size = 0;
+		me.c_dbmon = false;
+		
+		if (xdoc) 
+		{
+			var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"), 
+				tnodes, n, v;
+			
+			me.uid = IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "uid");
+			me.name = IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "name");
+			me.memo = IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "memo");
+			
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item/connection");
+			tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+			
+			for (i=0; i < tnodes.length; i++)
+			{
+				n = IG$/*mainapp*/._I29/*XGetNodeName*/(tnodes[i]);
+				v = IG$/*mainapp*/._I24/*getTextContent*/(tnodes[i]);
+				if (n == "savepwd")
+				{
+					v = (v == "T") ? true : false;
+				}
+				else if (n == "userowlimit")
+				{
+					v = parseInt(v);
+				}
+				else if (n == "cache")
+				{
+					v = (v == "T") ? true : false;
+				}
+				else if (n == "c_int")
+				{
+					v = parseInt(v) || 5;
+				}
+				else if (n == "c_dbmon")
+				{
+					v = (v == "T") ? true : false;
+				}
+				else if (n == "max_pool_size" || n == "schedule_query_timeout" || n == "query_timeout")
+				{
+					v = parseInt(v) || 0;
+				}
+				me[n] = v;
+			}
+		}
+	},
+	gX/*getXML*/: function(incpasswd) {
+		var r = [],
+			me = this,
+			i,
+			mongodb_hosts = me.mongodb_hosts;
+			
+		r.push("<smsg><item uid='" + me.uid + "'><connection>");
+		r.push("<dbtype>" + me.dbtype + "</dbtype>");
+		r.push("<jdbcurl><![CDATA[" + me.jdbcurl + "]]></jdbcurl>");
+		r.push("<driver><![CDATA[" + me.driver + "]]></driver>");
+		r.push("<username>" + me.username + "</username>");
+		r.push("<savepwd>" + (me.savepwd ? "T" : "F") + "</savepwd>");
+		r.push("<schemaname>" + (me.schemaname || "") + "</schemaname>");
+		r.push("<charset_out>" + (me.charset_out || "") + "</charset_out>");
+		r.push("<charset_db>" + (me.charset_db || "") + "</charset_db>");
+		r.push("<userowlimit>" + (me.userowlimit || "0") + "</userowlimit>");
+		if (incpasswd == false || me.savepwd == true)
+		{
+			r.push("<passwd>" + me.passwd + "</passwd>");
+		}
+		r.push("<mongodb_hosts><![CDATA[" + (me.mongodb_hosts || "") + "]]></mongodb_hosts>");
+		r.push("<validateSql><![CDATA[" + (me.validateSql || "") + "]]></validateSql>");
+		r.push("<cache>" + (me.cache ? "T" : "F") + "</cache>");
+		r.push("<c_rule>" + (me.c_rule || "min") + "</c_rule>");
+		r.push("<c_int>" + (me.c_int || "5") + "</c_int>");
+		r.push("<query_timeout>" + (me.query_timeout || "0") + "</query_timeout>");
+		r.push("<schedule_query_timeout>" + (me.schedule_query_timeout || "0") + "</schedule_query_timeout>");
+		r.push("<max_pool_size>" + (me.max_pool_size || "0") + "</max_pool_size>");
+		r.push("<c_dbmon>" + (me.c_dbmon ? "T" : "F") + "</c_dbmon>");
+		r.push("</connection></item></smsg>");
+		return r.join("");
+	}
+};
+
+IG$/*mainapp*/._I74/*mgrdb_config*/ = $s.extend(IG$/*mainapp*/._I57/*IngPanel*/, {
+	scroll: false,
+	initialized: false,
+	closable: true,
+	hideMode: 'offsets',
+	"layout": "fit",
+	bodyPadding: 5,
+	iconCls: "icon-ing-docdef",
+	
+	_IFd/*init_f*/: function() {
+		if (window.dbtypelist)
+		{
+			var panel = this,
+				db, db1, i, dbinfo = [];
+				
+			for (i=0; i < window.dbtypelist.length; i++) {
+				db = window.dbtypelist[i];
+				db1 = {};
+				IG$/*mainapp*/._I1d/*CopyObject*/(db, db1, "id;desc;driver;url");
+				dbinfo.push(db1);
+			}
+			
+			panel.dblist = dbinfo;
+			panel.ld2/*loadUserDBList*/();
+		}
+		else
+		{
+			var panel = this,
+				req = new IG$/*mainapp*/._I3e/*requestServer*/();
+			req.init(panel, 
+				{
+		            ack: "11",
+		            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({}),
+		            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'dblist'})
+		        }, panel, panel.rs_ld1/*loadDBList*/, false);
+			req._l/*request*/();
+		}
+	},
+	
+	rs_ld1/*loadDBList*/: function(xdoc) {
+		var panel = this,
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg"), 
+			tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode),
+			i, dbinfo = [],
+			db, db1;
+		
+		window.dbtypelist = [];
+		
+		for (i=0; i < tnodes.length; i++)
+		{
+			db = {
+				id: IG$/*mainapp*/._I1b/*XGetAttr*/(tnodes[i], "name"),
+				desc: IG$/*mainapp*/._I24/*getTextContent*/(IG$/*mainapp*/._I18/*XGetNode*/(tnodes[i], "desc")),
+				driver: IG$/*mainapp*/._I24/*getTextContent*/(IG$/*mainapp*/._I18/*XGetNode*/(tnodes[i], "driver")),
+				url: IG$/*mainapp*/._I24/*getTextContent*/(IG$/*mainapp*/._I18/*XGetNode*/(tnodes[i], "url"))
+			};
+			db1 = {};
+			IG$/*mainapp*/._I1d/*CopyObject*/(db, db1, "id;desc;driver;url");
+			window.dbtypelist.push(db1);
+			dbinfo.push(db);
+		}
+		
+		panel.dblist = dbinfo;
+		panel.ld2/*loadUserDBList*/();
+	},
+	
+	ld2/*loadUserDBList*/: function() {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.init(panel, 
+			{
+	            ack: "29",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({"address": "/Connections", option: "list"}, "address;option"),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({})
+	        }, panel, panel.rs_ld2/*loadUserDBList*/, false);
+		req._l/*request*/();
+	},
+	
+	rs_ld2/*loadUserDBList*/: function(xdoc) {
+		var me = this,
+			dbgrid = me.down("[name=dbgrid]"),
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+			tnodes, items = [], item, i;
+		
+		if (tnode)
+		{
+			me.rootnode = IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "uid");
+			tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+			for (i=0; i < tnodes.length; i++)
+			{
+				item = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+				items.push(item);
+			}
+			dbgrid.store.loadData(items);
+		}
+	},
+	
+	_t$/*toolbarHandler*/: function(cmd) {
+		var panel = this;
+		switch (cmd)
+		{
+		case "cmd_add_db":
+			var paneludetail;
+				
+			paneludetail = new IG$/*mainapp*/.AkX/*mgrdb_editor*/({
+				dbinfo: null,
+				dblist: panel.dblist,
+				callback: new IG$/*mainapp*/._I3d/*callBackObj*/(panel, panel.rs_MM/*afterEdit*/)
+			});
+			
+			paneludetail.show();
+			break;
+		}
+	},
+	
+	ld4/*loadDBDetail*/: function(uid) {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.init(panel, 
+			{
+	            ack: "5",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({"address": uid}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({})
+	        }, panel, panel.rs_ld4/*loadDBDetail*/, false);
+		req._l/*request*/();
+	},
+	
+	rs_ld4/*loadDBDetail*/: function(xdoc) {
+		var panel = this,
+			paneludetail,
+			dbinfo;
+			
+		dbinfo = new IG$/*mainapp*/._Id4/*dbObject*/();
+		dbinfo.pX/*parseXML*/(xdoc);
+		
+		paneludetail = new IG$/*mainapp*/.AkX/*mgrdb_editor*/({
+			dbinfo: dbinfo,
+			dblist: panel.dblist,
+			callback: new IG$/*mainapp*/._I3d/*callBackObj*/(this, this.rs_MM/*afterEdit*/)
+		});
+		
+		paneludetail.show();
+	},
+	
+	rs_MM/*afterEdit*/: function(mode) {
+		var panel = this;
+		panel.dbinfo = null;
+		panel.ld2/*loadUserDBList*/();
+		
+		mode == "saved" && IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1('M_SAVED'), null, null, 0, "success");
+		mode == "deleted" && IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1('M_DELETED'), null, null, 0, "success");
+	},
+	
+    initComponent: function(){
+    	var me = this;
+    	
+		me.items = [
+            {
+    			xtype: "panel",
+				region: "center",
+				"layout": {
+					type: "vbox",
+					align: "stretch"
+				},
+				
+				bodyPadding: 4,
+				
+				items: [
+					{
+						xtype: "panel",
+						flex: 1,
+						border: false,
+						"layout": { 
+							type: "vbox",
+							align: "stretch"
+						},
+						items: [
+							{
+								xtype: "gridpanel",
+								name: "dbgrid",
+								flex: 1,
+								store: {
+									xtype: "store",
+									fields: [
+										"name", "uid", "memo", "writable", "manage", "type", "owner", "modifier", "updatedate"
+									]
+								},
+								columns: [
+									{
+										text: IRm$/*resources*/.r1("B_TYPE"),
+										width: 80,
+										sortable: false,
+										hideable: false,
+										dataIndex: "type"
+									},
+									{
+										text: IRm$/*resources*/.r1("B_NAME"),
+										flex: 1,
+										sortable: false,
+										hideable: false,
+										dataIndex: "memo"
+									},
+									{
+										text: IRm$/*resources*/.r1("B_OWNER"),
+										width: 120,
+										dataIndex: "owner"
+									},
+									{
+										text: IRm$/*resources*/.r1("B_MODI"),
+										width: 120,
+										dataIndex: "modifier"
+									}
+								],
+								listeners: {
+									itemclick: function(view, record, item, index, e, eOpts) {
+										var sid = record.get("uid");
+										this.ld4/*loadDBDetail*/(sid);
+									},
+									scope: this
+								}
+							}
+						],
+						tbar: [
+					       	{
+					       		iconCls: "icon-toolbar-add",
+					        	text: IRm$/*resources*/.r1("L_ADD_DB_INST"),
+					        	handler: function() {
+					        		this._t$/*toolbarHandler*/('cmd_add_db'); 
+					        	},
+					        	scope: this
+					       	}
+						]
+					}
+				]
+            }
+		];
+		
+		this.listeners = {
+			afterrender: function(tobj) {
+				tobj._IFd/*init_f*/.call(tobj);
+			}
+		}
+
+		IG$/*mainapp*/._I74/*mgrdb_config*/.superclass.initComponent.call(this);
+    }
+});
+
+IG$/*mainapp*/.AkX/*mgrdb_editor*/ = $s.extend($s.window, {
+	name: "paneludetail",
+	width: 500,
+	height: 520,
+	"layout": "fit",
+	
+	defaults: {
+		anchor: "100%"
+	},
+	
+	in$t: function() {
+		var me = this,
+			tdbtype = me.down("[name=tdbtype]"),
+			dblist = me.dblist;
+			
+		tdbtype.store.loadData(dblist);
+		
+		me.ld5/*updateDBDetail*/();
+	},
+	
+	ld5/*updateDBDetail*/: function() {
+		var p = this,
+			u = p.dbinfo,
+			l = IG$/*mainapp*/._I83/*dlgLogin*/.jS1/*loginInfo*/,
+			tname = p.down("[name=tname]"),
+			tdbtype = p.down("[name=tdbtype]"),
+			tdriver = p.down("[name=tdriver]"),
+			updatedate = IRm$/*resources*/.r1("L_LAST_UPD"),
+			turl = p.down("[name=turl]"),
+			tuname = p.down("[name=tuname]"),
+			tpwd = p.down("[name=tpwd]"),
+			tusave = p.down("[name=tusave]"),
+			tudate = p.down("[name=tudate]"),
+			// schemaname = p.down("[name=schemaname]"),
+			charset_out = p.down("[name=charset_out]"),
+			charset_db = p.down("[name=charset_db]"),
+			userowlimit = p.down("[name=userowlimit]"),
+			c_rule = p.down("[name=c_rule]"),
+			cache = p.down("[name=cache]"),
+			c_int = p.down("[name=c_int]"),
+			gm1 = p.down("[name=gm1]"),
+			qt1 = p.down("[name=qt1]"),
+			qt2 = p.down("[name=qt2]"),
+			qt3 = p.down("[name=qt3]"),
+			c_dbmon = p.down("[name=c_dbmon]"),
+			validateSql = p.down("[name=validateSql]");
+	
+		tname.setReadOnly((u) ? true : false);
+		tname.setValue(u ? u.memo || "" : "");
+		tdbtype.setValue(u ? u.dbtype || "" : "");
+		tdriver.setValue(u ? u.driver || "" : "");
+		turl.setValue(u ? u.jdbcurl || "" : "");
+		tuname.setValue(u ? u.username || "" : "");
+		tpwd.setValue(u ? u.passwd || "" : "");
+		tusave.setValue(u ? u.savepwd : false);
+		cache.setValue(u ? u.cache : false);
+		c_int.setValue(u ? u.c_int || 5 : 5);
+		qt1.setValue(u ? u.query_timeout || 0 : 0);
+		qt2.setValue(u ? u.schedule_query_timeout || 0 : 0);
+		qt3.setValue(u ? u.max_pool_size || 0 : 0);
+		validateSql.setValue(u ? u.validateSql || "" : "");
+		c_dbmon.setValue(u ? u.c_dbmon : false);
+		
+		// schemaname.setValue(u ? u.schemaname || "" : "");
+		charset_out.setValue(u ? u.charset_out || "" : "");
+		charset_db.setValue(u ? u.charset_db || "" : "");
+		userowlimit.setValue(u ? u.userowlimit || 0 : 0);
+		c_rule.setValue(u ? u.c_rule || "min" : "min");
+		
+		updatedate = (u && u.updatedate) ? updatedate + IG$/*mainapp*/._I40/*formatDate*/(u.updatedate) : updatedate;
+		tudate.setValue(updatedate);
+		gm1.setValue(u && u.mongodb_hosts ? u.mongodb_hosts : "");
+	},
+	
+	cH/*changeDriverHeler*/: function() {
+		var i,
+			me = this,
+			dbtypelist = window.dbtypelist,
+			dbtype,
+			tdbtype = me.down("[name=tdbtype]"),
+			tdriver = me.down("[name=tdriver]"),
+			turl = me.down("[name=turl]"),
+			nval;
+		
+		if (me.changelock == true)
+			return;
+		
+		nval = tdbtype.getValue();
+		
+		for (i=0; i < dbtypelist.length; i++)
+		{
+			if (dbtypelist[i].id == nval) 
+			{
+				dbtype = dbtypelist[i];
+				break;
+			}
+		}
+		
+		tdriver.setValue(dbtype ? dbtype.driver : "");
+		turl.setValue(dbtype ? dbtype.url : "");
+	},
+	
+	cH1/*testConnection*/: function() {
+		var panel = this,
+			dbo;
+		
+		dbo = new IG$/*mainapp*/._Id4/*dbObject*/();
+		dbo.pX/*parseXML*/(null);
+		
+		panel.lda/*updateInfo*/(dbo);
+		
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.init(panel, 
+			{
+	            ack: "29",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({"address": "/Connections", option: "testcon"}, "address;option"),
+	            mbody: dbo.gX/*getXML*/(false)
+	        }, panel, panel.rs_cH1/*testConnection*/, false);
+		req._l/*request*/();
+	},
+	
+	rs_cH1/*testConnection*/: function(xdoc) {
+		IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1('M_SUC_DBCON'), null, null, 0, "success");
+	},
+	
+	cH2/*setParameter*/: function(field) {
+		var me = this,
+			mfield = me.down("[name=" + field + "]"),
+			mvalue = mfield.getValue(),
+			dlg;
+		
+		dlg = new IG$/*mainapp*/._Id3/*userDBTemplate*/({
+			fieldvalue: mvalue,
+			callback: new IG$/*mainapp*/._I3d/*callBackObj*/(this, this.rs_cH2/*setParameter*/, field)
+		});
+		IG$/*mainapp*/._I_5/*checkLogin*/(this, dlg);
+	},
+	
+	rs_cH2/*setParameter*/: function(nvalue, field) {
+		var me = this,
+			mfield = me.down("[name=" + field + "]");
+		
+		mfield.setValue(nvalue);
+	},
+	
+	ld6/*confirmChanges*/: function(cmd) {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+			purpose,
+			address,
+			content,
+			dbo = panel.dbinfo,
+			tname = panel.down("[name=tname]"),
+			desc = "",
+			itemname;
+		
+		if (cmd == "confirm")
+		{
+			itemname = tname.getValue();
+			purpose = "31";
+			address = IG$/*mainapp*/._I2d/*getItemAddress*/({
+        		address: (dbo ? dbo.uid : "/Connections/" + itemname),
+        		name: itemname,
+        		type: "UserDB",
+        		pid: panel.rootnode,
+        		memo: tname.getValue(),
+        		description: desc
+        	}, "address;name;type;pid;description;memo");
+			
+			if (!dbo)
+			{
+				dbo = new IG$/*mainapp*/._Id4/*dbObject*/();
+				dbo.pX/*parseXML*/(null);
+			}
+			
+			panel.lda/*updateInfo*/(dbo);
+			
+			content = dbo.gX/*getXML*/(true);
+			
+			req.init(panel, 
+				{
+		            ack: purpose,
+		            payload: address,
+		            mbody: content
+		        }, panel, panel.rs_ld6a/*saveContent*/, false);
+			req._l/*request*/();
+		}
+		else if (cmd == "delete")
+		{
+			IG$/*mainapp*/._I55/*confirmMessages*/(IRm$/*resources*/.r1("B_CONFIRM"), IRm$/*resources*/.r1("B_C_DELETE"), function(btn) {
+				if (btn == "yes")
+				{
+					if (!dbo)
+					{
+						return;
+					}
+					purpose = "7";
+					address = IG$/*mainapp*/._I2d/*getItemAddress*/({
+		        		address: dbo.uid,
+		        		name: itemname,
+		        		type: "UserDB",
+		        		description: desc
+		        	}, "address;name;type;pid;description;memo");
+					content = IG$/*mainapp*/._I2e/*getItemOption*/({});
+					
+					req.init(panel, 
+						{
+				            ack: purpose,
+				            payload: address,
+				            mbody: content
+				        }, panel, panel.rs_ld6b/*deleteContent*/, false);
+					req._l/*request*/();
+				}
+			}, this, this);
+		}
+	},
+	
+	rs_ld6b/*deleteContent*/: function(xdoc) {
+		var panel = this;
+		panel.callback && panel.callback.execute("saved");
+		panel.close();
+	},
+	
+	rs_ld6a/*saveContent*/: function(xdoc) {
+		var panel = this;
+		panel.callback && panel.callback.execute("saved");
+		panel.close();
+	},
+	
+	lda/*updateInfo*/: function(dbo) {
+		var panel = this,
+			tdbtype = panel.down("[name=tdbtype]"),
+			tdriver = panel.down("[name=tdriver]"),
+			turl = panel.down("[name=turl]"),
+			tuname = panel.down("[name=tuname]"),
+			tpwd = panel.down("[name=tpwd]"),
+			tusave = panel.down("[name=tusave]"),
+			// schemaname = panel.down("[name=schemaname]"),
+			charset_out = panel.down("[name=charset_out]"),
+			charset_db = panel.down("[name=charset_db]"),
+			userowlimit = panel.down("[name=userowlimit]"),
+			gm1 = panel.down("[name=gm1]"),
+			c_rule = panel.down("[name=c_rule]"),
+			cache = panel.down("[name=cache]"),
+			c_int = panel.down("[name=c_int]"),
+			qt1 = panel.down("[name=qt1]"),
+			qt2 = panel.down("[name=qt2]"),
+			qt3 = panel.down("[name=qt3]"),
+			validateSql = panel.down("[name=validateSql]"),
+			c_dbmon = panel.down("[name=c_dbmon]"),
+			rec,
+			i;
+		
+		dbo.dbtype = tdbtype.getValue();
+		dbo.jdbcurl = turl.getValue();
+		dbo.driver = tdriver.getValue();
+		dbo.username = tuname.getValue();
+		dbo.passwd = tpwd.getValue();
+		dbo.savepwd = true; // tusave.getValue() ? true : false;
+		// dbo.schemaname = schemaname.getValue();
+		dbo.charset_out = charset_out.getValue();
+		dbo.charset_db = charset_db.getValue();
+		dbo.userowlimit = userowlimit.getValue();
+		dbo.mongodb_hosts = gm1.getValue();
+		
+		dbo.c_rule = c_rule.getValue();
+		dbo.cache = cache.getValue();
+		dbo.c_int = c_int.getValue();
+		dbo.c_dbmon = c_dbmon.getValue();
+		
+		dbo.query_timeout = qt1.getValue();
+		dbo.schedule_query_timeout = qt2.getValue();
+		dbo.max_pool_size = qt3.getValue();
+		dbo.validateSql = validateSql.getValue();
+	},
+	
+	m1/*changeLayout*/: function() {
+		var me = this,
+			tdbtype = me.down("[name=tdbtype]").getValue(),
+			m1 = me.down("[name=m1]"),
+			m2 = me.down("[name=m2]"),
+			m_a1 = me.down("[name=m_a1]");
+			
+		m1.setVisible(tdbtype != "mongodb");
+		m2.setVisible(tdbtype == "mongodb");
+		m_a1.setVisible(tdbtype != "mongodb");
+	},
+	
+	initComponent: function(){
+		var me = this;
+		
+		$s.apply(me, {
+			title: IRm$/*resources*/.r1("T_DB_CON"),
+			items: [
+				{
+					xtype: "panel",
+					layout: "anchor",
+					bodyPadding: 10,
+					autoScroll: true,
+					items: [
+						{
+							xtype: "textfield",
+							fieldLabel: IRm$/*resources*/.r1("L_DB_NAME"),
+							name: "tname"
+						},
+						
+						{
+							xtype: "fieldcontainer",
+							fieldLabel: IRm$/*resources*/.r1("L_DB_TYPE"),
+							layout: "hbox",
+							items: [
+								{
+									xtype: "combobox",
+									labelField: "desc",
+									valueField: "gid",
+									name: "tdbtype",
+									queryMode: 'local',
+									displayField: 'desc',
+									valueField: 'id',
+									editable: false,
+									autoSelect: true,
+									store: {
+										fields: [
+											"id", "desc", "driver", "url"
+										]
+									},
+									listeners: {
+										change: function(cb, newValue, oldValue, eOpts) {
+											this.m1/*changeLayout*/();
+										},
+										scope: this
+									}
+								},
+								{
+									xtype: "button",
+									name: "m_a1",
+									text: IRm$/*resources*/.r1("L_APPLY_TMPL"),
+									handler: function() {
+										var me = this;
+										me.cH/*changeDriverHeler*/.call(me);
+									},
+									scope: this
+								}
+							]
+						},
+						{
+							xtype: "fieldcontainer",
+							layout: "anchor",
+							hidden: true,
+							name: "m1",
+							defaults: {
+								anchor: "100%"
+							},
+							items: [
+								{
+									xtype: "textfield",
+									fieldLabel: IRm$/*resources*/.r1("L_JDBC_DRV"),
+									name: "tdriver"
+								},
+								{
+									xtype: "fieldcontainer",
+									fieldLabel: IRm$/*resources*/.r1("L_JDBC_URL"),
+									layout: "hbox",
+									items: [
+										{
+											xtype: "textfield",
+											fieldLabel: "",
+											name: "turl",
+											width: 280
+										},
+										{
+											xtype: "button",
+											text: "Set",
+											handler: function() {
+												var turl = this.down("[name=turl]");
+												
+												if (turl.getValue() != "")
+												{
+													this.cH2/*setParameter*/("turl");
+												}
+											},
+											scope: this
+										}
+									]
+								},
+								{
+									xtype: "textfield",
+									fieldLabel: IRm$/*resources*/.r1("L_DB_UNAME"),
+									name: "tuname"
+								},
+								{
+									xtype: "fieldcontainer",
+									fieldLabel: IRm$/*resources*/.r1("L_DB_PWD"),
+									layout: "hbox",
+									items: [
+								
+										{
+											xtype: "textfield",
+											fieldLabel: "",
+											inputType: "password",
+											name: "tpwd",
+											width: 220
+										},
+										{
+											xtype: "button",
+											text: "Test",
+											handler: function() {
+												var me = this;
+												me.cH1/*testConnection*/.call(me);
+											},
+											scope: this
+										}
+									]
+								},
+								{
+									xtype: "checkbox",
+									fieldLabel: "Save password",
+									hidden: true,
+									name: "tusave"
+								},
+								{
+									xtype: "displayfield",
+									value: IRm$/*resources*/.r1("L_LAST_UPD"),
+									name: "tudate"
+								},
+								{
+									xtype: "fieldset",
+									title: IRm$/*resources*/.r1("L_ADV_OPTION"),
+									layout: "anchor",
+									items: [
+										{
+											xtype: "textarea",
+											height: 80,
+											fieldLabel: IRm$/*resources*/.r1("L_DB_VAL"),
+											name: "validateSql"
+										},
+										{
+											xtype: "numberfield",
+											name: "qt3",
+											fieldLabel: "Max pool size",
+											minValue: 0,
+											maxValue: 1000
+										},
+										{
+											xtype: "numberfield",
+											name: "qt1",
+											fieldLabel: IRm$/*resources*/.r1("L_DB_QUERYTIMEOUT"),
+											minValue: 0,
+											maxValue: 100000
+										},
+										{
+											xtype: "numberfield",
+											name: "qt2",
+											fieldLabel: IRm$/*resources*/.r1("L_DB_SCHEDULE_QUERYTIMEOUT"),
+											minValue: 0,
+											maxValue: 100000
+										},
+										{
+											xtype: "combobox",
+											labelField: "name",
+											valueField: "value",
+											name: "charset_db",
+											queryMode: 'local',
+											displayField: 'name',
+											editable: false,
+											autoSelect: true,
+											fieldLabel: IRm$/*resources*/.r1("L_DB_CHARSET"),
+											store: {
+												xtype: "store",
+												
+												fields: [
+													"name", "value"
+												],
+												
+												data: [
+													{name: "Not use", value: ""},
+													{name: "UTF-8", value: "utf-8"},
+													{name: "ksc5601", value: "ksc5601"},
+													{name: "x-windows-949", value: "x-windows-949"},
+													{name: "iso-8859-1", value: "iso-8859-1"},
+													{name: "euc-kr", value: "euc-kr"}
+												]
+											}
+										},
+										{
+											xtype: "combobox",
+											labelField: "name",
+											valueField: "value",
+											name: "charset_out",
+											queryMode: 'local',
+											displayField: 'name',
+											editable: false,
+											autoSelect: true,
+											fieldLabel: IRm$/*resources*/.r1("L_OUTPUT_CHARSET"),
+											store: {
+												xtype: "store",
+												
+												fields: [
+													"name", "value"
+												],
+												
+												data: [
+													{name: "Not use", value: ""},
+													{name: "UTF-8", value: "utf-8"},
+													{name: "ksc5601", value: "ksc5601"},
+													{name: "x-windows-949", value: "x-windows-949"},
+													{name: "iso-8859-1", value: "iso-8859-1"},
+													{name: "euc-kr", value: "euc-kr"}
+												]
+											}
+										},
+										{
+											xtype: "numberfield",
+											name: "userowlimit",
+											anchor: "50%",
+											fieldLabel: IRm$/*resources*/.r1("L_ROW_LIMIT_COUNT"),
+											minValue: 0,
+											maxValue: 10000000
+										},
+										{
+											xtype: "checkbox",
+											fieldLabel: IRm$/*resources*/.r1("L_USE_CACHE"),
+											name: "cache",
+											boxLabel: IRm$/*resources*/.r1("B_ENABLED")
+										},
+										{
+											xtype: "combobox",
+											fieldLabel: IRm$/*resources*/.r1("L_CACHE_RULE"),
+											name: "c_rule",
+											displayField: "name",
+											valueField: "value",
+											queryMode: 'local',
+											editable: false,
+											autoSelect: true,
+											store: {
+												xtype: "store",
+												
+												fields: [
+													"name", "value"
+												],
+												
+												data: [
+													{name: IRm$/*resources*/.r1("L_EV_MIN"), value: "min"},
+													{name: IRm$/*resources*/.r1("L_EV_HOUR"), value: "hour"},
+													{name: IRm$/*resources*/.r1("L_EV_DAY"), value: "day"}
+												]
+											},
+											listeners: {
+												change: function(tobj) {
+													var me = this,
+														c_int = me.down("[name=c_int]"),
+														tval = tobj.getValue();
+													
+													c_int.setFieldLabel(tval == "day" ? IRm$/*resources*/.r1("L_CLC_HOUR") : IRm$/*resources*/.r1("L_CLC_PERI"));
+												},
+												scope: this
+											}
+										},
+										{
+											xtype: "numberfield",
+											fieldLabel: IRm$/*resources*/.r1("L_CACHE_PERI"),
+											name: "c_int",
+											value: 5,
+											minValue: 1,
+											maxValue: 1000
+										},
+										{
+											xtype: "checkbox",
+											fieldLabel: IRm$/*resources*/.r1("L_DB_MON"),
+											boxLabel: IRm$/*resources*/.r1("B_ENABLED"),
+											name: "c_dbmon"
+										}
+									]
+								}
+							]
+						},
+						{
+							xtype: "fieldcontainer",
+							layout: "fit",
+							height: 280,
+							hidden: true,
+							name: "m2",
+							items: [
+								{
+									xtype: "textarea",
+									name: "gm1",
+									flex: 1,
+									fieldLabel: "Connection String"
+								}
+							]
+						},
+						{
+							xtype: "fieldcontainer",
+							hidden: (me.dbinfo ? false : true),
+							items: [
+								{
+									xtype: "button",
+									text: "Remove Connection",
+									handler: function() {
+										this.ld6/*confirmChanges*/("delete");
+									},
+									scope: this
+								}
+							]
+						}
+					]
+				}
+			],
+			
+			buttons: [
+				{
+					xtype: "button",
+					text: IRm$/*resources*/.r1("B_CONFIRM"),
+					handler: function() {
+						this.ld6/*confirmChanges*/("confirm");
+					},
+					scope: this
+				},
+				{
+					xtype: "button",
+					text: IRm$/*resources*/.r1("B_CANCEL"),
+					handler: function() {
+						// var paneludetail = this.down("[name=paneludetail]");
+						// paneludetail.setVisible(false);
+						this.close();
+					},
+					scope: this
+				}
+			]
+		});
+		
+		IG$/*mainapp*/.AkX/*mgrdb_editor*/.superclass.initComponent.call(this);
+	},
+	
+	listeners: {
+		afterrender: function(tobj) {
+			tobj.in$t();
+		}
+	}
+});
+
+/**
+ * Password for database connection
+ */
+IG$/*mainapp*/._Ice/*userDbPassword*/ = $s.extend($s.window, {
+	
+	modal: true,
+	region:'center',
+	layout: "fit",
+	closable: false,
+	resizable:false,
+	width: 300,
+	autoHeight: true,
+	
+	callback: null,
+	poolname: null,
+	
+	c1/*confirm*/: function() {
+		var me = this,
+			tpwd = me.down("[name=tpwd]"),
+			nvalue = tpwd.getValue();
+		
+		if (!nvalue)
+		{
+			IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1('T_DB_BLANK'), null, me, null, null, 1, "error");
+			return;
+		}
+		
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.init(panel, 
+			{
+	            ack: "25",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: me.poolname, pwd: nvalue}, "address;pwd"),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'standard'})
+	        }, panel, panel.rs_c1/*confirm*/);
+		req._l/*request*/();
+	},
+	
+	rs_c1/*confirm*/: function(xdoc) {
+		var me = this,
+			tpwd = me.down("[name=tpwd]"),
+			nvalue = tpwd.getValue();
+		
+		if (me.callback)
+		{
+			me.callback.execute(nvalue);
+			me.close();
+		}
+	},
+	
+	initComponent : function() {
+		var me = this;
+		
+		me.title = IRm$/*resources*/.r1('T_DB_PWD');
+		
+		$s.apply(this, {
+			defaults:{bodyStyle:'padding:10px'},
+			
+			items: [
+			    {
+			    	xtype: "form",
+			    	layout: "anchor",
+			    	defaults: {
+						anchor: "100%"
+					},
+			    	items: [
+			    	    {
+			    	    	xtype: "textfield",
+							fieldLabel: "Password",
+							inputType: "password",
+							enableKeyEvents: true,
+							name: "tpwd",
+							allowBlank: false,
+							listeners: {
+			    	    		keyup: function(item, e, eOpts) {
+			    	    			if (e.keyCode == 13)
+			    	    			{
+			    	    				me.c1/*confirm*/.call(me);
+			    	    			}
+			    	    		}
+			    	    	}
+			    	    }
+			    	]
+			    }
+			],
+			buttons:[
+			    {
+					text: IRm$/*resources*/.r1('B_CONFIRM'),
+					handler: function() {
+						this.c1/*confirm*/();
+					},
+					scope: this
+				}, 
+				{
+					text: IRm$/*resources*/.r1('B_CANCEL'),
+					handler:function() {
+						this.close();
+					},
+					scope: this
+				}
+			]
+		});
+		IG$/*mainapp*/._Ice/*userDbPassword*/.superclass.initComponent.apply(this, arguments);
+	}
+});
+IG$/*mainapp*/.Idm/*dataManager*/ = $s.extend(IG$/*mainapp*/._I57/*IngPanel*/, {
+	closable: true,
+	hideMode: 'offsets',
+	"layout": "fit",
+	bodyPadding: 0,
+	iconCls: "icon-ing-docdef",
+	
+	_b1/*buildLayout*/: function() {
+		var me = this,
+			_m4 = me.down("[name=_m4]"),
+			_m4_el = _m4.body.dom,
+			m_fileupload,
+			fileupload,
+			dropzone,
+			d_progress,
+			i;
+			
+		fileupload = $("#fileupload", _m4_el);
+		dropzone = $("#dropzone", _m4_el);
+		d_progress = $("#d_progress", _m4_el);
+		
+		fileupload.fileupload({
+			url: ig$/*appoption*/.servlet,
+	        dataType: "text",
+	        formData: {
+	        	_mts_: IG$/*mainapp*/._g$a/*global_mts*/ || ""
+	        },
+	        done: function (e, data) {
+	        	var doc = data.result || '<smsg errorcode="0xffff" errormsg="Server incorrect responding"/>',
+					xdoc = IG$/*mainapp*/._I13/*loadXML*/(doc),
+					errcode = IG$/*mainapp*/._I27/*getErrorCode*/(xdoc),
+					tnode, tnodes,
+					i, dp = [], p;
+				
+				if (errcode)
+				{
+					IG$/*mainapp*/._I51/*ShowErrorMessage*/(xdoc, me, null);
+				}
+				else
+				{
+					tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg");
+					
+					if (tnode)
+					{
+						tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+						for (i=0; i < tnodes.length; i++)
+						{
+							p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+							dp.push(p);
+						}
+					}
+				}
+				
+				me._l1/*loadDataSet*/.call(me, dp);
+	        },
+	        progressall: function (e, data) {
+	            var progress = parseInt(data.loaded / data.total * 100, 10),
+	            	bar = $(".bar", d_progress);
+	            bar.css(
+	                "width",
+	                progress + "%"
+	            );
+	            bar.text("Loaded " + data.loaded + " / " + data.total);
+	        },
+	 
+	        dropZone: dropzone
+	    }).bind('fileuploadsubmit', function (e, data) {
+	    });
+	    
+	    fileupload.fileupload("option", "url", ig$/*appoption*/.servlet);
+	},
+	
+	_l1/*loadDataSet*/: function(dp) {
+		var me = this,
+			_m5 = me.down("[name=_m5]"),
+			i, k;
+		
+		if (dp)
+		{	
+			for (i=0; i < dp.length; i++)
+			{
+				k = dp[i];
+				if (k.filename.substring(0, "{ENC}".length) == "{ENC}")
+				{
+					k.filename = k.filename.substring("{ENC}".length);
+					k.filename = Base64.decode(k.filename);
+				}
+				
+				// me._l2/*loadFileSet*/.call(me, k, tdata);
+			}
+		}
+		
+		_m5.store.loadData(dp);
+	},
+	
+	_l2/*loadFileSet*/: function(kobj, tdata) {
+		var me = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+			delimiter = null,
+			regfile = null,
+			file_encoding = null;
+			
+		me.setLoading(true, true);
+				
+		// store content in separate uid
+		req.init(me, 
+			{
+				ack: "27",
+				payload: IG$/*mainapp*/._I2d/*getItemAddress*/({
+					uid: kobj.uid, 
+					delimiter: delimiter, 
+					uploadmode: "F", 
+					deletemode: "F", 
+					regfile: regfile, 
+					rowlimit: 100,
+					file_encoding: file_encoding
+				}, "uid;delimiter;uploadmode;deletemode;regfile;file_encoding;rowlimit"),
+				mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "previewdatacontent"})
+			}, me, function(xdoc) {
+				var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg"),
+					tnodes = tnode ? IG$/*mainapp*/._I26/*getChildNodes*/(tnode) : null,
+					i, j,
+					td = $("td", tdata),
+					sheets = [],
+					sinfo,
+					hd, hds, ht,
+					sc;
+				
+				td.empty();
+				
+				for (i=0; i < tnodes.length; i++)
+				{
+					sinfo = $("<div class='sh-info'><div class='sh-summary'></div><div class='sh-columns'></div></div>").appendTo(td);
+					
+					sc = $(".sh-columns", sinfo);
+					
+					hd = IG$/*mainapp*/._I18/*XGetNode*/(tnodes[i], "Header");
+					
+					hds = IG$/*mainapp*/._I26/*getChildNodes*/(hd);
+					
+					ht = "";
+					
+					for (j=0; j < hds.length; j++)
+					{
+						ht += (j > 0 ? ", " : "") + IG$/*mainapp*/._I1b/*XGetAttr*/(hds[j], "name");
+					}
+					
+					sc.text(ht);
+				}
+			}
+		);
+		
+		req._l/*request*/();
+	},
+	
+	_l3/*loadTables*/: function() {
+		var me = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		
+		me.setLoading(true, true);
+		
+		req.init(me, 
+			{
+				ack: "11",
+				payload: IG$/*mainapp*/._I2d/*getItemAddress*/({}, ""),
+				mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "ftables"})
+			}, me, function(xdoc) {
+				var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+					tnodes = tnode ? IG$/*mainapp*/._I26/*getChildNodes*/(tnode) : null,
+					m1 = me.down("[name=m1]"),
+					dp = [],
+					p,
+					i;
+				
+				if (tnodes)
+				{
+					for (i=0; i < tnodes.length; i++)
+					{
+						p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+						dp.push(p);
+					}
+				}
+				
+				m1.store.loadData(dp);
+			}
+		);
+		
+		req._l/*request*/();
+	},
+	
+	_l4/*loadColumnInfo*/: function(rec) {
+		var me = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+			prop = {
+				uid: rec.get("uid"),
+				option: "StoredContent"
+			};
+		
+		me._sb1 = rec;
+		
+		req.init(me, 
+			{
+		        ack: "25",
+		        payload: IG$/*mainapp*/._I2d/*getItemAddress*/(prop, "uid;option"),
+		        mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: prop.option})
+		    }, me, function(xdoc) {
+		    	var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+		    		onode = tnode ? IG$/*mainapp*/._I18/*XGetNode*/(tnode, "objinfo") : null,
+					tnodes = tnode ? IG$/*mainapp*/._I26/*getChildNodes*/(tnode, "Field") : null,
+					objinfo = onode ? IG$/*mainapp*/._I1c/*XGetAttrProp*/(onode) : null,
+					i,
+					p,
+					dp = [],
+					n = 0,
+					_mt = me.down("[name=_mt]"),
+					m3 = me.down("[name=m3]"),
+					tcol = [];
+				
+				if (tnodes)
+				{
+					for (i=0; i < tnodes.length; i++)
+					{
+						p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+						
+						if (p.name == objinfo.file_field || p.name == objinfo.seq_field)
+							continue;
+						
+						p.seq = ++n;
+						tcol.push(p.name);
+						dp.push(p);
+					}
+				}
+				
+				me._ltb = {
+					item: IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnode),
+					fields: dp
+				};
+				
+				m3.store.loadData(dp);
+				_mt.setValue(tcol.join("\t"));
+				me._l6/*loadHistory*/(prop.uid);
+		    }, false);
+		req._l/*request*/();
+	},
+	
+	_l6/*loadHistory*/: function(uid) {
+		var me = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		
+		me.setLoading(true, true);
+		
+		req.init(me, 
+			{
+				ack: "11",
+				payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: uid, option: "ftable_hist"}, "uid;option"),
+				mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "ftable_hist"})
+			}, me, function(xdoc) {
+				var me = this,
+					tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+					tnodes = tnode ? IG$/*mainapp*/._I26/*getChildNodes*/(tnode) : null,
+					m2 = me.down("[name=m2]"),
+					i, j, dp = [],
+					p, tn, c, v, mnode;
+
+				if (tnodes)
+				{
+					for (i=0; i < tnodes.length; i++)
+					{
+						mnode = tnodes[i];
+						
+						p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(mnode);
+						tn = IG$/*mainapp*/._I26/*getChildNodes*/(mnode);
+						
+						if (tn)
+						{
+							for (j=0; j < tn.length; j++)
+							{
+								c = IG$/*mainapp*/._I29/*XGetNodeName*/(tn[j]);
+								v = IG$/*mainapp*/._I24/*getTextContent*/(tn[j]);
+								
+								p[c] = v;
+							}
+						}
+						
+						dp.push(p);
+					}
+				}
+				
+				m2.store.loadData(dp);
+			}
+		);
+		
+		req._l/*request*/();
+	},
+	
+	d1/*deleteHistory*/: function(rec, grid) {
+		var me = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		
+		me.setLoading(true, true);
+		
+		req.init(me, 
+			{
+				ack: "11",
+				payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: rec.get("uid"), option: "ftable_rm"}, "uid;option"),
+				mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "ftable_rm"})
+			}, me, function(xdoc) {
+				if (me._sb1)
+				{
+					me._l4/*loadColumnInfo*/(me._sb1);
+				}
+			}
+		);
+		
+		req._l/*request*/();
+	},
+	
+	_l7/*loadFileToTable*/: function(rec) {
+		var me = this,
+			_ltb = me._ltb,
+			_m5 = me.down("[name=_m5]"),
+			_m5_sel = _m5.getSelectionModel().selected,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+			delimiter = null,
+			regfile = null,
+			file_encoding = null,
+			fuid = [],
+			i;
+			
+		me.setLoading(true, true);
+		
+		if (rec)
+		{
+			fuid.push(rec.get("uid"));
+		}
+		else
+		{
+			for (i=0; i < _m5_sel.length; i++)
+			{
+				fuid.push(_m5_sel.items[i].get("uid"));
+			}
+		}
+		
+		if (fuid.length == 0)
+			return;
+				
+		// store content in separate uid
+		req.init(me, 
+			{
+				ack: "27",
+				payload: IG$/*mainapp*/._I2d/*getItemAddress*/({
+					tuid: _ltb.item.uid,
+					uid: fuid.join(";")
+				}, "uid;tuid"),
+				mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "loaddatacontent"})
+			}, me, function(xdoc) {
+				_m5.store.loadData([]);
+				
+				if (me._sb1)
+				{
+					me._l4/*loadColumnInfo*/(me._sb1);
+				}
+			}
+		);
+		
+		req._l/*request*/();
+	},
+
+	initComponent: function() {
+		var me = this;
+		
+		$s.apply(me, {
+			layout: "border",
+			tbar: [
+				{
+					iconCls: 'icon-refresh',
+					tooltip: "Refresh",
+					handler: function() {
+						var me = this;
+						me._l3/*loadTables*/.call(me);
+					},
+					scope: this
+				}
+			],
+			items: [
+				{
+					xtype: "gridpanel",
+					name: "m1",
+					title: "Table List",
+					region: "center",
+					flex: 1,
+					store: {
+						xtype: "store",
+						fields: [
+							"type", "name", "uid"
+						]
+					},
+					columns: [
+						{
+							text: "Type",
+							dataIndex: "type",
+							width: 80
+						},
+						{
+							text: "Name",
+							dataIndex: "name",
+							tdCls: "igc-td-link",
+							flex: 1
+						},
+						{
+							xtype: "actioncolumn",
+							width: 30,
+							items: [
+								{
+									iconCls: "icon-grid-config",
+									tooltip: "Config item",
+									handler: function (grid, rowIndex, colIndex) {
+										var me = this,
+											rec = grid.store.getAt(rowIndex);
+											
+										me._l4/*loadColumnInfo*/.call(me, rec);
+									},
+									scope: this
+								}
+							]
+						}
+					],
+					listeners: {
+						cellclick: function(tobj, td, cellIndex, rec, tr, rowIndex, e, eOpts) {
+							var me = this;
+							
+							if (cellIndex == 1)
+							{
+								me._l4/*loadColumnInfo*/.call(me, rec);
+							}
+						},
+						scope: this
+					}
+				},
+				{
+					xtype: "panel",
+					region: "south",
+					flex: 1,
+					flex: 1,
+					layout: {
+						type: "hbox",
+						align: "stretch"
+					},
+					items: [
+						{
+							xtype: "panel",
+							flex: 1,
+							layout: {
+								type: "vbox",
+								align: "stretch"
+							},
+							items: [
+								{
+									xtype: "gridpanel",
+									title: "Uploaded File",
+									flex: 1,
+									name: "_m5",
+									store: {
+										fields: ["filename", "uid"]
+									},
+									selType: "checkboxmodel",
+									selModel: {
+										mode: "MULTI"
+									},
+									tbar: [
+										{
+											iconCls: 'icon-refresh',
+											tooltip: "Load File",
+											handler: function() {
+												var me = this;
+												me._l7/*loadFileToTable*/();
+											},
+											scope: this
+										}	
+									],
+									columns: [
+										{
+											text: "Name",
+											flex: 1,
+											dataIndex: "filename",
+											tdCls: "igc-td-link"
+										},
+										{
+											xtype: "actioncolumn",
+											width: 30,
+											items: [
+												{
+													iconCls: "icon-grid-config",
+													tooltip: "Config item",
+													handler: function (grid, rowIndex, colIndex) {
+														var me = this,
+															rec = grid.store.getAt(rowIndex);
+															
+														me._l7/*loadFileToTable*/.call(me, rec);
+													},
+													scope: this
+												}
+											]
+										}
+									]
+								},
+								{
+									html: "<div class='igc-o-dzone' id='_tb_f'>"
+										+ "<input type='file' id='fileupload' name='files[]' data-url='upload' multiple></input>"
+										+ "<div class='filedropzone fade well' id='dropzone'>Drop files here</div>"
+										+ "<div class='file-progress' id='d_progress'><div class='bar' style='width: 0%;'></div></div>"
+										+ "</div>",
+									name: "_m4",
+									height: 150
+								}
+							]
+						},
+						
+						{
+							xtype: "gridpanel",
+							title: "File History",
+							name: "m2",
+							flex: 1,
+							store: {
+								xtype: "store",
+								fields: [
+									"tuid", "cdate", "mdate", "cdate_user", "mdate_user", "cname", "uname", "fname", "uid", "type", "rowcount"
+								]
+							},
+							columns: [
+								{
+									text: "Name",
+									dataIndex: "fname",
+									flex: 1
+								},
+								{
+									text: "Updated",
+									dataIndex: "mdate_user",
+									width: 150
+								},
+								{
+									text: "Rows",
+									dataIndex: "rowcount",
+									width: 80
+								},
+								{
+									xtype: "actioncolumn",
+									width: 30,
+									items: [
+										{
+											// icon: "./images/delete.png",
+											iconCls: "icon-grid-delete",
+											tooltip: "Delete item",
+											handler: function (grid, rowIndex, colIndex) {
+												var rec = grid.store.getAt(rowIndex);
+												me.d1/*deleteHistory*/.call(me, rec, grid);
+											}
+										}
+									]
+								}
+							]
+						},
+								
+						
+						{
+							xtype: "panel",
+							title: "Column Fields",
+							flex: 1,
+							layout: {
+								type: "vbox",
+								align: "stretch"
+							},
+							items: [
+								{
+									xtype: "gridpanel",
+									name: "m3",
+									flex: 1,
+									store: {
+										xtype: "store",
+										fields: [
+											"seq", "name", "datatype", "datasize", "alias", "decimaldigits", "iskey", "nodepath", "tablename", "type"
+										]
+									},
+									columns: [
+										{
+											text: "No",
+											dataIndex: "seq",
+											width: 40
+										},
+										{
+											text: "Key",
+											dataIndex: "iskey",
+											width: 40
+										},
+										{
+											text: "Name",
+											dataIndex: "name",
+											minWidth: 120,
+											flex: 1
+										},
+										{
+											text: "DataType",
+											dataIndex: "datatype",
+											width: 80
+										},
+										{
+											text: "Size",
+											width: 60,
+											dataIndex: "datasize"
+										}
+									]
+								},
+								{
+									xtype: "textarea",
+									fieldLabel: "Field Template",
+									name: "_mt",
+									height: 100
+								}
+							]
+						}
+					]
+				}
+			]
+		});
+
+		IG$/*mainapp*/.Idm/*dataManager*/.superclass.initComponent.call(this);
+	},
+	listeners: {
+		afterrender: function(tobj) {
+			tobj._b1/*buildLayout*/.call(tobj);
+			tobj._l3/*loadTables*/.call(tobj);
+		}
+	}
+});
+
+IG$/*mainapp*/._Icb/*userDutyMgr*/ = $s.extend($s.window, {
+	modal: true,
+	"layout": "fit",
+	closable: false,
+	resizable:false,
+	width: 500,
+	autoHeight: true,
+	bodyPadding: 10,
+	bodyStyle: {
+		background: "#ffffff"
+	},
+	
+	callback: null,
+	sel: null,
+		
+	_IG0/*closeDlgProc*/: function() {
+		this.close();
+	},
+	
+	mm1/*confirmDialog*/: function() {
+		if (this.callback)
+		{
+			var gridduty_sel = this.down("[name=gridduty_sel]"),
+				i,
+				sel = []; // gridduty.getSelectionModel().getSelection();
+				
+			for (i=0; i < gridduty_sel.store.data.length; i++)
+			{
+				sel.push(gridduty_sel.store.data.items[i]);
+			}
+			this.callback.execute(sel);
+		}
+		this.close();
+	},
+	
+	mm2/*loadDutyList*/: function() {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.init(panel, 
+			{
+	            ack: "28",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: "/Auth"}, "address"),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'select'})
+	        }, panel, panel.rs_mm2/*loadDutyList*/, false);
+		req._l/*request*/();
+	},
+	
+	rs_mm2/*loadDutyList*/: function(xdoc) {
+		var i,
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+			cnodes,
+			duties = [], 
+			duties_sel = [],
+			rec,
+			duty,
+			gridduty = this.down("[name=gridduty]"),
+			gridduty_sel = this.down("[name=gridduty_sel]"),
+			sel = {};
+			// smodel = gridduty.getSelectionModel();
+		
+		if (this.sel)
+		{
+			for (i=0; i < this.sel.length; i++)
+			{
+				sel[this.sel[i].sid] = this.sel[i];
+			}
+		}
+		if (tnode)
+		{
+			cnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+			
+			for (i=0; i < cnodes.length; i++)
+			{
+				duty = IG$/*mainapp*/._I1c/*XGetAttrProp*/(cnodes[i]);
+				if (sel[duty.sid])
+				{
+					duties_sel.push(duty);
+				}
+				else
+				{
+					duties.push(duty);
+				}
+			}
+		}
+		
+		gridduty.store.loadData(duties);
+		gridduty_sel.store.loadData(duties_sel);
+//		
+//		for (i=0; i < gridduty.store.data.items.length; i++)
+//		{
+//			rec = gridduty.store.data.items[i];
+//			
+//			if (sel[rec.get("sid")])
+//			{
+//				smodel.select(rec, true, true);
+//			}
+//		}
+	},
+	
+//	mm3/*createDuty*/: function() {
+//		var panel = this,
+//			dlg = new IG$/*mainapp*/._I6e/*makeItem*/({
+//			itemtype: "Auth",
+//			callback: new IG$/*mainapp*/._I3d/*callBackObj*/(panel, panel.rs_mm3/*createDuty*/)
+//		});
+//		
+//		dlg.show(panel);
+//	},
+//	
+//	rs_mm3/*createDuty*/: function(xdoc) {
+//		this.mm2/*loadDutyList*/();
+//	},
+
+
+	m1/*moveDuty*/: function(select) {
+		var me = this,
+			i,
+			grd_source = me.down("[name=gridduty" + (select == false ? "_sel" : "") + "]"),
+			grd_target = me.down("[name=gridduty" + (select == true ? "_sel" : "") + "]"),
+			sel = grd_source.getSelectionModel().getSelection();
+			
+		if (sel.length > 0)
+		{
+			for (i=0; i < sel.length; i++)
+			{
+				grd_source.store.remove(sel[i]);
+				grd_target.store.add(sel[i]);
+			}
+		}
+	},
+	
+	initComponent : function() {
+		this.title = IRm$/*resources*/.r1("L_MGR_UD");
+		
+		var items = [
+	        {
+	        	xtype: "form",
+	        	"layout": "anchor",
+	        	defaults: {
+	        		anchor: "100%"
+	        	},
+	        	border: 0,
+	        	items: [
+	        	    {
+	        	    	xtype: "displayfield",
+	        	    	value: IRm$/*resources*/.r1("L_UD_DESC")
+	        	    },
+	        	    {
+	        	    	xtype: "panel",
+	        	    	layout: {
+	        	    		type: "hbox",
+	        	    		align: "stretch"
+	        	    	},
+	        	    	items: [
+			        	    {
+			        	    	xtype: "gridpanel",
+			        	    	name: "gridduty",
+			        	    	flex: 1,
+			        	    	height: 300,
+			        	    	selType: "checkboxmodel",
+			        	    	selModel: {
+			        	    		checkSelector: ".x-grid-cell",
+									mode: "MULTI"
+								},
+			        	    	multiSelect: true,
+			        	    	store: {
+			        	    		fields: [
+			        	    			"name", "dutytype", "sid", "status", "type"
+			        	    		]
+			        	    	},
+			        	    	columns: [
+			        	    	    {
+			        	    	    	header: IRm$/*resources*/.r1("B_NAME"),
+			        	    	    	dataIndex: "name",
+										flex: 1,
+										sortable: true,
+										hideable: false        	    	    	
+			        	    	    },
+			        	    	    {
+			        	    	    	header: IRm$/*resources*/.r1("B_TYPE"),
+			        	    	    	dataIndex: "type",
+										flex: 1,
+										sortable: true,
+										hideable: false        	    	    	
+			        	    	    }
+			        	    	]
+			        	    },
+			        	    {
+			        	    	xtype: "container",
+			        	    	bodyPadding: "0 4 0 4",
+			        	    	border: 0,
+			        	    	layout: {
+			        	    		type: "vbox",
+			        	    		align: "stretch"
+			        	    	},
+			        	    	items: [
+			        	    		{
+			        	    			xtype: "container",
+			        	    			flex: 1
+			        	    		},
+			        	    		{
+			        	    			xtype: "button",
+			        	    			text: ">>",
+			        	    			handler: function() {
+			        	    				this.m1/*moveDuty*/(true);
+			        	    			},
+			        	    			scope: this
+			        	    		},
+			        	    		{
+			        	    			xtype: "button",
+			        	    			text: "<<",
+			        	    			handler: function() {
+			        	    				this.m1/*moveDuty*/(false);
+			        	    			},
+			        	    			scope: this
+			        	    		},
+			        	    		{
+			        	    			xtype: "container",
+			        	    			flex: 1
+			        	    		}
+			        	    	]
+			        	    },
+			        	    {
+			        	    	xtype: "gridpanel",
+			        	    	name: "gridduty_sel",
+			        	    	flex: 1,
+			        	    	height: 300,
+			        	    	selType: "checkboxmodel",
+			        	    	selModel: {
+			        	    		checkSelector: ".x-grid-cell",
+									mode: "MULTI"
+								},
+			        	    	multiSelect: true,
+			        	    	store: {
+			        	    		fields: [
+			        	    			"name", "dutytype", "sid", "status", "type"
+			        	    		]
+			        	    	},
+			        	    	columns: [
+			        	    	    {
+			        	    	    	header: IRm$/*resources*/.r1("B_NAME"),
+			        	    	    	dataIndex: "name",
+										flex: 1,
+										sortable: true,
+										hideable: false        	    	    	
+			        	    	    },
+			        	    	    {
+			        	    	    	header: IRm$/*resources*/.r1("B_TYPE"),
+			        	    	    	dataIndex: "type",
+										flex: 1,
+										sortable: true,
+										hideable: false        	    	    	
+			        	    	    }
+			        	    	]
+			        	    }
+			       		]
+			       	}
+//	        	    {
+//	        	    	xtype: "button",
+//	        	    	text: "Create new duty",
+//	        	    	handler: function() {
+//	        	    		this.mm3/*createDuty*/();
+//	        	    	},
+//	        	    	scope: this,
+//	        	    	width: 100
+//	        	    }
+	        	]
+	        }
+		];
+		
+		var buttons = [
+		    {
+				text: IRm$/*resources*/.r1('B_CONFIRM'),
+				handler: function() {
+					this.mm1/*confirmDialog*/();
+				},
+				scope: this
+			}, 
+			{
+				text: IRm$/*resources*/.r1('B_CANCEL'),
+				handler:function() {
+					this.close();
+				},
+				scope: this
+			}
+		];
+		
+		$s.apply(this, {
+			items: items,
+			buttons: buttons
+		});
+		
+		IG$/*mainapp*/._Icb/*userDutyMgr*/.superclass.initComponent.apply(this, arguments);
+	},
+	
+	listeners: {
+		afterrender: function(ui) {
+			this.mm2/*loadDutyList*/();
+		}
+	}
+});
+
+IG$/*mainapp*/._Icc/*groupPrivSetting*/ = $s.extend($s.window, {
+	title: "Group Privilege Setting",
+	modal: true,
+	"layout": "fit",
+	closable: false,
+	resizable:false,
+	width: 400,
+	autoHeight: true,
+	plain: true,
+	bodyPadding: 10,
+	bodyStyle: {
+		background: "#ffffff"
+	},
+	
+	callback: null,
+		
+	_IG0/*closeDlgProc*/: function() {
+		this.close();
+	},
+	
+	mm1/*confirmDialog*/: function() {
+		this.close();
+	},
+	
+	mm2_/*loadPrivilege*/: function(gid) {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.init(panel, 
+			{
+	            ack: 28,
+	            payload: {address: "/usergroup", gid: gid, action: "privilege"},
+	            mbody: {option: 'standard'}
+	        }, panel, panel.rs_mm2_/*loadPrivilege*/, false);
+		req._l/*request*/();
+	},
+	
+	rs_mm2_/*loadPrivilege*/: function(xdoc) {
+	},
+	
+	mm2/*setGroupActive*/: function(status) {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+			groupname = this.groupname,
+			gid = this.gid;
+		
+		req.init(panel, 
+			{
+	            ack: 28,
+	            payload: {address: "/usergroup", action: status},
+	            mbody: {gid: gid}
+	        }, panel, panel.rs_mm2/*setGroupActive*/, false, [status]);
+		req._l/*request*/();
+	},
+	
+	rs_mm2/*setGroupActive*/: function(xdoc, param) {
+		var me = this,
+			status = param[0],
+			ugroup = me.ugroup,
+			btn_erase = me.down("[name=btn_erase]");
+		
+		switch (status)
+		{
+		case "activate":
+			ugroup.set("status", "Active");
+			ugroup.set("active", "1");
+			btn_erase.setVisible(false);
+			break;
+		case "delete":
+			ugroup.set("status", "Blocked");
+			ugroup.set("active", "0");
+			btn_erase.setVisible(true);
+			break;
+		case "erase":
+			ugroup.remove();
+			me.close();
+			break;
+		}
+	},
+	
+	initComponent : function() {
+		$s.apply(this, {
+			items: [
+				{
+		        	xtype: "form",
+		        	"layout": "anchor",
+		        	defaults: {
+		        		anchor: "100%"
+		        	},
+		        	border: 0,
+		        	items: [
+		        	    {
+		        	    	xtype: "displayfield",
+		        	    	value: "Check to allow each priviege."
+		        	    },
+		        	    {
+		        	    	xtype: "textfield",
+		        	    	readOnly: true,
+		        	    	fieldLabel: "Group name",
+		        	    	name: "groupname"
+		        	    },
+		        	    {
+		        	    	xtype: "fieldset",
+		        	    	title: "Options",
+		        	    	collapsible: false,
+		    	    		autoHeight: true,
+		    	    		defaults: {
+		    	    			labelWidth: 80,
+		    	    			anchor: "100%",
+		    	    			"layout": {
+		    	    				type: "hbox",
+		    	    				defaultMargins: {top: 0, right: 5, bottom: 0, left: 0}
+		    	    			}
+		    	    		},
+		    	    		
+		    	    		items: [
+								{
+									xtype: "checkbox",
+									boxLabel: "Save data to file"
+								},
+								{
+									xtype: "checkbox",
+									boxLabel: "Add/edit user defined group"
+								},
+								{
+									xtype: "checkbox",
+									boxLabel: "Show chart"
+								},
+								{
+									xtype: "checkbox",
+									boxLabel: "Use dashboard"
+								}
+		    	    		]
+		        	    },
+		        	    {
+		        	    	xtype: "fieldset",
+		        	    	title: "Enable/Disable",
+		        	    	name: "p_activate",
+		        	    	hidden: false,
+		        	    	layout: {
+		        	    		type: "hbox",
+		        	    		align: "stretch"
+		        	    	},
+		        	    	items: [
+		        	    		{
+		        	    			xtype: "button",
+		        	    			iconCls: 'icon-toolbar-activate',
+		        	    			flex: 1,
+		        	    			text: "Activate",
+		        	    			handler: function() {
+		        	    				this.mm2/*setGroupActive*/("activate");
+		        	    			},
+		        	    			scope: this
+		        	    		},
+		        	    		{
+		        	    			xtype: "container",
+		        	    			width: 10
+		        	    		},
+		        	    		{
+		        	    			xtype: "button",
+		        	    			iconCls: 'icon-toolbar-deprivation',
+		        	    			flex: 1,
+		        	    			text: "Deprivate",
+		        	    			handler: function() {
+		        	    				this.mm2/*setGroupActive*/("delete");
+		        	    			},
+		        	    			scope: this
+		        	    		}
+		        	    	]
+		        	    }
+		        	]
+		        }
+			],
+			buttons: [
+				{
+					text: "Erase Group",
+					name: "btn_erase",
+					hidden: this.ugroup.get("active") == "1" ? true : false,
+					handler: function() {
+						this.mm2/*setGroupActive*/("erase");
+					},
+					scope: this
+				},
+				"->",
+				{
+					text: IRm$/*resources*/.r1('B_CONFIRM'),
+					handler: function() {
+						this.mm1/*confirmDialog*/();
+					},
+					scope: this
+				}, 
+				{
+					text: IRm$/*resources*/.r1('B_CANCEL'),
+					handler:function() {
+						this.close();
+					},
+					scope: this
+				}
+			],
+			listeners: {
+				afterrender: function(ui) {
+					if (this.gid)
+					{
+						this.mm2_/*loadPrivilege*/(this.gid);
+						var groupname = this.down("[name=groupname]");
+						groupname.setValue(this.groupname || "");
+					}
+				}
+			}
+		});
+		
+		IG$/*mainapp*/._Icc/*groupPrivSetting*/.superclass.initComponent.apply(this, arguments);
+	}
+});
+
+
+IG$/*mainapp*/._IcT/*TenantSetting*/ = $s.extend($s.window, {
+	title: "Tenant Setting",
+	modal: true,
+	"layout": "fit",
+	closable: false,
+	resizable:false,
+	width: 400,
+	autoHeight: true,
+	plain: true,
+	bodyPadding: 10,
+	bodyStyle: {
+		background: "#ffffff"
+	},
+	
+	callback: null,
+		
+	_IG0/*closeDlgProc*/: function() {
+		this.close();
+	},
+	
+	mm1/*confirmDialog*/: function() {
+		this.close();
+	},
+		
+	mm2/*setTenantActive*/: function(status) {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+			content,
+			tenantname = this.down("[name=tenantname]"),
+			gid = panel.gid,
+			mts = panel.mts;
+		
+		content = "<smsg><tenant mts='" + mts.get("uid") + "'" + (status == "rename" && tenantname.getValue() ? " name='" + tenantname.getValue() + "'" : "") + " a1='" + this.down("[name=a1]").getValue() + "' a2='" + this.down("[name=a2]").getValue() + "'/></smsg>";
+		
+		req.init(panel, 
+			{
+	            ack: "28",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: "/tenants/" + mts.get("name"), action: status}, "address;action"),
+	            mbody: content
+	        }, panel, function(xdoc, param) {
+	        	if (status == "rename")
+	        	{
+	        		mts.set("a1", this.down("[name=a1]").getValue());
+	        		mts.set("a2", this.down("[name=a2]").getValue());
+	        		mts.set("name", tenantname.getValue());
+	        	}
+	        	panel.rs_mm2/*setTenantActive*/(xdoc, param);
+	    	}, false, [status]);
+		req._l/*request*/();
+	},
+	
+	rs_mm2/*setTenantActive*/: function(xdoc, param) {
+		var me = this,
+			status = param[0],
+			ugroup = me.mts,
+			btn_erase = me.down("[name=btn_erase]");
+		
+		switch (status)
+		{
+		case "activate":
+			ugroup.set("pstatname", "Active");
+			ugroup.set("pstatus", "1");
+			btn_erase.setVisible(false);
+			break;
+		case "delete":
+			ugroup.set("pstatname", "Blocked");
+			ugroup.set("pstatus", "0");
+			btn_erase.setVisible(true);
+			break;
+		case "erase":
+			ugroup.remove();
+			me.close();
+			break;
+		case "rename":
+			me.close();
+			break;
+		}
+	},
+	
+	_l1/*loadTemplates*/: function() {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+			
+		req.init(panel, 
+			{
+                ack: "11",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "timezone"})
+            }, panel, function(xdoc) {
+            	var me = this,
+					tnode,
+					tnodes,
+					i, dp_tmpl = [], dp_theme = [],
+					p,
+					a1 = me.down("[name=a1]"),
+					a2 = me.down("[name=a2]");
+					
+				tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/app_tmpl");
+				
+				dp_tmpl.push({name: "Select", value: ""});
+				if (tnode)
+				{
+					tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+					
+					for (i=0; i < tnodes.length; i++)
+					{
+						p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+						p.value = p.name;
+						dp_tmpl.push(p);
+					}
+				}
+				
+				a1.store.loadData(dp_tmpl);
+				a1.setValue(me.mts ? me.mts.get("a1") || "" : "");
+				
+				tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/themes");
+				
+				dp_theme.push({name: "Select", value: ""});
+				if (tnode)
+				{
+					tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+					
+					for (i=0; i < tnodes.length; i++)
+					{
+						p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+						p.value = p.name;
+						dp_theme.push(p);
+					}
+				}
+				
+				a2.store.loadData(dp_theme);
+				a2.setValue(me.mts ? me.mts.get("a2") || "" : "");
+            });
+		req._l/*request*/();
+	},
+	
+	initComponent : function() {
+		$s.apply(this, {
+			items: [
+				{
+		        	xtype: "form",
+		        	"layout": "anchor",
+		        	defaults: {
+		        		anchor: "100%"
+		        	},
+		        	border: 0,
+		        	items: [
+		        	    {
+		        	    	xtype: "textfield",
+		        	    	readOnly: this.mts && this.mts.get("pstatus") == "A",
+		        	    	fieldLabel: "Tenant name",
+		        	    	name: "tenantname"
+		        	    },
+		        	    {
+		        	    	xtype: "combobox",
+		        	    	fieldLabel: "Templates",
+		        	    	name: "a1",
+		        	    	editable: false,
+		        	    	queryMode: "local",
+		        	    	valueField: "value",
+		        	    	displayField: "name",
+		        	    	store: {
+		        	    		xtype: "store",
+		        	    		fields: [
+		        	    			"name", "value"
+		        	    		]
+		        	    	}
+		        	    },
+		        	    {
+		        	    	xtype: "combobox",
+		        	    	fieldLabel: "Themes",
+		        	    	name: "a2",
+		        	    	editable: false,
+		        	    	queryMode: "local",
+		        	    	valueField: "value",
+		        	    	displayField: "name",
+		        	    	store: {
+		        	    		xtype: "store",
+		        	    		fields: [
+		        	    			"name", "value"
+		        	    		]
+		        	    	}
+		        	    },
+		        	    {
+		        	    	xtype: "fieldset",
+		        	    	title: "Enable/Disable",
+		        	    	name: "p_activate",
+		        	    	hidden: this.mts && this.mts.get("pstatus") == "A",
+		        	    	layout: {
+		        	    		type: "hbox",
+		        	    		align: "stretch"
+		        	    	},
+		        	    	items: [
+		        	    		{
+		        	    			xtype: "button",
+		        	    			iconCls: 'icon-toolbar-activate',
+		        	    			flex: 1,
+		        	    			text: "Activate",
+		        	    			handler: function() {
+		        	    				this.mm2/*setTenantActive*/("activate");
+		        	    			},
+		        	    			scope: this
+		        	    		},
+		        	    		{
+		        	    			xtype: "container",
+		        	    			width: 10
+		        	    		},
+		        	    		{
+		        	    			xtype: "button",
+		        	    			iconCls: 'icon-toolbar-deprivation',
+		        	    			flex: 1,
+		        	    			text: "Deprivate",
+		        	    			handler: function() {
+		        	    				this.mm2/*setTenantActive*/("delete");
+		        	    			},
+		        	    			scope: this
+		        	    		}
+		        	    	]
+		        	    },
+		        	    {
+		        	    	xtype: "textfield",
+		        	    	name: "turl",
+		        	    	fieldLabel: "URL",
+		        	    	readOnly: true
+		        	    }
+		        	]
+		        }
+			],
+			buttons: [
+				{
+					text: "Erase Tenant",
+					name: "btn_erase",
+					hidden: this.mts.get("pstatus") == "1" || this.mts.get("pstatus") == "A" ? true : false,
+					handler: function() {
+						this.mm2/*setTenantActive*/("erase");
+					},
+					scope: this
+				},
+				"->",
+				{
+					text: IRm$/*resources*/.r1('B_CONFIRM'),
+					handler: function() {
+						var tenantname = this.down("[name=tenantname]");
+						
+						this.mm2/*setTenantActive*/("rename");
+					},
+					scope: this
+				}, 
+				{
+					text: IRm$/*resources*/.r1('B_CANCEL'),
+					handler:function() {
+						this.close();
+					},
+					scope: this
+				}
+			],
+			listeners: {
+				afterrender: function(ui) {
+					var me = this;
+					if (me.mts)
+					{
+						var tenantname = me.down("[name=tenantname]"),
+							turl = me.down("[name=turl]"),
+							uname = me.mts.get("name");
+							
+						uname = uname.split(" ");
+						uname = uname.join("%20");
+						tenantname.setValue(me.mts.get("name") || "");
+						turl.setValue("http://hostname.com/ingecep/?lang=en_US&mts=" + uname);
+						
+						me._l1/*loadTemplates*/();
+					}
+				}
+			}
+		});
+		
+		IG$/*mainapp*/._IcT/*TenantSetting*/.superclass.initComponent.apply(this, arguments);
+	}
+});
+
+IG$/*mainapp*/._Ica/*mgrusereditor*/ = $s.extend($s.window, {
+	modal: true,
+	"layout": "fit",
+	closable: false,
+	resizable:false,
+	width: 480,
+	autoHeight: true,
+	plain: true,
+	bodyPadding: 10,
+	bodyStyle: {
+		background: "#ffffff"
+	},
+	
+	callback: null,
+	
+	i$/*initapp*/: function() {
+		var panel = this,
+			groupcombo = panel.down("[name=pusergroup]");
+			
+		groupcombo.store.loadData(this.groupinfo);
+		
+		panel.u1/*buildCustomForm*/();
+		panel.ld5/*updateUserDetail*/();
+		
+		panel._l1/*loadTemplates*/();
+	},
+	
+	u1/*buildCustomForm*/: function() {
+		var me = this,
+			c_area = me.down("[name=c_area]"),
+			uform = IG$/*mainapp*/.uform,
+			i, uf, mf;
+			
+		for (i=0; i < uform.length; i++)
+		{
+			uf = uform[i];
+			
+			mf = {
+				xtype: uf.type,
+				fieldLabel: uf.displayname,
+				name: uf.fieldname
+			};
+			
+			c_area.add(mf);
+		}
+	},
+	
+	ld5/*updateUserDetail*/: function() {
+		var p = this,
+			u = p.userinfo,
+			l = IG$/*mainapp*/._I83/*dlgLogin*/.jS1/*loginInfo*/,
+			puserid = p.down("[name=puserid]"),
+			pusername = p.down("[name=pusername]"),
+			puseremail = p.down("[name=puseremail]"),
+			puserpasswd = p.down("[name=puserpasswd]"),
+			pusergroup = p.down("[name=pusergroup]"),
+			pupdatedate = p.down("[name=pupdatedate]"),
+			updatedate = IRm$/*resources*/.r1("L_LAST_UPD"),
+			pdutygrid = p.down("[name=pdutygrid]"),
+			auth = (u && u.auth) ? u.auth : [],
+			btnaddduty = p.down("[name=btnaddduty]"),
+			fieldstatus = p.down("[name=fieldstatus]"),
+			i, uf, ufname;
+
+		btnaddduty.setVisible((u && l.userid == u.id) ? false : true);
+		puserid.setReadOnly((u) ? true : false);
+		puserid.setValue(u ? u.id || "" : "");
+		pusername.setValue(u ? u.name || "" : "");
+		puserpasswd.setValue(u ? "" : IG$/*mainapp*/._I45/*generateUniqueTest*/(10));
+		puseremail.setValue(u ? u.email || "" : "");
+		pusergroup.setValue(u ? u.gid || "" : (p.Ld3/*currentGroup*/ || ""));
+		fieldstatus.setVisible(u ? true : false);
+		updatedate = (u && u.updatedate) ? updatedate + u.updatedatefm : updatedate;
+		pupdatedate.setValue(updatedate);
+		pdutygrid.store.loadData(auth);
+		
+		if (IG$/*mainapp*/.uform)
+		{
+			for (i=0; i < IG$/*mainapp*/.uform.length; i++)
+			{
+				ufname = IG$/*mainapp*/.uform[i];
+				
+				uf = p.down("[name=" + ufname.fieldname + "]");
+				
+				if (uf)
+				{
+					uf.setValue(u ? u[ufname.fieldname] : "");
+				}
+			}
+		}
+	},
+	
+	ld6/*confirmChanges*/: function(cmd) {
+		var me = this,
+			purpose,
+			address,
+			content,
+			iserror = false,
+			p = this,
+			l = IG$/*mainapp*/._I83/*dlgLogin*/.jS1/*loginInfo*/, mduty,
+			puserid = p.down("[name=puserid]"),
+			pusername = p.down("[name=pusername]"),
+			puseremail = p.down("[name=puseremail]"),
+			puserpasswd = p.down("[name=puserpasswd]"),
+			pusergroup = p.down("[name=pusergroup]"),
+			pdutygrid = p.down("[name=pdutygrid]"),
+			i, fname, fobj,
+			pwd = puserpasswd.getValue(),
+			isfailed = false,
+			uf;
+			
+		if (cmd == "confirm")
+		{
+			if (!IG$/*mainapp*/._I3a/*rsaPublicKeyModulus*/)
+			{
+				var panel = this,
+					req = new IG$/*mainapp*/._I3e/*requestServer*/();
+				req.init(panel, 
+					{
+			            ack: "23",
+			            payload: "<smsg></smsg>",
+			            mbody: "<smsg></smsg>"
+			        }, panel, function(xdoc) {
+			        	var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+			        		p1 = (tnode ? IG$/*mainapp*/._I1a/*getSubNodeText*/(tnode, "p1") : null),
+			        		p2 = (tnode ? IG$/*mainapp*/._I1a/*getSubNodeText*/(tnode, "p2") : null);
+			        	if (p1 && p2)
+			        	{
+			        		IG$/*mainapp*/._I3a/*rsaPublicKeyModulus*/ = p1;
+			        		IG$/*mainapp*/._I3b/*rsaPpublicKeyExponent*/ = p2;
+			        		this.ld6/*confirmChanges*/("confirm");
+			        	}
+			        }, null);
+				req._l/*request*/();
+				return;
+			}
+			purpose = "28";
+			address = IG$/*mainapp*/._I2d/*getItemAddress*/({address: "/user/" + puserid.getValue(), updatemode: "change"}, "address;updatemode");
+			content = "<smsg><user";
+			
+			$.each([puserid, pusername, pusergroup], function(i, pobj) {
+				pobj.clearInvalid();
+				
+				if (!pobj.getValue())
+				{
+					pobj.markInvalid("Required");
+					isfailed = true;
+				}
+			});
+			
+			if (isfailed)
+			{
+				return;
+			}
+			
+			if (pwd)
+			{
+				pwd = IG$/*mainapp*/._I3c/*encryptkey*/([pwd])[0];
+			}
+			
+			content += IG$/*mainapp*/._I20/*XUpdateInfo*/({
+				sid: (this.userinfo ? this.userinfo.sid : ""),
+				wid: (this.userinfo ? this.userinfo.wid : ""),
+				id: puserid.getValue(),
+				name: pusername.getValue(),
+				password: pwd,
+				email: puseremail.getValue(),
+				gid: pusergroup.getValue(),
+				a1: this.down("[name=a1]").getValue()
+			}, "sid;wid;id;name;password;email;gid;a1", "s") + "";
+			
+			if (IG$/*mainapp*/.uform)
+			{
+				for (i=0; i < IG$/*mainapp*/.uform.length; i++)
+				{
+					uf = IG$/*mainapp*/.uform[i];
+					fname = uf.fieldname;
+					fobj = me.down("[name=" + fname + "]");
+					
+					if (fobj)
+					{
+						if (uf.optional == "F")
+						{
+							fobj.clearInvalid();
+							
+							if (!fobj.getValue())
+							{
+								fobj.markInvalid("Required");
+								
+								return;
+							}
+						}
+						content += " " + fname + "='" + fobj.getValue() + "'";
+					}
+				}
+			}
+			
+			content += ">";
+			
+			for (i=0; i < pdutygrid.store.data.items.length; i++)
+			{
+				mduty = pdutygrid.store.data.items[i];
+				
+				content += "<auth" + IG$/*mainapp*/._I20/*XUpdateInfo*/({
+					dutytype: mduty.get("dutytype"),
+					name: mduty.get("name"),
+					sid: mduty.get("sid"),
+					status: mduty.get("status")
+				}, "dutytype;name;sid;status") + "/>";
+			}
+			
+			content += "</user></smsg>";
+		}
+		else if (cmd == "delete")
+		{
+			if (puserid.getValue() == l.userid)
+			{
+				IG$/*mainapp*/._I52/*ShowError*/("You cannot remove yourself.", p);
+				return;
+			}
+			
+			purpose = "28";
+			address = IG$/*mainapp*/._I2d/*getItemAddress*/({address: "/user/" + puserid.getValue(), updatemode: "delete"}, "address;updatemode");
+			content = "<smsg><user sid='" + (this.userinfo ? this.userinfo.sid : "") + "'";
+			content += ">";
+			content += "</user></smsg>";
+		}
+		else
+		{
+			return;
+		}
+		
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		
+		panel.setLoading(true);
+		
+		req.init(panel, 
+			{
+	            ack: purpose,
+	            payload: address,
+	            mbody: content
+	        }, panel, panel.rs_ld6/*confirmChanges*/, null);
+		req._l/*request*/();
+	},
+	
+	rs_ld6/*confirmChanges*/: function(xdoc) {
+		var panel = this;
+		
+		panel.setLoading(false);
+		
+		if (panel.callback)
+		{
+			panel.callback.execute();
+		}
+		
+		IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1('M_SAVED'), null, null, 0, "success");
+		
+		panel.close();
+	},
+	
+	mm2b/*setUserActive*/: function(user, status) {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+			content;
+		
+		if (status != "activate" && (user.name == "admin"))
+		{
+			IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1('M_NA'), null, null, 0, "error");
+			return;
+		}
+		
+		content = IG$/*mainapp*/._I2e/*getItemOption*/({option: "changestatus", status: status, uid: user.sid}, "option;status;uid");
+		
+		req.init(panel, 
+			{
+	            ack: "28",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: "/user/" + user.name}, "address;action"),
+	            mbody: content
+	        }, panel, panel.rs_mm2b/*setUserActive*/, false, status);
+		req._l/*request*/();
+	},
+	
+	rs_mm2b/*setUserActive*/: function(xdoc, status) {
+		if (this.drow)
+		{
+			this.drow.set("status", (status == "1" ? "Active" : "Blocked"));
+		}
+		
+		IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1("M_SAVED"), null, null, 0, "success");
+	},
+	
+	_t$/*toolbarHandler*/: function(cmd) {
+		var panel = this,
+			user,
+			dlg;
+		
+		switch (cmd)
+		{
+		case "cmd_activate_user":
+			user = this.userinfo;
+			if (user)
+			{
+				this.mm2b/*setUserActive*/(user, "1");
+			}
+			break;
+		case "cmd_deprivate_user":
+			user = this.userinfo;
+			if (user)
+			{
+				this.mm2b/*setUserActive*/(user, "2");
+			}
+			break;
+		case "cmd_add_duty":
+			var dp = [],
+				rec,
+				pdutygrid = this.down("[name=pdutygrid]").store.data.items,
+				i;
+			
+			for (i=0; i < pdutygrid.length; i++)
+			{
+				rec = pdutygrid[i];
+				dp.push({
+					dutytype: rec.get("dutytype"),
+					name: rec.get("name"),
+					sid: rec.get("sid"),
+					type: rec.get("type"),
+					status: rec.get("status")
+				});
+			}
+			dlg = new IG$/*mainapp*/._Icb/*userDutyMgr*/({
+				sel: dp,
+				callback: new IG$/*mainapp*/._I3d/*callBackObj*/(panel, panel.rs_mm3/*addDuty*/)
+			});
+			dlg.show(panel);
+			break;
+		}
+	},
+	
+	rs_mm3/*addDuty*/: function(sel) {
+		var pdutygrid = this.down("[name=pdutygrid]"),
+			dp = [],
+			rec,
+			i;
+		
+		for (i=0; i < sel.length; i++)
+		{
+			rec = sel[i];
+			dp.push({
+				dutytype: rec.get("dutytype"),
+				name: rec.get("name"),
+				sid: rec.get("sid"),
+				type: rec.get("type"),
+				status: rec.get("status")
+			});
+		}
+		pdutygrid.store.loadData(dp);
+	},
+	
+	_l1/*loadTemplates*/: function() {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+			
+		req.init(panel, 
+			{
+                ack: "11",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "timezone"})
+            }, panel, function(xdoc) {
+            	var me = this,
+					tnode,
+					tnodes,
+					i, dp_tmpl = [],
+					p,
+					a1 = me.down("[name=a1]");
+					
+				tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/app_tmpl");
+				tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+				
+				dp_tmpl.push({name: "Select", value: ""});
+				
+				for (i=0; i < tnodes.length; i++)
+				{
+					p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+					p.value = p.name;
+					dp_tmpl.push(p);
+				}
+				
+				a1.store.loadData(dp_tmpl);
+				a1.setValue(me.userinfo ? me.userinfo.a1 || "" : "");
+            });
+		req._l/*request*/();
+	},
+	
+	initComponent: function(){
+		this.title = IRm$/*resources*/.r1("T_REG_USER");
+		$s.apply(this, {
+			items: [
+				{
+					xtype: "panel",
+					"layout": "anchor",
+					bodyPadding: 4,
+					autoScroll: false,
+					
+					defaults: {
+						anchor: "100%"
+					},
+					items: [
+						{
+							xtype: "textfield",
+							fieldLabel: IRm$/*resources*/.r1("L_USERID"),
+							name: "puserid"
+						},
+						{
+							xtype: "textfield",
+							fieldLabel: IRm$/*resources*/.r1("L_USERNAME"),
+							name: "pusername"
+						},
+						{
+							xtype: "textfield",
+							fieldLabel: IRm$/*resources*/.r1("L_EMAIL"),
+							name: "puseremail"
+						},
+						{
+							xtype: "fieldcontainer",
+							fieldLabel: IRm$/*resources*/.r1("L_INPUT_PASSWORD"),
+							"layout": "hbox",
+							items: [
+								{
+									xtype: "textfield",
+									name: "puserpasswd",
+									readOnly: false,
+									flex: 1
+								},
+								{
+									xtype: "button",
+									name: "pgetpwd",
+									text: "Generate",
+									width: 70,
+									handler: function() {
+										var me = this,
+											puserpasswd = me.down("[name=puserpasswd]"),
+											temppwd = IG$/*mainapp*/._I45/*generateUniqueTest*/(10);
+										
+										puserpasswd.setValue(temppwd);
+									},
+									scope: this
+								}
+							]
+						},
+						{
+							xtype: "combobox",
+							fieldLabel: IRm$/*resources*/.r1("L_GROUP_NAME"),
+							labelField: "name",
+							valueField: "gid",
+							name: "pusergroup",
+							queryMode: 'local',
+							displayField: 'name',
+							valueField: 'gid',
+							editable: false,
+							autoSelect: true,
+							store: {
+								
+								fields: [
+								    "name", "gid"
+								]
+							}
+						},
+						{
+							xtype: "container",
+							name: "c_area",
+							layout: {
+								type: "vbox",
+								align: "stretch"
+							}
+						},
+						{
+							xtype: "combobox",
+							name: "a1",
+							fieldLabel: IRm$/*resources*/.r1("L_APPL_TMPL"),
+							queryMode: "local",
+							editable: false,
+							valueField: "value",
+							displayField: "name",
+							store: {
+								xtype: "store",
+								fields: ["name", "value"]
+							}
+						},
+						{
+							xtype: "displayfield",
+							value: IRm$/*resources*/.r1("L_LAST_UPD"),
+							name: "pupdatedate"
+						},
+						{
+							xtype: "fieldcontainer",
+							fieldLabel: IRm$/*resources*/.r1("L_USER_DUTY"),
+							"layout": "hbox",
+							items: [
+								{
+									xtype: "gridpanel",
+									fieldLabel: "User Duty",
+									flex: 1,
+									height: 160,
+									hideLabel: true,
+									name: "pdutygrid",
+									store: {
+										xtype: "store",
+										fields: [
+											"dutytype", "name", "sid", "status"
+										]
+									},
+									columns: [
+										{
+											header: IRm$/*resources*/.r1("B_NAME"),
+											flex: 1,
+											sortable: false,
+											hideable: false,
+											dataIndex: "name"
+										}
+									]
+								},
+								{
+									xtype: "button",
+									iconCls: 'icon-toolbar-add',
+						        	tooltip: "Add Duty",
+						        	name: "btnaddduty",
+						        	hidden: true,
+						        	handler: function() {
+						        		this._t$/*toolbarHandler*/('cmd_add_duty'); 
+						        	},
+						        	scope: this
+								}
+							]
+						},
+						{
+							xtype: "fieldcontainer",
+							fieldLabel: IRm$/*resources*/.r1("B_STATUS"),
+							name: "fieldstatus",
+							hidden: true,
+							layout: "hbox",
+							items: [
+							    {
+							    	xtype: "button",
+							    	text: IRm$/*resources*/.r1("L_ACTIVATE"),
+							    	name: "btnactuser",
+							    	handler: function() {
+							    		this._t$/*toolbarHandler*/('cmd_activate_user');
+							    	},
+							    	scope: this
+							    },
+							    {
+							    	xtype: "button",
+							    	text: IRm$/*resources*/.r1("L_DEPRIVATE"),
+							    	name: "btndeprivuser",
+							    	handler: function() {
+							    		this._t$/*toolbarHandler*/('cmd_deprivate_user');
+							    	},
+							    	scope: this
+							    }
+							]
+						}
+					]
+				}
+			],
+			buttons: [
+				{
+					xtype: "button",
+					text: IRm$/*resources*/.r1("L_E_DEL"),
+					handler: function() {
+						this.ld6/*confirmChanges*/("delete");
+					},
+					scope: this
+				},
+				"->",
+				{
+					xtype: "button",
+					text: IRm$/*resources*/.r1("B_CONFIRM"),
+					handler: function() {
+						this.ld6/*confirmChanges*/("confirm");
+					},
+					scope: this
+				},
+				{
+					xtype: "button",
+					text: IRm$/*resources*/.r1("B_CANCEL"),
+					handler: function() {
+						this.close();
+					},
+					scope: this
+				}
+			],
+			listeners: {
+				afterrender: function(tobj) {
+					this.i$/*initapp*/();
+				}
+			}
+		});
+		
+		IG$/*mainapp*/._Ica/*mgrusereditor*/.superclass.initComponent.call(this);
+	}
+});
+IG$/*mainapp*/._I76/*mgrUser*/ = $s.extend(IG$/*mainapp*/._I57/*IngPanel*/, {
+	scroll: false,
+	closable: true,
+	"layout": "border",
+	
+	userinfo: null,
+	groupinfo: null,
+	
+	iconCls: "icon-group",
+	
+	Ld3/*currentGroup*/: null,
+	
+	_IFd/*init_f*/: function() {
+		this.ld1/*loadCustomForm*/();
+	},
+	
+	/***** start: server request *****/
+	ld1/*loadCustomForm*/: function() {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.init(panel, 
+			{
+	            ack: "28",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: "/userform"}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "standard"})
+	        }, panel, function(xdoc) {
+				var me = this,
+					tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+					tnodes = (tnode ? IG$/*mainapp*/._I26/*getChildNodes*/(tnode) : null),
+					p = IG$/*mainapp*/._I83/*dlgLogin*/.jS1/*loginInfo*/,
+					i,
+					uform = [], uf;
+					
+				if (tnodes)
+				{
+					for (i=0; i < tnodes.length; i++)
+					{
+						uf = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+						if (uf.type == "textinput")
+						{
+							uf.type = "textfield";
+						}
+						uform.push(uf);
+					}
+				}
+				
+				IG$/*mainapp*/.uform = uform;
+				
+				if (p.jS1/*hasDuty*/("admins", "A") == true)
+				{
+					me.down("[name=mtsgrd]").show();
+				}
+				
+				me.ldM/*loadMTS*/();
+				me.ldG/*loadDuties*/();
+				me.ld2/*loadUserGroup*/("", null);
+			}, false);
+		req._l/*request*/();
+	},
+	
+	ldM/*loadMTS*/: function() {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.init(panel, 
+			{
+	            ack: "28",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: "/tenants", action: "get"}, "address;action"),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "select"})
+	        }, panel, function(xdoc) {
+	        	var i,
+	        		tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+	        		cnodes,
+	        		mts,
+	        		mtslist = [];
+	        	
+	        	if (tnode)
+	    		{
+	    			cnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+	    			
+	    			for (i=0; i < cnodes.length; i++)
+	    			{
+	    				mts = IG$/*mainapp*/._I1c/*XGetAttrProp*/(cnodes[i]);
+	    				switch (mts.pstatus)
+	    				{
+	    				case "A":
+	    					mts.pstatname = "App";
+	    					break;
+	    				case "1":
+	    					mts.pstatname = "Active";
+	    					break;
+	    				default:
+	    					mts.pstatname = "Disabled";
+	    					break;
+	    				}
+	    				mtslist.push(mts);
+	    			}
+	    		}
+	    		
+	    		this.down("[name=mtsgrd]").store.loadData(mtslist);
+	        }, false);
+		req._l/*request*/();
+	},
+	
+	ldG/*loadDuties*/: function() {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.init(panel, 
+			{
+	            ack: "28",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: "/Auth"}, "address"),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "select"})
+	        }, panel, function(xdoc) {
+				var i,
+					tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+					cnodes,
+					duties = [], 
+					duty,
+					gridduty = this.down("[name=gridduty]"),
+					smodel = gridduty.getSelectionModel();
+				
+				if (tnode)
+				{
+					cnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+					
+					for (i=0; i < cnodes.length; i++)
+					{
+						duty = IG$/*mainapp*/._I1c/*XGetAttrProp*/(cnodes[i]);
+						duty.active = duty.status == "1" ? "Active" : "Disabled";
+						duties.push(duty);
+					}
+				}
+				
+				gridduty.store.loadData(duties);
+			}, false);
+		req._l/*request*/();
+	},
+	
+	mm3/*createDuty*/: function() {
+		var panel = this,
+			dlg = new IG$/*mainapp*/._I6e/*makeItem*/({
+				itemtype: "Auth",
+				callback: new IG$/*mainapp*/._I3d/*callBackObj*/(panel, panel.rs_mm3/*createDuty*/)
+			});
+		
+		dlg.show(panel);
+	},
+	
+	rs_mm3/*createDuty*/: function(xdoc) {
+		this.ldG/*loadDuties*/();
+	},
+	
+	mm4/*createMTS*/: function() {
+		var panel = this,
+			dlg = new IG$/*mainapp*/._I6e/*makeItem*/({
+			itemtype: "tenant",
+			callback: new IG$/*mainapp*/._I3d/*callBackObj*/(panel, function(xdoc) {
+				this.ldM/*loadMTS*/();
+			})
+		});
+		
+		dlg.show(panel);
+	},
+	
+	l1G/*loadDutyUsers*/: function(sid) {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.init(panel, 
+			{
+	            ack: "28",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: "/user"}, "address"),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "get", sid: sid})
+	        }, panel, panel.rs_ld3/*loadUserList*/, null, true);
+		req._l/*request*/();
+	},
+	
+	ld2/*loadUserGroup*/: function(pid, unode) {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+			p = IG$/*mainapp*/._I83/*dlgLogin*/.jS1/*loginInfo*/;
+		if (p.jS1/*hasDuty*/("admins", "A") == false && p.jS1/*hasDuty*/("LocalAdmin", "A") == true)
+		{
+			pid = auth.gid;
+		} 
+		
+		this.groupinfo = [];
+		
+		req.init(panel, 
+			{
+	            ack: "28",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: "/usergroup", action: "get", pid: pid}, "address;action;pid"),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "standard"})
+	        }, panel, panel.rs_ld2/*loadUserGroup*/, null, [pid, unode]);
+		req._l/*request*/();
+	},
+	
+	rs_ld2/*loadUserGroup*/: function(xdoc, param) {
+		var panel = this,
+			pid = param[0],
+			unode = param[1],
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+			i,
+			grouptree = this.down("[name=grouptree]"),
+			// groupcombo = panel.down("[name=pusergroup]"),
+			cnodes,
+			gitem,
+			sitem,
+			citem;
+		
+		if (tnode)
+		{
+			gitem = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnode);
+			this.groupinfo.push(IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnode));
+			gitem.children = [];
+			
+			cnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+			
+			this.ld2a/*parseUserGroup*/(cnodes, gitem, 1);
+			
+			if (unode == null)
+			{
+				grouptree.store.setRootNode(gitem);
+				// groupcombo.store.loadData(this.groupinfo);
+			}
+		}
+	},
+	
+	ld2a/*parseUserGroup*/: function(cnodes, parray, depth) {
+		var i,
+			sitem,
+			citem,
+			snodes, j;
+		
+		for (i=0; i < cnodes.length; i++)
+		{
+			sitem = IG$/*mainapp*/._I1c/*XGetAttrProp*/(cnodes[i]);
+			sitem.loadData = false;
+			citem = IG$/*mainapp*/._I1c/*XGetAttrProp*/(cnodes[i]);
+			
+			for (j=0; j < depth; j++)
+			{
+				citem.name = (j == 0 ? ". " : "  ") + citem.name;
+			}
+			this.groupinfo.push(citem);
+			
+			parray.children.push(sitem);
+			
+			switch (sitem.active)
+			{
+			case "1":
+				sitem.status = "Active";
+				break;
+			case "2":
+				sitem.status = "Blocked";
+				break;
+			default:
+				sitem.status = "Error";
+				break;
+			}
+			
+			snodes = IG$/*mainapp*/._I26/*getChildNodes*/(cnodes[i]);
+			
+			if (snodes && snodes.length > 0)
+			{
+				sitem.children = [];
+				this.ld2a/*parseUserGroup*/(snodes, sitem, depth + 1);
+			}
+		}
+	},
+	
+	ld3/*loadUserList*/: function(gid) {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.init(panel, 
+			{
+	            ack: "28",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: "/user"}, "address"),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "get", gid: gid})
+	        }, panel, panel.rs_ld3/*loadUserList*/, null);
+		req._l/*request*/();
+	},
+	
+	rs_ld3/*loadUserList*/: function(xdoc, isdutyuser) {
+		var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+			i, cnodes, 
+			user,
+			users = [],
+			usergrid = this.down("[name=usergrid]");
+	
+		if (tnode)
+		{
+			cnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+			
+			for (i=0; i < cnodes.length; i++)
+			{
+				user = IG$/*mainapp*/._I1c/*XGetAttrProp*/(cnodes[i]);
+				
+				switch (user.active)
+				{
+				case "1":
+					user.status = "Active";
+					user.change = "Block user";
+					break;
+				case "3":
+					user.status = "Email Valid";
+					user.change = "Activate user";
+					break;
+				case "4":
+					user.status = "Email Process";
+					user.change = "Deprivate";
+					break;
+				default:
+					user.status = "Blocked";
+					user.change = "Activate";
+					break;
+				}
+				
+				users.push(user);
+			}
+		}
+		
+		usergrid.store.loadData(users);
+	},
+	
+	ld4/*loadUserDetail*/: function(userid, record) {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.init(panel, 
+			{
+	            ack: "28",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: "/user"}, "address"),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "detail", uid: userid})
+	        }, panel, function(xdoc, record) {
+				var panel = this,
+					tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item");
+				
+				if (tnode)
+				{
+					var userinfo = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnode),
+						anode = IG$/*mainapp*/._I18/*XGetNode*/(tnode, "d"),
+						anodes = IG$/*mainapp*/._I26/*getChildNodes*/(anode),
+						i;
+						// paneludetail = this.down("[name=paneludetail]");
+						
+					userinfo.auth = [];
+					
+					for (i=0; i < anodes.length; i++)
+					{
+						userinfo.auth.push(IG$/*mainapp*/._I1c/*XGetAttrProp*/(anodes[i]));
+					}
+					
+					var dlg = new IG$/*mainapp*/._Ica/*mgrusereditor*/({
+						groupinfo: this.groupinfo,
+						userinfo: userinfo,
+						drow: record,
+						Ld3/*currentGroup*/: this.Ld3/*currentGroup*/,
+						callback: new IG$/*mainapp*/._I3d/*callBackObj*/(panel, panel.rs_um3/*userModify*/)
+					});
+					// this.userinfo = userinfo;
+					
+					// this.ld5/*updateUserDetail*/();
+					// paneludetail.setVisible(true);
+					IG$/*mainapp*/._I_5/*checkLogin*/(this, dlg);
+				}
+			}, null, record);
+		req._l/*request*/();
+	},
+	
+	/***** end: server request *****/
+	
+	sKK/*getSelection*/: function() {
+		var grouptree = this.down("[name=grouptree]"),
+			selmodel = grouptree.getSelectionModel();
+		
+		if (selmodel && selmodel.selected && selmodel.selected.items && selmodel.selected.items.length > 0)
+		{
+			return selmodel.selected.items[0];
+		}
+		
+		return null;
+	},
+	
+	/***** start: toolbar related proc *****/
+	_t$/*toolbarHandler*/: function(cmd) {
+		var panel = this,
+			ugroup,
+			user,
+			dlg;
+		
+		switch (cmd)
+		{
+		case "cmd_add_group":
+			ugroup = panel.sKK/*getSelection*/();
+			if (ugroup)
+			{
+				dlg = new IG$/*mainapp*/._I6e/*makeItem*/({
+					itemtype: "Group",
+					parentuid: ugroup.get("gid"),
+					parentnodepath: "",
+					callback: new IG$/*mainapp*/._I3d/*callBackObj*/(panel, panel.rs_mm1/*addGroup*/, ugroup)
+				});
+				dlg.show(panel);
+			}
+			break;
+		case "cmd_edit_group":
+			ugroup = panel.sKK/*getSelection*/();
+			if (ugroup)
+			{
+				if (!ugroup.isRoot())
+				{
+					dlg = new IG$/*mainapp*/._Icd/*makeItemEditor*/({
+						uid: ugroup.get("gid"),
+						itemname: ugroup.get("name"),
+						itemtype: "Group",
+						groupid: ugroup.get("groupid"),
+						callback: new IG$/*mainapp*/._I3d/*callBackObj*/(panel, panel.rs_mm1/*addGroup*/, ugroup)
+					});
+					dlg.show(panel);
+				}
+				else
+				{
+					IG$/*mainapp*/._I52/*ShowError*/(IRm$/*resources*/.r1("M_NOT_EDITABLE"), this);
+				}
+			}
+			else
+			{
+				IG$/*mainapp*/._I52/*ShowError*/(IRm$/*resources*/.r1("M_SEL_ITEM"), this);
+			}
+			break;
+		case "cmd_priv_group":
+			ugroup = panel.sKK/*getSelection*/();
+			if (ugroup)
+			{
+				if (!ugroup.isRoot())
+				{
+					dlg = new IG$/*mainapp*/._Icc/*groupPrivSetting*/({gid: ugroup.get("gid"), groupname: ugroup.get("name"), ugroup: ugroup});
+					dlg.show(panel);
+				}
+				else
+				{
+					IG$/*mainapp*/._I52/*ShowError*/(IRm$/*resources*/.r1("M_NOT_EDITABLE"), this);
+				}
+			}
+			else
+			{
+				IG$/*mainapp*/._I52/*ShowError*/(IRm$/*resources*/.r1("M_SEL_ITEM"), this);
+			}
+			break;
+//		case "cmd_activate_group":
+//			ugroup = panel.sKK/*getSelection*/();
+//			if (ugroup)
+//			{
+//				this.mm2/*setGroupActive*/(ugroup, "activate");
+//			}
+//			break;
+//		case "cmd_deactivate_group":
+//			ugroup = panel.sKK/*getSelection*/();
+//			if (ugroup)
+//			{
+//				this.mm2/*setGroupActive*/(ugroup, "delete");
+//			}
+//			break;
+//		case "cmd_activate_user":
+//			user = this.userinfo;
+//			if (user)
+//			{
+//				this.mm2b/*setUserActive*/(user, "1");
+//			}
+//			break;
+//		case "cmd_deprivate_user":
+//			user = this.userinfo;
+//			if (user)
+//			{
+//				this.mm2b/*setUserActive*/(user, "2");
+//			}
+//			break;
+//		case "cmd_remove_group":
+//			ugroup = panel.sKK/*getSelection*/();
+//			if (ugroup)
+//			{
+//				this.mm2/*setGroupActive*/(ugroup, "erase");
+//			}
+//			break;
+		case "cmd_add_user":
+			ugroup = panel.sKK/*getSelection*/();
+			// var paneludetail = panel.down("[name=paneludetail]");
+			dlg = new IG$/*mainapp*/._Ica/*mgrusereditor*/({
+				groupinfo: panel.groupinfo,
+				userinfo: null,
+				Ld3/*currentGroup*/: panel.Ld3/*currentGroup*/,
+				callback: new IG$/*mainapp*/._I3d/*callBackObj*/(panel, panel.rs_um3/*userModify*/)
+			});
+			// panel.ld5/*updateUserDetail*/();
+			// paneludetail.setVisible(true);
+			IG$/*mainapp*/._I_5/*checkLogin*/(panel, dlg);
+			break;
+		case "cmd_sync_user":
+			IG$/*mainapp*/._I65/*procMenuCommand*/("CMD_SYNC_USER");
+			break;
+		case "cmd_new_duty":
+			this.mm3/*createDuty*/();
+			break;
+		case "cmd_add_mts":
+			this.mm4/*createMTS*/();
+			break;
+		case "cmd_edit_mts":
+			var mtsgrd = this.down("[name=mtsgrd]"),
+				sel = mtsgrd.getSelectionModel().selected;
+				
+			if (sel && sel.length > 0)
+			{
+//				if (sel.items[0].get("pstatus") == "A")
+//				{
+//					IG$/*mainapp*/._I52/*ShowError*/(IRm$/*resources*/.r1("M_NOT_EDITABLE"), this);
+//				}
+//				else
+//				{
+					dlg = new IG$/*mainapp*/._IcT/*TenantSetting*/({
+						mts: sel.items[0],
+						callback: new IG$/*mainapp*/._I3d/*callBackObj*/(panel, function() {
+							this.ldM/*loadMTS*/();
+						})
+					});
+					// panel.ld5/*updateUserDetail*/();
+					// paneludetail.setVisible(true);
+					IG$/*mainapp*/._I_5/*checkLogin*/(this, dlg);
+//				}
+			}
+			else
+			{
+				IG$/*mainapp*/._I52/*ShowError*/(IRm$/*resources*/.r1("M_SEL_ITEM"), this);
+			}
+			break;
+//		case "cmd_add_duty":
+//			var dp = [],
+//				rec,
+//				pdutygrid = this.down("[name=pdutygrid]").store.data.items,
+//				i;
+//			
+//			for (i=0; i < pdutygrid.length; i++)
+//			{
+//				rec = pdutygrid[i];
+//				dp.push({
+//					dutytype: rec.get("dutytype"),
+//					name: rec.get("name"),
+//					sid: rec.get("sid"),
+//					type: rec.get("type"),
+//					status: rec.get("status")
+//				});
+//			}
+//			dlg = new IG$/*mainapp*/._Icb/*userDutyMgr*/({
+//				sel: dp,
+//				callback: new IG$/*mainapp*/._I3d/*callBackObj*/(panel, panel.rs_mm3/*addDuty*/)
+//			});
+//			dlg.show(panel);
+//			break;
+//		case "cmd_remove_duty":
+//			break;
+		}
+	},
+	
+	rs_um3/*userModify*/: function() {
+		var me = this;
+		me.Ld3/*currentGroup*/ && me.ld3/*loadUserList*/(me.Ld3/*currentGroup*/);
+	},
+	
+//	rs_mm3/*addDuty*/: function(sel) {
+//		var pdutygrid = this.down("[name=pdutygrid]"),
+//			dp = [],
+//			i;
+//		
+//		for (i=0; i < sel.length; i++)
+//		{
+//			dp.push({
+//				dutytype: sel[i].get("dutytype"),
+//				name: sel[i].get("name"),
+//				sid: sel[i].get("sid"),
+//				type: sel[i].get("type"),
+//				status: sel[i].get("status")
+//			});
+//		}
+//		pdutygrid.store.loadData(dp);
+//	},
+	
+	rs_mm1/*addGroup*/: function(xdoc, ugroup) {
+		this.ld2/*loadUserGroup*/("", null);
+	},
+	
+//	mm2/*setGroupActive*/: function(ugroup, status) {
+//		var panel = this,
+//			req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+//			content;
+//		
+//		if (status != "activate" && (ugroup.get("name") == "AdminGroup" || ugroup.get("name") == "RootGroup"))
+//		{
+//			return;
+//		}
+//		
+//		content = "<smsg><usergroup gid="" + ugroup.get("gid") + ""/></smsg>";
+//		
+//		req.init(panel, 
+//			{
+//	            ack: "28",
+//	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: "/usergroup", action: status}, "address;action"),
+//	            mbody: content
+//	        }, panel, panel.rs_mm2/*setGroupActive*/, false, [ugroup, status]);
+//		req._l/*request*/();
+//	},
+//	
+//	rs_mm2/*setGroupActive*/: function(xdoc, param) {
+//		var ugroup = param[0],
+//			status = param[1];
+//		
+//		switch (status)
+//		{
+//		case "activate":
+//			ugroup.set("status", "Active");
+//			break;
+//		case "delete":
+//			ugroup.set("status", "Blocked");
+//			break;
+//		case "erase":
+//			ugroup.remove();
+//			break;
+//		}
+//	},
+	
+//	mm2b/*setUserActive*/: function(user, status) {
+//		var panel = this,
+//			req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+//			content;
+//		
+//		if (status != "activate" && (user.name == "admin"))
+//		{
+//			return;
+//		}
+//		
+//		content = IG$/*mainapp*/._I2e/*getItemOption*/({option: "changestatus", status: status, uid: user.sid}, "option;status;uid");
+//		
+//		req.init(panel, 
+//			{
+//	            ack: "28",
+//	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: "/user/" + user.name}, "address;action"),
+//	            mbody: content
+//	        }, panel, panel.rs_mm2b/*setUserActive*/, false);
+//		req._l/*request*/();
+//	},
+//	
+//	rs_mm2b/*setUserActive*/: function(xdoc) {
+//		IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1("M_SAVED"), null, null, 0, "success");
+//	},
+	
+	/***** end: toolbar related proc *****/
+	
+	/***** start: component drawing *****/
+    initComponent: function(){
+		$s.apply(this, {
+			items: [
+				{
+					xtype: "panel",
+					border: 0,
+					layout: "accordion",
+					region: "west",
+					split: true,
+					width: 240,
+					collapsible: false,
+					hideHeaders: true,
+					items: [
+						{
+							xtype: "treepanel",
+							border: 0,
+							name: "grouptree",
+							"layout": "fit",
+							title: IRm$/*resources*/.r1("T_USER_GROUP"),
+							rootVisible: true,
+							store: {
+								xtype: "store",
+								fields: [
+									"name", "active", "description", "gid", "updatedate", "loadData", "status", "groupid"
+								],
+								data: []
+							},
+							columns: [
+							    {
+							    	xtype: "treecolumn", //this is so we know which column will show the tree
+							    	text: IRm$/*resources*/.r1("B_NAME"),
+							    	flex: 1,
+							    	sortable: false,
+							    	dataIndex: "name"
+							    },
+							    {
+							    	text: "GroupID",
+							    	width: 60,
+							    	sortable: false,
+							    	dataIndex: "groupid"
+							    },
+							    {
+							    	text: IRm$/*resources*/.r1("B_STATUS"),
+							    	width: 60,
+							    	sortable: false,
+									dataIndex: "status"
+							    }
+							],
+							dockedItems: [
+							    {
+							    	xtype: "toolbar",
+							    	dock: "top",
+							    	items: [
+							    	    {
+							    	    	iconCls: "icon-toolbar-add",
+							    	    	text: IRm$/*resources*/.r1("L_ADD_GROUP"),
+							    	    	tooltip: "Add",
+							    	    	handler: function() {
+							    	    		this._t$/*toolbarHandler*/("cmd_add_group"); 
+							    	    	},
+							    	    	scope: this
+							    	    },
+							    	    {
+							    	    	iconCls: "icon-toolbar-edit",
+							    	    	tooltip: IRm$/*resources*/.r1("L_EDIT"),
+							    	    	handler: function() {
+							    	    		this._t$/*toolbarHandler*/("cmd_edit_group"); 
+							    	    	},
+							    	    	scope: this
+							    	    },
+							    	    {
+							    	    	iconCls: "icon-toolbar-grouppriv",
+							    	    	tooltip: IRm$/*resources*/.r1("L_PRIVILEGE"),
+							    	    	handler: function() {
+							    	    		this._t$/*toolbarHandler*/("cmd_priv_group"); 
+							    	    	},
+							    	    	scope: this
+							    	    }
+							    	    // ,
+				//			    	    {
+				//			    	    	iconCls: "icon-toolbar-activate",
+				//			    	    	tooltip: "Activate",
+				//			    	    	handler: function() {
+				//			    	    		this._t$/*toolbarHandler*/("cmd_activate_group"); 
+				//			    	    	},
+				//			    	    	scope: this
+				//			    	    },
+				//			    	    {
+				//			    	    	iconCls: "icon-toolbar-deprivation",
+				//			    	    	tooltip: "Deprivation",
+				//			    	    	handler: function() {
+				//			    	    		this._t$/*toolbarHandler*/("cmd_deactivate_group"); 
+				//			    	    	},
+				//			    	    	scope: this
+				//			    	    },
+				//			    	    {
+				//			    	    	iconCls: "icon-toolbar-remove",
+				//			    	    	tooltip: "Remove",
+				//			    	    	handler: function() {
+				//			    	    		this._t$/*toolbarHandler*/("cmd_remove_group"); 
+				//			    	    	},
+				//			    	    	scope: this
+				//			    	    }
+							    	]
+							    }
+							],
+							listeners: {
+								itemclick: function(view, record, item, index, e, eOpts) {
+									var gid = record.get("gid");
+									this.Ld3/*currentGroup*/ = gid;
+									this.ld3/*loadUserList*/(gid);
+								},
+								beforeitemexpand: function(node, eOpts) {
+									if (node.hasChildNodes() == false && node.get("loadData") == false)
+									{
+										// var pid = node.get("gid");
+										// this.ld2/*loadUserGroup*/(pid, node);
+									}
+								},
+								scope: this
+							}
+						},
+						{
+							xtype: "gridpanel",
+							title: IRm$/*resources*/.r1("T_DUTY_LIST"),
+							name: "gridduty",
+							hideHeaders: true,
+							layout: "fit",
+							border: 0,
+							store: {
+								xtype: "store",
+								fields: [
+									"sid", "name", "dutytype", "status", "type", "active"
+								]
+							},
+							tbar: [
+								{
+									iconCls: "icon-toolbar-add",
+									text: IRm$/*resources*/.r1("L_ADD_DUTY"),
+									tooltip: "Add duty",
+									handler: function() {
+										this._t$/*toolbarHandler*/("cmd_new_duty"); 
+									},
+									scope: this
+								},
+								{
+									iconCls: "icon-toolbar-remove",
+									tooltip: "Remove",
+									name: "btn_r_duty",
+									hidden: true,
+									handler: function() {
+										this._t$/*toolbarHandler*/("cmd_remove_duty"); 
+									},
+									scope: this
+								},
+								{
+									xtype: "button",
+						       		text: IRm$/*resources*/.r1("B_SHOW_ALL"),
+						       		menu: {
+						       			xtype: "menu",
+						       			items: [
+						       				{
+						       					text: IRm$/*resources*/.r1("B_SHOW_ALL"),
+						       					handler: function() {
+						       						var grd = this.down("[name=gridduty]");
+						       						grd.store.clearFilter();
+						       					},
+						       					scope: this
+						       				},
+						       				{
+						       					text: "Pre defined",
+						       					handler: function() {
+						       						var grd = this.down("[name=gridduty]");
+						       						grd.store.filter("dutytype", "A");
+						       					},
+						       					scope: this
+						       				},
+						       				{
+						       					text: "Custom duty",
+						       					handler: function() {
+						       						var grd = this.down("[name=gridduty]");
+						       						grd.store.filter("dutytype", "C");
+						       					},
+						       					scope: this
+						       				},
+						       				{
+						       					text: "Group duty",
+						       					handler: function() {
+						       						var grd = this.down("[name=gridduty]");
+						       						grd.store.filter("dutytype", "G");
+						       					},
+						       					scope: this
+						       				},
+						       				{
+						       					text: "User duty",
+						       					handler: function() {
+						       						var grd = this.down("[name=gridduty]");
+						       						grd.store.filter("dutytype", "U");
+						       					},
+						       					scope: this
+						       				}
+						       			]
+						       		}
+								}
+							],
+							columns: [
+								{
+									xtype: "gridcolumn",
+									text: "Duty name",
+									dataIndex: "name",
+									flex: 1
+								},
+								{
+									xtype: "gridcolumn",
+									text: IRm$/*resources*/.r1("B_STATUS"),
+									dataIndex: "active",
+									width: 50
+								}
+							],
+							listeners: {
+								cellclick: function(tobj, td, cellIndex, record, tr, rowIndex, e, eOpts) {
+									if (record.get("sid"))
+									{
+										var dutytype = record.get("dutytype"),
+											type = record.get("type"),
+											btn_r_duty = this.down("[name=btn_r_duty]");
+										
+										btn_r_duty.setVisible(false);
+										
+										if (type != "PreDefined")
+										{
+											btn_r_duty.setVisible(true);
+										}
+										
+										this.l1G/*loadDutyUsers*/(record.get("sid"));
+									}
+								},
+								scope: this
+							}
+						},
+						{
+					    	xtype: "gridpanel",
+					    	border: 0,
+					    	title: IRm$/*resources*/.r1("T_M_TENANT"),
+					    	name: "mtsgrd",
+					    	hidden: true,
+					    	hideHeaders: true,
+					    	store: {
+					    		xtype: "store",
+					    		fields: [
+					    		    "name", "pstatus", "uid", "pstatname", "a1", "a2"
+					    		]
+					    	},
+					    	columns: [
+					    	    {
+					    	    	text: IRm$/*resources*/.r1("B_NAME"),
+					    	    	dataIndex: "name",
+					    	    	flex: 1
+					    	    },
+					    	    {
+					    	    	text: IRm$/*resources*/.r1("B_STATUS"),
+					    	    	width: 60,
+					    	    	dataIndex: "pstatname"
+					    	    }
+					    	],
+					    	dockedItems: [
+							    {
+							    	xtype: "toolbar",
+							    	dock: "top",
+							    	items: [
+							    	    {
+							    	    	iconCls: "icon-toolbar-add",
+							    	    	text: IRm$/*resources*/.r1("L_ADD_TENANT"),
+							    	    	tooltip: "Add",
+							    	    	handler: function() {
+							    	    		this._t$/*toolbarHandler*/("cmd_add_mts"); 
+							    	    	},
+							    	    	scope: this
+							    	    },
+							    	    {
+									    	iconCls: "icon-toolbar-edit",
+							    	    	tooltip: IRm$/*resources*/.r1("L_EDIT"),
+							    	    	handler: function() {
+							    	    		this._t$/*toolbarHandler*/("cmd_edit_mts"); 
+							    	    	},
+							    	    	scope: this
+									    }
+							    	]
+							    }
+							]
+					    }
+					]
+				},
+				{
+					xtype: "panel",
+					region: "center",
+					"layout": "fit",
+					bodyPadding: 2,
+					items: [
+						{
+							xtype: "panel",
+							flex: 1,
+							border: false,
+							"layout": { 
+								type: "vbox",
+								align: "stretch"
+							},
+							items: [
+								{
+									xtype: "gridpanel",
+									title: "Users",
+									name: "usergrid",
+									border: 0,
+									flex: 1,
+									store: {
+										xtype: "store",
+										fields: [
+											"name", "active", "gid", "groupname", "id", "sid", "updatedate", "status", "email"
+										]
+									},
+									columns: [
+										{
+											text: "ID",
+											flex: 1,
+											sortable: true,
+											hideable: false,
+											dataIndex: "id"
+										},
+										{
+											text: IRm$/*resources*/.r1("B_NAME"),
+											flex: 1,
+											sortable: true,
+											hideable: false,
+											dataIndex: "name"
+										},
+										{
+											text: IRm$/*resources*/.r1("L_GROUP_NAME"),
+											flex: 1,
+											sortable: true,
+											hideable: false,
+											dataIndex: "groupname"
+										},
+										{
+											text: "Email",
+											flex: 1,
+											sortable: true,
+											hideable: false,
+											dataIndex: "email"
+										},
+										{
+											text: IRm$/*resources*/.r1("B_STATUS"),
+											flex: 1,
+											sortable: true,
+											hideable: false,
+											dataIndex: "status"
+										}
+									],
+									listeners: {
+										itemclick: function(view, record, item, index, e, eOpts) {
+											var sid = record.get("sid");
+											this.ld4/*loadUserDetail*/(sid, record);
+										},
+										scope: this
+									},
+									tbar: [
+								       	{
+								        	text: IRm$/*resources*/.r1("L_ADD_USER"),
+								        	iconCls: "icon-toolbar-add",
+								        	handler: function() {
+								        		this._t$/*toolbarHandler*/("cmd_add_user"); 
+								        	},
+								        	scope: this
+								       	},
+								       	{
+								       		xtype: "button",
+								       		name: "t_1",
+								       		text: IRm$/*resources*/.r1("B_SHOW_ALL"),
+								       		menu: {
+								       			xtype: "menu",
+								       			items: [
+								       				{
+								       					text: IRm$/*resources*/.r1("B_SHOW_ALL"),
+								       					handler: function() {
+								       						var me = this,
+								       							grd = me.down("[name=usergrid]");
+						       								grd.store.clearFilter();
+						       								me.down("[name=t_1]").setText(IRm$/*resources*/.r1("B_SHOW_ALL"));
+								       					},
+								       					scope: this
+								       				},
+								       				{
+								       					text: IRm$/*resources*/.r1("L_A_USR"),
+								       					handler: function() {
+								       						var me = this,
+								       							grd = me.down("[name=usergrid]");
+						       								grd.store.filter("active", "1");
+						       								me.down("[name=t_1]").setText(IRm$/*resources*/.r1("L_A_USR"));
+								       					},
+								       					scope: this
+								       				},
+								       				{
+								       					text: IRm$/*resources*/.r1("L_B_USR"),
+								       					handler: function() {
+								       						var me = this,
+								       							grd = me.down("[name=usergrid]");
+								       							
+						       								grd.store.filterBy(function(record, id){
+															    if (record.get("active") != "1")
+															    {
+															      return true;
+															    }    
+															    return false;
+															}, this);
+															me.down("[name=t_1]").setText(IRm$/*resources*/.r1("L_B_USR"));
+								       					},
+								       					scope: this
+								       				}
+								       			]
+								       		}
+								       	},
+								       	"->",
+								       	{
+								       		xtype: "button",
+								       		text: "SyncUser",
+								       		handler: function() {
+								       			this._t$/*toolbarHandler*/("cmd_sync_user"); 
+								       		},
+								       		scope: this
+								       	}
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			listeners: {
+				afterrender: function() {
+					this._IFd/*init_f*/();
+				},
+				scope: this
+			}
+		});
+		
+        IG$/*mainapp*/._I76/*mgrUser*/.superclass.initComponent.call(this);
+    }
+	/***** end: component drawing *****/
+});
+IG$/*mainapp*/._I76n/*sync_user*/ = $s.extend(IG$/*mainapp*/._I57/*IngPanel*/, {
+	layout: "fit",
+	iconCls: "icon-group",
+	closable: true,
+	
+	_t$/*toolbarHandler*/: function(cmd) {
+		var me = this,
+			mbody = null,
+			req;
+		
+		switch (cmd)
+		{
+		case "cmd_save":
+			IG$/*mainapp*/._I55/*confirmMessages*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1("W_SYNC_SAVE"), function(dlg) {
+				if (dlg == "yes")
+				{
+					me._3/*saveContent*/.call(me);
+				}
+			}, me, me);
+			break;
+		case "cmd_s_group":
+			IG$/*mainapp*/._I55/*confirmMessages*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1("W_SYNC_GRP"), function(dlg) {
+				if (dlg == "yes")
+				{
+					me._3/*saveContent*/.call(me, "group");
+				}
+			}, me, me);
+			break;
+		case "cmd_s_user":
+			IG$/*mainapp*/._I55/*confirmMessages*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1("W_SYNC_USER"), function(dlg) {
+				if (dlg == "yes")
+				{
+					me._3/*saveContent*/.call(me, "user");
+				}
+			}, me, me);
+			break;
+		}
+	},
+	
+	_a/*loadPool*/: function() {
+		var me = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		
+		// me.setLoading(true);
+		
+		req.init(me, 
+			{
+	            ack: "25",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: "/"}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'standard'})
+	        }, me, function(xdoc) {
+	        	var me = this,
+					dp = [],
+					i, cnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"), 
+					snodes, p,
+					isadmin = false;
+				
+				dp.push({name:"Select Database Instance", poolname:""}); 
+				
+				if (cnode)
+				{
+					snodes = IG$/*mainapp*/._I26/*getChildNodes*/(cnode);
+					isadmin = IG$/*mainapp*/._I83/*dlgLogin*/.jS2/*isAdmin*/;
+					
+					for (i=0; i < snodes.length; i++)
+					{
+						p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(snodes[i]);
+						if (isadmin == true || (isadmin == false && p.name.toUpperCase() != "IGCBASE"))
+						{
+							dp.push({
+								name:p.disp, 
+								poolname: p.name,
+								uid: p.uid || "",
+								isuserdb: (p.isuserdb == "T" ? true : false),
+								savepwd: (p.isuserdb == "T" && p.savepwd == "F" ? false : true)
+							});
+						}
+					}
+				}
+				
+				me.down("[name=dsource]").store.loadData(dp);
+				
+				me._1/*loadApp*/();
+	        }, false);
+		req._l/*request*/();
+	},
+	
+	_1/*loadApp*/: function() {
+		var me = this,
+			mtree,
+			m_navi = this.down("[name=m_navi]"),
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		
+		req.init(me, 
+			{
+	            ack: "5",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: "/SYS_Config/syncuser"}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: ""})
+	        }, me, 
+	        function(xdoc) {
+	        	me._2/*loadContent*/(xdoc);
+	        }, 
+	        function(xdoc) {
+	        	me._2/*loadContent*/(null);
+//	        	var me = this,
+//					r = true,
+//					req,
+//					errcode = IG$/*mainapp*/._I27/*getErrorCode*/(xdoc),
+//					uid = "/SYS_Config/syncuser";
+//				
+//				if (errcode == "0x1400")
+//				{
+//					req = new IG$/*mainapp*/._I3e/*requestServer*/();
+//					req.init(me, 
+//						{
+//				            ack: "31",
+//				            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: uid, name: "syncuser", type: "PrivateContent"}),
+//				            mbody: "<smsg></smsg>"
+//				        }, me, function(xdoc) {
+//				        	me._2/*loadContent*/(xdoc);
+//				        });
+//					req._l/*request*/();
+//					r = false;
+//				}
+	        });
+	    req.showerror = false;
+		req._l/*request*/();
+	},
+	
+	_2/*loadContent*/: function(xdoc) {
+		var me = this,
+			tnode = xdoc ? IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item") : null,
+			snode;
+		
+		me.mobj = {
+			grp: {},
+			usr: {}
+		};
+		
+		if (tnode)
+		{
+			me.mobj = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnode);
+			me.mobj.grp = {};
+			me.mobj.usr = {};
+			snode = IG$/*mainapp*/._I18/*XGetNode*/(tnode, "grp");
+			
+			if (snode)
+			{
+				me.mobj.dsource = IG$/*mainapp*/._I1b/*XGetAttr*/(snode, "dsource");
+				me.mobj.grp.eclear = IG$/*mainapp*/._I1b/*XGetAttr*/(snode, "eclear") == "T";
+				me.mobj.grp.ename = IG$/*mainapp*/._I1a/*getSubNodeText*/(snode, "ename");
+				me.mobj.grp.esql = IG$/*mainapp*/._I1a/*getSubNodeText*/(snode, "esql");
+			}
+			
+			snode = IG$/*mainapp*/._I18/*XGetNode*/(tnode, "usr");
+			
+			if (snode)
+			{
+				me.mobj.usr.eclear = IG$/*mainapp*/._I1b/*XGetAttr*/(snode, "eclear") == "T";
+				me.mobj.usr.ename = IG$/*mainapp*/._I1a/*getSubNodeText*/(snode, "ename");
+				me.mobj.usr.esql = IG$/*mainapp*/._I1a/*getSubNodeText*/(snode, "esql");
+			}
+			
+			me.down("[name=dsource]").setValue(me.mobj.dsource);
+			me.down("[name=eclear_grp]").setValue(me.mobj.grp.eclear);
+			me.down("[name=ename_grp]").setValue(me.mobj.grp.ename);
+			me.down("[name=esql_grp]").setValue(me.mobj.grp.esql);
+			me.down("[name=eclear_usr]").setValue(me.mobj.usr.eclear);
+			me.down("[name=ename_usr]").setValue(me.mobj.usr.ename);
+			me.down("[name=esql_usr]").setValue(me.mobj.usr.esql);
+		}
+	},
+	
+	_3/*saveContent*/: function(aftercmd) {
+		var me = this,
+			mbody,
+			req;
+		
+		if (me.mobj)
+		{
+			me.mobj.dsource = me.down("[name=dsource]").getValue();
+			me.mobj.grp.eclear = me.down("[name=eclear_grp]").getValue();
+			me.mobj.grp.ename = me.down("[name=ename_grp]").getValue();
+			me.mobj.grp.esql = me.down("[name=esql_grp]").getValue();
+			me.mobj.usr.eclear = me.down("[name=eclear_usr]").getValue();
+			me.mobj.usr.ename = me.down("[name=ename_usr]").getValue();
+			me.mobj.usr.esql = me.down("[name=esql_usr]").getValue();
+			
+			mbody = "<smsg><item uid='/SYS_Config/syncuser'>"
+				+ "<grp dsource='" + (me.mobj.dsource || "") + "' eclear='" + (me.mobj.grp.eclear ? "T" : "F") + "'>"
+				+ "<ename><![CDATA[" + (me.mobj.grp.ename || "") + "]]></ename>"
+				+ "<esql><![CDATA[" + (me.mobj.grp.esql || "") + "]]></esql>"
+				+ "</grp>"
+				+ "<usr eclear='" + (me.mobj.usr.eclear ? "T" : "F") + "'>"
+				+ "<ename><![CDATA[" + (me.mobj.usr.ename || "") + "]]></ename>"
+				+ "<esql><![CDATA[" + (me.mobj.usr.esql || "") + "]]></esql>"
+				+ "</usr>"
+				+ "</item></smsg>";
+			
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+			
+			req.init(me, 
+				{
+		            ack: "31",
+		            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: "/SYS_Config/syncuser"}),
+		            mbody: mbody
+		        }, me, function(xdoc) {
+		        	if (!aftercmd)
+		        	{
+		        		IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1("M_SAVED"), null, null, 0, "success");
+		        	}
+		        	else
+		        	{
+		        		var req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		        		
+		        		req.init(me, 
+							{
+					            ack: "74",
+					            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: "/SYS_Config/syncuser", option: aftercmd}, "uid;option"),
+					            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({})
+					        }, me, function(xdoc) {
+				        		IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1("M_SAVED"), null, null, 0, "success");
+					        }, false);
+						req._l/*request*/();
+		        	}
+		        }, false);
+			req._l/*request*/();
+		}
+	},
+	
+	initComponent: function(){
+		var me = this;
+		
+		$s.apply(me, {
+			title: IRm$/*resources*/.r1("T_SYNC_USER"),
+			bodyPadding: 0,
+			items: [
+				{
+					xtype: "panel",
+					border: 0,
+					bodyPadding: 10,
+					layout: {
+						type: "vbox",
+						align: "stretch"
+					},
+					tbar: [
+						{
+					    	iconCls: 'icon-toolbar-save',
+					    	name: "t_save",
+			            	tooltip: IRm$/*resources*/.r1('L_SAVE'),
+			            	handler: function() {
+					    		this._t$/*toolbarHandler*/('cmd_save'); 
+					    	},
+			            	scope: this
+					    }
+					],
+					items: [
+						{
+							xtype: "fieldcontainer",
+							layout: {
+								type: "hbox",
+								align: "stretch"
+							},
+							items: [
+								{
+									xtype: "combobox",
+									fieldLabel: "Data Source",
+									name: "dsource",
+									fieldLabel: "Database Instances",
+			            	    	valueField: "poolname",
+			            	    	displayField: "name",
+			            	    	queryMode: "local",
+			            	    	editable: false,
+			            	    	store: {
+			            	    		fields: [
+			            	    			"name", "poolname", "uid", "isuserdb", "savepwd"
+			            	    		]
+			            	    	}
+								}
+							]
+						},
+						{
+							xtype: "container",
+							flex: 2,
+							layout: {
+								type: "hbox",
+								align: "stretch"
+							},
+							items: [
+								{
+									xtype: "fieldset",
+									flex: 1,
+									title: "Group Syncronization",
+									layout: {
+										type: "vbox",
+										align: "stretch"
+									},
+									items: [
+										{
+											xtype: "container",
+											layout: {
+												type: "vbox",
+												align: "stretch"
+											},
+											items: [
+												{
+													xtype: "container",
+													layout: {
+														type: "hbox",
+														align: "stretch"
+													},
+													items: [
+														{
+															xtype: "container",
+															flex: 1
+														},
+														{
+															xtype: "button",
+															text: "Execute",
+															handler: function() {
+																this._t$/*toolbarHandler*/('cmd_s_group'); 
+															},
+															scope: this
+														}
+													]
+												},
+												{
+													xtype: "checkbox",
+													name: "eclear_grp",
+													boxLabel: "Clear Groups"
+												},
+												{
+													xtype: "textarea",
+													height: 40,
+													name: "ename_grp",
+													fieldLabel: "Exclude names"
+												}
+											]
+										},
+										{
+											xtype: "container",
+											layout: "fit",
+											height: 30,
+											items: [
+												{
+													xtype: "displayfield",
+													fieldLabel: "Format",
+													value: "SELECT dept_id, dept_name, parent_dept_id, description FROM DEPT"
+												}
+											]
+										},
+										{
+											xtype: "textarea",
+											flex: 1,
+											fieldLabel: "Group SQL",
+											name: "esql_grp"
+										}
+									]
+								},
+								{
+									xtype: "container",
+									width: 10
+								},
+								{
+									xtype: "fieldset",
+									flex: 1,
+									title: "User Syncronization",
+									layout: {
+										type: "vbox",
+										align: "stretch"
+									},
+									items: [
+										{
+											xtype: "container",
+											layout: {
+												type: "vbox",
+												align: "stretch"
+											},
+											items: [
+												{
+													xtype: "container",
+													layout: "hbox",
+													items: [
+														{
+															xtype: "container",
+															flex: 1
+														},
+														{
+															xtype: "button",
+															text: "Execute",
+															handler: function() {
+																this._t$/*toolbarHandler*/('cmd_s_user'); 
+															},
+															scope: this
+														}
+													]
+												},
+												{
+													xtype: "checkbox",
+													name: "eclear_usr",
+													boxLabel: "Clear Groups"
+												},
+												{
+													xtype: "textarea",
+													height: 40,
+													name: "ename_usr",
+													fieldLabel: "Exclude names"
+												}
+											]
+										},
+										{
+											xtype: "container",
+											layout: "fit",
+											height: 30,
+											items: [
+												{
+													xtype: "displayfield",
+													fieldLabel: "Format",
+													value: "SELECT userid, passwd, fullname, email, dept_id FROM USER"
+												}
+											]
+										},
+										{
+											xtype: "textarea",
+											flex: 2,
+											name: "esql_usr",
+											fieldLabel: "Group SQL"
+										}
+									]
+								}
+							]
+						},
+						{
+							xtype: "fieldset",
+							flex: 1,
+							title: "Execution Logs",
+							layout: {
+								type: "vbox",
+								align: "stretch"
+							},
+							items: [
+								{
+									xtype: "gridpanel",
+									flex: 1,
+									store: {
+										fields: ["d_seq"]
+									},
+									columns: [
+										{
+											dataIndex: "d_seq"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		});
+		
+		IG$/*mainapp*/._I76n/*sync_user*/.superclass.initComponent.call(this);
+	},
+	listeners: {
+		afterrender: function(tobj) {
+			this._a/*loadPool*/();
+		}
+	}
+});
+IG$/*mainapp*/._I6f/*helpManage*/ = $s.extend(IG$/*mainapp*/._I57/*IngPanel*/, {
+	scroll: false,
+	closable: true,
+	
+	iconCls: "icon-helpmgr",
+	
+	"layout":{
+		type: 'hbox',
+		align: 'stretch'
+	},
+	
+	_t$/*toolbarHandler*/: function(cmd) {
+		var me = this;
+		switch (cmd)
+		{
+		case 'cmd_save':
+			this.sk1/*saveContent*/();
+			break;
+		case 'cmd_saveas':
+			break;
+		case "cmd_refresh":
+			var d_t = me.down("[name=d_t]");
+			d_t._II5/*refreshTopNode*/.call(d_t);
+			break;
+		case 'cmd_locale_enUS':
+			this.u7l/*updateCurrentLang*/();
+			this.u6m/*clang*/ = 'en_US';
+			this.u6l/*setCurrentDocument*/();
+			break;
+		case 'cmd_locale_koKR':
+			this.u7l/*updateCurrentLang*/();
+			this.u6m/*clang*/ = 'ko_KR';
+			this.u6l/*setCurrentDocument*/();
+			break;
+		case 'cmd_preview':
+			if (this.u5m/*helpcontent*/)
+			{
+				var helpdoc = this.down('[name=helpdoc]'),
+					popup = new IG$/*mainapp*/._Id1/*helpWindow*/({
+						uid: this.u5m/*helpcontent*/.i.uid,
+						u6m/*clang*/: this.u6m/*clang*/,
+						t: '',
+						c: helpdoc.getValue()
+					});
+				
+				IG$/*mainapp*/._I_5/*checkLogin*/(this, popup);
+			}
+			break;
+		}
+	},
+	
+	sk1/*saveContent*/: function() {
+		if (this.u5m/*helpcontent*/)
+		{
+			this.u7l/*updateCurrentLang*/();
+			var lang,
+				c, item;
+			
+			c = "<smsg><item uid='" + this.u5m/*helpcontent*/.i.uid + "'>";
+			for (lang in this.u5m/*helpcontent*/.c)
+			{
+				item = this.u5m/*helpcontent*/.c[lang];
+				c += '<HelpContent language="' + item.lang + '">'
+				  + '<Title><![CDATA['
+				  + (item.t || '')
+				  + ']]></Title>'
+				  + '<Content><![CDATA['
+				  + (item.c || '')
+				  + ']]></Content></HelpContent>';
+			}
+			
+			c += '</item></smsg>';
+			
+			var panel=this,
+				req = new IG$/*mainapp*/._I3e/*requestServer*/();
+	    	req.init(panel, 
+				{
+		            ack: "31",
+		            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: this.u5m/*helpcontent*/.i.uid}),
+		            mbody: c
+		        }, panel, panel.rs_fV6/*saveContent*/, null);
+			req._l/*request*/();
+		}
+	},
+	
+	rs_fV6/*saveContent*/: function() {
+		IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1('M_SAVED'), null, null, 0, "success");
+	},
+	
+	u5m/*helpcontent*/: null,
+	u6m/*clang*/: 'en_US',
+    		
+	_IHc/*customClickFunc*/: function(data) {
+		var typename = data.type.toLowerCase(),
+			itemaddr = data.nodepath,
+	        itemuid = data.uid,
+	        req, panel=this;
+		
+		if (typename == 'help')
+		{
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+			req.init(panel, 
+				{
+		            ack: "16",
+	                payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: itemuid}),
+	                mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "get"})
+		        }, panel, panel.rs_u4x/*loadContent*/, null);
+			req._l/*request*/();
+		}
+		
+		return true;
+	},
+	
+	rs_u4x/*loadContent*/: function(xdoc) {
+		var helpdoc = this.down('[name=helpdoc]'),
+			node,
+			nodes,
+			i, l, tnode, cnode, helpitem = this.down("[name=helpitem]");
+			
+		this.u5m/*helpcontent*/ = {i:{}, c:{}};
+		node = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, '/smsg/item');
+		IG$/*mainapp*/._I1f/*XGetInfo*/(this.u5m/*helpcontent*/.i, node, 'uid;name;nodepath;memo', 's');
+		helpitem.setText(this.u5m/*helpcontent*/.i.name + " (" + (this.u5m/*helpcontent*/.i.memo || "") + ")");
+		
+		nodes = IG$/*mainapp*/._I26/*getChildNodes*/(node);
+		for (i=0; i < nodes.length; i++)
+		{
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(nodes[i], 'Title');
+			cnode = IG$/*mainapp*/._I18/*XGetNode*/(nodes[i], 'Content');
+			
+			l ={lang: IG$/*mainapp*/._I1b/*XGetAttr*/(nodes[i], 'language'), 
+				t: IG$/*mainapp*/._I24/*getTextContent*/(tnode), 
+				c: IG$/*mainapp*/._I24/*getTextContent*/(cnode)};
+			this.u5m/*helpcontent*/.c[l.lang] = l;
+		}
+		
+		if (!this.u5m/*helpcontent*/.c['en_US'])
+		{
+			this.u5m/*helpcontent*/.c['en_US'] = {lang: 'en_US', t: '', c: ''};
+		}
+		if (!this.u5m/*helpcontent*/.c['ko_KR'])
+		{
+			this.u5m/*helpcontent*/.c['ko_KR'] = {lang: 'ko_KR', t: '', c: ''};
+		}
+		
+		this.u6l/*setCurrentDocument*/();
+	},
+	
+	u6l/*setCurrentDocument*/: function() {
+		if (this.u5m/*helpcontent*/ && this.u6m/*clang*/)
+		{
+			var i,
+				doc = this.u5m/*helpcontent*/.c[this.u6m/*clang*/],
+			
+				helpdoc = this.down('[name=helpdoc]');
+			
+			helpdoc.setValue((doc && doc.c ? Base64.decode(doc.c) : ''));
+		}
+	},
+	
+	u7l/*updateCurrentLang*/: function() {
+		var helpdoc = this.down('[name=helpdoc]'),
+			doc = (this.u5m/*helpcontent*/) ? this.u5m/*helpcontent*/.c[this.u6m/*clang*/] : null;
+			
+		if (doc)
+		{
+			doc.c = Base64.encode(helpdoc.getValue());
+		}
+	},
+	
+    initComponent: function(){
+    	
+    	var tree = new IG$/*mainapp*/._Ic5/*naviTreeHelpDoc*/({
+    		width: 180,
+    		rootuid: '/SYS_Documents',
+    		name: "d_t",
+    		documentviewer: true,
+    		root: {
+    			text: 'Document',
+    			name: 'Document',
+    			itemtype: 'Workspace',
+    			type: 'Workspace',
+    			nodepath: '/SYS_Documents',
+    			uid: '/SYS_Documents'
+    		},
+    		_IHb/*customEventOwner*/: this,
+    		_IHc/*customClickFunc*/: this._IHc/*customClickFunc*/
+    	});
+    	
+    	this.tbar = [
+			{
+				iconCls: 'icon-toolbar-save',
+    			tooltip: IRm$/*resources*/.r1('L_SAVE_CONTENT'),
+    			handler: function() {this._t$/*toolbarHandler*/('cmd_save'); },
+    			scope: this
+			},
+			"-",
+			{
+				iconCls: 'icon-refresh',
+    			tooltip: IRm$/*resources*/.r1('L_REFRESH'),
+    			handler: function() {this._t$/*toolbarHandler*/('cmd_refresh'); },
+    			scope: this
+			},
+			"-",
+			{
+				xtype: 'splitbutton',
+				text: IRm$/*resources*/.r1('L_SELECT_LOCALE'),
+				menu: [
+	        	    {
+	        	    	text: IRm$/*resources*/.r1('L_ENGLISH'),
+	        	    	handler: function() {
+	        	    		this._t$/*toolbarHandler*/('cmd_locale_enUS');
+	        	    	},
+	        	    	scope: this
+	        	    },
+	        	    {
+	        	    	text: IRm$/*resources*/.r1('L_KOREAN'),
+	        	    	handler: function() {
+	        	    		this._t$/*toolbarHandler*/('cmd_locale_koKR');
+	        	    	},
+	        	    	scope: this
+	        	    }
+	        	]
+			},
+			{
+				text: IRm$/*resources*/.r1('L_PREVIEW'),
+    			tooltip: IRm$/*resources*/.r1('L_PREVIEW'),
+    			handler: function() {
+    				this._t$/*toolbarHandler*/('cmd_preview');
+    			},
+    			scope: this
+			}, 
+			"->",
+			{
+				text: "",
+				name: "helpitem"
+			}
+		];
+    	this.items = [
+    		tree,
+    		{
+    			xtype: 'panel',
+    			"layout": 'fit',
+    			flex: 2,
+				
+				items: [
+					{
+						xtype: 'htmleditor',
+						name: 'helpdoc'
+					}
+				]
+    		}
+    	];
+    	
+        IG$/*mainapp*/._I6f/*helpManage*/.superclass.initComponent.call(this);
+    }
+});
+IG$/*mainapp*/.mA$_s/*makestyle*/ = $s.extend($s.window, {
+	
+	modal: true,
+	region:'center',
+	"layout": "fit",
+	closable: false,
+	resizable:false,
+	width: 320,
+	autoHeight: true,
+	
+	parentnodepath: null,
+	
+	callback: null,
+	
+	fV9/*processMakeStyleItem*/: function(){
+		var panel = this,
+			i,
+			m_theme = panel.m_theme,
+			fitemname = panel.down("[name=fitemname]"),
+			fitemname_v = fitemname.getValue(),
+			basetypeselect = panel.down("[name=basetypeselect]"),
+			basetypeselect_v = basetypeselect.getValue();
+			
+		fitemname.clearInvalid();
+		basetypeselect.clearInvalid();
+		
+		if (!fitemname_v)
+		{
+			fitemname.setInvalid("Required Field");
+			return;
+		}
+			
+		if (!m_theme && !basetypeselect_v)
+			return;
+		
+		if (m_theme && panel.themes[fitemname_v])
+		{
+			fitemname.setInvalid("Duplicated");
+			return;
+		}
+		else if (!m_theme)
+		{
+			for (i=0; i < panel.styleinfo.length; i++)
+			{
+				if (panel.styleinfo[i].name == fitemname_v)
+				{
+					basetypeselect.setInvalid("Duplicated");
+					return false;
+				}
+			}
+		}
+		
+		panel.callback.execute([fitemname_v, basetypeselect_v]);
+		
+		panel._IG0/*closeDlgProc*/();
+	},
+	
+	_IG0/*closeDlgProc*/: function() {
+		this.close();
+	},
+	
+	_IFd/*init_f*/: function() {
+		var me = this,
+			i,
+			dp = [],
+			m_theme = me.m_theme,
+			basetypeselect = me.down("[name=basetypeselect]");
+		
+		if (!m_theme)
+		{
+			for (i=0; i < me.styleinfo.length; i++)
+			{
+				if (me.styleinfo[i].custom == false)
+				{
+					dp.push({name: me.styleinfo[i].name});
+				}
+			}
+			
+			basetypeselect.store.loadData(dp);
+		}
+	},
+	
+	initComponent : function() {
+		this.title = IRm$/*resources*/.r1('L_MAKESTYLE');
+		var me = this;
+		
+		$s.apply(this, {
+			defaults:{bodyStyle:'padding:10px'},
+			
+			items: [
+				    {
+				    	html: IRm$/*resources*/.r1('L_MAKESTYLE'),
+				    	flex: 1,
+				    	border: 0
+				    },
+				    {
+				    	xtype: "panel",
+						region:'center',
+						flex: 3,
+				        border:true,
+				        region:'center',
+				        height: 120,
+				        defaultType: 'textfield',
+				        "layout": 'anchor',
+				        defaults: {
+				        	anchor: '100%'
+				        },
+				        items: [
+					        {
+					            fieldLabel: IRm$/*resources*/.r1('L_STYLENAME'),
+					            labelWidth: 130,
+					            name: 'fitemname',
+					            value: '',
+					            allowBlank: false,
+					            blankText: 'Style name is required!',
+					            enableKeyEvents: true,
+					            listeners: {
+					        		'keyup': function(item, e) {
+					        			if (e.keyCode == 13)
+					        			{
+					        				this.fV9/*processMakeStyleItem*/.call(this);
+					        			}
+					        		},
+					        		scope: this
+					        	}
+					        },
+					        {
+								xtype: "combobox",
+								name: "basetypeselect",
+								hidden: me.m_theme ? true : false,
+								fieldLabel: "Inherit Style from",
+								labelWidth: 130,
+								store: {
+									fields: [
+										{name: 'name'}
+									]
+								},
+					            displayField: "name",
+					            valueField: "name",
+					            editable: false,
+					            queryMode: "local",
+					            selectOnTab: false
+							}
+					    ],
+					    listeners: {
+					    	afterrender: function() {
+					    		this._IFd/*init_f*/();
+					    	},
+					    	scope: this
+					    }
+				    }
+				],
+			buttons:[
+				{
+					text: IRm$/*resources*/.r1('B_CONFIRM'),
+					handler: function() {
+						this.fV9/*processMakeStyleItem*/();
+					},
+					scope: this
+				}, 
+				{
+					text: IRm$/*resources*/.r1('B_CANCEL'),
+					handler:function() {
+						this.close();
+					},
+					scope: this
+				}
+			]
+		});
+		
+		IG$/*mainapp*/.mA$_s/*makestyle*/.superclass.initComponent.apply(this, arguments);
+	}
+});
+
+IG$/*mainapp*/._I78/*styleWizard*/ = $s.extend(IG$/*mainapp*/._I57/*IngPanel*/, {
+	"layout": "border",
+	closable: true,
+	iconCls: "icon-style",
+	_ILa/*reportoption*/: null,
+	callback: null,
+
+	Mb_1/*loadGlobalStyle*/: function() {
+		var panel = this,
+			p_h = panel.down("[name=p_h]").getLayout(),
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		
+		p_h.setActiveItem(0);
+		
+		req.init(panel, 
+    			{
+	                ack: "1",
+		            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: "ReportStyle"}),
+		            mbody: IG$/*mainapp*/._I2e/*getItemOption*/()
+	            }, panel, panel.rs_Mb_1/*loadGlobalStyle*/, null);
+	    req._l/*request*/();
+	},
+	
+	rs_Mb_1/*loadGlobalStyle*/: function(xdoc) {
+		var me = this,
+			knode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, '/smsg/item/themes'),
+			knodes,
+			tnode,
+			t, tname,
+			c_themes = me.down("[name=c_themes]"),
+			stylelist = me.down("[name=stylelist]"),
+			mnode, cs, cstree,
+			unode, child, i, j, bs,
+			c_cset,
+			lthemes = [],
+			theme,
+			ltree = [],
+			ltree_map = {},
+			custom_items = {},
+			scustom = {},
+			scustom_a = [];
+		
+		me.themes = {};
+		
+		if (knode)
+		{
+			unode = {name: 'Default', leaf: false, expanded: true, children: []};
+			ltree_map[unode.name] = unode;
+			ltree.push(unode);
+			
+			unode = {name: 'Custom', leaf: false, expanded: true, children: []};
+			ltree_map[unode.name] = unode;
+			ltree.push(unode);
+			
+			knodes = IG$/*mainapp*/._I26/*getChildNodes*/(knode);
+			for (t=0; t < knodes.length; t++)
+			{
+				tnode = knodes[t];
+				tname = IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "name");
+				c_cset = IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "c_cset");
+				
+				theme = {
+					name: tname,
+					c_cset: c_cset,
+					gs_enable: IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "gs_enable") == "T",
+					gs_col: Number(IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "gs_col")) || 0,
+					gs_opa: IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "gs_opa") || 0.6,
+					styleinfo: []
+				};
+				
+				lthemes.push({
+					name: theme.name, 
+					value: theme.name
+				});
+				
+				me.themes[theme.name] = theme;
+				
+				$.each([
+				    {
+				    	name: "Default",
+				    	custom: false
+				    },
+				    {
+				    	name: "Custom",
+				    	custom: true
+				    }
+				], function(m, k) {
+					var mnode = IG$/*mainapp*/._I18/*XGetNode*/(tnode, k.name),
+						i,
+						unode,
+						child,
+						cs,
+						cstree,
+						key,
+						kcs;
+					
+					if (mnode)
+					{
+						unode = ltree_map[k.name];
+						child = IG$/*mainapp*/._I26/*getChildNodes*/(mnode);
+						for (i=0; i < child.length; i++)
+						{
+							cs = new IG$/*mainapp*/._IF7/*clReportStyle*/(child[i], k.name.toLowerCase(), k.custom);
+							cstree = {name: cs.name, leaf: true, custom: k.custom};
+							theme.styleinfo.push(cs);
+							
+							key = k.name.toLowerCase() + "_" + cs.name;
+							if (!custom_items[key])
+							{
+								unode.children.push(cstree);
+								custom_items[key] = cstree;
+								
+								if (k.custom && !scustom[cs.name])
+								{
+									scustom[cs.name] = child[i];
+									scustom_a.push({
+										name: cs.name,
+										kname: k.name,
+										custom: k.custom,
+										node: child[i]
+									});
+								}
+							}
+						}
+					}
+				});
+			}
+			
+			$.each(me.themes, function(k, theme) {
+				var i, j,
+					cs, bs, bf = 0, mcs;
+				
+				for (i=0; i < scustom_a.length; i++)
+				{
+					cs = scustom_a[i];
+					
+					bf = 0;
+					
+					for (j=0; j < theme.styleinfo.length; j++)
+					{
+						bs = theme.styleinfo[j];
+						
+						if (bs.custom && bs.name == cs.name)
+						{
+							bf = 1;
+							break;
+						}
+					}
+					
+					if (bf == 0)
+					{
+						mcs = new IG$/*mainapp*/._IF7/*clReportStyle*/(cs.node, cs.kname.toLowerCase(), cs.custom);
+						theme.styleinfo.push(mcs);
+					}
+				}
+				
+				for (i=0; i < theme.styleinfo.length; i++)
+				{
+					cs = theme.styleinfo[i];
+					
+					if (cs.custom == true && cs.basestylename)
+					{
+						for (j=0; j < theme.styleinfo.length; j++)
+						{
+							if (theme.styleinfo[j].name == cs.basestylename)
+							{
+								bs = theme.styleinfo[j];
+								cs._IFb/*applyBaseStyle*/.call(cs, bs);
+								break;
+							}
+						}
+					}
+				}
+			});
+		}
+		
+		stylelist.store.setRootNode({
+			expanded: true,
+			text: "Style",
+			name: "Style",
+			children: ltree
+		});
+		
+		c_themes.store.loadData(lthemes);
+		c_themes.setValue(lthemes.length ? lthemes[0].value : null);
+		
+//		stylelist.store.setRootNode({
+//			expanded: true,
+//			text: "Style",
+//			name: "Style",
+//			children: ltree
+//		});
+		//me.down("[name=c_cset]").setValue(c_cset || "");
+	},
+	
+	_m1/*loadStyle*/: function() {
+		var me = this,
+			c_themes = me.down("[name=c_themes]"),
+			dval = c_themes.getValue(),
+			themes = me.themes,
+			theme = themes[dval],
+			unode,
+			c_cset = me.down("[name=c_cset]"),
+			gs_enable = me.down("[name=gs_enable]"),
+			gs_col = me.down("[name=gs_col]"),
+			gs_opa = me.down("[name=gs_opa]"),
+			p_h = me.down("[name=p_h]"),
+			b_r = me.down("[name=b_r]");
+			
+		if  (me.__cth)
+		{
+			me.__cth.c_cset = c_cset.getValue();
+			me.__cth.gs_enable = gs_enable.getValue();
+			me.__cth.gs_col = IG$/*mainapp*/.$gc/*getColorCode*/(gs_col.getValue());
+			me.__cth.gs_opa = gs_opa.getValue();
+			me.Mb_4/*commitStyleItem*/();
+		}
+		
+		if (theme)
+		{
+			me.__cth = theme;
+			c_cset.setValue(theme.c_cset || "");
+			gs_enable.setValue(theme.gs_enable);
+			gs_col.setValue(IG$/*mainapp*/.$gv/*getColorValue*/(theme.gs_col));
+			gs_opa.setValue(theme.gs_opa);
+			
+			p_h.getLayout().setActiveItem(0);
+			b_r.setVisible(false);
+		}
+	},
+	
+	
+	Mb_3/*editStyleItem*/: function(stylename) {
+		var me = this,
+			__cth = me.__cth,
+			i,
+			form_header = me.down("[name=form_header]"),
+			form_data = me.down("[name=form_data]");
+		
+		if (__cth)
+		{	
+			me.Mb_4/*commitStyleItem*/();
+			
+			for (i=0; i < __cth.styleinfo.length; i++)
+			{
+				if (__cth.styleinfo[i].name == stylename)
+				{
+					form_header.Mb_6/*loadStyleData*/.call(form_header, __cth.styleinfo[i].hs/*headerstyle*/);
+					form_data.Mb_6/*loadStyleData*/.call(form_data, __cth.styleinfo[i].ds/*datastyle*/);
+					break;
+				}
+			}
+		}
+	},
+	
+	Mb_4/*commitStyleItem*/: function() {
+		var me = this,
+			__cth = me.__cth,
+			form_header = me.down("[name=form_header]"),
+			form_data = me.down("[name=form_data]");
+		
+		form_data.Mb_7/*updateStyleData*/.call(form_data);
+		form_header.Mb_7/*updateStyleData*/.call(form_header);
+	},
+	
+	_IG0/*closeDlgProc*/: function() {
+		this.callback && this.callback.execute();
+	},
+	
+	_IFf/*confirmDialog*/: function() {
+		var me = this,
+			c_cset = me.down("[name=c_cset]"),
+			gs_enable = me.down("[name=gs_enable]"),
+			gs_col = me.down("[name=gs_col]"),
+			gs_opa = me.down("[name=gs_opa]");
+		
+		if (me.__cth)
+		{
+			me.__cth.c_cset = c_cset.getValue();
+			me.__cth.gs_enable = gs_enable.getValue();
+			me.__cth.gs_col = IG$/*mainapp*/.$gc/*getColorCode*/(gs_col.getValue());
+			me.__cth.gs_opa = gs_opa.getValue();
+		}
+		
+		me.Mb_4/*commitStyleItem*/();
+		
+		me.Mb_5/*saveStyleItem*/();
+	},
+	
+	Mb_5/*saveStyleItem*/: function() {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+			content = [],
+			themes = panel.themes,
+			i;
+		
+		content.push("<smsg><item nodepath='ReportStyle' name='ReportStyle' type='AppOption' uid='ReportStyle'><themes>");
+		
+		$.each(themes, function(k, theme) {
+			var i,
+				styles = {},
+				bs
+			
+			for (i=0; i < theme.styleinfo.length; i++)
+			{
+				styles[theme.styleinfo[i].name] = theme.styleinfo[i];
+			}
+			
+			content.push("<Styles name='" + theme.name + "' c_cset='" + (theme.c_cset || "") + "'");
+			content.push(" gs_enable='" + (theme.gs_enable ? "T" : "F") + "' gs_opa='" + (theme.gs_opa || 0.6) + "' gs_col='" + (theme.gs_col || "") + "'>");
+			content.push("<Default name='Default'>");
+			for (i=0; i < theme.styleinfo.length; i++)
+			{
+				if (theme.styleinfo[i].custom == false)
+				{
+					content.push(theme.styleinfo[i].tx/*getXML*/.call(theme.styleinfo[i]));
+				}
+			}
+			content.push("</Default>");
+			content.push("<Custom name='Custom'>");
+			for (i=0; i < theme.styleinfo.length; i++)
+			{
+				if (theme.styleinfo[i].custom == true)
+				{
+					bs = styles[theme.styleinfo[i].basestylename];
+					content.push(theme.styleinfo[i].tx/*getXML*/.call(theme.styleinfo[i], bs));
+				}
+			}
+			content.push("</Custom>");
+			content.push("</Styles>");
+		});
+		
+		content.push("</themes></item></smsg>");
+		
+		req.init(panel, 
+    			{
+	                ack: "1",
+		            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: "ReportStyle", option: "updatecontent"}, "address;option"),
+		            mbody: content.join("")
+	            }, panel, panel.rs_Mb_5/*saveStyleItem*/, null);
+	    req._l/*request*/();
+	},
+	
+	rs_Mb_5/*saveStyleItem*/: function(xdoc) {
+		// this._IG0/*closeDlgProc*/();
+		IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1("M_SAVED"), null, null, 0, "success");
+	},
+	
+	c1/*copyThemes*/: function(src, tgt) {
+		var i,
+			cs,
+			dcs;
+		
+		for (i=0; i < src.styleinfo.length; i++)
+		{
+			cs = src.styleinfo[i];
+			dcs = new IG$/*mainapp*/._IF7/*clReportStyle*/(null, cs.itemtype, cs.custom);
+			dcs.name = cs.name;
+			dcs.nodename = cs.nodename;
+			dcs.basestylename = cs.basestylename;
+			dcs.hs/*headerstyle*/ = new IG$/*mainapp*/._IF8/*clReportItemStyle*/(null, "Header");
+			dcs.ds/*datastyle*/ = new IG$/*mainapp*/._IF8/*clReportItemStyle*/(null, "Data");
+			
+			dcs._IFb/*applyBaseStyle*/.call(dcs, cs);
+			
+			tgt.styleinfo.push(dcs);
+		}
+	},
+	
+	_t$/*toolbarHandler*/: function(cmd) {
+		var me = this,
+			i,
+			stylelist = me.down("[name=stylelist]"),
+			styleinfo = me.styleinfo,
+			rec;
+			
+		switch (cmd)
+		{
+		case "cmd_refresh":
+			me.Mb_1/*loadGlobalStyle*/();
+			break;
+		case "cmd_add_custom":
+			var dlg = new IG$/*mainapp*/.mA$_s/*makestyle*/({
+				styleinfo: me.__cth.styleinfo,
+				callback: new IG$/*mainapp*/._I3d/*callBackObj*/(me, me.rs__sK3a/*appendCustomStyle*/)
+			});
+			IG$/*mainapp*/._I_5/*checkLogin*/(me, dlg);
+			break;
+		case "cmd_add_theme":
+			var dlg = new IG$/*mainapp*/.mA$_s/*makestyle*/({
+				m_theme: 1,
+				themes: me.themes,
+				callback: new IG$/*mainapp*/._I3d/*callBackObj*/(me, function(params) {
+					var me = this,
+						stylename = params[0],
+						basestylename = params[1],
+						theme,
+						c_themes = me.down("[name=c_themes]");
+						
+					if (stylename)
+					{
+						theme = {
+							name: stylename,
+							c_cset: null,
+							gs_enable: false,
+							gs_col: 0,
+							gs_opa: 0.6,
+							styleinfo: []
+						};
+						
+						me.c1/*copyThemes*/(me.__cth, theme);
+						
+						me.themes[theme.name] = theme;
+						
+						c_themes.store.add({
+							name: stylename,
+							value: stylename
+						});
+					}
+				})
+			});
+			IG$/*mainapp*/._I_5/*checkLogin*/(me, dlg);
+			break;
+		case "cmd_remove_theme":
+			IG$/*mainapp*/._I55/*confirmMessages*/(null, null, function(btn) {
+				if (btn == "yes")
+				{
+					var i,
+						c_themes = me.down("[name=c_themes]"),
+						rec,
+						srec;
+					
+					if (me.__cth && c_themes.store.data.items.length > 1)
+					{
+						for (i=0; i < c_themes.store.data.items.length; i++)
+						{
+							rec = c_themes.store.data.items[i];
+							
+							if (rec.get("name") == me.__cth.name)
+							{
+								c_themes.store.remove(rec);
+								break;
+							}
+						}
+						
+						delete me.themes[me.__cth.name];
+						me.__cth = null;
+						
+						c_themes.setValue(c_themes.store.data.items[0].get("value"));
+					}
+				}
+			}, me, me);
+			break;
+		case "cmd_remove":
+			var b_r = me.down("[name=b_r]").setVisible(false);
+			rec = stylelist.getSelectionModel().getSelection();
+			rec = rec && rec.length > 0 ? rec[0] : null;
+			if (rec && rec.get("custom") == true)
+			{
+				stylename = rec.get("name");
+				
+				$.each(me.themes, function(n, theme) {
+					var i,
+						styleinfo = theme.styleinfo;
+					
+					for (i=0; i < styleinfo.length; i++)
+					{
+						if (styleinfo[i].custom && styleinfo[i].name == stylename)
+						{
+							styleinfo.splice(i, 1);
+							break;
+						}
+					}
+				});
+				rec.remove();
+			}
+			break;
+		}
+	},
+	
+	rs__sK3a/*appendCustomStyle*/: function(params) {
+		var me = this,
+			stylename = params[0], 
+			basestylename = params[1],
+			i;
+			
+		if (basestylename && stylename)
+		{
+			$.each(me.themes, function(k, theme) {
+				var i,
+					basestyle,
+					styleinfo = theme.styleinfo,
+					cs;
+				
+				for (i=0; i < styleinfo.length; i++)
+				{
+					if (styleinfo[i].name == basestylename)
+					{
+						basestyle = styleinfo[i];
+						break;
+					}
+				}
+				
+				if (basestyle)
+				{
+					cs = new IG$/*mainapp*/._IF7/*clReportStyle*/(null, "item", true);
+					cs.name = stylename;
+					cs.nodename = "ItemStyle";
+					cs.basestylename = basestylename;
+					cs.hs/*headerstyle*/ = new IG$/*mainapp*/._IF8/*clReportItemStyle*/(null, "Header");
+					cs.ds/*datastyle*/ = new IG$/*mainapp*/._IF8/*clReportItemStyle*/(null, "Data");
+					styleinfo.push(cs);
+					
+					cs._IFb/*applyBaseStyle*/.call(cs, basestyle);
+				}
+			});
+			
+			var stylelist = me.down("[name=stylelist]"),
+				// proxy = stylelist.store.getProxy(),
+				// reader = proxy.getReader(),
+				robj, urecord, rootnode = stylelist.store.getRootNode();
+			
+			for (i=0; i < rootnode.childNodes.length; i++)
+			{
+				if (rootnode.childNodes[i].data.name == "Custom")
+				{
+					urecord = rootnode.childNodes[i];
+					break;
+				}
+			}
+			
+			robj = {name: stylename, leaf: true, custom: true};
+			
+			// var nrecord = reader.extractData.call(reader, [robj], true);
+			// stylelist.store.fillNode.call(stylelist.store, urecord, nrecord);
+			urecord.appendChild(robj);
+		}
+	},
+	
+	initComponent : function() {
+		var panel = this,
+			formHeader = new IG$/*mainapp*/._Id0/*styleEditor*/({
+				title: IRm$/*resources*/.r1('L_STYLE_TITLE'), 
+				name: "form_header", 
+				htype: "hd",
+				flex: 1
+			}),
+			formData = new IG$/*mainapp*/._Id0/*styleEditor*/({
+				title: IRm$/*resources*/.r1('L_STYLE_DATA'), 
+				name: "form_data", 
+				htype: "dt",
+				flex: 1
+			}),
+			dp = [{name: "Select", value: ""}],
+			copt = IG$/*mainapp*/.__c_/*chartoption*/.chartcolors,
+			k;
+			
+		for (k in copt)
+		{
+			dp.push({name: k, value: k});
+		}
+			
+		panel.title = IRm$/*resources*/.r1('T_STYLE_WIZARD');
+		
+			
+		$s.apply(this, {
+			defaults:{bodyStyle:'padding:3px'},
+			dockedItems: [
+				{
+				    xtype: 'toolbar',
+				    dock: 'top',
+				    plain: true,
+				    items: [
+				    	{
+				    		iconCls: 'icon-toolbar-save',
+			            	tooltip: IRm$/*resources*/.r1('L_SAVE_CONTENT'),
+			            	handler: function() {
+			            		this._IFf/*confirmDialog*/();
+			            	},
+			            	scope: this
+				    	},
+				        "-",
+				        {
+				        	xtype: "combobox",
+				        	fieldLabel: "Themes",
+				        	name: "c_themes",
+							displayField: "name",
+							labelWidth: 60,
+							labelAlign: "right",
+							valueField: "value",
+							editable: false,
+							queryMode: "local",
+				        	store: {
+				        		fields: [
+				        			"name", "value"
+				        		]
+				        	},
+				        	listeners: {
+				        		change: function(tobj, newvalue, oldvalue, eopts) {
+				        			this._m1/*loadStyle*/();
+				        		},
+				        		scope: this
+				        	}
+				        },
+				        { 
+				        	iconCls: 'icon-toolbar-add',
+				        	tooltip: "Add Theme",
+				        	text: "Add Theme",
+				        	handler: function() {
+				        		this._t$/*toolbarHandler*/('cmd_add_theme'); 
+				        	},
+				        	scope: this
+				        },
+				        {
+				        	iconCls: "icon-toolbar-remove",
+				        	tooltip: "Remove Theme",
+				        	handler: function() {
+				        		this._t$/*toolbarHandler*/('cmd_remove_theme'); 
+				        	},
+				        	scope: this
+				        }
+				    ]
+				}
+			],
+			
+			items: [
+				{
+					xtype: "panel",
+					width: 270,
+					border: 1,
+					// split: true,
+					region: "west",
+					layout: "anchor",
+					tbar: [
+						{
+							xtype: "displayfield",
+							value: "Basic Options"
+						}
+					],
+					items: [
+						{
+				        	xtype: "combobox",
+				        	fieldLabel: "Chart Style",
+				        	name: "c_cset",
+							displayField: "name",
+							labelAlign: "right",
+							labelWidth: 60,
+							valueField: "value",
+							editable: false,
+							queryMode: "local",
+				        	store: {
+				        		fields: [
+				        			"name", "value"
+				        		],
+				        		data: dp
+				        	}
+				        },
+				        {
+				        	xtype: "fieldset",
+				        	title: "Grid stripe",
+				        	anchor: "100%",
+				        	layout: "anchor",
+				        	items: [
+				        		{
+				        			xtype: "checkbox",
+				        			fieldLabel: IRm$/*resources*/.r1("L_GS_ENABLED"),
+				        			name: "gs_enable",
+				        			boxLabel: IRm$/*resources*/.r1("B_ENABLED")
+				        		},
+						        {
+									xtype: "fieldcontainer",
+									anchor: "100%",
+									fieldLabel: IRm$/*resources*/.r1('L_ALT_COLOR'),
+									"layout": "hbox",
+									items: [
+										{
+											xtype: "textfield",
+											name: "gs_col",
+											width: 60
+										},
+										{
+											xtype: "splitter"
+										},
+										{
+											xtype: 'splitbutton',
+											width: 30,
+											menu: {
+												showSeparator: false,
+												items: [
+													{
+														xtype: "colorpicker",
+														listeners: {
+															select: function(cp, color) {
+																var forecolor = this.down("[name=gs_col]");
+																forecolor.setValue("#" + color);
+															},
+															scope: panel
+														}
+													}, 
+													'-'
+												]
+											}
+										}
+									]
+								},
+								{
+									xtype: "numberfield",
+									fieldLabel: "Opacity",
+									name: "gs_opa",
+									width: 200,
+									minValue: 0,
+									maxValue: 1,
+									step: 0.1,
+									value: 0.4
+								}
+							]
+						},
+						{
+							xtype: "container",
+							flex: 1
+						}
+					]
+				},
+				{
+					xtype: "treepanel",
+					title: "Style",
+					name: "stylelist",
+					preventHeader: true,
+					region: "west",
+					width: 220,
+					split: true,
+					border: 1,
+					rootVisible: false,
+					hideHeaders: true,
+					autoScroll: true,
+					store: {
+						xtype: "treestore",
+						fields: [
+							"name", "text", "custom"
+						],
+						root: {
+							expanded: true,
+							name: "Style",
+							children: []
+						},
+						folderSort: false
+					},
+					
+					columns: [
+						{
+							xtype: "treecolumn",
+							text: "text",
+							flex: 1,
+							sortable: false,
+							dataIndex: "name"
+						}
+					],
+					listeners: {
+						itemclick: function(view, record, item, index, e) {
+							var me = this,
+								stylename = record.get("name"),
+								b_r = panel.down("[name=b_r]"),
+								p_h = panel.down("[name=p_h]"),
+								p_d = panel.down("[name=p_d]"),
+								i,
+								styleinfo = panel.__cth ? panel.__cth.styleinfo : null,
+								hasstyle = false,
+								bf = false;
+							
+							if (styleinfo)
+							{
+								for (i=0; i < styleinfo.length; i++)
+								{
+									if (styleinfo[i].name == stylename)
+									{
+										hasstyle = true;
+										break;
+									}
+								}
+								
+								if (hasstyle)
+								{
+									if (record.get("custom") == true)
+									{
+										bf = true;
+									}
+									
+									p_d.setTitle("Edit : " + stylename);
+									panel.Mb_3/*editStyleItem*/.call(panel, stylename);
+								}
+								
+								p_h.getLayout().setActiveItem(hasstyle ? 1 : 0);
+								b_r.setVisible(bf);
+							}
+						}
+					},
+					tbar: [
+						{
+				    		iconCls: "icon-refresh",
+				    		tooltip: IRm$/*resources*/.r1('L_REFRESH'),
+				    		handler: function() {
+				        		this._t$/*toolbarHandler*/('cmd_refresh'); 
+				        	},
+				        	scope: this
+				    	},
+				    	"-",
+				        { 
+				        	iconCls: 'icon-toolbar-add',
+				        	tooltip: "Add Custom Style",
+				        	text: "Add Style",
+				        	handler: function() {
+				        		this._t$/*toolbarHandler*/('cmd_add_custom'); 
+				        	},
+				        	scope: this
+				        },
+				        {
+				        	iconCls: "icon-toolbar-remove",
+				        	tooltip: "Remove Style",
+				        	name: "b_r",
+				        	hidden: true,
+				        	handler: function() {
+				        		this._t$/*toolbarHandler*/('cmd_remove'); 
+				        	},
+				        	scope: this
+				        }
+					]
+				},
+				{
+					xtype: "panel",
+					region: "center",
+					"layout": "card",
+					name: "p_h",
+					items: [
+						{
+							html: "Click stylename to edit"
+						},
+						{
+							xtype: "tabpanel",
+							title: "Edit :",
+							name: "p_d",
+							layout: {
+								type: "fit",
+								align: "stretch"
+							},
+							items: [
+					    		formData,
+					    		formHeader
+							]
+						}
+					]
+				}
+			],
+			
+			listeners: {
+				afterrender: function() {
+					if (this.styletype == 'g')
+					{
+						this.Mb_1/*loadGlobalStyle*/();
+					}
+				}
+			}
+		});
+		
+		IG$/*mainapp*/._I78/*styleWizard*/.superclass.initComponent.apply(this, arguments);
+	}
+});
+IG$/*mainapp*/._I9c/*cubeStyle*/ = $s.extend($s.window, {
+	
+	modal: true,
+	"layout": "border",
+	closable: false,
+	resizable: true,
+	width: 650,
+	height: 500,
+	
+	_ILa/*reportoption*/: null,
+	
+	callback: null,
+	globalstyle: null,
+	globalstylemap: null,
+	styleinfo: null,
+	
+	Mb_1/*loadGlobalStyle*/: function() {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		
+		req.init(panel, 
+    			{
+	                ack: "1",
+		            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: "ReportStyle"}),
+		            mbody: IG$/*mainapp*/._I2e/*getItemOption*/()
+	            }, panel, panel.rs_Mb_1/*loadGlobalStyle*/, null);
+	    req._l/*request*/();
+	},
+	
+	rs_Mb_1/*loadGlobalStyle*/: function(xdoc) {
+		var tnode1 = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, '/smsg/item/themes'),
+			tnodes1,
+			mnode, cs, key,
+			bsds = [{
+				name: "Select Item",
+				value: ""
+			}],
+			tnode,
+			theme_id = ig$/*appoption*/.theme_id,
+			unode, child, i, j, bs, nodenames = ["Global", "Default", "Custom", "Item"];
+			
+		this.globalstyle = [];
+		this.globalstylemap = {};
+		
+		if (tnode1)
+		{
+			tnodes1 = IG$/*mainapp*/._I26/*getChildNodes*/(tnode1);
+			
+			if (!theme_id)
+			{
+				tnode = tnodes1[0];
+			}
+			else
+			{
+				for (i=0; i < tnodes1.length; i++)
+				{
+					if (IG$/*mainapp*/._I1b/*XGetAttr*/(tnodes1[i], "name") == tnodes1)
+					{
+						tnode = tnodes1[i];
+						break;
+					}
+				}
+				
+				if (!tnode)
+				{
+					tnode = tnodes1[0];
+				}
+			}
+		}
+		
+		if (tnode)
+		{
+			for (i=0; i < nodenames.length; i++) {
+				key = nodenames[i];
+				
+				mnode = IG$/*mainapp*/._I18/*XGetNode*/(tnode, key);
+				if (mnode)
+				{
+					child = IG$/*mainapp*/._I26/*getChildNodes*/(mnode);
+					for (j=0; j < child.length; j++)
+					{
+						cs = new IG$/*mainapp*/._IF7/*clReportStyle*/(child[j], "global", false);
+						this.globalstyle.push(cs);
+						bsds.push({
+							name: cs.name,
+							value: cs.name
+						});
+						this.globalstylemap[cs.name] = cs;
+					}
+				}
+			}
+			
+			for (key in this.globalstylemap)
+			{
+				cs = this.globalstylemap[key];
+				
+				if (cs.custom == true && cs.basestylename && this.globalstylemap[cs.basestylename])
+				{
+					bs = this.globalstylemap[cs.basestylename];
+					cs._IFb/*applyBaseStyle*/.call(cs, bs);
+				}
+			}
+		}
+		
+		this.down("[name=base_style]").store.loadData(bsds);
+		this.Mb_2/*loadLocalStyle*/();
+	},
+	
+	Mb_2/*loadLocalStyle*/: function() {
+		var me = this,
+			i, stylename,
+			cs, bs,
+			stylelist = me.down("[name=stylelist]"),
+			ltree = [], cstree, unode;
+			
+		me.down("[name=c_cset]").setValue(me.c_cset || "");
+			
+		if (me.styleinfo) {
+			unode = {name: 'LocalStyle', leaf: false, children: []};
+			ltree.push(unode);
+			
+			for (i=0; i < me.styleinfo.length; i++) {
+				cs = me.styleinfo[i];
+				cstree = {name: cs.name, leaf: true, custom: false};
+				
+				if (cs.basestylename && me.globalstylemap[cs.basestylename])
+				{
+					bs = me.globalstylemap[cs.basestylename];
+					cs._IFb/*applyBaseStyle*/.call(cs, bs);
+				}
+				
+				unode.children.push(cstree);
+			}
+			
+			stylelist.store.setRootNode({
+				expanded: true,
+				text: "Style",
+				name: "Style",
+				title: "Style",
+				children: ltree
+			});
+		}
+	},
+	
+	Mb_3/*editStyleItem*/: function(stylename) {
+		var i,
+			me = this,
+			form_header = me.down("[name=form_header]"),
+			form_data = me.down("[name=form_data]");
+					
+		me.Mb_4/*commitStyleItem*/();
+		
+		for (i=0; i < me.styleinfo.length; i++)
+		{
+			if (me.styleinfo[i].name == stylename)
+			{
+				me.__e1/*editingitem*/ = me.styleinfo[i];
+				me.__e2/*validateform*/ = 1;
+				me.down("[name=base_style]").setValue(me.styleinfo[i].basestylename || "");
+				form_header.Mb_6/*loadStyleData*/.call(form_header, me.styleinfo[i].hs/*headerstyle*/);
+				form_data.Mb_6/*loadStyleData*/.call(form_data, me.styleinfo[i].ds/*datastyle*/);
+				me.__e2/*validateform*/ = 0;
+				break;
+			}
+		}
+	},
+	
+	Mb_4/*commitStyleItem*/: function() {
+		var me = this,
+			form_header = me.down("[name=form_header]"),
+			form_data = me.down("[name=form_data]"),
+			nvalue = me.down("[name=base_style]").getValue();
+			
+		if (me.__e1/*editingitem*/ && nvalue)
+		{
+			me.__e1/*editingitem*/.basestylename = nvalue;
+			form_data.Mb_7/*updateStyleData*/.call(form_data);
+			form_header.Mb_7/*updateStyleData*/.call(form_header);
+		}
+	},
+	
+	_IG0/*closeDlgProc*/: function() {
+		var me = this;
+		me.callback && me.callback.execute(me);
+		me.close();
+	},
+	
+	_IFf/*confirmDialog*/: function() {
+		var me = this,
+			i,
+			base,
+			cs;
+			
+		me.Mb_4/*commitStyleItem*/();
+		
+		for (i=0; i < me.styleinfo.length; i++)
+		{
+			cs = me.styleinfo[i];
+			
+			if (cs.basestylename && me.globalstylemap[cs.basestylename])
+			{
+				base = me.globalstylemap[cs.basestylename];
+				cs.Mb_16/*removeBaseStyle*/(base);
+			}
+		}
+		
+		me.c_cset = me.down("[name=c_cset]").getValue();
+		me._IG0/*closeDlgProc*/();
+	},
+
+	_t$/*toolbarHandler*/: function(cmd) {
+		var me = this;
+		
+		switch (cmd)
+		{
+		case "cmd_add_custom":
+			var dlg = new IG$/*mainapp*/.mA$_s/*makestyle*/({
+				styleinfo: this.globalstyle,
+				callback: new IG$/*mainapp*/._I3d/*callBackObj*/(this, this.rs__sK3a/*appendCustomStyle*/)
+			});
+			IG$/*mainapp*/._I_5/*checkLogin*/(this, dlg);
+			break;
+		case "cmd_delete":
+			var i,
+				stylelist = this.down("[name=stylelist]"),
+				rec = stylelist.getSelectionModel().selected,
+				srec = rec && rec.length > 0 ? rec.items[0] : null;
+			
+			if (srec)
+			{
+				for (i=0; i < me.styleinfo.length; i++)
+				{
+					if (srec.get("name") == me.styleinfo[i].name)
+					{
+						me.styleinfo.splice(i, 1);
+						srec.remove();
+						break;
+					}
+				}
+			}
+			break;
+		}
+	},
+	
+	rs__sK3a/*appendCustomStyle*/: function(params) {
+		var stylename = params[0], 
+			basestylename = params[1];
+			
+		if (basestylename && stylename)
+		{
+			var i,
+				basestyle;
+			
+			basestyle = this.globalstylemap[basestylename];
+			
+			if (basestyle)
+			{
+				var stylelist = this.down("[name=stylelist]"),
+					proxy = stylelist.store.getProxy(),
+					reader = proxy.getReader(), cs,
+					robj, urecord, rootnode = stylelist.store.getRootNode();
+					
+				urecord = rootnode.childNodes[rootnode.childNodes.length - 1];
+				
+				robj = {name: stylename, leaf: true, custom: true};
+				cs = new IG$/*mainapp*/._IF7/*clReportStyle*/(null, "item", true);
+				cs.name = stylename;
+				cs.nodename = "ItemStyle";
+				cs.basestylename = basestylename;
+				cs.hs/*headerstyle*/ = new IG$/*mainapp*/._IF8/*clReportItemStyle*/(null, "Header");
+				cs.ds/*datastyle*/ = new IG$/*mainapp*/._IF8/*clReportItemStyle*/(null, "Data");
+				this.styleinfo.push(cs);
+				
+				cs._IFb/*applyBaseStyle*/.call(cs, basestyle);
+				
+				var nrecord = reader.extractData.call(reader, [robj], true);
+				stylelist.store.fillNode.call(stylelist.store, urecord, nrecord);
+			}
+		}
+	},
+	
+	initComponent : function() {
+		var panel = this,
+			formHeader = new IG$/*mainapp*/._Id0/*styleEditor*/({title: IRm$/*resources*/.r1('L_STYLE_TITLE'), name: "form_header", htype: "hd"}),
+			formData = new IG$/*mainapp*/._Id0/*styleEditor*/({title: IRm$/*resources*/.r1('L_STYLE_DATA'), name: "form_data", htype: "dt"}),
+			dp = [{name: "Default", value: ""}],
+			copt = IG$/*mainapp*/.__c_/*chartoption*/.chartcolors,
+			k;
+			
+		for (k in copt)
+		{
+			dp.push({name: k, value: k});
+		};
+		
+		panel.title = IRm$/*resources*/.r1('T_STYLE_WIZARD');
+		
+		$s.apply(this, {
+			defaults:{bodyStyle:'padding:3px'},
+			
+			items: [
+				{
+					xtype: "treepanel",
+					title: "Style",
+					name: "stylelist",
+					preventHeader: true,
+					region: "west",
+					width: 160,
+					split: true,
+					border: false,
+					rootVisible: false,
+					hideHeaders: true,
+					autoScroll: true,
+					store: {
+						xtype: "treestore",
+						fields: [
+							"name", "text", "type", "pname", "region", "custom"
+						],
+						root: {
+							expanded: true,
+							name: "Style",
+							children: []
+						},
+						folderSort: false
+					},
+					
+					useArrows: true,
+					
+					dockedItems: [
+						{
+						    xtype: 'toolbar',
+						    dock: 'top',
+						    plain: true,
+						    items: [
+						        { 
+						        	iconCls: 'icon-toolbar-add',
+						        	tooltip: "Add Custom Style",
+						        	text: "Add New",
+						        	handler: function() {
+						        		this._t$/*toolbarHandler*/('cmd_add_custom'); 
+						        	},
+						        	scope: this
+						        },
+						        {
+						        	iconCls: "icon-grid-delete",
+						        	tooltip: "Delete",
+						        	handler: function() {
+						        		this._t$/*toolbarHandler*/('cmd_delete'); 
+						        	},
+						        	scope: this
+						        }
+						    ]
+						}
+					],
+					
+					columns: [
+						{
+							xtype: "treecolumn",
+							text: "text",
+							flex: 2,
+							sortable: false,
+							dataIndex: "name"
+						},
+						{
+							xtype: 'actioncolumn',
+							width: 26,
+							items: [
+								{
+									// icon: './images/delete.png',
+									iconCls: "icon-grid-delete",
+									tooltip: 'Delete item',
+									handler: function (grid, rowIndex, colIndex) {
+										var rec = grid.store.getAt(rowIndex);
+									},
+									getClass: function(v, metadata, r, rowIndex, colIndex, store) {
+										if (rowIndex == 0 || r.isLeaf() == false || (r.data && r.data.custom == false))
+										{
+											return "idv-hd-val";
+										}
+										return "";
+									}
+								}
+							]
+						}
+					],
+					listeners: {
+						afterrender: function() {
+							var ctrl = this;
+						},
+						itemclick: function(view, record, item, index, e) {
+							var stylename = record.get("name");
+							
+							if (record.isRoot() == false && stylename)
+							{
+								panel.Mb_3/*editStyleItem*/.call(panel, stylename);
+							}
+						}
+					}
+					
+				},
+				{
+					xtype: "form",
+					region: "center",
+					"layout": {
+						type: 'vbox',
+						align: 'stretch'
+					},
+					items: [
+						{
+							xtype: "combobox",
+							fieldLabel: "Inherit",
+							name: "base_style",
+							displayField: "name",
+							valueField: "value",
+							editable: false,
+							queryMode: "local",
+							store: {
+								fields: ["name", "value"]
+							},
+							listeners: {
+								change: function(tobj, newvalue, oldvalue) {
+									var me = this,
+										basestylename = me.down("[name=base_style]").getValue(),
+										bs,
+										form_header = me.down("[name=form_header]"),
+										form_data = me.down("[name=form_data]");
+									
+									if (me.__e2/*validateform*/)
+										return;
+										
+									if (basestylename)
+									{
+										bs = me.globalstylemap[basestylename];
+										
+										if (bs)
+										{
+											form_header.Mb_6/*loadStyleData*/.call(form_header, bs.hs/*headerstyle*/);
+											form_data.Mb_6/*loadStyleData*/.call(form_data, bs.ds/*datastyle*/);
+										}
+									}
+								},
+								scope: this
+							}
+						},
+						{
+							xtype: 'tabpanel',
+							plain: true,
+							flex: 1,
+							items: [
+					    		formData,
+					    		formHeader
+							],
+							bbar: [
+								{
+									xtype: "toolbar",
+									items: [
+										{
+								        	xtype: "combobox",
+								        	fieldLabel: "Chart Style",
+								        	name: "c_cset",
+											displayField: "name",
+											valueField: "value",
+											editable: false,
+											queryMode: "local",
+								        	store: {
+								        		fields: [
+								        			"name", "value"
+								        		],
+								        		data: dp
+								        	}
+								        }
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			
+			buttons:[
+				{
+					text: IRm$/*resources*/.r1('B_CONFIRM'),
+					handler: function() {
+						this._IFf/*confirmDialog*/();
+					},
+					scope: this
+				}, {
+					text: IRm$/*resources*/.r1('B_CANCEL'),
+					handler:function() {
+						this.close();
+					},
+					scope: this
+				}
+			],
+			listeners: {
+				afterrender: function() {
+					this.Mb_1/*loadGlobalStyle*/();
+				}
+			}
+		});
+		
+		IG$/*mainapp*/._I9c/*cubeStyle*/.superclass.initComponent.apply(this, arguments);
+	}
+});
+IG$/*mainapp*/._IC0/*MetaEditorPanel*/ = $s.extend($s.panel, {
+	autoScroll:false,
+    collapseFirst:false,
+    "layout": "fit",
+    
+    closable: true,
+    autoScroll:true,
+    
+    initComponent : function(){
+        $s.apply(this,{
+            tbar: [
+                {
+                	text: "Save Content",
+                	handler: function() {
+                		this.l1/*saveContent*/();
+                	},
+                	scope: this
+                }
+            ]
+        });
+        
+        IG$/*mainapp*/._IC0/*MetaEditorPanel*/.superclass.initComponent.call(this);
+    },
+
+    items: [
+        {
+        	xtype: "textarea",
+        	name: "metaview"
+        }
+	],
+	
+	listeners: {
+		render: function(ui) {
+    		var panel = ui;
+    		
+    		if (panel.uid && panel.uid.length > 0)
+    		{
+    			this.Mmk/*loadMetaContent*/(panel.uid, panel.itemtype);
+    		}
+    	},
+    	resize: function(ui, adjWidth, adjHeight, rawWidth, rawHeight) {
+    		ui.Mm11/*validateSize*/.call(ui, adjWidth, adjHeight);
+    	}
+	},
+	
+	l1/*saveContent*/: function() {
+		var panel = this;
+		
+		panel.setLoading(true);
+		
+		var metaview = panel.down("[name=metaview]"),
+			req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+			pt = "31",
+			opt = metaview.getValue();
+		
+		req.init(panel, 
+			{
+                ack: pt,
+                payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: panel.uid}),
+                mbody: opt
+            }, panel, panel.rs_l1/*saveContent*/(), null);	            
+		req._l/*request*/();
+	},
+	
+	rs_l1/*saveContent*/: function(xdoc) {
+		IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1('M_SAVED'), null, null, 0, "success");
+	},
+	
+	Mmk/*loadMetaContent*/: function(uid, itemtype) {
+		var panel = this;
+		panel.uid = uid;
+		panel.setLoading(true);
+		
+		var req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+			iscube = (itemtype == 'cube') ? true : false,
+			pt = (iscube) ? '6' : '5',
+			opt = (iscube) ? '<smsg><info option="CubeContent"/></smsg>' : '<smsg></smsg>';
+		if (itemtype == "datacube")
+		{
+			pt = "5";
+			opt = "<smsg><info option='content'/></smsg>";
+		}
+		req.init(panel, 
+			{
+                ack: pt,
+                payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: uid}),
+                mbody: opt
+            }, panel, panel.rs_Mmk/*loadMetaContent*/, null);	            
+		req._l/*request*/();
+	},
+	
+	rs_Mmk/*loadMetaContent*/: function(xdoc) {
+		var panel = this
+			doc = IG$/*mainapp*/._I25/*toXMLString*/(xdoc),
+			content = IG$/*mainapp*/._I16/*stripXMLContent*/(doc),
+			metaview = this.down("[name=metaview]");
+		
+		metaview.setValue(content);
+	},
+	
+	Mm11/*validateSize*/: function(panel, adjWidth, adjHeight) {
+		
+	}
+});
+
+
+IG$/*mainapp*/.ApM$m/*MetaEditorMainPanel*/ = function(){
+	IG$/*mainapp*/.ApM$m/*MetaEditorMainPanel*/.superclass.constructor.call(this, {
+        id:'doc-body',
+        region:'center',
+        margins:'0 5 5 0',
+        resizeTabs: true,
+        minTabWidth: 135,
+        tabWidth: 135,
+        enableTabScroll: true,
+        activeTab: 0,
+        
+        "layout": "fit",
+
+        items: [
+        	{
+	            id:'welcome-panel',
+	            title: 'MetaEditor',
+	            autoLoad: {url: './html/metaeditor.html', callback: null, scope: this},
+	            iconCls:'icon-docs',
+	            autoScroll: true
+        	}
+        ]
+    });
+};
+
+IG$/*mainapp*/.ApM$m/*MetaEditorMainPanel*/ = $s.extend($s.tabpanel, {
+	initEvents : function(){
+		IG$/*mainapp*/.ApM$m/*MetaEditorMainPanel*/.superclass.initEvents.call(this);
+	    this.body.on('click', this.onClick, this);
+	},
+	
+	m1$7/*navigateApp*/: function(uid, itemtype, itemname, itemaddr) {
+    	var tab = this.getComponent(itemaddr);
+    	
+    	if (tab)
+    	{
+    		this.setActiveTab(tab);
+    	}
+    	else
+    	{
+    		var pitem = IG$/*mainapp*/._I61/*createAppPanel*/(uid, 'metaeditor', itemname, itemaddr, null);
+    		if (pitem != null)
+    		{
+    			pitem.uid = uid;
+    			pitem.address = itemaddr;
+    			pitem.itemtype = itemtype;
+    			pitem.title = itemname;
+    			
+    			var p = this.add(pitem);
+    			this.setActiveTab(p);
+    		}
+    	}
+    }
+});
+
+IG$/*mainapp*/._I7a/*sysmon*/ = $s.extend(IG$/*mainapp*/._I57/*IngPanel*/, {
+	title: "System Logs",
+	region:'center',
+	
+	"layout": 'fit',
+	
+	closable: true,
+	resizable:false,
+	
+	autoHeight: true,
+	
+	callback: null,
+	
+	bodyPadding: 10,
+	
+	iconCls: "icon-ing-docdef",
+	
+	in$t: function() {
+		var me = this,
+			status = me.down("[name=status]");
+		
+		status.setValue("");
+		me.down("[name=e_stat]").setValue("F");
+	},
+	
+	l1/*loadJobList*/: function(tsec, vopt) {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+			status = panel.down("[name=status]"),
+			ellapsetime = panel.down("[name=ellapsetime]"),
+			bufsize = panel.down("[name=bufsize]");
+			
+		req.init(panel, 
+			{
+	            ack: "11",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({vopt: (vopt || "1")}, "vopt"),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'sysmon', "ellapsetime": ellapsetime.getValue(), bufsize: bufsize.getValue(), "status": status.getValue()})
+	        }, panel, panel.rs_l1/*loadJobList*/, false, [tsec, vopt]);
+		req._l/*request*/();
+	},
+	
+	rs_l1/*loadJobList*/: function(xdoc, param) {
+		var me = this,
+			tsec = param[0],
+			vopt = param[1],
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg"),
+			tnodes, snodes, i, j, datas = [], data, dname,
+			grdjoblist = me.down("[name=grdjoblist]"),
+			grd_sql = me.down("[name=grd_sql]"),
+			grd_esql = me.down("[name=grd_esql]");
+		
+		if (vopt == "2")
+		{
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/sql");
+			if (tnode)
+			{
+				tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+				for (i=0; i < tnodes.length; i++)
+				{
+					snodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnodes[i]);
+					data = {};
+					for (j=0; j < snodes.length; j++)
+					{
+						dname = IG$/*mainapp*/._I29/*XGetNodeName*/(snodes[j]);
+						data[dname] = IG$/*mainapp*/._I24/*getTextContent*/(snodes[j]);
+					}
+					datas.push(data);
+				}
+			}
+			
+			grd_sql.store.loadData(datas);
+			datas = [];
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/sqlexec");
+			if (tnode)
+			{
+				tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+				for (i=0; i < tnodes.length; i++)
+				{
+					snodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnodes[i]);
+					data = {};
+					for (j=0; j < snodes.length; j++)
+					{
+						dname = IG$/*mainapp*/._I29/*XGetNodeName*/(snodes[j]);
+						data[dname] = IG$/*mainapp*/._I24/*getTextContent*/(snodes[j]);
+					}
+					datas.push(data);
+				}
+			}
+			
+			grd_esql.store.loadData(datas);
+		}
+		else
+		{
+			if (tnode)
+			{
+				tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+				for (i=0; i < tnodes.length; i++)
+				{
+					data = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+					datas.push(data);
+				}
+			}
+			
+			grdjoblist.store.loadData(datas);
+		}
+		
+		if (tsec && tsec > 0)
+		{
+			me.rtimer = setTimeout(function() {
+				me.l1/*loadJobList*/.call(me, tsec, vopt);
+			}, tsec);
+		}
+	},
+	
+	l2/*getJobDetail*/: function(jobid) {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		
+		req.init(panel, 
+			{
+	            ack: "11",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({jobid: jobid}, "jobid"),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'jobdetail'})
+	        }, panel, panel.rs_l2/*getJobDetail*/, false);
+		req._l/*request*/();
+	},
+	
+	rs_l2/*getJobDetail*/: function(xdoc) {
+		var me = this,
+			mnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/Job"),
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/Job/process"),
+			tnodes, i, datas = [], data,
+			grdjobdetail = this.down("[name=grdjobdetail]");
+		
+		me.jobdetail = (mnode) ? IG$/*mainapp*/._I1c/*XGetAttrProp*/(mnode) : null;
+		
+		if (tnode)
+		{
+			tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+			for (i=0; i < tnodes.length; i++)
+			{
+				data = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+				datas.push(data);
+			}
+		}
+		
+		grdjobdetail.store.loadData(datas);
+	},
+	
+	_IG0/*closeDlgProc*/: function() {
+		this.close();
+	},
+	
+	dQ/*cancelQuery*/: function() {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		
+		if (panel.jobdetail && panel.jobdetail.uid)
+		{
+			req.init(panel, 
+				{
+		            ack: "18",
+					payload: "<smsg><item jobid='" + panel.jobdetail.uid + "' option='cancel'/></smsg>",
+					mbody: "<smsg></smsg>"
+		        }, panel, panel.r_IP5/*cancelQuery*/, null);
+			req.showerror = false;
+			req._l/*request*/();
+		}
+	},
+	
+	r_IP5/*cancelQuery*/: function() {
+		var me = this;
+		
+		if (me.jobdetail && me.jobdetail.uid)
+		{
+			me.l2/*getJobDetail*/(me.jobdetail.uid);
+		}
+	},
+	
+	sc/*RefreshControl*/: function(en, vopt) {
+		var me = this,
+			btn_start = me.down("[name=btn_start]"),
+			btn_stop = me.down("[name=btn_stop]"),
+			btn_refresh = me.down("[name=btn_refresh]"),
+			rsec = me.down("[name=rsec]"),
+			tsec = rsec.getValue() * 1000;
+			
+		btn_stop.setDisabled(en ? false : true);
+		btn_start.setDisabled(en);
+		btn_refresh.setDisabled(en);
+		rsec.setDisabled(en);
+		
+		clearTimeout(me.rtimer);
+		me.rtimer = -1;
+		
+		if (en == true)
+		{
+			me.rtimer = setTimeout(function() {
+				me.l1/*loadJobList*/.call(me, tsec, vopt);
+			}, tsec);
+		}
+	},
+	
+	eM2/*emailstatus*/: {
+		"A": "Waiting",
+		"F": "Failed",
+		"S": "Success",
+		"P": "Processing"
+	},
+	
+	eM1/*getEmailContent*/: function() {
+		var me = this,
+			grd_email = me.down("[name=grd_email]"),
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		
+		req.init(me, 
+			{
+	            ack: "11",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({stat: me.down("[name=e_stat]").getValue()}, "stat"),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'mail_stat'})
+	        }, me, function(xdoc) {
+	        	var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg"),
+	        		tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode),
+	        		i,
+	        		datas = [],
+	        		mstat = me.eM2/*emailstatus*/,
+	        		data;
+    			for (i=0; i < tnodes.length; i++)
+    			{
+    				data = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+    				data.subject = IG$/*mainapp*/._I1a/*getSubNodeText*/(tnodes[i], "subject");
+    				data.stat = mstat[data.mstat] || "Unknown";   
+    				datas.push(data);
+    			}
+    			
+    			grd_email.store.loadData(datas);
+	        }, false);
+		req._l/*request*/();
+	},
+	
+	s1/*showMailDetail*/: function(sid) {
+		var me = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		
+		req.init(me, 
+			{
+	            ack: "11",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({sid: sid}, "sid"),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'mail_content'})
+	        }, me, function(xdoc) {
+	        	var me = this,
+	        		tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/mail"),
+	        		datas = [],
+	        		mstat = me.eM2/*emailstatus*/,
+	        		data = {},
+	        		m_d1 = me.down("[name=m_d1]"),
+	        		m_d2 = me.down("[name=m_d2]"),
+	        		ig_mail = $("#ig_mail", m_d2.body.dom);
+	        	
+	        	if (tnode)
+	        	{
+	    			data = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnode);
+	    			data.subject = IG$/*mainapp*/._I1a/*getSubNodeText*/(tnode, "subject");
+	    			data.content = IG$/*mainapp*/._I1a/*getSubNodeText*/(tnode, "content");
+	    			data.stat = mstat[data.mstat] || "Unknown";
+				}
+				
+				ig_mail.contents().find('html').html(data ? data.content : "");
+				
+				m_d1.show();
+	        }, false);
+		req._l/*request*/();
+	},
+	
+	initComponent : function() {
+		var me = this;
+		
+		$s.apply(this, {
+			
+			items: [
+				{
+					xtype: "tabpanel",
+					items: [
+					    {
+					    	xtype: "container",
+					    	title: "Report Logs",
+					    	layout: {
+					    		type: "vbox",
+					    		align: "stretch"
+					    	},
+					    	items: [
+								{
+									xtype: "fieldset",
+									title: "System Monitoring and Control",
+									layout: {
+										type: "vbox",
+										align: "stretch"
+									},
+									items: [
+										{
+											xtype: "fieldcontainer",
+											layout: {
+												type: "hbox",
+												align: "stretch",
+												defaultMargins: {
+													top: 0,
+													left: 0,
+													right: 10,
+													bottom: 0
+												}
+											},
+											items: [
+												{
+													xtype: "numberfield",
+													labelAlign: "right",
+													name: "rsec",
+													fieldLabel: "Auto Refresh (sec)",
+													value: 60
+												},
+												{
+													xtype: "button",
+													name: "btn_start",
+													text: "Start",
+													handler: function() {
+														var me = this,
+															rsec = me.down("[name=rsec]");
+															
+														if (rsec.getValue() > 0)
+														{
+															this.sc/*RefreshControl*/(true);
+														}
+													},
+													scope: this
+												},
+												{
+													xtype: "button",
+													name: "btn_stop",
+													text: "Stop",
+													disabled: true,
+													handler: function() {
+														this.sc/*RefreshControl*/(false);
+													},
+													scope: this
+												},
+												{
+													xtype: "container",
+													flex: 1
+												},
+												{
+													xtype: "button",
+													text: "Refresh",
+													name: "btn_refresh",
+													handler: function() {
+														this.l1/*loadJobList*/();
+													},
+													scope: this
+												}
+											]
+										},
+										{
+											xtype: "fieldcontainer",
+											layout: {
+												type: "hbox",
+												defaultMargins: {
+													top: 0,
+													left: 0,
+													right: 10,
+													bottom: 0
+												}
+											},
+											items: [
+												{
+													xtype: "combobox",
+													queryMode: "local",
+													fieldLabel: "Conditions",
+													name: "status",
+													labelAlign: "right",
+													displayField: "name",
+													valueField: "value",
+													editable: false,
+													autoSelect: true,
+													store: {
+														xtype: "store",
+														fields: ["name", "value"],
+														data: [
+															{"name": "All", "value": ""},
+															{"name": "STAT_START", "value": "STAT_START"},
+															{"name": "STAT_FAILED_ERROR", "value": "STAT_FAILED_ERROR"},
+															{"name": "STAT_PREPARE_STATEMENT", "value": "STAT_PREPARE_STATEMENT"},
+															{"name": "STAT_BEFORE_EXECUTE_QRY", "value": "STAT_BEFORE_EXECUTE_QRY"},
+															{"name": "STAT_END_QUERY_EXECUTION", "value": "STAT_END_QUERY_EXECUTION"},
+															{"name": "STAT_CANCELED", "value": "STAT_CANCELED"},
+															{"name": "STAT_FINISHED_WITH_ERROR", "value": "STAT_FINISHED_WITH_ERROR"},
+															{"name": "STAT_FINISHED", "value": "STAT_FINISHED"}
+														]
+													}
+												},
+												{
+													xtype: "numberfield",
+													name: "ellapsetime",
+													labelAlign: "right",
+													fieldLabel: "Ellapsed more then (second)",
+													labelWidth: 180,
+													value: 60
+												},
+												{
+													xtype: "numberfield",
+													name: "bufsize",
+													labelAlign: "right",
+													fieldLabel: "Buffer Size",
+													minValue: 10,
+													maxValue: 1000,
+													value: 100
+												}
+											]
+										}
+									]
+								},
+								{
+									xtype: "gridpanel",
+									name: "grdjoblist",
+									flex: 1,
+									store: {
+										xtype: "store",
+										fields: [
+										    "uid", "userid", "status", "statuscode", "totalellapsed", "haserror", "errormsg", "starttime", "endtime", "objectname", "objectpath", "objectuid"
+										]
+									},
+									columns: [
+										{
+											xtype: "gridcolumn",
+											text: "UserID",
+											dataIndex: "userid",
+											flex: 1
+										},
+										{
+											xtype: "gridcolumn",
+											text: "Status",
+											dataIndex: "status",
+											width: 120
+										},
+										{
+											xtype: "gridcolumn",
+											text: "Name",
+											dataIndex: "objectname",
+											width: 120
+										},
+										{
+											xtype: "gridcolumn",
+											text: "Path",
+											dataIndex: "objectpath",
+											width: 200
+										},
+										{
+											xtype: "gridcolumn",
+											text: "JobID",
+											hidden: true,
+											dataIndex: "uid",
+											width: 80
+										},
+										{
+											xtype: "gridcolumn",
+											text: "Ellapsed",
+											width: 60,
+											dataIndex: "totalellapsed"
+										},
+										{
+											xtype: "gridcolumn",
+											text: "Start",
+											width: 80,
+											dataIndex: "starttime"
+										},
+										{
+											xtype: "gridcolumn",
+											text: "End",
+											width: 80,
+											dataIndex: "endtime"
+										},
+										{
+											xtype: "gridcolumn",
+											text: "Error",
+											width: 40,
+											dataIndex: "haserror"
+										}
+									],
+									listeners: {
+										itemclick: function(tobj, record, item, index, e, eOpts) {
+											var jobid = record.get("uid");
+											this.l2/*getJobDetail*/(jobid);
+										},
+										scope: this
+									}
+								},
+								{
+									xtype: "fieldset",
+									collapsible: false,
+									flex: 1,
+									layout: "fit",
+									title: "Action Detail",
+									
+									items: [
+										{
+											xtype: "gridpanel",
+											name: "grdjobdetail",
+		
+											store: {
+												xtype: "store",
+												fields: [
+												    "status", "statuscode", "ellapsed"
+												]
+											},
+											buttons: [
+												{
+													xtype: "button",
+													text: "Cancel Job",
+													handler: function() {
+														this.dQ/*cancelQuery*/();
+													},
+													scope: this
+												},
+												{
+													xtype: "button",
+													text: "Open in folder",
+													handler: function() {
+														if (IG$/*mainapp*/._I7d/*mainPanel*/ && window.api && this.jobdetail && this.jobdetail.objectpath)
+											    		{
+											    			api._IHd/*navigateTree*/.call(api, {
+											    				name: this.jobdetail.objectname,
+											    				nodepath: this.jobdetail.objectpath,
+											    				uid: this.jobdetail.objectuid
+											    			});
+											    		}
+													},
+													scope: this
+												}
+											],
+											columns: [
+												{
+													xtype: "gridcolumn",
+													flex: 1,
+													text: "Action type",
+													dataIndex: "status"
+												},
+												{
+													xtype: "gridcolumn",
+													text: "Ellapsed time",
+													dataIndex: "ellapsed"
+												}
+											]
+										}
+									]
+								}
+					    	]
+						},
+						{
+							xtype: "container",
+							title: "JDBC Monitoring",
+							layout: "border",
+							items: [
+								{
+									xtype: "panel",
+									region: "north",
+									layout: "vbox",
+									items: [
+										{
+											xtype: "button",
+											text: "Refresh",
+											handler: function() {
+												this.l1/*loadJobList*/(null, "2");
+											},
+											scope: this
+										}
+									]
+								},
+								{
+									xtype: "container",
+									flex: 1,
+									layout: {
+										type: "vbox",
+										align: "stretch"
+									},
+									region: "center",
+									items: [
+										{
+											xtype: "gridpanel",
+											flex: 1,
+											title: "SQL Details",
+											name: "grd_sql",
+											store: {
+												xtype: "store",
+												fields: [
+												    "c0", "c1", "c2", "c4", "c5"
+												]
+											},
+											columns: [
+												{
+													text: "No.",
+													dataIndex: "c0",
+													width: 40
+												},
+												{
+													text: "Date",
+													dataIndex: "c1"
+												},
+												{
+													text: "ExecTime",
+													dataIndex: "c2",
+													width: 50
+												},
+												{
+													text: "SQL",
+													dataIndex: "c4",
+													flex: 1
+												},
+												{
+													text: "Error",
+													dataIndex: "c5",
+													flex: 1
+												}
+											]
+										},
+										{
+											xtype: "gridpanel",
+											flex: 1,
+											title: "Exec SQL",
+											name: "grd_esql",
+											store: {
+												xtype: "store",
+												fields: [
+												    "c0", "c1", "c2", "c4"
+												]
+											},
+											columns: [
+												{
+													text: "No.",
+													dataIndex: "c0",
+													width: 40
+												},
+												{
+													text: "Date",
+													dataIndex: "c1"
+												},
+												{
+													text: "ExecTime",
+													dataIndex: "c2",
+													width: 50
+												},
+												{
+													text: "SQL",
+													dataIndex: "c4",
+													flex: 1
+												}
+											]
+										}
+									]
+								},
+								{
+									xtype: "container",
+									region: "east",
+									flex: 1,
+									layout: {
+										type: "vbox",
+										align: "stretch"
+									},
+									items: [
+										{
+											xtype: "panel",
+											flex: 1,
+											title: "Request Count"
+										},
+										{
+											xtype: "panel",
+											flex: 1,
+											title: "Running"
+										}
+									]
+								}
+							]
+						},
+						{
+							xtype: "container",
+							title: "Email Sender Logs",
+							layout: {
+								type: "vbox",
+								align: "stretch"
+							},
+							items: [
+							    {
+							    	xtype: "fieldset",
+							    	layout: "hbox",
+							    	items: [
+							    	    {
+							    	    	xtype: "fieldcontainer",
+							    	    	flex: 1,
+							    	    	layout: "hbox",
+							    	    	items: [
+							    	    	    {
+							    	    	    	xtype: "combobox",
+							    	    	    	queryMode: "local",
+													fieldLabel: "Status",
+													name: "e_stat",
+													labelAlign: "right",
+													displayField: "name",
+													valueField: "value",
+													editable: false,
+													autoSelect: true,
+													store: {
+														xtype: "store",
+														fields: ["name", "value"],
+														data: [
+															{"name": "Failed", "value": "F"},
+															{"name": "Sending", "value": "P"},
+															{"name": "Waiting", "value": "A"},
+															{"name": "Success", "value": "S"},
+															{"name": "All", "value": ""}
+														]
+													}
+							    	    	    }
+							    	    	]
+							    	    },
+							    	    {
+							    	    	xtype: "button",
+							    	    	text: "Run",
+							    	    	handler: function() {
+							    	    		this.eM1/*getEmailContent*/();
+							    	    	},
+							    	    	scope: this
+							    	    }
+							    	]
+							    },
+								{
+									xtype: "gridpanel",
+									flex: 1,
+									title: "Email Logs",
+									name: "grd_email",
+									store: {
+										xtype: "store",
+										fields: [
+										    "sid", "iuid", "snder", "email", "cdate", "mdate", "mstat", "stat", "msgtype", "subject"
+										]
+									},
+									columns: [
+									    {
+									    	text: "Sender",
+									    	dataIndex: "snder",
+									    	width: 120
+									    },
+										{
+											text: "Email",
+											dataIndex: "email",
+											width: 120
+										},
+										{
+											text: "Modified Date",
+											dataIndex: "mdate",
+											width: 50
+										},
+										{
+											text: "Created Date",
+											dataIndex: "cdate",
+											width: 50
+										},
+										{
+											text: "Subject",
+											dataIndex: "subject",
+											tdCls: "igc-td-link",
+											flex: 1
+										},
+										{
+											text: "Status",
+											dataIndex: "stat",
+											width: 80
+										}
+									],
+									listeners: {
+										cellclick: function(tobj, td, cellIndex, record, tr, rowIndex, e, eOpts) {
+											var me = this;
+											
+											if (cellIndex == 4)
+											{
+												me.s1/*showMailDetail*/(record.get("sid"));
+											}
+										},
+										scope: this
+									}
+								},
+								{
+									xtype: "panel",
+									layout: "fit",
+									hidden: true,
+									flex: 1,
+									name: "m_d1",
+									items: [
+										{
+											name: "m_d2",
+											html: "<div class='igc-mail-detail'><iframe id='ig_mail' class='igc-mail-detail-if'></iframe></div>"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			// buttons:[{
+			// 	text: IRm$/*resources*/.r1('B_CLOSE'),
+			// 	handler: function() {
+			// 		this.close();
+			// 	},
+			// 	scope: this
+			// }],
+			
+			listeners: {
+				afterrender: function(ui) {
+					this.in$t();
+				}
+			}
+		});
+		
+		IG$/*mainapp*/._I7a/*sysmon*/.superclass.initComponent.apply(this, arguments);
+	}
+});
+IG$/*mainapp*/._I7b/*sys_resource*/ = $s.extend(IG$/*mainapp*/._I57/*IngPanel*/, {
+	region:'center',
+	
+	"layout": 'fit',
+	
+	closable: true,
+	resizable:false,
+	
+	autoHeight: true,
+	
+	callback: null,
+	
+	bodyPadding: 10,
+	
+	iconCls: "icon-ing-docdef",
+	
+	in$t: function() {
+		this.l1/*loadResources*/();
+	},
+	
+	l1b/*loadResources*/: function() {
+		var me = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+						
+		req.init(me, 
+			{
+	            ack: "12",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: "/resources"}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "getrs"})
+	        }, me, me.rs_l1/*loadResources*/, false);
+		req._l/*request*/();
+	},
+	
+	l1/*loadServerInfo*/: function() {
+		var me = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+						
+		req.init(me, 
+			{
+	            ack: "12",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: "/serverinfo"}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "getrs"})
+	        }, me, me.rs_l1a/*loadServerInfo*/, false);
+		req._l/*request*/();
+	},
+	
+	rs_l1a/*loadServerInfo*/: function(xdoc) {
+		var me = this,
+			tnode, tnodes,
+			i;
+			
+		tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item/info");
+		me.licinfo = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnode);
+		
+		tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item/info/access_ip");
+		
+		if (tnode)
+		{
+			me.licinfo.access_ip = [];
+			tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+			for (i=0; i < tnodes.length; i++)
+			{
+				me.licinfo.access_ip.push(IG$/*mainapp*/._I24/*getTextContent*/(tnodes[i]));
+			}
+		}
+		
+		me.l1b/*loadResources*/();
+	},
+	
+	rs_l1/*loadResources*/: function(xdoc) {
+		var me = this,
+			tnode;
+			
+		tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/results/meminfo");
+		me.s1/*setMemory*/(tnode);
+		
+		tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/results/diskinfo");
+		me.s2/*setDisk*/(tnode);
+		
+		tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/results/osinfo");
+		me.s3/*setOS*/(tnode);
+	},
+	
+	m1/*memoryFormat*/: function(v) {
+		var unit = "b",
+			d = 1,
+			mv = v;
+		
+		if (mv > 1000)
+		{
+			unit = "M";
+			mv = mv / 1000;
+			
+			if (mv > 1000)
+			{
+				unit = "G";
+				mv = mv / 1000;
+			}
+		}
+		
+		return mv.format("#,###") + " " + unit;
+	},
+	
+	s1/*setMemory*/: function(tnode) {
+		var me = this,
+			m_charts,
+			prop,
+			g_mem = me.down("[name=g_mem]"),
+			dp = [],
+			k;
+			
+		if (!me.m_charts)
+		{
+			var p = me.down("[name=p_mem]"),
+				el = $(".idv-rcs-mem", p.el.dom),
+				pbox = [
+					{
+						name: "free",
+						title: "Free Memory"
+					},
+					{
+						name: "allocated",
+						title: "Allocated"
+					},
+					{
+						name: "appfree",
+						title: "Application Free"
+					},
+					{
+						name: "max",
+						title: "Max Memory",
+						chart: false
+					},
+					{
+						name: "totalfree",
+						title: "Free Total",
+						chart: false
+					}
+				];
+				
+			el.empty();
+			
+			me.clen = 0;
+			
+			$.each(pbox, function(i, pb) {
+				if (pb.chart != false)
+				{
+					var mel = $("<div class='idv-rcs-pnl'><div class='idv-rcs-title'>" + pb.title + "</div><div class='idv-rcs-chart'></div></div>").appendTo(el);
+					pb.el = mel;
+					pb.dc = $('.idv-rcs-chart', pb.el);
+					pb.clabel = $("<div class='idv-rcs-label'></div>").appendTo(pb.dc);
+					pb.chart = pb.dc.easyPieChart({
+				        //your configuration goes here
+				        size: IG$/*mainapp*/.x_10/*jqueryExtension*/._w(pb.dc)
+				    });
+				    me.clen ++;
+				}
+			});
+			
+			me.m_charts = pbox;
+			
+			me.s1s/*resizeMemoryCharts*/();
+		}
+		
+		m_charts = me.m_charts;
+		
+		if (tnode)
+		{
+			prop = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnode);
+			
+			var tfree = Number(prop["totalfree"]),
+				tmax = Number(prop["max"]);
+			
+			$.each(m_charts, function(i, pb) {
+				var v = Number(prop[pb.name]),
+					lbl;
+				
+				dp.push({
+					name: pb.title,
+					value: v
+				});
+				
+				switch (pb.name)
+				{
+				case "free":
+				case "appfree":
+					pb.value = 100 * v / tfree;
+					lbl = me.m1/*memoryFormat*/(v) + "<br>" + me.m1/*memoryFormat*/(tfree)
+					break;
+				case "allocated":
+					pb.value = 100 * v / tmax;
+					lbl = me.m1/*memoryFormat*/(v) + "<br>" + me.m1/*memoryFormat*/(tmax)
+					break;
+				}
+				
+				if (pb.chart)
+				{
+					pb.chart.data('easyPieChart').update(pb.value);
+					pb.clabel.html(lbl);
+				}
+			});
+		}
+		
+		g_mem.store.loadData(dp);
+	},
+	
+	s1s/*resizeMemoryCharts*/: function() {
+		var me = this,
+			p_mem = me.down("[name=p_mem]"),
+			p_el = $(p_mem.body.dom),
+			rmem = $(".idv-rcs-mem", p_el),
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(p_el),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(p_el),
+			m_charts = me.m_charts,
+			i, n,
+			x = 0,
+			pb;
+		
+		IG$/*mainapp*/.x_10/*jqueryExtension*/._w(rmem, w);
+		IG$/*mainapp*/.x_10/*jqueryExtension*/._h(rmem, h);
+		
+		if (m_charts)
+		{
+			n = w / me.clen;
+			
+			for (i=0; i < m_charts.length; i++)
+			{
+				pb = m_charts[i];
+				
+				if (pb.chart)
+				{
+					IG$/*mainapp*/.x_10/*jqueryExtension*/._w(pb.el, n);
+					IG$/*mainapp*/.x_10/*jqueryExtension*/._h(pb.el, h);
+					pb.el.css("left", x);
+					pb.dc.css({
+						left: (n - 90) / 2,
+						top: (h - 90) / 2 + 20
+					});
+					x += n;
+				}
+			}
+		}
+	},
+	
+	s2/*setDisk*/: function(tnode) {
+		var me = this,
+			g_disk = me.down("[name=g_disk]"),
+			tnodes = tnode ? IG$/*mainapp*/._I26/*getChildNodes*/(tnode) : null,
+			dp = [],
+			p_dsk = me.down("[name=p_dsk]"),
+			el = $(".idv-rcs-dsk", p_dsk.el.dom),
+			mel, pb,
+			i, v;
+		
+		me.dlen = 0;
+		me.m_dsks = [];
+		me.h_dsks = me.h_dsks || {};
+		
+		if (tnodes)
+		{
+			for (i=0; i < tnodes.length; i++)
+			{
+				p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+				
+				if (me.h_dsks[p.name])
+				{
+					pb = me.h_dsks[p.name];
+				}
+				else
+				{
+					mel = $("<div class='idv-rcs-pnl-dsk'><div class='idv-rcs-title'>" + p.name + "</div><div class='idv-rcs-chart'></div></div>").appendTo(el);
+					pb = {
+						el: mel,
+						dc: $('.idv-rcs-chart', mel)
+					};
+					pb.clabel = $("<div class='idv-rcs-label'></div>").appendTo(pb.dc);
+					pb.chart = pb.dc.easyPieChart({
+				        //your configuration goes here
+				        size: IG$/*mainapp*/.x_10/*jqueryExtension*/._w(pb.dc)
+				    });
+				    
+				    me.h_dsks[p.name] = pb;
+			    }
+			    v = Number(p.total) - Number(p.usable);
+			    v = (Number(p.total) > 0 ? v * 100 / Number(p.total) : 0);
+			    pb.chart.data('easyPieChart').update(v);
+			    pb.clabel.text(p.name + " : " + v.format("###") + "%");
+			    me.dlen ++;
+				
+				dp.push(p);
+				me.m_dsks.push(pb);
+			}
+			
+			me.s2s/*resizeDiskCharts*/();
+		}
+		
+		g_disk.store.loadData(dp);
+	},
+	
+	s2s/*resizeDiskCharts*/: function() {
+		var me = this,
+			p_dsk = me.down("[name=p_dsk]"),
+			p_el = $(p_dsk.body.dom),
+			rdsk = $(".idv-rcs-dsk", p_el),
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(p_el),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(p_el),
+			m_dsks = me.m_dsks,
+			i, n,
+			y = 0,
+			pb;
+		
+		IG$/*mainapp*/.x_10/*jqueryExtension*/._w(rdsk, w);
+		IG$/*mainapp*/.x_10/*jqueryExtension*/._h(rdsk, h);
+		
+		if (m_dsks)
+		{
+			for (i=0; i < m_dsks.length; i++)
+			{
+				pb = m_dsks[i];
+				
+				if (pb.chart)
+				{
+					IG$/*mainapp*/.x_10/*jqueryExtension*/._w(pb.el, w);
+					n = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(pb.el);
+					pb.dc.css({
+						left: (w - 90) / 2,
+						top: (n - 90) / 2 + 20
+					});
+				}
+			}
+		}
+	},
+	
+	s3/*setOS*/: function(tnode) {
+		var me = this,
+			p_os = me.down("[name=p_os]"),
+			el = $(".idv-os-pnl", p_os.el.dom),
+			tnodes = tnode ? IG$/*mainapp*/._I26/*getChildNodes*/(tnode) : null,
+			ui, li, ap,
+			p,
+			i,
+			licinfo = me.licinfo;
+		
+		el.empty();
+		
+		if (tnodes)
+		{
+			ul = $("<ul class='idv-os-ul'></ul>").appendTo(el);
+			
+			for (i=0; i < tnodes.length; i++)
+			{
+				p = IG$/*mainapp*/._I1b/*XGetAttr*/(tnodes[i], "name");
+				
+				li = $("<li><span class='idv-os-type'>" + p + "</span> : <span class='idv-os-val'>" + IG$/*mainapp*/._I24/*getTextContent*/(tnodes[i]) + "</span></li>");
+				ul.append(li);
+			}
+			
+			ul = $("<div class='idv-lic-dv'><span>License Information</span></div>").appendTo(el);
+			ul = $("<ul class='idv-lic-ul'></ul>").appendTo(ul);
+			
+			if (licinfo)
+			{
+				for (p in licinfo)
+				{
+					if (p != "access_ip")
+					{
+						li = $("<li><span class='idv-os-type'>" + p + "</span> : <span class='idv-os-val'>" + licinfo[p] + "</span></li>");
+						ul.append(li);
+					}
+				}
+				
+				if (licinfo.access_ip)
+				{
+					ul = $("<div class='idv-lic-dv'><span>Accessed IP</span></div>").appendTo(el);
+					
+					for (i=0; i < licinfo.access_ip.length; i++)
+					{
+						li = $("<li><span class='idv-os-val'>" + licinfo.access_ip[i] + "</span></li>"); 
+						ul.append(li);
+					}
+				}
+			}
+		}
+	},
+	
+	initComponent : function() {
+		var me = this;
+		
+		me.title = IRm$/*resources*/.r1("T_SYS_RES");
+		
+		$s.apply(this, {
+			tbar: [
+				{
+					xtype: "button",
+					iconCls: "icon-refresh",
+					tooltip: IRm$/*resources*/.r1("L_REFRESH"),
+					handler: function() {
+						this.l1/*loadResources*/();
+					},
+					scope: this
+				}
+			],
+			items: [
+			    {
+			    	xtype: "panel",
+			    	layout: "border",
+			    	border: 0,
+			    	items: [
+			    		{
+			    			xtype: "panel",
+			    			region: "north",
+			    			height: 200,
+			    			border: 0,
+			    			layout: {
+			    				type: "hbox",
+			    				align: "stretch"
+			    			},
+			    			items: [
+			    				
+			    				{
+			    					xtype: "panel",
+			    					name: "p_mem",
+			    					title: "Memory Resources",
+			    					layout: "fit",
+			    					flex: 1,
+			    					html: "<div class='idv-rcs-mem'></div>",
+			    					listeners: {
+			    						resize: function() {
+			    							this.s1s/*resizeMemoryCharts*/();
+			    						},
+			    						scope: this
+			    					}
+			    				}
+			    			]
+			    		},
+			    		{
+			    			xtype: "panel",
+			    			region: "center",
+			    			border: 0,
+			    			layout: {
+			    				type: "hbox",
+			    				align: "stretch"
+			    			},
+			    			flex: 1,
+			    			items: [
+								{
+	    							xtype: "panel",
+	    							flex: 1,
+	    							layout: {
+	    								type: "vbox",
+	    								align: "stretch"
+	    							},
+	    							items: [
+			    						{
+			    							xtype: "gridpanel",
+			    							title: "Memory",
+			    							name: "g_mem",
+			    							flex: 1,
+			    							store: {
+			    								xtype: "store",
+			    								fields: ["name", "value"]
+			    							},
+			    							columns: [
+			    								{
+			    									xtype: "gridcolumn",
+			    									text: "Name",
+			    									flex: 1,
+			    									dataIndex: "name"
+			    								},
+			    								{
+			    									xtype: "gridcolumn",
+			    									text: "Value",
+			    									dataIndex: "value",
+			    									flex: 1
+			    								}
+			    							]
+			    						},
+			    						{
+			    							xtype: "gridpanel",
+			    							title: "Disk",
+			    							name: "g_disk",
+			    							flex: 1,
+			    							store: {
+			    								xtype: "store",
+			    								fields: ["name", "total", "free", "usable"]
+			    							},
+			    							columns: [
+			    								{
+			    									xtype: "gridcolumn",
+			    									text: "Name",
+			    									flex: 1,
+			    									dataIndex: "name"
+			    								},
+			    								{
+			    									xtype: "gridcolumn",
+			    									text: "Total",
+			    									dataIndex: "total",
+			    									flex: 1
+			    								},
+			    								{
+			    									xtype: "gridcolumn",
+			    									text: "Free",
+			    									dataIndex: "free",
+			    									flex: 1
+			    								},
+			    								{
+			    									xtype: "gridcolumn",
+			    									text: "usable",
+			    									dataIndex: "usable",
+			    									flex: 1
+			    								}
+			    							]
+			    						}
+	    							]
+			    				},
+			    				{
+			    					xtype: "panel",
+			    					name: "p_dsk",
+			    					flex: 1,
+			    					layout: "fit",
+			    					html: "<div class='idv-rcs-dsk'></div>",
+			    					listeners: {
+			    						resize: function() {
+			    							this.s2s/*resizeDiskCharts*/();
+			    						},
+			    						scope: this
+			    					}
+			    				},
+			    				{
+			    					xtype: "panel",
+			    					title: "System Info",
+			    					name: "p_os",
+			    					layout: "fit",
+			    					flex: 1,
+			    					html: "<div class='idv-os-pnl'></div>"
+			    				}
+			    			]
+			    		}
+			    	]
+			    }
+			],
+			
+			listeners: {
+				afterrender: function(ui) {
+					this.in$t();
+				}
+			}
+		});
+		
+		IG$/*mainapp*/._I7b/*sys_resource*/.superclass.initComponent.apply(this, arguments);
+	}
+});
+IG$/*mainapp*/.CI7_/*dashboardmenustructure*/ = function(xdoc) {
+	var me = this;
+	
+	me.sid = 0;
+	
+	me._a/*menustructure*/ = {
+		map: {},
+		root: {
+			name: "Menu",
+			sid: 99,
+			level: -1,
+			option: {},
+			description: "Top Menu",
+			expanded: true,
+			children: [
+			]
+		}
+	};
+	
+	me._a/*menustructure*/.map[99] = me._a/*menustructure*/.root;
+	
+	xdoc && me._1/*parse*/(xdoc);
+}
+
+IG$/*mainapp*/.CI7_/*dashboardmenustructure*/.prototype = {
+	_1/*parse*/: function(xdoc) {
+		var me = this,
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+			snode,
+			tnodes, snodes,
+			p, i, j, sid, pitems;
+		
+		if (tnode)
+		{
+			me.item = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnode);
+			snode = IG$/*mainapp*/._I18/*XGetNode*/(tnode, "menustructure");
+			snode && me._4/*parseMenuNode*/(me._a/*menustructure*/.root, snode);
+			
+			snode = IG$/*mainapp*/._I18/*XGetNode*/(tnode, "menuitems");
+			if (snode)
+			{
+				tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(snode);
+				for (i=0; i < tnodes.length; i++)
+				{
+					sid = IG$/*mainapp*/._I1b/*XGetAttr*/(tnodes[i], "sid");
+					pitems = me._a/*menustructure*/.map[sid];
+					if (pitems)
+					{
+						snodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnodes[i]);
+						pitems.items = [];
+						for (j=0; j < snodes.length; j++)
+						{
+							p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(snodes[j]);
+							pitems.items.push(p);
+						}
+					}
+				}
+			}
+		}
+	},
+	
+	_2/*getxml*/: function() {
+		var me = this,
+			r = [],
+			m = [];
+		
+		r.push("<menustructure>");
+		r.push(me._3/*getNode*/(me._a/*menustructure*/.root, m));
+		r.push("</menustructure>");
+		
+		r.push("<menuitems>");
+		r.push(m.join(""));
+		r.push("</menuitems>");
+		
+		return r.join("");
+	},
+	
+	_3/*getNode*/: function(tnode, m) {
+		var me = this,
+			i, j,
+			p,
+			r = "";
+		
+		r += "<option>";
+		for (j in tnode.option)
+		{
+			r += (tnode.option[j]) ? "<opt name='" + j + "'><![CDATA[" + tnode.option[j] + "]]></opt>" : "";
+		}
+		r += "</option>";					
+				
+		if (tnode.children)
+		{
+			for (i=0; i < tnode.children.length; i++)
+			{
+				p = tnode.children[i];
+				r += "<menu" + IG$/*mainapp*/._I20/*XUpdateInfo*/(p, "sid;name;description") + ">";
+				r += me._3/*getNode*/(p, m);
+				r += "</menu>";
+				
+				if (p.items)
+				{
+					m.push("<menuitem sid='" + p.sid + "'>");
+					for (j=0; j < p.items.length; j++)
+					{
+						m.push("<menu" + IG$/*mainapp*/._I20/*XUpdateInfo*/(p.items[j], "uid;name;type;nodepath") + "/>");
+					}
+					m.push("</menuitem>");
+				}
+			}
+		}
+		
+		return r;
+	},
+	
+	_4/*parseMenuNode*/: function(pobj, tnode) {
+		var me = this,
+			tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode),
+			snodes,
+			i, j, p,
+			tname;
+			
+		for (i=0; i < tnodes.length; i++)
+		{
+			tname = IG$/*mainapp*/._I29/*XGetNodeName*/(tnodes[i]);
+			
+			if (tname == "menu")
+			{
+				p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+				p.children = [];
+				p.option = {};
+				p.level = pobj.level + 1;
+				me._a/*menustructure*/.map[p.sid] = p;
+				me.sid = Math.max(me.sid, parseInt(p.sid)+1);
+				pobj.children.push(p);
+				
+				me._4/*parseMenuNode*/(p, tnodes[i]);
+			}
+			else if (tname == "option")
+			{
+				snodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnodes[i]);
+				for (j=0; j < snodes.length; j++)
+				{
+					pobj.option[IG$/*mainapp*/._I1b/*XGetAttr*/(snodes[j], "name")] = IG$/*mainapp*/._I24/*getTextContent*/(snodes[j]);
+				}
+			}
+		}
+	}
+}
+
+if (window.Ext)
+{
+	IG$/*mainapp*/._I7a_/*dashboardmenuconfig*/ = $s.extend($s.window, {
+		modal: true,
+		title: "Page Config",
+		layout: "fit",
+		width: 400,
+		autoHeight: true,
+		
+		_1/*initApp*/: function() {
+			var me = this,
+				option;
+			if (me.item)
+			{
+				option = me.item.option;
+				me.down("[name=ltype]").setValue(option.ltype || "");
+				me.down("[name=_h]").setValue(option.html);
+				me.down("[name=_t]").setValue(option.tmpl);
+				me.down("[name=_ra]").setValue(option.rptl);
+				me.rptl_uid = option.rptl_uid;
+				me.down("[name=_s]").setValue(option.scrp);
+			}
+		},
+		
+		_2/*changeLayout*/: function() {
+			var me = this,
+				ltype = me.down("[name=ltype]").getValue();
+			
+			$.each(["_h", "_r", "_t"], function(i, t) {
+				me.down("[name=" + t + "]").setVisible(ltype && "_" + ltype.charAt(0) == t ? true : false);
+			});
+		},
+		
+		_3/*confirmChanges*/: function() {
+			var me = this,
+				option;
+			if (me.item)
+			{
+				option = me.item.option;
+				option.ltype = me.down("[name=ltype]").getValue();
+				option.html = me.down("[name=_h]").getValue();
+				option.tmpl = me.down("[name=_t]").getValue();
+				option.rptl = me.down("[name=_ra]").getValue();
+				option.rptl_uid = me.rptl_uid;
+				option.scrp = me.down("[name=_s]").getValue();
+			}
+			
+			this.close();
+		},
+		
+		initComponent: function() {
+	    	var me = this;
+	    	
+	    	$s.apply(this, {
+	    		items: [
+	    			{
+	    				xtype: "panel",
+	    				layout: "anchor",
+	    				bodyPadding: 10,
+	    				defaults: {
+	    					anchor: "100%"
+	    				},
+	    				items: [
+	    					{
+	    						xtype: "combobox",
+	    						fieldLabel: "Load Type",
+	    						name: "ltype",
+	    						queryMode: "local",
+	    						editable: false,
+	    						valueField: "value",
+	    						displayField: "name",
+	    						store: {
+	    							xtype: "store",
+	    							fields: ["name", "value"],
+	    							data: [
+	    								{name: "No Action", value: ""},
+	    								{name: "Template", value: "template"},
+	    								{name: "Load HTML", value: "html"},
+	    								{name: "Open Report", value: "report"}
+	    							]
+	    						},
+	    						listeners: {
+	    							change: function() {
+	    								this._2/*changeLayout*/();
+	    							},
+	    							scope: this
+	    						}
+	    					},
+	    					{
+	    						xtype: "textfield",
+	    						name: "_h",
+	    						fieldLabel: "Default HTMLPage"
+	    					},
+	    					{
+	    						xtype: "fieldcontainer",
+	    						name: "_r",
+	    						layout: "hbox",
+	    						fieldLabel: "Report",
+	    						items: [
+	    							{
+	    								xtype: "textfield",
+	    								name: "_ra",
+	    								readOnly: true,
+	    								flex: 1
+	    							},
+	    							{
+	    								xtype: "button",
+	    								text: "..",
+	    								handler: function() {
+	    									var me = this,
+		    									dlgitemsel = new IG$/*mainapp*/._I96/*metaSelectDlg*/({
+		    									visibleItems: "workspace;folder;report;dashboard",
+		    									u5x/*treeOptions*/: {
+		    										cubebrowse: false
+		    									},
+		    									callback: new IG$/*mainapp*/._I3d/*callBackObj*/(me, function(item) {
+	    											var _ra = me.down("[name=_ra]");
+	    											_ra.setValue(item.name);
+	    											me.rptl_uid = item.uid;
+	    										})
+		    								});
+		    								IG$/*mainapp*/._I_5/*checkLogin*/(this, dlgitemsel);
+	    								},
+	    								scope: this
+	    							}
+	    						]
+	    					},
+	    					{
+	    						xtype: "combobox",
+	    						name: "_t",
+	    						queryMode: "local",
+	    						fieldLabel: "Template Name",
+	    						editable: false,
+	    						valueField: "value",
+	    						displayField: "name",
+	    						store: {
+	    							xtype: "store",
+	    							fields: ["name", "value"]
+	    						}
+	    					},
+	    					{
+	    						xtype: "textfield",
+	    						fieldLabel: "After Javascript",
+	    						name: "_s"
+			    			}
+	    				]
+	    			}
+	    		],
+	    		buttons: [
+	    			{
+						text: IRm$/*resources*/.r1("B_CONFIRM"),
+						handler: function() {
+							var me = this;
+							me._3/*confirmChanges*/();
+						},
+						scope: this
+					},
+					{
+						text: IRm$/*resources*/.r1('B_CLOSE'),
+						handler: function() {
+							this.close();
+						},
+						scope: this
+					}
+	    		]
+	    	});
+	    	
+	    	IG$/*mainapp*/._I7a_/*dashboardmenuconfig*/.superclass.initComponent.call(this);
+	    },
+	    listeners: {
+	    	afterrender: function(tobj) {
+	    		this._1/*initApp*/();
+	    	}
+	    }
+	});
+}
+
+IG$/*mainapp*/._I7_/*dashboardmenu*/ = $s.extend(IG$/*mainapp*/._I57/*IngPanel*/, {
+	scroll: false,
+	initialized: false,
+	hideMode: 'offsets',
+	"layout": "fit",
+	bodyPadding: 5,
+	border: 0,
+	
+	l1/*loadContent*/: function() {
+		var me = this,
+			req,
+			uid = "/SYS_Config/dashboardmenu";
+		
+		req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.showerror = false;
+		req.init(me, 
+			{
+	            ack: "5",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: uid}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: ''})
+	        }, me, me._l1/*rs_loadContent*/, function(xdoc) {
+	        	var r = true,
+					req,
+					errcode = IG$/*mainapp*/._I27/*getErrorCode*/(xdoc);
+				
+				if (errcode == "0x1400")
+				{
+					req = new IG$/*mainapp*/._I3e/*requestServer*/();
+					req.init(me, 
+						{
+				            ack: "31",
+				            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: uid, name: "dashboardmenu", type: "PrivateContent"}),
+				            mbody: "<smsg></smsg>"
+				        }, me, me.l1/*loadContent*/);
+					req._l/*request*/();
+					r = false;
+				}
+				
+				return r
+	        });
+		req._l/*request*/();
+	},
+	
+	_l1/*rs_loadContent*/: function(xdoc) {
+		var me = this,
+			menust = me.down("[name=menust]");
+			
+		me.c1/*appinfo*/ = new IG$/*mainapp*/.CI7_/*dashboardmenustructure*/(xdoc);
+		menust.store.setRootNode(me.c1/*appinfo*/._a/*menustructure*/.root);
+	},
+	
+	_l2/*menusthandler*/: function(act) {
+		var me = this,
+			menust = me.down("[name=menust]"),
+			sel = menust.getSelectionModel().selected,
+			appinfo = me.c1/*appinfo*/,
+    		m = appinfo._a/*menustructure*/,
+    		sobj,
+    		suid,
+    		srec;
+			
+		switch (act)
+		{
+		case 0:
+			if (sel && sel.length > 0)
+			{
+				sobj = {
+					name: "New Menu",
+					sid: "" + (me.c1/*appinfo*/.sid++)
+				};
+				m.map[sobj.sid] = sobj;
+				
+				sel.items[0].appendChild(sobj, false, true);
+				sel.items[0].expand();
+			}
+			break;
+		case 1:
+			if (sel && sel.length > 0)
+			{
+				srec = sel.items[0];
+				if (!srec.isRoot())
+				{
+					suid = srec.get("sid");
+					delete m.map[suid];
+					srec.remove(); // parentNode.remove(srec);
+				}
+			}
+			break;
+		case 2:
+			me._m3/*moveTreeGridSelection*/(menust, -1, false);
+			break;
+		case 3:
+			me._m3/*moveTreeGridSelection*/(menust, 1, false);
+			break;
+		case 4:
+			me._m3/*moveTreeGridSelection*/(menust, 1, true);
+			break;
+		}
+	},
+	
+	_l3/*updateContent*/: function() {
+		var me = this,
+			menust = me.down("[name=menust]"),
+			menuroot = menust.store.getRootNode(),
+			mobj = {
+				children: []
+			},
+			appinfo = me.c1/*appinfo*/,
+			cnt,
+			omenu = appinfo._a/*menustructure*/;
+		
+		me._l8/*updateCurrent*/();
+		me._l5/*updatenode*/(omenu, menuroot, mobj);
+		omenu.root.children = mobj.children;
+	},
+	
+	_l5/*updatenode*/: function(omenu, mnode, mobj) {
+		var i,
+			i, pnode,
+			mtree = [],
+			cobj;
+		
+		for (i=0; i < mnode.childNodes.length; i++)
+		{
+			pnode = mnode.childNodes[i];
+			cobj = {
+				name: pnode.get("name"),
+				sid: pnode.get("sid"),
+				description: pnode.get("description"),
+				items: [],
+				children: [],
+				level: mobj.level+1, 
+				option: {}
+			};
+			
+			if (omenu.map[cobj.sid])
+			{
+				cobj.items = omenu.map[cobj.sid].items;
+				cobj.option = omenu.map[cobj.sid].option;
+			}
+			
+			mobj.children.push(cobj);
+			
+			if (pnode.hasChildNodes())
+			{
+				this._l5/*updatenode*/(omenu, pnode, cobj);
+			}
+		}
+	},
+	
+	l4/*maintoolbar*/: function(cmd) {
+		var me = this;
+		
+		switch(cmd)
+		{
+		case 0: /*savecontent*/
+			me._l3/*updateContent*/();
+			me._l6/*saveContent*/();
+			break;
+		}
+	},
+	
+	_l6/*saveContent*/: function() {
+		var me = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+			appinfo = me.c1/*appinfo*/,
+			cnt;
+		
+		cnt = "<smsg><item>";
+		cnt += appinfo._2/*getxml*/.call(appinfo);
+		cnt += "</item></smsg>";
+			
+		req.init(me, 
+			{
+	            ack: "31",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: appinfo.item.uid}),
+	            mbody: cnt
+	        }, me, function(xdoc) {
+	        	IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1("M_SAVED"), null, null, 0, "success");
+	        });
+		req._l/*request*/();
+	},
+	
+	_m2/*moveGridSelection*/: function(grid, direction) {
+    	var records = grid.getSelectionModel().getSelection(),
+    		record = records && records.length ? records[0] : null;
+    		
+		if (!record) 
+		{
+			return;
+		}
+		
+		var index = grid.getStore().indexOf(record);
+		
+		if (direction < 0) 
+		{
+			index--;
+			if (index < 0) 
+			{
+				return;
+			}
+		} 
+		else 
+		{
+			index++;
+			if (index >= grid.getStore().getCount()) 
+			{
+				return;
+			}
+		}
+		grid.getStore().remove(record);
+		grid.getStore().insert(index, record);
+		grid.getSelectionModel().select(record, true);
+    },
+    
+    _m3/*moveTreeGridSelection*/: function(grid, direction, move_left) {
+    	var records = grid.getSelectionModel().getSelection(),
+    		record = records && records.length ? records[0] : null;
+    		
+		if (!record) 
+		{
+			return;
+		}
+		
+		var pnode = record.parentNode,
+			index = pnode.indexOf(record),
+			ppnode;
+		
+		if (move_left)
+		{
+			ppnode = pnode.parentNode;
+			
+			if (!ppnode)
+			{
+				return;
+			}
+			
+			pnode.remove(record);
+			ppnode.insert(ppnode.childNodes.length, record);
+			grid.getSelectionModel().select(record, true);
+		}
+		else
+		{
+			if (direction < 0) 
+			{
+				index--;
+				if (index < 0) 
+				{
+					return;
+				}
+			} 
+			else 
+			{
+				index++;
+				if (index >= pnode.childNodes.length) 
+				{
+					return;
+				}
+			}
+			
+			pnode.remove(record);
+			pnode.insert(index, record);
+			grid.getSelectionModel().select(record, true);
+		}
+    },
+	
+	_l7/*toolbar_content*/: function(act) {
+		var me = this,
+			mgrid = me.down("[name=mgrid]"),
+			sel, rec,
+			appinfo = me.c1/*appinfo*/,
+			m = appinfo._a/*menustructure*/,
+			i, j, sobj;
+		
+		switch(act)
+		{
+		case 0: // add item
+			break;
+		case 1: // remove item
+			sel = mgrid.getSelectionModel().selected;
+			for (i=0; i < sel.length; i++)
+			{
+				rec = sel.items[i];
+				mgrid.store.remove(rec);
+				
+				sobj = m.map[rec.get("sid")];
+				
+				if (sobj)
+				{
+					for (j=0; j < sobj.items.length; j++)
+					{
+						if (sobj.items[j].uid == rec.get("uid"))
+						{
+							sobj.items.splice(j, 1);
+							break;
+						}
+					}
+				}
+			}
+			break;
+		case 2:	// move up
+			me._m2/*moveGridSelection*/(mgrid, -1);
+			break;
+		case 3: // move down
+			me._m2/*moveGridSelection*/(mgrid, 1);
+			break;
+		}
+	},
+	
+	_IQ9/*updateGridContent*/: function(datas, item) {
+		var me = this,
+			mg = me.down("[name=mg]"),
+			i, ndata = [],
+			t;
+			
+		for (i=0; i < datas.length; i++)
+		{
+			t = datas[i].type.toLowerCase();
+			if ((/report|folder/).test(t))
+			{
+				ndata.push(datas[i]);
+			}
+		}
+											
+		mg.store.loadData(ndata);
+	},
+	
+	_l8/*updateCurrent*/: function() {
+		var me = this,
+			menust = me.down("[name=menust]"),
+			sel = menust.getSelectionModel().selected,
+			mgrid = me.down("[name=mgrid]"),
+			appinfo = me.c1/*appinfo*/,
+			m = appinfo._a/*menustructure*/,
+			p, i, rec,
+			sid;
+			
+		if (sel && sel.length > 0)
+		{
+			sid = sel.items[0].get("sid");
+			p = m.map[sid];
+			p.items = [];
+			for (i=0; i < mgrid.store.data.items.length; i++)
+			{
+				rec = mgrid.store.data.items[i];
+				p.items.push({
+					uid: rec.get("uid"),
+					name: rec.get("name"),
+					type: rec.get("type"),
+					sid: sid,
+					nodepath: rec.get("nodepath")
+				});
+			}
+		}
+	},
+	
+	_1/*configPage*/: function(rec) {
+		var me = this,
+			cinfo = me.c1/*appinfo*/,
+			map = cinfo._a/*menustructure*/.map,
+			sid = rec.get("sid");
+			
+		var dlg = new IG$/*mainapp*/._I7a_/*dashboardmenuconfig*/({
+			item: (sid == "") ? cinfo._a/*menustructure*/.root : map[sid]
+		});
+		IG$/*mainapp*/._I_5/*checkLogin*/(this, dlg);
+	},
+	
+	initComponent: function(){
+    	var me = this;
+    	
+    	$s.apply(this, {
+    		items: [
+    			{
+    				xtype: "panel",
+    				layout: {
+    					type: "vbox",
+    					align: "stretch"
+    				},
+    				border: 0,
+    				defaults: {
+    					anchor: "100%"
+    				},
+    				items: [
+    					{
+    						xtype: "panel",
+    						border: 0,
+    						flex: 1,
+    						layout: {
+    							type: "border"
+    						},
+    						tbar: [
+    							{
+    								text: IRm$/*resources*/.r1("B_SAVE"),
+    								handler: function() {
+    									this.l4/*maintoolbar*/(0);
+    								},
+    								scope: this
+    							},
+    							{
+    								text: IRm$/*resources*/.r1("L_REFRESH"),
+    								handler: function() {
+    									this.l1/*loadContent*/();
+    								},
+    								scope: this
+    							}
+    						],
+    						items: [
+    							{
+    								xtype: "panel",
+    								region: "center",
+    								flex: 2,
+    								border: 0,
+    								layout: "border",
+    								items: [
+		    							{
+		    								xtype: "treepanel",
+		    								region: "center",
+		    								flex: 1,
+		    								title: "Menu Structures",
+		    								name: "menust",
+		    								
+		    								rootVisible: true,
+		    								plugins: [
+		    									{
+		    										ptype: "cellediting"
+		    									}
+		    								],
+		    								store: {
+		    									xtype: "treestore",
+		    									proxy: {
+													type: "memory"
+												},
+												fields: [
+													"name", "description", "sid"
+												]
+		    								},
+		    								columns: [
+		    									{
+		    										xtype: "treecolumn",
+		    										text: IRm$/*resources*/.r1("B_TITLE"),
+		    										dataIndex: "name",
+		    										editor: "textfield",
+		    										minWidth: 200
+		    									},
+		    									{
+		    										text: IRm$/*resources*/.r1("B_DESC"),
+		    										dataIndex: "description",
+		    										editor: "textfield",
+		    										flex: 1,
+		    										minWidth: 200
+		    									},
+		    									{
+		    										xtype: "actioncolumn",
+		    										width: 50,
+		    										items: [
+			    										{
+															iconCls: "icon-grid-config",
+															tooltip: IRm$/*resources*/.r1("B_CONFIG_ITEM"),
+															handler: function (grid, rowIndex, colIndex, item, e, record) {
+																this._1/*configPage*/(record);
+															},
+															scope: this
+														}
+													]
+		    									}
+		    								],
+		    								listeners: {
+		    									beforeselect: function(tobj, record, index, eopts) {
+		    										this._l8/*updateCurrent*/();
+		    									},
+		    									cellclick: function(tobj, td, cellIndex, record, tr, rowIndex, e, eOpts) {
+		    										var me = this,
+		    											sid = record.get("sid"),
+		    											mgrid = me.down("[name=mgrid]"),
+		    											appinfo = me.c1/*appinfo*/,
+		    											m = appinfo._a/*menustructure*/,
+		    											dp = [], i;
+		    										
+		    										if (m.map[sid])
+		    										{
+		    											dp = m.map[sid].items || [];
+		    										}
+		    										
+		    										for (i=0; i < dp.length; i++)
+		    										{
+		    											dp[i].sid = sid;
+		    										}
+		    										
+		    										mgrid.store.loadData(dp);
+		    									},
+		    									scope: this
+		    								},
+		    								tbar: [	
+		    									{
+		    										text: IRm$/*resources*/.r1("L_ADD_NEW"),
+		    										handler: function() {
+		    											me._l2/*menusthandler*/.call(me, 0);
+		    										}
+		    									},
+		    									{
+		    										text: IRm$/*resources*/.r1("L_REMOVE_SELECTED"),
+		    										handler: function() {
+		    											me._l2/*menusthandler*/.call(me, 1);
+		    										}
+		    									},
+		    									{
+		    										text: IRm$/*resources*/.r1("B_MOVE_UP"),
+		    										handler: function() {
+		    											me._l2/*menusthandler*/.call(me, 2);
+		    										}
+		    									},
+		    									{
+		    										text: IRm$/*resources*/.r1("B_MOVE_DOWN"),
+		    										handler: function() {
+		    											me._l2/*menusthandler*/.call(me, 3);
+		    										}
+		    									},
+		    									{
+		    										text: "Move Left",
+		    										hidden: true,
+		    										handler: function() {
+		    											me._l2/*menusthandler*/.call(me, 4);
+		    										}
+		    									}
+		    								]
+		    							},
+		    							
+		    							{
+		    								xtype: "gridpanel",
+		    								region: "south",
+		    								name: "mgrid",
+		    								selModel: {
+		    									selection: "checkboxmodel",
+		    									checkSelector: ".x-grid-cell"
+		    								},
+		    								viewConfig: {
+												plugins: [
+													{
+														ptype: "gridviewdragdrop",
+														ddGroup: "_I$RD_G_",
+														enableDrop: true,
+														enableDrag: false
+													}
+												]
+											},
+		    								split: true,
+		    								flex: 1,
+		    								title: IRm$/*resources*/.r1("L_C_ITEMS"),
+		    								tbar: [
+		    									{
+		    										text: IRm$/*resources*/.r1("L_ADD_NEW"),
+		    										hidden: true,
+		    										handler: function() {
+		    											this._l7/*toolbar_content*/(0);
+		    										},
+		    										scope: this
+		    									},
+		    									{
+		    										text: IRm$/*resources*/.r1("L_REMOVE_SELECTED"),
+		    										handler: function() {
+		    											this._l7/*toolbar_content*/(1);
+		    										},
+		    										scope: this
+		    									},
+		    									{
+		    										text: IRm$/*resources*/.r1("B_MOVE_UP"),
+		    										handler: function() {
+		    											this._l7/*toolbar_content*/(2);
+		    										},
+		    										scope: this
+		    									},
+		    									{
+		    										text: IRm$/*resources*/.r1("B_MOVE_DOWN"),
+		    										handler: function() {
+		    											this._l7/*toolbar_content*/(3);
+		    										},
+		    										scope: this
+		    									}
+		    								],
+		    								store: {
+		    									xtype: "store",
+		    									fields: [
+		    										"uid", "name", "nodepath", "type", "sid"
+		    									]
+		    								},
+		    								columns: [
+		    									{
+		    										text: IRm$/*resources*/.r1("B_NAME"),
+		    										dataIndex: "name"
+		    									},
+		    									{
+		    										text: IRm$/*resources*/.r1("B_TYPE"),
+		    										dataIndex: "type"
+		    									},
+		    									{
+		    										text: IRm$/*resources*/.r1("B_DESC"),
+		    										dataIndex: "description"
+		    									},
+		    									{
+		    										text: IRm$/*resources*/.r1("B_LOC"),
+		    										dataIndex: "nodepath",
+		    										flex: 1
+		    									}
+		    								]
+		    							}
+		    						]
+		    					},
+    							{
+    								xtype: "panel",
+    								region: "east",
+    								split: true,
+    								collapsible: true,
+    								collapsed: false, // true,
+    								flex: 1,
+    								title: IRm$/*resources*/.r1("L_NAVIGATOR"),
+    								layout: {
+    									type: "vbox",
+    									align: "stretch"
+    								},
+    								items: [
+    									new IG$/*mainapp*/._Idd/*explorerTree*/({
+    										name: "mtree",
+    										flex: 1,
+											gridupdate: {
+												handler: me._IQ9/*updateGridContent*/,
+												scope: me
+											}
+										}),
+										{
+											xtype: "gridpanel",
+											name: "mg",
+											viewConfig: {
+												plugins: [
+													{
+														ptype: "gridviewdragdrop",
+														ddGroup: "_I$RD_G_",
+														enableDrop: false,
+														enableDrag: true
+													}
+												]
+											},
+											flex: 1,
+											store: {
+												xtype: "store",
+												fields: [
+													"uid", "name", "type", "nodepath"
+												]
+											},
+											columns: [
+												{
+													text: IRm$/*resources*/.r1("B_NAME"),
+													dataIndex: "name"
+												},
+												{
+													text: IRm$/*resources*/.r1("B_TYPE"),
+													dataIndex: "type"
+												},
+												{
+													text: IRm$/*resources*/.r1("B_LOC"),
+													dataIndex: "nodepath"
+												}
+											]
+										}
+    								]
+    							}
+    						]
+    					}
+    				]
+    			}
+    		]
+    	});
+    	
+    	IG$/*mainapp*/._I7_/*dashboardmenu*/.superclass.initComponent.call(this);
+    },
+    listeners: {
+    	afterrender: function(tobj) {
+    		this.l1/*loadContent*/();
+    	}
+    }
+});
+
+IG$/*mainapp*/._dRp/*dashboard_rcsmgr_preview*/ = $s.extend($s.window, {
+	title: IRm$/*resources*/.r1("L_PRV_DATA"),
+	modal: true,
+	width: 400,
+	height: 350,
+	layout: "fit",
+	
+	_1/*loadContent*/: function() {
+		var me = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/()
+			
+		req.init(me, 
+			{ 
+	            ack: "5",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: me.uid}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: ""})
+	        }, me, function(xdoc) {
+	        	var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item");
+	        	
+	        }, false);
+		req._l/*request*/();
+	},
+	
+	initComponent: function() {
+		var me = this;
+		
+		$s.apply(this, {
+			items: [
+				{
+					xtype: "panel",
+					bodyPadding: 10,
+					layout: {
+						type: "vbox",
+						align: "stretch"
+					},
+					items: [
+						{
+							html: "<div style='height: 200px;overflow: auto;'><img src='" + ig$/*appoption*/.servlet + "?sreq=resource&_rcs_=" + me.uid + "&_mts_=" + IG$/*mainapp*/._g$a/*global_mts*/ + "'></img></div>",
+							name: "img_prev"
+						}
+					]
+				}
+			],
+			buttons: [
+				{
+					text: IRm$/*resources*/.r1('B_CLOSE'),
+					handler:function() {
+						this.close();
+					},
+					scope: this
+				}
+			]
+		});
+		IG$/*mainapp*/._dRp/*dashboard_rcsmgr_preview*/.superclass.initComponent.call(this);
+	},
+	listeners: {
+		afterrender: function(tobj) {
+			if (tobj.uid)
+			{
+				tobj._1/*loadContent*/.call(tobj);
+			}
+		}
+	}
+});
+
+IG$/*mainapp*/._dR/*dashboard_rcsmgr*/ = $s.extend(IG$/*mainapp*/._I57/*IngPanel*/, {
+	"layout": "fit",
+	_9/*framecontent*/: null,
+	
+	m1$9/*confirmSetting*/: function() {
+		if (this.m1$12/*updateSetting*/() == true)
+		{
+			this.callback && this.callback.execute();
+			
+			this._IG0/*closeDlgProc*/();
+		}
+	},
+	
+	_IFe1/*initF*/: function() {
+	},
+	
+	commitCode: function() {
+		var me = this,
+			r = true,
+			_9/*framecontent*/ = me._9/*framecontent*/,
+			rcs = _9/*framecontent*/ ? _9/*framecontent*/.rcs : null,
+			i,
+			dgrid = me.down("[name=dgrid]"),
+			p, rec;
+		
+		if (_9/*framecontent*/)
+		{
+			if (rcs.length)
+			{	
+				rcs.splice(0, rcs.length);
+			}
+			
+			for (i=0; i < dgrid.store.data.items.length; i++)
+			{
+				rec = dgrid.store.data.items[i];
+				
+				p = {
+					uid: rec.get("uid"),
+					name: rec.get("name")
+				};
+				
+				rcs.push(p);
+			}
+		}
+		
+		return r;
+	},
+	
+	refreshCode: function() {
+	},
+		
+	_IFe/*initF*/: function() {
+		var me = this;
+		me._m3/*loadResources*/(9);
+	},
+	
+	_t$/*toolbarHandler*/: function(cmd) {
+		var me = this;
+		
+		switch (cmd)
+		{
+		case "cmd_import":
+			me.down("[name=d_file]").show();
+			break;
+		case "cmd_reload":
+			me._m3/*loadResources*/();
+			break;
+		case "cmd_mgr_rcs":
+			break;
+		case "cmd_c_files":
+			me._m2/*registerFiles*/();
+			break;
+		}
+	},
+	
+	_m1/*initApp*/: function() {
+		var me = this,
+			d_file = me.down("[name=d_file]"),
+			d_file_el = d_file.el.dom,
+			m_fileupload = $(".m_fileupload", d_file_el),
+			d_upfiles = me.down("[name=d_upfiles]"),
+			fileupload, dropzone, d_progress;
+			
+		m_fileupload.empty();
+		
+		fileupload = $("<input type='file' name='files[]' data-url='upload' multiple></input>").appendTo(m_fileupload);
+		dropzone = $("<div class='filedropzone fade well'>Drop files here</div>").appendTo(m_fileupload);
+		d_progress = $("<div class='file-progress'><div class='bar' style='width: 0%;'></div></div>").appendTo(m_fileupload);
+		
+		fileupload.fileupload({
+			url: ig$/*appoption*/.servlet,
+	        dataType: "text",
+	        done: function (e, data) {
+	        	var doc = data.result || '<smsg errorcode="0xffff" errormsg="Server incorrect responding"/>',
+					xdoc = IG$/*mainapp*/._I13/*loadXML*/(doc),
+					errcode = IG$/*mainapp*/._I27/*getErrorCode*/(xdoc),
+					tnode, tnodes,
+					i, dp = [], p;
+				
+				if (errcode)
+				{
+					IG$/*mainapp*/._I51/*ShowErrorMessage*/(xdoc, me, null);
+				}
+				else
+				{
+					tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg");
+					
+					if (tnode)
+					{
+						tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+						for (i=0; i < tnodes.length; i++)
+						{
+							p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+							dp.push(p);
+						}
+					}
+				}
+				
+				if (dp && dp.length)
+				{
+					d_upfiles.show();
+					
+					for (i=0; i < dp.length; i++)
+					{
+						d_upfiles.store.add(dp[i]);
+					}
+				}
+	        },
+	        progressall: function (e, data) {
+	            var progress = parseInt(data.loaded / data.total * 100, 10),
+	            	bar = $(".bar", d_progress);
+	            bar.css(
+	                "width",
+	                progress + "%"
+	            );
+	            bar.text("Loaded " + data.loaded + " / " + data.total);
+	        },
+	 
+	        dropZone: dropzone
+	    }).bind('fileuploadsubmit', function (e, data) {
+	    });
+	    
+	    fileupload.fileupload("option", "url", ig$/*appoption*/.servlet);
+	    
+	    me._m3/*loadResources*/();
+	},
+	
+	_m2/*registerFiles*/: function() {
+		var me = this,
+			i,
+			d_upfiles = me.down("[name=d_upfiles]"),
+			dgrid = me.down("[name=dgrid]"),
+			store = d_upfiles.store,
+			rec, addr = [],
+			req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+			ds = dgrid.store,
+			dmap = {};
+		
+		for (i=0; i < ds.data.items.length; i++)
+		{
+			rec = ds.data.items[i];
+			dmap[rec.get("name")] = rec.get("uid");
+		}
+		
+		for (i=0; i < store.data.items.length; i++)
+		{
+			rec = store.data.items[i];
+			addr.push("<item uid='" + rec.get("uid") + "' name='" + rec.get("filename") + "'" + (dmap[rec.get("filename")] ? " ouid='" + dmap[rec.get("filename")] + "'" : "") + "/>");
+		}
+		
+		if (addr.length)
+		{
+			addr = "<smsg>" + addr.join("") + "</smsg>";
+			
+			req.init(me, 
+				{
+		            ack: "11",
+		            payload: addr,
+		            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'reg_rcs', buid: me.uid})
+		        }, me, function(xdoc) {
+		        	me._m3/*loadResources*/(1);
+		        }, false);
+			req._l/*request*/();
+		}
+	},
+	
+	_m3/*loadResources*/: function(bmode) {
+		var me = this,
+			dgrid = me.down("[name=dgrid]"),
+			req_g = new IG$/*mainapp*/._I3e/*requestServer*/(),
+			mname = "DashboardResources";
+		
+		if (bmode == 1)
+		{
+			d_upfiles = me.down("[name=d_upfiles]");
+			d_upfiles.store.removeAll();
+			d_upfiles.hide();
+			me.down("[name=d_file]").hide();
+		}
+		
+		if (!me.gobj)
+		{
+			req_g.init(me, 
+				{ 
+		            ack: "11",
+		            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: "/" + mname, name: mname, type: "Workspace", post: "create", duty: "everyone", mode: "s"}, "uid;type;name;post;duty;mode"),
+		            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'translate'})
+		        }, me, function(xdoc) {
+		        	var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item");
+		        	
+		        	if (tnode)
+		        	{
+		        		me.gobj = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnode);
+		        		
+		        		me._m3a/*loadResource*/(me.gobj.uid, bmode, "global", new IG$/*mainapp*/._I3d/*callBackObj*/(me, function() {
+							var me = this;
+							if (me.uid && me.cmode == "page")
+							{
+								me._m3a/*loadResource*/(me.gobj.uid, bmode, "page");
+							}
+						}));
+			    	}
+		        }, false);
+			req_g._l/*request*/();
+		}
+		else
+		{
+			me._m3a/*loadResource*/(me.gobj.uid, bmode, "global", new IG$/*mainapp*/._I3d/*callBackObj*/(me, function() {
+				var me = this;
+				if (me.uid && me.cmode == "page")
+				{
+					me._m3a/*loadResource*/(me.gobj.uid, bmode, "page");
+				}
+			}));
+		}
+	},
+	
+	_m3a/*loadResource*/: function(muid, bmode, ctype, callback) {
+		var me = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+			dgrid = me.down("[name=dgrid]");
+			
+		req.init(me, 
+			{ 
+	            ack: "5",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: muid}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'folder'})
+	        }, me, function(xdoc) {
+	        	var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+	        		tnodes = tnode ? IG$/*mainapp*/._I26/*getChildNodes*/(tnode) : null,
+	        		i, dp = [], p, rec;
+	        	
+	        	if (tnodes)
+	        	{
+		        	for (i=0; i < tnodes.length; i++)
+		        	{
+		        		p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+		        		p.btype = ctype;
+		        		if (p.name.indexOf(".") > -1)
+		        		{
+		        			p.fileext = p.name.substring(p.name.lastIndexOf(".") + 1);
+		        		}
+		        		dp.push(p);
+		        	}
+	        	}
+	        	
+	        	for (i=dgrid.store.data.items.length-1; i>=0; i--)
+	        	{
+	        		rec = dgrid.store.data.items[i];
+	        		
+	        		if (rec.get("btype") == ctype)
+	        		{
+	        			dgrid.store.remove(rec);
+	        		}
+	        	}
+	        	
+	        	for (i=0; i < dp.length; i++)
+	        	{
+	        		dgrid.store.add(dp[i]);
+	        	}
+	        	
+	        	if (bmode == 9)
+				{
+					me.commitCode();
+				}
+				
+				callback && callback.execute();
+	        	
+	        }, false);
+		req._l/*request*/();
+	},
+	
+	_l2/*removeItem*/: function(rec) {
+		var me = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+			address = "<smsg><item uid='" + rec.get("uid") + "'/></smsg>",
+			dgrid = me.down("[name=dgrid]");
+			
+		req.init(me, 
+			{
+	            ack: "30",
+                payload: address,
+                mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "delete"})
+	        }, me, function(xdoc) {
+	        	dgrid.store.remove(rec);
+	        }, null);
+		req._l/*request*/();
+	},
+		
+	initComponent : function() {
+		var me = this;
+		
+		$s.apply(this, {
+			tbar: [
+				{
+	            	iconCls: "icon-toolbar-import",
+	            	tooltip: IRm$/*resources*/.r1("L_IMPORT_FILE"),
+	            	text: IRm$/*resources*/.r1("L_IMPORT_FILE"),
+	            	handler: function() {this._t$/*toolbarHandler*/("cmd_import"); },
+	            	scope: this
+	            },
+				{
+		        	iconCls: "icon-refresh",
+		        	tooltip: "Reload",
+		        	handler: function() {
+		        		this._t$/*toolbarHandler*/("cmd_reload"); 
+		        	},
+		        	scope: this
+		        },
+		        "-",
+		        {
+		        	iconCls: "icon-toolbar-runreport",
+		        	tooltip: "Open Dashboard Resources",
+		        	handler: function() {
+		        		this._t$/*toolbarHandler*/("cmd_mgr_rcs"); 
+		        	},
+		        	scope: this
+		        }
+			],
+			items: [
+				
+				{
+					xtype: "container",
+					layout: {
+						type: "vbox",
+						align: "stretch"
+					},
+					items: [
+						{
+							html: "<div class='m_fileupload'></div>",
+							name: "d_file",
+							height: 120,
+							hidden: true,
+							bodyPadding: 10
+						},
+						{
+							name: "d_upfiles",
+							xtype: "gridpanel",
+							height: 120,
+							hidden: true,
+							selType: "checkboxmodel",
+							selModel:  {
+								mode: "MULTI"
+							},
+							store: {
+								fields: [
+									"uid", "filename", "fileext"
+								]
+							},
+							columns: [
+								{
+									text: IRm$/*resources*/.r1("L_FILENAME"),
+									dataIndex: "filename",
+									flex: 1
+								},
+								{
+									text: IRm$/*resources*/.r1("L_FILEEXT"),
+									dataIndex: "fileext",
+									flex: 1
+								},
+								{
+									xtype: 'actioncolumn',
+									width: 20,
+									items: [
+										{
+											iconCls: "icon-grid-delete",
+											tooltip: 'Delete item',
+											handler: function (grid, rowIndex, colIndex) {
+												var rec = grid.store.getAt(rowIndex);
+												
+												grid.store.remove(rec);
+											}
+										}
+									]
+								}
+							],
+							fbar: [
+								"->",
+								{
+									xtype: "button",
+									text: "Commit All Files",
+									handler: function() {
+										this._t$/*toolbarHandler*/("cmd_c_files");
+									},
+									scope: this
+								},
+								{
+									xtype: "button",
+									text: "Cancel All Files",
+									handler: function() {
+										var me = this,
+											d_upfiles = me.down("[name=d_upfiles]");
+											
+										d_upfiles.store.removeAll();
+										d_upfiles.hide();
+										
+										me.down("[name=d_file]").hide();
+									},
+									scope: this
+								}
+							]
+						},
+						{
+							xtype: "gridpanel",
+							name: "dgrid",
+							flex: 1,
+							selType: "checkboxmodel",
+							selModel:  {
+								mode: "MULTI"
+							},
+							store: {
+								fields: [
+									"uid", "name", "type", "filename", "btype", "memo", "imgwidth", "imgheight", "fileext"
+								]
+							},
+							columns: [
+								{
+									text: IRm$/*resources*/.r1("B_TYPE"),
+									width: 100,
+									dataIndex: "btype"
+								},
+								{
+									text: IRm$/*resources*/.r1("B_NAME"),
+									flex: 1,
+									dataIndex: "name"
+								},
+								{
+									text: IRm$/*resources*/.r1("L_FILENAME"),
+									flex: 1,
+									dataIndex: "memo"
+								},
+								{
+									text: IRm$/*resources*/.r1("L_FILEEXT"),
+									width: 120,
+									dataIndex: "fileext"
+								},
+//								{
+//									text: IRm$/*resources*/.r1("L_PRV_DATA"),
+//									menuDisabled: true,
+//									width: 120,
+//									renderer: function(value, data, record) {
+//										return "<div class='ig-navi-itemicon' style='height:80px'><img src='" + ig$/*appoption*/.servlet + "?sreq=resource&_rcs_=" + record.get("uid") + "&_mts_=" + IG$/*mainapp*/._g$a/*global_mts*/ + "'></img></div>";
+//									}
+//								},
+								{
+									text: IRm$/*resources*/.r1("B_WIDTH"),
+									dataIndex: "imgwidth",
+									width: 80
+								},
+								{
+									text: IRm$/*resources*/.r1("B_HEIGHT"),
+									dataIndex: "imgheight",
+									width: 80
+								},
+								{
+									xtype: 'actioncolumn',
+									width: 40,
+									items: [
+									    
+										{
+											iconCls: "icon-grid-delete",
+											tooltip: 'Delete item',
+											handler: function (grid, rowIndex, colIndex) {
+												var me = this,
+													rec = grid.store.getAt(rowIndex);
+												IG$/*mainapp*/._I55/*confirmMessages*/(IRm$/*resources*/.r1("B_CONFIRM"), IRm$/*resources*/.r1("B_CD_MHS", rec.get("name")), function(dlg) {
+													if (dlg == "yes")
+													{
+														rec && me._l2/*removeItem*/(rec);
+													}
+												});
+											},
+											scope: this
+										}
+									]
+								}
+							],
+							listeners: {
+								cellclick: function(tobj, td, cellIndex, record, tr, rowIndex, e, eOpts) {
+									var me = this,
+										fext = record.get("fileext"),
+										ftype = (/png|gif|jpg|jpeg/).test(fext);
+									
+									if (cellIndex == 2 && ftype)
+									{
+										var dlg = new IG$/*mainapp*/._dRp/*dashboard_rcsmgr_preview*/({
+											uid: record.get("uid")
+										});
+										IG$/*mainapp*/._I_5/*checkLogin*/(this, dlg);
+									}
+								},
+								scope: this
+							}
+						}
+					]
+				}
+			]
+		});
+		
+		IG$/*mainapp*/._dR/*dashboard_rcsmgr*/.superclass.initComponent.apply(this, arguments);
+	},
+	listeners: {
+		afterrender: function(tobj) {
+			tobj._m1/*initApp*/();
+		}
+	}
+});
+
+IG$/*mainapp*/._xA/*mgr_dashboard*/ = $s.extend(IG$/*mainapp*/._I57/*IngPanel*/, {
+	scroll: false,
+	initialized: false,
+	closable: true,
+	"layout": "fit",
+	bodyPadding: 5,
+	iconCls: "icon-ing-docdef",
+	
+	curnode: null,
+	cursop: null,
+	
+	_1/*init*/: function() {
+		var me = this;
+		
+		if (me._cmode == 2)
+		{
+			me._IFd/*init_f*/("BusinessLogic", 0);
+		}
+		else
+		{
+			me._IFd/*init_f*/("BusinessProcess", 0);
+			me._IFd/*init_f*/("DashboardResources", 1);
+		}
+	},
+	
+	_IFd/*init_f*/: function(mname, ptype) {
+		var me = this,
+			mtree,
+			m_navi = this.down("[name=m_navi]"),
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		
+		req.init(me, 
+			{
+	            ack: "11",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: "/" + mname, name: mname, type: "Workspace", post: "create", duty: "everyone", mode: "s"}, "uid;type;name;post;duty;mode"),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "translate"})
+	        }, me, function(xdoc) {
+	        	var me = this,
+	        		tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+	        		tuid = tnode ? IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "uid") : null,
+	        		m_1;
+	        		
+	        	if (tuid)
+	        	{
+	        		if (ptype == 0)
+	        		{
+			        	mtree = new IG$/*mainapp*/._Idd/*explorerTree*/({
+							name: "mtree",
+							rootuid: tuid,
+							_s1/*showcustommenu*/: function(rec) {
+								var me = this,
+									menu = this.customMenu,
+									typename = rec.get("type").toLowerCase(),
+									itemname = rec.get("name"),
+									itemaddr = rec.get("nodepath"),
+									itemuid = rec.get("uid"),
+									itemtype = rec.get("type"),
+									writable = (rec.get("writable") == "T" || rec.get("manage") == "T") ? true : false,
+									manageable = (rec.get("manage") == "T") ? true : false,
+									r = false;
+									
+								menu.removeAll();
+								        						
+								if (writable || manageable)
+								{
+									r = true;
+									menu.add(
+										{
+									    	text: IRm$/*resources*/.r1("B_FOLDER"),
+									    	hidden: ig$/*appoption*/.fm/*features*/["ig_n_f_f"],
+									    	handler: function() {
+									    		this._I90/*createMetaObject*/.call(this, "Folder", itemuid, itemaddr, rec);
+								   	   		},
+								   	   		scope: this
+									    }
+									);
+									
+									if (typename == "folder")
+									{
+										menu.add(
+											{
+										    	text: IRm$/*resources*/.r1("L_REMOVE"),
+										    	hidden: ig$/*appoption*/.fm/*features*/["ig_n_f_f"],
+										    	handler: function() {
+										    		this._IHf/*deleteMetaObject*/.call(this, itemuid, rec);
+									   	   		},
+									   	   		scope: this
+										    }
+										);
+									}
+								}
+								
+								return r;
+							},
+							_i4/*itemExpandHandler*/: new IG$/*mainapp*/._I3d/*callBackObj*/(me, me.rs__i3/*cellClickHandler*/),
+							_i3/*cellClickHandler*/: new IG$/*mainapp*/._I3d/*callBackObj*/(me, me.rs__i3/*cellClickHandler*/)
+						});
+					
+						m_navi.add(mtree);
+					}
+					else if (ptype == 1)
+					{
+						m_1 = me.down("[name=m_1]");
+						m_1.uid = tuid;
+						m_1._IFe/*initF*/.call(m_1);
+					}
+				}
+				
+	        });
+		req._l/*request*/();
+	},
+	
+	rs__i3/*cellClickHandler*/: function(node) {
+		var me = this,
+			t_btn = me.down("[name=t_btn]");
+					
+		t_btn.setDisabled(true);
+		
+		me._s1 = node;
+		
+		if (node.get("writable") == "T" || node.get("manageable") == "T")
+		{
+			t_btn.setDisabled(false);
+		}
+		
+		me.l1/*loadContent*/(node);
+	},
+	
+	l1/*loadContent*/: function(node) {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+			
+		req.init(panel, 
+			{
+	            ack: "5",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: node.get("uid")}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: ''})
+	        }, panel, function(xdoc) {
+	        	var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+					tnodes = (tnode) ? IG$/*mainapp*/._I26/*getChildNodes*/(tnode) : null,
+					dp = [],
+					g1 = this.down("[name=g1]"),
+					i, p;
+				
+				if (tnodes)
+				{
+					for (i=0; i < tnodes.length; i++)
+					{
+						p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+						
+						if ((panel._cmode == 2 && p.type == "JavaClass") || (panel._cmode !=2 && p.type == "ClassModule"))
+						{
+							dp.push(p);
+						}
+					}
+				}
+				g1.store.loadData(dp);
+	        }, false);
+		req._l/*request*/();
+	},
+	
+	_d/*createItem*/: function(itemtype) {
+		var me = this,
+			mtree = me.down("[name=mtree]");
+		
+		if (me._s1)
+		{
+			mtree._I90/*createMetaObject*/.call(mtree, itemtype, me._s1.get("uid"), me._s1.get("nodepath"), me._s1);
+		}
+	},
+	
+    initComponent: function(){
+    	var me = this;
+		
+		me.title = IRm$/*resources*/.r1("I_MGR_DBD");
+		
+		me.items = [
+			{
+				xtype: "panel",
+				layout: "card",
+				border: 0,
+				defaults: {
+					deferredRender: false
+				},
+				name: "n_c",
+				dockedItems: [
+					{
+						xtype: "toolbar",
+						dock: "top",
+						hidden: me._cmode == 2,
+						items: [
+							{
+								xtype: "displayfield",
+								value: IRm$/*resources*/.r1("L_SEL_MODE")
+							},
+							"-",
+							{
+								xtype: "button",
+								text: IRm$/*resources*/.r1("L_CLASS_MOD"),
+								name: "b_0",
+								pressed: 1,
+								handler: function() {
+									var me = this,
+										l = me.down("[name=n_c]").getLayout();
+									me.down("[name=b_0]").toggle(true);
+									me.down("[name=b_1]").toggle(false);
+									me.down("[name=b_2]").toggle(false);
+									l.setActiveItem(0);
+								},
+								scope: this
+							},
+							{
+								xtype: "button",
+								name: "b_1",
+								text: IRm$/*resources*/.r1("L_RESOURCE"),
+								handler: function() {
+									var me = this,
+										l = me.down("[name=n_c]").getLayout();
+									me.down("[name=b_0]").toggle(false);
+									me.down("[name=b_1]").toggle(true);
+									me.down("[name=b_2]").toggle(false);
+									l.setActiveItem(1);
+								},
+								scope: this
+							},
+							{
+								xtype: "button",
+								name: "b_2",
+								text: IRm$/*resources*/.r1("L_MENU"),
+								handler: function() {
+									var me = this,
+										l = me.down("[name=n_c]").getLayout();
+									me.down("[name=b_0]").toggle(false);
+									me.down("[name=b_1]").toggle(false);
+									me.down("[name=b_2]").toggle(true);
+									l.setActiveItem(2);
+								},
+								scope: this
+							}
+						]
+					}
+				],
+				items: [
+		            {
+		            	xtype: "panel",
+		            	"layout": "border",
+		            	name: "m_0",
+		            	border: false,
+		            	title: IRm$/*resources*/.r1("L_CLASS_MOD"),
+		            	items: [
+							{
+			            		xtype: "panel",
+			            		layout: "fit",
+			            		region: "west",
+								collapsed: false,
+			            		width: 200,
+			            		title: IRm$/*resources*/.r1("L_NAVIGATOR"),
+			            		name: "m_navi",
+			            		tbar: [
+			            			{
+			            				xtype: "button",
+			            				name: "t_btn",
+			            				text: IRm$/*resources*/.r1("L_CREATE_ITEM"),
+			            				disabled: true,
+			            				menu: {
+			            					xtype: "menu",
+									        items: 
+										        me._cmode == 2 ? 
+										        [
+										        	{
+										            	text: IRm$/*resources*/.r1("D_JAVAPACKAGE"),
+										            	hidden: ig$/*appoption*/.fm/*features*/["ig_n_f_f"], 
+										            	handler: function() {
+										            		this._d/*createItem*/("JavaPackage");
+										            	},
+										            	scope: this
+										            },
+										            "-",
+										            {
+										            	text: IRm$/*resources*/.r1("D_JAVACLASS"),
+										            	hidden: ig$/*appoption*/.fm/*features*/["ig_n_jcm"], 
+										            	handler: function() {
+										            		this._d/*createItem*/("JavaClass");
+										            	},
+										            	scope: this
+										            }
+										        ]
+										        :
+										        [
+										            {
+										            	text: IRm$/*resources*/.r1("B_FOLDER"),
+										            	hidden: ig$/*appoption*/.fm/*features*/["ig_n_f_f"], 
+										            	handler: function() {
+										            		this._d/*createItem*/("Folder");
+										            	},
+										            	scope: this
+										            },
+										            "-",
+										            {
+										            	text: IRm$/*resources*/.r1("D_CLASSMODULE"),
+										            	hidden: ig$/*appoption*/.fm/*features*/["ig_n_jcm"], 
+										            	handler: function() {
+										            		this._d/*createItem*/("ClassModule");
+										            	},
+										            	scope: this
+										            }
+										        ]
+									    }
+			            			},
+			            			{
+			            				xtype: "button",
+			            				iconCls: "icon-refresh",
+			            				tooltip: IRm$/*resources*/.r1("L_REFRESH"),
+						            	handler: function() {
+						            		var me = this,
+						            			mtree = me.down("[name=mtree]"),
+						            			tnode = mtree.getRootNode();
+						            			
+						            		mtree._I92/*refreshNode*/.call(mtree, tnode);
+						            	},
+						            	scope: this
+			            			}
+			            		],
+			            		items: [
+			        				
+			            		]
+			            	},
+			            	{
+			            		xtype: "panel",
+			            		region: "center",
+			            		flex: 1,
+			            		layout: "fit",
+			            		tbar: [
+			            			{
+			            				text: "Compile",
+			            				handler: function() {
+			            					var panel = this,
+												g1 = panel.down("[name=g1]"),
+												address = "<smsg>",
+												checked = g1.getSelectionModel().selected,
+												rec,
+												itemcnt = 0,
+												req = new IG$/*mainapp*/._I3e/*requestServer*/();
+											
+											IG$/*mainapp*/._I55/*confirmMessages*/(ig$/*appoption*/.appname, "Confirm to compile selected content?", function(e) {
+												if (e == "yes")
+												{
+													if (checked.length > 0)
+													{
+														for (i=0; i < checked.length; i++)
+														{
+															rec = checked.items[i];
+															address += "<item uid='" + rec.get("uid") + "' option='compile'/>";
+															itemcnt++;
+														}
+														
+														address += "</smsg>";
+														
+														if (itemcnt > 0)
+														{
+															panel.setLoading(true);
+															
+															req.init(panel, 
+																{
+														            ack: "73",
+													                payload: address,
+													                mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "compile"})
+														        }, panel, function(xdoc) {
+														        	var i, j,
+														        		g1 = panel.down("[name=g1]"),
+														        		tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg"),
+														        		tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode),
+														        		rec, uid, st;
+														        	
+														        	for (i=0; i < tnodes.length; i++)
+														        	{
+														        		uid = IG$/*mainapp*/._I1b/*XGetAttr*/(tnodes[i], "uid");
+														        		st = IG$/*mainapp*/._I1b/*XGetAttr*/(tnodes[i], "status");
+														        		rec = null;
+														        		for (j=0; j < g1.store.data.items.length; j++)
+														        		{
+														        			if (g1.store.data.items[j].get("uid") == uid)
+														        			{
+														        				rec = g1.store.data.items[j];
+														        				break;
+														        			}
+														        		}
+														        		
+														        		if (rec)
+														        		{
+														        			rec.set("msg", st == "S" ? "Success" : "Error");
+														        		}
+														        	}
+														        }, null);
+															req._l/*request*/();
+														}
+													}
+												}
+											});
+			            				},
+			            				scope: this
+									},
+			            			{
+										text: IRm$/*resources*/.r1("B_REMOVE"),
+										handler: function() {
+											var panel = this,
+												g1 = panel.down("[name=g1]"),
+												address = "<smsg>",
+												checked = g1.getSelectionModel().selected,
+												rec,
+												itemcnt = 0,
+												req = new IG$/*mainapp*/._I3e/*requestServer*/();
+											
+											IG$/*mainapp*/._I55/*confirmMessages*/(ig$/*appoption*/.appname, "Confirm to delete content?", function(e) {
+												if (e == "yes")
+												{
+													if (checked.length > 0)
+													{
+														for (i=0; i < checked.length; i++)
+														{
+															rec = checked.items[i];
+															address += "<item uid='" + rec.get("uid") + "'/>";
+															itemcnt++;
+														}
+														
+														address += "</smsg>";
+														
+														if (itemcnt > 0)
+														{
+															panel.setLoading(true);
+															
+															req.init(panel, 
+																{
+														            ack: "30",
+													                payload: address,
+													                mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "delete"})
+														        }, panel, function(xdoc) {
+														        	var i;
+														        	for (i=checked.length-1; i>=0; i--)
+														        	{
+														        		g1.store.remove(checked.items[i]);
+														        	}
+														        }, null);
+															req._l/*request*/();
+														}
+													}
+												}
+											});
+										},
+										scope: this
+									}
+			            		],
+			            		items: [
+			            			{
+			            				xtype: "gridpanel",
+										name: "g1",
+										selType: "checkboxmodel",
+										selModel: {
+											checkSelector: ".x-grid-cell",
+											mode: "MULTI"
+										},
+			            				store: {
+			            					xtype: "store",
+			            					fields: [
+			            						"uid", "name", "description", "nodepath", "type", "writable", "msg"
+			            					]
+			            				},
+			            				columns: [
+			            					{
+			            						text: IRm$/*resources*/.r1("B_NAME"),
+			            						dataIndex: "name",
+			            						width: 250
+			            					},
+			            					{
+			            						text: IRm$/*resources*/.r1("B_DESC"),
+			            						dataIndex: "description",
+			            						flex: 1
+			            					},
+			            					{
+			            						text: "Message",
+			            						dataIndex: "msg",
+			            						width: 80
+			            					},
+			            					{
+			            						xtype: "actioncolumn",
+			            						width: 30,
+												menuDisabled: true,
+												items: [
+													{
+														iconCls: "icon-grid-config",
+														tooltip: IRm$/*resources*/.r1('L_EDIT'),
+														handler: function (grid, rowIndex, colIndex) {
+															var grd = grid,
+																store = grd.store,
+																rec = store.getAt(rowIndex),
+																mp = IG$/*mainapp*/._I7d/*mainPanel*/;
+																
+															if (mp)
+															{
+																mp.m1$7/*navigateApp*/.call(mp, rec.get("uid"), rec.get("type").toLowerCase(), rec.get("name"), rec.get("nodepath"), true, rec.get("writable") == "T");
+															}
+														},
+														scope: this
+													}
+												]
+			            					}
+			            				],
+			            				listeners: {
+			            					cellclick: function(grid, td, cellIndex, record, tr, rowIndex, e, eopts) {
+			            						if (cellIndex == 3)
+			            						{
+			            							var grd = grid,
+														store = grd.store,
+														rec = store.getAt(rowIndex),
+														mp = IG$/*mainapp*/._I7d/*mainPanel*/;
+														
+													if (mp)
+													{
+														mp.m1$7/*navigateApp*/.call(mp, rec.get("uid"), rec.get("type").toLowerCase(), rec.get("name"), rec.get("nodepath"), true, rec.get("writable") == "T");
+													}
+			            						}
+			            					},
+			            					scope: this
+			            				}
+			            			}
+			            		]
+			            	}
+		            	]
+		            },
+		            new IG$/*mainapp*/._dR/*dashboard_rcsmgr*/({
+		            	cmode: "global",
+		            	title: IRm$/*resources*/.r1("L_RESOURCE"),
+		            	name: "m_1"
+		            }),
+		            new IG$/*mainapp*/._I7_/*dashboardmenu*/({
+		            	title : IRm$/*resources*/.r1("L_MENU"),
+		            	name: "m_2"
+		            })
+				]
+			}
+		];
+		
+		this.listeners = {
+			afterrender: function(tobj) {
+				tobj._1/*init*/.call(tobj);
+			}
+		}
+
+		IG$/*mainapp*/._xA/*mgr_dashboard*/.superclass.initComponent.call(this);
+    }
+});
+
+IG$/*mainapp*/._I7k/*systemlookup*/ = $s.extend(IG$/*mainapp*/._I57/*IngPanel*/, {
+	scroll: false,
+	initialized: false,
+	closable: true,
+	"layout": "fit",
+	bodyPadding: 5,
+	iconCls: "icon-ing-docdef",
+	
+	curnode: null,
+	cursop: null,
+	
+	_IFd/*init_f*/: function() {
+		var me = this,
+			mtree,
+			m_navi = this.down("[name=m_navi]"),
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		
+		req.init(me, 
+			{
+	            ack: "11",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: "/SYS_Lookup", name: "SYS_Lookup", type: "Workspace", post: "create", duty: "everyone", mode: "s"}, "uid;type;name;post;duty;mode"),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "translate"})
+	        }, me, function(xdoc) {
+	        	var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+	        		tuid = tnode ? IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "uid") : null;
+	        		
+	        	if (tuid)
+	        	{
+	        		me.tuid = tuid;
+	        		
+		        	mtree = new IG$/*mainapp*/._Idd/*explorerTree*/({
+						name: "mtree",
+						rootuid: tuid,
+						rootname: "Code Mapping",
+						_s1/*showcustommenu*/: function(rec) {
+							var me = this,
+								menu = this.customMenu,
+								typename = rec.get("type").toLowerCase(),
+								itemname = rec.get("name"),
+								itemaddr = rec.get("nodepath"),
+								itemuid = rec.get("uid"),
+								itemtype = rec.get("type"),
+								writable = (rec.get("writable") == "T" || rec.get("manage") == "T") ? true : false,
+								manageable = (rec.get("manage") == "T") ? true : false,
+								r = false;
+								
+							menu.removeAll();
+							        						
+							if (writable || manageable)
+							{
+								r = true;
+								menu.add({
+							    	text: IRm$/*resources*/.r1("B_FOLDER"),
+							    	hidden: ig$/*appoption*/.fm/*features*/["ig_n_f_f"],
+							    	handler: function() {
+							    		this._I90/*createMetaObject*/.call(this, "Folder", itemuid, itemaddr, rec);
+						   	   		},
+						   	   		scope: this
+							    });
+								
+								menu.add({
+							    	text: IRm$/*resources*/.r1("L_RENAME_ITEM", itemname),
+							    	hidden: ig$/*appoption*/.fm/*features*/["ig_n_ren"],
+							    	handler: function() {
+							    		this._I91/*renameMetaObject*/.call(this, itemname, itemuid, itemaddr, record);
+						   	   		},
+						   	   		scope: this
+							    });
+							}
+							
+							return r;
+						},
+						_i4/*itemExpandHandler*/: new IG$/*mainapp*/._I3d/*callBackObj*/(me, me.rs__i3/*cellClickHandler*/),
+						_i3/*cellClickHandler*/: new IG$/*mainapp*/._I3d/*callBackObj*/(me, me.rs__i3/*cellClickHandler*/)
+					});
+				
+					m_navi.add(mtree);
+				}
+				
+	        });
+		req._l/*request*/();
+	},
+	
+	rs__i3/*cellClickHandler*/: function(node) {
+		var me = this,
+			t_btn = me.down("[name=t_btn]");
+					
+		t_btn.setDisabled(true);
+		
+		me._s1 = node;
+		
+		if (node.get("writable") == "T" || node.get("manageable") == "T")
+		{
+			t_btn.setDisabled(false);
+		}
+		
+		me.l1/*loadContent*/(node);
+	},
+	
+	l1/*loadContent*/: function(node) {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+			
+		req.init(panel, 
+			{
+	            ack: "5",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: node.get("uid")}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: ''})
+	        }, panel, function(xdoc) {
+	        	var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+					tnodes = (tnode) ? IG$/*mainapp*/._I26/*getChildNodes*/(tnode) : null,
+					dp = [],
+					g1 = this.down("[name=g1]"),
+					i, p;
+				
+				if (tnodes)
+				{
+					for (i=0; i < tnodes.length; i++)
+					{
+						p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+						
+						if (p.type == "CodeMap")
+						{
+							dp.push(p);
+						}
+					}
+				}
+				g1.store.loadData(dp);
+	        }, false);
+		req._l/*request*/();
+	},
+	
+	_d/*createItem*/: function(itemtype) {
+		var me = this,
+			mtree = me.down("[name=mtree]");
+		
+		if (me._s1)
+		{
+			mtree._I90/*createMetaObject*/.call(mtree, itemtype, me._s1.get("uid"), me._s1.get("nodepath"), me._s1);
+		}
+	},
+	
+	_t$/*toolbarHandler*/: function(cmd) {
+		var me = this,
+			g1,
+			sel, rec,
+			itemcnt = 0,
+			iscopy = false;
+			
+		switch (cmd)
+		{
+		case "cmd_rename":
+			g1 = me.down("[name=g1]");
+			sel = g1.getSelectionModel().selected;
+			
+			if (sel && sel.length > 0)
+			{
+				rec = sel.items[0];
+				
+				var dlgpop = new IG$/*mainapp*/._Icd/*makeItemEditor*/(
+					{
+						itemname: rec.get("name"),
+						uid: rec.get("uid"),
+						nodepath: rec.get("nodepath"),
+						itemtype: rec.get("type"),
+						memo: rec.get("memo") || "",
+						callback: new IG$/*mainapp*/._I3d/*callBackObj*/(me, function(item) {
+							
+						})
+					}
+				);
+				
+				IG$/*mainapp*/._I_5/*checkLogin*/(this, dlgpop);
+			}
+			break;
+		case "cmd_move":
+			g1 = me.down("[name=g1]");
+			sel = g1.getSelectionModel().selected;
+			
+			if (sel && sel.length > 0)
+			{
+				var me = this,
+					dlgitemsel = new IG$/*mainapp*/._I96/*metaSelectDlg*/({
+						visibleItems: 'workspace;folder',
+						targetobj: "folder",
+						u5x/*treeOptions*/: {
+							cubebrowse: false,
+							rootuid: me.tuid
+						},
+						callback: new IG$/*mainapp*/._I3d/*callBackObj*/(me, function(item) {
+							if (item)
+							{
+								IG$/*mainapp*/._I55/*confirmMessages*/(IRm$/*resources*/.r1("B_CONFIRM"), IRm$/*resources*/.r1("B_CD_MHS", item.name), function(dlg) {
+									if (dlg == "yes")
+									{
+										address = "<smsg>";
+										itemcnt = 0;
+										
+										for (i=0; i < sel.length; i++)
+										{
+											rec = sel.items[i];
+											if (rec.get("writable") == "T" || rec.get("manage") == "T")
+											{
+												address += "<item uid='" + rec.get("uid") + "'/>";
+												itemcnt++;
+											}
+										}
+										
+										address += "</smsg>";
+										
+										if (itemcnt > 0)
+										{
+											me.setLoading(true);
+											req = new IG$/*mainapp*/._I3e/*requestServer*/();
+											req.init(me, 
+												{
+										            ack: "11",
+									                payload: address,
+									                mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: (iscopy == true ? "copy" : "move"), target: item.uid})
+										        }, me, function(xdoc) {
+										        	var me = this,
+								            			mtree = me.down("[name=mtree]"),
+								            			tnode = mtree.getRootNode();
+								            			
+								            		mtree._I92/*refreshNode*/.call(mtree, tnode);
+										        }, null, null);
+											req._l/*request*/();
+										}
+									}
+								});
+							}
+						})
+					});
+				IG$/*mainapp*/._I_5/*checkLogin*/(this, dlgitemsel);
+			}
+			break;
+		case "cmd_delete":
+			g1 = me.down("[name=g1]");
+			sel = g1.getSelectionModel().selected;
+			
+			if (sel && sel.length > 0)
+			{
+				rec = sel.items[0];
+				
+				IG$/*mainapp*/._I55/*confirmMessages*/(ig$/*appoption*/.appname, "Confirm to delete content?", function(e) {
+					if (e == "yes")
+					{
+						var req = new IG$/*mainapp*/._I3e/*requestServer*/();
+						req.init(me, 
+							{
+								ack: "7",
+								payload: "<smsg><item uid='" + rec.get("uid") + "'/></smsg>",
+								mbody: IG$/*mainapp*/._I2e/*getItemOption*/()
+							}, me, function(xdoc) {
+								g1.store.remove(rec);
+							}, null);
+						req._l/*request*/();
+					}
+				});
+			}
+			break;
+		case "cmd_export_meta":
+			IG$/*mainapp*/._I55/*confirmMessages*/(IRm$/*resources*/.r1("T_EXP_MC"), IRm$/*resources*/.r1("T_EXP_MC_Q"), function(dlg) {
+				var panel = me,
+					meta,
+					req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+					i, rec,
+					payload;
+				
+				meta = {
+					uid: panel.tuid,
+					name: "SYS_Lookup",
+					type: "Workspace",
+					nodepath: "/SYS_Lookup"
+				};
+					
+				if (meta && meta.uid && dlg == "yes")
+				{
+					payload = "<smsg>";
+					payload += "<item" + IG$/*mainapp*/._I20/*XUpdateInfo*/(meta, "uid;nodepath;name;type", "s") + "/>";
+					payload += "</smsg>";
+					req.init(panel, 
+						{
+				            ack: "5",
+			                payload: payload,
+			                mbody: IG$/*mainapp*/._I2e/*getItemOption*/({output: "file"})
+				        }, panel, function(xdoc) {
+				        	var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+								fpath, filename;
+							
+							if (tnode)
+							{
+								fpath = IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "luid");
+								filename = IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "filename");
+								
+								if (fpath && filename)
+								{
+									$.download(ig$/*appoption*/.servlet, [
+										{name: "ack", value: "35"},
+					    				{name: "payload", value: fpath},
+					    				{name: "mbody", value: filename},
+					    				{name: "_mts_", value: (IG$/*mainapp*/._g$a/*global_mts*/ || "")}
+					    			], 'POST');
+								}
+							}
+				        }, null);
+					req._l/*request*/();
+				}
+			}, me, me);
+			break;
+		}
+	},
+	
+    initComponent: function(){
+    	var me = this;
+		
+		me.items = [
+            {
+            	xtype: "panel",
+            	"layout": "border",
+            	border: false,
+            	items: [
+					{
+	            		xtype: "panel",
+	            		layout: "fit",
+	            		region: "west",
+						collapsed: false,
+	            		width: 200,
+	            		title: "Navigator",
+	            		name: "m_navi",
+	            		tbar: [
+	            			{
+	            				xtype: "button",
+	            				name: "t_btn",
+	            				text: IRm$/*resources*/.r1("B_CR"),
+	            				disabled: true,
+	            				menu: {
+	            					xtype: "menu",
+							        items: [
+							            {
+							            	text: IRm$/*resources*/.r1("B_FOLDER"),
+							            	hidden: ig$/*appoption*/.fm/*features*/["ig_n_f_f"], 
+							            	handler: function() {
+							            		this._d/*createItem*/("Folder");
+							            	},
+							            	scope: this
+							            },
+							            "-",
+							            {
+							            	text: IRm$/*resources*/.r1("L_CODEMAPPING"),
+							            	hidden: ig$/*appoption*/.fm/*features*/["ig_n_lk"], 
+							            	handler: function() {
+							            		this._d/*createItem*/("CodeMap");
+							            	},
+							            	scope: this
+							            }
+							        ]
+							    }
+	            			},
+	            			{
+	            				xtype: "button",
+	            				iconCls: "icon-refresh",
+	            				tooltip: IRm$/*resources*/.r1("L_REFRESH"),
+				            	handler: function() {
+				            		var me = this,
+				            			mtree = me.down("[name=mtree]"),
+				            			tnode = mtree.getRootNode();
+				            			
+				            		mtree._I92/*refreshNode*/.call(mtree, tnode);
+				            	},
+				            	scope: this
+	            			}
+	            		],
+	            		items: [
+	        				
+	            		]
+	            	},
+	            	{
+	            		xtype: "panel",
+	            		region: "center",
+	            		flex: 1,
+	            		layout: "fit",
+						tbar: [
+							{
+								xtype: "button",
+								text: IRm$/*resources*/.r1("L_RENAME"),
+								handler: function() {
+									this._t$/*toolbarHandler*/("cmd_rename");
+								},
+								scope: this
+							},
+							{
+								xtype: "button",
+								text: IRm$/*resources*/.r1("L_MOVE"),
+								handler: function() {
+									this._t$/*toolbarHandler*/("cmd_move");
+								},
+								scope: this
+							},
+							{
+								xtype: "button",
+								text: IRm$/*resources*/.r1("L_REMOVE"),
+								handler: function() {
+									this._t$/*toolbarHandler*/("cmd_delete");
+								},
+								scope: this
+							},
+							"->",
+							{
+								text: IRm$/*resources*/.r1("L_EXPORT_META"),
+								handler: function() {
+									this._t$/*toolbarHandler*/("cmd_export_meta");
+								},
+								scope: this
+							}
+						],
+	            		items: [
+	            			{
+	            				xtype: "gridpanel",
+								name: "g1",
+	            				store: {
+	            					xtype: "store",
+	            					fields: [
+	            						"uid", "name", "description", "nodepath", "type", "writable"
+	            					]
+	            				},
+	            				selType: "checkboxmodel",
+								selModel: {
+									checkSelector: ".x-grid-cell",
+									mode: "SINGLE"
+								},
+	            				columns: [
+	            					{
+	            						text: IRm$/*resources*/.r1("B_NAME"),
+	            						dataIndex: "name",
+	            						tdCls: "igc-td-link"
+	            					},
+	            					{
+	            						text: IRm$/*resources*/.r1("B_DESC"),
+	            						dataIndex: "description",
+	            						flex: 1
+	            					},
+	            					{
+	            						xtype: "actioncolumn",
+	            						width: 30,
+										menuDisabled: true,
+										items: [
+											{
+												iconCls: "icon-grid-config",
+												tooltip: IRm$/*resources*/.r1('L_EDIT'),
+												handler: function (grid, rowIndex, colIndex) {
+													var grd = grid,
+														store = grd.store,
+														rec = store.getAt(rowIndex),
+														mp = IG$/*mainapp*/._I7d/*mainPanel*/;
+														
+													if (mp)
+													{
+														mp.m1$7/*navigateApp*/.call(mp, rec.get("uid"), rec.get("type").toLowerCase(), rec.get("name"), rec.get("nodepath"), false, rec.get("writable") == "T");
+													}
+												},
+												scope: this
+											}
+										]
+	            					}
+	            				],
+	            				listeners: {
+	            					cellclick: function(tobj, td, cellIndex, record, tr, rowIndex, e, eopts) {
+	            						if (cellIndex == 1)
+	            						{
+	            							var grd = tobj,
+												store = grd.store,
+												rec = store.getAt(rowIndex),
+												mp = IG$/*mainapp*/._I7d/*mainPanel*/;
+												
+											if (mp)
+											{
+												mp.m1$7/*navigateApp*/.call(mp, rec.get("uid"), rec.get("type").toLowerCase(), rec.get("name"), rec.get("nodepath"), false, rec.get("writable") == "T");
+											}
+	            						}
+	            					},
+	            					scope: this
+	            				}
+	            			}
+	            		]
+	            	}
+            	]
+            }
+		];
+		
+		this.listeners = {
+			afterrender: function(tobj) {
+				tobj._IFd/*init_f*/.call(tobj);
+			}
+		}
+
+		IG$/*mainapp*/._I7k/*systemlookup*/.superclass.initComponent.call(this);
+    }
+});
+
+IG$/*mainapp*/._I70/*resourcemgr*/ = $s.extend($s.panel, {
+	
+	closable: true,
+	iconCls: "icon-ing-docdef",
+	
+	layout: "fit",
+	bodyPadding: 10,
+	
+	_IFd/*init_f*/: function() {
+		var me = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		
+		req.showerror = false;
+		req.init(me, 
+			{
+	            ack: "5",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: me.pp/*parentfullpath*/}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: ""})
+	        }, me, me.rs_l1/*loadLocales*/, me.rs_l1/*loadLocales*/);
+		req._l/*request*/();
+	},
+	
+	rs_l1/*loadLocales*/: function(xdoc) {
+		var me = this,
+			tnode = xdoc ? IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item") : null,
+			tnodes = tnode ? IG$/*mainapp*/._I26/*getChildNodes*/(tnode) : null,
+			c_loc = me.down("[name=c_loc]"),
+			c_loc2 = me.down("[name=c_loc2]"),
+			i,
+			locale,
+			locales = [
+				{
+					name: "Select locale",
+					value: ""
+				}
+			];
+		
+		if (tnodes && tnodes.length)
+		{
+			for (i=0; i < tnodes.length; i++)
+			{
+				locale = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+				locales.push({
+					name: locale.name,
+					value: locale.uid
+				});
+			}
+		}
+		
+		c_loc.store.loadData(locales);
+		c_loc.setValue("");
+		
+		c_loc2.store.loadData(locales);
+		c_loc2.setValue("");
+	},
+	
+	c1/*changeLocale*/: function(bsecond) {
+		var me = this,
+			c_loc = me.down("[name=c_loc" + (bsecond ? "2" : "") + "]"),
+			grdrcs = me.down("[name=grdrcs]"),
+			vcol1 = me.down("[name=vcol1]"),
+			vcol2 = me.down("[name=vcol2]"),
+			i,
+			cval = c_loc.getValue();
+			
+		if (cval)
+		{
+			me.F1/*loadContent*/(cval, bsecond);
+		}
+		else
+		{
+			if (bsecond)
+			{
+				vcol2.setText("-");
+				for (i=0; i < grdrcs.store.data.items.length; i++)
+				{
+					grdrcs.store.data.items[i].set("value2", "");
+				}
+				
+				for (i=0; i < grdrcs.__dp.length; i++)
+				{
+					grdrcs.__dp[i].value2 = "";
+				}
+			}
+			else
+			{
+				vcol1.setText("-");
+				vcol2.setText("-");
+				me._gl/*loadGrid*/([]);
+			}
+		}
+	},
+	
+	_gl/*loadGrid*/: function(dp) {
+		var me = this,
+			grdrcs = me.down("[name=grdrcs]"),
+			_pb_d = me.down("[name=_pb_d]"),
+			_pb_c = me.down("[name=_pb_c]"),
+			pc = 100,
+			mc = Math.ceil(dp.length / pc),
+			ndp = [], i;
+		
+		grdrcs.__dp = dp;
+		grdrcs.__p = 0;
+		
+		for (i=0; i < mc; i++)
+		{
+			ndp.push({name: "" + (i+1), value: i});
+		}
+		
+		_pb_c.store.loadData(ndp);
+		_pb_c.setValue(0);
+		
+		_pb_c.setDisabled(mc > 1 ? false : true);
+		_pb_d.setValue("Count : " + dp.length);
+		
+		me._g2/*refreshPage*/();
+	},
+	
+	_g2/*refreshPage*/: function(inc) {
+		var me = this,
+			grdrcs = me.down("[name=grdrcs]"),
+			_pb_c = me.down("[name=_pb_c]"),
+			_pb_p = me.down("[name=_pb_p]"),
+			_pb_d = me.down("[name=_pb_d]"),
+			_pb_n = me.down("[name=_pb_n]"),
+			sdp = grdrcs.__dp,
+			p = grdrcs.__p,
+			ndp = [], i,
+			pc = 100,
+			mp = Math.ceil(sdp.length / pc);
+		
+		if (inc == 2)
+		{
+			grdrcs.__p = p = p+1;
+		}
+		else if (inc == 1 && p > 0)
+		{
+			grdrcs.__p = p = p-1;
+		}
+		
+		if (inc == 3)
+		{
+			_pb_d.setValue("Count : " + sdp.length);
+		}
+		
+		if (p * pc > sdp.length)
+		{
+			grdrcs.__p = p = mp;
+		}
+		
+		_pb_c.setValue(grdrcs.__p);
+		
+		for (i=p*pc; i < Math.min(sdp.length, (p+1)*pc); i++)
+		{
+			ndp.push(sdp[i]);
+		}
+		
+		_pb_p.setDisabled(p > 0 ? false : true);
+		_pb_n.setDisabled(mp > 0 && mp > p ? false : true);
+		
+		grdrcs.store.loadData(ndp);
+	},
+		
+	F1/*loadContent*/: function(locale, bsecond) {
+		var me = this,
+			req;
+		
+		req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.init(me, 
+			{
+	            ack: "5",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: locale}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: ""})
+	        }, me, me._IM9/*rs_loadContent*/, null, bsecond);
+		req._l/*request*/();
+	},
+	
+	_IM9/*rs_loadContent*/: function(xdoc, bsecond) {
+		var me = this,
+			grdrcs = me.down("[name=grdrcs]"),
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+			tnodes,
+			uid, uname,
+			vcol1 = me.down("[name=vcol1]"),
+			vcol2 = me.down("[name=vcol2]"),
+			pmap = {}, rec,
+			i, rcs = [], param;
+		
+		if (tnode)
+		{
+			uid = IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "uid");
+			uname = IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "name");
+			tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+			for (i=0; i < tnodes.length; i++)
+			{
+				param = {
+					locale: uname,
+					name: IG$/*mainapp*/._I1b/*XGetAttr*/(tnodes[i], "name"),
+					group: IG$/*mainapp*/._I1b/*XGetAttr*/(tnodes[i], "group"),
+					value: IG$/*mainapp*/._I24/*getTextContent*/(tnodes[i])
+				};
+				rcs.push(param);
+			}
+		}
+		
+		if (bsecond)
+		{
+			for (i=0; i < grdrcs.__dp.length; i++)
+			{
+				rec = grdrcs.__dp[i];
+				pmap[rec.name] = rec;
+			}
+			
+			for (i=0; i < grdrcs.store.data.length; i++)
+			{
+				rec = grdrcs.__dp[i];
+				pmap[rec.name] = rec;
+			}
+			
+			for (i=0; i < rcs.length; i++)
+			{
+				rec = pmap[rcs[i].name];
+				if (rec)
+				{
+					rec.value2 = rcs[i].value;
+				}
+			}
+			
+			me._g2/*refreshPage*/();
+			
+			vcol2.setText(uname);
+		}
+		else
+		{
+			vcol1.setText(uname);
+			vcol2.setText("-");
+			// grdrcs.store.loadData(rcs);
+			me._gl/*loadGrid*/(rcs);
+		}
+	},
+		
+	_t$/*toolbarHandler*/: function(cmd) {
+		var me = this;
+		
+		switch (cmd)
+		{
+		case "cmd_save":
+			me.s1/*saveContent*/();
+			break;
+		case "cmd_refresh":
+			me._IFd/*init_f*/();
+			break;
+		case "cmd_delete":
+			var grdrcs = me.down("[name=grdrcs]"),
+				sel = grdrcs.getSelectionModel().selected,
+				rec,
+				__dp = grdrcs.__dp,
+				sp = grdrcs.__p * 100,
+				i, r;
+			
+			for (i=0; i < sel.length; i++)
+			{
+				rec = sel.items[i];
+				r = grdrcs.store.indexOf(rec);
+				grdrcs.store.remove(rec);
+				__dp.splice(r, 1);
+			}
+			
+			me._g2/*refreshPage*/(3);
+			break;
+		case "cmd_add_lcs":
+			var grdrcs = me.down("[name=grdrcs]"),
+				__dp = grdrcs.__dp;
+			
+			__dp.splice(0, 0, {
+				name: "",
+				value: ""
+			});
+			
+			grdrcs.__p = 0;
+			me._g2/*refreshPage*/(3);
+			break;
+		case "cmd_add_lang":
+			var dlgpop = new IG$/*mainapp*/._I6e/*makeItem*/({
+				parentnodepath: me.pp/*parentfullpath*/,
+				itemtype: "PrivateContent",
+				parentuid: me.pp/*parentfullpath*/
+			});
+			dlgpop.callback = new IG$/*mainapp*/._I3d/*callBackObj*/(this, this.r_I90/*createMetaObject*/);
+			
+			IG$/*mainapp*/._I_5/*checkLogin*/(this, dlgpop);
+			break;
+		case "cmd_import":
+			var pimp = me.down("[name=pimp]");
+			pimp.setVisible(true);
+			break;
+		case "cmd_export":
+			var pimp = me.down("[name=pimp]");
+			pimp.setVisible(true);
+			
+			me.x1/*exportConten*/();
+			break;
+		}
+	},
+	
+	r_I90/*createMetaObject*/: function(xdoc) {
+		this._IFd/*init_f*/();
+	},
+	
+	s1/*saveContent*/: function() {
+		var me = this,
+			c_loc = me.down("[name=c_loc]").getValue();
+			
+		this.ss1/*saveRcsContent*/(c_loc, true);
+	},
+	
+	ss1/*saveRcsContent*/: function(clang, prime) {
+		var me = this,
+			grdrcs = me.down("[name=grdrcs]"),
+			i, rec, mval, mname,
+			req;
+		
+		if (clang)
+		{
+			cnt = "<smsg><item>";
+			for (i=0; i < grdrcs.__dp.length; i++)
+			{
+				rec = grdrcs.__dp[i];
+				mname = rec.name;
+				mval = (prime ? rec.value : rec.value2);
+				
+				if (mname && mval)
+				{
+					cnt += "<li name='" + mname + "' group='" + (rec.group || "") + "'><![CDATA[" + mval + "]]></li>";
+				}
+			}
+			cnt += "</item></smsg>";
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+			req.init(me, 
+				{
+		            ack: "31",
+		            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: clang, is_locale: "T"}, "uid;is_locale"),
+		            mbody: cnt
+		        }, me, me.rs_s1/*saveContent*/, null, prime);
+			req._l/*request*/();
+		}
+		else
+		{
+			prime && IG$/*mainapp*/._I54/*alertmsg*/(null, IRm$/*resources*/.r1("E_LM_SEL"), null, null, 1, "error");
+		}
+	},
+	
+	rs_s1/*saveContent*/: function(xdoc, prime) {
+		var me = this;
+		
+		if (prime)
+		{
+			var c_loc2 = me.down("[name=c_loc2]").getValue();
+			
+			if (c_loc2)
+			{
+				me.ss1/*saveRcsContent*/(c_loc2, false);
+				return;
+			}
+		}
+		
+		IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1("M_SAVED"), null, me, 0, "success");
+	},
+	
+	ca/*importContent*/: function() {
+		var me = this,
+			timp = me.down("[name=timp]").getValue(),
+			grdrcs = me.down("[name=grdrcs]"),
+			tval,
+			mval,
+			v, vv, vn,
+			i,
+			gname,
+			ukey = {},
+			rcs = [];
+		
+		gname = "group";
+		tval = timp.split("\n");
+		
+		for (i=0; i < tval.length; i++)
+		{
+			mval = tval[i];
+			if (mval)
+			{
+				if (mval.charAt(0) == ';')
+				{
+					gname = mval.replace(/;/g, "");
+					gname = IG$/*mainapp*/.trim12(gname);
+				}
+				else
+				{
+					v = mval.split("\t");
+					if (v.length > 1)
+					{
+						vv = IG$/*mainapp*/.trim12(v[1]);
+						vn = IG$/*mainapp*/.trim12(v[0]);
+						
+						if (!ukey[vn])
+						{
+							if (vv.charAt(0) == '\"' && vv.charAt(vv.length-1) == '\"')
+							{
+								vv = vv.substring(1, vv.length-1);
+							}
+							rcs.push({
+								group: gname,
+								name: vn,
+								value: vv
+							});
+							
+							ukey[vn] = 1;
+						}
+					}
+				}
+			}
+		}
+		
+		me._gl/*loadGrid*/(rcs);
+	},
+	
+	x1/*exportConten*/: function() {
+		var me = this,
+			timp = me.down("[name=timp]"),
+			grdrcs = me.down("[name=grdrcs]"),
+			tval,
+			rec,
+			v, vv, vn,
+			i,
+			gname,
+			rcs = [],
+			t = [];
+		
+		for (i=0; i < grdrcs.__dp.length; i++)
+		{
+			rec = grdrcs.__dp[i];
+			rcs.push({
+				group: rec.group,
+				value: rec.name + "\t" + rec.value
+			})
+		}
+		
+		rcs.sort(function(a, b) {
+			var c = 0;
+			
+			if (a.group != b.group)
+			{
+				c = a.group > b.group ? -1 : 1;
+			}
+			
+			return c;
+		});
+		
+		gname = null;
+		
+		for (i=0; i < rcs.length; i++)
+		{
+			if (rcs[i].group != gname)
+			{
+				t.push(";;; " + rcs[i].group);
+				gname = rcs[i].group;
+			}
+			
+			t.push(rcs[i].value);
+		}
+		
+		timp.setValue(t.join("\n"));
+	},
+	
+	a1/*appendLocale*/: function(data) {
+		var me = this,
+			i,
+			rec,
+			grdrcs = me.down("[name=grdrcs]"),
+			gstore = grdrcs.store,
+			tmap = [],
+			titems = [];
+		
+		for (i=0; i < data.records.length; i++)
+		{
+			rec = data.records[i];
+			
+			titems.push({
+				uid: rec.get("uid"),
+				name: rec.get("name"),
+				type: rec.get("type")
+			});
+		}
+		
+		for (i=0; i < gstore.data.items.length; i++)
+		{
+			rec = gstore.data.items[i];
+			tmap[rec.get("name")] = 1;
+		}
+		
+		me.a3/*loadItem*/(titems, tmap);
+	},
+	
+	a3/*loadItem*/: function(titems, tmap) {
+		var me = this,
+			litems = [];
+		
+		$.each(titems, function(i, titem) {
+			var mf = me.a2/*is_folder*/(titem),
+				req;
+			
+			if (!tmap[titem.name])
+			{
+				litems.push({
+					name: titem.name,
+					value: ""
+				});
+				
+				tmap[titem.name] = 1;
+			}
+			
+			if (mf)
+			{
+				req = new IG$/*mainapp*/._I3e/*requestServer*/();
+				
+				req.init(me, 
+					{
+			            ack: "5",
+		                payload: "<smsg><item" + IG$/*mainapp*/._I20/*XUpdateInfo*/({
+		                	uid: titem.uid,  
+		                	name: titem.name, type: titem.type
+		                }, "uid;nodepath;name;type", "s") + "/></smsg>",
+		                mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "metrics"})
+			        }, me, function(xdoc) {
+			        	var sitems = [],
+			        		tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+			        		tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode),
+			        		p,
+			        		i;
+			        	
+			        	for (i=0; i < tnodes.length; i++)
+			        	{
+			        		p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+			        		sitems.push(p);
+			        	}
+			        	
+			        	if (sitems.length)
+			        	{
+			        		me.a3/*loadItem*/(sitems, tmap);
+			        	}
+			        }, null);
+				req._l/*request*/();
+			}
+		});
+		
+		if (litems.length)
+		{
+			var grdrcs = me.down("[name=grdrcs]"),
+				__dp = grdrcs.__dp,
+				i;
+			
+			for (i=0; i < litems.length; i++)
+			{
+				__dp.splice(0, 0, litems[i]);
+			}
+			
+			grdrcs.__p = 0;
+			me._g2/*refreshPage*/(3);
+		}
+	},
+	
+	a2/*is_folder*/: function(t) {
+		var tname = t.type.toLowerCase(),
+			r = 0;
+		
+		if ((/workspace|folder|cube|sqlcube|datacube/).test(tname))
+		{
+			r = 1;
+		}
+		
+		return r;
+	},
+
+	initComponent: function() {
+		var me = this;
+		
+		me.pp/*parentfullpath*/ = "/SYS_Config/" + (me.dicmode ? "dictionary" : "locale"),
+		
+		$s.apply(this, {
+			items: [
+				{
+					xtype: "form",
+					layout: {
+						type: "vbox",
+						align: "stretch"
+					},
+					border: 0,
+					items: [
+						{
+							xtype: "fieldset",
+							name: "pimp",
+							title: "Copy-paste your locale document here",
+							hidden: true,
+							flex: 2,
+							layout: {
+								type: "vbox",
+								align: "stretch"
+							},
+							items: [
+								{
+									xtype: "textarea",
+									name: "timp",
+									flex: 1
+								},
+								{
+									xtype: "fieldcontainer",
+									layout: {
+										type: "hbox",
+										align: "stretch"
+									},
+									items: [
+										{
+											xtype: "button",
+											text: "Import",
+											handler: function() {
+												this.ca/*importContent*/();
+											},
+											scope: this
+										},
+										{
+											xtype: "button",
+											text: "Close",
+											handler: function() {
+												var me = this,
+													pimp = me.down("[name=pimp]");
+													
+												pimp.setVisible(false);
+											},
+											scope: this
+										},
+										{
+											xtype: "container",
+											flex: 1
+										}
+									]
+								}
+							]
+						},
+						{
+							xtype: "gridpanel",
+							name: "grdrcs",
+							store: {
+								xtype: "store",
+								fields: [
+									"name", "value", "value2", "locale", "group"
+								]
+							},
+							selType: "checkboxmodel",
+							selModel: {
+								checkSelector: ".x-grid-cell"
+							},
+							flex: 3,
+							plugins: [
+								{
+									ptype: "cellediting",
+									clicksToEdit: false,
+									listeners: {
+										edit: function(editor, e, eopts) {
+											var me = this,
+												rec = e.record,
+												field = e.field,
+												value = e.value,
+												grdrcs = me.down("[name=grdrcs]"),
+												r = grdrcs.store.indexOf(rec),
+												__dp = grdrcs.__dp,
+												__p = grdrcs.__p,
+												n = 100,
+												rec;
+											
+											rec = __dp[n*__p + r];
+											rec[field] = value;
+										},
+										scope: this
+									}
+								}
+							],
+							viewConfig: me.dicmode ? {
+								plugins: {
+									ptype: "gridviewdragdrop",
+									ddGroup: "_I$RD_G_1"
+								},
+								__ing: 1,
+								listeners: {
+									beforedrop: function(node, data, dropRec, dropPosition, dropFunction) {
+										var r = false,
+											index,
+											rc,
+											c_loc = me.down("[name=c_loc]");
+										
+										data.copy = true;
+										
+										if (c_loc.getValue())
+										{
+											me.a1/*appendLocale*/.call(me, data);
+										}
+												
+										return r;
+									},
+									drop: function(node, data, dropRec, dropPosition) {
+										var sc = false,
+											me = this;
+										
+										return sc;
+									}
+								}
+							} : null,
+							bbar: {
+						        xtype: "toolbar",
+						        name: "_pb_",
+						        items: [
+						            {
+						            	xtype: "button",
+						            	name: "_pb_p",
+						            	disabled: true,
+						            	iconCls: "x-tbar-page-prev",
+						            	handler: function() {
+						            		this._g2/*refreshPage*/(1);
+						            	},
+						            	scope: this
+						            },
+						            "-",
+						            {
+										xtype: "combobox",
+										name: "_pb_c",
+										fieldLabel: "Page",
+										labelWidth: 50,
+										width: 120,
+										queryMode: "local",
+										displayField: "name",
+										labelField: "name",
+										valueField: "value",
+										editable: false,
+										autoSelect: true,
+										disabled: true,
+										store: {
+											fields: [
+												"name", "value"
+											]
+										},
+										listeners: {
+											select: function(tobj, newValue, oldValue, eOpts) {
+												var me = this,
+													grdrcs = me.down("[name=grdrcs]");
+												
+												grdrcs.__p = Number(tobj.getValue());
+												
+												me._g2/*refreshPage*/();
+											},
+											scope: this
+										}
+									},
+						            "-",
+						            {
+						            	xtype: "button",
+						            	name: "_pb_n",
+						            	disabled: true,
+						            	iconCls: "x-tbar-page-next",
+						            	handler: function() {
+						            		this._g2/*refreshPage*/(2);
+						            	},
+						            	scope: this
+						            },
+						            "->",
+						            {
+						            	xtype: "displayfield",
+						            	name: "_pb_d",
+						            	value: "No data to display"
+						            }
+						        ]
+						    },
+							columns: [
+								{
+									xtype: "gridcolumn",
+									text: "Group",
+									dataIndex: "group",
+									width: 200,
+									editor: {
+										allowBlank: true
+									}
+								},
+								{
+									xtype: "gridcolumn",
+									text: "Name",
+									dataIndex: "name",
+									width: 200,
+									editor: {
+										allowBlank: false
+									}
+								},
+								{
+									xtype: "gridcolumn",
+									text: "Value",
+									name: "vcol1",
+									flex: 1,
+									dataIndex: "value",
+									editor: {
+										allowBlank: true
+									}
+								},
+								{
+									xtype: "gridcolumn",
+									text: "Value",
+									name: "vcol2",
+									flex: 1,
+									dataIndex: "value2",
+									editor: {
+										allowBlank: true
+									}
+								}
+							]
+						}
+					]
+				}
+			],
+			tbar: [
+				{
+					iconCls: "icon-toolbar-save",
+					tooltip: IRm$/*resources*/.r1("L_SAVE_CONTENT"),
+					handler: function() {
+						this._t$/*toolbarHandler*/("cmd_save"); 
+					},
+					scope: this
+				},
+				"-",
+				{
+			    	iconCls: "icon-toolbar-add",
+	            	tooltip: IRm$/*resources*/.r1("L_LM_ADD"),
+	            	handler: function() {
+			    		this._t$/*toolbarHandler*/("cmd_add_lang"); 
+			    	},
+	            	scope: this
+			    },
+				{
+					xtype: "combobox",
+					name: "c_loc",
+					fieldLabel: "Base Language",
+					labelWidth: 100,
+					queryMode: "local",
+					displayField: "name",
+					labelField: "name",
+					valueField: "value",
+					editable: false,
+					autoSelect: true,
+					store: {
+						fields: [
+							"name", "value"
+						]
+					},
+					listeners: {
+						change: function(tobj, newValue, oldValue, eOpts) {
+							this.c1/*changeLocale*/();
+						},
+						scope: this
+					}
+				},
+				{
+			    	iconCls: "icon-refresh",
+	            	tooltip: IRm$/*resources*/.r1("L_REFRESH"),
+	            	handler: function() {
+			    		this._t$/*toolbarHandler*/("cmd_refresh"); 
+			    	},
+	            	scope: this
+			    },
+			    {
+			    	iconCls: "icon-toolbar-remove",
+	            	tooltip: IRm$/*resources*/.r1("B_DELETE_ITEM"),
+	            	handler: function() {
+			    		this._t$/*toolbarHandler*/("cmd_delete"); 
+			    	},
+	            	scope: this
+			    },
+			    "-",
+			    {
+			    	iconCls: "icon-toolbar-add",
+	            	tooltip: IRm$/*resources*/.r1("L_LM_LCS"),
+	            	handler: function() {
+			    		this._t$/*toolbarHandler*/("cmd_add_lcs"); 
+			    	},
+	            	scope: this
+			    },
+			    "-",
+			    {
+			    	iconCls: "icon-ing-dwn",
+	            	tooltip: IRm$/*resources*/.r1("L_LM_IMP"),
+	            	handler: function() {
+			    		this._t$/*toolbarHandler*/("cmd_import"); 
+			    	},
+	            	scope: this
+			    },
+			    {
+			    	iconCls: "icon-ing-upl",
+	            	tooltip: IRm$/*resources*/.r1("L_LM_EXP"),
+	            	handler: function() {
+			    		this._t$/*toolbarHandler*/("cmd_export"); 
+			    	},
+	            	scope: this
+			    },
+			    "-",
+			    {
+					xtype: "combobox",
+					name: "c_loc2",
+					fieldLabel: "Second Language",
+					labelWidth: 100,
+					queryMode: "local",
+					displayField: "name",
+					labelField: "name",
+					valueField: "value",
+					editable: false,
+					autoSelect: true,
+					store: {
+						fields: [
+							"name", "value"
+						]
+					},
+					listeners: {
+						change: function(tobj, newValue, oldValue, eOpts) {
+							this.c1/*changeLocale*/(true);
+						},
+						scope: this
+					}
+				},
+			]
+	    });
+	          
+		IG$/*mainapp*/._I70/*resourcemgr*/.superclass.initComponent.call(this);
+	},
+	
+	listeners: {
+		afterrender: function(tobj) {
+			var me = this;
+			
+			me._IFd/*init_f*/();
+		}
+	}
+});
+
+IG$/*mainapp*/._Ia5/*uipage*/ = $s.extend(IG$/*mainapp*/._I57/*IngPanel*/, {
+	padding: 0,
+	closable: true,
+	layout: "fit",
+	
+	_IFd/*init_f*/: function() {
+		var me = this,
+			req,
+			t_save = me.down("[name=t_save]"),
+			t_save_as = me.down("[name=t_save_as]");
+		
+		if (this.writable == true || this.uid == '')
+		{
+			t_save.setVisible(true);
+		}
+		
+		t_save_as.setVisible(true);
+		
+		req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.init(me, 
+			{
+	            ack: "5",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: me.uid}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'standard'})
+	        }, me, me._IM9/*rs_loadContent*/, false);
+		req._l/*request*/();
+	},
+	
+	_IM9/*rs_loadContent*/: function(xdoc) {
+	},
+	
+	_t$/*toolbarHandler*/: function(cmd) {
+		var me = this;
+		
+		switch (cmd)
+		{
+		case "cmd_save":
+			var uid = this.uid;
+			if (!uid)
+			{
+				this._IJ5/*saveAsPivotContent*/(false);
+			}
+			else
+			{
+				var content = null;
+				this.fV6/*saveContent*/(uid, content, target);
+			}
+			break;
+		case "cmd_saveas":
+			this.$f1/*saveAsContent*/(false);
+			break;
+		}
+	},
+	
+	/* save content */
+    fV6/*saveContent*/: function(uid, content, afterclose) {
+    	var panel = this;
+    	var req = new IG$/*mainapp*/._I3e/*requestServer*/();
+    	req.init(panel, 
+			{
+	            ack: "31",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: uid}),
+	            mbody: content
+	        }, panel, panel.rs_fV6/*saveContent*/, null, [afterclose]);
+		req._l/*request*/();
+    },
+    
+    r_IJ6/*savePivotContent*/: function(xdoc, opt) {
+    	var afterclose = (opt ? opt[0] : false);
+    	if (afterclose == true)
+    	{
+    		this._IM8/*doClose*/();
+    	}
+    	else
+    	{
+    		this._ILb_/*contentchanged*/ = false;
+    		IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1("M_SAVED"), null, null, 0, "success");
+    	}
+    },
+	
+	$f1/*saveAsContent*/: function(afterclose) {
+		var dlgitemsel = new IG$/*mainapp*/._I96/*metaSelectDlg*/({
+    		mode: "newitem",
+    		initpath: this.nodepath
+    	});
+		dlgitemsel.callback = new IG$/*mainapp*/._I3d/*callBackObj*/(this, this.$f2/*saveNewContent*/, afterclose);
+		IG$/*mainapp*/._I_5/*checkLogin*/(this, dlgitemsel);
+	},
+	
+	$f2/*saveNewContent*/: function(item, afterclose) {
+    	var panel = this,
+    		pivotxml = this._ILa/*reportoption*/._IJ1/*getCurrentPivot*/.call(this._ILa/*reportoption*/),
+    		req = new IG$/*mainapp*/._I3e/*requestServer*/();
+    	
+		req.init(panel, 
+			{
+                ack: "31",
+	            payload: "<smsg><item address='" + item.nodepath + "/" + item.name + "' name='" + item.name + "' type='" + (this.itemtype ? this.itemtype : 'Report') + "' pid='" + item.uid + "' description=''/></smsg>",
+	            mbody: pivotxml //IG$/*mainapp*/._I2e/*getItemOption*/()
+            }, panel, panel._IO5/*rs_processMakeMetaItem*/, panel._IO6/*rs_processMakeMetaItem*/, [item.name, afterclose, item.nodepath, item.uid, pivotxml]);
+       	req.showerror = false;
+	    req._l/*request*/();
+    },
+    
+    _IO6/*rs_processMakeMetaItem*/: function(xdoc, opt) {
+    	var panel = this,
+    		itemname = opt[0],
+    		afterclose = opt[1],
+    		nodepath = opt[2],
+    		pitemuid = opt[3],
+    		pivotxml = opt[4],
+    		errcode = IG$/*mainapp*/._I27/*getErrorCode*/(xdoc);
+    	
+    	if (errcode == "0x12e0")
+    	{
+    		IG$/*mainapp*/._I55/*confirmMessages*/(ig$/*appoption*/.appname, itemname + " already exist on the server. Would you overwrite existing item with this copy?", function(e) {
+    			if (e == "yes")
+    			{
+    				var req = new IG$/*mainapp*/._I3e/*requestServer*/();
+    				req.init(panel, 
+						{
+			                ack: "31",
+				            payload: "<smsg><item address='" + nodepath + "/" + itemname + "' name='" + itemname + "' type='" + (this.itemtype ? this.itemtype : 'UIPage') + "' pid='" + pitemuid + "' description='' overwrite='T'/></smsg>",
+				            mbody: pivotxml //IG$/*mainapp*/._I2e/*getItemOption*/()
+			            }, panel, panel._IO5/*rs_processMakeMetaItem*/, null, [itemname, afterclose, nodepath]);
+				    req._l/*request*/();
+    			}
+    		}, panel, panel);
+    	}
+    	else
+    	{
+    		IG$/*mainapp*/._I51/*ShowErrorMessage*/(xdoc, panel);
+    	}
+    },
+    
+    _IO5/*rs_processMakeMetaItem*/: function(xdoc, opt) {
+    	var i,
+    		itemname = opt[0],
+    		afterclose = opt[1],
+    		tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+    		name = IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "name");
+    		
+    	if (afterclose == true)
+    	{
+    		this._IM8/*doClose*/();
+    		return;
+    	}
+    	
+    	this._ILb_/*contentchanged*/ = false;
+    	this.uid = IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "uid");
+    	
+    	this.uid = this.uid;
+    	this.setTitle(name);
+    },
+    
+    _IM8/*doClose*/: function(btn) {
+		var panel = this;
+		
+		if (btn == "no")
+		{
+			var lreq = new IG$/*mainapp*/._I3e/*requestServer*/();
+			lreq.init(panel, 
+				{
+		            ack: "11",
+		            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: panel.uid}),
+		            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'lock', detail: "close"})
+				}, panel, function(xdoc) {
+					this._IM8/*doClose*/();
+				}, false);
+				
+			lreq._l/*request*/();
+		}
+		else if (btn == "yes")
+		{
+			var lreq = new IG$/*mainapp*/._I3e/*requestServer*/();
+			lreq.init(panel, 
+				{
+		            ack: "11",
+		            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: panel.uid}),
+		            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'lock', detail: "close"})
+				}, panel, function(xdoc) {
+					this._t$/*toolbarHandler*/('cmd_save', true); 
+				}, false);
+				
+			lreq._l/*request*/();
+		}
+	},
+	
+	initComponent: function() {
+		var me = this,
+			selectionType = [
+			];
+		
+		me.items = [
+			{
+				xtype: "panel",
+				padding: 10,
+				layout: {
+					type: "vbox",
+					align: "stretch"
+				},
+				border: 0,
+				items: [
+					{
+						xtype: "fieldset",
+						title: "Global Filter",
+						layout: {
+							type: "vbox",
+							align: "none"
+						},
+						items: [
+							{
+								xtype: "fieldcontainer",
+								fieldLabel: "Filter Item",
+								layout: {
+									type: "hbox",
+									align: "stretch"
+								},
+								items: [
+									{
+										xtype: "textfield",
+										name: "gfilter"
+									},
+									{
+										xtype: "button",
+										text: ".."
+									}
+								]
+							},
+							{
+								xtype: "combobox",
+								fieldLabel: "Selection type",
+								labelField: "disp",
+								valueField: "type",
+								store: {
+									xtype: "store",
+									fields: [
+										"disp", "type"
+									],
+									data: selectionType
+								}
+							}
+						]
+					},
+					{
+						xtype: "fieldset",
+						title: "Dashboard Items",
+						layout: "fit",
+						flex: 1,
+						items: [
+							{
+								xtype: "gridpanel",
+								store: {
+									xtype: "store",
+									fields: [
+										"title", "type", "dispoption", "nodepath", "uid", "name"
+									]
+								},
+								selType: "checkboxmodel",
+								selModel: {
+									checkSelector: ".x-grid-cell"
+								},
+								columns: [
+									{
+										xtype: "gridcolumn",
+										text: "Title"
+									},
+									{
+										xtype: "gridcolumn",
+										text: "Display type"
+									},
+									{
+										xtype: "gridcolumn",
+										text: "Display Option"
+									},
+									{
+										xtype: "gridcolumn",
+										text: "Bind report",
+										flex: 1
+									}
+								],
+								tbar: [
+									{
+										xtype: "button",
+										text: "Add View",
+										handler: function() {
+											var dlg = new IG$/*mainapp*/._Ia8/*uipage_option*/({});
+											IG$/*mainapp*/._I_5/*checkLogin*/(this, dlg);
+										},
+										scope: this
+									},
+									{
+										xtype: "button",
+										text: "Add Filter",
+										handler: function() {
+											var dlg = new IG$/*mainapp*/._Ia7/*uipage_filter*/({});
+											IG$/*mainapp*/._I_5/*checkLogin*/(this, dlg);
+										},
+										scope: this
+									},
+									{
+										xtype: "button",
+										text: "Edit",
+										handler: function() {
+											var dlg = new IG$/*mainapp*/._Ia8/*uipage_option*/({});
+											IG$/*mainapp*/._I_5/*checkLogin*/(this, dlg);
+										},
+										scope: this
+									}
+								]
+							}
+						]
+					},
+					{
+						xtype: "textarea",
+						name: "layouthtml",
+						fieldLabel: "Layout HTML",
+						height: 200
+					}
+				]
+			}
+		];
+		
+		me.tbar = [
+			{
+		    	iconCls: 'icon-toolbar-save',
+		    	name: "t_save",
+            	tooltip: IRm$/*resources*/.r1('L_SAVE_CONTENT'),
+            	hidden: true,
+            	handler: function() {
+		    		this._t$/*toolbarHandler*/('cmd_save'); 
+		    	},
+            	scope: this
+		    },
+		    {
+	        	iconCls: 'icon-toolbar-saveas',
+	        	name: "t_save_as",
+	        	tooltip: IRm$/*resources*/.r1('L_SAVE_REPORT_AS'),
+	        	hidden: true,
+	        	handler: function() {
+		    		this._t$/*toolbarHandler*/('cmd_saveas'); 
+		    	},
+	        	scope: this
+	        }
+		];
+		
+		IG$/*mainapp*/._Ia5/*uipage*/.superclass.initComponent.call(this);
+	},
+	listeners: {
+		afterrender: function(tobj) {
+			tobj._IFd/*init_f*/();
+		}
+	}
+});
+
+
+IG$/*mainapp*/._Ia8/*uipage_option*/ = $s.extend($s.window, {
+	
+	modal: true,
+	region:'center',
+	"layout": "fit",
+	closable: false,
+	resizable:false,
+	width: 360,
+	height: 400,
+	autoHeight: false,
+	
+	parentnodepath: null,
+	itemtype: null,
+	parentuid: null,
+	
+	callback: null,
+	
+	fV9/*confirm*/: function() {
+	},
+	
+	initComponent : function() {
+		var me = this;
+		
+		me.title = IRm$/*resources*/.r1('L_MAKEITEM');
+		
+		$s.apply(this, {
+			defaults:{bodyStyle:'padding:10px'},
+			
+			items: [
+				{
+					xtype: "form",
+					layout: "anchor",
+					autoScroll: true,
+					defaults: {
+						anchor: "100%"
+					},
+					items: [
+						{
+							xtype: "fieldset",
+							title: "Basic Option",
+							layout: "anchor",
+							defaults: {
+								anchor: "100%"
+							},
+							items: [
+								{
+									xtype: "combobox",
+									fieldLabel: "View type",
+									labelField: "label",
+									displayField: "label",
+									valueField: "value",
+									editable: false,
+									store: {
+										xtype: "store",
+										fields: [
+											"label", "value"
+										],
+										data: [
+											{label: "Chart", value: "chart"},
+											{label: "Report", value: "report"},
+											{label: "As saved", value: "saved"},
+											{label: "R statistics", value: "R"},
+											{label: "Filter", value: "filter"}
+										]
+									}
+								},
+								{
+									xtype: "fieldcontainer",
+									fieldLabel: "Report Item",
+									layout: {
+										type: "hbox",
+										align: "stretch"
+									},
+									items: [
+										{
+											xtype: "textfield"
+										},
+										{
+											xtype: "button",
+											text: ".."
+										}
+									]
+								}
+							]
+						},
+						{
+							xtype: "fieldset",
+							title: "Size option",
+							layout: "anchor",
+							defaults: {
+								anchor: "100%"
+							},
+							items: [
+								{
+									xtype: "numberfield",
+									fieldLabel: "Height",
+									minValue: 50
+								}
+							]
+						}
+					]
+				}
+			],
+			buttons:[
+				{
+					text: IRm$/*resources*/.r1('B_CONFIRM'),
+					handler: function() {
+						this.fV9/*confirm*/();
+					},
+					scope: this
+				}, 
+				{
+					text: IRm$/*resources*/.r1('B_CANCEL'),
+					handler:function() {
+						this.close();
+					},
+					scope: this
+				}
+			]
+		});
+		
+		IG$/*mainapp*/._Ia8/*uipage_option*/.superclass.initComponent.apply(this, arguments);
+	}
+	
+});
+
+IG$/*mainapp*/._Ia6/*uipage_filter_viewer*/ = function(container) {
+	this.container = container;
+	this.table = $("<table></table>").appendTo(container);
+}
+
+IG$/*mainapp*/._Ia6/*uipage_filter_viewer*/.prototype = {
+};
+
+IG$/*mainapp*/._Ia7/*uipage_filter*/ = $s.extend($s.window, {
+	
+	modal: true,
+	region:'center',
+	"layout": "fit",
+	closable: false,
+	resizable:false,
+	width: 400,
+	autoHeight: true,
+	
+	callback: null,
+	
+	fV9/*confirm*/: function() {
+	},
+	
+	r1/*refreshData*/: function() {
+		var me = this,
+			filterarea,
+			container,
+			filterview = me.R1/*filterview*/;
+		if (!filterview)
+		{
+			filterarea = me.down("[name=filterarea]");
+			container = $("[name=filterdiv]", filterarea.el.dom);
+			filterview = me.R1/*filterview*/ = new IG$/*mainapp*/._Ia6/*uipage_filter_viewer*/(container);
+		}
+		
+		filterview.table.empty();
+	},
+	
+	initComponent : function() {
+		var me = this;
+		
+		me.title = IRm$/*resources*/.r1('L_MAKEITEM');
+		
+		$s.apply(this, {
+			defaults:{bodyStyle:'padding:10px'},
+			
+			items: [
+				{
+					xtype: "form",
+					layout: "anchor",
+					autoScroll: true,
+					defaults: {
+						anchor: "100%"
+					},
+					items: [
+						{
+							xtype: "fieldset",
+							title: "Basic Option",
+							layout: "anchor",
+							defaults: {
+								anchor: "100%"
+							},
+							items: [
+								{
+									xtype: "combobox",
+									fieldLabel: "View type",
+									labelField: "label",
+									displayField: "label",
+									valueField: "value",
+									editable: false,
+									store: {
+										xtype: "store",
+										fields: [
+											"label", "value"
+										],
+										data: [
+											{label: "Chart", value: "chart"},
+											{label: "Report", value: "report"},
+											{label: "As saved", value: "saved"},
+											{label: "R statistics", value: "R"},
+											{label: "Filter", value: "filter"}
+										]
+									}
+								},
+								{
+									html: "<div name='filterdiv'></div>",
+									name: "filterarea",
+									height: 300
+								},
+								{
+									xtype: "fieldcontainer",
+									fieldLabel: "Report Item",
+									layout: {
+										type: "hbox",
+										align: "stretch"
+									},
+									items: [
+										{
+											xtype: "textfield"
+										},
+										{
+											xtype: "button",
+											text: ".."
+										}
+									]
+								}
+							]
+						},
+						{
+							xtype: "fieldset",
+							title: "Size option",
+							layout: "anchor",
+							defaults: {
+								anchor: "100%"
+							},
+							items: [
+								{
+									xtype: "numberfield",
+									fieldLabel: "Height",
+									minValue: 50
+								}
+							]
+						}
+					]
+				}
+			],
+			buttons:[
+				{
+					text: IRm$/*resources*/.r1('B_CONFIRM'),
+					handler: function() {
+						this.fV9/*confirm*/();
+					},
+					scope: this
+				}, 
+				{
+					text: IRm$/*resources*/.r1('B_CANCEL'),
+					handler:function() {
+						this.close();
+					},
+					scope: this
+				}
+			],
+			listeners: {
+				afterrender: function(ui) {
+					var me = this;
+					me.r1/*refreshData*/();
+				}
+			}
+		});
+		
+		IG$/*mainapp*/._Ia7/*uipage_filter*/.superclass.initComponent.apply(this, arguments);
+	}
+	
+});
+IG$/*mainapp*/._I71/*metaImport*/ = $s.extend($s.panel, {
+	bodyStyle: 'padding:5px',
+	closable: true,
+	
+	iconCls: "icon-ing-docdef",
+	
+	"layout": {
+		type: "vbox",
+		align: "stretch"
+	},
+	defaults: {
+		anchor: "100%"
+	},
+	
+	ul1/*uploadFile*/: function() {
+		var mform = this.down('[name=mform]');
+
+		if (mform.getForm().isValid()) {
+			mform.getForm().submit({
+				url: ig$/*appoption*/.servlet,
+				waitMsg: 'Uploading your data file',
+				success: function(fp, o) {
+					var node = IG$/*mainapp*/._I18/*XGetNode*/(fp.errorReader.xmlData, "/smsg/result");
+					var uid = IG$/*mainapp*/._I1b/*XGetAttr*/(node, "uid");
+					
+					mform.customowner.sKK1/*processUploadedFile*/.call(mform.customowner, uid);
+				},
+				failure: function(fp, o) {
+				}
+			})
+		}
+	},
+	
+	sKK1/*processUploadedFile*/: function(uid) {
+		var panel = this,
+			uploadset = this.down("[name=uploadset]"),
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+			
+		uploadset.setVisible(false);
+		
+		panel.uid = uid;
+		panel.setLoading(true, true);
+		
+		req.init(panel, 
+			{
+	            ack: "27",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: uid}, "uid"),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "meta_imp"})
+	        }, panel, panel.rs_sK3b/*processUploadedFile*/, null);
+    	
+    	req._l/*request*/();
+	},
+	
+	rs_sK3b/*processUploadedFile*/: function(xdoc) {
+		var panel = this,
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg"),
+			nodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode),
+			i,
+			metadata = panel.down("[name=metadata]"),
+			metastore = metadata.store,
+			metaroot = metastore.getRootNode(),
+			roots = [], d, rmap = {},
+			p, pnode, pnodes,
+			typename;
+		
+		for (i=0; i < nodes.length; i++)
+		{
+			d = IG$/*mainapp*/._I1c/*XGetAttrProp*/(nodes[i]);
+			typename = d.type.toLowerCase();
+			d.iconCls = IG$/*mainapp*/._I11/*getMetaItemClass*/(typename, null);
+			d.checked = false;
+			
+			if (/(cube|mcube|metrics|folder|datacube|rfolder|datemetric|nosql|mdbcube|sqlcube|javapackage)/.test(typename) == true && typename != "cubemodel")
+	    	{
+	    		d.leaf = false;
+	    	}
+	    	else if (/(folder|workspace|datemetric|table|schema|pool)/.test(typename) == false)
+	    	{
+	    		d.leaf = true;
+	    	}
+			
+			rmap[d.nodepath] = d;
+			
+			if (i == 0)
+			{
+				roots.push(d);
+			}
+			else
+			{
+				if (typename == "localdata")
+				{
+					p = rmap["_data_contents_"];
+					
+					if (!p)
+					{
+						p = {
+							uid: "",
+							type: "data_contents_",
+							name: "_data_contents_",
+							leaf: false,
+							checked: false
+						};
+						
+						rmap[p.name] = p;
+						roots.push(p);
+					}
+				}
+				else
+				{
+					pnodes = d.nodepath.split("/");
+					pnodes.splice(pnodes.length-1, 1);
+					pnode = pnodes.join("/");
+					p = rmap[pnode];
+				}
+				
+				if (p)
+				{
+					if (p.children)
+					{
+						p.children.push(d);
+					}
+					else
+					{
+						p.children = [d];
+					}
+				}
+				else if (pnodes.length == 1)
+				{
+					roots.push(d);
+				}
+			}
+		}
+		
+		// metaroot.removeAll();
+		while (metaroot.firstChild)
+		{
+			metaroot.removeChild(metaroot.firstChild);
+		}
+		
+		for (i=0; i < roots.length; i++)
+		{
+			metaroot.appendChild(roots[i]);
+		}
+	},
+	
+	_t$/*toolbarHandler*/: function(cmd) {
+		var panel = this,
+			me = panel;
+		
+		switch (cmd)
+		{
+		case "cmd_imp":
+			if (panel.uid)
+			{
+				IG$/*mainapp*/._I55/*confirmMessages*/("ImportMeta", "Would you include meta to server?", me.do_mEp/*importMeta*/, me, me);
+			}
+			break;
+		}
+	},
+	
+	append_node: function(tnode, sel) {
+		var me = this;
+		
+		if (tnode.childNodes)
+		{
+			$.each(tnode.childNodes, function(i, c) {
+				sel.push(c);
+				
+				me.append_node(c, sel);
+			});
+		}
+	},
+	
+	do_mEp/*importMeta*/: function(dlg) {
+		if (dlg == "yes")
+		{
+			var panel = this,
+				i,
+				items = [],
+				metadata = panel.down("[name=metadata]"),
+				store = metadata.store,
+				root = store.getRootNode(),
+				selvalues = [], // metadata.getView().getChecked(),
+				ucontents = {},
+				item, d,
+				req = new IG$/*mainapp*/._I3e/*requestServer*/(), content = [];
+			
+			panel.append_node(root.childNodes[0], selvalues);
+			
+			if (selvalues && selvalues.length > 0)
+			{
+				panel.setLoading(true, true);
+				
+				content.push("<smsg>");
+				content.push("<info" + IG$/*mainapp*/._I20/*XUpdateInfo*/({option: "imp_load"}, "option", "s") + ">");
+				for (i=0; i < selvalues.length; i++)
+				{
+					d = selvalues[i];
+					ucontents[d.get("uid")] = d;
+					item = {name: d.get("name"),
+						uid: d.get("uid"),
+						nodepath: d.get("nodepath"),
+						type: d.get("type")
+					};
+					content.push("<item" + IG$/*mainapp*/._I20/*XUpdateInfo*/(item, "name;uid;type", "s") + "/>");
+					items.push(item);
+				}
+				content.push("</info>");
+				content.push("</smsg>");
+				req.init(panel, 
+					{
+			            ack: "27",
+			            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: panel.uid}, "uid"),
+			            mbody: content.join("")
+			        }, panel, panel.rs_mEp/*importMeta*/, null, ucontents);
+		    	
+		    	req._l/*request*/();
+			}
+		}
+	},
+	
+	rs_mEp/*importMeta*/: function(xdoc, ucontents) {
+		var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg"),
+			tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode),
+			i, t, record, msg,
+			errcnt = 0, errcode;
+			
+		for (i=0; i < tnodes.length; i++)
+		{
+			t = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+			
+			record = ucontents[t.uid];
+			if (record)
+			{
+				errcode = parseInt(t.status);
+				switch (errcode)
+				{
+				case 0:
+					msg = "Not processed";
+					break;
+				case 1:
+					msg = "Success";
+					break;
+				case 5:
+					msg = "STAT_CONTENT_MISSING";
+					break;
+				case 6:
+					msg = "STAT_FAILE_PARENT";
+					break;
+				case 7:
+					msg = "STAT_UPPER_NODE_MISSING";
+					break;
+				case 8:
+					msg = "STAT_NO_PARENT";
+					break;
+				default:
+					msg = "Unknown " + t.status;
+					break;
+				}
+				
+				if (errcode != 1)
+				{
+					errcnt++;
+				}
+				
+				record.set("logresult", msg);
+			}
+		}
+		
+		if (errcnt > 0)
+		{
+			IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, "" + errcnt + " item failed to import!", null, null, 1, "error");
+		}
+		else
+		{
+			IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1('M_SAVED'), null, null, 0, "success");
+		}
+	},
+	
+	uX/*updateCheckStatus*/: function(node, checked) {
+		var i,
+			tnode;
+		
+		for (i=0; i < node.childNodes.length; i++)
+		{
+			tnode = node.childNodes[i];
+			tnode.set("checked", checked);
+			
+			this.uX/*updateCheckStatus*/(tnode, checked);
+		}
+	},
+	
+	initComponent: function() {
+		var panel = this
+		
+	    this.items = [
+	    	{
+	    		xtype: "fieldset",
+	    		title: "Load File",
+	    		region: "north",
+	    		name: "uploadset",
+	    		layout: "anchor",
+	    		collapsible: true,
+	    		items: [
+	    			{
+		    			xtype: 'form',
+				    	name: 'mform',
+				    	border: 0,
+				    	customowner: this,
+				    	layout: {
+				    		type: "hbox",
+				    		align: "stretch"
+				    	},
+		    			items: [
+		    				{
+		    					xtype: "hiddenfield",
+		    					name: "_mts_",
+		    					value: IG$/*mainapp*/._g$a/*global_mts*/
+		    				},
+		    				{
+			    				xtype: 'fileuploadfield',
+			    				name: 'photo',
+			    				flex: 1,
+		  	    	            fieldLabel: 'Data',
+		  	    	            // labelWidth: 100,
+		  	    	            msgTarget: 'side',
+		  	    	            allowBlank: false,
+		  	    	            anchor: '100%',
+		  	    	            // width: 320,
+		  	    	            buttonText: IRm$/*resources*/.r1("L_SELECT_FILE"),
+		  	    	            buttonConfig: {
+		  	    	            	margin: "0 2 0"
+		  	    	            }
+			    			},
+			    			{
+			    				xtype: "button",
+			    				text: "Upload file",
+			    				handler: function() {
+			    					panel.ul1/*uploadFile*/.call(panel);
+			    				}
+			    			}
+			    		]
+		    		}
+	    		]
+	    	},
+	    	{
+	    		xtype: "form",
+	    		layout: {
+	    			type: "vbox",
+	    			align: "stretch"
+	    		},
+	    		flex: 1,
+	    		border: 0,
+	    		defaults: {
+	    			anchor: "100%"
+	    		},
+	    		items: [
+	    			{
+	    				xtype: "fieldcontainer",
+	    				border: 0,
+	    				layout: {
+	    					type: "hbox",
+	    					align: "stretch"
+	    				},
+	    				items: [
+	    					{
+			    				xtype: "displayfield",
+			    				value: "Items on file",
+			    				flex: 1
+			    			},
+			    			{
+								xtype: 'button', 
+						  		plain: true,
+						  		text: 'Import Selected',
+						  		handler: function() {
+						  			this._t$/*toolbarHandler*/('cmd_imp'); 
+						  		},
+						  		scope: this 
+							}
+	    				]
+	    			},
+	    			{
+	    				xtype: "treepanel",
+	    				flex: 1,
+	    				name: "metadata",
+	    				resizable: false,
+						collapsible: false,
+						rootVisible: false,
+						useArrows: true,
+						store: {
+							type: "treestore",
+							root: {
+								expanded: true
+							},
+							fields: [
+								"name", "uid", "type", "nodepath", "exist", "existname", "checked", "logresult", "iconCls"
+							]
+						},
+						tbar: [
+						    {
+						    	xtype: "button",
+						    	text: "Select All",
+						    	handler: function() {
+						    		var grid = this.down("[name=metadata]"),
+						    			rnode = grid.getRootNode(),
+						    			i;
+						    		
+						    		for (i=0; i < rnode.childNodes.length; i++)
+						    		{
+						    			rnode.childNodes[i].set("checked", true);
+						    		}
+						    	},
+						    	scope: this
+						    }
+						],
+	    				columns: [
+	    					{
+						    	xtype: "treecolumn",
+						    	flex: 1,
+						    	width: 120,
+						    	text: "Data name",
+						    	dataIndex: "name",
+						    	editor: {
+									allowBlank: false
+								}
+						    },
+	    					{
+						    	xtype: "gridcolumn",
+						    	width: 40,
+						    	text: "Exist",
+						    	dataIndex: "exist",
+						    	editor: {
+									allowBlank: false
+								}
+						    },
+						    {
+						    	xtype: "gridcolumn",
+						    	flex: 1,
+						    	text: "Type",
+						    	dataIndex: "type",
+						    	width: 80,
+						    	editor: {
+									allowBlank: false
+								}
+						    },
+						    {
+						    	xtype: "gridcolumn",
+						    	flex: 1,
+						    	text: "Path",
+						    	dataIndex: "nodepath",
+						    	editor: {
+									allowBlank: false
+								}
+						    },
+						    {
+						    	xtype: "gridcolumn",
+						    	flex: 1,
+						    	text: "Log Result",
+						    	dataIndex: "logresult"
+						    }
+	    				],
+	    				listeners: {
+	    					checkchange: function(node, checked, eOpts ) {
+	    						node.expand();
+	    						this.uX/*updateCheckStatus*/(node, checked);
+	    					},
+	    					scope: this
+	    				}
+	    			}
+	    		]
+	    	}
+		]
+		
+		IG$/*mainapp*/._I71/*metaImport*/.superclass.initComponent.apply(this, arguments);
+	},
+	
+	listeners: {
+		afterrender: function() {
+			var panel = this,
+				mform = panel.down("[name=mform]");
+			mform.getForm().errorReader = new IG$/*mainapp*/.m2ER();
+			mform.customowner = panel;
+		}
+	}
+});
+
+IG$/*mainapp*/.cMb3p/*metaImportPanel*/ = $s.extend($s.window, {
+	
+	
+	width: 400,
+	autoHeight: true,
+	
+	"layout": 'fit',
+		
+	initComponent: function() {
+		this.title = IRm$/*resources*/.r1('T_META_IMP');
+		
+		this.items = [
+			new IG$/*mainapp*/._I71/*metaImport*/()
+		];
+		
+		this.buttons = [
+			{
+				text: IRm$/*resources*/.r1('B_CLOSE'),
+				handler: function() {
+					this.close();
+				},
+				scope: this
+			}
+		];
+		
+		IG$/*mainapp*/.cMb3p/*metaImportPanel*/.superclass.initComponent.apply(this, arguments);
+	}
+});
+

@@ -1,1 +1,21381 @@
-IG$._I5f=[];IG$._I61=function(l,f,a,q,o,c,w){var b=null,u={uid:l,writable:o},s,e,h,d=0,g;if(c){for(s in c){u[s]=c[s]}}switch(f){case"report":u.itemtype="Report";u.iconCls="icon-report";h="_IBe";break;case"sheet":u.itemtype="Sheet";u.iconCls="icon-report";h="_IBe";break;case"dashboard":h="_IBf";break;case"metaeditor":h="_IC0";break;case"multimetric":h="_IC3";break;case"multimeasure":b=new IG$._IC4(u);h="_IC4";break;case"cube":u.iconCls="icon-cube";u.itemtype="Cube";h="_IC5";break;case"mcube":u.iconCls="icon-mcube";u.itemtype="MCube";h="_IC5";break;case"datacube":u.iconCls="icon-excel";u.itemtype="DataCube";h="_IC5";break;case"cubemodel":u.iconCls="icon-cubemodel";h="_IC7";break;case"dashboardedit":h="_IC8";d=2;break;case"template":h="_IC7";break;case"compositereport":u.itemtype="CompositeReport";h="_IBe";break;case"measure":h="_Ie1";break;case"hierarchy":h="_IeN";break;case"formulameasure":h="_Id8";break;case"custommetric":h="_Ie0";break;case"groupfield":h="_Iae";break;case"chartmeasure":h="_Ie2";break;case"nosql":u.iconCls="icon-nosql";u.itemtype="NoSQL";h="_IC5";break;case"mdbcube":u.iconCls="icon-mdbcube";u.itemtype="MDBCube";h="_IC5";break;case"datemetric":b=new IG$.M$dam(u);break;case"sqlcube":u.iconCls="icon-sqlcube";u.itemtype="SQLCube";h="_IC5";break;case"bigdata":case"mongodata":u.iconCls="icon-bigdata";d=3;u.itemtype=f=="bigdata"?"BigData":"MongoData";h="_IB9";break;case"bayesnet":u.iconCls="icon-bigdata";d=3;u.itemtype="BayesNet";h="_IB9b";break;case"javaclass":u.iconCls="icon-javaclass";h="_I9d";d=3;break;case"measuregroup":case"measuregroupdimension":h="_Id5";break;case"uipage":h="_Ia5";break;case"metric":h="_Idf";break;case"codemap":h="_IMm";break;case"classmodule":u.iconCls="icon-javaclass";d=1;h="__C";break}if(h){if(IG$[h]){b=new IG$[h](u)}else{g=ig$.scmap[d==1?"igcm":(d==2?"igc7":(d==3?"igc9":"igcn"))];IG$.x03(g,new IG$._I3d(this,function(){if(IG$[h]){w&&w.execute()}else{IG$._I52(IRm$.r1("L_ERR_L_MOD"))}}))}}return b};IG$._I63=function(b,d,c){var a=new IG$._Id1({uid:b,modal:(d===false)?false:true,dm:c||null});if(c!="report"){IG$.r___.b(b,a)}else{a.show()}};IG$._I64=function(b){var d=(b==true)?"visible":"hidden",a=(b==true)?0:10000,c;if(IG$._I7d){for(c=IG$._I7d.items.length-1;c>=0;c--){IG$._I7d.items.items[c].close()}}};IG$._I65=function(h,c){var l,a,u,s,o=h.toLowerCase(),q,y={},e=0,w,g=IG$._I7d||null,d;switch(h){case"CMD_PASSWORD_CHANGE":l=new IG$._I6d();IG$._I_5(null,l);break;case"CMD_PREF":l=new IG$._j();IG$._I_5(null,l);break;case"CMD_MAKE_WORKSPACE":l=new IG$._I6e({itemtype:"Workspace",parentnodepath:"/",parentuid:"/"});IG$._I_5(null,l);break;case"CMD_SW_APP":l=new IG$._I6d_({});IG$._I_5(null,l);break;case"CMD_SERVER_CONFIG":break;case"CMD_HELP_MGR":q="_I6f";s=o;u=IRm$.r1("I_HELP_MGR");break;case"CMD_LOCALE":q="_I70";s=o;u=IRm$.r1("I_LOC_MGR");break;case"CMD_DLOCALE":q="_I70";s=o;y.dicmode=1;u=IRm$.r1("I_DLOC_MGR");break;case"CMD_META_IMP":q="_I71";s=o;u=IRm$.r1("I_META_IMP");break;case"CMD_RELATION_VIEW":s=o;q="_I72";u=IRm$.r1("L_RELATION_VIEW");break;case"CMD_TABLE_REGISTER":s=o;q="_I73";u=IRm$.r1("L_MGR_DATABASE");e=1;break;case"CMD_LOOKUP":s=o;q="_I7k";u=IRm$.r1("L_S_LK");break;case"CMD_CONNECT_DB":s=o;q="_I74";u=IRm$.r1("L_REG_DATABASE");break;case"CMD_DATASET":s=o;q="Idm";u=IRm$.r1("L_REG_DATASET");break;case"CMD_ABOUT":l=new IG$._I75();IG$._I_5(null,l);break;case"CMD_USER_MANAGER":s=o;q="_I76";u=IRm$.r1("L_MGR_USER");break;case"CMD_VAR":case"CMD_BD_CONFIG":s=o;q="_I77";e=3;u=IRm$.r1("I_BD_CONFIG");break;case"CMD_DBD_MGR":s=o;q="_xA";u=IRm$.r1("I_MGR_DBD");break;case"CMD_FEATURES":s=o;q="_I76a";break;case"CMD_REPORT_STYLE":s=o;y.title=IRm$.r1("T_GLOBAL_REPORT_STYLE");y.styletype="g";q="_I78";break;case"CMD_RSN":l=new IG$._I79({});IG$._I_5(null,l);break;case"CMD_SYSMON":q="_I7a";s=o;break;case"CMD_SYSRES":q="_I7b";s=o;break;case"CMD_SCHEDULE":s=o;q="_I7c";u=IRm$.r1("I_SCHEDULE");break;case"CMD_HOME":IG$._I7e(0);break;case"CMD_BROWSER":IG$._I7e(1);break;case"CMD_TABPANEL":IG$._I7e(2);break;case"CMD_WIZARD":case"CMD_APP_WIZARD":IG$._I7e(3);var x=IG$._n25;if(!IG$._I7f&&IG$.ltW){IG$._I7f=new IG$._I80(x,IG$.ltW)}break;case"CMD_SYNC_USER":s=o;y.uid=c;q="_I76n";u=IRm$.r1("T_SYNC_USER");break;case"CMD_MGR_MENUS":IG$._I7e(4,"ig_mngr");break;case"CMD_HD_BFLOW":case"CMD_MONG_DATA":d=(h=="CMD_HD_BFLOW")?"BigData":"MongoData";g&&g.m1$7.call(g,null,d.toLowerCase(),d,null,null,true);break;case"CMD_MONG_MAPR":case"CMD_HD_MAPR":s=o;q="_xA";y._cmode=2;u=IRm$.r1("L_HD_BFLOW");break;case"CMD_ML_BAYES":d="BayesNet";g&&g.m1$7.call(g,null,d.toLowerCase(),d,null,null,true);break;case"CMD_D_MENU":s=o;q="_I7_";u=o;break;case"CMD_REVISION":s=o;y.uid=c;q="_I76b";u=IRm$.r1("T_REVISION");break}if(q&&IG$._I7d){var f=IG$._I7d.getComponent.call(IG$._I7d,s);if(f){IG$._I7d.setActiveTab.call(IG$._I7d,f);if(o=="cmd_revision"){f._1.call(f,c)}}else{if(IG$[q]){a=new IG$[q](y);if(!u){u=a.title}}else{scripts=ig$.scmap[e==1?"igcn":(e==3?"igc9":"igcm")];IG$.x03(scripts,new IG$._I3d(this,function(){if(IG$[q]){a=new IG$[q](y);if(!u){u=a.title}a.id=s;a.address=s;a.title=IG$._I28(u);if(a.isWindow==true){IG$._I_5(null,a)}else{var z=IG$._I7d.add.call(IG$._I7d,a);IG$._I7d.setActiveTab.call(IG$._I7d,z)}}else{IG$._I52(IRm$.r1("L_ERR_L_MOD"))}}))}if(a){a.id=s;a.address=s;a.title=IG$._I28(u);if(a.isWindow==true){IG$._I_5(null,a)}else{var b=IG$._I7d.add.call(IG$._I7d,a);IG$._I7d.setActiveTab.call(IG$._I7d,b)}}}}};IG$._I81=function(a){};IG$._I81.prototype={_I85:function(){var a=IG$._I83,d=$("#loginform"),c=d.items.items[0].getValue(),b=d.items.items[1].getValue();a.m1$8.call(a,c,b)},rm1$8:function(c,b,d,f,e){var a=this;if(d){d.show()}$.ajax({url:ig$.servlet,data:{ack:"23",payload:"<smsg mts='"+(f||"")+"'></smsg>",mbody:"<smsg></smsg>",uniquekey:IG$._I4a()},type:"POST",dataType:"text",timeout:30000,async:true,contentType:"application/x-www-form-urlencoded; charset=UTF-8",beforeSend:function(h,g){},cache:false,crossDomain:false,processData:true,timeout:300000,error:function(){e&&e.execute();alert("Error while connecting server")},success:function(s){var h=IG$._I13(s),l=IG$._I18(h,"/smsg"),o=IG$._I18(h,"/smsg/item"),q,g=l?IG$._I1b(l,"errorcode"):null;if(o){p1=IG$._I1a(o,"p1");p2=IG$._I1a(o,"p2");if(p1&&p2){IG$._I3a=p1;IG$._I3b=p2;IG$._g$a=IG$._I1b(o,"mts");setTimeout(function(){a.m1$8.call(a,c,b,d,f,e)},10)}else{if(d){e&&e.execute();d.hide();alert("Error while get secure key value. Please try again later!")}}}else{if(g){if(d){d.hide()}var u=IG$._I1b(l,"errormsg");e&&e.execute();alert(u)}}}})},m1$8:function(c,b,d,h,g){var a=this,e=new IG$._I3e();var f=IG$._I3c([c,b]);e.init(a,{ack:"13",payload:"<smsg ptoken='' uuid=''><userid><![CDATA["+f[0]+"]]></userid><passwd><![CDATA["+f[1]+"]]></passwd></smsg>",mbody:"<smsg><option lang='"+useLocale+"' mts='"+(h||"")+"' app='' session_expire='"+(ig$.session_expire||"0")+"'/></smsg>"},a,a.r_I85,function(l){g&&g.execute(l);if(d){d.hide()}},d);e._l()},r_I85:function(a,g){var c=this;var b=IG$._I18(a,"/smsg/item");h=IG$._I1b(b,"token");var f=IG$._I1b(b,"uid");var h=null;var d=false;var e={lastaccesstime:IG$._I1b(b,"lastaccesstime"),lastaccesshost:IG$._I1b(b,"lastaccesshost"),lastaccessaddr:IG$._I1b(b,"lastaccessaddr"),accesshost:IG$._I1b(b,"accesshost"),accessaddr:IG$._I1b(b,"accessaddr"),accesstime:IG$._I1b(b,"accesstime")};if(window.IG$._I83){IG$._I83.lastLogin=e;if(IG$._I7d&&IG$._I7d.iLL){IG$._I7d.iLL.call(IG$._I7d)}}if(g){g.hide()}if(c.uuid&&c.uuid.length>0&&f&&c.uuid!=f){d=true}c.uuid=f;if(h!=""&&c.uuid!=""){c.Js2.call(c,d)}},Js2:function(a){this.Js4(a)},Js3:function(){var a=this,c=a.jS1.l3.substring(1),b=$("#mechanlevel");if(b&&b[0]){setTimeout(function(){switch(c){case"1":b.attr("title","Your license is limited using all features.");b.animate({width:45},2000);b.bind("click",function(){window.open("http://www.amplixbi.com/","_new")});break;case"2":b.attr("title","Your license is limited using all features.");b.animate({width:60},2000);b.css({backgroundColor:"#0000ff"});b.bind("click",function(){window.open("http://www.amplixbi.com/","_new")});break;case"3":case"4":b.attr("title","Currently using full feature and unlimited version.");b.animate({width:100},2000);b.css({backgroundColor:"#00ff00"});break}},200)}if(a.callback){setTimeout(function(){a.callback.execute()},100)}},Js4:function(a){var b=this,c=new IG$._I3e();c.init(b,{ack:"28",payload:IG$._I2d({address:"/user"}),mbody:IG$._I2e({option:"_gi_",uid:b.uuid,tmpl:(IG$.__ep?"sys_print_mode":IG$.__ep_||"")})},b,b.rs_Js4,null,[a]);c._l()},rs_Js4:function(b,e){var c=this,a=e[0],f;var d=new IG$._I82(b);c.jS1=d;c.jS2=c.jS1.jS1("admins","A");c.desktopsetting=IG$._I18(b,"/smsg/DesktopInfo");ig$.fm=d.fm;$.cookie("lui",d.u1,{expires:7});IG$.$1(d.tmpl,d.fm);if(a==true){IG$._I64(true);$("#win-mask").css({display:"none"});if(IG$._I7d){IG$._I7d.i1.call(IG$._I7d)}}if(IG$._I7d){IG$._I7d.iLL.call(IG$._I7d)}c.Js3.call(c)}};IG$._I82=function(D){var F=this,u=IG$._I18(D,"/smsg/userdetail/smsg/item"),b=IG$._I18(u,"d"),o=IG$._I18(u,"f"),B=IG$._I18(u,"themes"),f,c,a,h,l,s=[],d=false,y,q,x,w,A,g,E,C;q=IG$._I1c(u);F.sid=q.sid;F.gid=q.gid;F.u1=q.id;F.username=q.name;F.l3=q.l3;F.l4=q.l4=="Y";F.auth=[];F.authmap={};F.fm={};F.pf=[];F.mts=q.mts;F.mts_name=q.mts_name;F.tmpl={};if(q.a2&&!ig$.theme_id){ig$.theme_id=q.a2}g=IG$._I18(D,"/smsg/userdetail/smsg/item/tmpl");if(g){E=IG$._I18(g,"mview");if(E){c=IG$._I26(E);F.tmpl.mainview={};for(y=0;y<c.length;y++){q=IG$._I1c(c[y]);q.width=q.width?Number(q.width):null;q.height=q.height?Number(q.height):null;h=IG$._I26(c[y]);for(x=0;x<h.length;x++){C=IG$._I29(h[x]);if(C=="items"){q.items=[];l=IG$._I26(h[x]);for(w=0;w<l.length;w++){A=IG$._I1c(l[w]);q.items.push(A)}}else{q[C]=IG$._I24(h[x])}}if(q.html){q.html=IG$._I46(q.html,"$APP_NAME",ig$.appname);q.html=IG$._I46(q.html,"$APP_COPY",ig$.copy)}F.tmpl.mainview[q.name]=q}}}c=IG$._I26(b);for(y=0;y<c.length;y++){q=IG$._I1c(c[y]);F.auth.push(q);F.authmap[q.name.toLowerCase()]=q}d=F.authmap.admins?true:false;if(o){a=IG$._I26(o);for(y=0;y<a.length;y++){q=IG$._I1c(a[y]);F.fm[q.cls]=(q.hide=="T")}}o=IG$._I18(u,"pf");if(o){a=IG$._I26(o);for(y=0;y<a.length;y++){F.pf.push(IG$._I24(a[y])+";")}}ig$.fmc&&ig$.fmc.remove();s.push("<style type='text/css'>");$.each(F.fm,function(e,G){if(e=="ig_mngr"||e=="ig_sys"||e=="ig_ft"){if(!d){s.push("."+e+" { display: none; }")}}else{if(G==true){s.push("."+e+" { display: none; }")}}});s.push("</style>");ig$.fmc=$(s.join("")).appendTo($("head"));F.themes=[];if(B){f=IG$._I26(B);for(y=0;y<f.length;y++){F.themes.push({name:IG$._I1b(f[y],"name")})}if(window.app_themes){try{window.app_themes(F.themes)}catch(z){}}}};IG$._I82.prototype={jS1:function(a,c){var d=this,b;for(b=0;b<d.auth.length;b++){if((!c||(c&&d.auth[b].dutytype==c))&&d.auth[b].name.toLowerCase()==a){return true}}return false}};IG$._I83=new IG$._I81();IG$._I84=function(b,a){$.ajax({url:ig$.servlet,data:{ack:"14",payload:"<smsg ptoken='' uuid=''></smsg>",mbody:"<smsg><option lang='"+useLocale+"' app='"+loadingApp+"'/></smsg>",uniquekey:IG$._I4a()},type:"POST",dataType:"text",timeout:30000,async:true,contentType:"application/x-www-form-urlencoded; charset=UTF-8",beforeSend:function(d,c){},cache:false,crossDomain:false,processData:true,error:function(){alert("Error while connecting server");if(a){a.call()}},success:function(h){var c=IG$._I13(h),d=IG$._I18(c,"/smsg"),f=IG$._I18(c,"/smsg/item"),g,e,l;if(f){g=IG$._I1b(f,"token");e=IG$._I1b(f,"uid");l=IG$._I1b(f,"redirect");if(b){b.call()}else{if(l&&l.length>0){window.location.replace(l)}}}else{if(a){a.call()}}}})};IG$._I85=function(d,c,e,f,a){if(e){e.show()}var b=$("#il_err");b.hide();$.ajax({url:ig$.servlet,type:"POST",data:{ack:"23",payload:"<smsg mts='"+(f||"")+"'></smsg>",mbody:"<smsg></smsg>",uniquekey:IG$._I4a()},dataType:"text",timeout:30000,async:true,contentType:"application/x-www-form-urlencoded; charset=UTF-8",beforeSend:function(h,g){},cache:false,crossDomain:false,processData:true,timeout:300000,error:function(){e.hide();alert("Error while connecting server")},success:function(s){var g=IG$._I13(s),h=IG$._I18(g,"/smsg"),o=IG$._I18(g,"/smsg/item"),w,q;if(o){w=IG$._I1a(o,"p1");q=IG$._I1a(o,"p2");if(w&&q){IG$._I3a=w;IG$._I3b=q;IG$._g$a=IG$._I1b(o,"mts");setTimeout(function(){IG$._I86(d,c,e,f,a)},10)}else{alert("Error while get security key");if(e){e.hide()}}}else{if(h){var l=IG$._I1b(h,"errorcode"),u=IG$._I1b(h,"errormsg");if(l){if(e){e.hide()}if(l=="0x6d00"){b.unbind("click");b.bind("click",function(){b.hide()});b.show();$(".igc-errorinfo-msg",b).html(u)}else{IG$._I51(g,null)}}}}}})};IG$._I86=function(d,c,e,g,a){var f=IG$._I3c([d,c]);var b=$("#il_err");b.hide();$.ajax({url:ig$.servlet,data:{ack:"13",payload:"<smsg ptoken='' uuid=''><userid><![CDATA["+f[0]+"]]></userid><passwd><![CDATA["+f[1]+"]]></passwd></smsg>",mbody:"<smsg><option lang='"+useLocale+"' app='"+loadingApp+"' session_expire='"+(ig$.session_expire||"0")+"' mts='"+(g||"")+"'/></smsg>",uniquekey:IG$._I4a()},type:"POST",dataType:"text",timeout:30000,async:true,contentType:"application/x-www-form-urlencoded; charset=UTF-8",beforeSend:function(l,h){},cache:false,crossDomain:false,processData:true,timeout:300000,error:function(){if(e){e.hide()}alert("Error while connecting server")},success:function(w){var q=IG$._I13(w),u=IG$._I18(q,"/smsg"),y=IG$._I18(q,"/smsg/item"),o,x,h=u?IG$._I1b(u,"errorcode"):null,s;if(e){e.hide()}if(y){o=IG$._I1b(y,"token");x=IG$._I1b(y,"uid");s=IG$._I1b(y,"redirect");if(s&&s.length>0){window.location.replace(s)}else{alert("System Error:: Application is not defined on config.xml")}}else{if(h){var l=IG$._I1b(u,"errormsg");if(h=="0x6d00"){b.unbind("click");b.bind("click",function(){b.hide()});b.show();$(".igc-errorinfo-msg",b).html(l);a&&a.execute()}else{if(a){a.execute()}else{IG$._I51(q,null)}}}}}})};IG$._I87=function(a){if(!ig$.appInfo){$.ajax({url:ig$.servlet,data:{sreq:"version",uniquekey:IG$._I4a()},dataType:"text",type:"GET",timeout:30000,async:true,contentType:"application/x-www-form-urlencoded; charset=UTF-8",beforeSend:function(c,b){},cache:false,crossDomain:false,processData:true,error:function(){ig$.appInfo={appversion:"_._",apprelease:"_._.___"};a&&a.call()},success:function(d){var b=IG$._I13(d),c=IG$._I18(b,"/smsg"),e=IG$._I18(b,"/smsg/info");ig$.appInfo={appversion:e?IG$._I1b(e,"version"):"0.0",apprelease:e?IG$._I1b(e,"release"):"0.0.000"};a&&a.call()}})}else{a&&a.call()}};IG$._I88=function(c,b,s){var h=$("<div id='loginWindow' class='loginWindow'></div>"),g,u=ig$.lang,e,o=window.bowser;if(o.msie){h.css({width:"100%",height:"100%"});if(ig$.appbg){var f=$("<img src='./images/"+(ig$.appbg)+"' class='background'/>");f.css({width:"100%",height:"100%",position:"absolute",top:0,left:0});h.append(f)}}if(u){for(g=0;g<u.length;g++){if(u[g].code==useLocale){e=u[g];break}}}var x,y="<div class='login-mc bounceInDown animated'><div class='login-ic'><img class='login-logo' src='./images/logo_7186.png'><div id='user_lbl'>"+((e&&e.l1)?e.l1:"User ID")+"</div><div id='pass_lbl'>"+((e&&e.l2)?e.l2:"Password")+"</div><form name='login_form' id='login_form' rel='nofollow' target='temp' action=''>	<input id='userid' type='text' name='userid' value='"+(c||"")+"'>	<input id='userpassword' type='password' name='userpassword' value='"+(b||"")+"'>	<input id='login_btn' type='button' value='"+((e&&e.l3)?e.l3:"Login")+"'></form><div id='login_locale'><div class='locale_button'><span>Language</span><select id='b_loc'>";if(u){for(g=0;g<u.length;g++){y+="<option value='"+u[g].code+"'"+(useLocale==u[g].code?" selected":"")+">"+u[g].disp+"</option>"}}y+="</select></div></div><div id='license'>Licensed to: MPLIX</div>";y+="</div>";y+="</div>";x=$(y).appendTo(h).addClass("loginForm");var d=$("<div class='legal'><table width='494' border='0' cellpadding='0' cellspacing='0'>  <tr>    <td width='78'>&nbsp;</td>    <td width='416' valign='top'><div align='left'>      <p class='style2'>"+ig$.copy+"</p>      <p class='style1'><span class='style4'>For support please contact</span>      <a href='"+ig$.companydomain+"' target='_new'>"+ig$.companydomain+"</a></p>    </div></td>  </tr></table></div>").appendTo(h);var w=$("<div class='build'><div align='right'><span class='style6'>Build Id: <span id='app_release'"+(ig$.appInfo&&ig$.appInfo.apprelease)+"</span></span></div></div>").appendTo(h);var q=$("<div id='il_err' class='igc-errorinfo'><div class='igc-errorinfo-msg'></div></div>").appendTo(h);var a=$("<div id='login-progress' class='login-progress'></div>").css({position:"absolute",width:"100%",height:"100%",top:0,left:0,right:0,bottom:0}).hide().appendTo(h);if(window.IG$.cLogin){window.IG$.cLogin(h)}$(document.body).append(h);IG$._I87(function(){$("#app_release",w).text(ig$.appInfo.apprelease)});setTimeout(function(){if(c){$("#userpassword").focus()}else{$("#userid").focus()}},200);$("#userpassword").bind("focus",function(){$("#userpassword").select()});$("#userid").bind("focus",function(){$("#userid").select()});$("#userpassword").bind("mouseup",function(){setTimeout(function(){$("#userpassword").select()},80)});$("#userid").bind("mouseup",function(){setTimeout(function(){$("#userid").select()},80)});if(s!==false){$("#b_loc").bind("change",function(F){var A=$("#b_loc"),l=$("option:selected",A).val(),E=$(location).attr("href"),z,G,D={},B,H,C,I=false;if(l&&l!=window.useLocale){if(E.indexOf("?")>-1){z=E.substring(0,E.indexOf("?"));G=E.substring(E.indexOf("?")+1);D=G.split("&");for(C=0;C<D.length;C++){if(D[C].substring(0,5)=="lang="){D[C]=D[C].substring(0,5)+l;I=true;break}}G=D.join("&");E=z+"?"+G}if(I==true){a.show();setTimeout(function(){window.location.replace(E)},100)}}});$("#login_btn").bind("click",function(A){A.preventDefault();A.stopPropagation();var z=$("#userid").val(),l=$("#userpassword").val();$("#userpassword").val("");IG$._I83.rm1$8.call(IG$._I83,z,l,a,window.m$mts);return false});$("#userpassword").bind("keypress",function(A){if(A.keyCode==13){var z=$("#userid").val(),l=$("#userpassword").val();$("#userpassword").val("");IG$._I83.rm1$8.call(IG$._I83,z,l,a,window.m$mts);return false}return true})}return h};IG$._I89=function(d,a){$("#idv-mnu-pnl").hide();if(IG$._I83){IG$._I83.callback=new IG$._I3d(this,function(){IG$._I83.tl=-1;IG$._I8b()})}if(window.hist){window.hist.addHistory("")}var c=$("#loginWindow"),b=window.bowser;c.css({zIndex:99});if(b.msie){c.css({position:"absolute",top:0,left:0,right:0,bottom:0,width:"100%",height:"100%",margin:0,padding:0})}c.show()};IG$._I8a=function(a){if(IG$.msgint>-1){clearInterval(IG$.msgint);IG$.msgint=-1}IG$._I55(IRm$.r1("B_CONFIRM"),IRm$.r1("L_T_LOUT"),function(c){if(c=="yes"){var b=new IG$._I3e();b.init(null,{ack:"15",payload:"",mbody:""},null,function(d){},function(){return true});b._l();IG$._I89(a,1)}})};var clsscript={},fnglobal={},__jsmod={};IG$.d$$mj=function(a){this.uid=a;this.lastError=null};IG$.d$$mj.prototype={_l5:function(b){var f=this,q=document,l=$("head"),a,c=window.bowser;a=__jsmod[f.uid];if(!a){a=document.createElement("script");a.id="clsscript";a.type="text/javascript";l[0].appendChild(a);__jsmod[f.uid]=a}delete clsscript[f.uid];var o="function "+this.uid+"() {"+b+"} clsscript['"+this.uid+"'] = "+this.uid+";";if(c.msie){a.text=o}else{a.innerHTML=o}delete fnglobal[f.uid];l[0].removeChild(a);delete __jsmod[f.uid];var g={};try{var h=clsscript[f.uid];h.call(g)}catch(d){IG$._I52(IRm$.r1("E_SC_LD")+": "+d.message)}fnglobal[this.uid]=g},_l6:function(b,a){var c=fnglobal[this.uid];if(c){c.controls=b;c.ptr_main=a;c.parameters=a._9.page_param_map}},_l7:function(a){var d=fnglobal[this.uid],b=arguments,c=true;b=Array.prototype.slice.call(b,1);this.lastError=null;try{if(!d[a]){this.lastError="Function call: "+a+" not found";return false}c=d[a].apply(d,b)}catch(f){this.lastError="Error: "+a+"\n"+this._l9().join("\n\n");return false}return c},_l8:function(){var d=fnglobal[this.uid],c=[],b,e,a;if(d){for(b in d){e=d[b];a=typeof(e);if(a=="function"){c.push(b)}}}return c},_l9:function(){var o=[],c=false;try{d.dont.exist+=0}catch(g){if(g.stack){var q=g.stack.split("\n");for(var d=0,f=q.length;d<f;d++){if(q[d].match(/^\s*[A-Za-z0-9\-_\$]+\(/)){o.push(q[d])}}o.shift();c=true}else{if(window.opera&&g.message){var q=g.message.split("\n");for(var d=0,f=q.length;d<f;d++){if(q[d].match(/^\s*[A-Za-z0-9\-_\$]+\(/)){var l=q[d];if(q[d+1]){l+=" at "+q[d+1];d++}o.push(l)}}o.shift();c=true}}}if(!c){var b=arguments.callee.caller;while(b){var h=b.toString();var a=h.substring(h.indexOf("function")+8,h.indexOf(""))||"anonymous";o.push(a);b=b.caller}}return o}};IG$._IEFc={t_sum:{name:"t_sum",title:"Subtotal",expr:"SUM",grp:"aggr"},t_avg:{name:"t_avg",title:"Average",expr:"AVG",grp:"aggr"},t_min:{name:"t_min",title:"Minimum",expr:"MIN",grp:"aggr"},t_max:{name:"t_max",title:"Maximum",expr:"MAX",grp:"grp"},t_pot:{name:"t_pot",title:"Percent of total",usecolumnformat:false,formatstring:"#,##0.00 %",expr:"PERCENT_OF_TOTAL",grp:"pcnt"},t_cumul:{name:"t_cumul",title:"Cumulative Percentage",usecolumnformat:false,formatstring:"#,##0.00 %",expr:"CUMUL_PERCENT",grp:"pcnt"},t_incr:{name:"t_incr",title:"Incremental",expr:"INCR",grp:"pcnt"},t_diff:{name:"t_diff",title:"Difference",expr:"DIFF",grp:"pcnt"},t_rank:{name:"t_rank",title:"Ranking",expr:"RANK",grp:"pcnt"},t_stdev:{name:"t_stdev",title:"Standard Deviation",expr:"STDEV",grp:"stat",usecolumnformat:false,formatstring:"#,##0.00"},t_stdevp:{name:"t_stdevp",title:"Standard Deviation P",expr:"STDEVP",grp:"stat",usecolumnformat:false,formatstring:"#,##0.00"},t_percentile:{name:"t_percentile",title:"Percentile",expr:"PERCENTILE",grp:"stat",params:[{name:"k",type:"float"}],usecolumnformat:false,formatstring:"#,##0.00"},t_percentile_exe:{name:"t_percentile_exe",title:"Percentile Excel",expr:"PERCENTILE_EXE",grp:"stat",params:[{name:"k",type:"float"}],usecolumnformat:false,formatstring:"#,##0.00"}};IG$._IEF=IG$.x_c(IG$.pbW,{modal:true,region:"center",layout:"fit",closable:false,resizable:true,width:650,height:440,_ILb:null,sheetindex:-1,callback:null,_IFe:function(){var s=this,c=[],g,u=s.down("[name=grddata]"),h=s.down("[name=grddata_sel]"),f,o=[],e={},b,w=IG$._IEFc,l=s.pS,q=s.pF,d=s.pI,x=s.pCC,a;if(d){$.each(w,function(y,z){c.push(z)});u.store.loadData(c);for(g=0;g<q.length;g++){if(q[g].baseuid==d.uid){o.push(q[g])}}h.store.loadData(o);if(x){a=h.store.data.items;for(g=0;g<a.length;g++){if(a[g].get("baseuid")==x.get("baseuid")&&a[g].get("fid")==x.get("fid")){s.c1(a[g]);break}}}}},c1:function(g){var d=this,f=d.down("[name=_prop]"),c=IG$._IEFc,h,a,e,b;$.each(c,function(l,o){if(o.expr==g.get("expression")){h=o;return false}});if(d._lprop){b=d.Cp();if(!b){return}}d._lprop={prop:h,rec:g};if(h){h._params=[{name:"title",required:1},{xtype:"checkbox",name:"showtoprow",fieldLabel:IRm$.r1("L_S_TROW")},{xtype:"checkbox",name:"groupresults",fieldLabel:IRm$.r1("L_S_GRST")},{xtype:"checkbox",name:"usecolumnformat",fieldLabel:" ",boxLabel:"Use Column Format"},{name:"formatstring",fieldLabel:IRm$.r1("L_FORMAT")},{name:"direction",xtype:"combobox",fieldLabel:IRm$.r1("L_C_DIR"),displayField:"name",valueField:"value",store:{fields:["name","value"],data:[{name:IRm$.r1("L_VERTICAL"),value:"vertical"},{name:IRm$.r1("L_HORIZONTAL"),value:"horizontal"}]}},{name:"separatecolumn",xtype:"checkbox",fieldLabel:IRm$.r1("L_SEP_COL")}];if(h.params){for(a=0;a<h.params.length;a++){e=h.params[a];e.required=1;h._params.push(e)}}f.removeAll();$.each(h._params,function(o,q){var l=g.get(q.name)||"";if(q.xtype=="checkbox"&&l=="T"){l=true}f.add({xtype:q.xtype||"textfield",name:"field_"+o,fieldLabel:q.fieldLabel||q.name,store:q.store,value:l,displayField:q.displayField,valueField:q.valueField,boxLabel:q.boxLabel})});f.show()}else{f.hide()}},Cp:function(){var h=this,o=h._lprop,a,b,c,l,g,d,e,f=1;if(o){a=o.prop;b=a._params;c=o.rec;if(b){for(e=0;e<b.length;e++){l=h.down("[name=field_"+e+"]");g=l.getValue();d=b[e].name;l.clearInvalid();if(b[e].required&&!g){l.markInvalid("Required Field");return 0}if(d=="showtoprow"||d=="groupresults"){g=g?"T":"F"}c.set(d,g)}}}h._lprop=null;return f},_IFf:function(){var f=this,c=f.down("[name=grddata_sel]"),b=c.store,a=f.pS,g=[],e,d=0;a.si=a.si||0;if(f._lprop){d=f.Cp();if(!d){return}}for(i=0;i<b.data.items.length;i++){e=new IG$._IF0();e.p1.call(e,b.data.items[i]);e.fid="formula_"+(a.si++);g.push(e)}f.__dloaded=false;f.callback&&f.callback.execute(g);f.close()},A1:function(c){var l=this,o=l.down("[name=grddata]"),f=l.down("[name=grddata_sel]"),g=l.pS,h=IG$._IEFc,d,e,q=[],u,s,b,a;g.si=g.si||0;for(e=0;e<c.length;e++){d=c[e];s={title:d.get("title"),expression:d.get("expr"),baseuid:l.pI.uid};a=d.get("name");s.direction="vertical";s.formatstring="";s.stylename=null;s.separatecolumn=true;s.subtotalbase=null;s.usecolumnformat=true;s.showtoprow="F";s.groupresults="F";s.fid="formula_"+(g.si++);b=h[a];if(b){if(typeof(b.usecolumnformat)!="undefined"){s.usecolumnformat=b.usecolumnformat}if(typeof(b.formatstring)!="undefined"){s.formatstring=b.formatstring}}u=f.store.add(s);q.push(u)}if(q.length){l.c1(q[q.length-1])}o.clearSelection()},_ic:function(){var a=this;a.title=IRm$.r1("T_FM_SEL");IG$.apply(this,{items:[{xtype:"container",padding:10,layout:{type:"vbox",align:"stretch"},items:[{xtype:"displayfield",height:20,value:IRm$.r1("L_DYN_SELECT")},{xtype:"container",layout:{type:"hbox",align:"stretch"},flex:1,items:[{xtype:"container",layout:{type:"vbox",align:"stretch"},flex:1,items:[{xtype:"combobox",fieldLabel:"Formula Group",displayField:"name",valueField:"value",store:{xtype:"store",fields:["name","value"],data:[{name:"All Formula",value:""},{name:"Mostly used",value:"aggr"},{name:"Percentage",value:"pcnt"},{name:"Statistics",value:"stat"}]},listeners:{change:function(b){var e=this,c=b.getValue(),d=e.down("[name=grddata]");if(c){d.filter({name:"grp",value:c})}else{d.filter()}},scope:this}},{xtype:"gridpanel",name:"grddata",selMode:{mode:"SINGLE"},store:{xtype:"store",fields:["sel","name","title","expr"]},flex:1,columns:[{xtype:"checkcolumn",dataIndex:"sel",width:30},{text:"Name",dataIndex:"title",flex:1}]}]},{xtype:"container",width:30,padding:3,layout:{type:"vbox",align:"middle"},items:[{xtype:"container",flex:1},{xtype:"button",text:" > ",height:25,handler:function(){var c=this,b=c.down("[name=grddata]"),e=b.getSelectionModel(),d=e.selected;c.A1(d)},scope:this},{xtype:"container",flex:1}]},{xtype:"container",layout:{type:"vbox",align:"stretch"},flex:1,items:[{xtype:"displayfield",height:20,value:IRm$.r1("L_DYN_SELECT")},{xtype:"gridpanel",name:"grddata_sel",selMode:a.selMode,store:{xtype:"store",fields:["sel","name","title","baseuid","direction","stylename","expression","type","fid","formatstring","showtoprow","groupresults","quart","k"]},flex:1,columns:[{xtype:"checkcolumn",dataIndex:"sel",width:30},{text:"Title",dataIndex:"title",flex:1},{text:"Expression",dataIndex:"expression",width:120},{xtype:"actioncolumn",width:70,items:[{iconCls:"icon-grid-config",handler:function(c,b,d,f){var e=this;e.c1(f)},scope:this},{iconCls:"icon-grid-delete",handler:function(d,b,e,f){var c=d.store;c.remove(f)},scope:this}]}]},{xtype:"container",name:"_prop",hidden:true,layout:{type:"vbox",align:"stretch"},items:[]}]}]}]}],buttons:[{text:IRm$.r1("B_CONFIRM"),handler:function(){this._IFf()},scope:this},{text:IRm$.r1("B_CANCEL"),handler:function(){this.close()},scope:this}],listeners:{afterrender:function(b){a._IFe.call(a)}}});IG$._IEF.superclass._ic.apply(this,arguments)}});IG$._Iec=IG$.x_c(IG$.pbW,{modal:true,region:"center",layout:"fit",closable:false,resizable:true,width:450,height:400,_ILb:null,sheetindex:-1,callback:null,_IFe:function(){var g=this,b=[],e,h=g.down("[name=grddata]"),d,f=[],c={},a,l=g.filteritem;if(l&&l.data){for(e=0;e<l.data.length;e++){b.push({code:l.data[e].code,value:l.data[e].disp||l.data[e].code})}h.store.loadData(b);a=l.selection;if(a&&a.length>0){for(e=0;e<a.length;e++){c[a[e].code]=a[e]}for(e=0;e<h.store.data.items.length;e++){d=h.store.data.items[e];if(c[d.get("code")]){f.push(d)}}h.select(f)}}},_IFf:function(){var b=this,a=b.down("[name=grddata]"),d=a.getSelectionModel(),c=d.selected;b.__dloaded=false;b.callback&&b.callback.execute(c);b.close()},_ic:function(){var a=this,d=160,c=[{xtype:"checkcolumn",dataIndex:"sel",width:30}],b=ig$.valueselect?ig$.valueselect.width:null;a.title=IRm$.r1("T_DYN_SELECT");a.smode=a.smode||"codevalue";switch(a.smode){case"code":c.push({text:"Code",dataIndex:"code",flex:1});break;case"value":c.push({text:"Value",dataIndex:"value",flex:1});break;case"valuecode":c.push({text:"Value",dataIndex:"value",flex:1});c.push({text:"Code",dataIndex:"code",flex:b?null:1,width:b?b:null});break;default:c.push({text:"Code",dataIndex:"code",flex:b?null:1,width:b?b:null});c.push({text:"Value",dataIndex:"value",flex:1});break}IG$.apply(this,{items:[{xtype:"container",padding:10,layout:{type:"vbox",align:"stretch"},items:[{xtype:"displayfield",height:20,value:IRm$.r1("L_DYN_SELECT")},{xtype:"gridpanel",name:"grddata",selMode:a.selMode,store:{xtype:"store",fields:["code","value","sel"]},flex:1,columns:c}]}],buttons:[{text:IRm$.r1("B_CONFIRM"),handler:function(){this._IFf()},scope:this},{text:IRm$.r1("B_CANCEL"),handler:function(){this.close()},scope:this}],listeners:{afterrender:function(e){a._IFe.call(a)}}});IG$._Iec.superclass._ic.apply(this,arguments)}});IG$._IeFc={};IG$._IeF=IG$.x_c(IG$.pbW,{modal:true,region:"center",layout:"fit",closable:false,resizable:true,width:450,height:400,_ILb:null,sheetindex:-1,callback:null,_IFe:function(){var g=this,b=[],e,h=g.down("[name=grddata]"),d,f=[],c={},a,o=g.filteritem,l;g.A();if(o&&o.uid){l=new IG$._I3e();l.init(g,{ack:"11",payload:IG$._I2d({uid:o.uid}),mbody:IG$._I2e({option:"ftables"})},g,function(q){var s=IG$._I18(q,"/smsg/item/item");if(s){o.__tbuid=IG$._I1b(s,"uid");if(o.__tbuid){g._l4m();g._l6(o.__tbuid)}}});l._l()}if(o&&o.data){for(e=0;e<o.data.length;e++){b.push({code:o.data[e].code,value:o.data[e].disp||o.data[e].code})}h.store.loadData(b);a=o.selection;if(a&&a.length>0){for(e=0;e<a.length;e++){c[a[e].code]=a[e]}for(e=0;e<h.store.data.items.length;e++){d=h.store.data.items[e];if(c[d.get("code")]){f.push(d)}}h.select(f)}}},A:function(){var e=this,d=e.down("[name=_m4]"),g=d.body.dom,b,f,a,h,c;f=$("#fileupload",g);h=$("#d_progress",g);f.fileupload({url:ig$.servlet,dataType:"text",formData:{_mts_:IG$._g$a||""},done:function(y,u){var A=u.result||'<smsg errorcode="0xffff" errormsg="Server incorrect responding"/>',x=IG$._I13(A),l=IG$._I27(x),q,z,w,s=[],o;if(l){IG$._I51(x,e,null)}else{q=IG$._I18(x,"/smsg");if(q){z=IG$._I26(q);for(w=0;w<z.length;w++){o=IG$._I1c(z[w]);s.push(o)}}}e._l1.call(e,s)},progressall:function(s,q){var l=parseInt(q.loaded/q.total*100,10),o=$(".bar",h);o.css("width",l+"%");o.text("Loaded "+q.loaded+" / "+q.total)}}).bind("fileuploadsubmit",function(o,l){});f.fileupload("option","url",ig$.servlet)},_l1:function(d){var c=this,b,a;if(d){for(b=0;b<d.length;b++){a=d[b];if(a.filename.substring(0,"{ENC}".length)=="{ENC}"){a.filename=a.filename.substring("{ENC}".length);a.filename=Base64.decode(a.filename)}}if(d.length){c._l7(d)}}},_l7:function(c){var f=this,g=new IG$._I3e(),a=null,b=null,e=null,l=[],d,h=f.filteritem;f.setLoading(true,true);for(d=0;d<c.length;d++){l.push(c[d].uid)}if(l.length==0){return}if(!h||(h&&!h.__tbuid)){return}g.init(f,{ack:"27",payload:IG$._I2d({tuid:h.__tbuid,uid:l.join(";")},"uid;tuid"),mbody:IG$._I2e({option:"loaddatacontent"})},f,function(o){f._l4()});g._l()},_l4m:function(){var b=this,a=new IG$._I3e(),c=b.filteritem;if(c&&c.__tbuid){a.init(b,{ack:"25",payload:IG$._I2d({uid:c.__tbuid,option:"StoredContent"},"uid;option"),mbody:IG$._I2e({option:"StoredContent"})},b,function(o){var e=IG$._I18(o,"/smsg/item"),q=e?IG$._I18(e,"objinfo"):null,s=e?IG$._I26(e,"Field"):null,h=q?IG$._I1c(q):null,l,d,g=[],f=0,u=b.down("[name=_mt]"),w=[];if(s){for(l=0;l<s.length;l++){d=IG$._I1c(s[l]);if(d.name==h.file_field||d.name==h.seq_field){continue}d.seq=++f;w.push(d.name);g.push(d)}}u.setValue(w.join("\t"))},false);a._l()}},_l6:function(a){var d=this,c=new IG$._I3e(),b=d.down("[name=grddata]");d.setLoading(true,true);c.init(d,{ack:"11",payload:IG$._I2d({uid:a,option:"ftable_hist"},"uid;option"),mbody:IG$._I2e({option:"ftable_hist"})},d,function(o){var u=this,f=IG$._I18(o,"/smsg/item"),q=f?IG$._I26(f):null,z=u.down("[name=m2]"),l,h,g=[],e,y,s,x,w;if(q){for(l=0;l<q.length;l++){w=q[l];e=IG$._I1c(w);y=IG$._I26(w);if(y){for(h=0;h<y.length;h++){s=IG$._I29(y[h]);x=IG$._I24(y[h]);e[s]=x}}g.push(e)}}b.store.loadData(g)});c._l()},d1:function(d,a){var c=this,b=new IG$._I3e();c.setLoading(true,true);b.init(c,{ack:"11",payload:IG$._I2d({uid:d.get("uid"),option:"ftable_rm"},"uid;option"),mbody:IG$._I2e({option:"ftable_rm"})},c,function(e){c._l4()});b._l()},_l4:function(){var a=this,b=a.filteritem;if(b&&b.__tbuid){a._l6(b.__tbuid)}},_IFf:function(){var c=this,b=c.down("[name=grddata]"),e=b.getSelectionModel(),d=e.selected,a;for(a=0;a<d.length;a++){d[a].set("code",d[a].get("uname"));d[a].set("value",d[a].get("fname"))}c.__dloaded=false;c.callback&&c.callback.execute(d);c.close()},_ic:function(){var a=this,b=160;a.title=IRm$.r1("T_DYN_LFILE");IG$.apply(this,{items:[{xtype:"container",padding:10,layout:{type:"vbox",align:"stretch"},items:[{xtype:"displayfield",height:20,value:IRm$.r1("L_DYN_LFILE")},{xtype:"container",html:"<div class='igc-o-dzone' id='_tb_f' style='padding:5px;'><input type='file' id='fileupload' name='files[]' data-url='upload' multiple></input><div class='file-progress' id='d_progress' style='height:20px;'><div class='bar' style='width: 0%;'></div></div></div>",name:"_m4",height:55},{xtype:"textarea",fieldLabel:"Headers",name:"_mt",height:60},{xtype:"gridpanel",name:"grddata",selMode:a.selMode,store:{xtype:"store",fields:["fname","sel","rowcount","uname","code","value"]},flex:1,columns:[{xtype:"checkcolumn",dataIndex:"sel",width:30},{text:"File name",dataIndex:"fname",flex:1},{text:"Rows",dataIndex:"rowcount",width:50}]}]}],buttons:[{text:IRm$.r1("B_CONFIRM"),handler:function(){this._IFf()},scope:this},{text:IRm$.r1("B_CANCEL"),handler:function(){this.close()},scope:this}],listeners:{afterrender:function(c){a._IFe.call(a)}}});IG$._IeF.superclass._ic.apply(this,arguments)}});IG$._Iea={data:[{name:"Today",value:"today"},{name:"Last 1 days",value:"last1day"},{name:"Last 2 days",value:"last2day"},{name:"Last 3 days",value:"last3day"},{name:"Last 4 days",value:"last4day"},{name:"Last 5 days",value:"last5day"},{name:"Last 6 days",value:"last6day"},{name:"Last 7 days",value:"last7day"},{name:"Last 8 days",value:"last8day"},{name:"Last 10 days",value:"last10day"},{name:"From monday",value:"frweek"},{name:"Last 15 days",value:"last15day"},{name:"Last 30 days",value:"last30day"},{name:"From 1st month",value:"frmon"},{name:"Last 1 month",value:"last1mon"},{name:"Last 2 month",value:"last2mon"},{name:"Last 6 month",value:"last6mon"},{name:"Last 1 year",value:"last1year"},{name:"Last 2 year",value:"last2year"},{name:"Last 3 year",value:"last3year"},{name:"Last 4 year",value:"last4year"},{name:"Last 5 year",value:"last5year"}],getValue:function(c,q,l,o){var g,a="",e=new Date(),f,h,b;if(q==0){if(c.indexOf("last")>-1){if(c.indexOf("day")>0){for(g=1;g<32;g++){if(c=="last"+(g)+"day"){e.setDate(e.getDate()-g);b=1;break}}}if(!b&&c.indexOf("mon")>0){for(g=1;g<13;g++){if(c=="last"+g+"mon"){e.setMonth(e.getMonth()-g);b=1;break}}}if(!b&&c.indexOf("year")>0){for(g=1;g<11;g++){if(c=="last"+g+"year"){e.setMonth(e.getMonth()-12*g);b=1;break}}}}if(!b){switch(c){case"today":break;case"frweek":startDay=0;e.setDate(e.getDate()-(7+e.getDay()-startDay)%7);break;case"frmon":e.setDate(1);break}}}f=(e.getMonth()+1);f=(f<10?"0"+f:f);h=e.getDate();h=(h<10?"0"+h:h);a=""+e.getFullYear()+"-"+f+"-"+h;if(o){a=""+e.getFullYear()}else{if(l){a=""+e.getFullYear()+"-"+f}else{a=""+e.getFullYear()+"-"+f+"-"+h}}return a}};IG$._Ied=function(c,b,a,e){var d=this;d.report=a;d.dzone=(a?a.dzone:null);d._b1=e;d.container=c;d.utimer=-1;d._ILb=b;d.v1=true;if(d.dzone){d._s1(d.dzone)}};IG$._Ied.prototype={_rcs:[],_s1:function(b){var a=this;if(!a.dzone&&b&&b.b1){a.dzone=b;a.dzone.b1.bind("updatecomplete",function(){a.ll1.call(a)})}},exportSheet:function(a){var b=this;b.container.trigger("export_sheet",[b,{filetype:a}])},_IFd:function(a){var d=this,c,b=d._ILb;$(d.container).empty();d.c=$("<div></div>").appendTo(d.container);d.sp=$("<div class='idv-dfilt-splash'></div>").appendTo(d.container).hide();c=d.c[0];if(!b){return}b.pff1=b.pff1||[];b.pff1a=b.pff1a||{};if(!d._b1&&$s.dropzone){d.dropZone=$s.create($s.dropzone,c,{ddGroup:"_I$RD_G_",nodeouttimer:-1,getTargetFromEvent:function(l){var g=l.browserEvent.pageX||l.browserEvent.clientX,f=l.browserEvent.pageY||l.browserEvent.clientY,h=c;return h},onNodeEnter:function(q,w,s,l){var o,f,g,h=false,u=l.records;if(u&&u.length>0){f=u[0].data;g=f.type.toLowerCase();h=true}else{if(l.cellData){f=l.cellData;h=true}}this.accept=h},onNodeOver:function(u,f,s,q){var l,h=this.accept,g=(window.Ext?(h?Ext.dd.DropZone.prototype.dropAllowed:Ext.dd.DropZone.prototype.dropNotAllowed):h),o=q.records;if(h==true){if(o&&o.length>0){l=o[0].data}else{l=q.cellData}}return g},onNodeDrop:function(q,g,o,l){var f=this,h=l.records;if(f.accept==true){if(h&&h.length>0){dt=h[0].data}else{dt=l.cellData}d.l2.call(d,dt)}d.accept=false;return true}})}setTimeout(function(){d.l3.call(d,undefined,a)},100)},rX:function(){},setSize:function(a,b){var c=this;IG$.x_10._w(c.c,a);IG$.x_10._h(c.c,b);c.l4.call(c)},g1a:function(dformat){var c=new Date(),m,dy,dm,dd,op,opval,bp=0;if(dformat.length==8&&IG$._I37(dformat)){dy=dformat.substring(0,4);dm=dformat.substring(4,6);dd=dformat.substring(6,8);c=new Date(parseInt(dy),parseInt(dm)-1,parseInt(dd))}else{if(dformat.indexOf("cdate")>-1){dy=c.getFullYear();dm=c.getMonth();dd=c.getDate();if(dformat.indexOf("-")>-1||dformat.indexOf("+")>-1){m=dformat.indexOf("-")||dformat.indexOf("+");op=dformat.substring(m,m+1);opval=dformat.substring(m+1);if(op&&opval){$.each(["y","m","d",""],function(i,k){if(!bp){m=(k?opval.indexOf(k):-1);if(m>-1||k==""){opval=m>-1?opval.substring(0,m):opval;opval=parseInt(opval);if(opval){switch(k){case"y":dy=(op=="+")?dy+opval:dy-opval;break;case"m":dm=(op=="+")?dm+opval:dm-opval;break;default:dd=(op=="+")?dd+opval:dd-opval;break}}bp=1}}});c=new Date(parseInt(dy),parseInt(dm),parseInt(dd))}}}else{try{m=eval("(function() {"+dformat+"}())");if(m){c=m}}catch(e){IG$._I54(ig$.appname,IRm$.r1("M_DEF_DATE"),null,null,1,"error")}}}return c},g1:function(c,e,f,g){var d=null,a="",b;if(g&&c&&c.length>e&&c[e]){b=c[e];if(f==2||(f==1&&b.substring(0,1)=="_")||(f==0&&b.substring(0,1)!="_")){d={};if(f==1){b=b.substring(1)}d.t=b;if(b&&b.length>1&&b.charAt(0)=="@"){b=IRm$.r1(b);d.e=1}if(f!=2&&g!=2){a="<td class='igc-f-range-label-td'>"}a+="<span class='igc-f-range-label f-label_"+e+(f<2?"_"+f:"")+"'>"+b+"</span>";if(f!=2&&g!=2){a+="</td>"}d.d=a}}return d},g1c:function(a,b,c,e){var d="";if(e&&a&&a.length>b&&a[b]){v=a[b];if(c==2||(c==1&&v.substring(0,1)=="_")||(c==0&&v.substring(0,1)!="_")){d="<col width='40px'></col>"}}return d},l1:function(filter,mcap,lfilter,viewtype){var me=this,ui,i,title,me=this,p=me.p,clearbtn,filteroptions=me._ILb.pff1a,showbutton=filteroptions.showbutton,f_b_evt=!showbutton&&filteroptions.f_b_evt=="T"?1:0,f_b_trg=showbutton&&filteroptions.f_b_trg=="T"?1:0,f_b_trg_all=f_b_trg&&filteroptions.f_b_trg_all=="T"?1:0,showpopup=filter.showpopup,sctrl,t,ptn,rangevalue=filter.rangevalue,rangelabel=filter.rangelabel,dateseltype=filter.dateseltype,browser=window.bowser,s1a,s1b,s1c,t,mtr,mtd;if(me.__dx==true){return}if(rangelabel){rangelabel=rangelabel.split("^")}switch(filter.objtype){case"slider":s1a=filter.s1a?Number(filter.s1a):0;s1b=filter.s1b?Number(filter.s1b):100;s1c=filter.s1c?Number(filter.s1c):1;ui=$("<div></div>").css({position:"relative",marginLeft:5,marginRight:5,marginTop:7}).slider({orientation:"horizontal",range:true,min:s1a,max:s1b,values:[s1a,s1b],step:s1c,create:function(event,ctrl){me.l8.call(me,this)},slide:function(event,ctrl){var loffset=$(this).offset(),offset=$(ctrl.handle).offset(),l=offset.left-loffset.left;me.l8a.call(me,this,ctrl,l)},change:function(event,ctrl){if(filter.iV==true){return}me.l8.call(me,this);me.l5a.call(me,filter);if(!showbutton&&!f_b_evt){me.l5.call(me)}},start:function(event,ctrl){var loffset=$(this).offset(),offset=$(ctrl.handle).offset(),l=offset.left-loffset.left;$("<div class='guide'></div>").css({position:"absolute",top:-18,left:l}).appendTo(this)},stop:function(event,ctrl){var guide=$(this).children(".guide");if(guide){guide.remove()}}});break;case"combobox":if(showpopup==true){ui=$("<div></div>");var tin=$("<input type='text' class='idv-checkbox-inp'></input>").appendTo(ui);tin.css({"float":"left"});var tbtn=$("<div class='idv-btn-selected'></div>").appendTo(ui);tbtn.bind("click",function(e){e.stopPropagation();var dlg=new IG$._Iec({selMode:"SINGLE",smode:filter.smode,callback:new IG$._I3d(me,me.rs_PM,filter),filteritem:filter});IG$._I_5(this,dlg)})}else{ui=$("<table class='idv-sel-combo"+(rangevalue?" idv-sel-rangevalue":"")+"'>"+(me.g1c(rangelabel,0,0,rangevalue))+"<col width='*'><col width='17px'>"+(me.g1c(rangelabel,0,1,rangevalue))+(rangevalue?"<col width='18px'>"+(me.g1c(rangelabel,2,0,rangevalue))+"<col width='*'><col width='17px'>"+(me.g1c(rangelabel,2,1,rangevalue)):"")+"<tr></tr></table>");var ui_tr=$("tr",ui),m1,m2=null,ml,Lt,Dt,S;Lt=(me.g1(rangelabel,0,0,rangevalue));if(Lt){Dt=$(Lt.d).appendTo(ui_tr);Lt.e&&IG$._rrcs(me,Lt.t,$("span",Dt),1)}m1=$("<td><input type='text' name='c_m1'/></td><td style='width:17px'><div class='idv-sel-combo-button'></div></td>").appendTo(ui_tr);Lt=(me.g1(rangelabel,0,1,rangevalue));if(Lt){Dt=$(Lt.d).appendTo(ui_tr);Lt.e&&IG$._rrcs(me,Lt.t,$("span",Dt),1)}if(rangevalue){Lt=(me.g1(rangelabel,1,2,rangevalue));S=$("<td class='igc-f-range-label-td'></td>").appendTo(ui_tr);if(Lt){Dt=$(Lt.d).appendTo(S);Lt.e&&IG$._rrcs(me,Lt.t,$("span",Dt),1)}Lt=(me.g1(rangelabel,2,0,rangevalue));if(Lt){Dt=$(Lt.d).appendTo(ui_tr);Lt.e&&IG$._rrcs(me,Lt.t,$("span",Dt),1)}m2=$("<td><input type='text' name='c_m2'/></td><td style='width:17px'><div class='idv-sel-combo-button'></div></td>").appendTo(ui_tr);Lt=(me.g1(rangelabel,2,1,rangevalue));if(Lt){Dt=$(Lt.d).appendTo(ui_tr);Lt.e&&IG$._rrcs(me,Lt.t,$("span",Dt),1)}}ml=rangevalue?[m1,m2]:[m1];$.each(ml,function(k,mui){var ui=mui,sctrl;sctrl=$("input[type=text]",ui);sctrl.__c=true;sctrl.bind("input",function(e){e.stopPropagation();e.stopImmediatePropagation();e.preventDefault();return false});sctrl.autocomplete({minLength:0,sortResults:false,sortable:false,source:function(request,response){var reqval=request.term,eval=reqval.split(/,\s*/);reqval=eval.pop();response($.ui.autocomplete.filter(filter.sdp,reqval))},focus:function(event,ui){return false},select:function(event,mobj){var svalue=mobj.item;if(!svalue.value){if(filter.showallvalue){this.value="";ui.trigger("change")}}else{this.value=svalue.label;filter._svalues=[{code:svalue.value,text:svalue.label}];ui.trigger("change")}if(browser.msie){sctrl.blur()}return false},open:function(event,mobj){sctrl.__c=false},close:function(event,mobj){sctrl.__c=false;setTimeout(function(){sctrl.__c=true;if(browser.msie){sctrl.blur()}},1200)}});sctrl.bind("keydown",function(e){if(event.keyCode===$.ui.keyCode.TAB){sctrl.__c=true;var vmenu=$(this).autocomplete("widget").menu;if(vmenu.active){e.preventDefault()}}else{if(event.keyCode===$.ui.keyCode.ENTER){var i,m=0,l=sctrl.val().toLowerCase(),v;if(filter.sdp&&filter.sdp.length&&l){v=l.length;for(i=0;i<filter.sdp.length;i++){if(filter.sdp[i].label.substring(0,v).toLowerCase()==l){filter._svalues=[{code:filter.sdp[i].value,text:filter.sdp[i].label}];sctrl.val(filter.sdp[i].label);ui.trigger("change");m=1;break}}}if(m){sctrl.autocomplete("close");sctrl.__c=true}}}});$(".idv-sel-combo-button",ui).bind("click",function(e){e.stopImmediatePropagation();e.stopPropagation();e.preventDefault();if(sctrl.__c){sctrl.__c=false;sctrl.autocomplete("search","");sctrl.focus()}else{sctrl.__c=true;sctrl.autocomplete("close")}});ui.bind("change",function(){var bchanged=true,pkey="__pval"+k,tval=sctrl.val(),sctrl_sel,sctrl_sel_code="",i,placeholder=sctrl.attr("placeholder");if(filter.sdp&&filter.sdp.length){for(i=0;i<filter.sdp.length;i++){if(placeholder&&tval==placeholder){continue}else{if(filter.sdp[i].value==tval||filter.sdp[i].label==tval){sctrl_sel={code:filter.sdp[i].value,text:filter.sdp[i].text||filter.sdp[i].label};sctrl_sel_code=sctrl_sel.code;break}}}}if(filter[pkey]==sctrl_sel_code){bchanged=false}if(bchanged){filter[pkey]=sctrl_sel_code;me.l5a.call(me,filter);if(!showbutton&&filter.iV!=true&&!f_b_evt){me.l5.call(me)}}})})}break;case"radiobox":ui=$("<select multiple='multiple'></select>").css({height:80});ui.bind("change",function(){me.l5a.call(me,filter);if(!showbutton&&filter.iV!=true&&!f_b_evt){me.l5.call(me)}});break;case"checkbox":if(showpopup==true){ui=$("<div></div>");var tin=$("<input type='text' class='idv-checkbox-inp'></input>").appendTo(ui);tin.css({"float":"left"});var tbtn=$("<div class='idv-btn-selected'></div>").appendTo(ui);tbtn.bind("click",function(e){e.stopPropagation();var dlg=new IG$._Iec({selMode:"MULTI",smode:filter.smode,callback:new IG$._I3d(me,me.rs_PM,filter),filteritem:filter});IG$._I_5(this,dlg)})}else{ui=$("<select multiple='multiple'></select>").css({height:80});ui.bind("change",function(){me.l5a.call(me,filter);if(!showbutton&&filter.iV!=true&&!f_b_evt){me.l5.call(me)}})}break;case"checkbuttons":ui=$("<table class='idv-checkbuttons'><tr><td><ul></ul></td></tr></table>");var td=$("td",ui);td.bind("checkboxchanged",function(ev,dt){if(dt&&filter._c_a1&&$("input[type='checkbox']",filter._c_a1).is(":checked")&&!$("input[type='checkbox']",dt.u2).is(":checked")){$("input[type='checkbox']",filter._c_a1).prop("checked",false)}me.l5a.call(me,filter);if(!showbutton&&filter.iV!=true&&!f_b_evt){me.l5.call(me)}});break;case"radiobuttons":ui=$("<table class='mec-radiobuttons'><tr><td><ul></ul></td></tr></table>");var td=$("td",ui);td.bind("radioboxchanged",function(){me.l5a.call(me,filter);if(!showbutton&&!f_b_evt){me.l5.call(me)}});break;case"text":ui=$("<table class='idv-sel-combo"+(rangevalue?" idv-sel-rangevalue":"")+"'>"+(me.g1c(rangelabel,0,0,rangevalue))+"<col width='*'>"+(me.g1c(rangelabel,0,1,rangevalue))+""+(rangevalue?"<col width='18px'>"+(me.g1c(rangelabel,2,0,rangevalue))+"<col width='*'>"+(me.g1c(rangelabel,2,1,rangevalue)):"")+"<tr></tr></table>");var ui_tr=$("tr",ui),m1,m2=null,ml,Lt,Dt,S;Lt=(me.g1(rangelabel,0,0,rangevalue));if(Lt){Dt=$(Lt.d).appendTo(ui_tr);Lt.e&&IG$._rrcs(me,Lt.t,$("span",Dt),1)}m1=$("<td><input type='text' name='c_m1'/></td>").appendTo(ui_tr);Lt=(me.g1(rangelabel,0,1,rangevalue));if(Lt){Dt=$(Lt.d).appendTo(ui_tr);Lt.e&&IG$._rrcs(me,Lt.t,$("span",Dt),1)}if(rangevalue){Lt=(me.g1(rangelabel,1,2,rangevalue));if(Lt){S=$("<td class='igc-f-range-label-td'></td>").appendTo(ui_tr);Dt=$(Lt.d).appendTo(S);Lt.e&&IG$._rrcs(me,Lt.t,$("span",Dt),1)}Lt=(me.g1(rangelabel,2,0,rangevalue));if(Lt){Dt=$(Lt.d).appendTo(ui_tr);Lt.e&&IG$._rrcs(me,Lt.t,$("span",Dt),1)}m2=$("<td><input type='text' name='c_m2'/></td>").appendTo(ui_tr);Lt=(me.g1(rangelabel,2,1,rangevalue));if(Lt){Dt=$(Lt.d).appendTo(ui_tr);Lt.e&&IG$._rrcs(me,Lt.t,$("span",Dt),1)}}ml=rangevalue?[m1,m2]:[m1];$.each(m1,function(i,k){var ui=$("input",k).bind("keyup",function(event){if(event.which==13){me.l5a.call(me,filter)}if(event.which==13&&!showbutton&&!f_b_evt){me.l5.call(me)}})});if(filter.defaultvalue){$("[name=c_m1]",m1).val(filter._p1.m1.call(filter._p1,filter));me.l5a.call(me,filter);if(!showbutton&&!f_b_evt){me.l5a.call(me,filter)}}break;case"fileupload":ui=$("<div></div>");var tin=$("<input type='text' class='idv-checkbox-inp'></input>").appendTo(ui);tin.css({"float":"left"});var tbtn=$("<div class='idv-btn-selected'></div>").appendTo(ui);tbtn.bind("click",function(e){e.stopPropagation();var dlg=new IG$._IeF({smode:filter.smode,callback:new IG$._I3d(me,me.rs_PM,filter),filteritem:filter});IG$._I_5(this,dlg)});break;case"calendar":ui=$("<table class='mec-dateperiod-box'></table>");mtr=$("<tr></tr>").appendTo(ui);if(dateseltype=="year"){mtd=$("<td></td>").appendTo(mtr);filter.dt=$("<select class='mec-dateperiod-year'></select>").appendTo(mtd);var ys=filter.yearfrom||"cyear-5",ye=filter.yearto||"cyear",ik;ys=filter._p1.m2.call(filter._p1,ys);ye=filter._p1.m2.call(filter._p1,ye);$("<option value=''>"+IRm$.r1("L_SELECT_VALUE")+"</option>").appendTo(filter.dt);for(ik=ys;ik<ye+1;ik++){$("<option value='"+ik+"'>"+ik+"</option>").appendTo(filter.dt)}if(filter.defaultvalue){var sopt=$("option",filter.dt),sdval=me.g1a(filter.defaultvalue),syear=""+sdval.getFullYear();for(ik=0;ik<sopt.length;ik++){if($(sopt[ik]).val()==syear){$(sopt[ik]).attr("selected","selected")}}}filter.dt.bind("change",function(){me.l5a.call(me,filter);if(!showbutton&&!f_b_evt){me.l5.call(me)}})}else{if(dateseltype=="month"){ptn="yyyy-mm";mtd=$("<td></td>").appendTo(mtr);filter.dt=$("<input class='mec-dateperiod-input' type='text' placeholder='"+ptn+"'></input>").monthpicker({monthNames:$.datepicker._defaults.monthNamesShort,buttonImage:"./images/calendar.gif",buttonImageOnly:true,pattern:ptn,onSelect:function(dateText,inst){me.l5a.call(me,filter);if(!showbutton&&!f_b_evt){me.l5.call(me)}}}).appendTo(mtd);if(filter.defaultvalue){filter.dt.monthpicker("setDate",me.g1a(filter.defaultvalue))}mtd=$("<td></td>").appendTo(mtr);$("<div class='mec-dateperiod-button'>&nbsp;</div>").appendTo(mtd).bind("click",function(){filter.dt.monthpicker("show")})}else{mtd=$("<td></td>").appendTo(mtr);filter.dt=$("<input class='mec-dateperiod-input' type='text' placeholder='yyyy-mm-dd'></input>").datepicker({monthNames:$.datepicker._defaults.monthNamesShort,buttonImage:"./images/calendar.gif",buttonImageOnly:true,dateFormat:"yy-mm-dd",defaultDate:0,onSelect:function(dateText,inst){me.l5a.call(me,filter);if(!showbutton&&!f_b_evt){me.l5.call(me)}}}).appendTo(mtd);if(filter.defaultvalue){filter.dt.datepicker("setDate",me.g1a(filter.defaultvalue))}mtd=$("<td></td>").appendTo(mtr);$("<div class='mec-dateperiod-button'>&nbsp;</div>").appendTo(mtd).bind("click",function(){filter.dt.datepicker("show")})}}break;case"calendarperiod":ui=$("<table class='mec-dateperiod-box'></table>");mtr=$("<tr></tr>").appendTo(ui);mtd=$("<td></td>").appendTo(mtr);var dval=[],dselector=$("<select></select>").appendTo(mtd),ismonth=false,isyear=false;mtd[filter.showperiodselector=="T"?"show":"hide"]();dselector[filter.showperiodselector=="T"?"show":"hide"]();if(dateseltype=="year"){isyear=true;ismonth=false;Lt=(me.g1(rangelabel,0,0,2));if(Lt){S=$("<td class='igc-f-range-label-td'></td>").appendTo(mtr);$(Lt.d).appendTo(S)}mtd=$("<td></td>").appendTo(mtr);filter.dt1=$("<select></select>").appendTo(mtd);var ys=filter.yearfrom||"cyear-5",ye=filter.yearto||"cyear",ik;ys=filter._p1.m2.call(filter._p1,ys);ye=filter._p1.m2.call(filter._p1,ye);$("<option value=''>"+IRm$.r1("L_SELECT_VALUE")+"</option>").appendTo(filter.dt1);for(ik=ys;ik<ye+1;ik++){$("<option value='"+ik+"'>"+ik+"</option>").appendTo(filter.dt1)}if(filter.startdate){var sopt=$("option",filter.dt1),sdval=me.g1a(filter.startdate),syear=""+sdval.getFullYear();for(ik=0;ik<sopt.length;ik++){if($(sopt[ik]).val()==syear){$(sopt[ik]).attr("selected","selected")}}}filter.dt1.bind("change",function(){me.l5a.call(me,filter);if(!showbutton&&!f_b_evt){me.l5.call(me)}});Lt=(me.g1(rangelabel,0,1,2));if(Lt){S=$("<td class='igc-f-range-label-td'></td>").appendTo(mtr);$(Lt.d).appendTo(S)}}else{if(dateseltype=="month"){ismonth=true;isyear=false;ptn="yyyy-mm";Lt=(me.g1(rangelabel,0,0,2));if(Lt){S=$("<td class='igc-f-range-label-td'></td>").appendTo(mtr);$(Lt.d).appendTo(S)}mtd=$("<td></td>").appendTo(mtr);filter.dt1=$("<input class='mec-dateperiod-input' type='text' placeholder='"+ptn+"'></input>").monthpicker({monthNames:$.datepicker._defaults.monthNamesShort,buttonImage:"./images/calendar.gif",buttonImageOnly:true,pattern:"yyyy-mm",onSelect:function(dateText,inst){me.l5a.call(me,filter);if(!showbutton&&!f_b_evt){me.l5.call(me)}}}).appendTo(mtd);if(filter.startdate){filter.dt1.monthpicker("setDate",me.g1a(filter.startdate))}mtd=$("<td></td>").appendTo(mtr);$("<div class='mec-dateperiod-button'>&nbsp;</div>").appendTo(mtd).bind("click",function(){filter.dt1.monthpicker("show")});Lt=(me.g1(rangelabel,0,1,2));if(Lt){S=$("<td class='igc-f-range-label-td'></td>").appendTo(mtr);$(Lt.d).appendTo(S)}}else{Lt=(me.g1(rangelabel,0,0,2));if(Lt){S=$("<td class='igc-f-range-label-td'></td>").appendTo(mtr);$(Lt.d).appendTo(S)}mtd=$("<td></td>").appendTo(mtr);filter.dt1=$("<input class='mec-dateperiod-input' type='text' placeholder='yyyy-mm-dd'></input>").appendTo(mtd);filter.dt1.css({zIndex:100});filter.dt1.datepicker({buttonImage:"./images/calendar.gif",buttonImageOnly:true,dateFormat:"yy-mm-dd",onSelect:function(dateText,inst){if(filter.dt1.datepicker("getDate")&&filter.dt2.datepicker("getDate")){me.l5a.call(me,filter);if(!showbutton&&!f_b_evt){me.l5.call(me)}}}});if(filter.startdate){filter.dt1.datepicker("setDate",me.g1a(filter.startdate))}mtd=$("<td></td>").appendTo(mtr);$("<div class='mec-dateperiod-button'>&nbsp;</div>").appendTo(mtd).bind("click",function(){filter.dt1.datepicker("show")});Lt=(me.g1(rangelabel,0,1,2));if(Lt){S=$("<td class='igc-f-range-label-td'></td>").appendTo(mtr);$(Lt.d).appendTo(S)}}}Lt=(me.g1(rangelabel,1,0,2));if(Lt){S=$("<td class='igc-f-range-label-td'></td>").appendTo(mtr);$(Lt.d).appendTo(S)}else{mtd=$("<td></td>").appendTo(mtr)}if(dateseltype=="year"){Lt=(me.g1(rangelabel,2,0,2));if(Lt){S=$("<td class='igc-f-range-label-td'></td>").appendTo(mtr);$(Lt.d).appendTo(S)}mtd=$("<td></td>").appendTo(mtr);isyear=true;ismonth=false;filter.dt2=$("<select></select>").appendTo(mtd);var ys=filter.yearfrom||"cyear-5",ye=filter.yearto||"cyear",ik;ys=filter._p1.m2.call(filter._p1,ys);ye=filter._p1.m2.call(filter._p1,ye);$("<option value=''>"+IRm$.r1("L_SELECT_VALUE")+"</option>").appendTo(filter.dt2);for(ik=ys;ik<ye+1;ik++){$("<option value='"+ik+"'>"+ik+"</option>").appendTo(filter.dt2)}if(filter.enddate){var sopt=$("option",filter.dt2),sdval=me.g1a(filter.enddate),syear=""+sdval.getFullYear();for(ik=0;ik<sopt.length;ik++){if($(sopt[ik]).val()==syear){$(sopt[ik]).attr("selected","selected")}}}filter.dt2.bind("change",function(){me.l5a.call(me,filter);if(!showbutton&&!f_b_evt){me.l5.call(me)}});Lt=(me.g1(rangelabel,2,1,2));if(Lt){S=$("<td class='igc-f-range-label-td'></td>").appendTo(mtr);$(Lt.d).appendTo(S)}}else{if(dateseltype=="month"){ismonth=true;isyear=false;ptn="yyyy-mm";Lt=(me.g1(rangelabel,2,0,2));if(Lt){S=$("<td class='igc-f-range-label-td'></td>").appendTo(mtr);$(Lt.d).appendTo(S)}mtd=$("<td></td>").appendTo(mtr);filter.dt2=$("<input class='mec-dateperiod-input' type='text' placeholder='"+ptn+"'></input>").monthpicker({monthNames:$.datepicker._defaults.monthNamesShort,buttonImage:"./images/calendar.gif",buttonImageOnly:true,pattern:ptn,onSelect:function(dateText,inst){me.l5a.call(me,filter);if(!showbutton&&!f_b_evt){me.l5.call(me)}}}).appendTo(mtd);if(filter.enddate){filter.dt2.monthpicker("setDate",me.g1a(filter.enddate))}mtd=$("<td></td>").appendTo(mtr);$("<div class='mec-dateperiod-button'>&nbsp;</div>").appendTo(mtd).bind("click",function(){filter.dt2.monthpicker("show")});Lt=(me.g1(rangelabel,2,1,2));if(Lt){S=$("<td class='igc-f-range-label-td'></td>").appendTo(mtr);$(Lt.d).appendTo(S)}}else{ptn="yyyy-mm-dd";Lt=(me.g1(rangelabel,2,0,2));if(Lt){S=$("<td class='igc-f-range-label-td'></td>").appendTo(mtr);$(Lt.d).appendTo(S)}mtd=$("<td></td>").appendTo(mtr);filter.dt2=$("<input class='mec-dateperiod-input' type='text' placeholder='"+ptn+"'></input>").appendTo(mtd);filter.dt2.css({zIndex:100});filter.dt2.datepicker({buttonImage:"./images/calendar.gif",buttonImageOnly:true,dateFormat:"yy-mm-dd",onSelect:function(dateText,inst){if(filter.dt1.datepicker("getDate")&&filter.dt2.datepicker("getDate")){me.l5a.call(me,filter);if(!showbutton&&!f_b_evt){me.l5.call(me)}}}}).appendTo(mtd);if(filter.enddate){filter.dt2.datepicker("setDate",me.g1a(filter.enddate))}mtd=$("<td></td>").appendTo(mtr);$("<div class='mec-dateperiod-button'>&nbsp;</div>").appendTo(mtd).bind("click",function(){filter.dt2.datepicker("show")});Lt=(me.g1(rangelabel,2,1,2));if(Lt){S=$("<td class='igc-f-range-label-td'></td>").appendTo(mtr);$(Lt.d).appendTo(S)}}}if(filter.periodlist){for(i=0;i<filter.periodlist.length;i++){$("<option value='"+filter.periodlist[i].value+"'"+(filter.periodlist[i]["default"]==true?" selected":"")+">"+filter.periodlist[i].name+"</option>").appendTo(dselector);if(filter.periodlist[i]["default"]==true){if(isyear==true){var sopt=$("option",filter.dt1),syear=IG$._Iea.getValue(filter.periodlist[i].value,0,ismonth,isyear);for(ik=0;ik<sopt.length;ik++){if($(sopt[ik]).val()==syear){$(sopt[ik]).attr("selected","selected")}}var sopt=$("option",filter.dt2),syear=IG$._Iea.getValue(filter.periodlist[i].value,1,ismonth,isyear);for(ik=0;ik<sopt.length;ik++){if($(sopt[ik]).val()==syear){$(sopt[ik]).attr("selected","selected")}}}else{var r1=IG$._Iea.getValue(filter.periodlist[i].value,0,ismonth,isyear),r2=IG$._Iea.getValue(filter.periodlist[i].value,1,ismonth,isyear);filter.dt1.val(r1);filter.dt2.val(r2);if(ismonth&&r1&&r2){r1=r1.split("-");r1=r1.join("")+"01";r2=r2.split("-");r2=r2.join("")+"01";filter.dt1.monthpicker("setDate",me.g1a(r1));filter.dt2.monthpicker("setDate",me.g1a(r2))}}}}}dselector.bind("change",function(){var sel=$("option:selected",dselector).val();if(sel){if(isyear==true){var sopt=$("option",filter.dt1),syear=IG$._Iea.getValue(sel,0,ismonth,isyear),ik;for(ik=0;ik<sopt.length;ik++){if($(sopt[ik]).val()==syear){$(sopt[ik]).attr("selected","selected")}}var sopt=$("option",filter.dt2),syear=IG$._Iea.getValue(sel,1,ismonth,isyear);for(ik=0;ik<sopt.length;ik++){if($(sopt[ik]).val()==syear){$(sopt[ik]).attr("selected","selected")}}}else{filter.dt1.val(IG$._Iea.getValue(sel,0));filter.dt2.val(IG$._Iea.getValue(sel,1))}if(isyear){if($("option:selected",filter.dt1).val()&&$("option:selected",filter.dt2).val()){me.l5a.call(me,filter);if(!showbutton&&!f_b_evt){me.l5.call(me)}}}else{if(filter.dt1.val()&&filter.dt2.val()){me.l5a.call(me,filter);if(!showbutton&&!f_b_evt){me.l5.call(me)}}}}});break}if(filteroptions.f_t_dir=="top"){titlecap=$("<div class='df-titlecap-top'></div>")}else{titlecap=$("<div class='df-titlecap-row'></div>")}mcap.append(titlecap);var mtd;mtd=$("<div class='df-item-row'></div>");if(filteroptions.f_t_dir=="top"){mtd.appendTo(titlecap)}else{mtd.appendTo(mcap)}ui.appendTo(mtd);title=$("<span class='df-title"+(viewtype=="row"?" df-title-row":"")+"'></span>");titlecap.prepend(title);if(filter.compcss){ui.addClass(filter.compcss)}filter.lcap=mtd;filter.u1=mcap;filter.u2=ui;filter.u3=title;filter.u4=titlecap;t=filter.ltitle||filter.title||filter.lname||filter.name||"";t=IG$._rrcs(me,t,filter.u3);filter.u3.text(t);mcap.draggable({handle:titlecap,start:function(event,ui){if(me._editmode){return true}return false},drag:function(event,ui){},stop:function(event,ui){me._lD.call(me,filter,event);me._lm.call(me)}});me.l4();return ui},rs_PM:function(c,b){var h=this,l=h._ILb.pff1a,d=l.showbutton,a=!d&&l.f_b_evt=="T"?1:0,f,e="",g;g=b.selection=[];if(c&&c.length>0){for(f=0;f<c.length;f++){g.push({code:c[f].get("code"),value:c[f].get("value")})}}if(g.length>0){e=(g[0].value||g[0].code)+(g.length>1?"("+(g.length-1)+" more)":"")}$("input[type=text]",b.u2).val(e);h.l5a.call(h,b);if(!d&&!a){h.l5.call(h)}},c1:function(c){var o=this,b=o.p,s=c.u2,u=o._ILb.pff1a,e=u.showbutton,a=!e&&u.f_b_evt=="T"?1:0,w=c.showpopup,f=c.dateseltype,h,d;if(o.__dx==true){return}switch(c.objtype){case"slider":var g=s.slider("option","min"),q=s.slider("option","max");s.slider("values",0,g);s.slider("values",1,q);break;case"combobox":if(w==true){$("input[type=text]",s).val("")}else{$("option:selected",s).removeAttr("selected")}break;case"radiobox":$("option:selected",s).removeAttr("selected");break;case"checkbox":if(w==true){$("input[type=text]",s).val("")}else{$("option:selected",s).removeAttr("selected")}break;case"fileupload":$("input[type=text]",s).val("");break;case"text":var l=[$("[name=c_m1]",s)];if(item.rangevalue){l.push($("[name=c_m2]",s))}$.each(l,function(x,y){y.val("")});if(!e&&!a){o.l5.call(o)}break;case"checkbuttons":d=c.data;if(d&&d.length>0){for(h=0;h<d.length;h++){d[h].u2&&$("input[type='checkbox']",d[h].u2).prop("checked",false)}}if(!e&&!a){o.l5.call(o)}break;case"radiobuttons":d=c.data;if(d&&d.length>0){for(h=0;h<d.length;h++){d[h].u2&&d[h].u2.removeAttr("selected")}}if(!e&&!a){o.l5.call(o)}break;case"calendar":if(f=="year"){c.dt.val("")}else{if(f=="month"){c.dt.monthpicker("setDate",null)}else{c.dt.datepicker("setDate",null)}}break;case"calendarperiod":if(f=="year"){c.dt1.val("");c.dt2.val("")}else{if(f=="month"){c.dt1.monthpicker("setDate",null);c.dt2.monthpicker("setDate",null)}else{c.dt1.datepicker("setDate",null);c.dt2.datepicker("setDate",null)}}break}if(!e&&!a){o.l5.call(o)}},l2:function(e){var d=this,f=d._ILb.pff1,b;for(b=0;b<f.length;b++){if(e.uid&&f[b].uid==e.uid){return}else{if(e.name&&f[b].name==e.name){return}}}if(!(/(metric|measure|custommetric|formulameasure|tabdimension|multimetric|multimeasure|measuregroup|measuregroupdimension|groupfield)/.test(e.type.toLowerCase()))){return}var a={},c=e.memo?e.memo.toLowerCase():e.memo;IG$._I1d(e,a,"uid;name;nodepath;type");a.uid=IG$._I06(a.uid);a.title=a.name;a.objtype="text";switch(a.type.toLowerCase()){case"metric":case"custommetric":case"tabdimension":case"measuregroupdimension":a.operator="EQ";if(c=="date"||c=="datetime"||c=="timestamp"){a.objtype="text"}else{a.objtype="combobox"}break;case"measure":case"formulameasure":case"measuregroup":a.operator="GT";a.objtype="slider";break}a._p1=d._ILb;f.push(a);d.l3()},I0:function(d){var c=[],b,e,a;if(d.pvalues){e=d.pvalues.split("\n");for(b=0;b<e.length;b++){a=e[b].split(";");c.push({code:a[0],disp:a[1]})}}return c},l3:function(u,g,x,e){var h=this,o=u||h._ILb.pff1,w,f,s="",q,b,d;for(d=0;d<o.length;d++){w=o[d];q=w.objtype;b=w.type;if(!w.validated){f=h.l3b(w);if(b=="viewselector"){h.ll1(w)}else{if(/combobox|checkbox|radiobox|slider|checkbuttons|radiobuttons/.test(q)){if(f===false){}else{if(b=="prompt"){w.validate=true;w.data=[];if(w.cmap_uid){s+="<item"+IG$._I20(w,"cmap_uid;cmap_disp;name;type","s")+" uid='"+w.cmap_uid+"'>";s+=(f?f:"");s+="</item>"}else{if(w.pvalues){w.data=h.I0(w);h.l6(o[d])}}}else{s+="<item"+IG$._I20(w,"name;uid;objtype;nodepath;cmap_uid;cmap_disp","s")+">";s+=(f?f:"");s+="</item>"}}}}}}if(s!=""){h.v1=true;h.c2=false;var l=new IG$._I3e(),a,c;a="<smsg><info option='ValueInfo'>";if(h.report&&h.report._ILa&&h.report._ILa.reportmode=="sql"){c=h.report._ILa;a+=c._IJ1.call(c)}a+="</info></smsg>";h.setLoading(true);if(!x){h.l3a(g,e)}l.init(h,{ack:"18",payload:"<smsg>"+s+"</smsg>",mbody:a},h,function(y){var z=this,A=0;if(!x){A=1}z.rs_l3(y,[u,g,x,e,A])},function(y){var z=this},[u,g]);l._l()}else{if(!u){h.l3a(g,e)}}},ll1:function(){var q=this,l,g,f,s=q._ILb.pff1,h,e,y,b,a=0,u,w,d,x,o,c=0;if(q.dzone&&s){for(l=0;l<s.length;l++){y=s[l];w=y.objtype;d=y.type;if(d=="viewselector"){h={data:[]};if(y.data&&w=="radiobuttons"){for(g=0;g<y.data.length;g++){if(y.data[g].u2&&$("input[type='radio']",y.data[g].u2).is(":checked")){a=g;break}}}e=q.dzone.docitems[y.tabid];x=e?e.children:null;if(x){for(g=0;g<x.length;g++){o=e.children[g];u={code:o.docid,disp:o.lt.ubody.title||o.lt.ubody.name};if(c==a){u.selected=true}h.data.push(u);c++}}y.validated=true;y.data=h.data;q.l6(y)}}}},rs_l3:function(F,G){var K=this,b=G[0],L=G[1],J=G[2],x=G[3],A=G[4],z,y,o,c,w,q=b||K._ILb.pff1,E,l,g,D,e,h,I,C,u,s,B,f,g,a,H,h;if(K.__dx==true){return}u=IG$._I2a(F);if(u){for(w=0;w<u.length;w++){l=u[w];for(z=0;z<q.length;z++){if(q[z].uid==l.uid.substring(0,17)){E=q[z];E.validated=true;E.data=l.data;K.l6(E);break}else{if(q[z].cmap_uid==l.uid.substring(0,17)){E=q[z];E.validated=true;E.data=l.data;K.l6(E)}}}}for(z=0;z<q.length;z++){if(!q[z].validated){E=q[z];E.validate=true;E.data=[];K.l6(q[z])}}}K.v1=false;if(!b&&!J&&!A){K.l3a(L,x)}},l3b:function(h){var f=this,a=null,e,d,c,b,g=f._ILb.pff1,l;if(h.hfilter&&h.hfilter.length>0){e=h.hfilter.split(";");for(d=0;d<e.length;d++){l=null;for(c=0;c<g.length;c++){if(g[c].name==e[d]){l=g[c];break}}if(l){l.value=[];b=f.l7a(l);if(b){a=(a)?a+b:"<Filters>"+b}else{if(l.isnecessary==true||b===0){a=false;break}}}else{a=false;break}}}if(a){a+="</Filters>"}return a},_lD:function(E,B){var F=this,e=F._ILb.pff1,c=F._ILb.pff1a,s=c.viewtype||"table",C,A,x=F._mbox,q,g,b,D,z,f,d,u=F.p.offset(),y,a;f=B.pageX-u.left;d=B.pageY-u.top;if(x){if(s=="table"){}else{g=0;a=0;for(C=0;C<x.rh.length;C++){g+=(x.rh[C]||20);if(d<g){a=C;break}}q=0;z=-1;for(C=0;C<e.length;C++){if(e[C].crowindex==a){b=IG$.x_10._w(e[C].u1);if(q<f&&f<q+b){if(f<q+b/2){z=C}else{z=C+1}break}q+=b;z=C+1}}if(z>-1){for(C=0;C<e.length;C++){if(e[C]==E){e.splice(C,1);if(C<z){z--}e.splice(z,0,E);break}}}E.crowindex=a}}},_lm:function(){var J=this,w=J._ILb.pff1,u=J._ILb.pff1a,C=u.viewtype||"table",G,F,h=(u.columnsize?u.columnsize:1),K=IG$.x_10._w(J.container),q=0,l=0,B=4,b=10,e,d,f,s,E,g=[],A=[],z={},I={},a,M,H,D=0,c=0,o,L;if(C=="table"&&u.f_t_dir!="top"){for(G=0;G<w.length;G++){H=w[G];L=H.u4;c=Math.max(c,IG$.x_10._w(L))}}for(G=0;G<w.length;G++){H=w[G];E=H.u1;L=H.u4;if(C=="table"&&c>0){IG$.x_10._w(L,c)}s=IG$.x_10._h(E);f=IG$.x_10._w(E);M=0;if(C=="table"){if(h>1){a=Math.floor(D/h);M=D%h}else{a=D;M=0}D++}else{a=H.crowindex||0}I[a]=Math.max(I[a]||0,s+B);z[M]=Math.max(z[M]||0,f+b)}if(C!="table"){for(G=0;G<u.rowsize;G++){g.push(0);A.push(0)}}D=0;for(G=0;G<w.length;G++){H=w[G];E=H.u1;s=IG$.x_10._h(E);f=IG$.x_10._w(E);if(C=="table"){e=0;d=0;if(h>1){M=Math.floor(D/h);a=D%h}else{M=0;a=D}for(F=0;F<M;F++){e+=z[F]}for(F=0;F<a;F++){d+=I[F]}D++}else{a=H.crowindex||0;e=g[a];d=B;for(F=0;F<a;F++){d+=A[F]}g[a]+=f+b;A[a]=Math.max(A[a],s+B)}E.css({top:d,left:e})}J._mbox={rx:g,rh:A,mh:I,mw:z};if(u.showbutton&&J._sbtn){d=B;if(C=="table"){}else{for(F=0;F<u.brow;F++){d+=A[F]}}J._sbtn.css({top:d,right:B})}},l3a:function(l,h){var s=this,q=s.c,w=s._ILb.pff1,x=s._ILb.pff1a,a=x.viewtype||"table",b,f,g,o;q.empty();if(w.length>0){s.p=b=$("<div class='df-list'></div>").appendTo(q);IG$.x_10._w(s.p,IG$.x_10._w(s.container)-10);var u,e,d,y;ntable=(x.columnsize?x.columnsize:1);$.each(w,function(c,z){var A=$("<div class='df-filter-cont'></div>").appendTo(s.p);s.l1.call(s,z,A,(c>0?w[c-1]:null),a)});for(f=0;f<w.length;f++){s.l6(w[f])}if(x.showbutton){e=$("<div class='df-filter-cont'></div>").appendTo(s.p);y=(x.buttonname||IRm$.r1("L_BTN_SEARCH"));d=$("<button class='dt-btn-search'><span>"+IG$._rrcsv(y)+"</span></button>").appendTo(e).bind("click",function(){s.l5.call(s,0,null,0,1)});IG$._rrcs(s,y,$("span",d));s._sbtn=e}s._lm()}s.c2=true;s.v1=false;s.c1();setTimeout(function(){s.l5.call(s,l,null,h)},500)},l4:function(){var a=this;if(a.utimer>-1){clearTimeout(a.utimer)}a.utimer=setTimeout(function(){a.rs_l4.call(a)},200)},rs_l4:function(){var b=this,a=IG$.x_10._w(b.container);b.utimer=-1;IG$.x_10._w(b.p,a-10);b._lm()},cc1:function(o,a,q,l){var s=this,h,c=s.dzone.docitems[o.tabid],b=o.value.length>0?o.value[0].code:null,e=c?c.lt.ubody:null,g,d;if(c&&e&&e.view&&b){d=c.children;for(h=0;h<d.length;h++){g=d[h];if(a){g.lt.ubody.visible=false}if(g.docid==b&&e.view.buttons.length>h){if(a){g.lt.ubody.visible=true}else{if(q){e.view.s1.call(e.view,b,true)}else{e.view.buttons[h].trigger("click")}break}}}}},c1:function(){this._i10&&this._i10.f.call(this._i10.p,this)},l5m:function(s,h,e){var b,g=this,l=g._ILb.pff1,c,q=true,a,d,o=[];for(b=0;b<l.length;b++){c=l[b];d=g.l5m_(c,o,s,h);q=(d==false)?d:q}if(q==false){if(o.length>0&&!s){IG$._I54(ig$.appname,IRm$.r1("M_SEL_ERR",o.join(",")),null,null,1,"error")}return false}return true},l5m_:function(e,h,a,c){var d=this,g,b=true;e.value=[];if(e.u3){e.u3.removeClass("df-title-error")}if(e.u2){e.value=[];g=d.l7a(e);if(g===0||(!g&&e.isnecessary==true)){b=false;if(e.u3){e.u3.addClass("df-title-error");h.push(e.title||e.name)}}}if(e.type=="viewselector"&&e.u2){e.value=[];d.l7a(e);if(e.value&&e.value.length>0){c.push(e)}}return b},l5:function(E,y,x,B){var D=this,f=[],l=D._ILb.pff1,h=D._ILb.pff1a,C=h?h.showbutton:false,d=(C&&h.f_b_trg=="T")?1:0,c=d&&h.f_b_trg_all=="T"?1:0,o=D.l5m(E?1:0,f),g=h?h.f_b_scr:null,z,q,b,s,w,u=1;if(o&&D.callback&&D.v1==false){for(z=0;z<f.length;z++){D.cc1(f[z],true)}D._fr=E;if(o&&d&&D.report){w=D.report.J3.call(D.report,D,c);if(!w){u=0}}if(!x&&(!E||y)){if(u){if(g&&window[g]){try{var a={},u,z;for(z=0;z<l.length;z++){a[l[z].name]=l[z].value}u=window[g].call(this,a);if(u&&u.err){IG$._I54(ig$.appname,u.errmsg,null,null,1,"error");return}}catch(A){return}}}if(u){if(B){D.callback.execute(D)}else{D.callback.execute(D)}}}else{if(E){D.container.trigger("i_ready")}}for(z=0;z<f.length;z++){D.cc1(f[z],undefined,E,y)}}},lv:function(e,h){var g=0,f=h.split("="),b=e.value,d,c,a;if(f[0]==e.name&&b&&f[1]){a=f[1].split(",");for(d=0;d<b.length;d++){if(b[d].code==f[1]){g=1;break}else{if(a.length>1){for(c=0;c<a.length;c++){if(b[d].code==a[c]){g=1;break}}}}if(g){break}}}return g},l5a:function(l){var g=this,o=[],b=[],f,e,d,s,c,h=g._ILb.pff1,a=null,q;if(l.invokejs&&window[l.invokejs]){a=window[l.invokejs].call(g,l)}if(a!=false){for(f=0;f<h.length;f++){s=h[f];if(s.name!=l.name&&s.hfilter&&s.hfilter.length>0){d=s.hfilter.split(";");for(e=0;e<d.length;e++){if(d[e]==l.name){s.validated=false;o.push(s)}}}if(s.name!=l.name&&s.showcondition){if(s.showcondition.indexOf(l.name)>-1){b.push(s)}}}if(b.length>0){l.value=[];g.l7a(l);for(f=0;f<b.length;f++){q=g.lv(l,b[f].showcondition);g.c3(b[f],q)}}if(o.length>0){g._IJ3(o);g.l3(o,undefined,true)}}return a},c3:function(c,a){var b=a?"show":"hide";c.u2[b]();c.u3[b]();c.u4[b]()},l6:function(A){var z="";A.data=A.data||[];A.iV=true;if(A.u2){var D=this,s=A.u2,C,y,E=A.data,u,l=true,w,x,g,o,e,f,B,d,c,b;switch(A.objtype){case"slider":if(E.length>0){w=parseFloat(E[0].code);x=w;for(y=0;y<E.length;y++){C=parseFloat(E[y].code);if(isNaN(C)==false){w=Math.min(C,w);x=Math.max(C,x)}else{l=false;break}}A.allnumeric=l;if(l==true){g=(x-w)/Math.max(E.length,20);d=A.s1a?Number(A.s1a):w;c=A.s1b?Number(A.s1b):x;b=A.s1c?Number(A.s1c):g}else{d=A.s1a?Number(A.s1a):0;c=A.s1b?Number(A.s1b):E.length;b=A.s1c?Number(A.s1c):1}s.slider("option","min",d);s.slider("option","max",c);s.slider("option","step",b);s.slider("values",0,d);s.slider("values",1,c);D.l8.call(D,s)}break;case"fileupload":A.selection=[];break;case"combobox":if(A.showpopup==true){A.selection=[]}else{o=$("[name=c_m1]",s);e=$("[name=c_m2]",s);f=[];if(A.showallvalue==true){if(A.isnecessary==true){z=A.aname||IRm$.r1("L_SELECT_VALUE")}else{z=A.aname||IRm$.r1("L_ALL_VALUE")}o.attr("placeholder",z);e.attr("placeholder",z);IG$._$A(o);IG$._$A(e);f.push({label:z,value:""})}B=A._p1.m1.call(A._p1,A);A._svalues=[];for(y=0;y<E.length;y++){f.push({label:(E[y].disp||E[y].code),value:E[y].code});if(B&&B==E[y].code){if(A.rangevalue){A._svalues.push({code:E[y].code,text:E[y].disp||E[y].code})}else{A._svalues=[{code:E[y].code,text:E[y].disp||E[y].code}]}}}if(!A.showallvalue&&!A.defaultvalue&&f.length){A._svalues=[{code:f[0].value,text:f[0].label}];if(A.rangevalue){A._svalues.push({code:f[f.length-1].value,text:f[f.length-1].label})}}if(A._svalues&&A._svalues.length){o.val(A._svalues[0].text);if(A.rangevalue){A._svalues[1]&&e.val(A._svalues[1].text)}}A.sdp=f;o.trigger("change")}break;case"radiobox":case"checkbox":if(A.objtype=="checkbox"&&A.showpopup==true){A.selection=[]}else{s.empty();u=s.attr("options");if(A.showallvalue==true){if(A.isnecessary==true){z=A.aname||IRm$.r1("L_SELECT_VALUE")}else{z=A.aname||IRm$.r1("L_ALL_VALUE")}$("<option value=''>"+z+"</option>").appendTo(s)}for(y=0;y<E.length;y++){$("<option value='"+E[y].code+"'>"+(E[y].disp||E[y].code)+"</option>").appendTo(s)}A.u2.trigger("change")}break;case"checkbuttons":var h=$("ul",s),a,q,z;h.empty();B=A._p1.m1.call(A._p1,A);if(A.showallvalue){z=A.aname||IRm$.r1("L_SELECT_VALUE");q=$("<li class='igc-chk-sel-all'></li>").appendTo(h);a=$("<label><input type='checkbox' value=''/><span>"+(z)+"</span></label>").appendTo(q);a.bind("click",function(){h.trigger("checkbox_sel_all");A.___prv_event=1;var F=0;if($("input[type='checkbox']",a).is(":checked")){F=1}$.each(E,function(G,I){if(I.u2){var H=$("input[type='checkbox']",I.u2);if(F){H.prop("checked",true)}else{H.prop("checked",false)}}});A.___prv_event=0;h.trigger("checkboxchanged",null)});if(B=="ALL"){$("input[type='checkbox']",a).prop("checked",true)}A._c_a1=a}$.each(E,function(F,I){var H=$("<li></li>").appendTo(h),G=$("<label><input type='checkbox' value='"+I.code+"'/><span>"+(I.disp||I.code)+"</span></label>").appendTo(H),J=$("input[type='checkbox']",G);I.u2=G;I.u2b=J;if(I.code==B||I.selected||B=="ALL"){J.prop("checked",true)}J.bind("change",function(){if(!A.___prv_event){h.trigger("checkboxchanged",I)}})});if(A.checkbuttonhor=="T"){$("li",h).css({"float":"left",paddingRight:5})}h.trigger("checkboxchanged",null);break;case"radiobuttons":var h=$("ul",s),a,q;h.empty();window.rdo_id=window.rdo_id||0;window.rdo_id++;B=A._p1.m1.call(A._p1,A);$.each(E,function(F,G){q=$("<li></li>").appendTo(h);a=$("<label><input type='radio' name='radio_"+(window.rdo_id)+"' value='"+G.code+"'/><span>"+(G.disp||G.code)+"</span></label>").appendTo(q);G.u2=a;if((B&&G.code==B)||G.selected){$("input[type=radio]",a).prop("checked",true)}a.bind("change",function(){setTimeout(function(){h.trigger("radioboxchanged")},100)})});h.trigger("radioboxchanged");if(A.checkbuttonhor=="T"){$("li",h).css({"float":"left",paddingRight:5})}break;case"text":break;case"calendar":break;case"calendarperiod":break}}A.iV=false},_uu1:function(c){var d=this,e=d._ILb.pff1,f=d._ILb.pff1a,l,b,a,h,g;for(b=0;b<e.length;b++){l=e[b];if(l.value&&l.value.length>0){for(a=0;a<l.value.length;a++){g=l.value[a].value||l.value[a].code;h=(a==0?g:h+", "+g)}c[l.name]=h}}},_IB4:function(u,q,w,c,e){var B=this,o=B._ILb.pff1,h=B._ILb.pff1a,d=(h.columnsize?h.columnsize:1),s=[],A,z,y,x=0,l=u,g=q,a,f,b;for(z=0;z<o.length;z++){A=o[z];if(x>0&&x%d==0){g+=30;l=u}if(A.value&&A.value.length>0){for(y=0;y<A.value.length;y++){f=A.value[y].value||A.value[y].code;a=(y==0?f:a+", "+f)}b=(A.ltitle||A.title||A.lname||A.name);if(b&&b.charAt(0)=="$"){b=IRm$.r1(b)}b+=" ("+a+")";s.push("<item type='label' x='"+l+"' y='"+g+"' d_width='"+c+"' d_height='"+e+"' docid='"+w+"'>");s.push("<text>"+b+"</text>");s.push("</item>")}l+=100;x+=(A.objmerge||1)}return s.join("")},l7:function(){var g=this,e,a="<FilterData>",d,o,l=g._ILb.pff1,q,b,h,f,s,c;for(e=0;e<l.length;e++){s=l[e];s.value=[];c=g.l7a(s);if(c){a+=c}}a+="</FilterData>";return a},l7a:function(y){var A=this,x,u,g,h,s,b,e,d,a,c,z,f="",B=y.dateseltype;if(y.u2){g=y.u2;switch(y.objtype){case"slider":var q=g.slider("values",0),o=g.slider("values",1),l=g.slider("option","min"),w=g.slider("option","max");if(y.allnumeric==false){if(q>0||o<y.data.length){for(u=q;u<o;u++){y.value.push({code:y.data[u].code,value:y.data[u].disp,operator:"EQ"})}}}else{if(l<q||w>o){y.value.push({code:""+q,value:""+q,operator:"GTE"});y.value.push({code:""+o,value:""+o,operator:"LTE"})}}break;case"calendar":if(B=="year"){h=$("option:selected",y.dt).val()}else{if(B=="month"){h=y.dt.monthpicker("getDate")}else{h=y.dt.datepicker("getDate")}}if(h){if(B=="year"){}else{h=h.format("Ymd")}y.value.push({code:h,value:h,format:"date"})}break;case"calendarperiod":if(B=="year"){e=$("option:selected",y.dt1).val();d=$("option:selected",y.dt2).val()}else{if(B=="month"){e=y.dt1.monthpicker("getDate");d=y.dt2.monthpicker("getDate");d=new Date(d.getFullYear(),d.getMonth()+1,0)}else{e=y.dt1.datepicker("getDate");d=y.dt2.datepicker("getDate")}}if(e&&d){if(B=="year"){}else{e=e.format("Ymd")+"000000";d=d.format("Ymd")+"235959"}if(Number(e)<Number(d)){y.value.push({code:e,value:e,operator:"GTE",format:"date"});y.value.push({code:d,value:d,operator:"LTE",format:"date"})}else{f=0}}break;case"text":var z=[$("[name=c_m1]",g)];if(y.rangevalue){z.push($("[name=c_m2]",g))}$.each(z,function(D,C){var E=C.val(),F;if(E){y.value.push({code:E,value:E})}});break;case"fileupload":y.selection=y.selection||[];if(y.selection.length){y.value.push({code:y.selection[0].code,value:y.selection[0].value})}break;case"combobox":if(y.showpopup){y.selection=y.selection||[];if(y.selection.length){y.value.push({code:y.selection[0].code,value:y.selection[0].value})}}else{var z=[$("[name=c_m1]",g)];if(y.rangevalue){z.push($("[name=c_m2]",g))}h=[];$.each(z,function(D,C){var E=C.val(),G=C.attr("placeholder"),F;if(!y.rangevalue&&E&&y._svalues&&y._svalues.length&&y._svalues[0].text==E){if(!G||(G&&E!=G)){h=y._svalues}}else{if(E&&y.sdp&&y.sdp.length){for(F=0;F<y.sdp.length;F++){if(G&&E==G){continue}else{if(y.sdp[F].value==E||y.sdp[F].label==E){h.push({code:y.sdp[F].value,text:y.sdp[F].text||y.sdp[F].label});break}}}}}});if(h&&(!y.rangevalue&&h.length>0)||(y.rangevalue&&h.length>1)){for(x=0;x<h.length;x++){y.value.push({code:h[x].code,value:h[x].text})}}}break;case"checkbox":if(y.showpopup){y.selection=y.selection||[];for(u=0;u<y.selection.length;u++){y.value.push({code:y.selection[u].code,value:y.selection[u].value})}}else{h=g.val()||[];for(u=0;u<h.length;u++){if(h[u]!=""){y.value.push({code:h[u],value:h[u]})}}}break;case"checkbuttons":if(y.data){for(u=0;u<y.data.length;u++){if(y.data[u].u2&&$("input[type='checkbox']",y.data[u].u2).is(":checked")){y.value.push({code:y.data[u].code,value:y.data[u].value})}}}break;case"radiobuttons":if(y.data){for(u=0;u<y.data.length;u++){if(y.data[u].u2&&$("input[type='radio']",y.data[u].u2).is(":checked")){y.value.push({code:y.data[u].code,value:y.data[u].value})}}}break;case"radiobox":h=g.val()||[];for(u=0;u<h.length;u++){if(h[u]!=""){y.value.push({code:h[u],value:h[u]})}}break}if(y.value&&y.value.length>0){f+="<Filter>";for(u=0;u<y.value.length;u++){b=y.value[u].operator||y.operator||"";c=y.valueformat||"";f+="<Row"+IG$._I20(y,"uid;name;type","s")+" operator='"+b+"' title='"+(y.title||"")+"' useprompt='"+(y.useprompt?"T":"F")+"'"+IG$._I20(y.value[u],"format","s")+">"+((y.value[u].code)?"<code><![CDATA["+y.value[u].code+"]]></code>":"")+((y.value[u].value)?"<value><![CDATA["+y.value[u].value+"]]></value>":"")+(c?"<valueformat><![CDATA["+c+"]]></valueformat>":"")+"</Row>"}f+="</Filter>"}}return f},l8:function(a){var b,e=this,c=$(a),f=e._ILb.pff1,l,h=c.children("a"),d,g;if(h&&h.length==2){for(b=0;b<f.length;b++){if(f[b].u2&&f[b].u2[0]==c[0]){l=f[b];break}}for(b=0;b<h.length;b++){g=c.slider("values",b);if(l&&l.data&&l.allnumeric==false){if(l.data.length>g){g=""+l.data[g].code}else{g=""}}else{g=""+g}d=$(h[b]);d.tooltip({track:true,delay:0,fade:250,showURL:false});d[0].tooltipText=g}}},l8a:function(b,a,d){var e,h=this,f=$(b),l=h._ILb.pff1,s,q=f.children("a"),g,o,c;if(q&&q.length==2){for(e=0;e<l.length;e++){if(l[e].u2&&l[e].u2[0]==b){s=l[e];break}}for(e=0;e<q.length;e++){if(a.handle==q[e]){o=f.slider("values",e);if(s&&s.data&&s.allnumeric==false){if(s.data.length>o){o=""+s.data[o].code}else{o=""}}else{o=""+o}c=f.children(".guide");c.css({left:d}).html(o)}}}},setLoading:function(b){var a=this;a.sp[(b==true)?"show":"fadeOut"]()},_IJ3:function(h,a){var e=this,f=h||e._ILb.pff1,l,g,b,c=e.c2;for(b=0;b<f.length;b++){l=f[b];if(l.u2){g=l.u2;switch(l.objtype){case"slider":break;case"calendar":break;case"text":var d=[$("[name=c_m1]",g)];if(l.rangevalue){d.push($("[name=c_m2]",g))}$.each(d,function(o,q){q.val("")});break;case"combobox":if(l.showpopup==true){$("input[type=text]",g).val("");l.selection=[]}else{$("input[type=text]",g).val("")}break;case"checkbox":if(l.showpopup==true){$("input[type=text]",g).val("");l.selection=[]}else{g.val([])}break;case"radiobox":g.val([]);break}}}if(a&&c){this.c1()}}};IG$._ICc=function(c,l,b){var h=this;h.P1=null;h.P2=[];h.P3=null;h.P5={top:10,left:10,right:null,bottom:null,width:100,height:100,percentwidth:null,percentheight:null};h.P6="";h.dsmode=b;h.P7={visible:"true",border:"1",bordercolor:"#e5e5e5",backgroundcolor:"#ffffff",padding:"2"};h.uctrl=l;h.actionlist={};if(h.uctrl&&h.uctrl.P4=="panel"&&h.uctrl.P7.layout=="border"){h.P7.title=h.P7.title||" "}if(c){h.P4=c.type;var f,d,a,g,o,e;h.P5=c.position||null;h.P7=c.properties;h.P6=c.name;h.P9=h.getControl(h.P4.toLowerCase());h.P3=c.item;if(c.item){h.P9.aa(h.P3)}h.actionlist=c.actionlist}h.P10={x:0,y:0,w:20,h:20}};IG$._ICc.prototype={P12:function(c){var b=this,a=null;if(b.P9&&b.P9.P12){a=b.P9.P12.call(b.P9,c)}return a},disposeContent:function(a){if(a.control&&typeof a.control!="undefined"){a.control.disposeContent(a.control);a.control=null}},P11:function(d,a,g,b,c){var e=this,f=e.P5;m=e.P10;if(f.top!=null&&f.bottom!=null){m.y=f.top;m.h=c-(f.bottom+f.top)}else{if(f.height!=null){m.h=f.height;if(f.top!=null){m.y=f.top}else{if(f.bottom!=null){m.y=c-f.height-f.bottom}}}else{if(f.percentheight!=null){if(f.top!=null){m.y=f.top;m.h=(c-f.top)*0.01*f.percentheight}else{if(f.bottom!=null){m.h=(c-f.bottom)*0.01*f.percentheight;m.y=(c-m.h-f.bottom)}}}}}if(f.left!=null&&f.right!=null){m.x=f.left;m.w=b-(f.right+f.left)}else{if(f.width!=null){m.w=f.width;if(f.left!=null){m.x=f.left}else{if(f.right!=null){m.x=b-f.width-f.right}}}else{if(f.percentwidth!=null){if(f.left!=null){m.x=f.left;m.w=(b-f.left)*0.01*f.percentwidth}else{if(f.right!=null){m.w=(b-f.percentwidth*0.01-f.right);m.x=(b-m.w)-f.right}}}}}m._px=a;m._py=g},getControl:function(b){var a=this;return IG$.getControl.call(a,b,a.dsmode)},i9:function(b){var c=this.P9,a;if(c){a=c._1.call(c,b)}b.dummy=c;return a}};IG$.getControl=function(c,e,b){var d=null,a=this;if(b){d={width:100,height:100};if(/(titlelabel|label|button|textbox|datechooser|monthchooser|combobox)/.test(c)){d.height=25}}else{switch(c){case"titlelabel":d=new IG$._ID4(a.P7,a,e);break;case"olapreport":case"compositereport":d=new IG$._IDd(a.P7,a,e);break;case"label":d=new IG$._ID5(a.P7,a,e);break;case"textarea":d=new IG$._ID8(a.P7,a,e);break;case"picture":case"image":d=new IG$._ID6(a.P7,a,e);break;case"button":d=new IG$._ID9(a.P7,a,e);break;case"textbox":d=new IG$._ID7(a.P7,a,e);break;case"datechooser":d=new IG$._IDb(a.P7,a,e);break;case"monthchooser":d=new IG$.jj_3(a.P7,a,e);break;case"combobox":d=new IG$._IDa(a.P7,a,e);break;case"panel":d=new IG$._IDc(a.P7,a,e);break;case"treefilter":d=new IG$._IDf(a.P7,a,e);break;case"grid":d=new IG$._Imm(a.P7,a,e);break;case"browser":d=new IG$.jj_1(a.P7,a,e);break;case"sheetfilter":d=new IG$.jj_2(a.P7,a,e);break;case"tabpanel":d=new IG$.jj_3(a.P7,a,e);break;case"dashboard":d=new IG$.jj_5(a.P7,a,e);break;case"promptfilter":d=new IG$.jj_4(a.P7,a,e);break;case"checkbox":d=new IG$.$iDa(a.P7,a,e);break;case"pivotfilter":d=new IG$.jj_M(a.P7,a,e);break;default:d=new IG$._ID3(a.P7,a,e);break}d.type=c}return d};IG$._ICd=function(H,h){var J=this,e=IG$._I18(H,"/smsg/result/data"),G,w,F,d,K,L,b,z=null,I=null,l,O,s,q,C,a=[],E=[],y=-1,f=-1,u={},N={},x,g,D,o,M=[],c=0,B,A;J.data=M;b=IG$._I18(H,"/smsg/item/result");if(b){s=IG$._I1c(b);L=s.delimiter;J.pool=s.pool;D=s.geolat;o=s.geolng;q=parseInt(s.cols);a=s.codefield;E=s.sortfield;a=(a&&a.length>0)?a.split(","):[];E=(E&&E.length>0)?E.split(","):[]}if(e){G=IG$._I18(b,"Header");w=IG$._I26(G)}else{e=G=IG$._I18(b,"TupleData");if(e){w=IG$._I26(e);c=1;q=1}}if(w){if(J.pool&&J.pool.indexOf(";")>-1){J.pool=J.pool.substring(0,J.pool.indexOf(";"))}x=-1;for(F=0;F<w.length;F++){C=IG$._I1c(w[F]);if(C.uid==h||C.name==h){x=F;A=IG$._I18(w[F],"DataList")}else{if(D&&(C.uid==D||C.name==D)){y=F}else{if(o&&(C.uid==o||C.name==o)){f=F}}}}for(F=0;F<a.length;F++){u[parseInt(a[F])]=1}for(F=0;F<E.length;F++){N[parseInt(E[F])]=1}z=c==0?IG$._I24(e):(A?IG$._I24(A):"");z=z.split(L);if(x>-1){F=0;B=c==0?z.length:z.length-1;while(F<B){if(q==1){M.push({code:z[F]})}else{n=F%q;if(n==0){g={}}else{if(n==q-1){if(!g.code){g.code=g.text}M.push(g)}}if(n==x){g.text=z[F]}else{if(u[n]){g.code=z[F]}else{if(N[n]){g.sort=z[F]}else{if(y==n){g.lat=z[F]}else{if(f==n){g.lng=z[F]}}}}}}F++}}}};IG$._ICe=function(e){var q=this,f,h,o,l,c,b,g,a;q.eventXML=e;if(e){q.purpose=IG$._I1b(e,"purpose").toLowerCase();q.eventtype=IG$._I1b(e,"type");q.uid=IG$._I1b(e,"uid");q.name=IG$._I1b(e,"name");q.description=IG$._I1b(e,"description");q.P13=null;q.enableoffline=null;q.filters=null;q.iparams={};q.oparams={};q.s_iparams=[];q.s_oparams=[];f=IG$._I18(e,"params");if(f){b=IG$._I18(f,"iparams");g=(b?IG$._I26(b):null);if(g){for(l=0;l<g.length;l++){a=IG$._I1c(g[l]);q.iparams[a.name]=a}}b=IG$._I18(f,"oparams");g=(b?IG$._I26(b):null);if(g){for(l=0;l<g.length;l++){a=IG$._I1c(g[l]);q.oparams[a.name]=a}}}var d=q.purpose;if(d=="onlinereport"){f=IG$._I18(e,"item");if(f){q.P13=IG$._I1b(f,"controlid");q.item={};IG$._I1f(q.item,f,"type;nodepath;uid;name","s")}h=IG$._I18(e,"item/Filter");q.__sfilter=new IG$._IEb();if(h){q.p2(h,q.__sfilter)}h=IG$._I18(e,"item/HavingFilter");q.__shavingfilter=new IG$._IEb();if(h){q.p2(h,q.__shavingfilter)}}else{if(d=="valuelist"){f=IG$._I18(e,"options");if(f){}f=IG$._I18(e,"options/item");if(f){q.item={};IG$._I1f(q.item,f,"type;nodepath;uid;name;cubeuid","s")}}else{if(d=="execute_script"){f=IG$._I18(e,"options/script");if(f){q.script=IG$._I24(f)}}else{if(d=="servercall"){f=IG$._I18(e,"options/plugin");if(f){IG$._I1f(q,f,"jmodule;jmodule_name","s");q.jmethod=IG$._I24(f)}}else{if(d=="open_dlg"){f=IG$._I18(e,"options/dialog");if(f){IG$._I1f(q,f,"btntype;btnclose","s");q.dlgmsg=IG$._I1a(f,"dlgmsg");q.dlgtitle=IG$._I1a(f,"dlgtitle")}}else{if(d=="open_win"){f=IG$._I18(e,"options");if(f){q.ispopup=IG$._I1b(f,"ispopup")=="T"}f=IG$._I18(e,"options/item");if(f){q.item={};IG$._I1f(q.item,f,"type;nodepath;uid;name","s")}}else{if(d=="export"){f=IG$._I18(e,"options/exp");if(f){q.exp_tmpl=IG$._I1a(f,"exp_tmpl");q.exp_out=IG$._I1a(f,"exp_out")}}else{if(d=="sql"){f=IG$._I18(e,"options/execute_sql");if(f){IG$._I1f(q,f,"dsource;rmode","s");q.sqlsyntax=IG$._I24(f)}q.columns=[];q.prompts=[];f=IG$._I18(e,"options/columns");if(f){snodes=IG$._I26(f);for(l=0;l<snodes.length;l++){var a={};IG$._I1f(a,snodes[l],"name;fieldname;sqlfield;type;datatype;tablename;dataoption_data;dataoption_valuetype;dataoption_datadelimiter;dataoption_coldelimiter;uid;kname","s");q.columns.push(a)}}f=IG$._I18(e,"options/prompts");if(f){snodes=IG$._I26(f);for(l=0;l<snodes.length;l++){var a={};IG$._I1f(a,snodes[l],"name;fieldname;sqlfield;type;datatype;tablename;dataoption_data;dataoption_valuetype;dataoption_datadelimiter;dataoption_coldelimiter;uid;kname","s");q.prompts.push(a)}}}}}}}}}}f=IG$._I18(e,"options/s_iparams");if(f){snodes=IG$._I26(f);for(l=0;l<snodes.length;l++){var a={};IG$._I1f(a,snodes[l],"name;kname","s");q.s_iparams.push(a)}}f=IG$._I18(e,"options/s_oparams");if(f){snodes=IG$._I26(f);for(l=0;l<snodes.length;l++){var a={};IG$._I1f(a,snodes[l],"name;kname","s");q.s_oparams.push(a)}}}};IG$._ICe.prototype={p2:function(e,c){var d=this;if(e){var f=IG$._I26(e,"FilterGroup"),b;if(f&&f.length>0){for(b=0;b<f.length;b++){var a=new IG$._IEb();a.name=IG$._I1b(f[b],"name");c.subGroups.push(a);d.parseSubFilter(f[b],a)}}}},parseSubFilter:function(f,c){var d,b,g,a,e=this;a=IG$._I26(f);if(a&&a.length>0){for(b=0;b<a.length;b++){if(IG$._I29(a[b])=="FilterGroup"){var g=new IG$._IEb();g.name=IG$._I1b(a[b],"name");e.parseSubFilter(a[b],g);c.subGroups.push(g)}else{c.subConditions.push(new IG$._IE9(a[b]))}}}},getXML:function(){var e=this,c,f,d="<event "+IG$._I20(e,"purpose;type;name;description","s")+">",a=e.purpose,b;if(a=="onlinereport"){if(e.item){d+="<item "+IG$._I20(e.item,"uid;nodepath;type;name","s")+">"}else{d+="<item>"}d+="<Filter>";if(e.__sfilter){d+=e.__sfilter.TX.call(e.__sfilter)}d+="</Filter>";d+="<HavingFilter>";if(e.__shavingfilter){d+=e.__shavingfilter.TX.call(e.__shavingfilter)}d+="</HavingFilter>";d+="</item>";d+="<options>"}else{if(a=="valuelist"){d+="<options controlid='"+(e.P13||"")+"' enableoffline='"+(e.enableoffline==true?"T":"F")+"'>";if(e.item){d+="<item"+IG$._I20(e.item,"type;nodepath;uid;name;cubeuid","s")+"/>"}}else{if(a=="execute_script"){d+="<options><script><![CDATA["+(e.script||"")+"]]><\/script>"}else{if(a=="servercall"){d+="<options>";d+="<plugin jmodule_name='"+(e.jmodule_name||"")+"' jmodule='"+(e.jmodule||"")+"'><![CDATA["+(e.jmethod||"")+"]]></plugin>"}else{if(a=="open_dlg"){d+="<options>";d+="<dialog "+IG$._I20(e,"btntype;btnclose","s")+">";d+="<dlgtitle><![CDATA["+(e.dlgtitle||"")+"]]></dlgtitle>";d+="<dlgmsg><![CDATA["+(e.dlgmsg||"")+"]]></dlgmsg>";d+="</dialog>"}else{if(a=="export"){d+="<options>";d+="<exp>";d+="<exp_tmpl><![CDATA["+(e.exp_tmpl||"")+"]]></exp_tmpl>";d+="<exp_out><![CDATA["+(e.exp_out||"")+"]]></exp_out>";d+="</exp>"}else{if(a=="open_win"){d+="<options ispopup='"+(e.ispopup?"T":"F")+"'>";if(e.item){d+="<item "+IG$._I20(e.item,"uid;nodepath;type;name","s")+"/>"}}else{if(a=="sql"){d+="<options>";d+="<execute_sql dsource='"+(e.dsource||"")+"' rmode='"+(e.rmode||"")+"'><![CDATA[";d+=(e.sqlsyntax||"")+"]]></execute_sql>";if(e.columns){d+="<columns>";for(c=0;c<e.columns.length;c++){d+="<column "+IG$._I20(e.columns[c],"name;fieldname;sqlfield;type;datatype;tablename;dataoption_data;dataoption_valuetype;dataoption_datadelimiter;dataoption_coldelimiter;uid;kname","s")+"/>"}d+="</columns>"}if(e.prompts){d+="<prompts>";for(c=0;c<e.prompts.length;c++){d+="<prompt "+IG$._I20(e.prompts[c],"name;fieldname;sqlfield;type;datatype;tablename;dataoption_data;dataoption_valuetype;dataoption_datadelimiter;dataoption_coldelimiter;uid;kname","s")+"/>"}d+="</prompts>"}}else{d+="<options>"}}}}}}}}if(e.s_iparams){d+="<s_iparams>";for(c=0;c<e.s_iparams.length;c++){d+="<param "+IG$._I20(e.s_iparams[c],"name;kname","s")+"/>"}d+="</s_iparams>"}if(e.s_oparams){d+="<s_oparams>";for(c=0;c<e.s_oparams.length;c++){d+="<param "+IG$._I20(e.s_oparams[c],"name;kname","s")+"/>"}d+="</s_oparams>"}d+="</options>";d+="<params>";if(e.iparams){d+="<iparams>";for(k in e.iparams){b=e.iparams[k];d+="<param name='"+b.name+"' map_param='"+(b.map_param||"")+"' map_type='"+(b.map_type||"")+"'/>"}d+="</iparams>"}if(e.oparams){d+="<oparams>";for(k in e.oparams){b=e.oparams[k];d+="<param name='"+b.name+"' map_param='"+(b.map_param||"")+"' map_type='"+(b.map_type||"")+"'/>"}d+="</oparams>"}d+="</params>";d+="</event>";return d}};IG$.__util={};IG$.__util.msgbox=function(a){IG$._I54(ig$.appname,a,null,null,1,"error")};IG$.__util._rcs=function(a,b){return b};IG$.__util.v_date=function(d,a){var c=d,b;if(d){b=[d.substring(0,4),d.substring(4,6),d.substring(6,8)];c=b.join(a)}return c};IG$.__util.v_field=function(a,d,c){var b=true;if(!a){b=false;if(d){IG$._I54(c||ig$.appname,d,null,null,1,"error")}}return b};IG$._IE0={};IG$._ID2=function(d,c,b){var a=this;a.ctrl=c;a.p=[{name:"visible",type:"property",datatype:"boolean",value:true},{name:"border",type:"property",datatype:"number",value:1},{name:"bordercolor",type:"property",datatype:"string",value:"#e5e5e5"},{name:"backgroundcolor",type:"property",datatype:"string"},{name:"padding",type:"property",datatype:"number",value:2},{name:"flex",type:"property",datatype:"number",value:1},{name:"basecls",type:"property",datatype:"string"}];a.property=d;a.P3=null;a.getter={};a.setter={};a.dsmode=b;a.html=$("<div id='"+(c!=null?c.P6:"")+"' class='ig-db-ctrls'></div>");a.superclass=IG$._ID2;a._ic.call(a)};IG$._ID2.prototype={__pcinit:function(){var b=this,a,c;b.__pcinit_=1;for(a in b.property){b.set.call(b,a,b.property[a])}b.__pcinit_=0},get:function(b){var a=this;if(a.getter[b]){return a.getter[b].call(a)}return null},set:function(c,b){var a=this;if(a.setter[c]){a.setter[c].call(a,b)}},val:function(a){return this[typeof(a)!="undefined"?"set":"get"]("text",a)},doGet:function(b){var a=this;if(a.getter[b]){return a.getter[b].call(a)}return null},doSet:function(c,b){var a=this;if(a.setter[c]){a.setter[c].call(a,b)}},invalidate:function(){},updateBorder:function(){var a=this,c=(a.dsmode?1:a.property.border),b=""+c+"px solid "+a.property.bordercolor;a.html.css({border:b})},_1:function(b){var a=this;a.layout=b;a.html.bind("click",function(c){c.stopPropagation();c.preventDefault();c.stopImmediatePropagation();a._2.call(a,"click");return false});a.html.resizable({resize:function(h,f){var g=f.position,c=f.size,d=a.layout;d.position.width=c.width;d.position.height=c.height;a._2.call(a,"resize");a.invalidate.call(a)}});a.html.draggable({stop:function(g,d){var f=d.position,c=a.layout;c.position.top=f.top;c.position.left=f.left;a._2.call(a,"resize");a.invalidate.call(a)}});return a.html},enabled:function(a){},_2:function(b){var a=this;a.html.trigger("e_"+b)},_b1:function(c,b){var a=this;a.property[c]=b;switch(c){case"visible":if(b==false&&!a.dsmode){a.html.hide()}else{a.html.show()}break;case"border":a.updateBorder();break;case"bordercolor":a.updateBorder();break;case"basecls":b&&a.html&&a.html.addClass(b);break}},_ic:function(){var a=this;$.each(a.p,function(c,b){if(b.type=="property"){if(typeof(b.value)!="undefined"&&typeof(a.property[b.name])=="undefined"){a.property[b.name]=b.value}a.getter[b.name]=function(){return this.property[b.name]};a.setter[b.name]=function(d){var e=this.property[b.name];this.property[b.name]=d;this._b1(b.name,d);this.updateProperty&&this.updateProperty(b.name,d)}}})},aa:function(a){var b=this;b.P3=a},initDrawing:function(){var a=this;a.__pcinit()}};IG$._Imm2=function(){var a=this;a.sfields=["fieldname","name","flex","minw","hidden","formatstring","align"];a._c=[]};IG$._Imm2.prototype={_l1:function(g){var o=this,l=o._c,b,h,f,d,c,e,a,q;l.splice(0,l.length);if(g){b=IG$._I18(g,"/cs");h=b?IG$._I26(b):null;if(h){for(f=0;f<h.length;f++){d=IG$._I26(h[f]);c={};for(e=0;e<d.length;e++){a=IG$._I1b(d[e],"na");q=IG$._I24(d[e]);if(/(flex|minw)/.test(a)&&q){q=Number(q)}else{if(a=="hidden"){q=(q=="T")}}c[a]=q}l.push(c)}}}},_l2:function(){var g=this,d=["<prop><cs>"],c,b=g._c,e=g.sfields,a,h;for(c=0;c<b.length;c++){d.push("<c>");for(j=0;j<e.length;j++){h=e[j];a=b[c][h];if(h=="hidden"){a=(a==true)?"T":"F"}d.push("<m na='"+h+"'><![CDATA["+a+"]]></m>")}d.push("</c>")}d.push("</cs>");d.push("</prop>");return IG$._I13(d.join(""))}};IG$._Imm=IG$.x_c(IG$._ID2,{_ic:function(){var a=this;a.activeIndex=0;a.p.push({name:"cell_click",type:"event"},{name:"text",type:"property",datatype:"string"},{name:"selectionmode",type:"property",datatype:"string",value:"none","enum":[{name:"none",value:"none"},{name:"single",value:"single"},{name:"multi",value:"multi"}]},{name:"selheader",type:"property",datatype:"string",value:""});a._cinfo=new IG$._Imm2();a.superclass.prototype._ic.call(a)},pe:function(a,b){},invalidate:function(){var c=this,a=IG$.x_10._w(c.html),b=IG$.x_10._h(c.html);c.mcontainer.width(a).height(b);if(c.viewer){c.viewer.setSize(a,b)}},initDrawing:function(){var f=this,a=IG$.x_10._w(f.html),e=IG$.x_10._h(f.html),g=f.ctrl.actionlist,d=f.ctrl.P1,b=$("<div></div>").appendTo(f.html),c;f.mcontainer=b;f._cinfo._l1(f.layout._xparam);if(!f.viewer){f.viewer=new $s.gridpanel({renderTo:b[0],disabled:f.dsmode,columns:[],listeners:{cellclick:function(o,x,l,h,s,w,u,q){if(g.cell_click){d.M7a.call(d,g.cell_click)}}}})}f._v1();if(f.dsmode){c=$("<div class='igc-p-config'><div class='igc-p-config-bg'></div><button>Config</button></div>").appendTo(f.html);$("button",c).bind("click",function(){f.c1.call(f)})}f.__pcinit()},c1:function(){var b=this,a=new IG$._Imm1({_cinfo:b._cinfo,callback:new IG$._I3d(b,function(d,c){b.layout._xparam=b._cinfo._l2();b._v1()},b.viewer)});IG$._I_5(this,a)},updateProperty:function(d,c){var b=this,e=b.viewer,a=b._cinfo;if(b.dsmode){return}switch(d){case"report_control":break;case"text":break;case"selectionmode":if(c&&a.selmodel!=c){a.selmodel=c;b._v1(true)}break}},_ds:function(a){this.viewer.store.loadData(a.v.data)},updateLayout:function(){var b=this,a=b.ctrl.dashboard},_v1:function(s){var o=this,e=o.viewer,x,q=[],u=o._cinfo,g=u._c,y,d,f=[],l,w=o.ctrl.actionlist,b=o.ctrl.P1,a,h;if(s){e.close();if(u.selmodel=="single"||u.selmodel=="multi"){h="checkboxmodel";a={selection:"checkboxmodel",checkSelector:".x-grid-cell",mode:u.selmodel=="single"?"SINGLE":"MULTI"}}e=o.viewer=new $s.gridpanel({renderTo:o.mcontainer[0],selType:h,selModel:a,disabled:o.dsmode,columns:[],listeners:{cellclick:function(A,F,z,c,C,E,D,B){if(w.cell_click){b.M7a.call(b,w.cell_click)}}}})}if(e){for(d=0;d<g.length;d++){y=g[d];l={xtype:"gridcolumn",text:(y.name||y.fieldname||("field_"+d)),dataIndex:y.fieldname||("field_"+d),minWidth:y.minw||50,hidden:!o.dsmode&&y.hidden?true:false,align:y.align||"left"};if(y.flex){l.flex=y.flex}f.push(l.dataIndex);q.push(l)}x={fields:f};e.reconfigure(x,q)}},P12:function(c){var l=this,o,f,e,h=l.viewer,q=[],a,u,g=[],s,b,d;if(c&&c.name&&h){b=h.getSelectionModel().selected;if(b&&b.length){d=b.items[0];s=d.get(c.name);s&&g.push({code:s,value:s})}}return g},selRow:function(){return this.viewer.getSelectionModel().selected},selRowCnt:function(){var a=this.selRow().length;return a},selColInfo:function(b){var c,a=this.selRow(),f,e=b,d=this.viewer.columnManager.columns;if(a&&a.length){f=a.items[0];if(d&&d.length>b){e=d[b].dataIndex}c=f.get(e)}return c},cell:function(a,g){var h=this,q,f=h.viewer,o=f.store,e,d,l=this.viewer.columnManager.columns,b=l[g];d=o.data.items[a];if(d&&b){q=d.get(b.dataIndex)}return q}});IG$._IE0.grid=new IG$._Imm({},null);if(window.Ext){IG$._Imm1=$s.extend($s.window,{modal:false,isWindow:true,region:"center",layout:"fit",closable:false,resizable:false,width:500,height:450,_ILa:null,callback:null,_IFe:function(){var b=this,a=b.grd;b._cinfo&&a.store.loadData(b._cinfo._c)},_t1:function(e){var c=this,a=c.grd,d,b;switch(e){case"c_add":a.store.add({minw:100});break;case"c_del":d=a.getSelectionModel().selected;for(b=d.length-1;b>=0;b--){a.store.remove(d[b])}break}},_m:function(f,g){var c=f.getSelectionModel().getSelection(),b=c.length?c[0]:null;if(!b){return}var e=f.getStore().indexOf(b),d=e,a;if(g<0){d--;if(d<0){return}}else{d++;if(d>=f.getStore().getCount()){return}}f.getStore().remove(b);f.getStore().insert(d,b);f.getSelectionModel().select(b,true)},_IFf:function(){var f=this,b=f._cinfo,g=f._cinfo._c,a=f.grd,e=f.sfields,d,h,l;g.splice(0,g.length);for(d=0;d<a.store.data.length;d++){h=a.store.data.items[d];l={};$.each(e,function(c,o){l[o]=h.get(o)});g.push(l)}f.callback&&f.callback.execute();f.close()},initComponent:function(){var a=this,b=this._cinfo.sfields;a.sfields=b;$s.apply(this,{title:IRm$.r1("T_GRD_CFG"),items:[{xtype:"panel",layout:{type:"vbox",align:"stretch"},bodyPadding:5,tbar:[{text:"Add",handler:function(){this._t1("c_add")},scope:this},{text:"Delete",handler:function(){this._t1("c_del")},scope:this},{text:"Move Up",handler:function(){var c=this;c._m(c.grd,-1)},scope:this},{text:"Move Down",handler:function(){var c=this;c._m(c.grd,1)},scope:this}],items:[{xtype:"gridpanel",flex:1,name:"grd",selType:"checkboxmodel",selModel:{checkSelector:".x-grid-cell",mode:"MULTI"},sortableColumns:false,plugins:[{ptype:"cellediting",clicksToEdit:true}],store:{fields:b},columns:[{text:"Field name",dataIndex:"fieldname",flex:1,editor:{allowBlank:false}},{text:"Header",dataIndex:"name",flex:1,editor:{allowBlank:false}},{text:"Min Width",dataIndex:"minw",width:80,editor:{xtype:"numberfield",allowBlank:false}},{text:"Width Flex",dataIndex:"flex",width:80,editor:{xtype:"numberfield",allowBlank:true}},{xtype:"checkcolumn",text:"Hidden",dataIndex:"hidden",width:80},{text:"Align",dataIndex:"align",width:80,editor:{allowBlank:true}}]}]}],buttons:["->",{text:IRm$.r1("B_CONFIRM"),handler:function(){this._IFf()},scope:this},{text:IRm$.r1("B_CANCEL"),handler:function(){this.close()},scope:this}],listeners:{afterrender:function(d){var c=this;c.grd=c.down("[name=grd]");c._IFe()}}});IG$._Imm1.superclass.initComponent.apply(this,arguments)}})}if(window.Ext){IG$._Iub_=$s.extend($s.panel,{layout:{type:"vbox",align:"stretch"},initComponent:function(){var a=this;$s.apply(this,{items:[{xtype:"toolbar",items:[{xtype:"button",text:"Pivot Design"},{xtype:"button",text:"Filters"},"->",{xtype:"button",text:"Execute"}]},{xtype:"panel",layout:"card",flex:1,items:[]}]});IG$._Iub_.superclass.initComponent.apply(this,arguments)}})}IG$._Iu=IG$.x_c(IG$._ID2,{_ic:function(){var a=this;a.activeIndex=0;a.p.push({name:"request_run",type:"event"},{name:"text",type:"property",datatype:"string"});a.superclass.prototype._ic.call(a)},pe:function(a,b){},invalidate:function(){var c=this,a=IG$.x_10._w(c.html),b=IG$.x_10._h(c.html);c.mcontainer.width(a).height(b);if(c.viewer){c.viewer.setSize(a,b)}},initDrawing:function(){var e=this,a=IG$.x_10._w(e.html),d=IG$.x_10._h(e.html),f=e.ctrl.actionlist,b=$("<div></div>").appendTo(e.html),c;e.mcontainer=b;if(!e.viewer){e.viewer=new IG$._Iub_({renderTo:b[0]})}e.__pcinit()},updateProperty:function(d,c){var b=this,e=b.viewer,a=b._cinfo;if(b.dsmode){return}switch(d){case"report_control":break;case"text":break;case"selectionmode":break}},updateLayout:function(){var b=this,a=b.ctrl.dashboard},P12:function(c){var l=this,o,f,e,h=l.viewer,q=[],a,u,g=[],s,b,d;if(c&&c.name&&h){b=h.getSelectionModel().selected;if(b&&b.length){d=b.items[0];s=d.get(c.name);s&&g.push({code:s,value:s})}}return g}});IG$._IE0.pivotdesign=new IG$._Iu({},null);IG$.jj_2=IG$.x_c(IG$._ID2,{_ic:function(){var a=this;a.p.push({name:"report_control",type:"property",datatype:"string",vmode:1},{name:"filter_id",type:"property",datatype:"string",vmode:1},{name:"itemclick",type:"event"});a.superclass.prototype._ic.call(a)},pe:function(a,b){},invalidate:function(){var c=this,a=IG$.x_10._w(c.html),b=IG$.x_10._h(c.html)},aa:function(a){this.P3=a},initDrawing:function(){var c=this,a=IG$.x_10._w(c.html),b=IG$.x_10._h(c.html),d=c.ctrl.actionlist;c.viewer=c.dsmode?null:new IG$._Ied(c.html,null,c);c.__pcinit()},updateProperty:function(c,b){var a=this;if(a.dsmode){return}switch(c){case"report_control":a.__ivp();break}},__ivp:function(){var f=this,g=f.property,a=g.report_control,h=g.filter_id,d,e,c=f.ctrl.dashboard,b;if(f.dsmode||f.__pcinit_){return}if(a&&c&&c.P2){setTimeout(function(){var l,o;l=c.P2[a];if(l&&h){o=l.P9;o.negoFilter&&o.negoFilter.call(o,f,h)}},20)}}});IG$._IE0.sheetfilter=new IG$.jj_2({},null);if(window.Ext){IG$.jj_m=$s.extend(IG$._I57,{layout:"fit",_IJa:0,_l1:function(c){var b=this,a;b.uid=c.uid;a=new IG$._I3e();a.init(b,{ack:"5",payload:IG$._I2d({uid:b.uid,revision:b.revision}),mbody:IG$._I2e({})},b,function(d){b._ILa=new IG$._IEe(d);var f=b.down("[name=browser]"),g=b.down("[name=feditor]"),l=b.down("[name=p_opeditor]");if(b._ILa.sheets.length>0){b._ILb=b._ILa.sheets[0];b.cubeuid=b._ILb.cubeuid||b._ILa.cubeuid;var h=b._ILb.reportmode||b._ILa.reportmode;var e={};e.type=(h=="rolap")?"Cube":"Metric";e.name=e.type;e.nodepath=e.type;e.uid=b.cubeuid||null;e.leaf=false;f.setRootNode.call(f,e);f.show();g._ILa=b._ILa;g._ILb=b._ILb;g.in$t.call(g);g.show();l._ILa=b._ILa;l._ILb=b._ILb;l.show()}},false);a._l()},sv:function(g,a){var d=this,e=d.down("[name=feditor]");d._lsql=[];d._ldb=[];if(d._ILb!=null&&d._ILa!=null){e.m1$9.call(e);var f=d._ILa._IJ1.call(d._ILa),b=new IG$._I3e();b.init(d,{ack:"18",payload:'<smsg><item uid="'+d.uid+'" option="sql" active="'+d._IJa+'"/></smsg>',mbody:f},d,function(c){var l=IG$._I18(c,"/smsg/item/ExecuteQuery"),h;if(l){h=IG$._I24(l);d._lsql.push(h)}g&&a&&a.call(g,1)},function(c){g&&a&&a.call(g,false)});b._l()}},set_count:function(a){var b=this,c=b.down("[name=feditor]");c.set_count.call(c,a)},initComponent:function(){var a=this;$s.apply(this,{items:[{xtype:"panel",layout:"border",items:[{xtype:"panel",title:IRm$.r1("L_pf_navitree"),layout:"fit",split:true,region:"west",flex:1,border:0,items:[new IG$._I98({showtoolbar:false,name:"browser",hidden:true,cubebrowse:true,collapsible:false,floatable:false,floating:false,ddGroup:"_I$RD_G_",layout:"fit",enabledrag:true,_search:true,_IHb:a,_IHC:function(b){var c=this;p_opeditor=c.down("[name=p_opeditor]"),filter=new IG$._IE9(null);filter.operator=6;p_opeditor.m4=filter;p_opeditor._IFd.call(p_opeditor);p_opeditor.P2C.call(p_opeditor,b.data)}})]},{xtype:"panel",layout:"border",region:"center",split:true,flex:2,items:[{xtype:"panel",title:IRm$.r1("L_pf_fedit"),split:true,bodyPadding:5,layout:"fit",flex:1,region:"north",items:[new IG$._Idba({name:"p_opeditor",hidden:true,autoScroll:false,_cmode:1,flex:1})]},{xtype:"panel",split:true,region:"center",title:IRm$.r1("L_pf_filter"),flex:1,layout:"fit",items:[new IG$._Ida({name:"feditor",hidden:true,deferredRender:false,bodyPadding:10})]}]}]}]});IG$.jj_m.superclass.initComponent.call(this)},listeners:{afterrender:function(a){var b=a,d=b.down("[name=p_opeditor]"),c=b.down("[name=feditor]");d.on("add_filter",function(e){e._IFf.call(e);var f=e.m4,g;g=c.rootnode_w.children[0];c.rs_mm5.call(c,[g,f])});d._IFd.call(d)}}})}IG$.jj_M=IG$.x_c(IG$._ID2,{_ic:function(){var a=this;a.p.push({name:"report_control",type:"property",datatype:"string",vmode:1},{name:"filter_id",type:"property",datatype:"string",vmode:1},{name:"itemclick",type:"event"});a.superclass.prototype._ic.call(a)},pe:function(a,b){},invalidate:function(){var c=this,a=IG$.x_10._w(c.html),b=IG$.x_10._h(c.html);if(c.viewer){c.r2.width(a).height(b);c.viewer.setSize(a,b)}},valid:function(){var a=0;return a},confirmFilter:function(g,h,a){var e=this,d,f=e.ctrl,b=f.dashboard;e.viewer.sv.call(e.viewer,e,function(l){var c;if(l!=false){try{c=a.call(h,l)}catch(o){c=false;IG$._I52("filter processing script error")}}if(l!=false&&c!=false){b.M8.call(b,b)}else{b.M8_.call(b,b)}})},aa:function(a){this.P3=a},initDrawing:function(){var c=this,a=IG$.x_10._w(c.html),b=IG$.x_10._h(c.html),d=$("<div></div>").appendTo(c.html),e=c.ctrl.actionlist;IG$.x_10._w(d,a);IG$.x_10._h(d,b);c.viewer=c.dsmode?null:new IG$.jj_m({width:IG$.x_10._w(d),height:IG$.x_10._h(d),renderTo:d[0]});c.r2=d;c.__pcinit()},updateProperty:function(c,b){var a=this;if(a.dsmode){return}switch(c){case"report_control":a.__ivp();break}},__ivp:function(){var f=this,g=f.property,a=g.report_control,h=g.filter_id,d,e,c=f.ctrl.dashboard,b;if(f.dsmode||f.__pcinit_){return}if(a&&c&&c.P2){setTimeout(function(){var l,o;l=c.P2[a];if(l&&h){o=l.P9;o.negoFilter&&o.negoFilter.call(o,f,h)}},20)}},set_base_report:function(c,e,b){var a=this,d=new IG$._I3e();d.init(a,{ack:"11",payload:IG$._I2d({uid:c}),mbody:IG$._I2e({option:"translate"})},a,function(f){var h=IG$._I18(f,"/smsg/item"),g=(h)?IG$._I1c(h):null;if(g&&g.uid){a.viewer._l1.call(a.viewer,g)}},false);d._l()},get_sql:function(a){var b=this;return b.viewer._lsql.join(a||";")},get_db:function(a){var b=this;return b.viewer._ldb.join(a||";")},set_count:function(a){this.viewer.set_count.call(this.viewer,a)}});IG$._IE0.pivotfilter=new IG$.jj_M({},null);IG$._ID3=IG$.x_c(IG$._ID2,{_ic:function(){var b=this,c=b.ctrl,a=$("<div>unknown control: "+c.P6+"</div>");b.html.append(a);b.superclass.prototype._ic.call(b)},initDrawing:function(){var a=this;a.html.css({border:"1px solid #a5a5a5"});a.__pcinit()}});IG$._ID4=IG$.x_c(IG$._ID2,{_ic:function(){var a=this;a.p.push({name:"text",type:"property",datatype:"string"},{name:"fontsize",type:"property",datatype:"number"},{name:"fontbold",type:"property",datatype:"boolean"},{name:"color",type:"property",datatype:"string"});a.superclass.prototype._ic.call(a)},updateProperty:function(c,b){var a=this;switch(c){case"text":a.html.text(b);break;case"fontsize":a.html.css({fontSize:b+"px"});break;case"fontbold":a.html.css({fontWeight:(b==true?"bold":"normal")});break;case"color":a.html.css({color:(b?b:"#000")});break}},initDrawing:function(){var a=this;a.superclass.prototype.initDrawing.call(a);a.html.addClass("ig_title_label")}});IG$._IE0.titlelabel=new IG$._ID4({},null);IG$._ID5=IG$.x_c(IG$._ID2,{_ic:function(){var a=this;a.p.push({name:"text",type:"property",datatype:"string"},{name:"fontsize",type:"property",datatype:"number",value:12},{name:"fontbold",type:"property",datatype:"boolean"},{name:"color",type:"property",datatype:"string"});a.superclass.prototype._ic.call(a)},updateProperty:function(c,b){var a=this;switch(c){case"text":a.html.text(b);break;case"fontsize":a.html.css({fontSize:b+"px"});break;case"fontbold":a.html.css({fontWeight:(b==true?"bold":"normal")});break;case"color":a.html.css({color:(b?b:"#000")});break}}});IG$._IE0.label=new IG$._ID5({},null);IG$._ID6=IG$.x_c(IG$._ID2,{_ic:function(){var a=this;a.image=null;a.p.push({name:"imagepath",type:"property",datatype:"string","enum":"resources"});a.superclass.prototype._ic.call(a)},initDrawing:function(){var a=this;a.image=$("<img/>");a.image.appendTo(a.html);a.superclass.prototype.initDrawing.call(a)},updateProperty:function(c,b){var a=this;switch(c){case"imagepath":if(b){a.image.show();a.image.attr("src",ig$.servlet+"?sreq=resource&_rcs_="+b+"&_mts_="+IG$._g$a)}else{a.image.hide()}break}},invalidate:function(){var c=this,a=IG$.x_10._w(c.html),b=IG$.x_10._h(c.html);c.image&&c.image.css({width:a+"px",height:b+"px"})}});IG$._IE0.image=new IG$._ID6({},null);IG$._ID7=IG$.x_c(IG$._ID2,{_ic:function(){var c=this,d=c.dsmode,e,a,b;c.p.push({name:"text",type:"property",datatype:"string"},{name:"fieldlabel",type:"property",datatype:"string"},{name:"labelwidth",type:"property",datatype:"number",value:80},{name:"enterkey",type:"event"});e=$("<table class='igc-form-field'><tr><td id='_1'></td><td id='_2'></td></tr></table>").appendTo(c.html);a=$("#_2",e);if(!d){c.htmlinput=$("<input type='text' autocomplete='off' style='width:100%;height:100%'></input>").appendTo(a)}else{c.htmlinput=a}c.superclass.prototype._ic.call(c)},updateProperty:function(d,c){var a=this,b=$("#_1",a.html),e;switch(d){case"text":a.htmlinput.val(c);break;case"labelwidth":e=$("#_1",a.html);IG$.x_10._w(e,c);break;case"fieldlabel":if(!c){b.hide()}else{b.show();b.text(c)}break}},initDrawing:function(){var b=this,c=b.ctrl.actionlist,a=b.ctrl.P1;b.htmlinput.bind("keyup",function(d){if(d.keyCode==13&&c.enterkey){a.M7a.call(a,c.enterkey)}});b.superclass.prototype.initDrawing.call(b)},_c1:function(){var a=this;a.property.text=a.htmlinput.val()},invalidate:function(){var a=this},P12:function(c){var a=this,b=a.htmlinput.val()||"";return[{code:b,value:b}]}});IG$._IE0.textbox=new IG$._ID7({},null);IG$._ID8=IG$.x_c(IG$._ID2,{_ic:function(){var a=this,b=a.dsmode;a.p.push({name:"htmltext",type:"property",datatype:"string"},{name:"text",type:"property",datatype:"string"});if(b){htmltext="<div></div>"}else{htmltext="<textarea></textarea>"}a.htmlinput=$(htmltext);a.htmlinput.appendTo(a.html);a.superclass.prototype._ic.call(a)},updateProperty:function(c,b){var a=this;switch(c){case"htmltext":case"text":a.htmlinput.val(b);break}},invalidate:function(){var c=this,a=IG$.x_10._w(c.html),b=IG$.x_10._h(c.html);if(c.htmlinput){IG$.x_10._w(c.htmlinput,a);IG$.x_10._h(c.htmlinput,b)}},_c1:function(){var a=this;a.property.text=a.htmlinput.val()}});IG$._IE0.textarea=new IG$._ID8({},null);IG$._ID9=IG$.x_c(IG$._ID2,{_ic:function(){var b=this,a,d,c=b.dsmode;b.p.push({name:"label",type:"property",datatype:"string"},{name:"click",type:"event"});if(c){a="<div class='igc-btn igc-unselectable'>"+(b.property.label||"")+"</div>";b.htmlbtn=$(a);b.htmlbtn.appendTo(b.html)}else{a="<button class='igc-btn'>"+(b.property.label||"")+"</button>";b.htmlbtn=$(a);b.htmlbtn.appendTo(b.html);b.htmlbtn.button({icons:{secondary:"ui-icon-triangle-1-s"}});b.htmlbtn.hover(function(){b.htmlbtn.addClass("igc-btn-over")},function(){b.htmlbtn.removeClass("igc-btn-over")});b.htmlbtn.bind("click",function(){b.htmlbtn.removeClass("igc-btn-over")})}b.superclass.prototype._ic.call(b)},updateProperty:function(d,c){var a=this,b=a.htmlbtn;switch(d){case"label":b.html(c);break}},initDrawing:function(){var b=this,c=b.dsmode,d=b.ctrl.actionlist,a=b.ctrl.P1;b.__pcinit();if(c){return}b.html.bind("click",function(){if(d.click){a.M7a.call(a,d.click)}})},invalidate:function(){var c=this,a=IG$.x_10._w(c.html),b=IG$.x_10._h(c.html);c.htmlbtn.css({width:(a+"px"),height:(b+"px")})}});IG$._IE0.button=new IG$._ID9({},null);IG$._IDa=IG$.x_c(IG$._ID2,{_ic:function(){var a=this;a.p.push({name:"fieldlabel",type:"property",datatype:"string"},{name:"labelwidth",type:"property",datatype:"number",value:80},{name:"label_names",type:"property",datatype:"string"},{name:"value_names",type:"property",datatype:"string"},{name:"name_delimiter",type:"property",datatype:"string",value:";"},{name:"text",type:"property",datatype:"string"},{name:"change",type:"event"});a.combobox=null;a.items=[];a.superclass.prototype._ic.call(a)},initDrawing:function(){var b=this,c=b.dsmode,d,a;d=$("<table class='igc-form-field'><tr><td id='_1' class='igc-form-label'></td><td id='_2'><div class='igc-form-ctrl'></div></td></tr></table>").appendTo(b.html);a=$(".igc-form-ctrl",d);if(c){b.combobox=$("<div></div>").appendTo(a)}else{b.combobox=$("<select></select>").appendTo(a);b.combobox.bind("change",function(){var f=$(this).val(),g,e=b.items,o;if(f&&e){for(g=0;g<e.length;g++){if(e[g].code==f){o=e[g];break}}}if(o){var h=b.ctrl.P1,l=b.ctrl.actionlist;b.property.text=f;h.M7a.call(h,l.change)}})}b.superclass.prototype.initDrawing.call(b)},invalidate:function(){var d=this,a=IG$.x_10._w(d.html),c=IG$.x_10._h(d.html),f=d.property,b=f.labelwidth||0,e=f.fieldlabel||"";if(d.dsmode){}else{if(e&&b){a-=b}d.combobox.width(a).height(c)}},_c1:function(){var a=this},_ds:function(e){var c=this,g=e.v.cols,d=e.v.data,b,h=[],f,a=c.combobox;a.empty();for(b=0;b<d.length;b++){f={code:d[b][g[0].name],text:d[b][g[g.length>1?1:0].name]};h.push(f);a.append("<option value='"+f.code+"'>"+f.text+"</option>")}c.items=h},updateProperty:function(d,c){var a=this,b=$("#_1",a.html),e;switch(d){case"text":a.sel(c);break;case"labelwidth":e=$("#_1",a.html);IG$.x_10._w(e,c);break;case"fieldlabel":if(!c){b.hide()}else{b.show();b.text(c)}break;case"label_names":case"value_names":case"name_delimiter":clearTimeout(a._vtimer);a._vtimer=setTimeout(function(){a._setData.call(a)},20);break}},P12:function(e){var c=this;if(c.dsmode){return null}var b=c.combobox.getValue(),d=[],a;for(a=0;a<c.combobox.store.data.items.length;a++){if(c.combobox.store.data.items[a].get("code")==b){d.push({code:c.combobox.store.data.items[a].get("code"),text:c.combobox.store.data.items[a].get("text")});break}}return d},_setData:function(){var f=this,l={data:[]},c,a,h,e,g=f.property,b,d=l.data;e=g.label_names||"";h=g.value_names||"";a=g.name_delimiter||";";e=e.split(a);h=h.split(a);b=Math.max(e.length,h.length);for(c=0;c<b;c++){d.push({code:h[c]||e[c],text:e[c]||h[c]})}f.loadData(l)},loadData:function(a){var c=this,b,e=[],d;for(b=0;b<a.data.length;b++){d=a.data[b];e.push({code:d.code,text:d.text||d.code})}c.items=e;c.combobox.store&&c.combobox.store.loadData(e)},sel:function(f){var e=this,a,b=e.combobox,c=b.store,d;if(e.dsmode){return}if(typeof(f)=="undefined"){a=b.getValue()}else{if(c.data.items[f]){b.setValue(c.data.items[f].get("code"))}else{for(d=0;d<c.data.items.length;d++){if(c.data.items[d].get("code")==f){b.setValue(f);break}}}}return a}});IG$._IE0.combobox=new IG$._IDa({},null);IG$.$iDa=IG$.x_c(IG$._ID2,{_ic:function(){var a=this;a.p.push({name:"fieldlabel",type:"property",datatype:"string"},{name:"labelwidth",type:"property",datatype:"number",value:80},{name:"label_names",type:"property",datatype:"string"},{name:"value_names",type:"property",datatype:"string"},{name:"name_delimiter",type:"property",datatype:"string",value:";"},{name:"change",type:"event"});a.viewer=null;a.superclass.prototype._ic.call(a)},initDrawing:function(){var b=this,c=b.dsmode,d,a;d=$("<table class='igc-form-field'><tr><td id='_1' class='igc-form-label'></td><td id='_2'><div class='igc-form-ctrl'></div></td></tr></table>").appendTo(b.html);a=$(".igc-form-ctrl",d);b.viewer=$("<div></div>").appendTo(a);b.superclass.prototype.initDrawing.call(b)},invalidate:function(){var d=this,a=IG$.x_10._w(d.html),c=IG$.x_10._h(d.html),f=d.property,b=f.labelwidth||0,e=f.fieldlabel||"";if(d.dsmode){}else{if(e&&b){a-=b}d.viewer.width(a).height(c)}},_c1:function(){var a=this},updateProperty:function(d,c){var a=this,b=$("#_1",a.html),e;switch(d){case"text":break;case"labelwidth":e=$("#_1",a.html);IG$.x_10._w(e,c);break;case"fieldlabel":if(!c){b.hide()}else{b.show();b.text(c)}break;case"label_names":case"value_names":case"name_delimiter":clearTimeout(a._vtimer);a._vtimer=setTimeout(function(){a._setData.call(a)},20);break}},P12:function(b){var a=this;if(a.dsmode){return null}return value},_ds:function(d){var c=d.data,b,a={data:[]},e=a.data;me.loadData(a)},_setData:function(){var f=this,l={data:[]},c,a,h,e,g=f.property,b,d=l.data;e=g.label_names||"";h=g.value_names||"";a=g.name_delimiter||";";e=e.split(a);h=h.split(a);b=Math.max(e.length,h.length);for(c=0;c<b;c++){d.push({code:h[c]||e[c],text:e[c]||h[c]})}f.loadData(l)},loadData:function(a){var c=this,b,e=[],d;c.viewer.empty();$.each(a.data,function(g,h){if(h.code||h.tet){var f=c.viewer.append("<label><input type='checkbox' value='"+(h.code)+"'>"+h.text+"</label>")}})}});IG$._IE0.checkbox=new IG$.$iDa({},null);IG$._IDb=IG$.x_c(IG$._ID2,{_ic:function(){var a=this;a.p.push({name:"text",type:"property",datatype:"string"});a.superclass.prototype._ic.call(a)},initDrawing:function(){var b=this,a=new Date();b.superclass.prototype.initDrawing.call(b);b.datefield=$("<input class='mec-dateperiod-input' type='text' placeholder='yyyy-mm-dd'></input>").datepicker({monthNames:$.datepicker._defaults.monthNamesShort,buttonImage:"./images/calendar.gif",buttonImageOnly:true,dateFormat:"yy-mm-dd",defaultDate:0,onSelect:function(d,c){}}).appendTo(b.html);b.datefield.datepicker("setDate",a);$("<div class='mec-dateperiod-button'></div>").appendTo(b.html).bind("click",function(){b.datefield.datepicker("show")});b.property.text=b.getValue()},invalidate:function(){var c=this,a=IG$.x_10._w(c.html),b=IG$.x_10._h(c.html);c.datefield.width(a-34).height(b-5)},_c1:function(){var a=this;a.property.text=a.getValue()},getValue:function(c){var b=this.datefield.datepicker("getDate"),a;if(b){a=b.format("Ymd");c&&c.push({code:a,value:a})}return a}});IG$._IE0.datechooser=new IG$._IDb({},null);IG$.jj_3=IG$.x_c(IG$._ID2,{_ic:function(){var a=this;a.superclass.prototype._ic.call(a)},initDrawing:function(){var b=this,a=new Date();b.superclass.prototype.initDrawing.call(b);this.datefield=$("<input class='mec-dateperiod-input' type='text'></input>").monthpicker({buttonImage:"./images/calendar.gif",buttonImageOnly:true,pattern:"yyyy-mm",onSelect:function(d,c){}}).appendTo(b.html)},invalidate:function(){var c=this,a=IG$.x_10._w(c.html),b=IG$.x_10._h(c.html);IG$.x_10._w(c.datefield,a);IG$.x_10._h(c.datefield,b)},getValue:function(c){var b=this.datefield.getValue();if(b){var a=b.format("Ymd");c.push({code:a,value:a})}}});IG$._IE0.monthchooser=new IG$.jj_3({},null);IG$._IDc=IG$.x_c(IG$._ID2,{_ic:function(){var a=this;a.titleheight=0;a.p.push({name:"layout",type:"property",datatype:"string",value:"absolute","enum":[{name:"absolute",value:"absolute"},{name:"vertical",value:"vbox"},{name:"horizontal",value:"hbox"},{name:"table",value:"table"}]},{name:"region",type:"property",datatype:"string"},{name:"title",type:"property",datatype:"string"},{name:"collapsible",type:"property",datatype:"boolean"});a.superclass.prototype._ic.call(a)},updateProperty:function(c,b){var a=this;switch(c){case"title":this.paneltitle.text(b);if(b!=null&&typeof(b)!="undefined"&&b!=""){this.paneltitle.show();this.titleheight=25}else{this.paneltitle.hide();this.titleheight=0}break;case"layout":break}this.updateLayout()},initDrawing:function(){var c=this,a=IG$.x_10._w(c.html),b=IG$.x_10._h(c.html);c.paneltitle=$("<div class='idv-dbr-title'></div>");c.html.append(c.paneltitle);c.superclass.prototype.initDrawing.call(c)},invalidate:function(){var c=this,a=IG$.x_10._w(c.html),b=IG$.x_10._h(c.html);c.updateLayout()},updateLayout:function(){var b=this,a=b.ctrl.dashboard;clearTimeout(b._l1);b._l1=setTimeout(function(){if(a){a.cL.call(a,b.ctrl)}},50)}});IG$._IE0.panel=new IG$._IDc({},null);IG$._IDd=IG$.x_c(IG$._ID2,{_ic:function(){var a=this;a.canvas=null;a.viewer=null;a.options=null;a.loading=null;a.zoom=false;a.sheetindex=0;a.hidetoolbar=false;a.hidestatusbar=false;a.p.push({name:"draw",type:"property",datatype:"string"},{name:"hidetoolbar",type:"property",datatype:"boolean",vmode:1},{name:"hidestatusbar",type:"property",datatype:"boolean",vmode:1},{name:"execute_completed",type:"event"});a.superclass.prototype._ic.call(a)},onClickMagHandler:function(b){var a=b.data.sender;a.pe("magnifire",a)},initDrawing:function(){var d=this,e=$("<div></div>").appendTo(d.html),b=$("<div></div>").appendTo(d.html),a=IG$.x_10._w(d.html),c=IG$.x_10._h(d.html);IG$.x_10._w(e,a);IG$.x_10._h(e,c);b.css({position:"absolute",top:0,left:0,bottom:0,right:0,width:"100%",height:"100%",overflow:"hidden"}).hide();if(!d.ctrl.dsmode){if(!this.viewer){this.viewer=new IG$._IBe({width:IG$.x_10._w(e),height:IG$.x_10._h(e),renderTo:e[0],rendermask:b,uid:d.uid,region:"center",collapsible:false,minSize:100,floatable:false,vmode:1,title:0,closeAction:"destroy",header:false});this.viewer.on("afterrender",function(f){d.updateProperty.call(d,"hidetoolbar");d.updateProperty.call(d,"hidestatusbar")},this)}}d.__pcinit()},clear:function(){var a=this,b=a.viewer;b&&b.cL.call(b)},updateProperty:function(c){var b=this,d=b.viewer,a=this.property[c];if(!d){return}switch(c){case"hidetoolbar":d.hiddentoolbar=a;d&&d._2&&d._2.setVisible(a?false:true);break;case"hidestatusbar":d.hiddenstatusbar=a;d&&d.down("[name=_1]").setVisible(a?false:true);break}},invalidate:function(){var a=IG$.x_10._w(this.html),b=IG$.x_10._h(this.html);this.viewer&&this.viewer.setSize(a,b)},P12:function(a){return null},eRun:function(x,o){var w=this,s=w.viewer,l,u,c,a,h,g,q,f=[],e,b,d=w.ctrl.P1;s.execallback=new IG$._I3d(w,function(y,A){var z=this;if(A!=true){if(z.ctrl.actionlist){d.M7a.call(d,z.ctrl.actionlist.execute_completed)}}});if(o){c=IG$._I13(o);h=IG$._I18(c,"/smsg/filters/Filter");if(h){l=new IG$._IEb();w.p2(h,l)}h=IG$._I18(c,"/smsg/filters/HavingFilter");if(h){u=new IG$._IEb();w.p2(h,u)}h=IG$._I18(c,"/smsg/params");if(h){g=IG$._I26(h);for(q=0;q<g.length;q++){e=IG$._I1b(g[q],"name");b=IG$._I24(g[q]);f.push({name:e,value:b})}}if(l&&u){a={filter:l,hfilter:u,params:f}}}if(s.uid!=w.uid){s.uid=w.uid;s.__ld=false;s._IFd.call(s,true)}s.__d_c=null;if(s.__ld){s._t$.call(s,"cmd_run",null,null,a)}else{s.__d_c=new IG$._I3d(w,function(){s._t$.call(s,"cmd_run",null,null,a)})}},p2:function(e,c){var d=this;if(e){var f=IG$._I26(e,"FilterGroup"),b;if(f&&f.length>0){for(b=0;b<f.length;b++){var a=new IG$._IEb();a.name=IG$._I1b(f[b],"name");c.subGroups.push(a);d.parseSubFilter(f[b],a)}}}},parseSubFilter:function(f,c){var d,b,g,a,e=this;a=IG$._I26(f);if(a&&a.length>0){for(b=0;b<a.length;b++){if(IG$._I29(a[b])=="FilterGroup"){var g=new IG$._IEb();g.name=IG$._I1b(a[b],"name");e.parseSubFilter(a[b],g);c.subGroups.push(g)}else{c.subConditions.push(new IG$._IE9(a[b]))}}}},aa:function(a){var b=this;b.P3=a;if(b.P3!=null){b.uid=b.P3.uid;if(!b.dsmode&&b.viewer){b.viewer.uid=b.uid;b.viewer._IFd.call(b.viewer,true)}}},negoFilter:function(a,b){var d=this;if(d.viewer){var c=a.viewer,e;e=d.viewer.dzone?d.viewer.dzone._IIb.call(d.viewer.dzone,b):null;if(e){a.html.empty();a.viewer=e.viewer;e.view.c.appendTo(a.html);e.view.sp.appendTo(a.html);e.hidden=true}else{d.viewer.regbody.call(d.viewer,b,c)}}},destroy:function(){var a=this;if(a.viewer&&a.viewer.close){a.viewer.close()}}});IG$._IE0.olapreport=new IG$._IDd({},null);IG$._IE0.compositereport=new IG$._IDd({},null);IG$.jj_1=IG$.x_c(IG$._ID2,{_ic:function(){var a=this;this.p.push({name:"rootpath",type:"property",datatype:"string"},{name:"visibleitems",type:"property",datatype:"string"},{name:"folder_templates",type:"property",datatype:"string"},{name:"templates",type:"property",datatype:"string"},{name:"collapsible",type:"property",datatype:"boolean"},{name:"foldercollapse",type:"property",datatype:"boolean"},{name:"name_exclude",type:"property",datatype:"string"},{name:"batchload",type:"property",datatype:"boolean"},{name:"itemclick",type:"event"});a.superclass.prototype._ic.call(a)},pe:function(a,b){},invalidate:function(){var a=IG$.x_10._w(this.html),b=IG$.x_10._h(this.html)},aa:function(a){this.P3=a},initDrawing:function(){var d=this,a=IG$.x_10._w(this.html),c=IG$.x_10._h(this.html),e=d.ctrl.actionlist;var b=d.ctrl.P1;if(!d.dsmode){d.html.bind("menu_click",function(g,f){if(e.itemclick){b.M7a.call(b,e.itemclick,d,f)}})}this.__pcinit()},updateProperty:function(a,c){var b=this;switch(a){case"rootpath":b.setRootPath();break}},setRootPath:function(){var c=this,e=c.property.rootpath,b,a={},d={},f="5";c.html.empty();if(e){a.uid=e;if(c.property.batchload==true){f="11";d.typelist="Dashboard;Report";d.pid=e;d.option="search"}b=new IG$._I3e();b.init(c,{ack:f,payload:IG$._I2d(a,"uid"),mbody:IG$._I2e(d)},c,function(g){var s=IG$._I18(g,f=="11"?"/smsg/result":"/smsg/item"),o,q=s?IG$._I26(s):null,l,h;if(s){o=IG$._I1c(s);if(o.type=="Folder"||o.type=="Workspace"||f=="11"){h=$("<ul></ul>").appendTo(c.html);this.addNodes(q,h)}}},false);b._l()}},addNodes:function(f,e){var h=this,g=[],d,c,a,b=h.property.name_exclude,q=h.property.folder_templates,l=h.property.templates,o=0;b=b?b.split(";"):null;for(d=0;d<f.length;d++){a=IG$._I1c(f[d]);a.tnode=f[d];o=0;if(b){for(c=0;c<b.length;c++){if(a.name.indexOf(b[c])>-1){o=true;break}}}!o&&g.push(a)}IG$._I10(g);$.each(g,function(w,y){var s=$("<li></li>").appendTo(e),A=$("<div></div>").appendTo(s),x,z,u=l;if(y.type=="Folder"||y.type=="Workspace"){u=q}if(u){u=u.replace("{name}",y.name);u=u.replace("{description}",y.description);u=u.replace("{seq}",""+w)}else{u="<span>"+y.name+"</span>"}$(u).appendTo(A);A.bind("click",function(){h.html.trigger("menu_click",y)});if(y.type=="Folder"||y.type=="Workspace"){z=IG$._I26(y.tnode);if(z&&z.length>0){x=$("<ul></ul>").appendTo(s);h.addNodes.call(h,z,x)}}})}});IG$._IE0.browser=new IG$.jj_1({},null);IG$.jj_3=IG$.x_c(IG$._ID2,{_ic:function(){var a=this;a.activeIndex=0;a.p.push();a.superclass.prototype._ic.call(a)},pe:function(a,b){},invalidate:function(){var c=this,a=IG$.x_10._w(c.html),b=IG$.x_10._h(c.html)},initDrawing:function(){var d=this,a=IG$.x_10._w(d.html),c=IG$.x_10._h(d.html),g=d.ctrl.actionlist,e=$("<div></div>").appendTo(d.html),f=$("<ul class='igc-p-tap'></ul>").appendTo(e),b=$("<div></div>").appendTo(e);d.tabbuttons=f;d.mainarea=b;d.__pcinit()},updateProperty:function(c,b){var a=this;if(a.dsmode){return}switch(c){case"report_control":break}},updateLayout:function(){var b=this,a=b.ctrl.dashboard;clearTimeout(b._l1);b._l1=setTimeout(function(){if(a){a.cL.call(a,b.ctrl)}},50)},loadHeader:function(a){var c=this,d=c.tabbuttons,b;c.tabitems=a;d.empty();$.each(a,function(f,g){var e=$("<li><span>"+(g.title||"Tab "+(f+1))+"</li>").appendTo(d);if(c.activeIndex==f){e.addClass("active")}g.__tab_btn=e;e.bind("click",function(){c.setActiveItem.call(c,f)})})},getTabHeight:function(){return this.tabbuttons?this.tabbuttons.height():0},setActiveItem:function(a){var c=this,b;if(c.tabitems&&c.tabitems.length>a&&a>-1){c.activeIndex=a}if(c.activeIndex>-1&&c.tabitems){for(b=0;b<c.tabitems.length;b++){if(a==b){c.tabitems[b].__tab_btn.addClass("active")}else{c.tabitems[b].__tab_btn.removeClass("active")}c.tabitems[b].P9.html[a==b?"show":"hide"]()}}}});IG$._IE0.tabpanel=new IG$.jj_3({},null);IG$.jj_4=IG$.x_c(IG$._ID2,{_ic:function(){var a=this;a.activeIndex=0;a.p.push({name:"request_run",type:"event"});a.superclass.prototype._ic.call(a)},pe:function(a,b){},invalidate:function(){var c=this,a=IG$.x_10._w(c.html),b=IG$.x_10._h(c.html)},initDrawing:function(){var e=this,a=IG$.x_10._w(e.html),d=IG$.x_10._h(e.html),f=e.ctrl.actionlist,b=$("<div></div>").appendTo(e.html),c;if(!e.viewer){e.sop=new IG$._IFc(e.layout._xparam);e.sop.objtype="FILTER";e.viewer=new IG$._Ied(b,e.sop,null,true);e.viewer.callback=new IG$._I3d(e,function(){e.html.trigger("e_request_run")})}if(e.dsmode){c=$("<div class='igc-p-config'><div class='igc-p-config-bg'></div><button>Config</button></div>").appendTo(e.html);$("button",c).bind("click",function(){e.configSheet.call(e)})}e.__pcinit()},configSheet:function(){var b=this,a=new IG$._If1({_ILb:b.viewer._ILb,_ILa:null,_md:1,callback:new IG$._I3d(b,function(e,d){var c=b.sop.l2.call(b.sop);b.layout._xparam=IG$._I13(c);b.viewer.l3.call(b.viewer)},b.viewer)});IG$._I_5(this,a)},updateProperty:function(c,b){var a=this;if(a.dsmode){return}switch(c){case"report_control":break}},updateLayout:function(){var b=this,a=b.ctrl.dashboard},P12:function(b){var g=this,h,d,c,f=g.viewer,l=[],a,o,e=[];if(b&&b.name&&f){h=f._ILb.pff1;if(h&&h.length){for(d=0;d<h.length;d++){if(h[d].name==b.name){a=h[d];break}}if(a){o=f.l5m_.call(f,a,l,true);if(o){for(c=0;c<a.value.length;c++){e.push(a.value[c])}}}}}return e}});IG$._IE0.promptfilter=new IG$.jj_4({},null);IG$.jj_5=IG$.x_c(IG$._ID2,{_ic:function(){var a=this;a._v=false;a.p.push();a.superclass.prototype._ic.call(a)},pe:function(a,b){},invalidate:function(){var c=this,a=IG$.x_10._w(c.html),b=IG$.x_10._h(c.html);if(c.viewer){c.viewer.setSize(a,b)}},initDrawing:function(){var d=this,a=IG$.x_10._w(d.html),c=IG$.x_10._h(d.html),e=$("<div class='igc-db-embed'></div>").appendTo(d.html),b=$("<div></div>").appendTo(d.html);IG$.x_10._w(e,a);IG$.x_10._h(e,c);b.css({position:"absolute",top:0,left:0,bottom:0,right:0,width:"100%",height:"100%",overflow:"hidden"}).hide();if(d.dsmode){cbtn=$("<div class='igc-p-config'><div class='igc-p-config-bg'></div><button>Config</button></div>").appendTo(d.html);$("button",cbtn).bind("click",function(){})}else{if(!d.viewer){d.viewer=new IG$._IBf({uid:null,width:IG$.x_10._w(e),height:IG$.x_10._h(e),renderTo:e[0],rendermask:b,floatable:false,closeAction:"destroy",title:0,uid:d.uid,collapsible:false,header:false,dsmode:1,border:0,sm:0});d.viewer.on("afterrender",function(f){d._v=true})}}d.__pcinit()},updateProperty:function(c,b){var a=this;if(a.dsmode){return}switch(c){case"report_control":break}},updateLayout:function(){var b=this,a=b.ctrl.dashboard},destroy:function(){var a=this;if(a.viewer&&a.viewer.close){a.viewer.close()}}});IG$._IE0.dashboard=new IG$.jj_5({},null);IG$._IFc=function(b){var a=this;a.docid=null;a.objtype=null;a.layoutinfo={};a.pff1=[];a.pff1a={showbutton:false,viewtype:"row",brow:0,columnsize:1,rowsize:1,buttonname:null,f_b_desc:null,f_b_scr:null,showrefresh:true,edrill:true};a.sf={};a.fparam="uid;name;nodepath;type;title;objtype;operator;sheetindex;sheetname;showperiodselector;objmerge;crowindex;compcss;isnecessary;useprompt;showallvalue;aname;hfilter;showpopup;rangevalue;rangelabel;tabid;valueformat;checkbuttonhor;invokejs;useprevcont;showcondition;defaultvalue;dateseltype;yearfrom;yearto;startdate;enddate;cmap_disp;cmap_uid;f_b_clear;f_t_dir;s1a;s1b;s1c;smode;ltitle;lname;f_b_evt;f_b_trg;f_b_trg_all";if(b){a.l1(b)}};IG$._IFc.prototype={m1:function(c){var b=this,a=c.defaultvalue;if(a&&a.indexOf("cyear")>-1){a=b.m2(a)}return a},m2:function(a){var e=null;if(IG$._I37(a)){e=Number(a)}else{var f=new Date(),d=f.getFullYear(),b=0;if(a.indexOf("-")>-1){b=a.substring(a.indexOf("-")+1);b=Number(b);b=b*-1}else{if(a.indexOf("+")>-1){b=a.substring(a.indexOf("+")+1);b=Number(b)}}e=d+b}return e},l1:function(d){var q=this,h,g,c,e,o,b,a,f,l,s;IG$._I1f(q,d,"docid;objtype;playout;tb_prt_i;tb_prt_s","s");IG$._I1f(q,d,"close;fw;fh;istabview;hidetitle;tb_prt","b");q.name=IG$._I1b(d,"name");f=IG$._I18(d,"name");if(f){q.name=IG$._I24(f)}q.objtype=q.objtype||"PANEL";switch(q.objtype){case"FILTER":f=IG$._I19(d,"filteroption");q.pff1a={showbutton:false,viewtype:"row",columnsize:1,buttonname:null,f_b_desc:null,f_b_scr:null,showrefresh:false,brow:0,rowsize:1,f_b_clear:"F",f_t_dir:"left",edrill:true,f_b_evt:"F",f_b_trg:"F",f_b_trg_all:"F"};if(f){IG$._I1f(q.pff1a,f,"columnsize;rowsize;brow;viewtype;buttonname;showbutton;showrefresh;f_b_desc;f_b_scr;drilltarget;f_b_clear;f_t_dir;edrill;f_b_evt;f_b_trg;f_b_trg_all;f_rotate;f_rotate_timer;f_rotate_field","s");q.pff1a.showbutton=q.pff1a.showbutton=="T"?true:false;q.pff1a.showrefresh=q.pff1a.showrefresh=="F"?false:true;q.pff1a.columnsize=(q.pff1a.columnsize)?parseInt(q.pff1a.columnsize):1;q.pff1a.brow=(q.pff1a.brow)?parseInt(q.pff1a.brow):1;q.pff1a.rowsize=(q.pff1a.rowsize)?parseInt(q.pff1a.rowsize):1;q.pff1a.edrill=q.pff1a.edrill=="F"?false:q.pff1a.edrill;q.pff1a.f_rotate_timer=parseInt(q.pff1a.f_rotate_timer||60)}f=IG$._I19(d,"filters");e=IG$._I26(f||d,"filter");for(h=0;h<e.length;h++){b={};IG$._I1f(b,e[h],q.fparam,"s");l=IG$._I19(f,"pvalues");if(l){b.pvalues=IG$._I24(l)}b.objmerge=b.objmerge?parseInt(b.objmerge):0;b.isnecessary=b.isnecessary=="T";b.useprompt=b.useprompt=="T";b.showallvalue=b.showallvalue=="T";b.showpopup=b.showpopup=="T";b.rangevalue=b.rangevalue=="T";b.uid=IG$._I06(b.uid);b.crowindex=b.crowindex?parseInt(b.crowindex):0;b._p1=q;c=IG$._I19(e[h],"periodoption");if(c){c=IG$._I26(c);b.periodlist=[];for(g=0;g<c.length;g++){o={};IG$._I1f(o,c[g],"name;value;default","s");o["default"]=(o["default"]=="T");b.periodlist.push(o)}}q.pff1.push(b)}break;case"NAVI":break;case"TEXT":e=IG$._I18(d,"content");q.content=(e)?IG$._I24(e):"";e=IG$._I18(d,"htmlcontent");q.htmlcontent=(e)?IG$._I24(e):"";break;case"PANEL":break;case"SHEET":break;case"RPT_VIEW":q.rptoption={};f=IG$._I19(d,"rptoption");if(f){q.rptoption=IG$._I1c(f)}break;case"TAB":q.sf={};f=IG$._I19(d,"taboption");if(f){q.sf.showtab=IG$._I1b(f,"showtab")}break}},l2:function(){var f=this,c,b,d=f.pff1,a=f.pff1a,g=f.dff1,e="<control";e+=IG$._I20(f,"docid;objtype;playout;tb_prt_i;tb_prt_s","s")+IG$._I20(f,"close;fw;fh;istabview;hidetitle;tb_prt","b")+">";e+="<name><![CDATA["+(f.name||"")+"]]></name>";switch(f.objtype){case"FILTER":e+="<filteroption"+IG$._I20(a,"showbutton;showrefresh","b")+" f_b_clear='"+(a.f_b_clear||"F")+"' f_t_dir='"+(a.f_t_dir||"left")+"' edrill='"+(a.edrill?"T":"F")+"' f_b_evt='"+(a.f_b_evt||"F")+"' f_b_trg='"+(a.f_b_trg||"F")+"' f_b_trg_all='"+(a.f_b_trg_all||"F")+"' f_rotate='"+(a.f_rotate||"F")+"' f_rotate_field='"+(a.f_rotate_field||"")+"'"+IG$._I20(a,"columnsize;rowsize;brow;viewtype;buttonname;f_b_desc;f_b_scr;drilltarget;f_rotate_timer","i")+"></filteroption>";e+="<filters>";for(c=0;c<d.length;c++){e+="<filter"+IG$._I20(d[c],f.fparam,"s")+">";e+="<pvalues><![CDATA[";if(d[c].pvalues){e+=d[c].pvalues}e+="]]></pvalues>";if(d[c].periodlist){e+="<periodoption>";for(b=0;b<d[c].periodlist.length;b++){e+="<period "+IG$._I20(d[c].periodlist[b],"name;value","s")+IG$._I20(d[c].periodlist[b],"default","b")+"/>"}e+="</periodoption>"}e+="</filter>"}e+="</filters>";break;case"NAVI":break;case"TEXT":e+="<content><![CDATA["+(f.content||"")+"]]></content>";e+="<htmlcontent><![CDATA["+(f.htmlcontent||"")+"]]></htmlcontent>";break;case"PANEL":break;case"SHEET":break;case"TAB":e+="<taboption showtab='"+(f.sf?f.sf.showtab||"T":"F")+"'></taboption>";break;case"RPT_VIEW":e+="<rptoption "+(f.rptoption?IG$._I20(f.rptoption,"uid;name;contentfullpath;type","s"):"")+"/>";break}e+="</control>";return e}};IG$._IA2=function(b,a){var c=this;c.container=b;c._ILb=a;c.v1=true;c._IFd()};IG$._IA2.prototype={_IFd:function(){var b=this,a=$("<div class='idv-pnl-html-cnt'></div>").appendTo(b.container);b.c1=a;b.c=$("<div class='idv-pnl-html'></div>").appendTo(a);b.m4()},rX:function(){},l3:function(){this.m4()},setSize:function(a,c){var d=this,b=d.c1;IG$.x_10._w(b,a);IG$.x_10._h(b,c)},m4:function(){var q=this,l,g=q.finfo,w=[],z=[],d,y,a=0,f=0,e,d,x,u,o,h,s,c=q._ILb;l=Base64.decode(c.htmlcontent||c.content||"");e=l.indexOf("{",a);while(e>-1&&f<l.length){f=l.indexOf("}",e);if(f>-1){w.push({t:l.substring(a,e),m:0});w.push({t:l.substring(e+1,f),m:1})}else{f=a;w.push({t:l.substring(a,f),m:0})}a=f+1;e=l.indexOf("{",a)}w.push({t:l.substring(a,l.length),m:0});for(o=0;o<w.length;o++){y=w[o];if(y.m==1){x=y.t.match(/\[(.*?)\]/g);if(x&&x.length>0){s=g?true:false;if(g){for(h=0;h<x.length;h++){u=x[h].replace(/[\[\]]/g,"");if(g[u]){y.t=y.t.replace(new RegExp("\\["+u+"\\]","g"),g[u].data.join(", ")||"")}else{s=false;break}}}if(s==true){z.push(y.t)}}else{z.push("{"+y.t+"}")}}else{z.push(y.t)}}d=z.join("");q.c.html(d)},_ILd:function(a){var b=this;b.finfo=a;b.m4()}};IG$._IA3=function(c,b,d,a){var e=this;e.container=c;e._ILb=b;e._ILa=d;e.rpt=a;e.v1=true;e._IFd()};IG$._IA3.prototype={_IFd:function(){var d=this,a={},c=d._ILa,b;d.c=$("<div></div>").appendTo(d.container);this.browser=b=new IG$._I98({renderTo:d.c[0],showtoolbar:false,cubebrowse:true,showcheckselect:false,collapsible:false,floatable:false,floating:false,flex:5,layout:"fit",enabledrag:true,_IHb:d,checkStateChanged:d._IO7});a.type=(d._ILa.reportmode=="rolap")?"Cube":"Metric";a.name=a.type;a.nodepath=a.type;a.uid=d._ILa.cubeuid||null;a.leaf=false;b.store.setRootNode(a)},rX:function(){var a=this;a.browser=null},l3:function(){},setSize:function(a,b){var d=this,e=d.c;IG$.x_10._w(e,a);IG$.x_10._h(e,b);d.browser.setWidth(a);d.browser.setHeight(b)},_ILd:function(a){}};IG$._IA4=function(b,a){var c=this;c.container=b;c._ILb=a;c.v1=true;c._IFd()};IG$._IA4.prototype={_IFd:function(){var c=this,a={},b;c.c=$("<div></div>").appendTo(c.container);if(c.owner&&c.owner.b1){c.owner.b1.bind("updatecomplete",function(){c.l3.call(c)})}},rX:function(){},l3:function(){var e=this,a=e.owner,d=(a&&a.docitems&&e._ILb?a.docitems[e._ILb.docid]:null),f=0,c=false,b;if(d&&d.children){$.each(d.children,function(g,l){if(l.docid){var h=a.bodylist[l.docid];f++}})}},setSize:function(a,b){var d=this,e=d.c;IG$.x_10._w(e,a);IG$.x_10._h(e,b)},_ILd:function(a){}};IG$._IA5=function(c,b,a){var d=this;d.container=c;d._ILb=b;d.owner=a;if(d.owner&&d.owner.b1){d.owner.b1.bind("updatecomplete",function(){d.l3.call(d)})}d.v1=true;d.active=null;d._IFd()};IG$._IA5.prototype={_IFd:function(){var f=this,c={},d,e,b=f.owner,a=f.owner?f.owner.ctrls:null,g,h=0;f.buttons=[];f.c=$("<div></div>").appendTo(f.container);f.tab=$("<div class='idv-dtab-area'></div>").appendTo(f.c).hide();f.tabul=$("<ul></ul>").appendTo(f.tab);f.l3()},rX:function(){},l3:function(){var g=this,a=g.owner,f=(a&&a.docitems&&g._ILb?a.docitems[g._ILb.docid]:null),h=0,e=false,c,d,b=g._ILb&&g._ILb.sf?g._ILb.sf.showtab=="T":false;g.tab[b||g.editmode?"show":"hide"]();g.tabul.empty();g.buttons=[];if(f&&f.children&&f.children.length>0){d=f.active;if(f.active){for(c=0;c<f.children.length;c++){if(f.children[c].docid==f.active){e=true;break}}f.active=(e==false)?null:f.active}$.each(f.children,function(o,s){if(s.docid){var q=a.bodylist[s.docid],l=$("<li><span class='ig-tab-tt'>"+(q.title||"Tab "+o)+"</span></li>").appendTo(g.tabul);if((f.active&&f.active==s.docid)||(!f.active&&h==0)){l.addClass("selected");f.active=s.docid}l.docid=s.docid;l.bind("click",function(){g.s1.call(g,s.docid)});g.buttons.push(l);h++}});if(d!=f.active&&f.active){g.s1(f.active,true)}}},s1:function(q,o){var g=this,h=g.buttons,a=g.owner,d=(a&&a.docitems&&g._ILb?a.docitems[g._ILb.docid]:null),b,e=g._ILb.docid,c,f,l;for(f=0;f<h.length;f++){b=h[f];if(b.docid==q){b.addClass("selected")}else{b.removeClass("selected")}}if(d){d.active=q;for(f=0;f<d.children.length;f++){l=a.docitems[d.children[f].docid];g.setVisible(l,l.docid==q,o)}}},setVisible:function(a,f,e){var c=this,b,d=a.lt.ubody;if(!d){return}if(a._SP&&a._SP.length){for(b=0;b<a._SP.length;b++){a._SP[b].setV(f)}}if(f){d.visible=true;d.show();if(d.view&&d.objtype=="RPT_VIEW"&&!d.view._v1d){d.view.l3.call(d.view)}d.objtype=="RPT_VIEW"&&d.view&&d.view._l3.call(d.view);d.b2.trigger("click");d.l2.call(d);if(d.view&&d.view.btabrun==true){if(e||!d.view._ILb){}else{d.view._vf=false;delete d.view.btabrun;d.view._IJ2.call(d.view,null)}}}else{d.visible=false;d.hide()}if(a.children){for(b=0;b<a.children.length;b++){c.setVisible(a.children[b],f,e)}}},setSize:function(a,b){var d=this,e=d.c;IG$.x_10._w(e,a);IG$.x_10._h(e,b)},_ILd:function(a){}};IG$._IA5r=function(c,b,a){var d=this;d.container=c;d._ILb=b;d.owner=a;d.v1=true;d.active=null;d._v1d=false;d._v2=true;d._vf=true;d.in$f()};IG$._IA5r.prototype={in$f:function(){var f=this,c={},d,e,b=f.owner,a=f.owner?f.owner.ctrls:null,g,h=0;f.c=$("<div class='igc-rpt-view'></div>").appendTo(f.container)},_l3:function(){var a=this;if(a._v2||a._vf){a._vf=false;clearTimeout(a._v3);a._v3=setTimeout(function(){a._l4.call(a)},50)}},_l4:function(){var e=this,b,d,c,a;if(!e.irpt){e.l3()}else{for(d=0;d<e.irpt.sheets.length;d++){c=e.irpt.sheets[d];a=c._ILb;if(e._df1){auxfilter=a._IL9;for(fname in e._df1){auxfilter[fname]=e._df1[fname]}}if(c._IK9){pivotxml=c._IK9._ILa._IJ1.call(c._IK9._ILa);c._IK9._IJ0(pivotxml,"mode",d,c)}else{if(a){c._IJ2.call(c)}}}}e._df1=null;e._v2=false},rX:function(){},l3:function(o,b){var l=this,c=l.owner,e=0,h=l._ILb,f=!b&&(l.btabrun||o);if(h&&h.docid){if(h.rptoption&&h.rptoption.uid){if(!l.irpt){l._v1d=true;var g=l.c,a=l.owner.dockdiv?$("<div class='report_container'></div>").appendTo(g):null,d=l.owner.dockdiv?$("<div style='display:none;'></div>").appendTo(a):[];if(l.__dx!=true){l.irpt=new IG$._IBe({uid:h.rptoption.uid,header:false,hiddenstatusbar:true,hiddentoolbar:true,border:0,vmode:1,frameHeader:false,cmode:1,dockdiv_container:a,cvmode:l.cvmode,auxfilter:l._df1,width:l._cw,height:l._ch,renderTo:d[0]||l.c[0],_par:l.owner});if(f||b){l.irpt.on("_lc0",function(){l.irpt.un("_lc0");if(b){l.container.trigger("i_ready")}if(f){l._v2=true;l._l3.call(l)}})}l._df1=null;l._v2=false}}else{l.container.trigger("i_ready")}if(l.irpt){if(l.irpt.uid!=h.rptoption.uid){l.irpt.uid=h.rptoption.uid;l.irpt._IFd.call(l.irpt)}else{if(!b&&l.irpt.__loaded){l.irpt._IFd.call(l.irpt)}}l._v2=false}}}},setSize:function(a,b,e){var d=this,f=d.c;d.pw=d.pw||0;d.ph=d.ph||0;d._cw=a;d._ch=b;if(d.irpt&&d.irpt.dzone&&(e||(Math.abs(d.pw-a)>5||Math.abs(d.ph-b)>5))){d.pw=a;d.ph=b;IG$.x_10._w(f,a);IG$.x_10._h(f,b);if(d.irpt){d.irpt.setSize(a,b);if(e&&!d.irpt.dzone.i2){d.irpt.dzone._IM5.call(d.irpt.dzone,true)}}}},_ILd:function(a){}};IG$._IE1={OP_EQUAL:[1,IRm$.r1("L_F_EQ"),"=","EQUAL","L_F_EQ"],OP_GTE:[2,IRm$.r1("L_F_GE"),">=","GTE","L_F_GE"],OP_GT:[3,IRm$.r1("L_F_GT"),">","GT","L_F_GT"],OP_LTE:[4,IRm$.r1("L_F_LE"),"<=","LTE","L_F_LE"],OP_LT:[5,IRm$.r1("L_F_LT"),"<","LT","L_F_LT"],OP_IN:[6,IRm$.r1("L_F_IN"),"In","IN","L_F_IN"],OP_LIKE:[7,IRm$.r1("L_F_LIKE"),"Like","LIKE","L_F_LIKE"],OP_BETWEEN:[8,IRm$.r1("L_F_BETWEEN"),"Between","BETWEEN","L_F_BETWEEN"],OP_IS:[10,IRm$.r1("L_F_SQL_IS"),"IS","IS","L_F_SQL_IS"]};IG$.__pca=["close;drillreport;isdistinct;fetchall;fw;fh;hidetitle;olap4jsupport;rootsheet;openload;autorefresh;columnfill;enablepivot;enablecache;tb_vch;tb_prt_grd;tb_prt;showlnum;bcluster;edrill;hidemenu;syncrows","label;pagecount;viewmode;objtype;drilltarget;viewchange;toolbutton;cubeuid;tb_prt_i;tb_prt_s;exportbutton;gridprint","panelwidth;panelheight","measurelocation;customfix;usepaging;pagestyle;dataquerymode;measuretitle","measureposition;customfixcols;rowperpage;refresh_timer","isdistinct;fetchall;treeview;columntree;isbigdecimal;showlnum;hidemenu"];IG$._dpca=function(a){var b=this;b._1(a)};IG$._dpca.prototype={_1:function(s){var l=this,f,d,h,q,b,g,u,o,c,e,a;l.tsheets=e={};l._e=0;if(s){h=s.split(";");for(f=0;f<h.length;f++){q=h[f];if(q){o={enabled:false,items:[],item_map:{}};c={enabled:false,items:[],item_map:{}};if(q.indexOf("^")>-1){b=q.split("^");u=b[0];a=b[1]=="T"?true:false;g=b[2]||null;if(g){o.items=g.split("_");for(d=0;d<o.items.length;d++){if(o.items[d]){o.enabled=true;o.item_map[o.items[d]]=1}}}g=b[3]||null;if(g){c.items=g.split("_");for(d=0;d<c.items.length;d++){if(c.items[d]){c.enabled=true;c.item_map[c.items[d]]=1}}}}else{u=q;a=true;o={enabled:false,items:[],item_map:{}};c={enabled:false,items:[],item_map:{}}}if(a){l._e=1}l.tsheets[u]={name:u,isdrill:a,tparams:c,titem:o}}}}},_2:function(b){var c=this,a=c.tsheets[b];return c._e?(a&&a.isdrill?a:null):{name:b,isdrill:a?a.isdrill:false,titem:{enabled:false,items:[],item_map:{}},tparams:{enabled:false,items:[],item_map:{}}}}};IG$._IE1._d3=function(a){var b=IG$._IE1;r=b.OP_EQUAL[0],t;t=b["OP_"+a];if(t){r=t[0]}else{switch(a){case"NE":r=b.OP_NOT_EQUAL[0];break;case"NOTIN":r=b.OP_IN[0];break}}return r};IG$._IE2={P_TEXTBOX:1,P_COMBOBOX:2,P_DATE:3,P_SELECT_WIN:4};IG$._IE3={P_NONE:0,P_BOLD:1,P_ITALIC:2,P_UNDERLINE:4};IG$._IE4=function(b){var a=this;if(b){IG$._I1f(a,b,"uid;type;name;description;updatedate");a.uid=IG$._I06(a.uid);a.itemtype=a.type;a.itemname=a.name}};IG$._Ie4=function(c){var b=this,d,a;b.__pca=["name;delimiter;itemname;uid;operator;stylename;styleuid;apprange;appset"];if(c){IG$._I1f(b,c,b.__pca[0],"s");d=IG$._I18(c,"values");if(d){a=IG$._I24(d)}b.values=a}};IG$._Ie4.prototype={TX:function(){var b=this,a;a=["<hlitem "+IG$._I20(b,b.__pca[0],"s")+">","<values><![CDATA["+(b.values||"")+"]]></values>","</hlitem>"];return a.join("")},g1:function(){var b={},a=this;IG$._I1d(this,b,a.__pca[0]);IG$._I1d(this,b,"seq;values");return b}};IG$._Ib4=function(b){var a=this,c;a.__pca=["uid;name;type;datatype;defaultvalue;allownullvalue;valuetype;datadelimiter;coldelimiter"];if(b){IG$._I1f(a,b,a.__pca[0],"s");c=IG$._I19(b,"sql");if(c){a.sql=IG$._I24(c)}a.L2()}};IG$._Ib4.prototype={L1:function(b){var d=this,a,c="<item "+IG$._I20(this,d.__pca[0],"s")+(b||"")+">";if(d.sql){c+="<sql><![CDATA["+d.sql+"]]></sql>"}if(d.values){c+="<values>";for(a=0;a<d.values.length;a++){c+="<value><code><![CDATA["+(d.values[a].code||"")+"]]></code><text><![CDATA["+(d.values[a].text||"")+"]]></text></value>"}c+="</values>"}c+="</item>";return c},L2:function(){var a=this;if(a.type=="combobox"){a.promptEditor=IG$._IE2.P_COMBOBOX}},LD:function(a,l){var g=this,e=g._d6,f=(e?e[0].uid:g.uid),b=(e?e[0].name:g.name),h=new IG$._I3e(),d,c;g.dataLoaded=true;g.data=[];if(e){c=IG$._I2e();d=IG$._I2d({uid:f,name:b,option:"valuelist",sheetindex:g.sheetindex},"uid;name;option;sheetindex")}else{c=g._ILa._IJ1();d="<smsg>"+g.L1(" sheetindex='"+g.sheetindex+"' option='valuelist'")+"</smsg>"}h.init(a,{ack:"18",payload:d,mbody:c},g,g.rs_LD,null,l);h._l()},rs_LD:function(b,f){var d=this,e=d._d6,c=(e?e[0].uid:d.uid),a=new IG$._ICd(b,c);d.result=a;if(f){f.execute(b)}},_d2:function(a){var b="";if(a&&a.length>0){b=a[0].code+(a.length>1?" + ("+(a.length-1)+")":"")}return b}};IG$._IE5=function(a,b,d){if(a.styledata.length>b&&a.styledata[b].length>d&&a.styledata[b][d]!=""){return" class='"+a.styledata[b][d]+"'"}return""};IG$._IE6=function(g){var f=this,b,l,a,d,c,h,e;$s.apply(f,{filterdesc:true,pagenumber:true,showtitle:true,repeatheader:true,footer:false,margine_top:30,margine_left:30,margine_right:30,margine_bottom:30,startpage:1,endpage:20,scaledown:true,columnfit:true,alldata:true,layout:"portrait",pagesize:"A4",fonttype:"HELVETICA",u_excel:true,u_pdf:true,u_html:true,u_jasper:false,u_csv:true,dinfo:{}});f.j_param=["jasper_template","jasper_tmpl_uid","pdf_output","pdf_label","rtf_output","rtf_label","ppt_output","ppt_label","excel_output","excel_label","csv_output","html_output","html_label","docx_output","docx_label","xml_output","xml_label"];f.__pca=["layout;pagesize;fonttype;title;footertitle","filterdesc;pagenumber;showtitle;footer;repeatheader;scaledown;alldata;columnfill;hidemenu;u_excel;u_pdf;u_html;u_csv;u_jasper;u_office","margine_top;margine_bottom;margine_left;margine_right;startpage;endpage"];if(g){$.each(["s","b","i"],function(q,o){IG$._I1f(f,g,f.__pca[q],o)});f.jasper={_1:true};d=IG$._I18(g,"jasper");if(d){for(c=0;c<f.j_param.length;c++){a=f.j_param[c];f.jasper[a]=IG$._I1b(d,a)}}f.otmpl=[];d=IG$._I18(g,"otmpl");if(d){tnodes=IG$._I26(d);for(c=0;c<tnodes.length;c++){f.otmpl.push(IG$._I1c(tnodes[c]))}}e=window.IExport;if(e){for(b in e){l=e[b];f[l.name]={loaded:false};d=IG$._I18(g,l.name);if(d){f[l.name]._1=true;for(c=0;c<l.params.length;c++){a=l.params[c];f[l.name][a]=IG$._I1b(d,a)}}}}d=IG$._I18(g,"dockitems");if(d){tnodes=IG$._I26(d);for(c=0;c<tnodes.length;c++){a={docid:IG$._I1b(tnodes[c],"docid"),overflow:IG$._I1b(tnodes[c],"overflow")=="T"?true:false,hidden:IG$._I1b(tnodes[c],"hidden")=="T"?true:false};f.dinfo[a.docid]=a}}f.init=true}if(!f.jasper||(f.jasper&&!f.jasper._1)){if(!IG$._L51){IG$._l51(new IG$._I3d(f,f.M1,"jasper"))}else{f.M1("jasper")}}};IG$._IE6.prototype={TX:function(){var g=this,e,f="<ExportOption",b;f+=IG$._I20(g,g.__pca[0],"s");f+=IG$._I20(g,g.__pca[1],"b");f+=IG$._I20(g,g.__pca[2],"i");f+=">";if(g.jasper){f+="<jasper";f+=IG$._I20(g.jasper,g.j_param.join(";"),"s");f+="/>"}if(g.otmpl){f+="<otmpl>";for(e=0;e<g.otmpl.length;e++){f+="<tmpl "+IG$._I20(g.otmpl[e],"uid;type;name;export_type;description","s")+"/>"}f+="</otmpl>"}b=window.IExport;if(b){var d,a,h,c,e;for(d in b){a=b[d];if(g[a.name]){c=a.params.join(";");f+="<"+a.name+" "+IG$._I20(g[a.name],c,"s")+"/>"}}}f+="</ExportOption>";return f},M1:function(c){var e=this,d=IG$._L51,b,a;if(d){switch(c){case"jasper":b=d.JASPER_OUTPUT;if(b&&b.value){b=b.value.split(";");e[c]=e[c]||{};for(a=0;a<b.length;a++){e[c][b[a]+"_output"]="T"}}b=d.JASPER_TEMPLATE;if(b&&b.value){e[c].jasper_template=b.value}break}}}};IG$._IE7=function(f){var e=this;e.basetype=0;e.valuemax=0;e.valuemin=0;e.cellwidth=50;e.cellheight=20;e.direction="horizontal";e.axismetric=[];e.__pca=["basedatatype;basetype;cellheight;cellwidth;mctype;uid;valuemax;valuemin;linecolor;fillcolor","direction","separatecolumn","nodepath;description;memo;name;pid;sortorder;type;uid;activeformula;rankcount;aggrfunc;disp_title;hidecolumn;timeformat"];if(f){var h=IG$._I18(f,"CellOption"),b,g,d,a,c;if(h){IG$._I1f(e,h,e.__pca[0],"i");IG$._I1f(e,h,e.__pca[1],"s");IG$._I1f(e,h,e.__pca[2],"b");e.uid=IG$._I06(e.uid);b=IG$._I18(h,"AxisMetric");if(b){g=IG$._I26(b);for(d=0;d<g.length;d++){a={};IG$._I1f(a,g[d],e.__pca[3],"s");a.itemtype=a.type;e.axismetric.push(a)}}b=IG$._I18(h,"ValueMetric");if(b){c=e.valuemetric={};IG$._I1f(c,b,e.__pca[3],"s");c.itemtype=c.type}}h=IG$._I18(f,"objinfo");if(h){e.cubeuid=IG$._I1b(h,"cubeuid");e.cubeuid=IG$._I06(e.cubeuid)}}};IG$._IE7.prototype={C_1:function(){var c,a,e=this,d="<CellOption",b=e.valuemetric;d+=IG$._I20(e,e.__pca[0],"i");d+=IG$._I20(e,e.__pca[1],"s");d+=IG$._I20(e,e.__pca[2],"b");d+=">";if(e.axismetric){d+="<AxisMetric>";for(c=0;c<e.axismetric.length;c++){a=e.axismetric[c];a.type=a.itemtype||a.type;d+="<item "+IG$._I20(a,e.__pca[3],"s")+"/>"}d+="</AxisMetric>"}if(b){b.type=b.itemtype||b.type;d+="<ValueMetric"+IG$._I20(b,__m,"s")+"/>"}d+="</CellOption>";return d}};IG$._IE8=function(f,a){var e=this,c,g,d,b;e.__pca=["uid;name;lname;itemtype;type;nodepath;memo;pid;sortorder;description;activeformula;rankcount;aggrfunc;disp_title;hidecolumn;timeformat"];if(f){IG$._I1f(e,f,e.__pca[0],"s");e.itemtype=e.type;switch(e.itemtype){case"CellChart":case"ChartMeasure":e.C_2(f);break}if(a){b=e.sitems=[];c=IG$._I18(f,"sitems");if(c){g=IG$._I26(c);for(d=0;d<g.length;d++){b=new IG$._IE8(g[d],a);sitems.push(b)}}}}};IG$._IE8.prototype={_I1d:function(b,c){var a=this;IG$._I1d(c,b,a.__pca[0]);b.itemtype=b.type||b.itemtype},C_2:function(a){this.celloption=new IG$._IE7(a)},C_1:function(a){var e=this,d,b,f=e.sitems,c=e.celloption;e.type=e.itemtype||e.type;d="<item"+IG$._I20(e,e.__pca[0],"s");if(a&&f){d+="><sitems>";for(b=0;b<f.length;b++){d+=f[b].C_1(a)}d+="</sitems></item>"}else{if(e.itemtype=="ChartMeasure"&&c){d+=">"+c.C_1();d+="<objinfo cubeuid='"+(c.cubeuid||"")+"'/>";d+="</item>"}else{d+="/>"}}return d}};IG$._IE9=function(b){var a=this;a._d6=[];a.l_item=[];a.delimiter=";";a._d5(b)};IG$._IE9.prototype={_d4:function(){var c=this,b="",a,d=c._d6;for(a=0;a<d.length;a++){b=(a==0)?d[a].name:b+", "+d[a].name}b+="\n"+c._d1(c.operator,c.opisnot,1)+"\n(";if(c.valuetype=="field"){b+=(c.l_item&&c.l_item.length?c.l_item[0].name:"");if(c.operator==8){b+=" AND "+(c.l_item&&c.l_item.length>1?c.l_item[1].name:"")}}else{b+=c._d2(c.values)}b+=")";return b.substring(0,50)},_d2:function(a){var d=this,c="",b;if(a&&a.length>0){for(b=0;b<a.length;b++){c+=(b>0)?d.delimiter:"";c+=(a[b].text)?a[b].text:a[b].code}}return c},_d5:function(e){var h=this,f,c,b,o,a,d=IG$._IE2;h._d6=[];h.values=[];h._d7=false;h._d8=false;h.delimiter=";";if(e){h.operator=IG$._IE1._d3(IG$._I1b(e,"operator"));h.opisnot=IG$._I1b(e,"opisnot")=="T";h._d9=(IG$._I1b(e,"issqlvalue")=="T")?true:false;h.authname=IG$._I1b(e,"authname");h.authuid=IG$._I1b(e,"authuid");h.active=(IG$._I1b(e,"active")=="T")?true:false;c=IG$._I18(e,"items");if(c&&c.hasChildNodes()){b=IG$._I26(c);for(f=0;f<b.length;f++){o=new IG$._IE8(b[f]);h._d6.push(o)}}c=IG$._I18(e,"l_items");if(c&&c.hasChildNodes()){b=IG$._I26(c);for(f=0;f<b.length;f++){o=new IG$._IE8(b[f]);h.l_item.push(o)}}c=IG$._I18(e,"Values");if(c&&c.hasChildNodes()){h.valuetype=IG$._I1b(c,"valuetype");h._d8=(IG$._I1b(c,"custom")=="T")?true:false;h.delimiter=IG$._I1b(c,"delimiter")||";";if(IG$._I1b(c,"prompt")=="T"){h._d7=true;switch(IG$._I1b(c,"prompteditor")){case"2":a=d.P_COMBOBOX;break;case"3":a=d.P_DATE;break;case"4":a=d.P_SELECT_WIN;break;default:a=d.P_TEXTBOX;break}h.promptEditor=a}else{h._d7=false}b=IG$._I26(c);for(f=0;f<b.length;f++){var l={code:null,value:null},q=b[f],g=IG$._I18(q,"code");if(g){l.code=IG$._I24(g)}g=IG$._I18(q,"text");if(g){l.text=IG$._I24(g)}if(l.code){h.values.push(l)}}}}},_d1:function(f,a,c){var d=IG$._IE1,b="EQUAL",e="L_F_EQ";switch(f){case d.OP_GTE[0]:b="GTE";e=d.OP_GTE[4];break;case d.OP_GT[0]:b="GT";e=d.OP_GT[4];break;case d.OP_LTE[0]:b="LTE";e=d.OP_LTE[4];break;case d.OP_LT[0]:b="LT";e=d.OP_LT[4];break;case d.OP_LIKE[0]:b="LIKE";e=d.OP_LIKE[4];break;case d.OP_IN[0]:b="IN";e=d.OP_IN[4];break;case d.OP_BETWEEN[0]:b="BETWEEN";e=d.OP_BETWEEN[4];break;case d.OP_IS[0]:b="IS";e=d.OP_IS[4];break}if(c){b=IRm$.r1(e+(a?"_NOT":""))}return b},TX:function(){var e=this,d="<Condition",b="EQUAL",c,f=e._d6;b=e._d1(e.operator);d+=" operator='"+b+"'";d+=" issqlvalue='"+((e._d9)?"T":"F")+"'";d+=" opisnot='"+(e.opisnot?"T":"F")+"'";d+=(e.authname?" authname='"+e.authname+"'":"");d+=(e.authuid?" authuid='"+e.authuid+"'":"");d+=(e.authuid&&e.authname?(e.active?" active='T'":"active='F'"):"");d+=">";d+="<items>";for(c=0;c<f.length;c++){var a=f[c];d+=a.C_1()}d+="</items>";d+="<Expression>";d+="<![CDATA["+(e.expression||"")+"]]>";d+="</Expression>";d+="<l_items>";for(c=0;c<e.l_item.length;c++){d+=e.l_item[c].C_1()}d+="</l_items>";d+="<Values";d+=" valuetype='"+(e.valuetype||"")+"'";d+=" prompt='"+((e._d7)?"T":"F")+"'";d+=" prompteditor='"+e.promptEditor+"'";d+=" custom='"+((e._d8)?"T":"F")+"'";d+=" delimiter='"+(e.delimiter||";")+"'";d+=">";if(e.values){for(c=0;c<e.values.length;c++){d+="<value>";if(e.values[c].code){d+="<code>";d+="<![CDATA["+(e.values[c].code||"")+"]]>";d+="</code>"}if(e.values[c].value){d+="<value>";d+="<![CDATA["+(e.values[c].value||"")+"]]>";d+="</value>"}d+="</value>"}}d+="</Values>";d+="</Condition>";return d},LD:function(a,e){var d=this,b=d._d6[0].uid,c=new IG$._I3e();d.dataLoaded=true;d.data=[];c.init(a,{ack:"18",payload:"<smsg><item uid='"+b+"' option='valuelist'/></smsg>",mbody:IG$._I2e()},d,d.rs_LD,null,e);c._l()},rs_LD:function(b,e){var d=this,c=d._d6[0].uid,a=new IG$._ICd(b,c);d.result=a;if(e){e.execute()}}};IG$._IEa=function(b){var a=this,c;a.__pca=["nodepath;datatype;name;tablename;type"];c=IG$._I19(b,"source");a.source=(c?IG$._I1c(c):{});c=IG$._I19(b,"target");a.target=(c?IG$._I1c(c):{})};IG$._IEa.prototype={TX:function(){var b=this,a="<Link join='"+(b.join||"inner")+"' operator='"+(b.operator||"=")+"'>";a+="<source"+IG$._I20(b.source,b.__pca[0],"s")+"/>";a+="<target"+IG$._I20(b.target,b.__pca[0],"s")+"/>";a+="</Link>";return a},MX:function(){var a=this,b=a.source,c=a.target;a.joinfrom=(b?(b.tablename||"")+"."+(b.name||""):"");a.jointo=(c?(c.tablename||"")+"."+(c.name||""):"");a.joincondition=a.condition||"="}};IG$._IEb=function(b){var a=this,c;if(b){c=IG$._I1c(b);a.name=c.name;a.authuid=c.authuid;a.authname=c.authname;a.active=(c.active=="T"?true:false)}a.subGroups=[];a.subConditions=[]};IG$._IEb.prototype={T1:function(a){var c=this,b=this.T1a(a,c);return b},T1a:function(h,l){var e,d,b,c,a=l.subConditions,f=l.subGroups,g;for(e=0;e<a.length;e++){c=a[e];g=c._d6;if(g&&g.length>0){for(d=0;d<g.length;d++){if(g[d].uid==h){b=c;break}}}if(b){break}}if(!b){for(e=0;e<f.length;e++){b=this.T1a(h,f[e]);if(b){break}}}return b},TX:function(){var f=this,a="",d,g,e,c=false,b=f.subConditions,h=f.subGroups;if(f.authuid&&f.authname){c=true;a+="<Filter authuid='"+f.authuid+"' authname='"+f.authname+"' active='"+(f.active?"T":"F")+"'>"}if(b.length>0||h.length>0){a+="<FilterGroup";a+=(f.name)?" name='"+f.name+"'>":">";if(b.length>0){for(d=0;d<b.length;d++){g=b[d];a+=g.TX()}}if(h.length>0){for(d=0;d<h.length;d++){e=h[d];a+=e.TX()}}a+="</FilterGroup>"}if(c){a+="</Filter>"}return a}};IG$._IEc=function(d){var h=this,f,q,a,u,c,l;h.charttype="cartesian";h.ctangle=30;h.ctdepth=30;h.drillcharttype=[];h.legendposition="BOTTOM_CENTER";h.matminuscolor=16711931;h.matshowgrid=true;h.matshowplot=true;h.matusedropshadow=true;h.precision=0;h.maxchartresult=200;h.showlegend=true;h.subtype="column";h.tooltip="[[category]] [[value]]";h.zoomdirection="left";h.zoomrange=10;h.pieinnerradius=0;h.pielabeldist=20;h.pielayout="h";h.timeseriesduration=1000;h.bmaprow=true;h.bmapsize=10;h.p_bands=[];h.cindicator=null;h.xlabel=true;h.xaxisrot=true;h.xstagl=1;h.xstep=1;h.ytickint=0;h.__pca=["animate;drillyaxismax;enabledrill;enablezoom;enabledragselect;legendboxsizing;matshowgrid;matshowplot;matusedropshadow;showlegend;lgndfloating;showtitle;stack;stackperc;usedualaxis;useformula;swapaxis;bmaprow;bmapyaxis;dl_enable;dl_marker;dl_inside;useformatvalue;showvalue;tm_l_alg;xlabel;xaxisrot","chartprovider;charttype;legendposition;subtype;title;titleposition;tooltip;yvalueformat;zoomdirection;drillcharttype;andersonspecies;relationgroups;renderas;dualaxisitem;dl_marker_l;dl_enable_l;maptype;mapcategory;yaxisformat;yaxismin;yaxismax;nat_timefield;nat_datafield;nat_groupfield;nat_xdata;nat_ydata;nat_vdata;timeseriesfield;bmapsizeaxisfield;bmapyaxisfield;colorset;yaxisformat2;yaxismin2;yaxismax2;pielayout;yaxistitle;yaxistitle2;dl_align;tm_l_cl;chd_method","ctangle;ctdepth;drillviewmode;legendboxsize;matminuscolor;matpluscolor;matwidth;zoomrange;rel_range1;rel_range2;comp_range0;comp_range1;pieinnerradius;pielabeldist;precision;maxchartresult;timeseriesduration;bmapsize;xstagl;xstep;ytickint"];if(d){IG$._I1f(h,d,h.__pca[0],"b");IG$._I1f(h,d,h.__pca[1],"s");IG$._I1f(h,d,h.__pca[2],"i");if(IG$.cSET){IG$._I1f(h,d,IG$.cSET,"s",1)}var o=h.drillcharttype,s=h.renderas,e=h.dualaxisitem,g=h.dl_marker_l,b=h.dl_enable_l;h.drillcharttype=o&&o.split?o.split(";"):[];h.renderas=s&&s.split?s.split(";"):[];h.dualaxisitem=e&&e.split?e.split(";"):[];h.dl_marker_l=g&&g.split?g.split(";"):[];h.dl_enable_l=b&&b.split?b.split(";"):[];e=h.dualaxisitem;g=h.dl_marker_l;b=h.dl_enable_l;u=IG$._I18(d,"cunittext");if(u){h.cunittext=IG$._I24(u)}u=IG$._I18(d,"piedatalabel");if(u){h.piedatalabel=IG$._I24(u)}u=IG$._I18(d,"p_bands");if(u){c=IG$._I26(u);for(f=0;f<c.length;f++){l=new IG$._Ifb_n(c[f]);h.p_bands.push(l)}}u=IG$._I18(d,"cindicator");if(u){h.cindicator=Base64.decode(IG$._I24(u))}}h.chartcategory=[{charttype:"",subtype:""},{charttype:"cartesian",subtype:"column"},{charttype:"cartesian",subtype:"line"},{charttype:"cartesian",subtype:"spline"},{charttype:"cartesian",subtype:"area"},{charttype:"cartesian",subtype:"bar"},{charttype:"scrollable",subtype:"scrollable"},{charttype:"pie",subtype:"pie"},{charttype:"pie",subtype:"doughnut"},{charttype:"bubble",subtype:"bubble"},{charttype:"scatter",subtype:"scatter"},{charttype:"radar",subtype:"radar"},{charttype:"map",subtype:"map"},{charttype:"matrix",subtype:"matrix"},{charttype:"candlestick",subtype:"candlestick"},{charttype:"ohlc",subtype:"ohlc"},{charttype:"datagrid",subtype:"datagrid"}];h.getChartInfo=function(z){var w,y=h.chartcategory,x=y[0];for(w=0;w<y.length;w++){y[w].id=w;if(y[w].id==z){x=y[w];break}}return x};h.getChartInfoBySubType=function(w){var x,A,z=this,y=z.chartcategory;for(x=0;x<y.length;x++){if(y[x].subtype==w){A=y[x];A.id=x;break}}return A}};IG$._IEc.prototype={TX:function(){var f=this,d,a="<ChartOption",q=f.drillcharttype,c=f.dualaxisitem,g=f.dl_marker_l,b=f.dl_enable_l,s=f.renderas,e,l=[],o=[],h;f.drillcharttype=q&&q.length?q.join(";"):null;f.dualaxisitem=c&&c.length?c.join(";"):null;f.dl_marker_l=g&&g.length?g.join(";"):null;f.dl_enable_l=b&&b.length?b.join(";"):null;f.renderas=s&&s.length?s.join(";"):null;a+=IG$._I20(f,f.__pca[0],"b");a+=IG$._I20(f,f.__pca[1],"s");a+=IG$._I20(f,f.__pca[2],"i");c=f.dualaxisitem;f.dualaxisitem=c?c.split(";"):[];q=f.drillcharttype;f.drillcharttype=q?q.split(";"):[];s=f.renderas;f.renderas=s?s.split(";"):[];g=f.dl_marker_l;f.dl_marker_l=g?g.split(";"):[];b=f.dl_enable_l;f.dl_enable_l=b?b.split(";"):[];if(IG$.cSET){e=IG$.cSET.split(";");for(d=0;d<e.length;d++){if(e[d]&&e[d].substring(0,"cdata_".length)=="cdata_"){o.push(e[d])}else{l.push(e[d])}}a+=IG$._I20(f,l.join(";"),"s")}a+=">";for(d=0;d<o.length;d++){h=o[d];if(h&&f[h]){a+="<"+h+"><![CDATA["+f[h]+"]]></"+h+">"}}if(f.cunittext){a+="<cunittext><![CDATA["+f.cunittext+"]]></cunittext>"}if(f.piedatalabel){a+="<piedatalabel><![CDATA["+f.piedatalabel+"]]></piedatalabel>"}if(f.p_bands&&f.p_bands.length>0){a+="<p_bands>";for(d=0;d<f.p_bands.length;d++){a+=f.p_bands[d]._2()}a+="</p_bands>"}if(f.cindicator){a+="<cindicator><![CDATA["+Base64.encode(f.cindicator||"")+"]]></cindicator>"}a+="</ChartOption>";return a}};IG$._IEd=function(d){var c=this,a,e,b;c.s1=true;c.s2=true;c.s3="";c.s4="";c.smw=0;c.smh=0;c.pgs=2000;if(d){IG$._I1f(c,d,"s1;s2","b");IG$._I1f(c,d,"smw;smh;pgs","i");b=IG$._I18(d,"script");if(b){a=IG$._I24(b);if(a){c.s3=Base64.decode(a)}}b=IG$._I18(d,"prompt");if(b){e=IG$._I24(b);if(e){c.s4=Base64.decode(e)}}}};IG$._IEd.prototype={TX:function(){var d=this,b,a,c="<ROption";d.FFr();c+=IG$._I20(d,"s1;s2","b");c+=IG$._I20(d,"smw;smh;pgs","i");c+="><script>";c+="<![CDATA["+Base64.encode(d.s3)+"]]>";c+="<\/script>";c+="<prompt>";c+="<![CDATA["+Base64.encode(d.s4)+"]]>";c+="</prompt>";c+="<promptvalues>";if(d.s4p&&d.s4p.length>0){a=d.s4p;for(b=0;b<a.length;b++){c+="<prompt name='"+a[b].name+"'>";c+="<value><![CDATA["+a[b].value+"]]></value>";c+="</prompt>"}}c+="</promptvalues>";c+="</ROption>";return c},FFr:function(){var g=this,c=g.s4c,b=[],d,h,f=true,a=c?c.items:null,e;if(a&&a.length){c.error=null;for(i=0;i<a.length;i++){e=a[i],d=e.type;h=e.ctrl;switch(d.toLowerCase()){case"combobox":e.value=$("option:selected",h).val();break;case"textinput":e.value=h.val();break}b.push({name:e.name,value:e.value})}}g.s4p=b;return f}};IG$._IEdP=function(b){var a=this;if(b){snode=IG$._I18(b,"script");if(snode){script=IG$._I24(snode);if(script){a.s3=Base64.decode(script)}}}};IG$._IEdP.prototype={TX:function(){var b=this,a=["<python>"];a.push("<script>");a.push("<![CDATA["+Base64.encode(b.s3||"")+"]]>");a.push("<\/script>");a.push("</python>");return a.join("")}};IG$._IEe=function(a){var b=this;b.reports=[];b.sheets=[];b.__cs=[];b.__pca=IG$.__pca;b.PC(a)};IG$._IEe.prototype={PC:function(M){var Q=this,h,H,F,R,f,I,G,A={},a,L,e,c,N,C="/smsg/item",s,q;Q.sheets=[];Q.reports=[];Q.__cs=s={m:{},l:[]};Q.b_sc_load="F";Q.ploader=1;Q.phideloader=1;Q.itemtype="Report";e=Q.layoutinfo={type:"mondrian",draggable:false,objtype:"_dc",_direction:0,width:null,height:null,children:[]};Q.ctrls={};Q.sql_prompts=[];if(M){h=IG$._I18(M,C);IG$._I1f(Q,h,"type;nodepath;uid;name");Q.itemtype=Q.type;H=IG$._I18(M,C+"/objinfo");if(H){Q.reportversion=IG$._I1b(H,"version")}H=IG$._I18(M,C+"/sel_cube");if(H){s.d=IG$._I1b(H,"default");F=IG$._I26(H);for(I=0;I<F.length;I++){p=IG$._I1c(F[I]);if(!s.m[p.uid]){s.m[p.uid]=p;s.l.push(p)}}if(!s.d&&s.l.length){s.d=s.l[0].uid}}if(Q.cubeuid&&!s.m[Q.cubeuid]){p={uid:Q.cubeuid,name:Q.cubeuid};s.m[Q.cubeuid]=p;s.l.push(p)}H=IG$._I18(M,C+"/sql_prompts");if(H){F=IG$._I26(H);for(I=0;I<F.length;I++){q=F[I];Q.sql_prompts.push({name:IG$._I1b(q,"name"),value:IG$._I24(q),defaultValue:IG$._I24(q)})}}H=IG$._I18(M,C+"/Pivot");if(H){Q.b_sc_load=IG$._I1b(H,"b_sc_load")||"F";Q.ploader=IG$._I1b(H,"ploader")=="F"?0:1;Q.phideloader=IG$._I1b(H,"phideloader")=="F"?0:1;F=IG$._I26(H);for(I=0;I<F.length;I++){if(IG$._I29(F[I])=="Sheet"){var c=new IG$._IEf(F[I],Q.itemtype,false);a=c.sql_prompts=[];for(G=0;G<Q.sql_prompts.length;G++){N=Q.sql_prompts[G];a.push({name:N.name,values:[{code:N.value,text:N.value}]})}Q.sheets.push(c);if(c.cubeuid&&!s.m[c.cubeuid]){p={uid:c.cubeuid,name:c.cubeuid};s.m[c.cubeuid]=p;s.l.push(p)}}}}R=IG$._I18(M,C+"/ExportOption");Q.exportOption=new IG$._IE6(R);R=IG$._I18(M,C+"/LayoutInfo");if(R){var g=IG$._I24(R),K=g.split("|"),x,g=[],D,d,z,P;e.type=IG$._I1b(R,"type")||"dock";for(I=0;I<K.length;I++){if(K[I]){D=K[I].split(",");d={};for(G=0;G<D.length;G++){z=D[G].substring(0,D[G].indexOf("="));P=D[G].substring(D[G].indexOf("=")+1);d[z]=P}d.objtype=d.objtype||"PANEL";g.push(d)}}e.items=g;if(e.type=="dock"){e.type="bubble";e.layout={isroot:true,item:null};var w=e.items,u=[],B,O={};for(I=0;I<w.length;I++){L=w[I];L.top=L.top||[];L.left=L.left||[];L.right=L.right||[];L.bottom=L.bottom||[];L.inner=L.inner||[];if(!L.r){u.push(L)}if(L.r){B=O[L.r];if(!B){B=O[L.r]=[]}B.push(L)}}Q.tr1(u,e.layout,O,true)}else{if(e.type=="mondrian"){Q.savelayoutinfo=e;var O={},E,b,e=x=Q.layoutinfo={type:"mondrian",objtype:"_dc",children:[],_direction:0,width:null,height:null};for(I=0;I<g.length;I++){L=g[I];if(!L.r&&!x.docid){x.docid=L.docid;x._direction=parseInt(L.d)||0;x.width=Number(L.width);x.height=Number(L.height);O[x.docid]=x}else{O[L.docid]={docid:L.docid,width:Number(L.width),height:Number(L.height),objtype:L.objtype,_r:L.r,children:[],_direction:parseInt(L.d)}}}for(I=0;I<g.length;I++){L=O[g[I].docid];if(L&&L._r&&O[L._r]){b=O[L._r];b.children.push(L);L.parent=b}}}else{Q.savelayoutinfo=e;e.layout={isroot:true,item:null};var w=e.items,O={},J,o;for(I=0;I<w.length;I++){L=w[I];L.mm={left:L.left,top:L.top,bottom:L.bottom,right:L.right,inner:L.inner};L.left=[];L.right=[];L.bottom=[];L.top=[];L.inner=[];O[L.docid]=L}for(I=0;I<w.length;I++){o=w[I];$.each(["top","left","right","bottom","inner"],function(S,V){o[V]=o[V]||[];var U=o.mm[V],l,T;U=(U?U.split(";"):[]);for(l=0;l<U.length;l++){if(U[l]&&O[U[l]]){T=O[U[l]];T._cr=true;if(!T.parent){T.parent={loc:V,node:o};o[V].push(T)}}}})}for(I=0;I<w.length;I++){L=w[I];if(L._cr!=true){L.parent={isroot:true};e.layout.item=L;break}}}}}R=IG$._I18(M,C+"/Controls");if(R){F=IG$._I26(R);for(I=0;I<F.length;I++){f=new IG$._IFc(F[I]);Q.ctrls[f.docid]=f}if(Q.sheets){for(I=0;I<Q.sheets.length;I++){c=Q.sheets[I];var y=c.layoutinfo.docid,f=Q.ctrls[y];if(f){f.fw=c.fw;f.fh=c.fh;f.hidetitle=c.hidetitle}}}}}},tr1:function(e,y,z,c,x,s,b){var A=this,u,q={north:0,west:1,east:2,south:3},d,w,a,g=0,l,h,o,f;e.sort(function(D,B){var C=q[D.p],E=q[B.p];return C-E});if(!c){d=y;d.top=d&&d.top||[];d.left=d&&d.left||[];d.right=d&&d.right||[];d.bottom=d&&d.bottom||[];d.inner=d&&d.inner||[]}a=null;if(x){d=y;if(e.length>0){e[0].p=s;a=b}}for(u=0;u<e.length;u++){o=e[u];f=a;if(e[u].objtype=="PANEL"){o=w||d||(c&&y.item?y.item:o);a=null}else{if(g==0&&c){y.item=e[u];d=e[u];d.parent={isroot:true};a=d.p;w=d;g++}else{w=e[u];if(!a){e[u].parent={loc:"top",node:d};d.top.push(e[u]);a="north"}else{switch(e[u].p){case"north":e[u].parent={loc:"top",node:d};d.top.push(e[u]);break;case"east":e[u].parent={loc:"bottom",node:d};d.bottom.push(e[u]);break;case"west":e[u].parent={loc:"bottom",node:d};d.bottom.push(e[u]);break;case"south":e[u].parent={loc:"bottom",node:d};d.bottom.push(e[u]);d=e[u];break}a=e[u].p}g++}}if(z[e[u].docid]){l=z[e[u].docid];A.tr1(l,o,z,false,e[u].objtype=="PANEL"?true:false,e[u].p,f)}}},_IJ1:function(){var D,C,x,b,f,c,q,F=this,h,s,d,u,e,z,H,l,A,G,a,B,E,o=F.exportOption,y=["<smsg><item uid='"+F.uid+"' name='"+IG$._I48(F.name)+"' nodepath='"+IG$._I48(F.nodepath)+"' type='"+F.itemtype+"'>"],w=F.__cs,g;g=function(I){y.push(I)};g("<objinfo version='1.2'/>");g("<sel_cube default='"+(w.d||"")+"'>");for(x=0;x<w.l.length;x++){g("<item "+IG$._I20(w.l[x],"uid;name;type;nodepath;requirepwd;pool;pooluid","s")+"/>")}g("</sel_cube>");g("<Pivot b_sc_load='"+(F.b_sc_load||"F")+"' ploader='"+(F.ploader?"T":"F")+"' phideloader='"+(F.phideloader?"T":"F")+"'>");for(x=0;x<F.sheets.length;x++){f=F.sheets[x];f.columnfix=f.columnfix||"F";f.customfixcols=f.customfixcols||0;f.usepaging=f.usepaging||"F";f.rowperpage=f.rowperpage||20;f.pagestyle=f.pagestyle||"normal";f.measureformat=f.measureformat||"";f.measureformatname=f.measureformatname||"";g(f._IJ1.call(f,F))}g("</Pivot>");g("<LayoutInfo type='mondrian'><![CDATA["+(F.savelayoutinfo||"")+"]]></LayoutInfo>");g("<Controls>");for(c in F.ctrls){q=F.ctrls[c];g(q.l2.call(q))}g("</Controls>");G=F._dfilter;if(G){g("<dfilter>");a=G.filter;if(a){g("<Filter>");B=a.subGroups;if(B&&B.length>0){for(D=0;D<B.length;D++){g(B[D].TX())}}g("</Filter>")}a=G.hfilter;if(a){g("<HavingFilter>");B=a.subGroups;if(B&&B.length>0){for(D=0;D<B.length;D++){g(B[D].TX())}}g("</HavingFilter>")}a=G.params;if(a){g("<params>");for(D=0;D<a.length;D++){g("<param name='"+a[D].name+"'><value><![CDATA["+a[D].value+"]]></value></param>")}g("</params>")}g("</dfilter>")}if(o){g(o.TX())}g("</item></smsg>");return y.join("")}};IG$._IEf=function(g,b){var h,a,d,f,c,e=this;e.itemtype=b;e._IL9={};e.objtype="SHEET";e.layoutinfo={};e.__pca=IG$.__pca;e.c$a(g)};IG$._IEf.prototype={needPrompt:function(){var c=this,a=[],b,e,d;c.checkPrompt(c.filter,a);e=c.sql_prompts;if(e&&e.length>0){for(b=0;b<e.length;b++){a.push(e[b])}}e=c.sqloption;d=e?e.prompts:null;if(d&&d.length>0){for(b=0;b<d.length;b++){a.push(d[b])}}return a},g1:function(b,f){var d=this,a,c,e;switch(f){case 1:e=d.rows;break;case 2:e=d.cols;break;case 3:e=d.measures;break}if(e&&e[b]){a=e[b]}return a},checkPrompt:function(c,a){var e=this,d=false,b,f=c?c.subConditions:null,g=c?c.subGroups:null;if(f&&f.length>0){for(b=0;b<f.length;b++){if(f[b]._d7){a.push(f[b])}}}if(g&&g.length>0){for(b=0;b<g.length;b++){e.checkPrompt(g[b],a)}}return d},_IJ1:function(z){var q,e=this,x,a,b,w,g,l,c,d,y,o,s,B,h,u,f;q=["<Sheet "+IG$._I20(e,z.__pca[0],"b")+IG$._I20(e,z.__pca[1],"s")+IG$._I20(e,z.__pca[2],"i")+"><name><![CDATA["+(e.name||"")+"]]></name><Pivot "+IG$._I20(e,z.__pca[3],"s")+IG$._I20(e,z.__pca[4],"i")+IG$._I20(e,z.__pca[5],"b")+">"];f=function(C){q.push(C)};$.each([{a:"RowDimensions",b:e.rows},{a:"ColumnDimensions",b:e.cols},{a:"Measures",b:e.measures},{a:"QueryItems",b:e.queryItems},{a:"Clusters",b:e.clusters}],function(E,C){var D;f("<"+C.a+">");for(D=0;D<C.b.length;D++){f(C.b[D].C_1())}f("</"+C.a+">")});if(e.c1){f("<c1>"+e.c1.C_1()+"</c1>")}f("<rptitems>");for(a=0;a<e.rptitems.length;a++){g=e.rptitems[a];f("<rptitem"+IG$._I20(g,"name;measureposition;measuretitle","s")+">");$.each([{a:"rows",b:g.rows},{a:"columns",b:g.cols},{a:"measures",b:g.measures}],function(E,C){var D;if(C.b&&C.b.length){f("<"+C.a+">");for(D=0;D<C.b.length;D++){f(C.b[D].C_1())}f("</"+C.a+">")}});if(g.c1){f("<c1>"+g.c1.C_1()+"</c1>")}if(g.ext_title){f("<ext_title><![CDATA["+g.ext_title+"]]></ext_title>")}if(g.filter){f("<Filter>");b=g.filter;w=b?b.subGroups:null;if(w&&w.length>0){for(x=0;x<w.length;x++){f(w[x].TX())}}f("</Filter>")}if(g.havingfilter){f("<HavingFilter>");b=g.havingfilter;w=b?b.subGroups:null;if(w&&w.length>0){for(x=0;x<w.length;x++){f(w[x].TX())}}f("</HavingFilter>")}f("</rptitem>")}f("</rptitems></Pivot><UserDefinedGroup/>");l=e.chartPivot;c=e.cco;if(e.sqloption){f("<ExecuteSQL dbpool='"+(e.sqloption.dbpool||"")+"' querytool='F'><SQL><![CDATA["+(e.sqloption.sql||"")+"]]></SQL>");if(e.sqloption.columns){f("<columns>"+IG$._I4e(e.sqloption.columns,"item")+"</columns>")}if(e.sqloption.prompts){f("<prompts>");for(x=0;x<e.sqloption.prompts.length;x++){f(e.sqloption.prompts[x].L1())}f("</prompts>")}f("</ExecuteSQL>")}d=e.sql_prompts;if(d||(window._report_prompt&&window._report_prompt.length)){f("<sql_prompts>");if(d&&d.length){for(x=0;x<d.length;x++){f("<prompt name='"+d[x].name+"'><values>");for(j=0;j<d[x].values.length;j++){f("<value><code><![CDATA["+(d[x].values[j].code||"")+"]]></code><text><![CDATA["+(d[x].values[j].text||"")+"]]></text></value>")}f("</values></prompt>")}}if(window._report_prompt&&window._report_prompt.length){for(x=0;x<window._report_prompt.length;x++){if(window._report_prompt[x].name&&window._report_prompt[x].values){f("<prompt name='"+window._report_prompt[x].name+"'><values>");for(j=0;j<window._report_prompt[x].values.length;j++){f("<value><code><![CDATA["+(window._report_prompt[x].values[j].code||"")+"]]></code><text><![CDATA["+(window._report_prompt[x].values[j].text||"")+"]]></text></value>")}f("</values></prompt>")}}}f("</sql_prompts>")}f("<Filter>");b=e.filter;w=b?b.subGroups:null;if(w&&w.length>0){for(x=0;x<w.length;x++){f(w[x].TX())}}f("</Filter>");f("<HavingFilter>");b=e.havingfilter;w=b?b.subGroups:null;if(w&&w.length>0){for(x=0;x<w.length;x++){f(w[x].TX())}}f("</HavingFilter>");if(e._IL9){f("<AuxFilter>");for(var A in e._IL9){f(e._IL9[A])}f("</AuxFilter>")}if(e.mdf){f("<gridfilter>");for(var A in e.mdf){y=e.mdf[A];if(y&&y.op){f("<c i='"+A+"' op='"+y.op+"'><v1><![CDATA["+(y.val1||"")+"]]></v1><v2><![CDATA["+(y.val2||"")+"]]></v2></c>")}}f("</gridfilter>")}f("<MeasureOption><measureformat><![CDATA["+Base64.encode(e.measureformat||"")+"]]></measureformat>");f("<measureformatname><![CDATA["+Base64.encode(e.measureformatname||"")+"]]></measureformatname>");f("</MeasureOption>");f("<Style><item>");o=e.itemstyle;if(o){for(x=0;x<o.length;x++){f(o[x].tx())}}f("</item></Style>");f("<SheetFormula>");s=e.Xsf;if(s){for(x=0;x<s.length;x++){f(s[x].TX())}}f("</SheetFormula>");f("<DetailView>");B=e.dff1;for(x=0;x<B.length;x++){f("<view"+IG$._I20(B[x],"uid;name;nodepath;type;sheetindex;sheetname;titem;tparams","s")+" showintab='"+(e.dff1[x].showintab?"T":"F")+"'></view>")}f("</DetailView><CellOption/>");f(c.TX());f(e.rro.TX());f(e.pro.TX());h=e.sortoption;f("<SortOption"+IG$._I20(h,"showlastrank;sortbyvalue","b")+IG$._I20(h,"sortcount","i")+IG$._I20(h,"sortmethod;sortmeasure;sortorder;sortorder_type;sortorder_memo;sortpartition","s")+"/>");u=e.dashboardfilter;if(u&&u.length>0){f("<DashboardFilter>");for(x=0;x<u.length;x++){f(IG$._I25(u[x]))}f("</DashboardFilter>")}f("<WebLayout");if(e.layoutinfo){f(IG$._I20(e.layoutinfo,"headerposition;region;docid","s"));f(IG$._I20(e.layoutinfo,"width;height","i"));f(IG$._I20(e.layoutinfo,"collapsed","b"))}f("></WebLayout><result uid='"+(e.resultuid||"")+"'/></Sheet>");return q.join("")},mL:function(c,f){var e=this,d=1,a=f.cl,b,g;if(c.titem&&a){d=0;switch(a.position){case 1:g=e.rows;break;case 2:g=e.cols;break;case 3:g=e.measures;break}if(g&&g[a.index]&&c.titem.indexOf(g[a.index].uid)>-1){d=1}}return d},c$a:function(x){var C=this,E,b,o,w,g,f,l,y={};C.enablepivot=true;C.customfix="F";C.customfixcols=0;C.rowperpage=20;C.usepaging="F";C.pagestyle="normal";C.dataquerymode="M_PIVOT";C.viewmode="grid";C.viewchange="T";C.toolbutton="F";C.openload=true;C.autorefresh=false;C.refresh_timer=60;C.edrill=false;C.syncrows=true;if(x){C.columnfill=true;IG$._I1f(C,x,C.__pca[0],"b");IG$._I1f(C,x,C.__pca[1],"s");IG$._I1f(y,x,C.__pca[2],"s");if(y.viewchange){C.tb_vch=y.viewchange=="T"}if(y.toolbutton){C.tb_prt=y.toolbutton=="T"}if(y.gridprint){C.tb_prt_grd=y.gridprint=="T"}if(y.exportbutton){C.tb_prt_i=y.exportbutton.toLowerCase()}C.cubeuid=IG$._I06(C.cubeuid);C.objtype=C.objtype||"SHEET";IG$._I1f(C,x,"resultlimit;layoutmode","i");C.name=IG$._I1b(x,"name");pivot=IG$._I18(x,"name");if(pivot){C.name=IG$._I24(pivot)}pivot=IG$._I18(x,"Pivot");if(pivot){IG$._I1f(C,pivot,C.__pca[3],"s");IG$._I1f(C,pivot,C.__pca[4],"i");IG$._I1f(C,pivot,C.__pca[5],"b");if(C.dataquerymode=="T"){C.dataquerymode="M_DATA"}else{if(C.dataquerymode=="F"){C.dataquerymode="M_PIVOT"}}}}else{C.measurelocation="column";C.measureposition=0;C.isdistinct=false;C.fetchall=false;C.showlnum=false;C.hidemenu=false;C.measuretitle="F";C.ext_title=null;C.openload=true;C.columnfill=true;C.viewchange="T";C.toolbutton="F"}C.rows=[];C.cols=[];C.measures=[];C.clusters=[];C.query=[];C.queryItems=[];C.rptitems=[];var B,A,s,u,D,d,e,z;if(x&&pivot){$.each([{a:"RowDimensions",b:C.rows},{a:"ColumnDimensions",b:C.cols},{a:"Measures",b:C.measures},{a:"QueryItems",b:C.queryItems},{a:"Clusters",b:C.clusters}],function(K,F){var H=IG$._I18(pivot,F.a),G=IG$._I26(H),J,I;for(I=0;I<G.length;I++){J=new IG$._IE8(G[I]);F.b.push(J)}});d=IG$._I18(pivot,"c1/item");if(d){C.c1=new IG$._IE8(d,true)}s=IG$._I18(pivot,"rptitems");u=IG$._I26(s);for(B=0;B<u.length;B++){z={rows:[],measures:[],cols:[]};C.rptitems.push(z);IG$._I1f(z,u[B],"name;measureposition;measuretitle","s");$.each([{a:"columns",b:z.cols},{a:"measures",b:z.measures}],function(K,G){var F=IG$._I18(u[B],G.a),I,H,J;if(F){I=IG$._I26(F);for(H=0;H<I.length;H++){J=new IG$._IE8(I[H],true);G.b.push(J)}}});d=IG$._I18(u[B],"c1/item");if(d){z.c1=new IG$._IE8(d,true)}d=IG$._I18(u[B],"ext_title");if(d){z.ext_title=IG$._I24(d)}z.filter=new IG$._IEb();z.havingfilter=new IG$._IEb();g=IG$._I18(u[B],"Filter");C.p2(g,z.filter);g=IG$._I18(u[B],"HavingFilter");C.p2(g,z.havingfilter)}}C.Xsf=[];C.si=0;C.sortoption={};C.dff1=[];C.chartPivot={clusters:[],rows:[],measures:[]};C.filter=new IG$._IEb();C.havingfilter=new IG$._IEb();if(x){g=IG$._I18(x,"ChartOption");C.cco=new IG$._IEc(g);g=IG$._I18(x,"ROption");C.rro=new IG$._IEd(g);g=IG$._I18(x,"python");C.pro=new IG$._IEdP(g);g=IG$._I18(x,"ChartPivot");if(g){C.p1(g)}g=IG$._I18(x,"Filter");C.p2(g,C.filter);g=IG$._I18(x,"HavingFilter");C.p2(g,C.havingfilter);g=IG$._I18(x,"Style");C.p3(g);g=IG$._I18(x,"MeasureOption");if(g){$.each(["measureformat","measureformatname"],function(H,G){var F=IG$._I18(g,G);if(F){C[G]=IG$._I24(F);if(C[G]){C[G]=Base64.decode(C[G])}}})}g=IG$._I18(x,"SortOption");if(g){C.sortoption=IG$._I1c(g);C.sortoption.sortbyvalue=C.sortoption.sortbyvalue=="F"?false:true;C.sortoption.showlastrank=C.sortoption.showlastrank=="T"}g=IG$._I18(x,"result");if(g){C.resultuid=IG$._I1b(g,"uid")}g=IG$._I18(x,"SheetFormula");if(g){u=IG$._I26(g);for(B=0;B<u.length;B++){D=new IG$._IF0(u[B]);if(D.fid&&D.fid.indexOf("_")>-1){C.si=Math.max(C.si,parseInt(D.fid.substring(D.fid.indexOf("_")+1))+1)}else{D.fid="formula_"+C.si;C.si++}C.Xsf.push(D)}}g=IG$._I18(x,"DetailView");if(g){snodes=IG$._I26(g);for(B=0;B<snodes.length;B++){f={};IG$._I1f(f,snodes[B],"uid;name;nodepath;type;sheetindex;sheetname;showintab;titem;tparams","s");f.showintab=(f.showintab=="T")?true:false;C.dff1.push(f)}}g=IG$._I18(x,"ExecuteSQL");if(g){var s=IG$._I18(g,"SQL"),a,h;h=C.sqloption={};h.dbpool=IG$._I1b(g,"dbpool");h.querytool="T";if(s){h.sql=IG$._I24(s)}s=IG$._I18(g,"columns");if(s){a=IG$._I26(s);if(a&&a.length>0){h.columns=[];for(B=0;B<a.length;B++){var c=IG$._I4f(a[B]);h.columns.push(c)}}}s=IG$._I18(g,"prompts");if(s){a=IG$._I26(s);if(a&&a.length>0){h.prompts=[];for(B=0;B<a.length;B++){var q=new IG$._Ib4(a[B]);h.prompts.push(q)}}}}l=C.layoutinfo={};g=IG$._I18(x,"WebLayout");if(g){IG$._I1f(l,g,"headerposition;region;docid","s");IG$._I1f(l,g,"width;height","i");IG$._I1f(l,g,"collapsed","b")}}else{C.cco=new IG$._IEc();C.rro=new IG$._IEd();C.pro=new IG$._IEdP()}},p3:function(e){var d=this,c,a,f,b;d.itemstyle=[];if(e){a=IG$._I18(e,"item");f=IG$._I26(a);for(c=0;c<f.length;c++){b=new IG$._IF7(f[c]);d.itemstyle.push(b)}}},p1:function(e){var d=this,b,f,g,c,a=d.chartPivot;$.each([{a:"ClusterDimensions",b:a.clusters},{a:"RowDimensions",b:a.rows},{a:"Measures",b:a.measures}],function(s,h){var q=IG$._I18(e,h.a),l,o;if(q){g=IG$._I26(q);for(l=0;l<g.length;l++){o=new IG$._IE8(g[l]);h.b.push(o)}}})},p2:function(e,c){var d=this;if(e){var f=IG$._I26(e,"FilterGroup"),b;if(f&&f.length>0){for(b=0;b<f.length;b++){var a=new IG$._IEb();a.name=IG$._I1b(f[b],"name");c.subGroups.push(a);d.parseSubFilter(f[b],a)}}}},parseSubFilter:function(f,c){var d,b,g,a,e=this;a=IG$._I26(f);if(a&&a.length>0){for(b=0;b<a.length;b++){if(IG$._I29(a[b])=="FilterGroup"){var g=new IG$._IEb();g.name=IG$._I1b(a[b],"name");e.parseSubFilter(a[b],g);c.subGroups.push(g)}else{c.subConditions.push(new IG$._IE9(a[b]))}}}},Uc:function(a){var c=this,b=1,d=c.rows.length+c.cols.length+c.measures.length+c.clusters.length;if(d>0){b=(c.cubeuid==a)}return b}};IG$._IF0=function(b){var a=this,d,c;a.__pca=["baseuid;direction;stylename;title;type;fid;showtoprow;groupresults","separatecolumn;subtotalbase;usecolumnformat"];if(b){IG$._I1f(a,b,a.__pca[0],"s");IG$._I1f(a,b,a.__pca[1],"b");IG$._I1fx(a,b,"formatstring");d=IG$._I18(b,"Expression");if(d){c=IG$._I1c(d);$.each(c,function(e,f){a[e]=f});a.expression=IG$._I24(d)}}};IG$._IF0.prototype={TX:function(){var c=this,b,a;a=c.g1();b="<Formula"+IG$._I20(c,c.__pca[0],"s")+IG$._I20(c,c.__pca[1],"b")+"><Expression";if(a){$.each(a,function(d,e){if(c[e.name]){b+=" "+e.name+"='"+c[e.name]+"'"}})}b+="><![CDATA["+(c.expression?c.expression:"")+"]]></Expression>"+(c.formatstring?"<formatstring><![CDATA["+(c.formatstring)+"]]></formatstring>":"")+"</Formula>";return b},p1:function(g){var e=this,b=e.__pca,f,c,a,d;for(c=0;c<b.length;c++){f=b[c].split(";");for(a=0;a<f.length;a++){e[f[a]]=g.get(f[a])}}e.expression=g.get("expression");e.formatstring=g.get("formatstring");d=e.g1();if(d){$.each(d,function(h,l){e[l.name]=g.get(l.name)})}},g1:function(){var c=this,b=IG$._IEFc,a;$.each(b,function(d,e){if(e.expr==c.expression){a=e.params;return false}});return a}};IG$._IF1=function(q,y){var u=this,l,h,d=IG$._I18(q,"/smsg/item/Sheet");u.rows=parseInt(IG$._I1b(d,"rowcount"));u.cols=parseInt(IG$._I1b(d,"columncount"));u.srow=IG$._I1b(d,"startrow");u.srow=(u.srow)?parseInt(u.srow):0;u.colfix=0;u.rowfix=0;u.delim=IG$._I1b(d,"delimiter");u.merge=[];u.styles={};u.header=[];u.data=[];var a,x,s,g;a=IG$._I18(d,"Header");if(a){x=IG$._I26(a);for(l=0;l<x.length;l++){s=IG$._I1c(x[l]);u.header.push(s)}}a=IG$._I18(d,"Data");if(a){g=IG$._I24(a)}else{g=IG$._I24(d)}var b=g.split(u.delim),w=[],e=0,o=0;for(l=0;l<b.length;l++){var f={text:b[l],mrow:e,mcol:o,merged:0,stylename:null,chart:null};w.push(f);o++;if(l>0&&o==u.cols){if(e==0&&u.header.length==0){for(h=0;h<w.length;h++){s={fieldid:"column_"+h,name:w[h].text,type:"string"};u.header.push(s)}}else{u.data.push(w)}w=[];o=0;e++;if(y&&e>y){break}}}};IG$._IF2=function(b,h){var g=this,f=h||IG$._I18(b,"/smsg/results"),c,d,a,e;g.results=[];g.r_stat=IG$._I18(b,"/smsg/r_results");g._IL8=IG$._I1b(f,"jobid");c=IG$._I26(f);for(e=0;e<c.length;e++){d=c[e];a=new IG$._IF4(d);g.results.push(a)}};IG$._IF3=function(e){var d=this,c,g=IG$._I18(e,"Data"),b=IG$._I24(g),a,f;d.item=IG$._I1c(e);f=d.data=[];a=b.split(d.item.delimiter);for(c=0;c<a.length-1;c++){f.push({code:a[c]})}};IG$._IF4=function(N){var F=this,W,E,ad,ag,I,D,e,c,l,L=";",b,ak;b=F._params={};F.m1=true;if(!N){return}IG$._I1f(F,N,"rows;cols;col;row;pagestart;pageend;source","i");F.colfix=F.col;F.rowfix=F.row;IG$._I1f(F,N,"delimiter;clustercode;clustervalue;cache;cache_time;u_cache_time","s");l=F.delim=F.delimiter;F.clustercode=F.clustercode.split(l);F.clustervalue=F.clustervalue.split(l);F.clusterdesc="";F.cache=(F.cache=="T"||F.cache=="true");F.m1=(F.rows>F.rowfix)?false:true;for(ak=0;ak<F.clustercode.length;ak++){F.clusterdesc+=(ak>0?" ":"")+(F.clustervalue[ak]||F.clustercode[ak])}W=IG$._I18(N,"parameters");if(W){c=IG$._I26(W);for(ag=0;ag<c.length;ag++){b[IG$._I1b(c[ag],"name")]=IG$._I24(c[ag])}}W=IG$._I18(N,"MergeRange");F.merge=[];F.styles={};if(W){E=IG$._I24(W);ad=E.split(";");for(ag=0;ag<ad.length;ag++){if(ad[ag]!=""){I=ad[ag].split(",");F.merge.push(I)}}}e=IG$._I18(N,"Styles");if(e){F.c_cset=IG$._I1b(e,"c_cset");c=IG$._I26(e);for(ag=0;ag<c.length;ag++){D=new IG$._IF9(c[ag],false);F.styles[D.name]=D}}e=IG$._I18(N,"Stats");F.fs_=[];var A,s,C,S,ao,J={},B,K,O,u,H,an,al;if(e){c=IG$._I26(e);for(ag=0;ag<c.length;ag++){A={col:Number(IG$._I1b(c[ag],"colindex"))};s=IG$._I26(c[ag]);for(C=0;C<s.length;C++){A[IG$._I29(s[C])]=IG$._I24(s[C])}F.fs_.push(A)}}e=IG$._I18(N,"curvefit/bands");if(e){c=IG$._I26(e);F.__bands=c}F.stylemap=null;e=IG$._I18(N,"StyleMap");if(e){F.stylemap={};var w=IG$._I24(e);w=w.split(l);for(ag=0;ag<w.length-1;ag++){F.stylemap[ag]=w[ag]}}e=IG$._I18(N,"FilterDesc");if(e){F.f_=IG$._I24(e)}e=IG$._I18(N,"TreeInfo");if(e){S=IG$._I24(e);if(S&&S!=""){S=S.split(";");this.hastree=true;for(ak=0;ak<S.length;ak++){ao=S[ak].split(",");S[ak]={r:parseInt(ao[0]),c:parseInt(ao[1]),d:parseInt(ao[2]),p:ao[3],e:ao[4],hc:ao[5]=="1",h:ao[6]=="1",hm:parseInt(ao[7])};J[""+S[ak].r+"_"+S[ak].c]=S[ak]}}}var ah=IG$._I18(N,"TableData"),ac,T,af,ae,ab,aa,Z,X,V,U,R,Q,y,aj,f,Y,ai,ak,z,x,h,g,M,G,a,P,q,am,o;an=F.data=[];al=F.geodata=[];if(ah){c=IG$._I26(ah);if(c.length>0){for(ag=0;ag<c.length;ag++){ac=IG$._I1c(c[ag]);if(ac.lat&&ac.lng){al.push({row:ag,lat:ac.lat,lng:ac.lng,c:(ac.c=="T"),cc:ac.c=="T"?parseInt(ac.cc):-1})}T=IG$._I26(c[ag]);o={};for(am=0;am<T.length;am++){o[IG$._I29(T[am])]=T[am]}af=IG$._I24(o.t);af=(af?af.split(l):null);ae=IG$._I24(o.v);ae=(ae?ae.split(l):null);ab=IG$._I24(o.c).split(l);aa=IG$._I24(o.s).split(L);Z=IG$._I24(o.p).split(L);X=IG$._I24(o.m).split(L);V=IG$._I24(o.i).split(L);U=IG$._I24(o.pi).split(L);R=o.rs?IG$._I24(o.rs).split(L):null;Q=o.cc?IG$._I24(o.cc).split(L):null;y=o.cm?IG$._I24(o.cm).split(L):null;f=[];for(Y=0;Y<F.cols;Y++){M={_n_:ac.i,text:af?af[Y]:(ae?ae[Y]:ab[Y]),mrow:0,mcol:0,merged:0,stylename:(F.stylemap?F.stylemap[parseInt(aa[Y])]:aa[Y]),chart:null,position:parseInt(Z[Y]||-1),code:ab[Y]||null,value:ae?ae[Y]||null:null,index:parseInt(X[Y]||-1),title:parseInt(V[Y]||-1),pindex:parseInt(U[Y]||-1),cc:Q?Q[Y]:null,si:R?R[Y]:null,cm:y&&y[Y]?parseInt(y[Y]):-1};G=""+ag+"_"+Y;if(S&&J[G]){M.celltree={depth:J[G].d,ptext:J[G].p,haschild:J[G].hc,parent:null,opened:J[G].e=="1",h:J[G].h,hm:J[G].hm};if(M.celltree.ptext){for(a=ag-1;a>=0;a--){if(an[a][Y].code==M.celltree.ptext&&an[a][Y].celltree&&an[a][Y].celltree.depth==M.celltree.depth-1){an[a][Y].celltree.haschild=true;M.celltree.parent=an[a][Y];break}}}if(f.length>0){if(f[0].mcelltree){f[0].mcelltree.push(Y)}else{f[0].mcelltree=[Y]}}else{M.mcelltree=[Y]}}f.push(M)}an.push(f)}}for(ag=0;ag<F.merge.length;ag++){z=parseInt(F.merge[ag][0]);x=parseInt(F.merge[ag][1]);h=parseInt(F.merge[ag][2]);g=parseInt(F.merge[ag][3]);B=0;if(x>an.length-1){x=an.length-1}for(ai=z;ai<x+1;ai++){for(t=h;t<g+1;t++){u=x-z;H=g-h;P=an[ai][t];B=P.merged;if(ai==z&&t==h){if(g-h>0){B|=2}if(x-z>0){B|=1}}else{if(g-h>0){B|=4}if(x-z>0){B|=8}}K=P.mrow;O=P.mcol;P.merged=B;P.mrow=Math.max(u,K);P.mcol=Math.max(H,O)}}}}var d=IG$._I18(N,"MicroChart");F.microcharts=[];if(d){c=IG$._I26(d);if(c.length>0){for(ag=0;ag<c.length;ag++){q=new IG$._IF5(c[ag]);F.microcharts.push(q);if(F.data.length>q.rowIndex&&F.data[q.rowIndex].length>q.colIndex){F.data[q.rowIndex][q.colIndex].chart=q}}}}d=IG$._I18(N,"hidden_columns");F.hidden_columns=[];if(d){var w=IG$._I24(d);if(w){w=w.split(",");for(ag=0;ag<w.length;ag++){if(w[ag]){F.hidden_columns.push(parseInt(w[ag]))}}}}};IG$._IF5=function(b){var a=this,c;a.rowIndex=-1;a.colIndex=-1;if(b){a.rowIndex=parseInt(IG$._I1b(b,"row"));a.colIndex=parseInt(IG$._I1b(b,"col"));c=new IG$._IF6(b);a.chartData=c}};IG$._IF6=function(c){var l=this,u,q,f,h,s=[],w,g,e,o,a,b,d;IG$._I1f(l,c,"w;h;mctype","i");IG$._I1f(l,c,"linecolor;fillcolor","s");u=IG$._I24(IG$._I18(c,"Data"));q=IG$._I24(IG$._I18(c,"SeriesNames"));f=IG$._I18(c,"SeriesList");h=IG$._I26(f);for(b=0;b<h.length;b++){g=IG$._I18(h[b],"Datum");e=IG$._I24(g);g=IG$._I18(h[b],"Code");o=IG$._I24(g);g=IG$._I18(h[b],"Disp");a=IG$._I24(g);w=e.split(";");w.deleteRow(w.length-1);for(d=0;d<w.length;d++){w[d]=parseFloat(w[d])}s.push({data:w,element:a.split(";")})}l.elementdata=u.split(";");l.seriesnames=q.split(";");l.seriesdata=s};IG$._IF7=function(c,a,d){var e,b=this;b.itemtype=a;b.custom=d;b.rptseq="0";if(c){b.nodename=IG$._I29(c);b.basestylename=IG$._I1b(c,"basestylename");b.name=IG$._I1b(c,"name");b.rptseq=IG$._I1b(c,"rptseq")||"0";b.uid=IG$._I1b(c,"uid");b.fid=IG$._I1b(c,"fid")||"";e=IG$._I18(c,"Header");b.hs=new IG$._IF8(e,"Header");e=IG$._I18(c,"Data");b.ds=new IG$._IF8(e,"Data")}};IG$._IF7.prototype={_IFb:function(b){var a=this;a.hs._IFb(b.hs);a.ds._IFb(b.ds)},Mb_15a:function(b){var a=this;a.hs.Mb_15a(b.hs);a.ds.Mb_15a(b.ds)},Mb_16:function(b){var a=this;a.hs.Mb_16(b.hs);a.ds.Mb_16(b.ds)},tx:function(b){var d=this,a=d.nodename,c="<"+a+IG$._I20(d,"basestylename;name;uid;rptseq;fid","s")+">"+((d.hs)?d.hs.tx((b?b.hs:null)):"")+((d.ds)?d.ds.tx((b?b.ds:null)):"")+"</"+a+">";return c}};IG$._IF8=function(c,a){var b=this;b.objinfo="name;backcolor;bordercolor;forecolor;formatstring;fontsize;nullvalue;fontstyle;paddingbottom;paddingleft;paddingright;paddingtop;textalign;width;widthmode;borderbottom;borderright;columnwidth;autowidth;cssname";b.nodename=a;b.__pca=["name;backcolor;bordercolor;forecolor;fontsize;nullvalue;autowidth;cssname","fontstyle;paddingbottom;paddingleft;paddingright;paddingtop;textalign;width;widthmode;borderright;borderbottom;columnwidth"];if(c){IG$._I1f(b,c,b.__pca[0],"s");IG$._I1f(b,c,b.__pca[1],"i");IG$._I1fx(b,c,"template");IG$._I1fx(b,c,"formatstring")}};IG$.$gv=function(d){var c="",b,a,e;if(d&&d!=""){if(d.length>0&&d.charAt(0)=="#"){c=d}else{b=Number(d).toString(16);e=b.length;for(a=0;a<6-e;a++){b="0"+b}c="#"+b}}return c};IG$.$gc=function(c){var b;if(c.length>0&&c.charAt(0)=="#"){var a=c.substring(1);b=parseInt(a,16)}return b};IG$._IF8.prototype={tx:function(g){var c=this,b,l=c.__pca[0],h=c.__pca[1],f,d,e;if(g){f=l.split(";");d=[];for(b=0;b<f.length;b++){e=f[b];if(e!="name"&&c[e]!=g[e]){d.push(e)}}l=d.join(";");f=h.split(";");d=[];for(b=0;b<h.length;b++){e=f[b];if(e!="name"&&c[e]!=g[e]){d.push(e)}}h=d.join(";")}var a="<"+c.nodename+IG$._I20(c,l,"s")+IG$._I20(c,h,"i")+">"+(c.formatstring?"<formatstring><![CDATA["+(c.formatstring)+"]]></formatstring>":"")+(c.template?"<template><![CDATA["+(c.template)+"]]></template>":"")+"</"+c.nodename+">";return a},_IFb:function(d){var c=this,e=c.objinfo.split(";"),b,a;for(b=0;b<e.length;b++){a=e[b];if(a!="name"&&(typeof c[a]=="undefined"||c[a]==null)){c[a]=d[a]}}},Mb_15a:function(d){var c=this,e=c.objinfo.split(";"),b,a;for(b=0;b<e.length;b++){a=e[b];c[a]=d[a]}},Mb_16:function(d){var c=this,e=c.objinfo.split(";"),b,a;for(b=0;b<e.length;b++){a=e[b];if(a!="name"&&c[a]==d[a]){c[a]=null}}}};IG$._IF9=function(e,a){var d=this,b,c;IG$._I1f(d,e,"name;nullvalue;fontsize;gradient;backcolor1;backcolor2;str_backcolor1;str_backcolor2;backalpha1;backalpha2;bordercolor;borderthickness;padleft;padright;padtop;padbottom;textalign;fontstyle;color;fontsize;borderbottom;borderright;columnwidth;autowidth;cssname","s");IG$._I1fx(d,e,"formatstring");IG$._I1fx(d,e,"template");d.padleft=Number(d.padleft);d.padright=Number(d.padright);d.padtop=Number(d.padtop);d.padbottom=Number(d.padbottom);c="left";switch(d.textalign){case"1":case"4":case"7":c="left";break;case"2":case"5":case"8":c="center";break;case"3":case"6":case"9":c="right";break}if(a){b="<style> ."+d.name+"{ color:"+d.color+"; text-align: "+c+"; } </style>";$("body").append(b)}};IG$._IFa=function(a){var b=this;b.loctype=a;b.loaded=false;b.data=[]};IG$._IFa.prototype={getGeoPosition:function(a){var b;if(typeof(data[a])!="undefined"){b=data[a]}return b},parseMapData:function(d){var c=this,b,a,e=[];$.each(["LOCCODE","SLOC","SPLOC","LAT","LNG"],function(g,h){var f=IG$._I24(IG$._I18(d,h)).split(";");e.push(f)});for(b=0;b<e[0].length-1;b++){a=e[0][b];switch(c.keyname){case"sloc":a=e[1][b];break;case"ploc":a=e[2][b];break}c.data[a]={loccode:e[0][b],sloc:e[1][b],lat:e[2][b],lng:e[3][b]}}}};IG$.iff=function(a){var b=this;b.dtype="static";b.coldelim="\t";b.rowdim="\n";b.dvalues=[];b.i_cdata=[];a&&b.p1(a)};IG$.iff.prototype={p1:function(e){var g=this,b=IG$._I18(e,"/smsg/item"),l,f,d,a,h,c={};if(b){g.ditem=IG$._I1c(b);l=IG$._I18(b,"objinfo");if(l){g.dtype=IG$._I1b(l,"dtype")}l=IG$._I18(b,g.dtype=="static"?"static_data":"sql_data");f=l?IG$._I24(l):null;g.displabel=l?IG$._I1b(l,"displabel"):null;if(g.dtype=="static"&&f){h=f.split(g.rowdim);for(d=0;d<h.length;d++){a=h[d].split(g.coldelim);a[1]&&g.dvalues.push({code:a[0],value:a[1]})}}else{if(g.dtype=="sql"&&l){g.dsql=f;g.ds=IG$._I1b(l,"ds")}}l=IG$._I18(b,"sqljoin");if(l){if(g.dtype=="sqljoin"){g.ds=IG$._I1b(l,"ds")}$.each(["codeschema","codetable","codetableuid","codefield","valuefield","sortfield","codemapping","viewmode","displabel"],function(o,q){g[q]=IG$._I1b(l,q)});$.each(["codefilter1","codefilter2","codefilter3"],function(q,s){var o=IG$._I19(l,s);if(o){g[s]=IG$._I24(o)}})}l=IG$._I18(b,"i_cdata");if(l){g.i_cset=IG$._I1b(l,"i_cset")=="T";f=IG$._I24(l);if(f){h=f.split(g.rowdim);for(d=0;d<h.length;d++){a=h[d].split(g.coldelim);if(a[1]){g.i_cdata.push({value:a[0],color:a[1]});c[a[0]]=a[1]}}if(g.dtype=="static"){for(d=0;d<g.dvalues.length;d++){if(c[g.dvalues[d].code]){g.dvalues[d].color=c[g.dvalues[d].code]}}}}}}},p2:function(){var e=this,d=["<smsg><item"],c,f=e.dvalues,a=e.dtype,b=e.i_cdata;d.push(IG$._I20(e.ditem,"name;description;uid","s")+">");d.push("<objinfo dtype='"+(a||"static")+"'></objinfo>");if(a=="static"){d.push("<static_data"+(e.displabel?" displabel='"+e.displabel+"'":"")+"><![CDATA[");for(c=0;c<f.length;c++){c>0&&d.push("\n");d.push((f[c].code||"")+"\t"+(f[c].value||""))}d.push("]]></static_data>")}else{if(a=="sql"){d.push("<sql_data ds='"+(e.ds||"")+"'"+(e.displabel?" displabel='"+e.displabel+"'":"")+"><![CDATA[");d.push(e.dsql||"");d.push("]]></sql_data>")}}d.push("<sqljoin");$.each(["ds","codeschema","codetable","codetableuid","codefield","valuefield","sortfield","codemapping","viewmode","displabel"],function(g,h){if(e[h]){d.push(" "+h+"='"+e[h]+"'")}});d.push(">");$.each(["codefilter1","codefilter2","codefilter3"],function(g,h){if(e[h]){d.push("<"+h+"><![CDATA["+e[h]+"]]></"+h+">")}});d.push("</sqljoin>");d.push("<i_cdata i_cset='"+(e.i_cset?"T":"F")+"'><![CDATA[");for(c=0;c<b.length;c++){c>0&&d.push("\n");d.push((b[c].value||"")+"\t"+(b[c].color||""))}d.push("]]></i_cdata>");d.push("</item></smsg>");return d.join("")},get:function(a){return this[a]},set:function(a,b){this[a]=b}};IG$.ifg=function(a){var b=this;b.modules=[];b.objinfo={};b.cls="";a&&b.p1(a)};IG$.ifg.prototype={p1:function(e){var g=this,b=IG$._I18(e,"/smsg/item"),l,f,d,a,h,c;if(b){g.ditem=IG$._I1c(b);l=IG$._I18(b,"objinfo");g.objinfo=l?IG$._I1c(l):{};l=IG$._I18(b,"cls");g.cls=l?IG$._I24(l):"";l=IG$._I18(b,"modules");f=l?IG$._I26(l):null;if(f){for(d=0;d<f.length;d++){a={name:IG$._I1b(f[d],"name"),iparams:[],oparams:[]};l=IG$._I18(f[d],"description");a.description=l?IG$._I24(l):null;l=IG$._I18(f[d],"script");a.script=l?IG$._I24(l):null;$.each(["iparams","oparams"],function(w,o){var s=IG$._I18(f[d],o),u,q;if(s){u=IG$._I26(s);for(q=0;q<u.length;q++){a[o].push(IG$._I1c(u[q]))}}});g.modules.push(a)}}}},p2:function(){var c=this,b=["<smsg><item"],a,d;b.push(IG$._I20(c.ditem,"name;description;uid","s")+">");b.push("<objinfo"+IG$._I20(c.objinfo,"ds","s")+"></objinfo>");b.push("<cls><![CDATA["+(c.cls||"")+"]]></cls>");b.push("<modules>");for(a=0;a<c.modules.length;a++){d=c.modules[a];b.push("<module name='"+d.name+"'>");b.push("<description><![CDATA["+(d.description||"")+"]]></description>");b.push("<script><![CDATA["+(d.script||"")+"]]><\/script>");$.each(["iparams","oparams"],function(f,e){var h,g=d[e];b.push("<"+e+">");if(g){for(h=0;h<g.length;h++){b.push("<param name='"+g[h].name+"'></param>")}}b.push("</"+e+">")});b.push("</module>")}b.push("</modules>");b.push("</item></smsg>");return b.join("")}};IG$.m$sm=function(a){var b=this;b.l5=a;b.mindex=0};IG$.m$sm.prototype={load:function(b){var a=this;if(a.loaded==b){a.m1.call(a);$(a.l5).trigger("svgloaded");return}a.l5.empty();$.ajax({url:b,dataType:"text",type:"GET",cache:true,complete:function(d,c){},success:function(e,d,f){var c=IG$._I13(e);a.loaded=b;a.l1.call(a,c);$(a.l5).trigger("svgloaded")},error:function(e,c,d){}})},l1:function(y){var D=this,e,B,h=D.l5,s,E,w,z,x,b,C,d,q,A,l,o,g=1,c=1,f=1,a;D.mapid={};D.l4={cx:0,cy:0,cwidth:IG$.x_10._w(h),cheight:IG$.x_10._h(h),sx:0,sy:0,swidth:IG$.x_10._w(h),sheight:IG$.x_10._h(h)};e=IG$._I18(y,"/svg");D.l6=Raphael(h[0],0,0,D.l4.cwidth,D.l4.cheight);D.legend=$("<ul class='map-legend'></ul>").appendTo(h).hide();if(e){s=IG$._I1c(e);D.l4.sx=(s.x)?D.l3(s.x):D.l4.sx;D.l4.sy=(s.y)?D.l3(s.y):D.l4.sy;D.l4.swidth=(s.width)?D.l3(s.width):D.l4.swidth;D.l4.sheight=(s.height)?D.l3(s.height):D.l4.sheight;a=s.viewBox;a=(a)?a.split(" "):null;if(a){for(x=0;x<a.length;x++){a[x]=D.l3(a[x])}a=a[0]==D.l4.sx&&a[1]==D.l4.sy&&a[2]==D.l4.swidth&&a[3]==D.l4.sheight?null:a}D.l4.vbox=a;D.l6.setSize(D.l4.cwidth,D.l4.cheight);var u={isroot:true,id:null,children:[],childmap:{},d:[],set:D.l6.set()};D.l2(e,u,b);D.p=u;D.m1.call(D)}},Y1:function(){var c=this,b=c.legend,a=c.mapdata.measures;b.empty();c.legidx=0;if(a&&a.length>0){b.show();$.each(a,function(d,e){$("<li class='map-legend-item'>"+(e.name||e.text)+"</li>").appendTo(b).bind("click",function(){c.legidx=d;c.applyColor.call(c,d)})})}else{b.hide()}},l2:function(b,l,g){var h=this,d,f=IG$._I26(b),e,a,q,c=h.l6,o;for(d=0;d<f.length;d++){e=IG$._I29(f[d]);o=IG$._I1c(f[d]);if(e=="g"){a={isroot:true,id:o.id,name:o.name||o.id,children:[],childmap:{},d:[],set:c.set()};l.set.push(a.set);l.children.push(a);l.childmap[a.id||"noid"]=a;h.mapid[a.id||"noid"]=a;h.l2(f[d],a,g)}else{if(e=="path"){q=c.path(o.d);l.d.push(q);delete o.d;q.attr(q);l.set.push(q)}}}},l3:function(a){a=a.replace(/px/,"");return Number(a)},m1:function(){var G=this,f,D,q=G.l5,x,H,A,B,g=1,d=1,h=1,l=G.l6,b,E,e,w,C,s,u,a,c,o,z,F,y=G.p;G.l4.cwidth=IG$.x_10._w(q);G.l4.cheight=IG$.x_10._h(q);a=G.l4.vbox;c=G.l4.cwidth;o=G.l4.cheight;z=G.l4.swidth;F=G.l4.sheight;if(a){d=a[2]/z;h=a[3]/F;g=Math.min(d,h)}A=c/z;B=o/F;H=Math.min(A,B)*g;G.l6.setSize(c,o);w=(c-z*H)/2;C=(o-F*H)/2;b="s"+(H)+","+H+",0,0t"+w+","+C;y.set.transform(b)},loadData:function(b){var a=this;a.mapdata=b;a.Y1();a.applyColor(0)},applyColor:function(u){var o=this,f,b,q,w,d=155,h=o.mapdata,l,e,g=o.mapdata.mincolor||"#ff0000",a=o.mapdata.maxcolor||"#0000ff",s=o.legend;o.legidx=u;w=u;w=(w<h.measures.length)?w:0;legenditems=s.children("li");if(legenditems&&legenditems.length>0){for(f=0;f<legenditems.length;f++){$(legenditems[f]).removeClass("map-legend-selected");if(f==w){$(legenditems[f]).addClass("map-legend-selected")}}}b=h.measures[w].min;q=h.measures[w].max;$.each(h.point,function(x,c){var c=c.data[w];if(isNaN(c)==false){e=((q-c)*d)/(q-b);l=IG$._I15(g,a,d,e);if(o.mapid[x]){o.mapid[x].set.attr({fill:l})}}})}};IG$._I94=function(f,e,b,a){var g=this;g.mresult=null;g._ILa=null;g._ILb=null;g.uid=f;g._IL8=null;g.container=e;g.owner=b;g.width=0;g.height=0;g.ctrl=null;g.fsize=a;g.sheetobj=null;g._0x030=new IG$.cMa();g._0x030._ILb=g._ILb;g._0x030.size=g.fsize;g._0x030.initialize(g.owner);g._0x030.sheetobj=g.sheetobj;if(g._0x030.ctx){var d=g,c=g._0x030.ctx;c.bind({itemclick:function(h){},doubleclick:function(h){},selectionchanged:function(h){},menu:function(h){}})}g._IN0()};IG$._I94.prototype={_tsm:function(){return this._0x030.selectedItems},dor:function(l,c,E,u){var H=this,f=H._ILb?H._ILb.treeview:false,s=H._ILb?H._ILb.columntree:false,y=H._ILb?H._ILb.showlnum:false,z=H._ILb?H._ILb.hidemenu:false,e=H._ILb?H._ILb.mdf:null,J,C,d,a,G=-1,B,A,g,I,F,x,q,o,D,b=0,h,w;d=(H.width>0?H.width:H._0x030._d);a=(H.height>0?H.height:H._0x030._e);if(d>0&&a>0){H._0x030._d=d;H._0x030._e=a}H._0x030._6=-1;H._0x030._5=-1;H._0x030._3=0;H._0x030._4=0;if(H._ILb&&H._ILb.customfix=="T"&&H._ILb.customfixcols>-1){G=H._ILb.customfixcols}if(H.mresult!=null&&H.mresult.data!=null&&H.mresult.data.length>0){if(E&&u){g=E.c;I=E.r;h=E.celltree.hm;F=H.mresult.data[I];E.celltree.h=0;E.celltree.haschild=true;E.celltree.depth=E.celltree.depth||0;for(B=u.rowfix;B<u.data.length;B++){D=u.data[B];if(h==2){for(A=0;A<H.mresult.colfix-u.colfix;A++){q=F[g-A];if(q.merged==0){q.merged=1}x={_n_:q._n_,c:q.c,cc:q.cc,cm:q.cm,code:q.code,h:q.h,index:q.index,mcol:q.mcol,menus:null,merged:0,mrow:q.mrow,pindex:q.pindex,position:q.position,r:q.r,selected:false,si:q.si,stylename:q.stylename,text:q.text,title:q.title,value:q.value,celltree:{}};x.merged|=8;x.celltree.parent=E;x.celltree.depth=E.celltree.depth+1;D.splice(g-E.celltree.depth+A,0,x)}o=D[g+1];o.celltree=o.celltree||{};o.celltree.depth=E.celltree.depth+1;o.celltree.parent=E;o.celltree.nd=1;D[0].mcelltree=D[0].mcelltree||[];D[0].mcelltree.push(g+1)}else{if(h==1){x=D[g];x.celltree=x.celltree||{};x.celltree.parent=E;x.celltree.depth=E.celltree.depth+1;D[0].mcelltree=D[0].mcelltree||[];D[0].mcelltree.push(g)}}if(B==u.rowfix&&g>0){for(A=0;A<g;A++){if(F[A].merged==0){F[A].merged|=1}}}for(A=0;A<g;A++){D[A].merged=0;D[A].merged|=8}H.mresult.data.splice(I+(++b),0,D)}}else{H._0x030.styles=H.mresult.styles;H._0x030.showlnum=y;H._0x030.hidemenu=z}if(f==true){H._0x030._4=(H.mresult.colfix>0?1:0);H._0x030._3=H.mresult.rowfix;H._0x030._5=(H.mresult.colfix>0?0:-1);J=H.gtr(H.mresult.data,H.mresult.colfix,H.mresult.rowfix,H.mresult.styles)}else{J=H.mresult.data;if(y){for(B=0;B<J.length;B++){w=(J[B].length)?Number(J[B][0]._n_)-H.mresult.rowfix:0;J[B].splice(0,0,{_n_:w,chart:null,code:"",index:0,mcol:0,merged:0,mrow:0,pindex:0,position:9,stylename:"LineNumber_"+(B<H.mresult.rowfix?"title":"data"),text:(B<H.mresult.rowfix?"":""+(w+1)),title:0,value:null})}}H._0x030._4=H.mresult.colfix+(y?1:0);H._0x030._3=H.mresult.rowfix}if(G>-1){H._0x030._4=G}if(s==true){H._0x030._3=H.mresult.rowfix;H._0x030._6=H.mresult.rowfix;if(H._ILb.cols.length>0&&H._ILb.measurelocation=="column"){C=H._ILb.cols.length-H._ILb.measureposition;if(C>0){}J=H.gtc(J,H._0x030._4,H.mresult.rowfix,H.mresult.styles)}}}H._IN0();H._0x030.__trow=(J?J.length:0);H._0x030.__tpstart=0;H._0x030.__tpend=0;H._0x030.__gflt=e;if(l==false&&(H.mresult.pagestart>0||H.mresult.pageend<H.mresult.rows)){H._0x030.__tpstart=H.mresult.pagestart;H._0x030.__tpend=H.mresult.pageend;H._0x030.__trow=H.mresult.rows}H._0x030.setDataProvider(J||[],undefined,H.mresult.hidden_columns)},gtk:function(h,q,g,s){var d=[],e,b,f=[],a=[],o,c,l;for(e=q;e<h[s].length;e++){mcell=h[s][e];f.push({cindex:e,mindex:mcell.index,cname:mcell.code});l=mcell.code}f.sort(function(w,u){var x=0;if(w.mindex==u.mindex){if(w.cindex>u.cindex){x=1}else{if(w.cindex<u.cindex){x=-1}}}else{x=(w.mindex>u.mindex)?1:-1}return x});for(e=0;e<f.length;e++){a.push(f[e].cindex)}for(e=0;e<h.length;e++){o=[];for(b=0;b<h[e].length;b++){if(b<q){o.push(h[e][b])}else{o.push(h[e][a[b-q]])}}if(o[0].children&&o[0].children.length>0){c=this.gtk2(o[0].children,a,q);o[0].children=c}if(e==s){d.splice(0,0,o)}else{d.push(o)}}return d},gtk2:function(h,e,b){var c,a,g=[],d,f;for(c=0;c<h.length;c++){d=[];for(a=0;a<h[c].length;a++){if(a<b){d.push(h[c][a])}else{d.push(h[c][e[a-b]])}}if(d[0].children&&d[0].children.length>0){f=this.gtk2(d[0].children,e,b);d[0].children=f}g.push(d)}return g},gtc:function(c,d,C,o){var D=this,F=[],z,y,w,b,w,G=[],e,q,h,B,f,A,a,g,E,u=[],s,x,l;for(z=0;z<C;z++){e=c[z];q=[];for(y=0;y<e.length;y++){h=this.gmr(e[y],y);q.push(h)}F.push(q)}for(z=0;z<C;z++){e=F[z];a=null;if(z<C-1){for(y=e.length-1;y>=d;y--){a=(y>d)?e[y-1]:null;if((a!=null&&e[y].text!=a.text)||y==d){E=z;if(e[y].haschild===true){E=e[y].depth}if(z==0||(z>0&&E==z)){for(w=0;w<C;w++){if(w<z){A=this.gmr(F[w][y],z);A.haschild=true;A.depth=E;F[w].splice(y,0,A)}else{A=this.gmr(e[y],z);A.haschild=true;A.depth=E;F[w].splice(y,0,A)}}}}}}a=null;g=[];for(y=0;y<C;y++){g[y]=null}w=-1;for(y=d;y<e.length;y++){if(e[y].haschild===true){g[e[y].depth]=y;w=y;if(e[y].depth>0&&g[e[y].depth-1]!=null){e[y].parent=e[g[e[y].depth-1]]}}else{if(w>-1){e[y].parent=e[w]}}}}e=F[C-1];for(z=e.length-1;z>=0;z--){if(e[z].haschild==true){u.push(z)}}for(z=0;z<C;z++){e=F[z];for(y=d;y<e.length;y++){s=(y==d)?null:e[y-1].code;x=e[y].code;l=(y+1<e.length)?e[y+1].code:null;if(x==s==l){e[y].merged=4}else{if(x==s){e[y].merged=4}else{if(x==l){e[y].merged=2}}}}}for(z=C;z<c.length;z++){q=[];e=c[z];for(y=0;y<e.length;y++){h=e[y];q.push(h)}D.gmx(q,u,z,0,F[C-1],C,d,o);F.push(q)}return F},gmx:function(f,s,b,z,o,y,d,l){var A=this,u,w,e,g,a,h,c=[],x,q,B;for(u=s.length-1;u>=0;u--){h=s[u];g=this.gmr(f[h],b);g.code=null;g.value=null;g.text=null;f.splice(s[u],0,g)}for(u=0;u<y;u++){c.push(0)}for(u=f.length-1;u>=d;u--){a=o[u];if(a.haschild==true){B=f[u];f[u].code=c[a.depth+1];f[u].value=f[u].code;f[u].text=f[u].code;if(l&&l[B.stylename]){x=l[B.stylename];q=Number(B.code);if(x.formatstring&&isNaN(q)==false){B.text=q.format(x.formatstring);B.value=B.text}}c[a.depth+1]=0;c[a.depth]+=Number(f[u].code)}else{c[c.length-1]+=Number(f[u].code)}}if(f[0].children&&f[0].children.length>0){for(w=0;w<f[0].children.length;w++){A.gmx(f[0].children[w],s,b,1,o,y,d,l)}}},gmt:function(e,g){var d,b,f=[],c,a;if(e&&e.children&&e.children.length>0){for(d=0;d<e.children.length;d++){a=this.gmr(null,-1);g.children.push(a);c=this.gmt(e.children[d],a);if(c&&c.length>0){for(b=0;b<c.length;b++){f.push(c[b])}}else{f.push(a)}}}else{if(g){f.push(g)}}return f},gmr:function(c,a){var b;if(c){b={code:c.code,chart:c.chart,index:c.index,mcol:c.mcol,merged:0,pindex:c.pindex,position:c.position,stylename:c.stylename,text:c.text,title:c.title,value:c.value,treeinfo:c.treeinfo||{},children:c.children||[],ccol:a,parent:c.parent}}else{b={code:"",chart:null,index:null,mcol:null,merged:0,pindex:null,position:null,stylename:null,text:null,title:null,value:null,treeinfo:{},children:[],ccol:a,parent:null}}return b},gmd:function(b,a){b.code=a.code;b.chart=a.chart;b.index=a.index;b.mcol=a.mcol;b.pindex=a.pindex;b.position=a.position;b.stylename=a.stylename;b.text=a.text;b.title=a.title;b.value=a.value},gtr:function(a,b,u,e){var y=this,z=[],q,o,l,x=[],c,f,d,A,h,w=a[0].length-b,s,g;for(q=0;q<b;q++){x.push({row:null,depth:0})}for(q=0;q<a.length;q++){c=a[q];if(q<u){f=[];for(o=0;o<c.length;o++){d=this.gmr(c[o],o);if(o<b){if(o==0){f.push(d)}else{}}else{f.push(d)}}z.push(f)}else{for(o=0;o<c.length;o++){f=null;d=this.gmr(c[o],o);if(o<b){if(x[o].row==null||(x[o].row&&x[o].row[0].code!=c[o].code)){A=x[o].row;f=[];f.push(d);d.treeinfo.depth=o;if(o==0){x[o].row=f;z.push(f)}else{A=x[o-1].row;if(A[0].position==4){x[o].row=A;d.parent=A[0]}else{x[o].row=f;A[0].children.push(f);d.parent=A[0]}}for(l=o+1;l<b;l++){x[l].row=null}x[o].depth=o}else{if(x[o]){}}}else{h=x.length-1;x[h].row.push(d)}}}}for(q=u;q<z.length;q++){f=z[q];svalues=y.ms(f,w,e)}return z},ms:function(o,e,u){var q=this,h,g,f=[],w,a,c,s,b=false,l;for(h=0;h<e;h++){f.push({v:null,c:null})}if(o.length>1){if(o[0].position==4){b=true;return f}for(h=0;h<e;h++){l=Number(o[h+1].code);l=isNaN(l)?0:l;f[h].v=(f[h].v==null)?l:f[h].v+l;f[h].c=o[h+1]}}else{if(o[0].children&&o[0].children.length>0){for(h=0;h<o[0].children.length;h++){w=q.ms(o[0].children[h],e,u);for(g=0;g<w.length;g++){if(w[g].c){f[g].v=(f[g].v==null)?Number(w[g].v):f[g].v+Number(w[g].v);f[g].c=w[g].c}}}for(h=0;h<f.length;h++){s={code:f[h].v,chart:null,index:f[h].c?f[h].c.index:null,mcol:f[h].c?f[h].c.mcol:null,merged:0,pindex:f[h].c?f[h].c.pindex:null,position:f[h].c?f[h].c.position:null,stylename:f[h].c?f[h].c.stylename:null,text:""+f[h].v,title:f[h].c?f[h].c.title:null,value:f[h].v};if(u&&u[s.stylename]){a=u[s.stylename];c=Number(s.code);if(a.formatstring&&isNaN(c)==false){s.text=c.format(a.formatstring);s.value=s.text}}o.push(s)}}}return f},_IN0:function(b,a){var c=this;if(b&&a){c._ILa=b;c._ILb=a;c._0x030._ILb=a}if(c._ILb){c._0x030.columnfill=c._ILb.columnfill}},Mm12:function(){this.dor()}};IG$._I95=function(o,q,b,l,c){var g,s=this,h,f,e,d,a,u;s.rpc=o;s.mresult=null;s._ILa=null;s._ILb=null;s.uid=q;s._IL8=null;s.P1=$(b);s.ctrl=null;s._mc=[];s.detailChart=null;s.isHighChart=false;s.selectedData=null;s.ddt=0;s.f4=null;s.f4a=null;s.drawmode=null;s.rfctimer=-1;s.pw=-1;s.ph=-1;s.ti=0;s.scrollsize=13;s.scrollX=0;s._sep=IG$.sX;s.PJ2=$("<div></div>").appendTo(s.P1);s.PJ2.css({position:"absolute",top:0,bottom:0,left:0,right:0});l=l||IG$.x_10._w(s.P1);c=c||IG$.x_10._h(s.P1);IG$.x_10._w(s.PJ2,l);IG$.x_10._h(s.PJ2,c);s.container=s.PJ2[0];s.PJ3=$("<div class='idv-filter-desc'></div>").appendTo(s.P1).hide();s.PJ3.bind("click",function(){$(this).fadeOut()});s.PJ4=$("<div class='m-chart-selection'></div>").appendTo(s.P1).hide();$("<div class='m-chart-selection-bg'></div>").appendTo(s.PJ4);s._bN=$("<div class='igc-cfit-formula'></div>").appendTo(s.P1).hide();h=$("<div class='m-chart-selection-boxtop'></div>").appendTo(s.PJ4);s.PJ4a=$("<div class='m-chart-selection-box'></div>").appendTo(h);if(ig$.chartlogo&&ig$.chartlogo.enabled){f=$("<div class='"+ig$.chartlogo.clsname+"'></div>").appendTo(s.P1).hide();setTimeout(function(){f.fadeIn(2000)},500)}IG$._I0a(s.P1);s.reghscroll=$('<div class="m-datagrid-scroll m-datagrid-hscroll"></div>').css({height:s.scrollsize}).hide().appendTo(s.P1);s.hscroll=e=$('<div class="m-datagrid-track m-datagrid-track-h"></div>').appendTo(s.reghscroll);s.reghscrollthumb=$('<div class="m-datagrid-scrollthumb m-datagrid-scrollthumb-h"></div>').css({height:(s.scrollsize),width:20}).appendTo(e);d=$('<div class="m-datagrid-end m-datagrid-end-h">').css({height:(s.scrollsize),width:5}).appendTo(s.reghscrollthumb);s.reghscroll.bind({click:function(w){var x=s;if(x.mv==false){x.onscrollmouseclick.call(x,s,w,"h")}return false}});s.reghscrollthumb[0].eventtarget="horizontal";s.reghscrollthumb.bind({mousedown:function(w){var x=s;x.mv=true;x.onthumbmousedown.call(x,this,w,"h")},mouseup:function(w){var x=s;x.onthumbmouseup.call(x,this,w,"h")}});s._m1=$("<div class='chart-unit-content'></div>").appendTo(s.P1).hide()};IG$._I95.prototype={onthumbmousedown:function(c,b,d){var a=this;if(b){b.preventDefault();b.stopImmediatePropagation();a.dt1=new Date().getTime();a.thumbbuttondown=true;a.thumbMouseStartX=b.pageX;a.thumbMouseStartY=b.pageY;a.sx=a.scrollX;a.sy=a.scrollY;a.isScrolling=true;a.scrolltarget=c.eventtarget;a.registerGlobalEvent(d)}return false},onthumbmouseup:function(d,q,w){var l=this,a=l,o=new Date().getTime();if(q&&l.dt1&&l.dt1>-1&&o-l.dt1<200){var s=$(d),e=s.offset(),x=q.pageX-e.left,u=q.pageY-e.top,y=IG$.x_10._w(s),f=IG$.x_10._h(s),h=l.scrollX,g=l.scrollY,b,c;l.dt1=-1;event.stopPropagation();if(l.ge){$(document).unbind(l.ge);l.ge=null}l.globalMouseUp.call(l,q,w);a.thumbbuttondown=false;a.thumbMouseStartX=-1;a.thumbMouseStartY=-1;if(w=="v"){c=(u>f/2)?0.1:-0.1;b=Math.min(a.theight-a.cheight,(a.cheight-a.fixedRowHeight)*0.1);g=g+b*c;g=(g<0)?0:Math.min(g,a.theight-a.cheight);if(isNaN(g)){return}}else{if(w=="h"){c=(x>y/2)?0.1:-0.1;b=b=Math.min(a.twidth-a.cwidth,(a.cwidth-a.fixedColWidth)*0.1);h=h+b*c;h=(h<0)?0:Math.min(h,a.twidth-a.cwidth);if(isNaN(h)){return}}}if(a.scrollX!=h||a.scrollY!=g){a.scrollX=h;a.scrollY=g;a.updateThumbPosition.call(a);if(a.thumbTimer>-1){clearTimeout(a.thumbTimer)}a.onthumbtimer.call(a)}}},registerGlobalEvent:function(d){var a=this;var e=function(f){a.globalMouseDown.call(a,f,d);return false};var b=function(f){f.stopPropagation();a.mv=true;a.globalMouseMove.call(a,f,d);return false};var c=function(f){f.stopPropagation();a.mv=true;a.globalMouseUp.call(a,f,d);$(document).unbind({mousedown:e,mousemove:b,mouseup:c});return false};this.ge={mousedown:e,mousemove:b,mouseup:c};$(document).bind({mousedown:e,mousemove:b,mouseup:c})},globalMouseDown:function(a,b){},globalMouseMove:function(b,c){var a=this;b.preventDefault();b.stopImmediatePropagation();if(a){a.scrollHandler.call(a,{x:b.pageX,y:b.pageY},c)}},globalMouseUp:function(b,c){var a=this;a.isScrolling=false;a.isDragging=false;a.ge=null;setTimeout(function(){a.mv=false},50)},scrollHandler:function(e,d){var a=this,c=this,b=c.reghscroll,h=c.reghscrollthumb,f=e.x-a.thumbMouseStartX,g=a.scrollX;g=Math.min(IG$.x_10._w(c.hscroll),Math.max(0,a.sx+f));if(a.scrollX!=g){a.scrollX=g;a.updateThumbPosition.call(a);if(a.thumbTimer>-1){clearTimeout(a.thumbTimer)}a.thumbTimer=setTimeout(function(){a.onthumbtimer.call(a)},100)}},onthumbtimer:function(){var a=this,b=0;if(a.__sch&&a.__sch.f){b=Math.floor((a.scrollX*a.mresult.rows)/a.thumbhwidth);a.__sch.f.call(a.__sch.o,a,b)}},updateThumbPosition:function(){var c=this,a=30,b=(this.scrollX*this.sh);this.reghscrollthumb.css({left:Math.min(this.scrollX,IG$.x_10._w(c.hscroll)-IG$.x_10._w(this.reghscrollthumb))})},onscrollmouseclick:function(d,c,f){var a=this;c.stopPropagation();var h=a.scrollX,e=0,b,g=a.reghscrollthumb.offset();e=(g.left>c.pageX)?-1:1;b=a.thumbhwidth*a.sh;h+=b*e;h=Math.floor(h);h=Math.min(IG$.x_10._w(a.hscroll)-a.thumbcalc,Math.max(0,h));if(a.scrollX==h){return}a.scrollX=h;a.updateThumbPosition.call(a);clearTimeout(a.thumbTimer);a.thumbTimer=setTimeout(function(){a.onthumbtimer.call(a)},50)},pj3:function(h){var c=this,f=c.PJ3,a,b,g,e;if(h&&h!=""){if(c.ddt>0){}a=h.split("\n");g="";for(b=0;b<a.length;b++){if(a[b]!=""){e=a[b].substring(0,40);g=(g=="")?e:g+"<br>"+e}}if(g!=""){f.html(g).show()}clearTimeout(c.__fc);c.__fc=setTimeout(function(){f.fadeOut()},2000)}else{f.empty();f.hide()}},pj4:function(c){var a=this,b=a.PJ4;if(c==true){b.show()}else{if(c===false){b.hide()}else{b.toggle()}}},Mm12:function(a,c){var b=this;var e=b.P1,d=b.PJ2;c=c-10;IG$.x_10._w(d,a);IG$.x_10._h(d,c);this.cwidth=a;this.cheight=c;if(b.rfctimer>-1){clearTimeout(b.rfctimer)}b.rfctimer=setTimeout(function(){b.Mm12a.call(b,a,c)},200)},Mm12a:function(o,f){var g=this,q=g.treemap,s=g.bindc,l,e=g.PJ4,c,d,a,b,u=g._ILb?g._ILb.cco.pielayout:null;g.rfctimer=-1;if(Math.abs(g.pw-o)<5&&Math.abs(g.ph-f)<5){return}g.pw=o;g.ph=f;if(g.pw<5||g.ph<5){return}switch(g.drawmode){case"highchart":if(g._mc&&g._mc.length>0){if(u=="h"){d=o/g._mc.length;a=f}else{if(u=="h"){a=f/g._mc.length;d=o}else{d=o;a=f}}$.each(g._mc,function(h,w){$(w.renderTo).css({position:"absolute",left:(u=="h"?d*h:0),top:(u=="v"?a*h:0),width:d,height:a});w.setSize.call(w,d,a,doAnimation=true);w.renderTo&&$(w.renderTo).hide().show(0)})}break;case"echart":if(g._mc&&g._mc.length>0){if(u=="h"){d=o/g._mc.length;a=f}else{if(u=="h"){a=f/g._mc.length;d=o}else{d=o;a=f}}$.each(g._mc,function(h,w){$(w.renderTo).css({position:"absolute",left:(u=="h"?d*h:0),top:(u=="v"?a*h:0),width:d,height:a});w.resize.call(w,{width:d,height:a})})}break;case"treemap":if(q&&q.map){q.box.css({top:q.ty,left:0,width:o,height:f-q.ty});q.map.setSize(o,f-q.ty);q.map.renderTo&&$(q.map.renderTo).hide().show(0)}break;case"bindc":if(s&&s.container){IG$.x_10._w(s.container,o);IG$.x_10._h(s.container,f)}break;case"qavis":if(g.qavis){g.qavis.c9.call(g.qavis)}break;case"dcust":if(g.dcust){g.dcr(o,f)}break;case"protovis":if(g.vis){$(g.container).empty();g.vis=null;g.dcr(o,f)}break;case"bubblemap":if(g.bmap){g.dcr(o,f)}break;case"custom":if(g.customchart){g.customchart.updatedisplay.call(g.customchart,g,o,f)}}},Umx:function(e,f,d){var c=this,a=e,b=f,g=d;if(c.uMX){clearTimeout(c.uMX)}c.uMX=setTimeout(function(){c.aUmx.call(c,a,b,g)},800)},aUmx:function(h,o,l){var F=this,E=F.mresult,G=E.data,x=E.colfix,e=E.rowfix,f=(G.length>0)?G[0].length:0,C,B,y,z=[],D,q,s,c,H,u=F.PJ4,b,a;if(h){for(C=e;C<G.length;C++){s=true;for(B=0;B<o.length;B++){D=o[B];q=h[D];if(q&&isNaN(q.min)==false&&isNaN(q.max)==false){c=B+x;H=G[C][c].code;H=(H!="")?Number(H):0;if(H<q.min||H>q.max){s=false;break}}}if(s){z.push(C)}}}else{if(l&&o){for(C=0;C<o.length;C++){if(o[C]==l.px){px=C+x}else{if(o[C]==l.py){py=C+x}}}for(C=e;C<G.length;C++){s=true;b=G[C][px].code;a=G[C][py].code;b=(b!="")?Number(b):0;a=(a!="")?Number(a):0;b=(isNaN(b)?0:b);a=(isNaN(a)?0:a);if(b<l.x1||b>l.x2||a<l.y1||a>l.y2){s=false}if(s){z.push(C)}}}}var w=F.PJ4a,g=$("<table></table>"),d;w.empty();$("<span>"+(z.length)+" / "+G.length+" Items selected</span>&nbsp;&nbsp;&nbsp;&nbsp;<br><br>").appendTo(w);var A=$("<div class='clipbutton'>Select All</div>").appendTo(w);A.bind("click",function(){IG$._I47(g)});g.appendTo(w);for(C=0;C<e;C++){d=$("<tr></tr>").appendTo(g);for(B=0;B<f;B++){d.append($("<th>"+G[C][B].text+"</th>"))}}for(C=0;C<z.length;C++){d=$("<tr></tr>").appendTo(g);y=z[C];for(B=0;B<f;B++){d.append($("<td>"+G[y][B].text+"</td>"))}}g.bind("selectstart",function(){return true})},JJ$6:function(M){var H,G,P=M.data,D=M.colfix,g=M.rowfix,Q,E=[],d=[],l,b,K,C,s=0,O=this,x=[],F=[],A=[],J={},N={},u=[],q=[],f=0,y=0,L=O.cop.bmaprow,o=O.cop.bmapyaxis,a;O.drawmode="bubblemap";if(o==false&&D==2){a=false;for(H=g;H<P.length;H++){if(P[H].length>D){s=Number(P[H][D].code)||0;s=(s<0)?0:s}if(s>0){A.push(s);for(G=0;G<D;G++){K=P[H][G];b=K.text||K.code;if(G==0){if(!J[b]){J[b]={inc:f++};u.push(b)}x.push(J[b].inc)}else{if(G==1){if(!N[b]){N[b]={inc:y++};q.push(b)}F.push(N[b].inc)}}}}}}else{a=true;var e;for(H=0;H<g;H++){for(G=D;G<P[H].length;G++){K=P[H][G];b=K.text||K.code;if(H==0){q.push(b)}else{q[G-D]+=O._sep+b}}}for(H=g;H<P.length;H++){e="";for(G=0;G<P[H].length;G++){K=P[H][G];b=K.text||K.code;if(G<D){e=(G==0)?b:e+O._sep+b}else{if(G==D){u.push(e)}x.push(H-g);F.push(G-D);s=Number(b)||0;s=(s<0)?0:s;A.push(s)}}}}C=O.bmap=Raphael(O.container);var B=$(O.container),z=IG$.x_10._w(B),I=IG$.x_10._h(B);if(A.length){C.dotchart(0,0,z,I,x,F,A,{symbol:"o",max:O.cop.bmapsize,heat:true,axis:"0 0 1 1",axisxstep:Math.min(u.length-1,20),axisystep:Math.min(q.length-1,20),axisxlabels:u,axisxtype:" ",axisytype:" ",axisylabels:q}).hover(function(){this.marker=this.marker||C.tag(this.x,this.y,u[this.X]+"\n"+q[this.Y]+"\n"+this.value,0,this.r+2).insertBefore(this);this.marker.show()},function(){this.marker&&this.marker.hide()}).click(function(){var c=null,h=null;if(a==false){c={name:u[this.X]+IG$.sX+q[this.Y]},h={point:{category:this.value}}}else{c={name:u[this.X]},h={point:{category:q[this.Y]}}}(c&&h)&&O.p1.call(O,c,h)})}},disposeContent:function(b){var a,d,f;for(a=b._mc.length-1;a>=0;a--){try{d=b._mc[a];d&&d.destroy&&d.destroy();d&&d.dispose&&d.dispose()}catch(c){}b._mc[a]=null}b._mc=[];$(".i-sschart-cnt",b.container).empty();if(b.customchart&&b.customchart.destroy){b.customchart.destroy();b.customchart=null}if(b.vis){$(b.container).empty();b.vis=null}},dcr:function(f,u,o,d){var s=null,B=this,A=B.mresult,a,c,z,b,C,q=false,y,D;B.pw=(f>0?f:B.pw);B.ph=(u>0?u:B.ph);B._m1.hide();if(A){if(d==false){if(A.pagestart>0&&B.scrollX==0){o=true;q=true;var g=B._ILb.cco,l=g.maxchartresult;y=Math.min(A.data.length,(l>0?l:A.data.length));B.sh=y/A.rows;B.scrollX=(A.pagestart+20)*f/A.rows}}if(!o){B.sh=1;B.scrollX=0}B.cop=B._ILb.cco;c=B.cop;B.rct=c.charttype;B.rcs=c.subtype;b=c.useformula;C=c.timeseriesfield;if(c.cunittext){B._m1.empty();B._m1.append("<span>"+c.cunittext+"</span>");B._m1.show()}B.pj3(A.f_||"");if(B.ddt>0&&c.drillcharttype&&c.drillcharttype.length>B.ddt-1&&c.drillcharttype[B.ddt-1]!=""){z=c.getChartInfo(parseInt(c.drillcharttype[B.ddt-1]));B.rct=z.charttype;B.rcs=z.subtype}if(B.rct=="map"){B.isHighChart=false;B.l3(A)}else{if(B.rct=="treemap"){B.isHighChart=false;B.ti=0;B.l3a(A)}else{if(B.rct=="bindc"){B.isHighChart=false;B.l3b(A,B.rct)}else{if(B.rct=="matrix"){B.isHighChart=false;B.JJ$3(A)}else{if(B.rct=="bubblemap"){B.isHighChart=false;B.JJ$6(A)}else{if(window.d3&&(B.rct=="parallel"||B.rct=="performancemap"||B.rct=="boxplot"||B.rct=="networkdiagram_pos"||B.rct=="networkdiagram_neg"||B.rct=="matrixdiagram"||B.rct=="anderson"||B.rct=="forcelayout"||B.rct=="chord"||B.rct=="sunburst")){B.isHighChart=false;B.JJ$4(B.rct,A)}else{if(window.d3&&(B.rct=="bullet"||B.rct=="nation")){B.isHighChart=false;B.JJ$4a(B.rct,A)}else{if(IG$.__c_&&IG$.__c_.chartext&&IG$.__c_.chartext[B.rct]){B.drawmode="custom";B.isHighChart=false;if(!B.customchart){B.customchart=new IG$.__c_.chartext[B.rct](B)}try{B.customchart.drawChart.call(B.customchart,B,A)}catch(x){setTimeout(function(){IG$._I52("Error on chart drawing : "+x.message)},100)}}else{B.isHighChart=true;s=B._l1(A,f,u,(q?false:o))}}}}}}}}if(!o||q==true){if(B.sh<1){tstyle={left:0};tstyle.width=f;B.reghscroll.show();B.thumbhwidth=IG$.x_10._w(B.hscroll);thumbcalc=Math.max(30,B.thumbhwidth*B.sh);B.thumbcalc=thumbcalc;B.reghscrollthumb.css({left:Math.min(B.scrollX,B.thumbhwidth-thumbcalc),width:thumbcalc});B.reghscroll.css(tstyle);B.regh=true}else{B.regh=false;B.reghscroll.hide()}}}return s},l1:function(a){this.l3(this.mresult)},l2:function(e,d,c,g,b){var a=this;var f=new IG$._I3e();f.init(a,{ack:"11",payload:"<smsg><item code='"+e+"' pcode='"+d+"'/></smsg>",mbody:IG$._I2e({option:"geomap"})},a,a.rs_l2,null,[c,g,b]);f._l()},rs_l2:function(b,g){var a=IG$._I18(b,"/smsg/MapData");var d=g[0];var f=g[1];var c=g[2];if(a!=null){var e=new IG$._IFa(d);e.keyname=f;e.parseMapData(a);IG$._I5f[d]=e;c.l3(c.mresult)}},area:function(g){var d=0;var c=g.length;var a=c-1;var f;var e;for(var b=0;b<c;a=b++){f=g[b];e=g[a];d+=f.lng*e.lat;d-=f.lat*e.lng}d/=2;return d},l3b:function(c,b){var o=this,g=null,e=[],l=[],s=[],h,f,a,d,q=(c.data.length>0?c.data[0].length:0);for(h=c.rowfix;h<c.data.length;h++){a=[];for(f=0;f<c.data[h].length;f++){d=c.data[h][f].code||c.data[h][f].text;a.push(d)}e.push(a)}for(h=0;h<c.colfix;h++){l.push({i:h})}for(h=c.colfix;h<q;h++){s.push({i:h})}switch(b){case"bindc":g=new m$Bl($(o.container));g.ea=l;g.ma=s;g.mv=null;break}if(g){g.loadData.call(g,e)}o.drawmode=b;o.bindc=g},_s1:function(b,c){Highcharts.each(b.series,function(d){Highcharts.each(d.points,function(e){if(e.x>=c.xAxis[0].min&&e.x<=c.xAxis[0].max&&e.y>=c.yAxis[0].min&&e.y<=c.yAxis[0].max){e.select(true,true)}})});var a=b.getSelectedPoints.call(b);this.p1(b,a)},_s3:function(b,g,d){var c=this,a=b.getSelectedPoints(),f=new Date().getTime();if(c.rcs=="syncchart"){if(a.length>0){Highcharts.each(a,function(e){e.select(false)})}}else{if(c._st&&(f-c._st)<500){if(a.length>0){Highcharts.each(a,function(e){e.select(false)})}c.p1.call(c,b,null)}c._st=f}},u_:function(a,e){var c=this,d={fontSize:a},b={};if(!c.measurediv){c.measurediv=$('<div class="m-datagrid-cell-measure"></div>').appendTo($("body"))}c.measurediv.show();c.measurediv.css(d);c.measurediv.html(e||"&nbsp;");b.height=IG$.x_10._h(c.measurediv);b.width=IG$.x_10._w(c.measurediv);return b},dP:function(c,b){var a=c||"<b>{name}</b>: {percent} %",d;d=a.indexOf("{name}");if(d>-1){a=a.substring(0,d)+b.point.name+a.substring(d+"{name}".length)}d=a.indexOf("{percent}");if(d>-1){a=a.substring(0,d)+Highcharts.numberFormat(b.percentage,1)+a.substring(d+"{percent}".length)}d=a.indexOf("{value}");if(d>-1){a=a.substring(0,d)+(b.point.fval||Highcharts.numberFormat(b.y,0))+a.substring(d+"{value}".length)}return a},_l1:function(ad,M,Z,B){var Y,W,C=ad.data,aM=ad.colfix,aG=ad.rowfix,x=ad.hidden_columns||{},aL,ay=this,ah=[],S=1,al,am=[],O,aC=[],H=0,au=0,ax=0,aD=0,L=0,N=-1,aP,at,a,aK=ay._ILb.cco,an=aK.swapaxis,ao=aK.useformula,ac=aK.maxchartresult,E=aK.timeseriesfield,X=aK.useformatvalue,aB=ay._ILb.measures,aa,c,af,aO,o,aH,aJ,aF,y={},z,Q=[];var ap=(C&&C.length>0)?C[0].length:0;var ak=(C?C.length:0);var aw=ay.rcs,D=[];ay.drawmode="highchart";if(aw=="radar"){au=1}else{if(aw=="fixedplacement"){aD=1}else{if(aw=="syncchart"){N=(aB&&aB.length>1)?aB.length:-1;L=N>1?1:0}}}aP=Math.min(C.length,(ac>0?ac:C.length));ay._dlen=aP;at=aG;if(!B){if(ad.pagestart>0||ad.rows>ad.pageend){ay.sh=aP/ad.rows}else{if(ac>0&&ac<C.length){ay.sh=ac/C.length}}}else{a=Math.floor((ay.scrollX*ad.rows)/ay.thumbhwidth);at+=a;aP=Math.min(C.length,aP+a)}var aE=[],ar={},u=aK.titleposition||"",ag=aK.colorset||ad.c_cset,I=1;if(IG$.__c_&&IG$.__c_.chartcolors&&IG$.__c_.chartcolors[ag]){ar.colors=IG$.__c_.chartcolors[ag]}if(aM+1<ap&&(aw=="scatter"||aw=="bubble")){var P,aI;H=1;if(aw=="bubble"){ax=1}if(an){for(Y=aM;Y<Math.min(ap,(ac>0?ac:ap));Y++){var aQ={x:ay.mvalue(C[aG][Y],X),y:ay.value(C[aG+1][Y],X)};if(ax&&aG+2<ak){zvalue=ay.mvalue(C[aG+2][Y],X);aQ.z=zvalue}var aN;for(W=0;W<aG;W++){aN=(W==0)?C[W][Y].text:aN+ay._sep+C[W][Y].text}aQ.name=aN;aQ.datarow=W;cvalue=C[0][W].text;if(cvalue!=aI){P=new Object();P.name=cvalue;P.data=[aQ];am.push(P)}else{if(P){P.data.push(aQ)}}aI=cvalue}}else{for(Y=aG;Y<Math.min(C.length,(ac>0?ac:C.length));Y++){var aQ={x:ay.mvalue(C[Y][aM],X),y:ay.mvalue(C[Y][aM+1],X)};if(ax&&aM+2<ap){zvalue=ay.mvalue(C[Y][aM+2],X);aQ.z=zvalue}var aN;for(W=0;W<aM;W++){aN=(W==0)?C[Y][W].text:aN+ay._sep+C[Y][W].text}aQ.name=aN;aQ.datarow=Y;cvalue=C[Y][0].text;if(cvalue!=aI){P=new Object();P.name=cvalue;P.data=[aQ];am.push(P)}else{if(P){P.data.push(aQ)}}aI=cvalue}}}else{if(an==true){for(Y=aG;Y<ak;Y++){for(W=0;W<aM;W++){aH=C[Y][W].text;o=(W==0)?aH:o+aH}var P=new Object();P.name=o;P.data=[];am.push(P);D.push(0)}}else{for(Y=aM;Y<ap;Y++){aF=-1;o="";if(L){for(W=0;W<aG;W++){aJ=C[W][Y];if(aJ.position==3){aF=aJ.pindex;y[aF]=aJ.text;continue}aH=aJ.text;o=(W==0)?aH:o+ay._sep+aH}}else{for(W=0;W<aG;W++){aH=C[W][Y].text;o=(W==0)?aH:o+ay._sep+aH}}var P=new Object();P.name=o||y[aF];P.meas_k=aF;P.data=[];am.push(P);D.push(0)}}var T=Math.max((an==true?ap:C.length),20),ab=false,R=ay.rcs=="waterfall"&&aK.stack==false,aj,az;if(an==true){for(Y=aM;Y<Math.min(ap,(ac>0?ac:ap));Y++){ab=false;for(W=0;W<aG;W++){al=(W==0)?C[W][Y].text:al+IG$.sX+C[W][Y].text;if(C[W][Y].position==4){ab=true;break}}if(ab==false||ao==true){O=0;for(W=aG;W<ak;W++){var aa=ay.mvalue(C[W][Y],X);if(isNaN(aa)==true){am[O].data.push(null)}else{if(au){am[O].data.push(aa)}else{aj=am[O].data.length;am[O].data.push({name:al,x:Y-aM,y:(R&&aj>0)?aa-D[O]:aa,fval:C[W][Y].text});D[O]=aa}}O++}ah.push(al);S++}}}else{af=(ap==aM+1)?1:0;for(Y=at;Y<aP;Y++){ab=false;c=null;al="";for(W=0;W<aM;W++){if(typeof(x[W])!="undefined"){continue}al=(!al)?C[Y][W].text:al+IG$.sX+C[Y][W].text;if(C[Y][W].position==4){ab=true;break}c=af&&C[Y][W].cc?C[Y][W].cc:c}if(ab==false||ao==true){O=0;for(W=aM;W<ap;W++){aa=ay.mvalue(C[Y][W],X);if(isNaN(aa)==true){am[O].data.push({name:al,x:Y-at,y:null,fval:null})}else{if(au){am[O].data.push(aa)}else{aj=am[O].data.length;az={name:al,x:Y-at,y:(R&&aj>0)?aa-D[O]:aa,fval:C[Y][W].text};if(!c&&C[Y][W].cm>-1){var av=ar.colors||(Highcharts.theme?Highcharts.theme.colors:null)||Highcharts.getOptions().colors;if(av){aO=ay._int(C[Y][W].cm,av[O%av.length])}}if(c||aO){az.color=c||aO}aO=0;am[O].data.push(az);D[O]=aa}}O++}ah.push(al);S++}}}}ar.chart={animation:false,renderTo:ay.container,defaultSeriesType:(aD?null:"area"),reflow:false,alignTicks:true,borderWidth:0,spacingBottom:I};if(au){ar.chart.polar=true;ar.pane={size:"80%"}}if(aK.showtitle==true){ar.title={text:aK.title};if(u.indexOf("BOTTOM_")>-1){ar.title.floating=true;ar.chart.marginBottom=50;ar.title.y=Z-30}if(u.indexOf("_LEFT")>-1){ar.title.align="left"}else{if(u.indexOf("_RIGHT")>-1){ar.title.align="right"}}}else{ar.title={text:""}}if(!aD){ar.chart.defaultSeriesType=IG$._I36(aw)}if(aK.enabledragselect){ar.chart.zoomType="xy";ar.chart.events={selection:function(f){ay._s1.call(ay,this,f);return false},click:function(f){ay._s3.call(ay,this,f,1)}}}else{ar.chart.events={click:function(f){ay._s3.call(ay,this,f,0)}}}if(!H){if(aK.enablezoom&&!aK.enabledragselect){ar.chart.zoomType="xy"}var K={labels:{maxStaggerLines:2,formatter:function(){return this.value}}};if(aK.xlabel==false){K.labels.enabled=false}else{if(aK.xaxisrot==false){K.labels.autoRotation=false;if(aK.xstagl>0){K.labels.staggerLines=aK.xstagl;K.labels.maxStaggerLines=aK.xstagl}if(aK.xstep>1){K.labels.step=aK.xstep}}}ar.xAxis={categories:ah,labels:K.labels,showLastTickLabel:true,align:"left",events:{setExtremes:function(aR){if(Math.abs(this.options.labels.rotation)==90){var f=parseInt(this.options.labels.style.lineHeight)+2,s=parseInt(this.chart.plotBox.width),aS=Math.floor(s/f),h,w;if(aR.max!==null&&aR.max!==undefined){h=Math.round(aR.max-aR.min)}else{h=Math.round(this.dataMax-this.dataMin)}w=Math.ceil(h/(aS*(this.tickInterval==null?1:this.tickInterval)));this.update({labels:{step:w}},true)}}}}}else{ar.chart.zoomType="xy";ar.xAxis={startOnTick:true,endOnTick:true,showLastLabel:true}}if(aK.e3d_en=="T"){ar.chart.options3d={enabled:true,alpha:Number(aK.e3d_al),beta:Number(aK.e3d_be),depth:Number(aK.e3d_de),viewDistance:Number(aK.e3d_vd)}}var d=this,U,aA=0,A={formatter:function(){var f=aK.yaxisformat,aR=0,w=this.value,aU="",h,aT,s,aS;if(f){aT=f.indexOf(".");if(aT>-1){for(s=aT+1;s<f.length;s++){aS=f.charAt(s);if(aS=="#"||aS=="0"){aR++}}}aT=f.indexOf("%");if(aT>-1){h=(aT-1)>0?f.charAt(aT-1):null;if(h=="'"){}else{w=w*100}aU=" %"}}return Highcharts.numberFormat(w,aR)+aU}};var g={text:aK.yaxistitle||null};ar.yAxis={title:g,labels:A};if(aK.yaxismax!=""&&IG$._I37(aK.yaxismax)==true){ar.yAxis.max=Number(aK.yaxismax)}if(aK.yaxismin!=""&&IG$._I37(aK.yaxismin)==true){ar.yAxis.min=Number(aK.yaxismin)}if(aK.ytickint>0){ar.yAxis.tickInterval=aK.ytickint}if(au){ar.yAxis.gridLineInterpolation="polygon";ar.yAxis.lineWidth=0}ar.legend={margin:2};if(aK.showlegend==true){ar.legend.enabled=true;aK.legendposition=aK.legendposition||"BOTTOM_CENTER";ar.legend.verticalAlign=aK.legendposition.indexOf("BOTTOM_")>-1?"bottom":(aK.legendposition.indexOf("TOP_")>-1?"top":"middle");ar.legend.align=(aK.legendposition.indexOf("LEFT_")>-1)?"left":((aK.legendposition.indexOf("RIGHT_")>-1)?"right":"center");if(ar.legend.align=="center"){if(aK.legendposition.indexOf("_RIGHT")>-1){ar.legend.x=200}else{if(aK.legendposition.indexOf("_LEFT")>-1){ar.legend.x=-M/2+200}}ar.legend.layout="horizontal"}else{if(aK.legendposition.indexOf("_TOP")>-1){ar.legend.verticalAlign="top"}else{if(aK.legendposition.indexOf("_BOTTOM")>-1){ar.legend.verticalAlign="bottom"}}ar.legend.layout="vertical"}}else{ar.legend.enabled=false}if(aK.lgndfloating){ar.legend.floating=true;ar.legend.borderWidth=1;ar.legend.backgroundColor=(Highcharts.theme&&Highcharts.theme.legendBackgroundColor)||"#FFFFFF"}var J={enabled:aK.dl_marker?true:false,states:{hover:{enabled:true}}},aq,ai=ar.chart?ar.chart.options3d:null;if(/(pie|doughnut|funnel|pyramid)/.test(ay.rcs)){ar.tooltip={formatter:function(){return this.point.name+"<br>"+Highcharts.numberFormat(this.y,aK.precision||0)+" ("+Highcharts.numberFormat(this.percentage,1)+" %)"}};ar.plotOptions={pie:{allowPointSelect:true,cursor:"pointer",innerSize:(""+(ay.rcs=="doughnut"?(aK.pieinnerradius>20?aK.pieinnerradius:40):(aK.pieinnerradius||0))+"%"),dataLabels:{enabled:true,distance:aK.pielabeldist,formatter:function(){return ay.dP(aK.piedatalabel,this)}},events:{click:function(f){d.p1.call(d,this,f)}}}};if(ai&&ai.enabled){delete ai.viewDistance}ar.chart.renderTo=null;if(!aK.pielayout){am.splice(1,am.length-1)}$.each(am,function(aT,aX){var w=$("<div class='i-sschart-cnt'></div>").appendTo(ay.container),aS=$(ay.container),f=IG$.x_10._w(aS),h=IG$.x_10._h(aS),aR=f/am.length,aY=h/am.length,aW=$.extend(true,{},ar),aV,aU,aZ=0,s;if(aW.title&&aW.title.text){s=aW.title.text;s=IG$._I46(s,"{SERIES}",aX.name);aW.title.text=s}if(aK.pielayout=="h"){IG$.x_10._w(w,aR);IG$.x_10._h(w,h);w.css({left:aA});aA+=aR}else{if(aK.pielayout=="v"){IG$.x_10._h(w,aY);IG$.x_10._w(w,f);w.css({top:aA});aA+=aY}}aW.chart={renderTo:w[0],type:ay.rcs,spacingBottom:I};if(ar.chart.options3d){aW.chart.options3d=ar.chart.options3d}aW.plotOptions={pie:{allowPointSelect:true,cursor:"pointer",innerSize:ar.plotOptions.pie.innerSize,dataLabels:{enabled:true,distance:aK.pielabeldist,formatter:function(){return ay.dP(aK.piedatalabel,this)}},events:{click:function(a0){d.p1.call(d,this,a0)}}}};if(ai){aW.plotOptions.pie.depth=ai.depth}if(/(funnel|pyramid)/.test(ay.rcs)){aW.plotOptions=aW.plotOptions||{};aW.plotOptions[ay.rcs]={dataLabels:{enabled:true,softConnector:true,inside:true,distance:aK.pielabeldist,color:(Highcharts.theme&&Highcharts.theme.contrastTextColor)||"black",formatter:function(){return ay.dP(aK.piedatalabel,this)}}};for(aV=0;aV<aX.data.length;aV++){aU=ay.dP(aK.piedatalabel,{point:{name:aX.data[aV].name,fval:aX.data[aV].fval},percentage:99.9});cs=ay.u_(10,aU);aZ=Math.max(cs.width+10,aZ)}aZ=aZ+aK.pielabeldist;if(aZ>f*0.5){aZ=f*0.5}aW.chart.marginRight=aZ;if(ay.rcs=="funnel"){aW.plotOptions.funnel.neckWidth="30%";aW.plotOptions.funnel.neckHeight="25%"}}aX.type=ay.rcs=="doughnut"?"pie":ay.rcs;aW.series=[aX];aE.push(aW)})}else{for(Y=0;Y<am.length;Y++){if(!aD&&aK.renderas&&aK.renderas.length>Y&&aK.renderas[Y]){am[Y].type=IG$._I36(aK.renderas[Y])}if(aK.dl_enable&&aK.dl_enable_l&&aK.dl_enable_l.length>Y&&aK.dl_enable_l[Y]=="F"){am[Y].dataLabels={enabled:false}}if(ay.rcs=="waterfall"){am[Y].upColor=Highcharts.getOptions().colors[2];am[Y].color=Highcharts.getOptions().colors[3]}}if(aK.usedualaxis==true&&aK.dualaxisitem&&aK.dualaxisitem.length>-1&&am.length>1){for(Y=0;Y<am.length;Y++){if(aK.dualaxisitem.length>Y&&aK.dualaxisitem[Y]=="T"){aL=true;break}}if(aL==true){var V={title:{text:aK.yaxistitle2||null,enabled:aK.yaxistitle?true:false},opposite:true,labels:{formatter:function(){var f=aK.yaxisformat2,h=0;if(f&&f.indexOf(".")>-1){h=f.length-f.lastIndexOf(".")-1}return Highcharts.numberFormat(this.value,h)}}};if(aK.yaxismax2!=""&&IG$._I37(aK.yaxismax2)==true){V.max=Number(aK.yaxismax2)}if(aK.yaxismin2!=""&&IG$._I37(aK.yaxismin2)==true){V.min=Number(aK.yaxismin)}ar.yAxis=[ar.yAxis];ar.yAxis.push(V);for(Y=0;Y<aK.dualaxisitem.length;Y++){if(am.length>Y&&aK.dualaxisitem[Y]=="T"){am[Y].yAxis=1}}}}ar.tooltip={formatter:function(){var h,f;if(aD){if(this.points&&this.points.length){h=this.points[0].x+"<br>";for(f=0;f<this.points.length;f++){h+=(f>0?"<br>":"")+"<b>"+this.points[f].series.name+"</b> "+(this.points[f].fval||Highcharts.numberFormat(this.points[f].y,0))}}}else{if(H){h=this.series.name+"<br>"+(this.point?this.point.name||"":"")+"<br>X: "+this.x+"<br>Y: "+(this.point.fval||Highcharts.numberFormat(this.y,0))}else{h=this.series.name+"<br>"+this.x+"<br>"+(this.point.fval||Highcharts.numberFormat(this.y,0))}}return h}};ar.plotOptions={};ar.plotOptions.column={turboThreshold:aK.maxchartresult||1000,allowPointSelect:true,events:{click:function(f){d.p1.call(d,this,f);return false}}};ar.plotOptions.area={turboThreshold:aK.maxchartresult||1000,allowPointSelect:true,marker:J,events:{click:function(f){d.p1.call(d,this,f)}}};ar.plotOptions.areaspline={turboThreshold:aK.maxchartresult||1000,allowPointSelect:true,marker:J,events:{click:function(f){d.p1.call(d,this,f)}}};ar.plotOptions.line={turboThreshold:aK.maxchartresult||1000,allowPointSelect:true,marker:J,events:{click:function(f){d.p1.call(d,this,f)}}};ar.plotOptions.spline={turboThreshold:aK.maxchartresult||1000,allowPointSelect:true,marker:J,events:{click:function(f){d.p1.call(d,this,f)}}};ar.plotOptions.bar={turboThreshold:aK.maxchartresult||1000,allowPointSelect:true,events:{click:function(f){d.p1.call(d,this,f)}}};ar.plotOptions.bubble={turboThreshold:aK.maxchartresult||1000,maxSize:120,minSize:8};if(aK.dl_enable){$.each(["column","area","areaspline","line","spline","bar"],function(h,f){var s=ar.plotOptions[f];s.dataLabels={enabled:true,align:aK.dl_align||"center",inside:aK.dl_inside,formatter:function(){return this.point.fval||Highcharts.numberFormat(this.y,0)}}})}if(H){ar.plotOptions.scatter={allowPointSelect:true,turboThreshold:aK.maxchartresult||1000,marker:{symbol:"circle",radius:5,states:{hover:{enabled:true}}},states:{hover:{marker:{enabled:false}}}}}if(aK.p_bands&&aK.p_bands.length>0){var G=ar.yAxis.length?ar.yAxis[0]:ar.yAxis,ae=ar.xAxis&&ar.xAxis.length?ar.xAxis[0]:ar.xAxis,q,F;G.plotBands=[];G.plotLines=[];if(ae){ae.plotBands=[];ae.plotLines=[]}for(Y=0;Y<aK.p_bands.length;Y++){bp=aK.p_bands[Y];bp.mresult=ad;if(bp.enabled){q={label:{text:bp.name},color:bp.color};if(bp.btype=="curvefit"){Q.push(bp)}else{if(bp.isxaxis){if(bp.btype=="band"){q.from=bp._v1(bp.value_1,true);q.to=bp._v1(bp.value_2,true);ae.plotBands.push(q)}else{q.value=bp._v1(bp.value_1,true);q.width=Number(bp.borderwidth)||2;ae.plotLines.push(q)}}else{if(bp.btype=="band"){q.from=bp._v1(bp.value_1);q.to=bp._v1(bp.value_2);G.plotBands.push(q)}else{q.value=bp._v1(bp.value_1);q.width=Number(bp.borderwidth)||2;G.plotLines.push(q)}}}}}}if(aK.stack==true&&ay.rcs!="waterfall"){switch(this.rcs){case"area":ar.plotOptions.area.stacking=(aK.stackperc?"percent":"normal");break;default:if(ar.plotOptions.series==null||typeof ar.plotOptions.series=="undefined"){ar.plotOptions.series={}}ar.plotOptions.series.stacking=(aK.stackperc?"percent":"normal");break}}if(!aD&&ar.renderas&&ar.renderas.length>0){for(Y=0;Y<ar.renderas.length;Y++){if(ar.renderas[Y]!=""&&am.length>Y){var b=IG$._I36(ar.renderas[Y]);am[Y].type=b}}}if(L){$(ay.container).bind("mousemove touchmove",function(w){var s,f,h;if(!ay._mc){return}for(h=0;h<ay._mc.length;h=h+1){s=ay._mc[h];if(s){w=s.pointer.normalize(w);f=s.series[0].searchPoint(w,true);if(f){f.onMouseOver();s.tooltip.refresh(f);s.xAxis[0].drawCrosshair(w,f)}}}});var ae=ar.xAxis=ar.xAxis||{};ae.crosshair=true;ae.events=ae.events||{};ae.events.setExtremes=function(f){var h=this.chart;if(f.trigger!=="syncExtremes"){Highcharts.each(ay._mc,function(s){if(s!==h){if(s.xAxis[0].setExtremes){s.xAxis[0].setExtremes(f.min,f.max,undefined,false,{trigger:"syncExtremes"})}}})}};ar.chart.renderTo=null;ar.chart.marginLeft=60;ar.chart.zoomType="x";$.each(y,function(aT,aR){var s=$("<div class='i-sschart-cnt'></div>").appendTo(ay.container),aS=$(ay.container),f=IG$.x_10._w(aS),h=IG$.x_10._h(aS),w=f/N,aX=h/N,aV=$.extend(true,{},ar),aW=[],aU;IG$.x_10._h(s,aX);IG$.x_10._w(s,f);s.css({top:aA});aA+=aX;aV.chart.renderTo=s[0];for(aU=0;aU<am.length;aU++){if(am[aU].meas_k==aT){aW.push(am[aU])}}aV.series=aW;aE.push(aV)})}else{ar.series=am;aE.push(ar)}}if(aD){ar.chart.type="column";ar.plotOptions.column.grouping=false;ar.plotOptions.column.shadow=false;ar.plotOptions.column.borderWidth=0;ar.tooltip=ar.tooltip||{};ar.tooltip.shared=true;var l=0,e=0;for(Y=0;Y<ar.series.length;Y++){ar.series[Y].pointPadding=(ar.series.length>2?0.3:0.2)+(ar.series[Y].yAxis?e:l)/10;ar.series[Y].pointPlacement=(ar.series.length>2?(ar.series[Y].yAxis?0.2:-0.2):0);if(!ar.series[Y].yAxis&&l==0){ar.series[Y].color="rgba(165,170,217,1)"}else{if(!ar.series[Y].yAxis&&l==1){ar.series[Y].color="rgba(126,86,134,.9)"}else{if((ar.series[Y].yAxis&&e==0)||(!ar.series[Y].yAxis&&l==2)){ar.series[Y].color="rgba(248,161,63,1)"}else{if((ar.series[Y].yAxis&&e==1)||(!ar.series[Y].yAxis&&l==3)){ar.series[Y].color="rgba(186,60,61,.9)"}}}}if(ar.series[Y].yAxis){e++}else{l++}}}if(Q.length){for(Y=0;Y<aE.length;Y++){aE[Y].__cf=Q}}return aE},_int:function(f,q){var o=null,l,h,d,e;if(q&&q.charAt(0)=="#"){l=q.substring(1,3);h=q.substring(3,5);d=q.substring(5,7);l=parseInt(l,16);h=parseInt(h,16);d=parseInt(d,16);e=(f/255)*0.75+0.25;o="rgba("+l+","+h+","+d+","+e+")"}return o},p1:function(a,c){var b=this;b._p1a&&clearTimeout(b._p1a);b._p1a=setTimeout(function(){b.p1a.call(b,a,c)},250)},p1a:function(b,d){if(b){var A=this,s=[],q=[],u=[],g,C,l,h=IG$.sX,z=this.mresult,a,e=A._ILb.cco.swapaxis,x=-1,f=-1,o,B;if(!d&&(!A.selectedData||(A.selectedData&&!A.selectedData.length))){return}A.selectedData=[];if(A.cop.charttype=="scatter"||A.cop.charttype=="bubble"){if(d&&d.length){for(o=0;o<d.length;o++){B=d[o];if(B.datarow>-1){u.push(B.datarow)}}}else{if(d){if(d.datarow>-1){u.push(d.datarow)}}}}else{if(d&&d.length){for(o=0;o<d.length;o++){B=d[o];s.push(B.series?B.series.name:B.name);q.push(B.category||B.name||"")}}else{if(d){s.push(b.series?b.series.name:b.name);q.push(d.point?d.point.category||d.point.name:"")}}}d&&d.point&&d.point.select&&d.point.select(true,false);if(u.length){for(o=0;o<u.length;o++){f=u[o];x=z.colfix-1;if(f>-1&&x>-1){z.data[f][x].r=f;z.data[f][x].c=x;this.selectedData.push(z.data[f][x])}}}else{for(o=0;o<s.length;o++){g=s[o];C=q[o];if(e==true){for(i=z.colfix;i<z.data[0].length;i++){a="";for(j=0;j<z.rowfix;j++){a+=z.data[j][i].text+h}if(a==C+h){x=i;break}}if(g){for(i=z.rowfix;i<z.data.length;i++){a="";for(j=0;j<z.colfix;j++){a+=z.data[i][j].text+h}if(a==g+h){f=i;break}}}}else{for(i=z.rowfix;i<z.data.length;i++){a="";for(j=0;j<z.colfix;j++){a+=z.data[i][j].text+h}if(a==C+h){f=i;break}}if(g){for(i=z.colfix;i<z.cols;i++){a="";for(j=0;j<z.rowfix;j++){a+=z.data[j][i].text+h}if(a==g+h){x=i;break}}}}if(x>-1&&f>-1){z.data[f][x].r=f;z.data[f][x].c=x;this.selectedData.push(z.data[f][x])}}}if(A.f4&&A.f4a){A.f4.call(A.f4a,A)}if(A.ctrl&&A.ctrl.events&&A.ctrl.events.itemclick){var y=l.ctrl.dashboard,w=l.ctrl.actionlist;y.M7a.call(y,w.itemclick)}}},__r1:function(a){var b=this,c=b.rpc;c.__r1.call(c,b,a)},_IB4:function(){var f=this,d,c,e,g,b,a="";switch(f.drawmode){case"highchart":if(f._mc&&f._mc.length>0){d=f._mc[0];c=d.getSVG();a="<ImageData type='svg'><![CDATA["+Base64.encode(c)+"]]></ImageData>"}break;case"qavis":break;case"protovis":if(f.vis){g=IG$._I17(f.container);IG$._I23(g,"xmlns:xlink","http://www.w3.org/1999/xlink");IG$._I23(g,"xmlns","http://www.w3.org/2000/svg");IG$._I23(g,"version","1.1");c=IG$._I25(g);a="<ImageData type='svg'><![CDATA["+Base64.encode(c)+"]]></ImageData>"}break;case"dcust":if(f.dcust){g=IG$._I17(f.container);IG$._I23(g,"xmlns:xlink","http://www.w3.org/1999/xlink");IG$._I23(g,"xmlns","http://www.w3.org/2000/svg");IG$._I23(g,"version","1.1");c=IG$._I25(g);a="<ImageData type='svg'><![CDATA["+Base64.encode(c)+"]]></ImageData>"}case"treemap":if(f.treemap&&f.treemap.map){c=f.treemap.map.getSVG.call(f.treemap.map);a="<ImageData type='svg'><![CDATA["+Base64.encode(c)+"]]></ImageData>"}break;case"bubblemap":if(f.bmap){c=f.bmap.toSVG.call(f.bmap);a="<ImageData type='svg'><![CDATA["+Base64.encode(c)+"]]></ImageData>"}break;case"custom":if(f.customchart&&f.customchart.getSVG){c=f.customchart.getSVG.call(f.customchart);if(c){a="<ImageData type='svg'><![CDATA["+Base64.encode(c)+"]]></ImageData>"}}break}return a},mvalue:function(a,d){var c,b;if(d){b=a.text;if(b.indexOf(",")>-1){b=b.split(",");b=b.join("")}c=Number(b)}else{c=Number(a.code)}return c},_dn:function(g){var e=this,d=ig$.scmap,a=[],c,h=false,b=window.bowser;h=(b.msie&&b.version<9)?true:false;$.each([[h?"./js/excanvas.js":null,"./js/protovis-d3.3.js",h?null:"./js/d3.js","./js/d3.tip.js","./js/d3.geo.js","./js/g.raphael.js","./js/g.dot.js"],["./js/modules/heatmap.js","./js/modules/treemap.js"],d.igc6,d.igco,d.igcb],function(o,f){var l;for(l=0;l<f.length;l++){f[l]&&a.push(f[l])}});IG$.x03(a,new IG$._I3d(e,function(){var f=this;g.call(f)}))},JJ$4:function(c,a){var b=this;b._dn(function(){var d=this;d.JJ$4.call(d,c,a)})},l3a:function(a){var b=this;b._dn(function(){var c=this;c.l3a.call(c,a)})},JJ$4a:function(c,a){var b=this;b._dn(function(){var d=this;d.JJ$4a.call(d,c,a)})},JJ$3:function(a){var b=this;b._dn(function(){var c=this;c.JJ$3.call(c,a)})},l3:function(a){var b=this;b._dn(function(){var c=this;c.l3.call(c,a)})},l4:function(a){var b=this;b._dn(function(){var c=this;c.l4.call(c,a)})},l5:function(a){var b=this;b._dn(function(){var c=this;c.l5.call(c,a)})},l5a:function(){var a=this;a._dn(function(){var b=this;b.l5a.call(b)})},l6:function(){var a=this;a._dn(function(){var b=this;b.l6.call(b)})}};IG$._IKa=function(){this._IL8=null;this.panel=null;this.uid=null;this.sheet=null;this.chart=null;this._ILa=null;this.ctrlsource=null};IG$._IKa.prototype={_IKb:function(l,h,f,z,d,q,y,s,b,w){var x=this,c=x._IL8,o=x.uid,g=x._ILa,u,a,e=x.panel.jobid;if(s){e=s.jobid}a=h||x.sheet||x.chart;x._IR3(null,[a,f,z,l,d,q,e,y,s,b,w])},_IR3:function(y,A){var C=this,c=C._IL8,g=C.uid,s=C._ILa,f,o=A[0],l=A[1],b=A[2],w=A[3],e=A[4],B=A[5],x=A[6],d=A[7],h=A[8],z=A[9],u=A[10],q="F";if(typeof(e)!="undefined"){q="T"}e=e||0;if(s&&s.poolname&&IG$.dbp[s.poolname]){f=IG$.dbp[s.poolname]}var a=new IG$._I3e();a.init(C.panel,{ack:"18",payload:"<smsg><item uid='"+g+"' option='pivot' active='"+l+"' pivotresult='T'"+(f?" pwd='"+f+"'":"")+" jobid='"+(x||"")+"' startpage='"+e+"' endpage='"+(B||"")+"' ispagechange='"+q+"' theme_id='"+(ig$.theme_id||"")+"'/></smsg>",mbody:w},C,C.r_IKb,function(D){d&&d.execute({xdoc:D,iserror:true})},[o,l,b,d,h,z,u]);a._l()},r_IKb:function(g,d){var q=this,s=new IG$._IF2(g),b=d[0],c=d[1],x=d[2],w=d[3],h=d[4],a=d[5],o=d[6],f=d[7],u;s._job=h;s._is_sc=a;s._hcell=f;if(window.m$dor){try{window.m$dor(this,s)}catch(l){IG$._I54(ig$.appname,IRm$.r1("M_ERR_C_REP_PROC"),null,this.panel,1,"error")}}if(!o){q._IR2(u,c,s,b,x)}if(this.panel){this.panel.setLoading(false)}w&&w.execute({iserror:false,mresults:s})},_IR0:function(a,e,d,f,g){this._ILa=null;this.uid=a;var c=this;var b=new IG$._I3e();b.init(c.panel,{ack:"18",payload:"<smsg><item option='getjobid'/></smsg>",mbody:"<smsg></smsg>"},c,c._IR1,null,[d,e,f,g]);b._l()},_IR1:function(f,d){var l=new IG$._I3e(),c=d[0],q=d[1],e=d[2],o=d[3],h=this,g=this.uid,a=IG$._I18(f,"/smsg/item"),b=IG$._I1b(a,"uid");h.panel.jobid=b;l.init(h.panel,{cacheid:"",refresh:"",ack:"5",payload:IG$._I2d({uid:g,jobid:b,theme_id:ig$.theme_id},"uid;jobid;theme_id"),mbody:IG$._I2e()},h,h.rs__IR0,function(s){o&&o.execute({xdoc:s,iserror:true})},[q,c,e,b,o]);l._l()},rs__IR0:function(q,g){var s=this,y=g[0],f=g[1],l=g[2],e=g[3],x=g[4],b=IG$._I18(q,"/smsg/item"),o,d=IG$._I1b(b,"type").toLowerCase();if(s.panel){if(s.panel._IIf){s.panel._IIf.call(s.panel,true)}else{s.panel.setLoading(true,true)}}if(d=="compositereport"){var w=IG$._I25(q);s._ILa=new IG$._IEf(q,null);s._ILa.reports[0].viewmode="grid";s._IJ0.call(s,w,"grid");s.panel.F1.call(s.panel,s._ILa);x&&x.execute()}else{var u=IG$._I18(q,"/smsg/item/Pivot");if(!u){if(s.panel){s.panel.setLoading(false)}s.tempReportXML=q;x&&x.execute();return}s._ILa=new IG$._IEe(q);if(y=="mode"){if(s.panel!=null){s.panel._ILa=this._ILa}}if(l){var c=IG$._I13(l),h=IG$._I18(c,"/smsg/Filter"),a=[];if(h&&IG$._I1b(h,"source")=="dashboard"){a=IG$._I26(h);s._ILa.sheets[f].dashboardfilter=a}}if(!u){if(s.panel){s.panel.setLoading(false)}x&&x.execute()}else{var w=s._ILa._IJ1();s._IJ0.call(s,w,y,f,e,x)}}},_IJ0:function(f,e,d,a,h,g){var c=this;if(c.panel._IIf){!g&&c.panel._IIf.call(c.panel,true)}else{!g&&c.panel.setLoading(true,true)}var b=new IG$._I3e();b.init(c.panel,{ack:"18",payload:"<smsg><item option='getjobid' djobid='"+(c.panel.jobid||"")+"' theme_id='"+(ig$.theme_id||"")+"'/></smsg>",mbody:"<smsg></smsg>"},c,function(l){var x=c._ILa.reportmode=="rolap"?"run":c._ILa.reportmode=="sql"?"sqlrun":"run",s=new IG$._I3e(),q=c._ILa,u,o=IG$._I18(l,"/smsg/item"),w=IG$._I1b(o,"uid");if(q&&q.poolname&&IG$.dbp[q.poolname]){u=IG$.dbp[q.poolname]}c.panel.jobid=w;s.init(c.panel,{ack:"18",payload:"<smsg><item uid='"+(this.uid?this.uid:"")+"' option='"+x+"' active='"+d+"' pivotresult='T'"+(u?" pwd='"+u+"'":"")+" jobid='"+(w||"")+"' theme_id='"+(ig$.theme_id||"")+"'/></smsg>",mbody:f},c,c.r_IJ0,function(y){h&&h.execute({xdoc:y,iserror:true})},[e,d,h]);s._l()},null);b.atld=false;b._l()},r_IJ0:function(d,b){var g=this,q=b[0],a=b[1],l=b[2],o;g.panel.setLoading(false);var h=new IG$._IF2(d),c;if(window.m$dor){try{window.m$dor(this,h)}catch(f){IG$._I54(ig$.appname,IRm$.r1("M_ERR_C_REP_PROC"),null,this.panel,1,"error")}}g._IL8=h._IL8;g.panel.jobid=g._IL8;g._IR2(o,a,h,null,q);l&&l.execute()},_IR2:function(z,c,y,a,A){var s=this,l,f,e,b=true;if(a&&a.dcr){var u=$(a.container),x=IG$.x_10._w(u),g=IG$.x_10._h(u),o;a.mresult=y.results[0];var q=a.dcr.call(a,x,g);a.drawchart=q;if(a.isHighChart==true){a.disposeContent.call(a,a);if(a.drawmode=="echart"){for(f=0;f<q.length;f++){o=q[f];e=echarts.init(o.chart.renderTo,null,{renderer:"svg"});e.setOption(o);a._mc.push(e)}}else{for(f=0;f<q.length;f++){e=new Highcharts.Chart(q[f]);a._mc.push(e)}}}}else{if(a&&a.dor){a.mresult=y.results[0];a.dor.call(a)}else{if(this.ctrlsource=="report"){if(s._ILa.iscomposite==true){z="grid";s._ILa._IK2=y}else{z=s._ILa.sheets[c].viewmode;s._ILa.sheets[c]._IK2=y}b=s.panel.__dx==true?false:true;if(b){s.panel._d.call(s.panel,z,y)}}else{if(this.ctrlsource=="dashboard"){l=s._ILa.iscomposite;s.sheet._ILa=s._ILa;s.sheet._ILb=(l==false)?s._ILa.sheets[0]:s._ILa.compositereports[0];s.sheet._ILb.viewmode=A?A:s.sheet._ILb.viewmode;switch(s.sheet._ILb.viewmode){case"grid":s.sheet._cv.call(s.sheet,0);s.sheet._IJe.call(s.sheet,y);break;case"chart":s.sheet._cv.call(s.sheet,1);s.sheet._IJe.call(s.sheet,y);break;case"r":s.sheet._cv.call(s.sheet,1);s.sheet._IJe.call(s.sheet,y);break}}}}}}};
+/*
+amplixbi.com on MPLIX project
+Copyright(c) 2011 amplixbi.com
+http://www.amplixbi.com/
+*/
+/*
+This file is part of INGECEP
+
+Copyright (c) 2011-2013 INGECEP Inc
+
+Contact:  http://www.ingecep.com/contact
+
+If you are unsure which license is appropriate for your use, please contact the sales department
+at http://www.ingecep.com/contact.
+
+*/
+IG$/*mainapp*/._I5f/*geoDatas*/ = [];
+
+IG$/*mainapp*/._I61/*createAppPanel*/ = function(uid, itemtype, name, address, writable, opt, callback) {
+	var p = null,
+		popt = {uid: uid, writable: writable}, key, val,
+		modname,
+		modtype = 0,
+		scripts;
+	
+	if (opt)
+	{
+		for (key in opt)
+		{
+			popt[key] = opt[key];
+		}
+	}
+	
+	switch (itemtype)
+	{
+	case "report":
+		popt.itemtype = "Report";
+		popt.iconCls = "icon-report";
+		// p = new IG$/*mainapp*/._IBe/*ReportView*/(popt);
+		modname = "_IBe";
+		break;
+	case "sheet":
+		popt.itemtype = "Sheet";
+		popt.iconCls = "icon-report";
+		// p = new IG$/*mainapp*/._IBe/*ReportView*/(popt);
+		modname = "_IBe";
+		break;
+	case "dashboard":
+		// p = new IG$/*mainapp*/._IBf/*DashboardView*/(popt);
+		modname = "_IBf";
+		break;
+	case "metaeditor":
+		// p = new IG$/*mainapp*/._IC0/*MetaEditorPanel*/(popt);
+		modname = "_IC0";
+		break;
+	case "multimetric":
+		// p = new IG$/*mainapp*/._IC3/*multimetric*/(popt);
+		modname = "_IC3";
+		break;
+	case "multimeasure":
+		p = new IG$/*mainapp*/._IC4/*multimeasure*/(popt);
+		modname = "_IC4";
+		break;
+	case "cube":
+		popt.iconCls = "icon-cube";
+		popt.itemtype = "Cube";
+		// p = new IG$/*mainapp*/._IC5/*cubeeditor*/(popt);
+		modname = "_IC5";
+		break;
+	case "mcube":
+		popt.iconCls = "icon-mcube";
+		popt.itemtype = "MCube";
+		// p = new IG$/*mainapp*/._IC5/*cubeeditor*/(popt);
+		modname = "_IC5";
+		break;
+	case "datacube":
+		popt.iconCls = "icon-excel";
+		popt.itemtype = "DataCube";
+		// p = new IG$/*mainapp*/._IC6/*ExcelLoaderPanel*/(popt);
+		modname = "_IC5";
+		break;
+	case "cubemodel":
+		popt.iconCls = "icon-cubemodel";
+		// p = new IG$/*mainapp*/._IC7/*CubeModel*/(popt);
+		modname = "_IC7";
+		break;
+	case "dashboardedit":
+		// p = new IG$/*mainapp*/._IC8/*DashboardEdit*/(popt);
+		modname = "_IC8";
+		modtype = 2;
+		break;
+	case "template":
+		// p = new IG$/*mainapp*/._IC7/*CubeModel*/(popt);
+		modname = "_IC7";
+		break;
+	case "compositereport":
+		popt.itemtype = "CompositeReport";
+		// p = new IG$/*mainapp*/._IBe/*ReportView*/(popt);
+		modname = "_IBe";
+		break;
+	case "measure":
+		// p = new IG$/*mainapp*/._Ie1/*measureEditor*/(popt);
+		modname = "_Ie1";
+		break;
+	case "hierarchy":
+		modname = "_IeN";
+		break;
+	case "formulameasure":
+		// p = new IG$/*mainapp*/._Id8/*formulaEditor*/(popt);
+		modname = "_Id8";
+		break;
+	case "custommetric":
+		// p = new IG$/*mainapp*/._Ie0/*custommetric*/(popt);
+		modname = "_Ie0";
+		break;
+	case "groupfield":
+		// p = new IG$/*mainapp*/._Iae/*udgdialog*/(popt);
+		modname = "_Iae";
+		break;
+	case "chartmeasure":
+		// p = new IG$/*mainapp*/._Ie2/*cellwizard*/(popt);
+		modname = "_Ie2";
+		break;
+	case "nosql":
+		popt.iconCls = "icon-nosql";
+		popt.itemtype = "NoSQL";
+		// p = new IG$/*mainapp*/._IC9/*nosqlcube*/(popt);
+		// modname = "_IC9";
+		modname = "_IC5";
+		break;
+	case "mdbcube":
+		popt.iconCls = "icon-mdbcube";
+		popt.itemtype = "MDBCube";
+		// p = new IG$/*mainapp*/._IC5/*cubeeditor*/(popt);
+		modname = "_IC5";
+		break;
+	case "datemetric":
+		p = new IG$/*mainapp*/.M$dam/*datemetric*/(popt);
+		break;
+	case "sqlcube":
+		popt.iconCls = "icon-sqlcube";
+		popt.itemtype = "SQLCube";
+		// p = new IG$/*mainapp*/._IC5/*cubeeditor*/(popt);
+		modname = "_IC5";
+		break;
+	case "bigdata":
+	case "mongodata":
+		popt.iconCls = "icon-bigdata";
+		modtype = 3;
+		popt.itemtype = itemtype == "bigdata" ? "BigData" : "MongoData";
+		// p = new IG$/*mainapp*/._IB9/*flowEditor*/(popt);
+		modname = "_IB9";
+		break;
+	case "bayesnet":
+		popt.iconCls = "icon-bigdata";
+		modtype = 3;
+		popt.itemtype = "BayesNet";
+		modname = "_IB9b";
+		break;
+	case "javaclass":
+		popt.iconCls = "icon-javaclass";
+		// p = new IG$/*mainapp*/._I9d/*mr_javaeditor*/(popt);
+		modname = "_I9d";
+		modtype = 3;
+		break;
+	case "measuregroup":
+	case "measuregroupdimension":
+		// p = new IG$/*mainapp*/._Id5/*measureGroupEditor*/(popt);
+		modname = "_Id5";
+		break;
+	case "uipage":
+		// p = new IG$/*mainapp*/._Ia5/*uipage*/(popt);
+		modname = "_Ia5";
+		break;
+	case "metric":
+		// p = new IG$/*mainapp*/._Idf/*metricEditor*/(popt);
+		modname = "_Idf";
+		break;
+	case "codemap":
+		// p = new IG$/*mainapp*/._IMm/*codemapping*/(popt);
+		modname = "_IMm";
+		break;
+	case "classmodule":
+		popt.iconCls = "icon-javaclass";
+		modtype = 1;
+		// p = new IG$/*mainapp*/.__C/*classmodule*/(popt);
+		modname = "__C";
+		break;
+	}
+	
+	if (modname)
+	{
+		if (IG$/*mainapp*/[modname])
+		{
+			p = new IG$/*mainapp*/[modname](popt);
+		}
+		else
+		{
+			// load module
+			scripts = ig$/*appoption*/.scmap[modtype == 1 ? "igcm" : (modtype == 2 ? "igc7" : (modtype == 3 ? "igc9" : "igcn"))];
+			
+			IG$/*mainapp*/.x03/*getScriptCache*/(
+				scripts, 
+				new IG$/*mainapp*/._I3d/*callBackObj*/(this, function() {
+					if (IG$/*mainapp*/[modname])
+					{
+						callback && callback.execute();
+					}
+					else
+					{
+						IG$/*mainapp*/._I52/*ShowError*/(IRm$/*resources*/.r1("L_ERR_L_MOD"));
+					}
+				})
+			);
+		}
+	}
+	
+	return p;
+};
+
+IG$/*mainapp*/._I63/*showHelp*/ = function(helpuid, modal, docmode) {
+	var h = new IG$/*mainapp*/._Id1/*helpWindow*/({
+			uid: helpuid, 
+			modal: (modal === false) ? false : true,
+			dm: docmode || null
+		});
+		
+	if (docmode != "report")
+	{
+		IG$/*mainapp*/.r___.b/*loadHelp*/(helpuid, h);
+	}
+	else
+	{
+		h.show();
+	}
+};
+
+IG$/*mainapp*/._I64/*showHideAllWindow*/ = function(b_show) {
+	var visible = (b_show == true) ? "visible" : "hidden",
+		mtop = (b_show == true) ? 0 : 10000,
+		i;
+	
+	if (IG$/*mainapp*/._I7d/*mainPanel*/)
+	{
+		for (i=IG$/*mainapp*/._I7d/*mainPanel*/.items.length - 1; i>=0; i--)
+		{
+			IG$/*mainapp*/._I7d/*mainPanel*/.items.items[i].close();
+		}
+	}	
+};
+
+IG$/*mainapp*/._I65/*procMenuCommand*/ = function(cmd, opt)
+{
+	var dlgpop,
+		panel,
+		itemname,
+		itemid,
+		cmdl = cmd.toLowerCase(),
+		modname,
+		popt = {},
+		modtype = 0,
+		sc,
+		mp = IG$/*mainapp*/._I7d/*mainPanel*/ || null,
+		btype;
+	
+	switch (cmd)
+	{
+	case "CMD_PASSWORD_CHANGE":
+		dlgpop = new IG$/*mainapp*/._I6d/*passwordMgr*/();
+	    IG$/*mainapp*/._I_5/*checkLogin*/(null, dlgpop);
+		break;
+	case "CMD_PREF":
+		dlgpop = new IG$/*mainapp*/._j/*userpref*/();
+	    IG$/*mainapp*/._I_5/*checkLogin*/(null, dlgpop);
+		break;
+	case "CMD_MAKE_WORKSPACE":
+		dlgpop = new IG$/*mainapp*/._I6e/*makeItem*/({
+			itemtype: "Workspace",
+			parentnodepath: "/",
+			parentuid: "/"
+		});
+		IG$/*mainapp*/._I_5/*checkLogin*/(null, dlgpop);
+		break;
+	case "CMD_SW_APP":
+		dlgpop = new IG$/*mainapp*/._I6d_/*workspace_switcher*/({
+		});
+		IG$/*mainapp*/._I_5/*checkLogin*/(null, dlgpop);
+		break;
+	case "CMD_SERVER_CONFIG":
+		break;
+	case "CMD_HELP_MGR":
+		// panel = new IG$/*mainapp*/._I6f/*helpManage*/({});
+		modname = "_I6f";
+		itemid = cmdl;
+		itemname = IRm$/*resources*/.r1("I_HELP_MGR");
+		break;
+	case "CMD_LOCALE":
+		// panel = new IG$/*mainapp*/._I70/*resourcemgr*/({});
+		modname = "_I70";
+		itemid = cmdl;
+		itemname = IRm$/*resources*/.r1("I_LOC_MGR");
+		break;
+	case "CMD_DLOCALE":
+		modname = "_I70";
+		itemid = cmdl;
+		popt.dicmode = 1;
+		itemname = IRm$/*resources*/.r1("I_DLOC_MGR");
+		break;
+	case "CMD_META_IMP":
+		// panel = new IG$/*mainapp*/._I71/*metaImport*/({});
+		modname = "_I71";
+		itemid = cmdl;
+		itemname = IRm$/*resources*/.r1("I_META_IMP");
+		break;
+	case "CMD_RELATION_VIEW":
+		itemid = cmdl;
+		// panel = new IG$/*mainapp*/._I72/*relationMgr*/({});
+		modname = "_I72";
+		itemname = IRm$/*resources*/.r1("L_RELATION_VIEW");
+		break;
+	case "CMD_TABLE_REGISTER":
+		itemid = cmdl;
+		// panel = new IG$/*mainapp*/._I73/*tableManager*/({});
+		modname = "_I73";
+		itemname = IRm$/*resources*/.r1("L_MGR_DATABASE");
+		modtype = 1;
+		break;
+	case "CMD_LOOKUP":
+		itemid = cmdl;
+		// panel = new IG$/*mainapp*/._I7k/*systemlookup*/({});
+		modname = "_I7k";
+		itemname = IRm$/*resources*/.r1("L_S_LK");
+		break;
+	case "CMD_CONNECT_DB":
+		itemid = cmdl;
+		// panel = new IG$/*mainapp*/._I74/*mgrdb_config*/({});
+		modname = "_I74";
+		itemname = IRm$/*resources*/.r1("L_REG_DATABASE");
+		break;
+	case "CMD_DATASET":
+		itemid = cmdl;
+		modname = "Idm";
+		itemname = IRm$/*resources*/.r1("L_REG_DATASET");
+		break;
+	case "CMD_ABOUT":
+		dlgpop = new IG$/*mainapp*/._I75/*aboutApp*/();
+		IG$/*mainapp*/._I_5/*checkLogin*/(null, dlgpop);
+		break;
+//	case "CMD_HELP":
+//		IG$/*mainapp*/._I63/*showHelp*/("P0001");
+//		break;
+	case "CMD_USER_MANAGER":
+		itemid = cmdl;
+		// panel = new IG$/*mainapp*/._I76/*mgrUser*/({});
+		modname = "_I76";
+		itemname = IRm$/*resources*/.r1("L_MGR_USER");
+		break;
+	case "CMD_VAR":
+	case "CMD_BD_CONFIG":
+		itemid = cmdl;
+		// panel = new IG$/*mainapp*/._I77/*hadoop_config*/({});
+		modname = "_I77";
+		modtype = 3;
+		itemname = IRm$/*resources*/.r1("I_BD_CONFIG");
+		break;
+	case "CMD_DBD_MGR":
+		itemid = cmdl;
+		// panel = new IG$/*mainapp*/._xA/*mgr_dashboard*/({});
+		modname = "_xA";
+		itemname = IRm$/*resources*/.r1("I_MGR_DBD");
+		break;
+	case "CMD_FEATURES":
+		itemid = cmdl;
+		// panel = new IG$/*mainapp*/._I76a/*mgrFeatures*/({});
+		modname = "_I76a";
+		// itemname = panel.title;
+		break;
+	case "CMD_REPORT_STYLE":
+		itemid = cmdl;
+		// panel = new IG$/*mainapp*/._I78/*styleWizard*/({
+		popt.title = IRm$/*resources*/.r1("T_GLOBAL_REPORT_STYLE");
+		popt.styletype = "g";
+		modname = "_I78";
+		// itemname = panel.title;
+		break;
+	case "CMD_RSN":
+		dlgpop = new IG$/*mainapp*/._I79/*rsn_editor*/({});
+		IG$/*mainapp*/._I_5/*checkLogin*/(null, dlgpop);
+		break;
+	case "CMD_SYSMON":
+		// panel = new IG$/*mainapp*/._I7a/*sysmon*/({});
+		modname = "_I7a";
+		// itemname = panel.title;
+		itemid = cmdl;
+		break;
+	case "CMD_SYSRES":
+		// panel = new IG$/*mainapp*/._I7b/*sys_resource*/({});
+		modname = "_I7b";
+		// itemname = panel.title;
+		itemid = cmdl;
+		break;
+	case "CMD_SCHEDULE":
+		itemid = cmdl;
+		// panel = new IG$/*mainapp*/._I7c/*scheduler*/({});
+		modname = "_I7c";
+		itemname = IRm$/*resources*/.r1("I_SCHEDULE");
+		break;
+	case "CMD_HOME":
+		IG$/*mainapp*/._I7e/*changeApp*/(0);
+		break;
+	case "CMD_BROWSER":
+		IG$/*mainapp*/._I7e/*changeApp*/(1);
+		break;
+	case "CMD_TABPANEL":
+		IG$/*mainapp*/._I7e/*changeApp*/(2);
+		break;
+	case "CMD_WIZARD":
+	case "CMD_APP_WIZARD":
+		IG$/*mainapp*/._I7e/*changeApp*/(3);
+		var dwizard = IG$/*mainapp*/._n25/*dwizard*/;
+			
+		if (!IG$/*mainapp*/._I7f/*app_wizard*/ && IG$/*mainapp*/.ltW)
+		{
+			IG$/*mainapp*/._I7f/*app_wizard*/ = new IG$/*mainapp*/._I80/*smartwizard*/(dwizard, IG$/*mainapp*/.ltW);
+		}
+		break;
+	case "CMD_SYNC_USER":
+		itemid = cmdl;
+		// panel = new IG$/*mainapp*/._I76n/*sync_user*/({
+		popt.uid = opt;
+		modname = "_I76n";
+		itemname = IRm$/*resources*/.r1("T_SYNC_USER");
+		break;
+	case "CMD_MGR_MENUS":
+		IG$/*mainapp*/._I7e/*changeApp*/(4, "ig_mngr");
+		break;
+	case "CMD_HD_BFLOW":
+	case "CMD_MONG_DATA":
+		btype = (cmd == "CMD_HD_BFLOW") ? "BigData" : "MongoData";
+		mp && mp.m1$7/*navigateApp*/.call(mp, null, btype.toLowerCase(), btype, null, null, true);
+		break;
+	case "CMD_MONG_MAPR":
+	case "CMD_HD_MAPR":
+		itemid = cmdl;
+		// panel = new IG$/*mainapp*/._I72/*relationMgr*/({});
+		modname = "_xA";
+		popt._cmode = 2;
+		itemname = IRm$/*resources*/.r1("L_HD_BFLOW");
+		break;
+	case "CMD_ML_BAYES":
+		btype = "BayesNet";
+		mp && mp.m1$7/*navigateApp*/.call(mp, null, btype.toLowerCase(), btype, null, null, true);
+		break;
+	case "CMD_D_MENU":
+		itemid = cmdl;
+		// panel = new IG$/*mainapp*/._I7_/*dashboardmenu*/({});
+		modname = "_I7_";
+		itemname = cmdl;
+		break;
+	case "CMD_REVISION":
+		itemid = cmdl;
+		// panel = new IG$/*mainapp*/._I76b/*mgrRevision*/({
+		popt.uid = opt;
+		modname = "_I76b";
+		itemname = IRm$/*resources*/.r1("T_REVISION");
+		break;
+	}
+	
+	if (modname && IG$/*mainapp*/._I7d/*mainPanel*/)
+	{
+		var tab = IG$/*mainapp*/._I7d/*mainPanel*/.getComponent.call(IG$/*mainapp*/._I7d/*mainPanel*/, itemid);
+		
+		if (tab)
+		{
+			IG$/*mainapp*/._I7d/*mainPanel*/.setActiveTab.call(IG$/*mainapp*/._I7d/*mainPanel*/, tab);
+			
+			if (cmdl == "cmd_revision")
+			{
+				tab._1/*loadUID*/.call(tab, opt);
+			}
+		}
+		else
+		{
+			if (IG$/*mainapp*/[modname])
+			{
+				panel = new IG$/*mainapp*/[modname](popt);
+				if (!itemname)
+				{
+					itemname = panel.title;
+				}
+			}
+			else
+			{
+				// load module
+				scripts = ig$/*appoption*/.scmap[modtype == 1 ? "igcn" : (modtype == 3 ? "igc9" : "igcm")];
+				
+				IG$/*mainapp*/.x03/*getScriptCache*/(
+					scripts, 
+					new IG$/*mainapp*/._I3d/*callBackObj*/(this, function() {
+						if (IG$/*mainapp*/[modname])
+						{
+							panel = new IG$/*mainapp*/[modname](popt);
+							if (!itemname)
+							{
+								itemname = panel.title;
+							}
+							
+							panel.id = itemid
+							panel.address = itemid;
+							panel.title = IG$/*mainapp*/._I28/*getTabTitle*/(itemname);
+							
+							if (panel.isWindow == true)
+							{
+								IG$/*mainapp*/._I_5/*checkLogin*/(null, panel);
+							}
+							else
+							{
+								var p = IG$/*mainapp*/._I7d/*mainPanel*/.add.call(IG$/*mainapp*/._I7d/*mainPanel*/, panel);
+								IG$/*mainapp*/._I7d/*mainPanel*/.setActiveTab.call(IG$/*mainapp*/._I7d/*mainPanel*/, p);
+							}
+						}
+						else
+						{
+							IG$/*mainapp*/._I52/*ShowError*/(IRm$/*resources*/.r1("L_ERR_L_MOD"));
+						}
+					})
+				);
+			}
+			
+			if (panel)
+			{
+				panel.id = itemid
+				panel.address = itemid;
+				panel.title = IG$/*mainapp*/._I28/*getTabTitle*/(itemname);
+				
+				if (panel.isWindow == true)
+				{
+					IG$/*mainapp*/._I_5/*checkLogin*/(null, panel);
+				}
+				else
+				{
+					var p = IG$/*mainapp*/._I7d/*mainPanel*/.add.call(IG$/*mainapp*/._I7d/*mainPanel*/, panel);
+					IG$/*mainapp*/._I7d/*mainPanel*/.setActiveTab.call(IG$/*mainapp*/._I7d/*mainPanel*/, p);
+				}
+			}
+		}
+	}
+};
+
+IG$/*mainapp*/._I81/*loginUtils*/ = function(config) {
+};
+
+IG$/*mainapp*/._I81/*loginUtils*/.prototype = {
+	_I85/*processLogin*/: function(){
+		var panel = IG$/*mainapp*/._I83/*dlgLogin*/,
+			uform = $("#loginform"),
+    		userid = uform.items.items[0].getValue(),
+			passwd = uform.items.items[1].getValue();
+		
+		panel.m1$8/*requestLoginKey*/.call(panel, userid, passwd);
+	},
+	
+	rm1$8/*requestLoginKey*/: function(userid, passwd, bg, mts, callback) {
+		var panel = this;
+		if (bg)
+		{
+			bg.show();
+		}
+		
+		$.ajax({
+			url: ig$/*appoption*/.servlet,
+			data: {
+				ack: "23",
+				payload: "<smsg mts='" + (mts || "") + "'></smsg>",
+				mbody: '<smsg></smsg>',
+				uniquekey: IG$/*mainapp*/._I4a/*getUniqueKey*/()
+			},
+			type: "POST",
+			dataType: "text",
+			timeout: 30000,
+			async: true,
+			contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+			beforeSend: function(xhr, settings) {
+			},
+			cache: false,
+			crossDomain: false,
+			processData: true,
+			timeout: 300000,
+			error: function() {
+				callback && callback.execute();
+				alert("Error while connecting server");
+			},
+			success: function(doc) {
+				var xdoc = IG$/*mainapp*/._I13/*loadXML*/(doc),
+					root = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg"),
+					item = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+					ltoken,
+					errorcode = root ? IG$/*mainapp*/._I1b/*XGetAttr*/(root, "errorcode") : null;
+				
+				if (item)
+				{
+					p1 = IG$/*mainapp*/._I1a/*getSubNodeText*/(item, "p1");
+					p2 = IG$/*mainapp*/._I1a/*getSubNodeText*/(item, "p2");
+					
+					if (p1 && p2)
+					{
+						IG$/*mainapp*/._I3a/*rsaPublicKeyModulus*/ = p1;
+						IG$/*mainapp*/._I3b/*rsaPpublicKeyExponent*/ = p2;
+						IG$/*mainapp*/._g$a/*global_mts*/ = IG$/*mainapp*/._I1b/*XGetAttr*/(item, "mts");
+						
+						setTimeout(function() {
+							panel.m1$8/*intProcLogin*/.call(panel, userid, passwd, bg, mts, callback);
+						}, 10);
+					}
+					else if (bg)
+					{
+						callback && callback.execute();
+						bg.hide();
+						alert("Error while get secure key value. Please try again later!");
+					}
+				}
+				else if (errorcode)
+				{
+					if (bg)
+					{
+						bg.hide();
+					}
+					var msg = IG$/*mainapp*/._I1b/*XGetAttr*/(root, "errormsg");
+					
+					callback && callback.execute();
+					alert(msg);
+				}
+			}
+		});
+	},
+	
+	m1$8/*intProcLogin*/: function(userid, passwd, bg, mts, callback) {
+		var panel = this, 
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		
+		var encpwd = IG$/*mainapp*/._I3c/*encryptkey*/([userid, passwd]);
+		// passwd = encpwd.toString(CryptoJS.enc.Hex);
+		req.init(panel, 
+			{
+                ack: "13",
+	            payload: "<smsg ptoken=\'\' uuid=\'\'><userid><![CDATA[" + encpwd[0] + "]]></userid><passwd><![CDATA[" + encpwd[1] + "]]></passwd></smsg>",
+	            mbody: "<smsg><option lang='" + useLocale + "' mts='" + (mts || "") + "' app='' session_expire='" + (ig$/*appoption*/.session_expire || "0") + "'/></smsg>"
+            }, panel, panel.r_I85/*processLogin*/, function(xdoc) {
+            	callback && callback.execute(xdoc);
+            	
+            	if (bg)
+            	{
+            		bg.hide();
+            	}
+            }, bg);
+		req._l/*request*/();
+	},
+	
+	r_I85/*processLogin*/: function (xdoc, bg) {
+		var panel = this;
+		
+		var root = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item");
+		ltoken = IG$/*mainapp*/._I1b/*XGetAttr*/(root, "token");
+		var nuid = IG$/*mainapp*/._I1b/*XGetAttr*/(root, "uid");
+		var ltoken = null;
+		var cuser = false;
+		var lastlogin = {
+			lastaccesstime: IG$/*mainapp*/._I1b/*XGetAttr*/(root, "lastaccesstime"),
+			lastaccesshost: IG$/*mainapp*/._I1b/*XGetAttr*/(root, "lastaccesshost"),
+			lastaccessaddr: IG$/*mainapp*/._I1b/*XGetAttr*/(root, "lastaccessaddr"),
+			accesshost: IG$/*mainapp*/._I1b/*XGetAttr*/(root, "accesshost"),
+			accessaddr: IG$/*mainapp*/._I1b/*XGetAttr*/(root, "accessaddr"),
+			accesstime: IG$/*mainapp*/._I1b/*XGetAttr*/(root, "accesstime")
+		};
+		
+		if (window.IG$/*mainapp*/._I83/*dlgLogin*/)
+		{
+			IG$/*mainapp*/._I83/*dlgLogin*/.lastLogin = lastlogin;
+			
+			if (IG$/*mainapp*/._I7d/*mainPanel*/ && IG$/*mainapp*/._I7d/*mainPanel*/.iLL/*updateLoginInfo*/)
+			{
+				IG$/*mainapp*/._I7d/*mainPanel*/.iLL/*updateLoginInfo*/.call(IG$/*mainapp*/._I7d/*mainPanel*/);
+			}
+		}
+		
+		if (bg)
+		{
+			bg.hide();
+		}
+				
+		if (panel.uuid && panel.uuid.length > 0 && nuid && panel.uuid != nuid)
+		{
+			cuser = true;
+		}
+		panel.uuid = nuid;
+		
+		if (ltoken != "" && panel.uuid != "")
+        {
+        	panel.Js2/*closeLoginProc*/.call(panel, cuser);
+        }
+	},
+	
+	Js2/*closeLoginProc*/: function(changeuser) {
+		this.Js4/*getUserDetail*/(changeuser);
+	},
+	
+	Js3/*finalLoginProc*/: function() {
+		var me = this,
+			l3 = me.jS1/*loginInfo*/.l3.substring(1),
+			mechanlevel = $("#mechanlevel");
+		
+//		if (window.mecapp)
+//		{
+//			var app = mecapp;
+//			app.a3/*preDesktopLauncher*/.call(app);
+//			
+//			IG$/*mainapp*/._I64/*showHideAllWindow*/(true);
+//			$('#win-mask').css({display: 'none'});
+//		}
+		
+		if (mechanlevel && mechanlevel[0])
+		{
+			setTimeout(function() {
+				switch (l3)
+				{
+				case "1":
+					mechanlevel.attr("title", "Your license is limited using all features.");
+					mechanlevel.animate({width: 45}, 2000);
+					
+					mechanlevel.bind("click", function() {
+						window.open("http://www.amplixbi.com/", "_new");
+					});
+					break;
+				case "2":
+					mechanlevel.attr("title", "Your license is limited using all features.");
+					mechanlevel.animate({width: 60}, 2000);
+					mechanlevel.css({backgroundColor: "#0000ff"});
+					mechanlevel.bind("click", function() {
+						window.open("http://www.amplixbi.com/", "_new");
+					});
+					break;
+				case "3":
+				case "4":
+					mechanlevel.attr("title", "Currently using full feature and unlimited version.");
+					mechanlevel.animate({width: 100}, 2000);
+					mechanlevel.css({backgroundColor: "#00ff00"});
+					break;
+				}
+			}, 200);
+		}
+
+		if (me.callback)
+		{
+			setTimeout(function() {
+				me.callback.execute();
+			}, 100);
+		}
+		
+		// IG$/*mainapp*/._I83/*dlgLogin*/.hide();
+	},
+	
+	Js4/*getUserDetail*/: function(changeuser) {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.init(panel, 
+			{
+                ack: "28",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: "/user"}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "_gi_", uid: panel.uuid, tmpl: (IG$/*mainapp*/.__ep ? "sys_print_mode" : IG$/*mainapp*/.__ep_ || "")})
+            }, panel, panel.rs_Js4/*getUserDetail*/, null, [changeuser]);
+		req._l/*request*/();
+	},
+	
+	rs_Js4/*getUserDetail*/: function(xdoc, params) {
+		var panel = this,
+			changeuser = params[0],
+			desktop;
+		
+		var userinfo = new IG$/*mainapp*/._I82/*CUserInfo*/(xdoc);
+		panel.jS1/*loginInfo*/ = userinfo;
+		panel.jS2/*isAdmin*/ = panel.jS1/*loginInfo*/.jS1/*hasDuty*/('admins', 'A');
+		panel.desktopsetting = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/DesktopInfo");
+		
+		ig$/*appoption*/.fm/*features*/ = userinfo.fm/*features*/;
+		
+		$.cookie("lui", userinfo.u1/*userid*/, {
+			expires: 7
+		});
+		
+		IG$/*mainapp*/.$1/*loadApp*/(userinfo.tmpl, userinfo.fm);
+		
+		if (changeuser == true)
+		{
+			IG$/*mainapp*/._I64/*showHideAllWindow*/(true);
+			$('#win-mask').css({display: 'none'});
+			
+//			if (mecapp)
+//			{
+//				desktop = mecapp;
+//				desktop.initDesktop.call(desktop, desktop, desktop.a1/*loadDesktopSettings*/);
+//			}
+//			else 
+			if (IG$/*mainapp*/._I7d/*mainPanel*/)
+			{
+				IG$/*mainapp*/._I7d/*mainPanel*/.i1/*initRecentVisit*/.call(IG$/*mainapp*/._I7d/*mainPanel*/);
+			}
+		}
+		
+		if (IG$/*mainapp*/._I7d/*mainPanel*/)
+		{
+			IG$/*mainapp*/._I7d/*mainPanel*/.iLL/*updateLoginInfo*/.call(IG$/*mainapp*/._I7d/*mainPanel*/);
+		}
+
+		panel.Js3/*finalLoginProc*/.call(panel);
+	}
+};
+
+IG$/*mainapp*/._I82/*CUserInfo*/ = function (xdoc) {
+	var me = this,
+		root = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/userdetail/smsg/item"),
+		tnode = IG$/*mainapp*/._I18/*XGetNode*/(root, "d"),
+		fnode = IG$/*mainapp*/._I18/*XGetNode*/(root, "f"),
+		hnode = IG$/*mainapp*/._I18/*XGetNode*/(root, "themes"), hnodes,
+		child, fnodes, schild, inodes,
+		st = [],
+		isadmin = false,
+		i, p, j, k, pk,
+		tmpl,
+		mainview,
+		nname;
+	
+	p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(root);
+	me.sid = p.sid;
+	me.gid = p.gid;
+	me.u1/*userid*/ = p.id;
+	me.username = p.name;
+	me.l3 = p.l3;
+	me.l4 = p.l4 == "Y";
+	me.auth = [];
+	me.authmap = {};
+	me.fm/*features*/ = {};
+	me.pf/*pdffonts*/ = [];
+	me.mts = p.mts;
+	me.mts_name = p.mts_name;
+	me.tmpl = {};
+	
+	if (p.a2 && !ig$/*appoption*/.theme_id)
+	{
+		ig$/*appoption*/.theme_id = p.a2;
+	}
+	
+	tmpl = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/userdetail/smsg/item/tmpl");
+	
+	if (tmpl)
+	{
+		mainview = IG$/*mainapp*/._I18/*XGetNode*/(tmpl, "mview");
+		if (mainview)
+		{
+			child = IG$/*mainapp*/._I26/*getChildNodes*/(mainview);
+			me.tmpl.mainview = {};
+			for (i=0; i < child.length; i++)
+			{
+				p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(child[i]);
+				p.width = p.width ? Number(p.width) : null;
+				p.height = p.height ? Number(p.height) : null;
+				
+				schild = IG$/*mainapp*/._I26/*getChildNodes*/(child[i]);
+				for (j=0; j < schild.length; j++)
+				{
+					nname = IG$/*mainapp*/._I29/*XGetNodeName*/(schild[j]);
+					if (nname == "items")
+					{
+						p.items = [];
+						
+						inodes = IG$/*mainapp*/._I26/*getChildNodes*/(schild[j]);
+						
+						for (k=0; k < inodes.length; k++)
+						{
+							pk = IG$/*mainapp*/._I1c/*XGetAttrProp*/(inodes[k]);
+							p.items.push(pk);
+						}
+					}
+					else
+					{
+						p[nname] = IG$/*mainapp*/._I24/*getTextContent*/(schild[j]);
+					}
+				}
+				
+				if (p.html)
+				{
+					p.html = IG$/*mainapp*/._I46/*replaceAll*/(p.html, "$APP_NAME", ig$/*appoption*/.appname);
+					p.html = IG$/*mainapp*/._I46/*replaceAll*/(p.html, "$APP_COPY", ig$/*appoption*/.copy);
+				}
+				me.tmpl.mainview[p.name] = p;
+			}
+		}
+	}
+	
+	child = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+	
+	for (i=0; i < child.length; i++)
+	{
+		p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(child[i]);
+		me.auth.push(p);
+		me.authmap[p.name.toLowerCase()] = p;
+	}
+	
+	isadmin = me.authmap["admins"] ? true : false;
+	
+	if (fnode)
+	{
+		fnodes = IG$/*mainapp*/._I26/*getChildNodes*/(fnode);
+		for (i=0; i < fnodes.length; i++)
+		{
+			p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(fnodes[i]);
+			me.fm/*features*/[p.cls] = (p.hide == "T");
+		}
+	}
+	
+	fnode = IG$/*mainapp*/._I18/*XGetNode*/(root, "pf");
+	
+	if (fnode)
+	{
+		fnodes = IG$/*mainapp*/._I26/*getChildNodes*/(fnode);
+		for (i=0; i < fnodes.length; i++)
+		{
+			me.pf/*pdffonts*/.push(IG$/*mainapp*/._I24/*getTextContent*/(fnodes[i]) + ";");
+		}
+	}
+	
+	ig$/*appoption*/.fmc/*features_css*/ && ig$/*appoption*/.fmc/*features_css*/.remove();
+	
+	st.push("<style type='text/css'>");
+	$.each(me.fm/*features*/, function(t, f) {
+//		!(isadmin && (f.cls == "ig_mngr" || f.cls == "ig_sys" || f.cls == "ig_ft")) && 
+//		st.push("." + f.cls + " { display: none; }");
+		
+		if (t == "ig_mngr" || t == "ig_sys" || t == "ig_ft")
+		{
+			if (!isadmin)
+			{
+				st.push("." + t + " { display: none; }");
+			}
+		}
+		else if (f == true)
+		{
+			st.push("." + t + " { display: none; }");
+		}
+	});
+	st.push("</style>");
+	
+	ig$/*appoption*/.fmc/*features_css*/ = $(st.join("")).appendTo($("head"));
+	
+	me.themes = [];
+	
+	if (hnode)
+	{
+		hnodes = IG$/*mainapp*/._I26/*getChildNodes*/(hnode);
+		
+		for (i=0; i < hnodes.length; i++)
+		{
+			me.themes.push({
+				name: IG$/*mainapp*/._I1b/*XGetAttr*/(hnodes[i], "name")
+			});
+		}
+		
+		if (window.app_themes)
+		{
+			try
+			{
+				window.app_themes(me.themes);
+			}
+			catch (e)
+			{
+			}
+		}
+	}
+}
+
+IG$/*mainapp*/._I82/*CUserInfo*/.prototype = {
+	jS1/*hasDuty*/: function(name, type) {
+		var me = this,
+			i;
+		
+		for (i=0; i < me.auth.length; i++)
+		{
+			if ((!type || (type && me.auth[i].dutytype == type)) && me.auth[i].name.toLowerCase() == name)
+			{
+				return true;
+			}
+		}
+		
+		return false;
+	}
+}
+
+IG$/*mainapp*/._I83/*dlgLogin*/ = new IG$/*mainapp*/._I81/*loginUtils*/();
+IG$/*mainapp*/._I84/*checkLogin*/ = function(sccall, fail) {
+	$.ajax({
+		url: ig$/*appoption*/.servlet,
+		
+		data: {
+			ack: "14",
+			payload: "<smsg ptoken='' uuid=''></smsg>",
+			mbody: "<smsg><option lang='" + useLocale + "' app='" + loadingApp + "'/></smsg>",
+			uniquekey: IG$/*mainapp*/._I4a/*getUniqueKey*/()
+		},
+		type: "POST",
+		dataType: "text",
+		timeout: 30000,
+		async: true,
+		contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+		beforeSend: function(xhr, settings) {
+		},
+		cache: false,
+		crossDomain: false,
+		processData: true,
+		error: function() {
+			alert("Error while connecting server");
+			if (fail)
+			{
+				fail.call();
+			}
+		},
+		success: function(doc) {
+			var xdoc = IG$/*mainapp*/._I13/*loadXML*/(doc),
+				root = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg"),
+				item = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+				ltoken,
+				nuid,
+				redirect;
+			
+			if (item)
+			{
+				ltoken = IG$/*mainapp*/._I1b/*XGetAttr*/(item, "token");
+				nuid = IG$/*mainapp*/._I1b/*XGetAttr*/(item, "uid");
+				
+				redirect = IG$/*mainapp*/._I1b/*XGetAttr*/(item, "redirect");
+				
+				if (sccall)
+				{
+					sccall.call();
+				}
+				else if (redirect && redirect.length > 0)
+				{
+					window.location.replace(redirect);
+				}
+			}
+			else
+			{
+				if (fail)
+				{
+					fail.call();
+				}
+			}
+		}
+	});
+}
+
+IG$/*mainapp*/._I85/*processLogin*/ = function(userid, passwd, bg, mts, errcallback) {
+	if (bg)
+	{
+		bg.show();
+	}
+	
+	var il_err = $("#il_err");
+	il_err.hide();
+	
+	$.ajax({
+		url: ig$/*appoption*/.servlet,
+		type: "POST",
+		data: {
+			ack: "23",
+			payload: "<smsg mts='" + (mts || "") + "'></smsg>",
+			mbody: "<smsg></smsg>",
+			uniquekey: IG$/*mainapp*/._I4a/*getUniqueKey*/()
+		},
+		dataType: "text",
+		timeout: 30000,
+		async: true,
+		contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+		beforeSend: function(xhr, settings) {
+		},
+		cache: false,
+		crossDomain: false,
+		processData: true,
+		timeout: 300000,
+		error: function() {
+			bg.hide();
+			alert("Error while connecting server");
+		},
+		success: function(doc) {
+			var xdoc = IG$/*mainapp*/._I13/*loadXML*/(doc),
+				root = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg"),
+				item = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+				p1, p2;
+			
+			if (item)
+			{
+				p1 = IG$/*mainapp*/._I1a/*getSubNodeText*/(item, "p1");
+				p2 = IG$/*mainapp*/._I1a/*getSubNodeText*/(item, "p2");
+				
+				if (p1 && p2)
+				{
+					IG$/*mainapp*/._I3a/*rsaPublicKeyModulus*/ = p1;
+					IG$/*mainapp*/._I3b/*rsaPpublicKeyExponent*/ = p2;
+					IG$/*mainapp*/._g$a/*global_mts*/ = IG$/*mainapp*/._I1b/*XGetAttr*/(item, "mts");
+					
+					setTimeout(function() {
+						IG$/*mainapp*/._I86/*processLoginRSA*/(userid, passwd, bg, mts, errcallback);
+					}, 10);
+				}
+				else
+				{
+					alert("Error while get security key");
+					if (bg)
+					{
+						bg.hide();
+					}
+				}
+			}
+			else if (root)
+			{
+				var errcode = IG$/*mainapp*/._I1b/*XGetAttr*/(root, "errorcode"),
+					msg = IG$/*mainapp*/._I1b/*XGetAttr*/(root, "errormsg");
+				
+				if (errcode)
+				{
+					if (bg)
+					{
+						bg.hide();
+					}
+					
+	            	if (errcode == "0x6d00")
+	            	{
+	            		il_err.unbind("click");
+	            		il_err.bind("click", function() {
+	            			il_err.hide();
+	            		});
+	            		il_err.show();
+	            		$(".igc-errorinfo-msg", il_err).html(msg);
+	            	}
+	            	else
+	            	{
+	            		IG$/*mainapp*/._I51/*ShowErrorMessage*/(xdoc, null);
+	            	}
+				}
+			}
+		}
+	});
+}
+
+IG$/*mainapp*/._I86/*processLoginRSA*/ = function(userid, passwd, bg, mts, errcallback)
+{
+	var encpwd = IG$/*mainapp*/._I3c/*encryptkey*/([userid, passwd]); // CryptoJS.SHA1(passwd);
+	// passwd = encpwd.toString(); //(CryptoJS.enc.Hex);
+	
+	var il_err = $("#il_err");
+	il_err.hide();
+	
+	$.ajax({
+		url: ig$/*appoption*/.servlet,
+		data: {
+			ack: "13",
+			payload: "<smsg ptoken='' uuid=''><userid><![CDATA[" + encpwd[0] + "]]></userid><passwd><![CDATA[" + encpwd[1] + "]]></passwd></smsg>",
+			mbody: "<smsg><option lang='" + useLocale + "' app='" + loadingApp + "' session_expire='" + (ig$/*appoption*/.session_expire || "0") + "' mts='" + (mts || "") + "'/></smsg>",
+			uniquekey: IG$/*mainapp*/._I4a/*getUniqueKey*/()
+		},
+		type: "POST",
+		dataType: "text",
+		timeout: 30000,
+		async: true,
+		contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+		beforeSend: function(xhr, settings) {
+		},
+		cache: false,
+		crossDomain: false,
+		processData: true,
+		timeout: 300000,
+		error: function() {
+			if (bg)
+				bg.hide();
+			alert("Error while connecting server");
+		},
+		success: function(doc) {
+			var xdoc = IG$/*mainapp*/._I13/*loadXML*/(doc),
+				root = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg"),
+				item = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+				ltoken,
+				nuid,
+				errcode = root ? IG$/*mainapp*/._I1b/*XGetAttr*/(root, "errorcode") : null,
+				redirect;
+			
+			if (bg)
+			{
+				bg.hide();
+			}
+			
+			if (item)
+			{
+				ltoken = IG$/*mainapp*/._I1b/*XGetAttr*/(item, "token");
+				nuid = IG$/*mainapp*/._I1b/*XGetAttr*/(item, "uid");
+				
+				redirect = IG$/*mainapp*/._I1b/*XGetAttr*/(item, "redirect");
+					
+				if (redirect && redirect.length > 0)
+				{
+					window.location.replace(redirect);
+				}
+				else
+				{
+					alert("System Error:: Application is not defined on config.xml");
+				}
+			}
+			else if (errcode)
+			{
+				var msg = IG$/*mainapp*/._I1b/*XGetAttr*/(root, "errormsg");
+					
+				if (errcode == "0x6d00")
+            	{
+            		il_err.unbind("click");
+            		il_err.bind("click", function() {
+            			il_err.hide();
+            		});
+            		il_err.show();
+            		$(".igc-errorinfo-msg", il_err).html(msg);
+            		
+            		errcallback && errcallback.execute();
+            	}
+            	else if (errcallback)
+            	{
+            		errcallback.execute();
+            	}
+            	else
+            	{
+            		IG$/*mainapp*/._I51/*ShowErrorMessage*/(xdoc, null);
+            	}
+			}
+		}
+	});
+}
+
+IG$/*mainapp*/._I87/*checkServerInfo*/ = function(callback) {
+	if (!ig$/*appoption*/.appInfo)
+	{
+		$.ajax({
+			url: ig$/*appoption*/.servlet,
+			data: {
+				sreq: "version",
+				uniquekey: IG$/*mainapp*/._I4a/*getUniqueKey*/()
+			},
+			dataType: "text",
+			type: "GET",
+			timeout: 30000,
+			async: true,
+			contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+			beforeSend: function(xhr, settings) {
+			},
+			cache: false,
+			crossDomain: false,
+			processData: true,
+			error: function() {
+				ig$/*appoption*/.appInfo = {
+					appversion: "_._",
+					apprelease: "_._.___"
+				};
+				
+				callback && callback.call();
+			},
+			success: function(doc) {
+				var xdoc = IG$/*mainapp*/._I13/*loadXML*/(doc),
+					root = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg"),
+					tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/info");
+				
+				ig$/*appoption*/.appInfo = {
+					appversion: tnode ? IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "version") : "0.0",
+					apprelease: tnode ? IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "release") : "0.0.000"
+				};
+				
+				callback && callback.call();
+			}
+		});
+	}
+	else
+	{
+		callback && callback.call();
+	}
+}
+
+IG$/*mainapp*/._I88/*createLoginPanel*/ = function(d1, d2, addevent){
+	var loginWindow = $("<div id='loginWindow' class='loginWindow'></div>"),
+		i,
+		lng = ig$/*appoption*/.lang, l,
+		browser = window.bowser;
+		
+	if (browser.msie)
+	{
+		loginWindow.css({width: "100%", height: "100%"});
+		if (ig$/*appoption*/.appbg)
+		{
+			var bg = $("<img src='./images/" + (ig$/*appoption*/.appbg) + "' class='background'/>");
+			
+			bg.css({
+				width: "100%", height: "100%", position: "absolute", top: 0, left: 0
+			});
+			loginWindow.append(bg);
+		}
+	}
+	
+	if (lng)
+	{
+		for (i=0; i < lng.length; i++)
+		{
+			if (lng[i].code == useLocale)
+			{
+				l = lng[i];
+				break;
+			}
+		}
+	}
+	
+	// var loginBox = $("<div class='loginBox'></div>").appendTo(loginWindow);
+	var loginForm, lf = "<div class='login-mc bounceInDown animated'>"
+		+ "<div class='login-ic'>"
+		+ "<img class='login-logo' src='./images/logo_7186.png'>"
+		+ "<div id='user_lbl'>" + ((l && l.l1) ? l.l1 : "User ID") + "</div>"
+		+ "<div id='pass_lbl'>" + ((l && l.l2) ? l.l2 : "Password") + "</div>"
+		+ "<form name='login_form' id='login_form' rel='nofollow' target='temp' action=''>"
+		+ "	<input id='userid' type='text' name='userid' value='" + (d1 || "") + "'>"
+		+ "	<input id='userpassword' type='password' name='userpassword' value='" + (d2 || "") + "'>"
+		+ "	<input id='login_btn' type='button' value='" + ((l && l.l3) ? l.l3 : "Login") + "'>"
+		+ "</form>"
+		+ "<div id='login_locale'><div class='locale_button'><span>Language</span>" // <div class='selbutton'></div>"
+		+ "<select id='b_loc'>";
+	
+	if (lng)
+	{
+		for (i=0; i < lng.length; i++)
+		{
+			lf += "<option value='" + lng[i].code + "'" + (useLocale == lng[i].code ? " selected" : "") + ">" + lng[i].disp + "</option>"
+		}
+	}
+		
+	lf += "</select></div></div>"
+		+ "<div id='license'>Licensed to: MPLIX</div>";
+
+	lf += "</div>"; // login-ic
+  	lf += "</div>";
+  	
+	loginForm = $(lf).appendTo(loginWindow).addClass("loginForm");
+  	
+	var legal = $("<div class='legal'>"
+		+ "<table width='494' border='0' cellpadding='0' cellspacing='0'>"
+		+ "  <tr>"
+		+ "    <td width='78'>&nbsp;</td>"
+		+ "    <td width='416' valign='top'><div align='left'>"
+		+ "      <p class='style2'>" + ig$/*appoption*/.copy + "</p>"
+		+ "      <p class='style1'><span class='style4'>For support please contact</span>"
+		+ "      <a href='" + ig$/*appoption*/.companydomain + "' target='_new'>" + ig$/*appoption*/.companydomain + "</a></p>"
+		+ "    </div></td>"
+		+ "  </tr>"
+		+ "</table></div>").appendTo(loginWindow);
+
+	var build = $("<div class='build'>"
+		+ "<div align='right'><span class='style6'>Build Id: <span id='app_release'" + (ig$/*appoption*/.appInfo && ig$/*appoption*/.appInfo.apprelease) + "</span></span></div>"
+		+ "</div>").appendTo(loginWindow);
+		
+	var errorinfo = $("<div id='il_err' class='igc-errorinfo'><div class='igc-errorinfo-msg'></div></div>").appendTo(loginWindow);
+	
+	var progress = $("<div id='login-progress' class='login-progress'></div>")
+		.css({position: "absolute", width:"100%", height: "100%", top: 0, left: 0, right: 0, bottom: 0})
+		.hide().appendTo(loginWindow);
+	
+	if (window.IG$/*mainapp*/.cLogin)
+	{
+		window.IG$/*mainapp*/.cLogin(loginWindow);
+	}
+	
+	$(document.body).append(loginWindow);
+	
+	IG$/*mainapp*/._I87/*checkServerInfo*/(function() {
+		$("#app_release", build).text(ig$/*appoption*/.appInfo.apprelease);
+	});
+	
+	setTimeout(function() {
+		if (d1)
+		{
+			$("#userpassword").focus();
+		}
+		else
+		{
+			$("#userid").focus();
+		}
+	}, 200);
+	
+	$("#userpassword").bind("focus", function() {
+		$("#userpassword").select();
+	});
+	
+	$("#userid").bind("focus", function() {
+		$("#userid").select();
+	});
+	
+	$("#userpassword").bind("mouseup", function() {
+		setTimeout(function() {
+			$("#userpassword").select();
+		}, 80);
+	});
+	
+	$("#userid").bind("mouseup", function() {
+		setTimeout(function() {
+			$("#userid").select();
+		}, 80);
+	});
+	
+	if (addevent !== false)
+	{
+		$("#b_loc").bind("change", function(e) {
+			var b_loc = $("#b_loc"),
+				selvalue = $("option:selected", b_loc).val(),
+				redirect = $(location).attr('href'),
+				p, hv, h = {},
+				k, v,
+				i, s = false;
+				
+			if (selvalue && selvalue != window.useLocale)
+			{
+				if (redirect.indexOf("?") > -1)
+				{
+					p = redirect.substring(0, redirect.indexOf("?"));
+					hv = redirect.substring(redirect.indexOf("?") + 1);
+					h = hv.split("&");
+					
+					for (i=0; i < h.length; i++)
+					{
+						if (h[i].substring(0, 5) == "lang=")
+						{
+							h[i] = h[i].substring(0, 5) + selvalue;
+							s = true;
+							break;
+						}
+					}
+					
+					hv = h.join("&");
+					
+					redirect = p + "?" + hv;
+				}
+				
+				if (s == true)
+				{
+					progress.show();
+					
+					setTimeout(function() {
+						window.location.replace(redirect);
+					}, 100);
+				}
+			}
+		});
+		
+		$("#login_btn").bind("click", function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			
+			var userid = $("#userid").val(),
+				passwd = $("#userpassword").val();
+				
+			$("#userpassword").val("");
+			
+	    	IG$/*mainapp*/._I83/*dlgLogin*/.rm1$8/*requestLoginKey*/.call(IG$/*mainapp*/._I83/*dlgLogin*/, userid, passwd, progress, window.m$mts);
+			return false;
+		});
+		
+		$("#userpassword").bind("keypress", function(e) {
+			if (e.keyCode == 13)
+			{
+				var userid = $("#userid").val(),
+					passwd = $("#userpassword").val();
+					
+				$("#userpassword").val("");
+					
+		    	IG$/*mainapp*/._I83/*dlgLogin*/.rm1$8/*requestLoginKey*/.call(IG$/*mainapp*/._I83/*dlgLogin*/, userid, passwd, progress, window.m$mts);
+				return false;
+			}
+			
+			return true;
+		});
+	}
+	
+	return loginWindow;
+}
+
+IG$/*mainapp*/._I89/*showLogin*/ = function(callback, rs)
+{
+//	if (window.mecapp)
+//	{
+//		$("#win-mask").css({display: "none"});
+//	}
+//	else
+//	{
+//	}
+	
+	$("#idv-mnu-pnl").hide();
+	
+	if (IG$/*mainapp*/._I83/*dlgLogin*/)
+	{
+		IG$/*mainapp*/._I83/*dlgLogin*/.callback = new IG$/*mainapp*/._I3d/*callBackObj*/(this, function() {
+			IG$/*mainapp*/._I83/*dlgLogin*/.tl = -1;
+			IG$/*mainapp*/._I8b/*showLoginProc*/();
+		});
+	}
+	
+	if (window.hist)
+	{
+		window.hist.addHistory("");
+	}
+	
+	var lform = $("#loginWindow"),
+		browser = window.bowser;
+		
+	lform.css({zIndex: 99});
+	if (browser.msie)
+	{
+		lform.css({position: "absolute", top: 0, left: 0, right: 0, bottom: 0, width: "100%", height: "100%", margin: 0, padding: 0});
+	}
+	lform.show();
+}
+
+IG$/*mainapp*/._I8a/*showLogout*/ = function(callback)
+{
+	if (IG$/*mainapp*/.msgint > -1)
+	{
+		clearInterval(IG$/*mainapp*/.msgint);
+		IG$/*mainapp*/.msgint = -1;
+	}
+	
+	IG$/*mainapp*/._I55/*confirmMessages*/(IRm$/*resources*/.r1("B_CONFIRM"), IRm$/*resources*/.r1("L_T_LOUT"), function(dlg) {
+		if (dlg == "yes")
+		{
+			var req = new IG$/*mainapp*/._I3e/*requestServer*/();
+			req.init(null, 
+				{
+			        ack: "15",
+			        payload: "",
+			        mbody: ""
+			    }, null, 
+			    function(xdoc){
+			    },
+			    function(){
+			    	return true;
+		    });
+			
+			req._l/*request*/();
+			
+			IG$/*mainapp*/._I89/*showLogin*/(callback, 1);
+		}
+	});
+}
+var clsscript = {},
+	fnglobal = {},
+	__jsmod = {};
+
+IG$/*mainapp*/.d$$mj/*dynscript*/ = function(uid) {
+	this.uid = uid;
+	this.lastError = null;
+}
+
+IG$/*mainapp*/.d$$mj/*dynscript*/.prototype = {
+	_l5/*loadScript*/: function(js) {
+		var me = this,
+			doc = document,
+			head = $('head'),
+			jsmode,
+			browser = window.bowser;
+			
+    	jsmode = __jsmod[me.uid];
+    	
+    	if (!jsmode)
+    	{
+    		jsmode = document.createElement('script'); // '<script id="clsscript" type="text/javascript"></script>');
+    		jsmode.id = 'clsscript';
+    		jsmode.type = 'text/javascript';
+    		
+    		head[0].appendChild(jsmode);
+    		
+    		__jsmod[me.uid] = jsmode;
+    	}
+    	
+    	delete clsscript[me.uid];
+		
+		var jscontent = "function " + this.uid + "() {" + js + "} clsscript['" + this.uid + "'] = " + this.uid + ";";
+		
+		if (browser.msie)
+		{
+			jsmode.text = jscontent;
+		}
+		else
+		{
+			jsmode.innerHTML = jscontent;
+		}
+		
+		delete fnglobal[me.uid];
+		
+		head[0].removeChild(jsmode);
+		delete __jsmod[me.uid];
+		
+		var nfunc = {};
+		
+		try
+		{
+			var fn = clsscript[me.uid];
+			fn.call(nfunc);
+		}
+		catch (e)
+		{
+			IG$/*mainapp*/._I52/*ShowError*/(IRm$/*resources*/.r1("E_SC_LD") + ": " + e.message);
+		}
+				
+		fnglobal[this.uid] = nfunc;
+	},
+	
+	_l6/*preparePrototype*/: function(controls, main) {
+		var fn = fnglobal[this.uid];
+		
+		if (fn)
+		{
+			fn.controls = controls;
+			fn.ptr_main = main;
+			fn.parameters = main._9/*framecontent*/.page_param_map;
+		}
+	},
+	
+	_l7/*executeScript*/: function(scname) {
+		var cdynscript = fnglobal[this.uid],
+			args = arguments,
+			r = true;
+		
+		args = Array.prototype.slice.call(args, 1);
+		this.lastError = null;
+		
+		try
+		{
+			if (!cdynscript[scname])
+			{
+				this.lastError = "Function call: " + scname + " not found";
+				return false;
+			}
+			r = cdynscript[scname].apply(cdynscript, args);
+		}
+		catch (e)
+		{
+			this.lastError = "Error: " + scname + "\n"
+						   + this._l9/*printStackTrace*/().join('\n\n');
+			return false;
+		}
+		
+		return r;
+	},
+	
+	_l8/*getFunctionList*/: function() {
+		var cdynscript = fnglobal[this.uid],
+			r = [],
+			key,
+			obj,
+			objtype;
+		
+		if (cdynscript)
+		{
+			for (key in cdynscript)
+			{
+				obj = cdynscript[key];
+				objtype = typeof(obj);
+				
+				if (objtype == "function")
+				{
+					r.push(key);
+				}
+			}
+		}
+		
+		return r;
+	},
+	
+	_l9/*printStackTrace*/: function() {
+	  	var callstack = [],
+	  		isCallstackPopulated = false;
+	  	
+	  	try {
+	    	i.dont.exist+=0; //doesn't exist- that's the point
+	  	} catch(e) {
+	    	if (e.stack) { //Firefox
+	      		var lines = e.stack.split('\n');
+	      		for (var i=0, len=lines.length; i<len; i++) {
+	        		if (lines[i].match(/^\s*[A-Za-z0-9\-_\$]+\(/)) {
+		          		callstack.push(lines[i]);
+		        	}
+	      		}
+	      		//Remove call to printStackTrace()
+	      		callstack.shift();
+	      		isCallstackPopulated = true;
+	    	}
+	    	else if (window.opera && e.message) { //Opera
+	      		var lines = e.message.split('\n');
+	      		for (var i=0, len=lines.length; i<len; i++) {
+	        		if (lines[i].match(/^\s*[A-Za-z0-9\-_\$]+\(/)) {
+	          			var entry = lines[i];
+	          			//Append next line also since it has the file info
+	          			if (lines[i+1]) {
+	            			entry += ' at ' + lines[i+1];
+	            			i++;
+	          			}
+	          			callstack.push(entry);
+	        		}
+	      		}
+	      		//Remove call to printStackTrace()
+	      		callstack.shift();
+	      		isCallstackPopulated = true;
+	    	}
+	  	}
+	  	if (!isCallstackPopulated) { //IE and Safari
+			var currentFunction = arguments.callee.caller;
+    		while (currentFunction) {
+      			var fn = currentFunction.toString();
+      			var fname = fn.substring(fn.indexOf("function") + 8, fn.indexOf('')) || 'anonymous';
+      			callstack.push(fname);
+      			currentFunction = currentFunction.caller;
+    		}
+	  	}
+  		// output(callstack);
+  		return callstack;
+	}
+}
+IG$/*mainapp*/._IEFc/*formulas*/ = {
+	t_sum: {
+    	name: "t_sum",
+    	title: "Subtotal",
+    	expr: "SUM",
+    	grp: "aggr"
+    },
+    t_avg: {
+    	name: "t_avg",
+    	title: "Average",
+    	expr: "AVG",
+    	grp: "aggr"
+    },
+    t_min: {
+    	name: "t_min",
+		title: "Minimum",
+		expr: "MIN",
+		grp: "aggr"
+    },
+    t_max: {
+    	name: "t_max",
+		title: "Maximum",
+		expr: "MAX",
+		grp: "grp"
+    },
+    t_pot: {
+    	name: "t_pot",
+		title: "Percent of total",
+		usecolumnformat: false,
+		formatstring: "#,##0.00 %",
+		expr: "PERCENT_OF_TOTAL",
+		grp: "pcnt"
+    },
+	t_cumul: {
+		name: "t_cumul",
+		title: "Cumulative Percentage",
+		usecolumnformat: false,
+		formatstring: "#,##0.00 %",
+		expr: "CUMUL_PERCENT",
+		grp: "pcnt"
+	},
+	t_incr: {
+		name: "t_incr",
+		title: "Incremental",
+		expr: "INCR",
+		grp: "pcnt"
+	},
+	t_diff: {
+		name: "t_diff",
+		title: "Difference",
+		expr: "DIFF",
+		grp: "pcnt"
+	},
+	t_rank: {
+		name: "t_rank",
+		title: "Ranking",
+		expr: "RANK",
+		grp: "pcnt"
+	},
+	
+	t_stdev: {
+		name: "t_stdev",
+		title: "Standard Deviation",
+		expr: "STDEV",
+		grp: "stat",
+		usecolumnformat: false,
+		formatstring: "#,##0.00"
+	},
+	
+	t_stdevp: {
+		name: "t_stdevp",
+		title: "Standard Deviation P",
+		expr: "STDEVP",
+		grp: "stat",
+		usecolumnformat: false,
+		formatstring: "#,##0.00"
+	},
+	
+	t_percentile: {
+		name: "t_percentile",
+		title: "Percentile",
+		expr: "PERCENTILE",
+		grp: "stat",
+		params: [
+	        {name: "k", type: "float"}
+		],
+		usecolumnformat: false,
+		formatstring: "#,##0.00"
+	},
+	t_percentile_exe: {
+		name: "t_percentile_exe",
+		title: "Percentile Excel",
+		expr: "PERCENTILE_EXE",
+		grp: "stat",
+		params: [
+	        {name: "k", type: "float"}
+		],
+		usecolumnformat: false,
+		formatstring: "#,##0.00"
+	}
+};
+
+
+IG$/*mainapp*/._IEF/*dlgFormulaSelector*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/.pbW, {
+	
+	modal: true,
+	region:'center',
+	"layout": "fit",
+	
+	closable: false,
+	resizable: true,
+	width: 650,
+	height: 440,
+	
+	_ILb/*sheetoption*/: null,
+	sheetindex: -1,
+	
+	callback: null,
+	
+	_IFe/*initF*/: function() {
+		var me = this,
+			dt = [],
+			i,
+			grddata = me.down("[name=grddata]"),
+			grddata_sel = me.down("[name=grddata_sel]"),
+			rec, selrec = [],
+			scodes = {},
+			sel,
+			fm = IG$/*mainapp*/._IEFc/*formulas*/,
+			sop = me.pS,
+			formulas = me.pF,
+			pitem = me.pI,
+			psel = me.pCC,
+			ms;
+			
+		if (pitem)
+		{
+			$.each(fm, function(k, f) {
+				dt.push(f);
+			});
+			
+			grddata.store.loadData(dt);
+			
+			for (i=0; i < formulas.length; i++)
+			{
+				if (formulas[i].baseuid == pitem.uid)
+				{
+					selrec.push(formulas[i]);
+				}
+			}
+			
+			grddata_sel.store.loadData(selrec);
+			
+			if (psel)
+			{
+				ms = grddata_sel.store.data.items;
+				
+				for (i=0; i < ms.length; i++)
+				{
+					if (ms[i].get("baseuid") == psel.get("baseuid") && ms[i].get("fid") == psel.get("fid"))
+					{
+						me.c1/*configItem*/(ms[i]);
+						break;
+					}
+				}
+			}
+		}
+	},
+	
+	c1/*configItem*/: function(rec) {
+		var me = this,
+			_prop = me.down("[name=_prop]"),
+			fm = IG$/*mainapp*/._IEFc/*formulas*/,
+			prop,
+			i, p,
+			bf;
+		
+		$.each(fm, function(i, f) {
+			if (f.expr == rec.get("expression"))
+			{
+				prop = f;
+				return false;
+			}
+		});
+		
+		if (me._lprop)
+		{
+			bf = me.Cp/*confirmProperty*/();
+			
+			if (!bf)
+				return;
+		}
+		
+		me._lprop = {
+			prop: prop,
+			rec: rec
+		};
+		
+		if (prop)
+		{
+			prop._params = [
+				{
+					name: "title",
+					required: 1
+				},
+				{
+					xtype: "checkbox",
+					name: "showtoprow",
+					fieldLabel: IRm$/*resources*/.r1("L_S_TROW")
+				},
+				{
+					xtype: "checkbox",
+					name: "groupresults",
+					fieldLabel: IRm$/*resources*/.r1("L_S_GRST")
+				},
+				{
+					xtype: "checkbox",
+					name: "usecolumnformat",
+					fieldLabel: " ",
+					boxLabel: "Use Column Format"
+				},
+				{
+					name: "formatstring",
+					fieldLabel: IRm$/*resources*/.r1("L_FORMAT")
+				},
+				{
+					name: "direction",
+					xtype: "combobox",
+					fieldLabel: IRm$/*resources*/.r1("L_C_DIR"),
+					displayField: "name",
+					valueField: "value",
+					store: {
+						fields: ["name", "value"],
+						data: [
+							{
+								name: IRm$/*resources*/.r1("L_VERTICAL"),
+								value: "vertical"
+							},
+							{
+								name: IRm$/*resources*/.r1("L_HORIZONTAL"),
+								value: "horizontal"
+							}
+						]
+					}
+				},
+				{
+					name: "separatecolumn",
+					xtype: "checkbox",
+					fieldLabel: IRm$/*resources*/.r1("L_SEP_COL")
+				}
+			];
+			
+			if (prop.params)
+			{
+				for (i=0; i < prop.params.length; i++)
+				{
+					p = prop.params[i];
+					p.required = 1;
+					prop._params.push(p);
+				}
+			}
+			
+			_prop.removeAll();
+			
+			$.each(prop._params, function(i, p) {
+				var pval = rec.get(p.name) || "";
+				
+				if (p.xtype == "checkbox" && pval == "T")
+				{
+					pval = true;
+				}
+				
+				_prop.add({
+					xtype: p.xtype || "textfield",
+					name: "field_" + i,
+					fieldLabel: p.fieldLabel || p.name,
+					store: p.store,
+					value: pval,
+					displayField: p.displayField,
+					valueField: p.valueField,
+					boxLabel: p.boxLabel
+				});
+			});
+			
+			_prop.show();
+		}
+		else
+		{
+			_prop.hide();
+		}
+	},
+	
+	Cp/*confirmProperty*/: function() {
+		var me = this,
+			_lprop = me._lprop,
+			prop, params,
+			rec,
+			field, fval, pname,
+			i,
+			bf = 1;
+		
+		if (_lprop)
+		{
+			prop = _lprop.prop;
+			params = prop._params;
+			rec = _lprop.rec;
+			
+			if (params)
+			{
+				for (i=0; i < params.length; i++)
+				{
+					field = me.down("[name=field_" + i + "]");
+					fval = field.getValue();
+					
+					pname = params[i].name;
+					
+					field.clearInvalid();
+					
+					if (params[i].required && !fval)
+					{
+						field.markInvalid("Required Field");
+						return 0;
+					}
+					
+					if (pname == "showtoprow" || pname == "groupresults")
+					{
+						fval = fval ? "T" : "F";
+					}
+										
+					rec.set(pname, fval);
+				}
+			}
+		}
+		
+		me._lprop = null;
+		
+		return bf;
+	},
+	
+	_IFf/*confirmDialog*/: function() {
+		var me = this,
+			grddata_sel = me.down("[name=grddata_sel]"),
+			store = grddata_sel.store,
+			sop = me.pS,
+			sel = [],
+			sf,
+			bf = 0;
+		
+		sop.si = sop.si || 0;
+		
+		if (me._lprop)
+		{
+			bf = me.Cp/*confirmProperty*/();
+			
+			if (!bf)
+				return;
+		}
+		
+		for (i=0; i < store.data.items.length; i++)
+		{
+			sf = new IG$/*mainapp*/._IF0/*clSheetFormula*/();
+			sf.p1/*getRecord*/.call(sf, store.data.items[i]);
+			sf.fid = "formula_" + (sop.si++);
+			sel.push(sf);
+		}
+			
+		me.__dloaded = false;
+		me.callback && me.callback.execute(sel);
+		
+		me.close();
+	},
+	
+	A1/*addFormula*/: function(sel) {
+		var me = this,
+			grddata = me.down("[name=grddata]"),
+			grddata_sel = me.down("[name=grddata_sel]"),
+			sop = me.pS,
+			fdef = IG$/*mainapp*/._IEFc/*formulas*/,
+			rec,
+			i,
+			msel = [], mrec,
+			nformula,
+			tobj,
+			rname;
+		
+		sop.si = sop.si || 0;
+		
+		for (i=0; i < sel.length; i++)
+		{
+			rec = sel[i];
+			nformula = {
+				title: rec.get("title"),
+				expression: rec.get("expr"),
+				baseuid: me.pI.uid
+			};
+			
+			rname = rec.get("name");
+			
+			nformula.direction = "vertical";
+			nformula.formatstring = "";
+			nformula.stylename = null;
+			nformula.separatecolumn = true;
+			nformula.subtotalbase = null;
+			nformula.usecolumnformat = true;
+			nformula.showtoprow = "F";
+			nformula.groupresults = "F";
+			nformula.fid = "formula_" + (sop.si++);
+			
+			tobj = fdef[rname];
+			
+			if (tobj)
+			{
+				if (typeof(tobj.usecolumnformat) != "undefined")
+				{
+					nformula.usecolumnformat = tobj.usecolumnformat;
+				}
+				
+				if (typeof(tobj.formatstring) != "undefined")
+				{
+					nformula.formatstring = tobj.formatstring;
+				}
+			}
+			
+			mrec = grddata_sel.store.add(nformula);
+			msel.push(mrec);
+		}
+		
+		if (msel.length)
+		{
+			me.c1/*configItem*/(msel[msel.length-1]);
+		}
+		
+		grddata.clearSelection();
+	},
+	
+	_ic/*initComponent*/ : function() {
+		var me = this;
+			
+		me.title = IRm$/*resources*/.r1('T_FM_SEL');
+		
+		IG$/*mainapp*/.apply(this, {
+			items: [
+				{
+					xtype: "container",
+					padding: 10,
+					layout: {
+						type: "vbox",
+						align: "stretch"
+					},
+					items: [
+						{
+							xtype: "displayfield",
+							height: 20,
+							value: IRm$/*resources*/.r1('L_DYN_SELECT')
+						},
+						{
+							xtype: "container",
+							layout: {
+								type: "hbox",
+								align: "stretch"
+							},
+							flex: 1,
+							items: [
+							    {
+							    	xtype: "container",
+							    	layout: {
+							    		type: "vbox",
+							    		align: "stretch"
+							    	},
+							    	flex: 1,
+							    	items: [
+										{
+											xtype: "combobox",
+											fieldLabel: "Formula Group",
+											displayField: "name",
+											valueField: "value",
+											store: {
+												xtype: "store",
+												fields: ["name", "value"],
+												data: [
+												    {name: "All Formula", value: ""},
+												    {name: "Mostly used", value: "aggr"},
+												    {name: "Percentage", value: "pcnt"},
+												    {name: "Statistics", value: "stat"}
+												]
+											},
+											listeners: {
+												change: function(tobj) {
+													var me = this,
+														tval = tobj.getValue(),
+														grddata = me.down("[name=grddata]");
+													
+													if (tval)
+													{
+														grddata.filter({name: "grp", value: tval});
+													}
+													else
+													{
+														grddata.filter();
+													}
+												},
+												scope: this
+											}
+										},
+										{
+											xtype: "gridpanel",
+											name: "grddata",
+											selMode: {
+												mode: "SINGLE"
+											},
+											store: {
+												xtype: "store",
+												fields: [
+													"sel", "name", "title", "expr"
+												]
+											},
+											flex: 1,
+											columns: [
+												{
+													xtype: "checkcolumn",
+													dataIndex: "sel",
+													width: 30
+												},
+											    {
+											    	text: "Name",
+											    	dataIndex: "title",
+											    	flex: 1
+											    }
+											]
+										}
+							    	]
+							    },
+							    {
+							    	xtype: "container",
+							    	width: 30,
+							    	padding: 3,
+							    	layout: {
+							    		type: "vbox",
+							    		align: "middle"
+							    	},
+							    	items: [
+							    	    {
+							    	    	xtype: "container",
+							    	    	flex: 1
+							    	    },
+								    	{
+								    		xtype: "button",
+								    		text: " > ",
+								    		height: 25,
+								    		handler: function() {
+								    			var me = this,
+								    				grddata = me.down("[name=grddata]"),
+								    				sm = grddata.getSelectionModel(),
+								    				sel = sm.selected;
+								    			
+								    			me.A1/*addFormula*/(sel);
+								    		},
+								    		scope: this
+								    	},
+								    	{
+								    		xtype: "container",
+								    		flex: 1
+								    	}
+							    	]
+							    },
+							    {
+							    	xtype: "container",
+							    	layout: {
+							    		type: "vbox",
+							    		align: "stretch"
+							    	},
+							    	flex: 1,
+							    	items: [
+										{
+											xtype: "displayfield",
+											height: 20,
+											value: IRm$/*resources*/.r1('L_DYN_SELECT')
+										},
+										{
+											xtype: "gridpanel",
+											name: "grddata_sel",
+											selMode: me.selMode,
+											store: {
+												xtype: "store",
+												fields: [
+													"sel", "name", "title",
+													"baseuid", "direction", "stylename", "expression",
+													"type", "fid", "formatstring",
+													"showtoprow",
+													"groupresults", "quart", "k"
+												]
+											},
+											flex: 1,
+											columns: [
+												{
+													xtype: "checkcolumn",
+													dataIndex: "sel",
+													width: 30
+												},
+											    {
+											    	text: "Title",
+											    	dataIndex: "title",
+											    	flex: 1
+											    },
+											    {
+											    	text: "Expression",
+											    	dataIndex: "expression",
+											    	width: 120
+											    },
+											    {
+											    	xtype: "actioncolumn",
+											    	width: 70,
+											    	items: [
+												    	{
+												    		iconCls: "icon-grid-config",
+												    		handler: function(grid, rindex, cindex, rec) {
+												    			var me = this;
+												    			me.c1/*configItem*/(rec);
+												    		},
+												    		scope: this
+												    	},
+												    	{
+												    		iconCls: "icon-grid-delete",
+												    		handler: function(grid, rindex, cindex, rec) {
+												    			var store = grid.store;
+												    			
+												    			store.remove(rec);
+												    		},
+												    		scope: this
+												    	}
+											    	]
+											    }
+											]
+										},
+										{
+											xtype: "container",
+											name: "_prop",
+											hidden: true,
+											layout: {
+												type: "vbox",
+												align: "stretch"
+											},
+											items: [
+											]
+										}
+							    	]
+							    }
+							]
+						}
+					]
+				}
+			],
+			
+			buttons:[
+				{
+					text: IRm$/*resources*/.r1('B_CONFIRM'),
+					handler: function() {
+						this._IFf/*confirmDialog*/();
+					},
+					scope: this
+				}, {
+					text: IRm$/*resources*/.r1('B_CANCEL'),
+					handler:function() {
+						this.close();
+					},
+					scope: this
+				}
+			],
+			listeners: {
+				afterrender: function(ui) {
+					me._IFe/*initF*/.call(me);
+				}
+			}
+		});
+		
+		IG$/*mainapp*/._IEF/*dlgFormulaSelector*/.superclass._ic/*initComponent*/.apply(this, arguments);
+	}
+});
+IG$/*mainapp*/._Iec/*dynFilter*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/.pbW, {
+	
+	modal: true,
+	region:'center',
+	"layout": "fit",
+	
+	closable: false,
+	resizable: true,
+	width: 450,
+	height: 400,
+	
+	_ILb/*sheetoption*/: null,
+	sheetindex: -1,
+	
+	callback: null,
+	
+	_IFe/*initF*/: function() {
+		var me = this,
+			dt = [],
+			i,
+			grddata = me.down("[name=grddata]"),
+			rec, selrec = [],
+			scodes = {},
+			sel,
+			fi = me.filteritem;
+			
+		if (fi && fi.data)
+		{
+			for (i=0; i < fi.data.length; i++)
+			{
+				dt.push({
+					code: fi.data[i].code,
+					value: fi.data[i].disp || fi.data[i].code
+				});
+			}
+			
+			grddata.store.loadData(dt);
+			
+			sel = fi.selection;
+			
+			if (sel && sel.length > 0)
+			{
+				for (i=0; i < sel.length; i++)
+				{
+					scodes[sel[i].code] = sel[i];
+				}
+				
+				for (i=0; i < grddata.store.data.items.length; i++)
+				{
+					rec = grddata.store.data.items[i];
+					if (scodes[rec.get("code")])
+					{
+						selrec.push(rec);
+					}
+				}
+				
+				grddata.select(selrec);
+			}
+		}
+	},
+	
+	_IFf/*confirmDialog*/: function() {
+		var me = this,
+			grddata = me.down("[name=grddata]"),
+			selmodel = grddata.getSelectionModel(),
+			sel = selmodel.selected;
+			
+		me.__dloaded = false;
+		me.callback && me.callback.execute(sel);
+		
+		me.close();
+	},
+	
+	_ic/*initComponent*/ : function() {
+		var me = this,
+			lwidth = 160,
+			cols = [
+				{
+			    	xtype: "checkcolumn",
+			    	dataIndex: "sel",
+			    	width: 30
+			    }
+			],
+			cwidth = ig$/*appoption*/.valueselect ? ig$/*appoption*/.valueselect.width : null;
+			
+		me.title = IRm$/*resources*/.r1('T_DYN_SELECT');
+		me.smode = me.smode || "codevalue";
+		
+		switch (me.smode)
+		{
+		case "code":
+			cols.push({
+				text: "Code",
+				dataIndex: "code",
+				flex: 1
+			});
+			break;
+		case "value":
+			cols.push({
+				text: "Value",
+				dataIndex: "value",
+				flex: 1
+			});
+			break;
+		case "valuecode":
+			cols.push({
+				text: "Value",
+				dataIndex: "value",
+				flex: 1
+			});
+			
+			cols.push({
+				text: "Code",
+				dataIndex: "code",
+				flex: cwidth ? null : 1,
+				width: cwidth ? cwidth : null
+			});
+			break;
+		default:
+			cols.push({
+				text: "Code",
+				dataIndex: "code",
+				flex: cwidth ? null : 1,
+				width: cwidth ? cwidth : null
+			});
+			
+			cols.push({
+				text: "Value",
+				dataIndex: "value",
+				flex: 1
+			});
+			break;
+		}
+		
+		IG$/*mainapp*/.apply(this, {
+			items: [
+				{
+					xtype: "container",
+					padding: 10,
+					layout: {
+						type: "vbox",
+						align: "stretch"
+					},
+					items: [
+						{
+							xtype: "displayfield",
+							height: 20,
+							value: IRm$/*resources*/.r1('L_DYN_SELECT')
+						},
+						{
+							xtype: "gridpanel",
+							name: "grddata",
+							selMode: me.selMode,
+							store: {
+								xtype: "store",
+								fields: [
+									"code", "value", "sel"
+								]
+							},
+							flex: 1,
+							columns: cols
+						}
+					]
+				}
+			],
+			
+			buttons:[
+				{
+					text: IRm$/*resources*/.r1('B_CONFIRM'),
+					handler: function() {
+						this._IFf/*confirmDialog*/();
+					},
+					scope: this
+				}, {
+					text: IRm$/*resources*/.r1('B_CANCEL'),
+					handler:function() {
+						this.close();
+					},
+					scope: this
+				}
+			],
+			listeners: {
+				afterrender: function(ui) {
+					me._IFe/*initF*/.call(me);
+				}
+			}
+		});
+		
+		IG$/*mainapp*/._Iec/*dynFilter*/.superclass._ic/*initComponent*/.apply(this, arguments);
+	}
+});
+
+IG$/*mainapp*/._IeFc/*common_filehandler*/ = {
+};
+
+IG$/*mainapp*/._IeF/*dynfilterFileLoader*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/.pbW, {
+	
+	modal: true,
+	region:'center',
+	"layout": "fit",
+	
+	closable: false,
+	resizable: true,
+	width: 450,
+	height: 400,
+	
+	_ILb/*sheetoption*/: null,
+	sheetindex: -1,
+	
+	callback: null,
+	
+	_IFe/*initF*/: function() {
+		var me = this,
+			dt = [],
+			i,
+			grddata = me.down("[name=grddata]"),
+			rec, selrec = [],
+			scodes = {},
+			sel,
+			fi = me.filteritem,
+			req;
+			
+		me.A/*initOptions*/();
+		
+		if (fi && fi.uid)
+		{
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+			req.init(me,
+				{
+					ack: "11",
+					payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: fi.uid}),
+					mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "ftables"})
+				}, me, function(xdoc) {
+					var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item/item");
+						
+					if (tnode)
+					{
+						fi.__tbuid = IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "uid");
+						
+						if (fi.__tbuid)
+						{
+							me._l4m/*showColumnInfo*/();
+							me._l6/*loadHistory*/(fi.__tbuid);
+						}
+					}
+				});
+			req._l/*request*/();
+		}
+		
+		if (fi && fi.data)
+		{
+			for (i=0; i < fi.data.length; i++)
+			{
+				dt.push({
+					code: fi.data[i].code,
+					value: fi.data[i].disp || fi.data[i].code
+				});
+			}
+			
+			grddata.store.loadData(dt);
+			
+			sel = fi.selection;
+			
+			if (sel && sel.length > 0)
+			{
+				for (i=0; i < sel.length; i++)
+				{
+					scodes[sel[i].code] = sel[i];
+				}
+				
+				for (i=0; i < grddata.store.data.items.length; i++)
+				{
+					rec = grddata.store.data.items[i];
+					if (scodes[rec.get("code")])
+					{
+						selrec.push(rec);
+					}
+				}
+				
+				grddata.select(selrec);
+			}
+		}
+	},
+	
+	A/*initOptions*/: function() {
+		var me = this,
+			_m4 = me.down("[name=_m4]"),
+			_m4_el = _m4.body.dom,
+			m_fileupload,
+			fileupload,
+			dropzone,
+			d_progress,
+			i;
+			
+		fileupload = $("#fileupload", _m4_el);
+		d_progress = $("#d_progress", _m4_el);
+		
+		fileupload.fileupload({
+			url: ig$/*appoption*/.servlet,
+	        dataType: "text",
+	        formData: {
+	        	_mts_: IG$/*mainapp*/._g$a/*global_mts*/ || ""
+	        },
+	        done: function (e, data) {
+	        	var doc = data.result || '<smsg errorcode="0xffff" errormsg="Server incorrect responding"/>',
+					xdoc = IG$/*mainapp*/._I13/*loadXML*/(doc),
+					errcode = IG$/*mainapp*/._I27/*getErrorCode*/(xdoc),
+					tnode, tnodes,
+					i, dp = [], p;
+				
+				if (errcode)
+				{
+					IG$/*mainapp*/._I51/*ShowErrorMessage*/(xdoc, me, null);
+				}
+				else
+				{
+					tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg");
+					
+					if (tnode)
+					{
+						tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+						for (i=0; i < tnodes.length; i++)
+						{
+							p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+							dp.push(p);
+						}
+					}
+				}
+				
+				me._l1/*loadDataSet*/.call(me, dp);
+	        },
+	        progressall: function (e, data) {
+	            var progress = parseInt(data.loaded / data.total * 100, 10),
+	            	bar = $(".bar", d_progress);
+	            bar.css(
+	                "width",
+	                progress + "%"
+	            );
+	            bar.text("Loaded " + data.loaded + " / " + data.total);
+	        }
+	    }).bind('fileuploadsubmit', function (e, data) {
+	    });
+	    
+	    fileupload.fileupload("option", "url", ig$/*appoption*/.servlet);
+	},
+	
+	_l1/*loadDataSet*/: function(dp) {
+		var me = this,
+			i, k;
+			
+		if (dp)
+		{	
+			for (i=0; i < dp.length; i++)
+			{
+				k = dp[i];
+				if (k.filename.substring(0, "{ENC}".length) == "{ENC}")
+				{
+					k.filename = k.filename.substring("{ENC}".length);
+					k.filename = Base64.decode(k.filename);
+				}
+			}
+			
+			if (dp.length)
+			{
+				me._l7/*loadFileToTable*/(dp);
+			}
+		}
+	},
+	
+	_l7/*loadFileToTable*/: function(rec) {
+		var me = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+			delimiter = null,
+			regfile = null,
+			file_encoding = null,
+			fuid = [],
+			i,
+			fi = me.filteritem;
+			
+		me.setLoading(true, true);
+		
+		for (i=0; i < rec.length; i++)
+		{
+			fuid.push(rec[i].uid);
+		}
+		
+		if (fuid.length == 0)
+			return;
+		
+		if (!fi || (fi && !fi.__tbuid))
+			return;
+				
+		// store content in separate uid
+		req.init(me, 
+			{
+				ack: "27",
+				payload: IG$/*mainapp*/._I2d/*getItemAddress*/({
+					tuid: fi.__tbuid,
+					uid: fuid.join(";")
+				}, "uid;tuid"),
+				mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "loaddatacontent"})
+			}, me, function(xdoc) {
+				me._l4/*loadColumnInfo*/();
+			}
+		);
+		
+		req._l/*request*/();
+	},
+	
+	_l4m/*showColumnInfo*/: function() {
+		var me = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+			fi = me.filteritem;
+		
+		if (fi && fi.__tbuid)
+		{
+			req.init(me, 
+				{
+			        ack: "25",
+			        payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: fi.__tbuid, option: "StoredContent"}, "uid;option"),
+			        mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "StoredContent"})
+			    }, me, function(xdoc) {
+			    	var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+			    		onode = tnode ? IG$/*mainapp*/._I18/*XGetNode*/(tnode, "objinfo") : null,
+						tnodes = tnode ? IG$/*mainapp*/._I26/*getChildNodes*/(tnode, "Field") : null,
+						objinfo = onode ? IG$/*mainapp*/._I1c/*XGetAttrProp*/(onode) : null,
+						i,
+						p,
+						dp = [],
+						n = 0,
+						_mt = me.down("[name=_mt]"),
+						tcol = [];
+					
+					if (tnodes)
+					{
+						for (i=0; i < tnodes.length; i++)
+						{
+							p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+							
+							if (p.name == objinfo.file_field || p.name == objinfo.seq_field)
+								continue;
+							
+							p.seq = ++n;
+							tcol.push(p.name);
+							dp.push(p);
+						}
+					}
+					
+					_mt.setValue(tcol.join("\t"));
+			    }, false);
+			req._l/*request*/();
+		}
+	},
+	
+	_l6/*loadHistory*/: function(uid) {
+		var me = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+			grddata = me.down("[name=grddata]");
+		
+		me.setLoading(true, true);
+		
+		req.init(me, 
+			{
+				ack: "11",
+				payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: uid, option: "ftable_hist"}, "uid;option"),
+				mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "ftable_hist"})
+			}, me, function(xdoc) {
+				var me = this,
+					tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+					tnodes = tnode ? IG$/*mainapp*/._I26/*getChildNodes*/(tnode) : null,
+					m2 = me.down("[name=m2]"),
+					i, j, dp = [],
+					p, tn, c, v, mnode;
+
+				if (tnodes)
+				{
+					for (i=0; i < tnodes.length; i++)
+					{
+						mnode = tnodes[i];
+						
+						p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(mnode);
+						tn = IG$/*mainapp*/._I26/*getChildNodes*/(mnode);
+						
+						if (tn)
+						{
+							for (j=0; j < tn.length; j++)
+							{
+								c = IG$/*mainapp*/._I29/*XGetNodeName*/(tn[j]);
+								v = IG$/*mainapp*/._I24/*getTextContent*/(tn[j]);
+								
+								p[c] = v;
+							}
+						}
+						
+						dp.push(p);
+					}
+				}
+				
+				grddata.store.loadData(dp);
+			}
+		);
+		
+		req._l/*request*/();
+	},
+	
+	d1/*deleteHistory*/: function(rec, grid) {
+		var me = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		
+		me.setLoading(true, true);
+		
+		req.init(me, 
+			{
+				ack: "11",
+				payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: rec.get("uid"), option: "ftable_rm"}, "uid;option"),
+				mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "ftable_rm"})
+			}, me, function(xdoc) {
+				me._l4/*loadColumnInfo*/();
+			}
+		);
+		
+		req._l/*request*/();
+	},
+	
+	_l4/*loadColumnInfo*/: function() {
+		var me = this,
+			fi = me.filteritem;
+		
+		if (fi && fi.__tbuid)
+		{
+			me._l6/*loadHistory*/(fi.__tbuid);
+		}
+	},
+	
+	_IFf/*confirmDialog*/: function() {
+		var me = this,
+			grddata = me.down("[name=grddata]"),
+			selmodel = grddata.getSelectionModel(),
+			sel = selmodel.selected,
+			i;
+		
+		for (i=0; i < sel.length; i++)
+		{
+			sel[i].set("code", sel[i].get("uname"));
+			sel[i].set("value", sel[i].get("fname"));
+		}
+			
+		me.__dloaded = false;
+		me.callback && me.callback.execute(sel);
+		
+		me.close();
+	},
+	
+	_ic/*initComponent*/ : function() {
+		var me = this,
+			lwidth = 160;
+			
+		me.title = IRm$/*resources*/.r1('T_DYN_LFILE');
+		
+		IG$/*mainapp*/.apply(this, {
+			items: [
+				{
+					xtype: "container",
+					padding: 10,
+					layout: {
+						type: "vbox",
+						align: "stretch"
+					},
+					items: [
+						{
+							xtype: "displayfield",
+							height: 20,
+							value: IRm$/*resources*/.r1('L_DYN_LFILE')
+						},
+						{
+							xtype: "container",
+							html: "<div class='igc-o-dzone' id='_tb_f' style='padding:5px;'>"
+								+ "<input type='file' id='fileupload' name='files[]' data-url='upload' multiple></input>"
+								+ "<div class='file-progress' id='d_progress' style='height:20px;'><div class='bar' style='width: 0%;'></div></div>"
+								+ "</div>",
+							name: "_m4",
+							height: 55
+						},
+						{
+							xtype: "textarea",
+							fieldLabel: "Headers",
+							name: "_mt",
+							height: 60
+						},
+						{
+							xtype: "gridpanel",
+							name: "grddata",
+							selMode: me.selMode,
+							store: {
+								xtype: "store",
+								fields: [
+									"fname", "sel", "rowcount", "uname", "code", "value"
+								]
+							},
+							flex: 1,
+							columns: [
+								{
+							    	xtype: "checkcolumn",
+							    	dataIndex: "sel",
+							    	width: 30
+							    },
+							    {
+							    	text: "File name",
+							    	dataIndex: "fname",
+							    	flex: 1
+							    },
+							    {
+							    	text: "Rows",
+							    	dataIndex: "rowcount",
+							    	width: 50
+							    }
+							]
+						}
+					]
+				}
+			],
+			
+			buttons:[
+				{
+					text: IRm$/*resources*/.r1('B_CONFIRM'),
+					handler: function() {
+						this._IFf/*confirmDialog*/();
+					},
+					scope: this
+				}, {
+					text: IRm$/*resources*/.r1('B_CANCEL'),
+					handler:function() {
+						this.close();
+					},
+					scope: this
+				}
+			],
+			listeners: {
+				afterrender: function(ui) {
+					me._IFe/*initF*/.call(me);
+				}
+			}
+		});
+		
+		IG$/*mainapp*/._IeF/*dynfilterFileLoader*/.superclass._ic/*initComponent*/.apply(this, arguments);
+	}
+});
+IG$/*mainapp*/._Iea/*dynFilterDateConfig*/ = {
+	data: [
+		{name: "Today", value: "today"},
+		{name: "Last 1 days", value: "last1day"},
+		{name: "Last 2 days", value: "last2day"},
+		{name: "Last 3 days", value: "last3day"},
+		{name: "Last 4 days", value: "last4day"},
+		{name: "Last 5 days", value: "last5day"},
+		{name: "Last 6 days", value: "last6day"},
+		{name: "Last 7 days", value: "last7day"},
+		{name: "Last 8 days", value: "last8day"},
+		{name: "Last 10 days", value: "last10day"},
+		{name: "From monday", value: "frweek"},
+		{name: "Last 15 days", value: "last15day"},
+		{name: "Last 30 days", value: "last30day"},
+		{name: "From 1st month", value: "frmon"},
+		{name: "Last 1 month", value: "last1mon"},
+		{name: "Last 2 month", value: "last2mon"},
+		{name: "Last 6 month", value: "last6mon"},
+		{name: "Last 1 year", value: "last1year"},
+		{name: "Last 2 year", value: "last2year"},
+		{name: "Last 3 year", value: "last3year"},
+		{name: "Last 4 year", value: "last4year"},
+		{name: "Last 5 year", value: "last5year"}
+	],
+	getValue: function(sel, st, ismonth, isyear) {
+		var i,
+			r = "",
+			dt = new Date(),
+			m, d, p;
+			
+		if (st == 0)
+		{
+			if (sel.indexOf("last") > -1)
+			{
+				if (sel.indexOf("day") > 0)
+				{
+					for (i=1; i < 32; i++)
+					{
+						if (sel == "last" + (i) + "day")
+						{
+							dt.setDate(dt.getDate()-i);
+							p = 1;
+							break;
+						}
+					}
+				}
+				
+				if (!p && sel.indexOf("mon") > 0)
+				{
+					for (i=1; i < 13; i++)
+					{
+						if (sel == "last" + i + "mon")
+						{
+							dt.setMonth(dt.getMonth() - i);
+							p = 1;
+							break;
+						}
+					}
+				}
+				
+				if (!p && sel.indexOf("year") > 0)
+				{
+					for (i=1; i < 11; i++)
+					{
+						if (sel == "last" + i + "year")
+						{
+							dt.setMonth(dt.getMonth() - 12*i);
+							p = 1;
+							break;
+						}
+					}
+				}
+			}
+			
+			if (!p)
+			{
+				switch(sel)
+				{
+				case "today":
+					break;
+				case "frweek":
+					startDay = 0;
+					dt.setDate(dt.getDate()-(7 + dt.getDay() - startDay) % 7);
+					break;
+				case "frmon":
+					dt.setDate(1);
+					break;
+				}
+			}
+		}
+		
+		m = (dt.getMonth()+1);
+		m = (m < 10 ? "0" + m : m);
+		d = dt.getDate();
+		d = (d < 10 ? "0" + d : d);
+		r = "" + dt.getFullYear() + "-" + m + "-" + d;
+		
+		if (isyear)
+		{
+			r = "" + dt.getFullYear();
+		}
+		else if (ismonth)
+		{
+			r = "" + dt.getFullYear() + "-" + m;
+		}
+		else
+		{
+			r = "" + dt.getFullYear() + "-" + m + "-" + d;
+		}
+		
+		return r;
+	}
+};
+
+IG$/*mainapp*/._Ied/*dynFilterView*/ = function(container, sop, report, isdashboard) {
+	var me = this;
+	
+	me.report = report;
+	me.dzone = (report ? report.dzone : null);
+	
+	me._b1/*isdashboard*/ = isdashboard;
+	me.container = container;
+	me.utimer = -1;
+	me._ILb/*sheetoption*/ = sop;
+	
+	me.v1/*updateValues*/ = true;
+	
+	if (me.dzone)
+	{
+		me._s1/*setDocZone*/(me.dzone);
+	}
+};
+
+IG$/*mainapp*/._Ied/*dynFilterView*/.prototype = {
+	_rcs: [],
+	
+	_s1/*setDocZone*/: function(dzone) {
+		var me = this;
+		
+		if (!me.dzone && dzone && dzone.b1/*box*/)
+		{
+			me.dzone = dzone;
+			me.dzone.b1/*box*/.bind("updatecomplete", function() {
+				me.ll1/*updateViewSelector*/.call(me);
+			});
+		}
+	},
+	
+	exportSheet: function(filetype) {
+    	var me = this;
+    	
+    	me.container.trigger("export_sheet", [me, {filetype: filetype}]);
+    },
+	
+	_IFd/*init_f*/: function(firstrun) {
+		var me = this,
+			el,
+			_ILb/*sheetoption*/ = me._ILb/*sheetoption*/;
+		
+		$(me.container).empty();
+		
+		me.c/*contentarea*/ = $("<div></div>").appendTo(me.container);
+		me.sp/*splash*/ = $("<div class='idv-dfilt-splash'></div>")
+			.appendTo(me.container)
+			.hide();
+		
+		el = me.c/*contentarea*/[0];
+		
+		if (!_ILb/*sheetoption*/)
+		{
+			return;
+		}
+		
+		_ILb/*sheetoption*/.pff1/*filterItems*/ = _ILb/*sheetoption*/.pff1/*filterItems*/ || [];
+		
+		_ILb/*sheetoption*/.pff1a/*filteroptions*/ = _ILb/*sheetoption*/.pff1a/*filteroptions*/ || {};
+		
+		if (!me._b1/*isdashboard*/ && $s.dropzone)
+		{
+			me.dropZone = $s.create($s.dropzone, el, {
+				ddGroup: '_I$RD_G_',
+				
+				nodeouttimer: -1,
+				
+				getTargetFromEvent: function(e) {
+					var px = e.browserEvent.pageX || e.browserEvent.clientX,
+		        		py = e.browserEvent.pageY || e.browserEvent.clientY,
+		        		renderer = el;
+
+		            return renderer;
+		        },
+		        
+		        onNodeEnter : function(target, dd, e, data){
+		        	var i,
+		        		dt, dttype,
+		        		accept = false,
+		        		recs = data.records;
+		        		
+		        	if (recs && recs.length > 0)
+		        	{
+		        		dt = recs[0].data;
+		        		dttype = dt.type.toLowerCase();
+		        		accept = true;
+		        	}
+		        	else if (data.cellData)
+		        	{
+		        		dt = data.cellData;
+		        		accept = true;
+		        	}
+
+		        	this.accept = accept;
+		        },
+		        onNodeOver : function(target, dd, e, data){
+		        	var dt,
+		        		accept = this.accept,
+		        		ret = (window.Ext ? (accept ? Ext.dd.DropZone.prototype.dropAllowed : Ext.dd.DropZone.prototype.dropNotAllowed) : accept),
+		        		recs = data.records;
+		        		
+		        	if (accept == true)
+		        	{
+		        		if (recs && recs.length > 0)
+		        		{
+		        			dt = recs[0].data;
+		        		}
+		        		else
+		        		{
+		        			dt = data.cellData;
+		        		}
+		        	}
+		            return ret;
+		        },
+		        onNodeDrop : function(target, dd, e, data){
+		        	var m = this,
+		        		recs = data.records;
+		            if (m.accept == true)
+		            {
+		            	if (recs && recs.length > 0)
+		        		{
+		        			dt = recs[0].data;
+		        		}
+		        		else
+		        		{
+		        			dt = data.cellData;
+		        		}
+		            	
+		            	me.l2/*appendFiltering*/.call(me, dt);
+		            }
+		            
+		            me.accept = false;
+		            return true;
+		        }
+			});
+		}
+		
+		setTimeout(function() {
+			me.l3/*validateItems*/.call(me, undefined, firstrun);
+		}, 100);
+	},
+	
+	rX/*removeObj*/: function() {
+	},
+	
+	setSize: function(w, h) {
+		var me = this;
+		IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.c/*contentarea*/, w);
+		IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.c/*contentarea*/, h);
+		me.l4/*updateDisplay*/.call(me);
+	},
+	
+	
+	
+	g1a/*getDefaultDate*/: function(dformat) {
+		var c = new Date(),
+			m,
+			dy, dm, dd, op, opval,
+			bp = 0;
+		
+		if (dformat.length == 8 && IG$/*mainapp*/._I37/*isNumber*/(dformat))
+		{
+			dy = dformat.substring(0, 4);
+			dm = dformat.substring(4, 6);
+			dd = dformat.substring(6, 8);
+				
+			c = new Date(parseInt(dy), parseInt(dm)-1, parseInt(dd));
+		}
+		else
+		{
+			if (dformat.indexOf("cdate") > -1)
+			{
+				dy = c.getFullYear();
+				dm = c.getMonth();
+				dd = c.getDate();
+				
+				if (dformat.indexOf("-") > -1 || dformat.indexOf("+") > -1)
+				{
+					m = dformat.indexOf("-") || dformat.indexOf("+");
+					
+					op = dformat.substring(m, m+1);
+					opval = dformat.substring(m+1);
+					
+					if (op && opval)
+					{
+						$.each(["y", "m", "d", ""], function(i, k) {
+							if (!bp)
+							{
+								m = (k ? opval.indexOf(k) : -1);
+								
+								if (m > -1 || k == "")
+								{
+									opval = m > -1 ? opval.substring(0, m) : opval;
+									opval = parseInt(opval);
+									if (opval)
+									{
+										switch (k)
+										{
+										case "y":
+											dy = (op == "+") ? dy + opval : dy - opval;
+											break;
+										case "m":
+											dm = (op == "+") ? dm + opval : dm - opval;
+											break;
+										default:
+											dd = (op == "+") ? dd + opval : dd - opval;
+											break;
+										}
+									}
+									bp = 1;
+								}
+							}
+						});
+						
+						c = new Date(parseInt(dy), parseInt(dm), parseInt(dd));
+					}
+				}
+			}
+			else
+			{
+				try
+				{
+					m = eval("(function() {" + dformat + "}())");
+					
+					if (m)
+					{
+						c = m;
+					}
+				}
+				catch (e)
+				{
+					IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1('M_DEF_DATE'), null, null, 1, "error");
+				}
+			}
+		}
+		
+		return c;
+	},
+	
+	g1/*getRangeLabel*/: function(label, i, bf, rangevalue) {
+		var t = null,
+			m = "",
+			v;
+		if (rangevalue && label && label.length > i && label[i])
+		{
+			v = label[i];
+			if (bf == 2 || (bf == 1 && v.substring(0, 1) == "_") || (bf == 0 && v.substring(0, 1) != "_"))
+			{
+				t = {};
+				
+				if (bf == 1)
+				{
+					v = v.substring(1);
+				}
+				
+				t.t = v;
+				
+				if (v && v.length > 1 && v.charAt(0) == "@")
+				{
+					v = IRm$/*resources*/.r1(v);
+					t.e = 1;
+				}
+				
+				if (bf != 2 && rangevalue != 2)
+				{
+					m = "<td class='igc-f-range-label-td'>";
+				}
+				
+				m += "<span class='igc-f-range-label f-label_" + i + (bf < 2 ? "_" + bf : "") + "'>" + v + "</span>";
+				
+				if (bf != 2 && rangevalue != 2)
+				{
+					m += "</td>";
+				}
+				
+				t.d = m;
+			}
+		}
+		return t;
+	},
+	
+	g1c/*getRangeCol*/: function(label, i, bf, rangevalue) {
+		var r = "";
+		if (rangevalue && label && label.length > i && label[i])
+		{
+			v = label[i];
+			if (bf == 2 || (bf == 1 && v.substring(0, 1) == "_") || (bf == 0 && v.substring(0, 1) != "_"))
+			{
+				r = "<col width='40px'></col>";
+			}
+		}
+		
+		return r;
+	},
+	
+	l1/*createFilterUI*/: function(filter, mcap, lfilter, viewtype) {
+		var me = this,
+			ui, i,
+			title,
+			me = this,
+			p = me.p/*parentUI*/,
+			clearbtn,
+			filteroptions = me._ILb/*sheetoption*/.pff1a/*filteroptions*/,
+			showbutton = filteroptions.showbutton,
+			f_b_evt = !showbutton && filteroptions.f_b_evt == "T" ? 1 : 0,
+			f_b_trg = showbutton && filteroptions.f_b_trg == "T" ? 1 : 0,
+			f_b_trg_all = f_b_trg && filteroptions.f_b_trg_all == "T" ? 1 : 0,
+			// showrefresh = filteroptions.showrefresh,
+			showpopup = filter.showpopup,
+			sctrl,
+			t,
+			ptn,
+			rangevalue = filter.rangevalue,
+			rangelabel = filter.rangelabel,
+			dateseltype = filter.dateseltype,
+			browser = window.bowser,
+			s1a, s1b, s1c,
+			t, mtr, mtd;
+			
+		if (me.__dx == true)
+			return;
+		
+		if (rangelabel)
+		{
+			rangelabel = rangelabel.split("^");
+		}
+		
+		switch (filter.objtype)
+		{
+		case "slider":
+			// mcap.height(20);
+			s1a = filter.s1a ? Number(filter.s1a) : 0;
+			s1b = filter.s1b ? Number(filter.s1b) : 100;
+			s1c = filter.s1c ? Number(filter.s1c) : 1;
+			ui = $("<div></div>").css({position: "relative", marginLeft: 5, marginRight: 5, marginTop: 7}).slider({
+				orientation: "horizontal",
+				range: true,
+				min: s1a,
+				max: s1b,
+				values: [s1a, s1b],
+				step: s1c,
+				create: function(event, ctrl) {
+					me.l8/*updateSlideValue*/.call(me, this);
+				},
+				
+				slide: function(event, ctrl) {
+					var loffset = $(this).offset(),
+						offset = $(ctrl.handle).offset(),
+						l = offset.left - loffset.left;
+					
+					me.l8a/*updateSlideValue*/.call(me, this, ctrl, l);
+				},
+				
+				change: function(event, ctrl) {
+					if (filter.iV/*updateValues*/ == true)
+						return;
+					me.l8/*updateSlideValue*/.call(me, this);
+					
+					me.l5a/*updateHierarchy*/.call(me, filter);
+					
+					if (!showbutton && !f_b_evt)
+					{
+						me.l5/*updateFilterValues*/.call(me);
+					}
+				},
+				
+				start: function(event, ctrl) {
+					var loffset = $(this).offset(),
+						offset = $(ctrl.handle).offset(),
+						l = offset.left - loffset.left;
+					$("<div class='guide'></div>").css({position: "absolute", top: -18, left: l}).appendTo(this);
+				},
+				
+				stop: function(event, ctrl) {
+					var guide = $(this).children(".guide");
+					
+					if (guide)
+					{
+						guide.remove();
+					}
+				}
+			});
+			break;
+		case "combobox":
+			if (showpopup == true)
+			{
+				ui = $("<div></div>");
+				var tin = $("<input type='text' class='idv-checkbox-inp'></input>").appendTo(ui);
+				tin.css({"float": "left"});
+				var tbtn = $("<div class='idv-btn-selected'></div>").appendTo(ui);
+				tbtn.bind("click", function(e) {
+					e.stopPropagation();
+					var dlg = new IG$/*mainapp*/._Iec/*dynFilter*/({
+						selMode: "SINGLE",
+						smode: filter.smode,
+						callback: new IG$/*mainapp*/._I3d/*callBackObj*/(me, me.rs_PM/*checkpopup*/, filter),
+						filteritem: filter
+					});
+					IG$/*mainapp*/._I_5/*checkLogin*/(this, dlg);
+				});
+			}
+			else
+			{
+				ui = $("<table class='idv-sel-combo" + (rangevalue ? " idv-sel-rangevalue" : "") + "'>" + (me.g1c/*getRangeCol*/(rangelabel, 0, 0, rangevalue)) + "<col width='*'>" + "<col width='17px'>" + (me.g1c/*getRangeCol*/(rangelabel, 0, 1, rangevalue)) + (rangevalue ? "<col width='18px'>" + (me.g1c/*getRangeCol*/(rangelabel, 2, 0, rangevalue)) + "<col width='*'><col width='17px'>" + (me.g1c/*getRangeCol*/(rangelabel, 2, 1, rangevalue)) : "") + "<tr></tr></table>");
+				var ui_tr = $("tr", ui),
+					m1,
+					m2 = null,
+					ml,
+					Lt, Dt, S;
+					
+				Lt = (me.g1/*getRangeLabel*/(rangelabel, 0, 0, rangevalue));
+				
+				if (Lt)
+				{
+					Dt = $(Lt.d).appendTo(ui_tr);
+					Lt.e && IG$/*mainapp*/._rrcs(me, Lt.t, $("span", Dt), 1);
+				}
+				
+				m1 = $("<td><input type='text' name='c_m1'/></td><td style='width:17px'><div class='idv-sel-combo-button'></div></td>").appendTo(ui_tr);
+				
+				Lt = (me.g1/*getRangeLabel*/(rangelabel, 0, 1, rangevalue));
+				
+				if (Lt)
+				{
+					Dt = $(Lt.d).appendTo(ui_tr);
+					Lt.e && IG$/*mainapp*/._rrcs(me, Lt.t, $("span", Dt), 1);
+				}
+				
+				if (rangevalue)
+				{
+					Lt = (me.g1/*getRangeLabel*/(rangelabel, 1, 2, rangevalue));
+					
+					S = $("<td class='igc-f-range-label-td'></td>").appendTo(ui_tr);
+					
+					if (Lt)
+					{
+						Dt = $(Lt.d).appendTo(S);
+						Lt.e && IG$/*mainapp*/._rrcs(me, Lt.t, $("span", Dt), 1);
+					}
+					
+					Lt = (me.g1/*getRangeLabel*/(rangelabel, 2, 0, rangevalue));
+					
+					if (Lt)
+					{
+						Dt = $(Lt.d).appendTo(ui_tr);
+						Lt.e && IG$/*mainapp*/._rrcs(me, Lt.t, $("span", Dt), 1);
+					}
+					
+					m2 = $("<td><input type='text' name='c_m2'/></td><td style='width:17px'><div class='idv-sel-combo-button'></div></td>").appendTo(ui_tr);
+					
+					Lt = (me.g1/*getRangeLabel*/(rangelabel, 2, 1, rangevalue));
+					
+					if (Lt)
+					{
+						Dt = $(Lt.d).appendTo(ui_tr);
+						Lt.e && IG$/*mainapp*/._rrcs(me, Lt.t, $("span", Dt), 1);
+					}
+				}
+					
+				ml = rangevalue ? [m1, m2] : [m1]
+				
+				$.each(ml, function(k, mui) {
+					var ui = mui,
+						sctrl;
+						
+					sctrl = $("input[type=text]", ui);
+					sctrl.__c = true;
+					sctrl.bind("input", function(e) {
+						e.stopPropagation();
+						e.stopImmediatePropagation();
+						e.preventDefault();
+						return false;
+					});
+					sctrl.autocomplete({
+						minLength: 0,
+						sortResults: false,
+						sortable: false,
+						source: function(request, response) {
+							var reqval = request.term,
+								eval = reqval.split(/,\s*/);
+							reqval = eval.pop();
+							response($.ui.autocomplete.filter(filter.sdp, reqval));
+						},
+						focus: function(event, ui) {
+							return false;
+						},
+						select: function(event, mobj) {
+							var svalue = mobj.item;
+							
+							if (!svalue.value)
+							{
+								if (filter.showallvalue)
+								{
+									this.value = "";
+									ui.trigger("change");
+								}
+							}
+							else
+							{
+								this.value = svalue.label;
+								
+								filter._svalues = [
+									{
+										code: svalue.value,
+										text: svalue.label
+									}
+								];
+								ui.trigger("change");
+							}
+							
+							if (browser.msie)
+							{
+								sctrl.blur();
+							}
+							return false;
+						},
+						open: function(event, mobj) {
+							sctrl.__c = false;
+						},
+						close: function(event, mobj) {
+							sctrl.__c = false;
+							setTimeout(function() {
+								sctrl.__c = true;
+								if (browser.msie)
+								{
+									sctrl.blur();
+								}
+							}, 1200);
+						}
+					});
+					
+					sctrl.bind("keydown", function(e) {
+						if (event.keyCode === $.ui.keyCode.TAB) 
+						{
+							sctrl.__c = true;
+							
+							var vmenu = $(this).autocomplete("widget").menu;
+							if (vmenu.active)
+							{
+								e.preventDefault();
+							}
+						}
+						else if (event.keyCode === $.ui.keyCode.ENTER)
+						{
+							var i,
+								m = 0,
+								l = sctrl.val().toLowerCase(), 
+								v;
+							
+							if (filter.sdp && filter.sdp.length && l)
+							{
+								v = l.length;
+								
+								for (i=0; i < filter.sdp.length; i++)
+								{
+									if (filter.sdp[i].label.substring(0, v).toLowerCase() == l)
+									{
+										filter._svalues = [
+											{
+												code: filter.sdp[i].value,
+												text: filter.sdp[i].label
+											}
+										];
+										sctrl.val(filter.sdp[i].label);
+										ui.trigger("change");
+										m = 1;
+										break;
+									}
+								}
+							}
+							if (m)
+							{
+								sctrl.autocomplete("close");
+								sctrl.__c = true;
+							}
+						}
+					});
+					
+					$(".idv-sel-combo-button", ui).bind("click", function(e) {
+						e.stopImmediatePropagation();
+						e.stopPropagation();
+						e.preventDefault();
+						
+						if (sctrl.__c)
+						{
+							sctrl.__c = false;
+							sctrl.autocomplete("search", "");
+							sctrl.focus();
+						}
+						else
+						{
+							sctrl.__c = true;
+							sctrl.autocomplete("close");
+						}
+					});
+					
+					ui.bind("change", function() {
+						var bchanged = true,
+							pkey = "__pval" + k,
+							tval = sctrl.val(),
+							sctrl_sel,
+							sctrl_sel_code = "",
+							i, placeholder = sctrl.attr("placeholder");
+						
+						if (filter.sdp && filter.sdp.length)
+						{
+							for (i=0; i < filter.sdp.length; i++)
+							{
+								if (placeholder && tval == placeholder)
+								{
+									continue;
+								}
+								else if (filter.sdp[i].value == tval || filter.sdp[i].label == tval)
+								{
+									sctrl_sel =
+										{
+											code: filter.sdp[i].value,
+											text: filter.sdp[i].text || filter.sdp[i].label
+										};
+									sctrl_sel_code = sctrl_sel.code;
+									break;
+								}
+							}
+						}
+						
+						if (filter[pkey] == sctrl_sel_code)
+						{
+							bchanged = false;
+						}
+						
+						if (bchanged)
+						{
+							filter[pkey] = sctrl_sel_code;
+							
+							me.l5a/*updateHierarchy*/.call(me, filter);
+							if (!showbutton && filter.iV/*updateValues*/ != true && !f_b_evt)
+							{
+								me.l5/*updateFilterValues*/.call(me);
+							}
+						}
+					});
+				});
+			}
+			break;
+		case "radiobox":
+			ui = $("<select multiple='multiple'></select>").css({height: 80});
+			ui.bind("change", function() {
+				me.l5a/*updateHierarchy*/.call(me, filter);
+				if (!showbutton && filter.iV/*updateValues*/ != true && !f_b_evt)
+				{
+					me.l5/*updateFilterValues*/.call(me);
+				}
+			});
+			break;
+		case "checkbox":
+			if (showpopup == true)
+			{
+				ui = $("<div></div>");
+				var tin = $("<input type='text' class='idv-checkbox-inp'></input>").appendTo(ui);
+				tin.css({"float": "left"});
+				var tbtn = $("<div class='idv-btn-selected'></div>").appendTo(ui);
+				tbtn.bind("click", function(e) {
+					e.stopPropagation();
+					var dlg = new IG$/*mainapp*/._Iec/*dynFilter*/({
+						selMode: "MULTI",
+						smode: filter.smode,
+						callback: new IG$/*mainapp*/._I3d/*callBackObj*/(me, me.rs_PM/*checkpopup*/, filter),
+						filteritem: filter
+					});
+					IG$/*mainapp*/._I_5/*checkLogin*/(this, dlg);
+				});
+			}
+			else
+			{
+				ui = $("<select multiple='multiple'></select>").css({height: 80});
+				ui.bind("change", function() {
+					me.l5a/*updateHierarchy*/.call(me, filter);
+					if (!showbutton && filter.iV/*updateValues*/ != true && !f_b_evt)
+					{
+						me.l5/*updateFilterValues*/.call(me);
+					}
+				});
+			}
+			break;
+		case "checkbuttons":
+			ui = $("<table class='idv-checkbuttons'><tr><td><ul></ul></td></tr></table>");
+			var td = $("td", ui);
+			td.bind("checkboxchanged", function(ev, dt) {
+				if (dt && filter._c_a1 && $("input[type='checkbox']", filter._c_a1).is(':checked') && !$("input[type='checkbox']", dt.u2).is(':checked'))
+				{
+					$("input[type='checkbox']", filter._c_a1).prop("checked", false);
+				}
+				
+				me.l5a/*updateHierarchy*/.call(me, filter);
+				
+				if (!showbutton && filter.iV/*updateValues*/ != true && !f_b_evt)
+				{
+					me.l5/*updateFilterValues*/.call(me);
+				}
+			});
+			break;
+		case "radiobuttons":
+			ui = $("<table class='mec-radiobuttons'><tr><td><ul></ul></td></tr></table>");
+			var td = $("td", ui);
+			td.bind("radioboxchanged", function() {
+				me.l5a/*updateHierarchy*/.call(me, filter);
+				if (!showbutton && !f_b_evt)
+				{
+					me.l5/*updateFilterValues*/.call(me);
+				}
+			});
+			break;
+		case "text":
+			ui = $("<table class='idv-sel-combo" + (rangevalue ? " idv-sel-rangevalue" : "") + "'>" + (me.g1c/*getRangeCol*/(rangelabel, 0, 0, rangevalue)) + "<col width='*'>" + (me.g1c/*getRangeCol*/(rangelabel, 0, 1, rangevalue)) + "" + (rangevalue ? "<col width='18px'>" + (me.g1c/*getRangeCol*/(rangelabel, 2, 0, rangevalue)) + "<col width='*'>" + (me.g1c/*getRangeCol*/(rangelabel, 2, 1, rangevalue)) : "") + "<tr></tr></table>");
+			var ui_tr = $("tr", ui),
+				m1,
+				m2 = null,
+				ml,
+				Lt, Dt, S;
+				
+			Lt = (me.g1/*getRangeLabel*/(rangelabel, 0, 0, rangevalue));
+				
+			if (Lt)
+			{
+				Dt = $(Lt.d).appendTo(ui_tr);
+				Lt.e && IG$/*mainapp*/._rrcs(me, Lt.t, $("span", Dt), 1);
+			}
+			
+			m1 = $("<td><input type='text' name='c_m1'/></td>").appendTo(ui_tr);
+			
+			Lt = (me.g1/*getRangeLabel*/(rangelabel, 0, 1, rangevalue));
+			
+			if (Lt)
+			{
+				Dt = $(Lt.d).appendTo(ui_tr);
+				Lt.e && IG$/*mainapp*/._rrcs(me, Lt.t, $("span", Dt), 1);
+			}
+			
+			if (rangevalue)
+			{
+				Lt = (me.g1/*getRangeLabel*/(rangelabel, 1, 2, rangevalue));
+				if (Lt)
+				{
+					S = $("<td class='igc-f-range-label-td'></td>").appendTo(ui_tr);
+					Dt = $(Lt.d).appendTo(S);
+					Lt.e && IG$/*mainapp*/._rrcs(me, Lt.t, $("span", Dt), 1);
+				}
+				
+				Lt = (me.g1/*getRangeLabel*/(rangelabel, 2, 0, rangevalue));
+				if (Lt)
+				{
+					Dt = $(Lt.d).appendTo(ui_tr);
+					Lt.e && IG$/*mainapp*/._rrcs(me, Lt.t, $("span", Dt), 1);
+				}
+				
+				m2 = $("<td><input type='text' name='c_m2'/></td>").appendTo(ui_tr);
+				
+				Lt = (me.g1/*getRangeLabel*/(rangelabel, 2, 1, rangevalue));
+				
+				if (Lt)
+				{
+					Dt = $(Lt.d).appendTo(ui_tr);
+					Lt.e && IG$/*mainapp*/._rrcs(me, Lt.t, $("span", Dt), 1);
+				}
+			}
+			
+			ml = rangevalue ? [m1, m2] : [m1];
+			
+			$.each(m1, function(i, k) {
+				var ui = $("input", k).bind("keyup", function(event) {
+					if (event.which == 13)
+					{
+						me.l5a/*updateHierarchy*/.call(me, filter);
+					}
+					if (event.which == 13 && !showbutton && !f_b_evt)
+					{
+						me.l5/*updateFilterValues*/.call(me);
+					}
+				});
+			});
+			
+			if (filter.defaultvalue)
+			{
+				$("[name=c_m1]", m1).val(filter._p1/*main*/.m1/*getDefaultValue*/.call(filter._p1/*main*/, filter));
+				
+				me.l5a/*updateHierarchy*/.call(me, filter);
+				
+				if (!showbutton && !f_b_evt)
+				{
+					me.l5a/*updateHierarchy*/.call(me, filter);
+				}
+			}
+			break;
+		case "fileupload":
+			ui = $("<div></div>");
+			var tin = $("<input type='text' class='idv-checkbox-inp'></input>").appendTo(ui);
+			tin.css({"float": "left"});
+			var tbtn = $("<div class='idv-btn-selected'></div>").appendTo(ui);
+			tbtn.bind("click", function(e) {
+				e.stopPropagation();
+				var dlg = new IG$/*mainapp*/._IeF/*dynfilterFileLoader*/({
+					smode: filter.smode,
+					callback: new IG$/*mainapp*/._I3d/*callBackObj*/(me, me.rs_PM/*checkpopup*/, filter),
+					filteritem: filter
+				});
+				IG$/*mainapp*/._I_5/*checkLogin*/(this, dlg);
+			});
+			break;
+		case "calendar":
+			ui = $("<table class='mec-dateperiod-box'></table>");
+			
+			mtr = $("<tr></tr>").appendTo(ui);
+			
+			if (dateseltype == "year")
+			{
+				mtd = $("<td></td>").appendTo(mtr);
+				filter.dt = $("<select class='mec-dateperiod-year'></select>").appendTo(mtd);
+				
+				var ys = filter.yearfrom || "cyear-5", 
+					ye = filter.yearto || "cyear",
+					ik;
+					
+				ys = filter._p1/*main*/.m2/*getYearField*/.call(filter._p1/*main*/, ys);
+				ye = filter._p1/*main*/.m2/*getYearField*/.call(filter._p1/*main*/, ye);
+				
+				$("<option value=''>" + IRm$/*resources*/.r1("L_SELECT_VALUE") + "</option>").appendTo(filter.dt);
+				
+				for (ik=ys; ik < ye+1; ik++)
+				{
+					$("<option value='" + ik + "'>" + ik + "</option>").appendTo(filter.dt);
+				}
+				
+				if (filter.defaultvalue)
+				{
+					var sopt = $("option", filter.dt),
+						sdval = me.g1a/*getDefaultDate*/(filter.defaultvalue),
+						syear = "" + sdval.getFullYear();
+						
+					for (ik=0; ik < sopt.length; ik++)
+					{
+						if ($(sopt[ik]).val() == syear)
+						{
+							$(sopt[ik]).attr("selected", "selected");
+						}
+					}
+				}
+				
+				filter.dt.bind("change", function() {
+					me.l5a/*updateHierarchy*/.call(me, filter);
+					if (!showbutton && !f_b_evt)
+					{
+						me.l5/*updateFilterValues*/.call(me);
+					}
+				});
+			}
+			else if (dateseltype == "month")
+			{
+				ptn = "yyyy-mm";
+				mtd = $("<td></td>").appendTo(mtr);
+				filter.dt = $("<input class='mec-dateperiod-input' type='text' placeholder='" + ptn + "'></input>").monthpicker({
+					monthNames: $.datepicker._defaults.monthNamesShort,
+					buttonImage: "./images/calendar.gif",
+					buttonImageOnly: true,
+					pattern: ptn,
+					onSelect: function(dateText, inst) {
+						me.l5a/*updateHierarchy*/.call(me, filter);
+						if (!showbutton && !f_b_evt)
+						{
+							me.l5/*updateFilterValues*/.call(me);
+						}
+					}
+				}).appendTo(mtd);
+				
+				if (filter.defaultvalue)
+				{
+					filter.dt.monthpicker("setDate", me.g1a/*getDefaultDate*/(filter.defaultvalue));
+				}
+				
+				mtd = $("<td></td>").appendTo(mtr);
+				$("<div class='mec-dateperiod-button'>&nbsp;</div>").appendTo(mtd).bind("click", function() {
+					filter.dt.monthpicker("show");
+				});
+			}
+			else
+			{
+				mtd = $("<td></td>").appendTo(mtr);
+				filter.dt = $("<input class='mec-dateperiod-input' type='text' placeholder='yyyy-mm-dd'></input>").datepicker({
+					monthNames: $.datepicker._defaults.monthNamesShort,
+					buttonImage: "./images/calendar.gif",
+					buttonImageOnly: true,
+					dateFormat: "yy-mm-dd",
+					defaultDate: 0,
+					onSelect: function(dateText, inst) {
+						me.l5a/*updateHierarchy*/.call(me, filter);
+						if (!showbutton && !f_b_evt)
+						{
+							me.l5/*updateFilterValues*/.call(me);
+						}
+					}
+				}).appendTo(mtd);
+				
+				if (filter.defaultvalue)
+				{
+					filter.dt.datepicker("setDate", me.g1a/*getDefaultDate*/(filter.defaultvalue));
+				}
+				
+				mtd = $("<td></td>").appendTo(mtr);
+				$("<div class='mec-dateperiod-button'>&nbsp;</div>").appendTo(mtd).bind("click", function() {
+					filter.dt.datepicker("show");
+				});
+			}
+			
+			break;
+		case "calendarperiod":
+			ui = $("<table class='mec-dateperiod-box'></table>");
+			mtr = $("<tr></tr>").appendTo(ui);
+			
+			mtd = $("<td></td>").appendTo(mtr);
+			
+			var dval = [],
+				dselector = $("<select></select>").appendTo(mtd),
+				ismonth = false,
+				isyear = false;
+			
+			mtd[filter.showperiodselector == "T" ? "show" : "hide"]();
+			dselector[filter.showperiodselector == "T" ? "show" : "hide"]();
+			
+			if (dateseltype == "year")
+			{
+				isyear = true;
+				ismonth = false;
+				
+				Lt = (me.g1/*getRangeLabel*/(rangelabel, 0, 0, 2));
+				if (Lt)
+				{
+					S = $("<td class='igc-f-range-label-td'></td>").appendTo(mtr);
+					$(Lt.d).appendTo(S);
+				}
+
+				mtd = $("<td></td>").appendTo(mtr);
+				
+				filter.dt1 = $("<select></select>").appendTo(mtd);
+				
+				var ys = filter.yearfrom || "cyear-5", 
+					ye = filter.yearto || "cyear",
+					ik;
+					
+				ys = filter._p1/*main*/.m2/*getYearField*/.call(filter._p1/*main*/, ys);
+				ye = filter._p1/*main*/.m2/*getYearField*/.call(filter._p1/*main*/, ye);
+				
+				$("<option value=''>" + IRm$/*resources*/.r1("L_SELECT_VALUE") + "</option>").appendTo(filter.dt1);
+				
+				for (ik=ys; ik < ye+1; ik++)
+				{
+					$("<option value='" + ik + "'>" + ik + "</option>").appendTo(filter.dt1);
+				}
+				
+				if (filter.startdate)
+				{
+					var sopt = $("option", filter.dt1),
+						sdval = me.g1a/*getDefaultDate*/(filter.startdate),
+						syear = "" + sdval.getFullYear();
+						
+					for (ik=0; ik < sopt.length; ik++)
+					{
+						if ($(sopt[ik]).val() == syear)
+						{
+							$(sopt[ik]).attr("selected", "selected");
+						}
+					}
+				}
+				
+				filter.dt1.bind("change", function() {
+					me.l5a/*updateHierarchy*/.call(me, filter);
+					if (!showbutton && !f_b_evt)
+					{
+						me.l5/*updateFilterValues*/.call(me);
+					}
+				});
+				
+				Lt = (me.g1/*getRangeLabel*/(rangelabel, 0, 1, 2));
+				if (Lt)
+				{
+					S = $("<td class='igc-f-range-label-td'></td>").appendTo(mtr);
+					$(Lt.d).appendTo(S);
+				}
+			}
+			else if (dateseltype == "month")
+			{
+				ismonth = true;
+				isyear = false;
+				ptn = "yyyy-mm";
+				
+				Lt = (me.g1/*getRangeLabel*/(rangelabel, 0, 0, 2));
+				if (Lt)
+				{
+					S = $("<td class='igc-f-range-label-td'></td>").appendTo(mtr);
+					$(Lt.d).appendTo(S);
+				}
+				
+				mtd = $("<td></td>").appendTo(mtr);
+				
+				filter.dt1 = $("<input class='mec-dateperiod-input' type='text' placeholder='" + ptn + "'></input>").monthpicker({
+					monthNames: $.datepicker._defaults.monthNamesShort,
+					buttonImage: "./images/calendar.gif",
+					buttonImageOnly: true,
+					pattern: "yyyy-mm",
+					onSelect: function(dateText, inst) {
+						me.l5a/*updateHierarchy*/.call(me, filter);
+						if (!showbutton && !f_b_evt)
+						{
+							me.l5/*updateFilterValues*/.call(me);
+						}
+					}
+				}).appendTo(mtd);
+				
+				if (filter.startdate)
+				{
+					filter.dt1.monthpicker("setDate", me.g1a/*getDefaultDate*/(filter.startdate));
+				}
+				
+				mtd = $("<td></td>").appendTo(mtr);
+				$("<div class='mec-dateperiod-button'>&nbsp;</div>").appendTo(mtd).bind("click", function() {
+					filter.dt1.monthpicker("show");
+				});
+				
+				Lt = (me.g1/*getRangeLabel*/(rangelabel, 0, 1, 2));
+				if (Lt)
+				{
+					S = $("<td class='igc-f-range-label-td'></td>").appendTo(mtr);
+					$(Lt.d).appendTo(S);
+				}
+			}
+			else
+			{
+				Lt = (me.g1/*getRangeLabel*/(rangelabel, 0, 0, 2));
+				if (Lt)
+				{
+					S = $("<td class='igc-f-range-label-td'></td>").appendTo(mtr);
+					$(Lt.d).appendTo(S);
+				}
+				
+				mtd = $("<td></td>").appendTo(mtr);
+				
+				filter.dt1 = $("<input class='mec-dateperiod-input' type='text' placeholder='yyyy-mm-dd'></input>").appendTo(mtd);
+				
+				filter.dt1.css({zIndex: 100});
+				
+				filter.dt1.datepicker({
+					buttonImage: "./images/calendar.gif",
+					buttonImageOnly: true,
+					dateFormat: "yy-mm-dd",
+					onSelect: function(dateText, inst) {
+						
+						if (filter.dt1.datepicker("getDate") && filter.dt2.datepicker("getDate"))
+						{
+							me.l5a/*updateHierarchy*/.call(me, filter);
+							
+							if (!showbutton && !f_b_evt)
+							{
+								me.l5/*updateFilterValues*/.call(me);
+							}
+						}
+					}
+				});
+				
+				if (filter.startdate)
+				{
+					filter.dt1.datepicker("setDate", me.g1a/*getDefaultDate*/(filter.startdate));
+				}
+				
+				mtd = $("<td></td>").appendTo(mtr);
+				
+				$("<div class='mec-dateperiod-button'>&nbsp;</div>").appendTo(mtd).bind("click", function() {
+					filter.dt1.datepicker("show");
+				});
+				
+				Lt = (me.g1/*getRangeLabel*/(rangelabel, 0, 1, 2));
+				if (Lt)
+				{
+					S = $("<td class='igc-f-range-label-td'></td>").appendTo(mtr);
+					$(Lt.d).appendTo(S);
+				}
+			}
+			
+			Lt = (me.g1/*getRangeLabel*/(rangelabel, 1, 0, 2));
+			if (Lt)
+			{
+				S = $("<td class='igc-f-range-label-td'></td>").appendTo(mtr);
+				$(Lt.d).appendTo(S);
+			}
+			else
+			{
+				mtd = $("<td></td>").appendTo(mtr);
+			}
+
+			if (dateseltype == "year")
+			{
+				Lt = (me.g1/*getRangeLabel*/(rangelabel, 2, 0, 2));
+				if (Lt)
+				{
+					S = $("<td class='igc-f-range-label-td'></td>").appendTo(mtr);
+					$(Lt.d).appendTo(S);
+				}
+				
+				mtd = $("<td></td>").appendTo(mtr);
+				
+				isyear = true;
+				ismonth = false;
+				filter.dt2 = $("<select></select>").appendTo(mtd);
+				
+				var ys = filter.yearfrom || "cyear-5", 
+					ye = filter.yearto || "cyear",
+					ik;
+					
+				ys = filter._p1/*main*/.m2/*getYearField*/.call(filter._p1/*main*/, ys);
+				ye = filter._p1/*main*/.m2/*getYearField*/.call(filter._p1/*main*/, ye);
+				
+				$("<option value=''>" + IRm$/*resources*/.r1("L_SELECT_VALUE") + "</option>").appendTo(filter.dt2);
+				
+				for (ik=ys; ik < ye+1; ik++)
+				{
+					$("<option value='" + ik + "'>" + ik + "</option>").appendTo(filter.dt2);
+				}
+				
+				if (filter.enddate)
+				{
+					var sopt = $("option", filter.dt2),
+						sdval = me.g1a/*getDefaultDate*/(filter.enddate),
+						syear = "" + sdval.getFullYear();
+						
+					for (ik=0; ik < sopt.length; ik++)
+					{
+						if ($(sopt[ik]).val() == syear)
+						{
+							$(sopt[ik]).attr("selected", "selected");
+						}
+					}
+				}
+				
+				filter.dt2.bind("change", function() {
+					me.l5a/*updateHierarchy*/.call(me, filter);
+					if (!showbutton && !f_b_evt)
+					{
+						me.l5/*updateFilterValues*/.call(me);
+					}
+				});
+				
+				Lt = (me.g1/*getRangeLabel*/(rangelabel, 2, 1, 2));
+				if (Lt)
+				{
+					S = $("<td class='igc-f-range-label-td'></td>").appendTo(mtr);
+					$(Lt.d).appendTo(S);
+				}
+			}
+			else if (dateseltype == "month")
+			{
+				ismonth = true;
+				isyear = false;
+				
+				ptn = "yyyy-mm";
+				
+				Lt = (me.g1/*getRangeLabel*/(rangelabel, 2, 0, 2));
+				if (Lt)
+				{
+					S = $("<td class='igc-f-range-label-td'></td>").appendTo(mtr);
+					$(Lt.d).appendTo(S);
+				}
+				
+				mtd = $("<td></td>").appendTo(mtr);
+				
+				filter.dt2 = $("<input class='mec-dateperiod-input' type='text' placeholder='" + ptn + "'></input>").monthpicker({
+					monthNames: $.datepicker._defaults.monthNamesShort,
+					buttonImage: "./images/calendar.gif",
+					buttonImageOnly: true,
+					pattern: ptn,
+					onSelect: function(dateText, inst) {
+						me.l5a/*updateHierarchy*/.call(me, filter);
+						if (!showbutton && !f_b_evt)
+						{
+							me.l5/*updateFilterValues*/.call(me);
+						}
+					}
+				}).appendTo(mtd);
+				
+				if (filter.enddate)
+				{
+					filter.dt2.monthpicker("setDate", me.g1a/*getDefaultDate*/(filter.enddate));
+				}
+				
+				mtd = $("<td></td>").appendTo(mtr);
+				
+				$("<div class='mec-dateperiod-button'>&nbsp;</div>").appendTo(mtd).bind("click", function() {
+					filter.dt2.monthpicker("show");
+				});
+				
+				Lt = (me.g1/*getRangeLabel*/(rangelabel, 2, 1, 2));
+				if (Lt)
+				{
+					S = $("<td class='igc-f-range-label-td'></td>").appendTo(mtr);
+					$(Lt.d).appendTo(S);
+				}
+			}
+			else
+			{
+				ptn = "yyyy-mm-dd";
+				
+				Lt = (me.g1/*getRangeLabel*/(rangelabel, 2, 0, 2));
+				if (Lt)
+				{
+					S = $("<td class='igc-f-range-label-td'></td>").appendTo(mtr);
+					$(Lt.d).appendTo(S);
+				}
+				
+				mtd = $("<td></td>").appendTo(mtr);
+				
+				filter.dt2 = $("<input class='mec-dateperiod-input' type='text' placeholder='" + ptn + "'></input>")
+					.appendTo(mtd);
+				filter.dt2.css({zIndex: 100});
+				filter.dt2.datepicker({
+					buttonImage: "./images/calendar.gif",
+					buttonImageOnly: true,
+					dateFormat: "yy-mm-dd",
+					onSelect: function(dateText, inst) {
+						if (filter.dt1.datepicker("getDate") && filter.dt2.datepicker("getDate"))
+						{
+							me.l5a/*updateHierarchy*/.call(me, filter);
+							
+							if (!showbutton && !f_b_evt)
+							{
+								me.l5/*updateFilterValues*/.call(me);
+							}
+						}
+					}
+				}).appendTo(mtd);
+				
+				if (filter.enddate)
+				{
+					filter.dt2.datepicker("setDate", me.g1a/*getDefaultDate*/(filter.enddate));
+				}
+				
+				mtd = $("<td></td>").appendTo(mtr);
+				
+				$("<div class='mec-dateperiod-button'>&nbsp;</div>").appendTo(mtd).bind("click", function() {
+					filter.dt2.datepicker("show");
+				});
+				
+				Lt = (me.g1/*getRangeLabel*/(rangelabel, 2, 1, 2));
+				if (Lt)
+				{
+					S = $("<td class='igc-f-range-label-td'></td>").appendTo(mtr);
+					$(Lt.d).appendTo(S);
+				}
+			}			
+			
+			if (filter.periodlist)
+			{
+				for (i=0; i < filter.periodlist.length; i++)
+				{
+					// dval.push(new Option(filter.periodlist[i].name, filter.periodlist[i].value));
+					$("<option value='" + filter.periodlist[i].value + "'" + (filter.periodlist[i]["default"] == true ? " selected" : "") + ">" + filter.periodlist[i].name + "</option>").appendTo(dselector);
+					
+					if (filter.periodlist[i]["default"] == true)
+					{
+						if (isyear == true)
+						{
+							var sopt = $("option", filter.dt1),
+								syear = IG$/*mainapp*/._Iea/*dynFilterDateConfig*/.getValue(filter.periodlist[i].value, 0, ismonth, isyear);
+								
+							for (ik=0; ik < sopt.length; ik++)
+							{
+								if ($(sopt[ik]).val() == syear)
+								{
+									$(sopt[ik]).attr("selected", "selected");
+								}
+							}
+							
+							var sopt = $("option", filter.dt2),
+								syear = IG$/*mainapp*/._Iea/*dynFilterDateConfig*/.getValue(filter.periodlist[i].value, 1, ismonth, isyear);
+								
+							for (ik=0; ik < sopt.length; ik++)
+							{
+								if ($(sopt[ik]).val() == syear)
+								{
+									$(sopt[ik]).attr("selected", "selected");
+								}
+							}
+						}
+						else
+						{
+							var r1 = IG$/*mainapp*/._Iea/*dynFilterDateConfig*/.getValue(filter.periodlist[i].value, 0, ismonth, isyear),
+								r2 = IG$/*mainapp*/._Iea/*dynFilterDateConfig*/.getValue(filter.periodlist[i].value, 1, ismonth, isyear);
+							filter.dt1.val(r1);
+							filter.dt2.val(r2);
+							
+							if (ismonth && r1 && r2)
+							{
+								r1 = r1.split("-");
+								r1 = r1.join("") + "01";
+								r2 = r2.split("-");
+								r2 = r2.join("") + "01";
+								
+								filter.dt1.monthpicker("setDate", me.g1a/*getDefaultDate*/(r1));
+								filter.dt2.monthpicker("setDate", me.g1a/*getDefaultDate*/(r2));
+							}
+						}
+					}
+				}
+			}
+			
+			dselector.bind("change", function() {
+				var sel = $("option:selected", dselector).val();
+				if (sel)
+				{
+					if (isyear == true)
+					{
+						var sopt = $("option", filter.dt1),
+							syear = IG$/*mainapp*/._Iea/*dynFilterDateConfig*/.getValue(sel, 0, ismonth, isyear),
+							ik;
+							
+						for (ik=0; ik < sopt.length; ik++)
+						{
+							if ($(sopt[ik]).val() == syear)
+							{
+								$(sopt[ik]).attr("selected", "selected");
+							}
+						}
+						
+						var sopt = $("option", filter.dt2),
+							syear = IG$/*mainapp*/._Iea/*dynFilterDateConfig*/.getValue(sel, 1, ismonth, isyear);
+							
+						for (ik=0; ik < sopt.length; ik++)
+						{
+							if ($(sopt[ik]).val() == syear)
+							{
+								$(sopt[ik]).attr("selected", "selected");
+							}
+						}
+					}
+					else
+					{
+						filter.dt1.val(IG$/*mainapp*/._Iea/*dynFilterDateConfig*/.getValue(sel, 0));
+						filter.dt2.val(IG$/*mainapp*/._Iea/*dynFilterDateConfig*/.getValue(sel, 1));
+					}
+					
+					if (isyear)
+					{
+						if ($("option:selected", filter.dt1).val() && $("option:selected", filter.dt2).val())
+						{
+							me.l5a/*updateHierarchy*/.call(me, filter);
+							if (!showbutton && !f_b_evt)
+							{
+								me.l5/*updateFilterValues*/.call(me);
+							}
+						}
+					}
+					else
+					{
+						if (filter.dt1.val() && filter.dt2.val())
+						{
+							me.l5a/*updateHierarchy*/.call(me, filter);
+							if (!showbutton && !f_b_evt)
+							{
+								me.l5/*updateFilterValues*/.call(me);
+							}
+						}
+					}
+				}
+			});
+			break;
+		}
+		
+		if (filteroptions.f_t_dir == "top")
+		{
+			titlecap = $("<div class='df-titlecap-top'></div>");
+		}
+		else
+		{
+			titlecap = $("<div class='df-titlecap-row'></div>");
+		}
+		mcap.append(titlecap);
+		
+		var mtd;
+		
+		mtd = $("<div class='df-item-row'></div>");
+		
+		if (filteroptions.f_t_dir == "top")
+		{
+			mtd.appendTo(titlecap);
+		}
+		else
+		{
+			mtd.appendTo(mcap);
+		}
+		ui.appendTo(mtd);
+		
+		title = $("<span class='df-title" + (viewtype == "row" ? " df-title-row" : "") + "'></span>");
+		titlecap.prepend(title);
+		
+		if (filter.compcss)
+		{
+			ui.addClass(filter.compcss);
+		}
+		
+		filter.lcap = mtd;
+		filter.u1 = mcap;
+		filter.u2 = ui;
+		filter.u3 = title;
+		filter.u4 = titlecap;
+		
+		t = filter.ltitle || filter.title || filter.lname || filter.name || "";
+		
+		t = IG$/*mainapp*/._rrcs(me, t, filter.u3);
+		
+		filter.u3.text(t);
+		
+		mcap.draggable({
+			/* containment: me.p, */ 
+			handle: titlecap,
+			start: function(event, ui) {
+				if (me._editmode)
+					return true;
+				return false;
+			},
+			drag: function(event, ui) {
+				
+			},
+			stop: function(event, ui) {
+				me._lD/*drop_item*/.call(me, filter, event);
+				me._lm/*_do_layout*/.call(me);
+			}
+		});
+		
+		me.l4/*updateDisplay*/();
+				
+		return ui;
+	},
+	
+	rs_PM/*checkpopup*/: function(sel, filter) {
+		var me = this,
+			filteroptions = me._ILb/*sheetoption*/.pff1a/*filteroptions*/,
+			showbutton = filteroptions.showbutton,
+			f_b_evt = !showbutton && filteroptions.f_b_evt == "T" ? 1 : 0,
+			i, tvalue = "",
+			fsel;
+			
+		fsel = filter.selection = [];
+		
+		if (sel && sel.length > 0)
+		{
+			for (i=0; i < sel.length; i++)
+			{
+				fsel.push({
+					code: sel[i].get("code"),
+					value: sel[i].get("value")
+				});
+			}
+		}
+		
+		if (fsel.length > 0)
+		{
+			tvalue = (fsel[0].value || fsel[0].code) + (fsel.length > 1 ? "(" + (fsel.length-1) + " more)" : "");
+		}
+		
+		$("input[type=text]", filter.u2).val(tvalue);
+			
+		me.l5a/*updateHierarchy*/.call(me, filter);
+		if (!showbutton && !f_b_evt)
+		{
+			me.l5/*updateFilterValues*/.call(me);
+		}
+	},
+	
+	c1/*clearFilter*/: function(filter) {
+		var me = this,
+			p = me.p/*parentUI*/,
+			ui = filter.u2,
+			filteroptions = me._ILb/*sheetoption*/.pff1a/*filteroptions*/,
+			showbutton = filteroptions.showbutton,
+			f_b_evt = !showbutton && filteroptions.f_b_evt == "T" ? 1 : 0,
+			showpopup = filter.showpopup,
+			dateseltype = filter.dateseltype,
+			i,
+			fd;
+			
+		if (me.__dx == true)
+			return;
+		
+		switch (filter.objtype)
+		{
+		case "slider":
+			var min = ui.slider("option", "min"),
+				max = ui.slider("option", "max");
+			
+			ui.slider("values", 0, min);
+			ui.slider("values", 1, max);
+			break;
+		case "combobox":
+			if (showpopup == true)
+			{
+				$("input[type=text]", ui).val("");
+			}
+			else
+			{
+				$("option:selected", ui).removeAttr("selected");
+			}
+			break;
+		case "radiobox":
+			$("option:selected", ui).removeAttr("selected");
+			break;
+		case "checkbox":
+			if (showpopup == true)
+			{
+				$("input[type=text]", ui).val("");
+			}
+			else
+			{
+				$("option:selected", ui).removeAttr("selected");
+			}
+			break;
+		case "fileupload":
+			$("input[type=text]", ui).val("");
+			break;
+		case "text":
+			var sctrls = [$("[name=c_m1]", ui)];
+			if (item.rangevalue)
+			{
+				sctrls.push($("[name=c_m2]", ui));
+			}
+			
+			$.each(sctrls, function(m, mi) {
+				mi.val("");
+			});
+			
+			if (!showbutton && !f_b_evt)
+			{
+				me.l5/*updateFilterValues*/.call(me);
+			}
+			break;
+		case "checkbuttons":
+			fd = filter.data;
+			if (fd && fd.length > 0)
+			{
+				for (i=0; i < fd.length; i++)
+				{
+					fd[i].u2 && $("input[type='checkbox']", fd[i].u2).prop("checked", false);
+				}
+			}
+			if (!showbutton && !f_b_evt)
+			{
+				me.l5/*updateFilterValues*/.call(me);
+			}
+			break;
+		case "radiobuttons":
+			fd = filter.data;
+			if (fd && fd.length > 0)
+			{
+				for (i=0; i < fd.length; i++)
+				{
+					fd[i].u2 && fd[i].u2.removeAttr("selected");
+				}
+			}
+			if (!showbutton && !f_b_evt)
+			{
+				me.l5/*updateFilterValues*/.call(me);
+			}
+			break;
+		case "calendar":
+			if (dateseltype == "year")
+			{
+				filter.dt.val("");
+			}
+			else if (dateseltype == "month")
+			{
+				filter.dt.monthpicker("setDate", null);
+			}
+			else
+			{
+				filter.dt.datepicker("setDate", null);
+			}
+			break;
+		case "calendarperiod":
+			if (dateseltype == "year")
+			{
+				filter.dt1.val("");
+				filter.dt2.val("");
+			}
+			else if (dateseltype == "month")
+			{
+				filter.dt1.monthpicker("setDate", null);
+				filter.dt2.monthpicker("setDate", null);
+			}
+			else
+			{
+				filter.dt1.datepicker("setDate", null);
+				filter.dt2.datepicker("setDate", null);
+			}
+			break;
+		}
+		
+		if (!showbutton && !f_b_evt)
+		{
+			me.l5/*updateFilterValues*/.call(me);
+		}
+	},
+	
+	l2/*appendFiltering*/: function(dt) {
+		var me = this,
+			filteritems = me._ILb/*sheetoption*/.pff1/*filterItems*/,
+			i;
+		for (i=0; i < filteritems.length; i++)
+		{
+			if (dt.uid && filteritems[i].uid == dt.uid)
+			{
+				// already exist
+				return;
+			}
+			else if (dt.name && filteritems[i].name == dt.name)
+			{
+				return;
+			}
+		}
+		
+		if (!(/(metric|measure|custommetric|formulameasure|tabdimension|multimetric|multimeasure|measuregroup|measuregroupdimension|groupfield)/.test(dt.type.toLowerCase())))
+		{
+			// not supported item
+			return;
+		}
+		
+		var ditem = {},
+			datatype = dt.memo ? dt.memo.toLowerCase() : dt.memo;
+		
+		IG$/*mainapp*/._I1d/*CopyObject*/(dt, ditem, "uid;name;nodepath;type");
+		ditem.uid = IG$/*mainapp*/._I06/*formatUID*/(ditem.uid);
+		ditem.title = ditem.name;
+		ditem.objtype = "text";
+		
+		switch (ditem.type.toLowerCase())
+		{
+		case "metric":
+		case "custommetric":
+		case "tabdimension":
+		case "measuregroupdimension":
+			ditem.operator = "EQ";
+			if (datatype == "date" || datatype == "datetime" || datatype == "timestamp")
+			{
+				ditem.objtype = "text";
+			}
+			else
+			{
+				ditem.objtype = "combobox";
+			}
+			break;
+		case "measure":
+		case "formulameasure":
+		case "measuregroup":
+			ditem.operator = "GT";
+			ditem.objtype = "slider";
+			break;
+		}
+	
+		ditem._p1/*main*/ = me._ILb/*sheetoption*/;
+		filteritems.push(ditem);
+		
+		me.l3/*validateItems*/();
+	},
+	
+	I0/*getPvalue*/: function(item) {
+		var r = [],
+			i,
+			prows, prow;
+		
+		if (item.pvalues)
+		{
+			prows = item.pvalues.split("\n");
+			
+			for (i=0; i < prows.length; i++)
+			{
+				prow = prows[i].split(";");
+				r.push({
+					code: prow[0],
+					disp: prow[1]
+				});
+			}
+		}
+		
+		return r;
+	},
+	
+	l3/*validateItems*/: function(vitems, firstrun, ishierchy, is_config) {
+		var me = this,
+			filteritems = vitems || me._ILb/*sheetoption*/.pff1/*filterItems*/,
+			item,
+			hfilter,
+			address = "",
+			objtype,
+			itemtype,
+			i;
+		
+		for (i=0; i < filteritems.length; i++)
+		{
+			item = filteritems[i];
+			objtype = item.objtype;
+			itemtype = item.type;
+			
+			if (!item.validated)
+			{
+				hfilter = me.l3b/*checkHFilter*/(item);
+				
+				if (itemtype == "viewselector")
+				{
+					me.ll1/*updateViewSelector*/(item);
+				}
+				else if (/combobox|checkbox|radiobox|slider|checkbuttons|radiobuttons/.test(objtype))
+				{
+					if (hfilter === false)
+					{
+					}
+					else if (itemtype == "prompt")
+					{
+						item.validate = true;
+						item.data = [];
+						
+						if (item.cmap_uid)
+						{
+							address += "<item" + IG$/*mainapp*/._I20/*XUpdateInfo*/(item, "cmap_uid;cmap_disp;name;type", "s") + " uid='" + item.cmap_uid + "'>";
+							address += (hfilter ? hfilter : "");
+							address += "</item>";
+						}
+						else if (item.pvalues)
+						{
+							item.data = me.I0/*getPvalue*/(item);
+							me.l6/*updateFilterValue*/(filteritems[i]);
+						}
+					}
+					else
+					{
+						address += "<item" + IG$/*mainapp*/._I20/*XUpdateInfo*/(item, "name;uid;objtype;nodepath;cmap_uid;cmap_disp", "s") + ">";
+						address += (hfilter ? hfilter : "");
+						address += "</item>";
+					}
+				}
+			}
+		}
+		
+		if (address != "")
+		{
+			me.v1/*updateValues*/ = true; 
+			me.c2/*isloaded*/ = false;
+			
+			var req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+				cnt,
+				rop;
+				
+			cnt = "<smsg><info option='ValueInfo'>";
+			
+			if (me.report && me.report._ILa/*reportoption*/ && me.report._ILa/*reportoption*/.reportmode == "sql")
+			{
+				rop = me.report._ILa/*reportoption*/;
+				cnt += rop._IJ1/*getCurrentPivot*/.call(rop);
+			}
+			
+			cnt += "</info></smsg>";
+			
+			me.setLoading(true);
+			
+			if (!ishierchy)
+			{
+				me.l3a/*drawControls*/(firstrun, is_config);
+			}
+			
+			req.init(me, 
+				{
+		            ack: "18",
+		            payload: "<smsg>" + address + "</smsg>",
+		            mbody: cnt
+		        }, me, function(xdoc) {
+		        	var me = this,
+		        		m_control = 0;
+		        	if (!ishierchy)
+		        	{
+		        		m_control = 1;
+		        	}
+		        	me.rs_l3/*validateItems*/(xdoc, [vitems, firstrun, ishierchy, is_config, m_control]);
+		        }, function(xdoc) {
+		        	var me = this;
+		        }, [vitems, firstrun]);
+			req._l/*request*/();
+		}
+		else if (!vitems)
+		{
+			me.l3a/*drawControls*/(firstrun, is_config);
+		}
+	},
+	
+	ll1/*updateViewSelector*/: function() {
+		var me = this,
+			i, j, k,
+			filteritems = me._ILb/*sheetoption*/.pff1/*filterItems*/,
+			obj, dobj,
+			item,
+			tabitem,
+			activeTab = 0,
+			odata,
+			objtype,
+			itemtype,
+			dc, di,
+			n = 0;
+			
+		if (me.dzone && filteritems)
+		{
+			for (i=0; i < filteritems.length; i++)
+			{
+				item = filteritems[i];
+				objtype = item.objtype;
+				itemtype = item.type;
+				if (itemtype == "viewselector")
+				{
+					obj = {
+						data: []
+					};
+					
+					if (item.data && objtype == "radiobuttons")
+					{
+						for (j=0; j < item.data.length; j++)
+						{
+							if (item.data[j].u2 && $("input[type='radio']", item.data[j].u2).is(':checked'))
+							{
+								activeTab = j;
+								break;
+							}
+						}
+					}
+					
+					dobj = me.dzone.docitems[item.tabid];
+					
+					dc = dobj ? dobj.children : null;
+					
+					if (dc)
+					{
+						for (j=0; j < dc.length; j++)
+						{
+							di = dobj.children[j];
+							odata = {
+								code: di.docid,
+								disp: di.lt.ubody.title || di.lt.ubody.name // me.dzone.items[j].title || me.dzone.items[j].name
+							};
+							
+							if (n == activeTab)
+							{
+								odata.selected = true;
+							}
+							obj.data.push(odata);
+							n++;
+						}
+					}
+					
+					item.validated = true;
+					item.data = obj.data;
+					
+					me.l6/*updateFilterValue*/(item);
+				}
+			}
+		}
+	},
+	
+	rs_l3/*validateItems*/: function(xdoc, params) {
+		var me = this,
+			vitems = params[0],
+			firstrun = params[1],
+			ishierchy = params[2],
+			is_config = params[3],
+			m_control = params[4],
+			i, j, clen, cfield, m,
+			filteritems = vitems || me._ILb/*sheetoption*/.pff1/*filteritems*/,
+			item,
+			obj, dnode, dnodes, uid, vnode, delimiter, d,
+			mchild,
+			snode,
+			hnode,
+			hnodes,
+			dnode,
+			tpnode, tpnodes,
+			vnode;
+			
+		if (me.__dx == true)
+			return;
+		
+		mchild = IG$/*mainapp*/._I2a/*parseValueList*/(xdoc);
+		
+		if (mchild)
+		{
+			for (m=0; m < mchild.length; m++)
+			{
+				obj = mchild[m];
+				for (i=0; i < filteritems.length; i++)
+				{
+					if (filteritems[i].uid == obj.uid.substring(0, 17))
+					{
+						item = filteritems[i];
+						item.validated = true;
+						item.data = obj.data;
+						me.l6/*updateFilterValue*/(item);
+						break;
+					}
+					else if (filteritems[i].cmap_uid == obj.uid.substring(0, 17))
+					{
+						item = filteritems[i];
+						item.validated = true;
+						item.data = obj.data;
+						me.l6/*updateFilterValue*/(item);
+					}
+				}
+			}
+			
+			for (i=0; i < filteritems.length; i++)
+			{
+				if (!filteritems[i].validated)
+				{
+					item = filteritems[i];
+					item.validate = true;
+					item.data = [];
+					me.l6/*updateFilterValue*/(filteritems[i]);
+				}
+			}
+		}
+		
+		me.v1/*updateValues*/ = false;
+		
+		if (!vitems && !ishierchy && !m_control)
+		{
+			me.l3a/*drawControls*/(firstrun, is_config);
+		}
+	},
+	
+	l3b/*checkHFilter*/: function(item) {
+		var me = this,
+			r = null,
+			hfilter,
+			i, j, m,
+			filteritems = me._ILb/*sheetoption*/.pff1/*filterItems*/,
+			hfitem;
+		
+		if (item.hfilter && item.hfilter.length > 0)
+		{
+			hfilter = item.hfilter.split(";");
+			for (i=0; i < hfilter.length; i++)
+			{
+				hfitem = null;
+				
+				for (j=0; j < filteritems.length; j++)
+				{
+					if (filteritems[j].name == hfilter[i])
+					{
+						hfitem = filteritems[j];
+						break;
+					}
+				}
+				
+				if (hfitem)
+				{
+					hfitem.value = []; //hfitem.value || [];
+					m = me.l7a/*updateFilterValue*/(hfitem);
+					
+					if (m)
+					{
+						r = (r) ? r+m : "<Filters>" + m;
+					}
+					else if (hfitem.isnecessary == true || m === 0)
+					{
+						r = false;
+						break;
+					}
+				}
+				else
+				{
+					r = false;
+					break;
+				}
+			}
+		}
+		
+		if (r)
+		{
+			r += "</Filters>";
+		}
+		
+		return r;
+	},
+	
+	_lD/*drop_item*/: function(fitem, event) {
+		var me = this,
+			filteritems = me._ILb/*sheetoption*/.pff1/*filterItems*/,
+			filteroptions = me._ILb/*sheetoption*/.pff1a/*filteroptions*/,
+			viewtype = filteroptions.viewtype || "table",
+			i, j,
+			mbox = me._mbox, sx, sy, w, h, l,
+			px, py, o = me.p.offset(), nrow, crow;
+		
+		px = event.pageX - o.left;
+		py = event.pageY - o.top;
+		
+		if (mbox)
+		{
+			if (viewtype == "table")
+			{
+				
+			}
+			else
+			{
+				sy = 0;
+				crow = 0;
+				
+				for (i=0; i < mbox.rh.length; i++)
+				{
+					sy += (mbox.rh[i] || 20);
+					
+					if (py < sy)
+					{
+						crow = i;
+						break;
+					}
+				}
+				
+				sx = 0;
+				l = -1;
+				
+				for (i=0; i < filteritems.length; i++)
+				{
+					if (filteritems[i].crowindex == crow)
+					{
+						w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(filteritems[i].u1);
+						
+						if (sx < px && px < sx + w)
+						{
+							if (px < sx + w / 2)
+							{
+								l = i;
+							}
+							else
+							{
+								l = i + 1;
+							}
+							
+							break;
+						}
+						
+						sx += w;
+						l = i + 1;
+					}
+				}
+				
+				if (l > -1)
+				{
+					for (i=0; i < filteritems.length; i++)
+					{
+						if (filteritems[i] == fitem)
+						{
+							filteritems.splice(i, 1);
+							if (i < l)
+							{
+								l--;
+							}
+							filteritems.splice(l, 0, fitem);
+							break;
+						}
+					}
+				}
+				
+				fitem.crowindex = crow;
+			}
+		}
+	},
+	
+	_lm/*_do_layout*/: function() {
+		var me = this,
+			filteritems = me._ILb/*sheetoption*/.pff1/*filterItems*/,
+			filteroptions = me._ILb/*sheetoption*/.pff1a/*filteroptions*/,
+			viewtype = filteroptions.viewtype || "table",
+			i, j,
+			ntable = (filteroptions.columnsize ? filteroptions.columnsize : 1),
+			tw = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.container),
+			x = 0,
+			y = 0, gap = 4, hgap = 10,
+			cx, cy, cw, ch,
+			fcontainer, rx = [], rh = [], mw = {}, mh = {},
+			crow, ccol,
+			fitem, n = 0, ttw = 0, tth,
+			tcab;
+		
+		if (viewtype == "table" && filteroptions.f_t_dir != "top")
+		{
+			for (i=0; i < filteritems.length; i++)
+			{
+				fitem = filteritems[i];
+				tcab = fitem.u4;
+				ttw = Math.max(ttw, IG$/*mainapp*/.x_10/*jqueryExtension*/._w(tcab));
+			}
+		}
+		
+		for (i=0; i < filteritems.length; i++)
+		{
+			fitem = filteritems[i];
+			fcontainer = fitem.u1;
+			tcab = fitem.u4;
+			
+			if (viewtype == "table" && ttw > 0)
+			{
+				IG$/*mainapp*/.x_10/*jqueryExtension*/._w(tcab, ttw);
+			}
+			
+			ch = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(fcontainer);
+			cw = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(fcontainer);
+			
+			ccol = 0;
+			
+			if (viewtype == "table")
+			{
+				if (ntable > 1)
+				{
+					crow = Math.floor(n / ntable);
+					ccol = n % ntable;
+				}
+				else
+				{
+					crow = n;
+					ccol = 0;
+				}
+								
+				n++;
+			}
+			else
+			{
+				crow = fitem.crowindex || 0;
+			}
+			
+			mh[crow] = Math.max(mh[crow] || 0, ch + gap);
+			mw[ccol] = Math.max(mw[ccol] || 0, cw + hgap);
+		}
+		
+		if (viewtype != "table")
+		{
+			for (i=0; i < filteroptions.rowsize; i++)
+			{
+				rx.push(0);
+				rh.push(0);
+			}
+		}
+		
+		n = 0;
+			
+		for (i=0; i < filteritems.length; i++)
+		{
+			fitem = filteritems[i];
+			fcontainer = fitem.u1;
+			ch = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(fcontainer);
+			cw = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(fcontainer);
+			
+			if (viewtype == "table")
+			{
+				cx = 0;
+				cy = 0;
+				
+				if (ntable > 1)
+				{
+					ccol = Math.floor(n / ntable);
+					crow = n % ntable;
+				}
+				else
+				{
+					ccol = 0;
+					crow = n;
+				}
+				
+				for (j=0; j < ccol; j++)
+				{
+					cx += mw[j];
+				}
+				
+				for (j=0; j < crow; j++)
+				{
+					cy += mh[j];
+				}
+				
+				n++;
+			}
+			else
+			{
+				crow = fitem.crowindex || 0;
+				cx = rx[crow];
+				cy = gap;
+				for (j=0; j < crow; j++)
+				{
+					cy += rh[j];
+				}
+				rx[crow] += cw + hgap;
+				rh[crow] = Math.max(rh[crow], ch + gap);
+			}
+			
+			fcontainer.css({top: cy, left: cx});
+		}
+		
+		me._mbox = {
+			rx: rx,
+			rh: rh,
+			mh: mh,
+			mw: mw
+		};
+		
+		if (filteroptions.showbutton && me._sbtn)
+		{
+			cy = gap;
+			if (viewtype == "table")
+			{
+				
+			}
+			else
+			{
+				for (j=0; j < filteroptions.brow; j++)
+				{
+					cy += rh[j];
+				}
+			}
+			me._sbtn.css({top: cy, right: gap});
+		}
+	},
+	
+	l3a/*drawControls*/: function(firstrun, is_config) {
+		var me = this,
+			c = me.c/*contentarea*/,
+			filteritems = me._ILb/*sheetoption*/.pff1/*filterItems*/,
+			filteroptions = me._ILb/*sheetoption*/.pff1a/*filteroptions*/,
+			viewtype = filteroptions.viewtype || "table",
+			p, i, mcap, colwidth;
+		
+		c.empty();
+		
+		if (filteritems.length > 0)
+		{
+			// this.p = p = $("<ul class='df-list'><ul>").appendTo(c);
+			me.p = p = $("<div class='df-list'></div>").appendTo(c);
+			IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.p, IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.container) - 10);
+			var lcap, td,
+				sbtn, stext;
+				
+			ntable = (filteroptions.columnsize ? filteroptions.columnsize : 1);
+						
+			$.each(filteritems, function(i, mf) {
+				var mcap = $("<div class='df-filter-cont'></div>").appendTo(me.p);
+				
+				me.l1/*createFilterUI*/.call(me, mf, mcap, (i > 0 ? filteritems[i-1] : null), viewtype);
+				
+				/*
+				if (viewtype == "table")
+				{
+					if (mf.useprevcont == "T")
+					{
+					}
+					else
+					{
+						n += (mf.objmerge || 1) ;
+					}
+				}
+				*/
+			});
+			
+			for (i=0; i < filteritems.length; i++)
+			{
+				me.l6/*updateFilterValue*/(filteritems[i]);
+			}
+			
+			if (filteroptions.showbutton)
+			{
+				td = $("<div class='df-filter-cont'></div>").appendTo(me.p);
+				stext = (filteroptions.buttonname || IRm$/*resources*/.r1('L_BTN_SEARCH'));
+				
+				sbtn = $("<button class='dt-btn-search'><span>" + IG$/*mainapp*/._rrcsv(stext) + "</span></button>").appendTo(td).bind("click", function() {
+					me.l5/*updateFilterValues*/.call(me, 0, null, 0, 1);
+				});
+				
+				IG$/*mainapp*/._rrcs(me, stext, $("span", sbtn));
+				
+				me._sbtn = td;
+			}
+			
+			me._lm/*_do_layout*/();
+		}
+		
+		me.c2/*isloaded*/ = true;
+		me.v1/*updateValues*/ = false;
+		
+		me.c1/*firstRun*/();
+		
+		setTimeout(function() {
+			me.l5/*updateFilterValues*/.call(me, firstrun, null, is_config);
+		}, 500);
+	},
+	
+	l4/*updateDisplay*/: function() {
+		var me = this;
+		
+		if (me.utimer > -1)
+		{
+			clearTimeout(me.utimer);
+		}
+		
+		me.utimer = setTimeout(function() {
+			me.rs_l4/*updateDisplay*/.call(me);
+		}, 200);
+	},
+	
+	rs_l4/*updateDisplay*/: function() {
+		var me = this,
+			cw = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.container);
+		
+		me.utimer = -1;
+		IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.p, cw - 10);
+		
+		me._lm/*_do_layout*/();
+	},
+	
+//	rs_l4/*updateDisplay*/: function() {
+//		var me = this,
+//			cw = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.container),
+//			i, twidth = cw-10,
+//			titlewidth = 0,
+//			filteritems = me._ILb/*sheetoption*/.pff1/*filterItems*/,
+//			filteroptions = me._ILb/*sheetoption*/.pff1a/*filteroptions*/,
+//			// showrefresh = filteroptions.showrefresh,
+//			filter, uwidth,
+//			cbtn = 30,
+//			colwidth = me.colwidth,
+//			viewtype = filteroptions.viewtype,
+//			c = (colwidth ? colwidth.length / 2 : 1);
+//		
+//		me.utimer = -1;
+//		
+//		if (me.p)
+//		{
+//			IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.p, cw - 10);
+//		}
+//		
+//		if (viewtype == "row")
+//			return;
+//		
+//		if (filteroptions.f_t_dir == "top")
+//		{
+//			titlewidth = 2;
+//		}
+//		else
+//		{
+//			for (i=0; i < filteritems.length; i++)
+//			{
+//				filter = filteritems[i];
+//				if (filter.u3)
+//				{
+//					titlewidth = Math.max(titlewidth, IG$/*mainapp*/.x_10/*jqueryExtension*/._w(filter.u3) + 15);
+//				}
+//			}
+//		}
+//		
+//		uwidth = (twidth - (titlewidth + 3) * c) / c;
+//		uwidth = Math.floor(uwidth);
+//		
+//		for (i=0; i < colwidth.length; i++)
+//		{
+//			if (i % 2 == 0)
+//			{
+//				colwidth[i].attr("width", titlewidth);
+//			}
+//			else if (i % 2 == 1)
+//			{
+//				colwidth[i].attr("width", uwidth);
+//			}
+//		}
+//		
+//		/*
+//		uwidth = twidth - titlewidth - 5;
+//		*/
+//		
+//		for (i=0; i < filteritems.length; i++)
+//		{
+//			filter = filteritems[i];
+//			if (filter.u4 && filter.u2)
+//			{
+//				IG$/*mainapp*/.x_10/*jqueryExtension*/._w(filter.u4, titlewidth);
+//				
+//				if (filter.objtype == "slider")
+//				{
+//					// filter.u2.css({left: titlewidth});
+//					IG$/*mainapp*/.x_10/*jqueryExtension*/._w(filter.u2, uwidth - 10);
+//				}
+//				else
+//				{
+//					IG$/*mainapp*/.x_10/*jqueryExtension*/._w(filter.u2, uwidth - 0);
+//					
+//					if (filter.objtype == "checkbox" && filter.showpopup == true)
+//					{
+//						IG$/*mainapp*/.x_10/*jqueryExtension*/._w($("input[type=text]", filter.u2), uwidth - 40);
+//					}
+//				}
+//			}
+//		}
+//	},
+	
+	cc1/*changeActiveTab*/: function(f, suppressevent, firstrun, loaded) {
+		var me = this,
+			i,
+			tab = me.dzone.docitems[f.tabid],
+			sel = f.value.length > 0 ? f.value[0].code : null,
+			ubody = tab ? tab.lt.ubody : null,
+			itabpanel,
+			tc;
+		
+		if (tab && ubody && ubody.view && sel)
+		{
+			tc = tab.children;
+			
+			for (i=0; i < tc.length; i++)
+			{
+				itabpanel = tc[i];
+				if (suppressevent)
+				{
+					itabpanel.lt.ubody.visible = false;
+				}
+				if (itabpanel.docid == sel && ubody.view.buttons.length > i)
+				{
+					if (suppressevent)
+					{
+						itabpanel.lt.ubody.visible = true;
+					}
+					else
+					{
+						if (firstrun)
+						{
+							ubody.view.s1/*setActiveDoc*/.call(ubody.view, sel, true);
+						}
+						else
+						{
+							ubody.view.buttons[i].trigger("click");
+						}
+						break;
+					}
+				}
+			}
+		}
+	},
+	
+	c1/*firstRun*/: function() {
+		this._i10/*afterInit*/ && this._i10/*afterInit*/.f.call(this._i10/*afterInit*/.p, this);
+	},
+	
+	l5m/*checkFilterValues*/: function(ignorewarn, tab_changes, firstrun) {
+		var i,
+			me = this,
+			filteritems = me._ILb/*sheetoption*/.pff1/*filterItems*/,
+			f,
+			bs = true, bm, mbs,
+			berr = [];
+			
+		for (i=0; i < filteritems.length; i++)
+		{
+			f = filteritems[i];
+			mbs = me.l5m_/*checkFilterValuesItem*/(f, berr, ignorewarn, tab_changes);
+
+			bs = (mbs == false) ? mbs : bs;
+		}
+		
+		if (bs == false)
+		{
+			if (berr.length > 0 && !ignorewarn)
+			{
+				IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1('M_SEL_ERR', berr.join(",")), null, null, 1, "error");
+			}
+			return false;
+		}
+		
+		return true;
+	},
+
+	l5m_/*checkFilterValuesItem*/: function(f, berr, ignorewarn, tab_changes) {
+		var me = this,
+			bm,
+			bs = true;
+
+		f.value = [];
+		if (f.u3)
+		{
+			f.u3.removeClass("df-title-error");
+		}
+		if (f.u2)
+		{
+			f.value = [];
+			bm = me.l7a/*updateFilterValue*/(f);
+			if (bm === 0 || (!bm && f.isnecessary == true))
+			{
+				bs = false;
+				if (f.u3)
+				{
+					f.u3.addClass("df-title-error");
+					berr.push(f.title || f.name);
+				}
+			}
+		}
+		
+		if (f.type == "viewselector" && f.u2)
+		{
+			f.value = [];
+			me.l7a/*updateFilterValue*/(f);
+			if (f.value && f.value.length > 0)
+			{
+				// me.cc1/*changeActiveTab*/(f);
+				tab_changes.push(f);
+			}
+		}
+
+		return bs;
+	},
+	
+	l5/*updateFilterValues*/: function(firstrun, loaded, is_config, is_button) {
+		var me = this,
+			tab_changes = [],
+			filteritems = me._ILb/*sheetoption*/.pff1/*filterItems*/,
+			filteroptions = me._ILb/*sheetoption*/.pff1a/*filteroptions*/,
+			showbutton = filteroptions ? filteroptions.showbutton : false,
+			f_b_trg = (showbutton && filteroptions.f_b_trg == "T") ? 1 : 0,
+			f_b_trg_all = f_b_trg && filteroptions.f_b_trg_all == "T" ? 1 : 0,
+			r = me.l5m/*checkFilterValues*/(firstrun ? 1 : 0, tab_changes),
+			f_b_scr = filteroptions ? filteroptions.f_b_scr : null,
+			i, docid, bd, _dzid,
+			m, mr = 1;
+		
+		if (r && me.callback && me.v1/*updateValues*/ == false)
+		{
+			for (i=0; i < tab_changes.length; i++)
+			{
+				me.cc1/*changeActiveTab*/(tab_changes[i], true);
+			}
+			
+			me._fr = firstrun;
+			
+			if (r && f_b_trg && me.report)
+			{
+				m = me.report.J3/*updateAllFilters*/.call(me.report, me, f_b_trg_all);
+				
+				if (!m)
+				{
+					mr = 0;
+				}
+			}
+
+			if (!is_config && (!firstrun || loaded))
+			{
+				if (mr)
+				{
+					if (f_b_scr && window[f_b_scr])
+					{
+						try
+						{
+							var fmap = {},
+								mr,
+								i;
+								
+							for (i=0; i < filteritems.length; i++)
+							{
+								fmap[filteritems[i].name] = filteritems[i].value;
+							}
+								
+							mr = window[f_b_scr].call(this, fmap);
+							
+							if (mr && mr.err)
+							{
+								IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, mr.errmsg, null, null, 1, "error");
+								return;
+							}
+						}
+						catch (e)
+						{
+							// M$/*mutil*/.L20/*alertmsg*/(m$$.companyname, "Script Error", null, null);
+							return;
+						}
+					}
+				}
+				
+				if (mr)
+				{
+					if (is_button)
+					{
+						me.callback.execute(me);
+					}
+					else
+					{
+						me.callback.execute(me);
+					}
+				}
+			}
+			else if (firstrun)
+			{
+				me.container.trigger("i_ready");
+			}
+			
+			for (i=0; i < tab_changes.length; i++)
+			{
+				me.cc1/*changeActiveTab*/(tab_changes[i], undefined, firstrun, loaded);
+			}
+		}
+	},
+	
+	lv/*isVisible*/: function(uitem, showcondition) {
+		var r = 0,
+			cs = showcondition.split("="),
+			values = uitem.value,
+			i, j,
+			cv;
+			
+		if (cs[0] == uitem.name && values && cs[1])
+		{
+			cv = cs[1].split(",");
+			
+			for (i=0; i < values.length; i++)
+			{
+				if (values[i].code == cs[1])
+				{
+					r = 1;
+					break;
+				}
+				else if (cv.length > 1)
+				{
+					for (j=0; j < cv.length; j++)
+					{
+						if (values[i].code == cv[j])
+						{
+							r = 1;
+							break;
+						}
+					}
+				}
+				
+				if (r)
+					break;
+			}
+		}
+		
+		return r;
+	},
+	
+	l5a/*updateHierarchy*/: function(uitem) {
+		var me = this,
+			vitems = [],
+			citems = [],
+			i, j, hf,
+			item,
+			m,
+			filteritems = me._ILb/*sheetoption*/.pff1/*filterItems*/,
+			r = null,
+			v;
+			
+		if (uitem.invokejs && window[uitem.invokejs])
+		{
+			r = window[uitem.invokejs].call(me, uitem);
+		}
+		
+		if (r != false)
+		{
+			for (i=0; i < filteritems.length; i++)
+			{
+				item = filteritems[i];
+				if (item.name != uitem.name && item.hfilter && item.hfilter.length > 0)
+				{
+					hf = item.hfilter.split(";");
+					for (j=0; j < hf.length; j++)
+					{
+						if (hf[j] == uitem.name)
+						{
+							item.validated = false;
+							vitems.push(item);
+						}
+					}
+				}
+				
+				if (item.name != uitem.name && item.showcondition)
+				{
+					if (item.showcondition.indexOf(uitem.name) > -1)
+					{
+						citems.push(item);
+					}
+				}
+			}
+			
+			if (citems.length > 0)
+			{
+				uitem.value = [];
+				me.l7a/*updateFilterValue*/(uitem);
+				
+//				if (uitem.value && uitem.value.length > 0)
+//				{
+//					m = uitem.value[0].code;
+//				}
+				
+				for (i=0; i < citems.length; i++)
+				{
+					v = me.lv/*isVisible*/(uitem, citems[i].showcondition);
+					
+					me.c3/*controlVisible*/(citems[i], v);
+					 // citems[i].showcondition == uitem.name + "=" + m)
+				}
+			}
+			
+			if (vitems.length > 0)
+			{
+				me._IJ3/*initFilter*/(vitems);
+				me.l3/*validateItems*/(vitems, undefined, true);
+			}
+		}
+		
+		return r;
+	},
+	
+	c3/*controlVisible*/: function(citem, v) {
+		var s = v ? "show" : "hide";
+		citem.u2[s]();
+		citem.u3[s]();
+		citem.u4[s]();
+	},
+	
+	l6/*updateFilterValue*/: function(item) {
+		var aname = "";
+		item.data = item.data || [];
+		item.iV/*updateValues*/ = true;
+		if (item.u2)
+		{
+			var me = this,
+				ui = item.u2, tvalue,
+				i, data = item.data, dp, allnumeric = true, min, max, step,
+				sctrl, sctrl1,
+				sdp,
+				dval,
+				s1a, s1b, s1c;
+			
+			switch (item.objtype)
+			{
+			case "slider":
+				if (data.length > 0)
+				{
+					min = parseFloat(data[0].code);
+					max = min;
+					for (i=0; i < data.length; i++)
+					{
+						tvalue = parseFloat(data[i].code);
+						if (isNaN(tvalue) == false)
+						{
+							min = Math.min(tvalue, min);
+							max = Math.max(tvalue, max);
+						}
+						else
+						{
+							allnumeric = false;
+							break;
+						}
+					}
+					
+					item.allnumeric = allnumeric;
+					
+					if (allnumeric == true)
+					{
+						step = (max-min) / Math.max(data.length, 20);
+						s1a = item.s1a ? Number(item.s1a) : min;
+						s1b = item.s1b ? Number(item.s1b) : max;
+						s1c = item.s1c ? Number(item.s1c) : step;
+					}
+					else
+					{
+						s1a = item.s1a ? Number(item.s1a) : 0;
+						s1b = item.s1b ? Number(item.s1b) : data.length;
+						s1c = item.s1c ? Number(item.s1c) : 1;
+					}
+					
+					ui.slider("option", "min", s1a);
+					ui.slider("option", "max", s1b);
+					ui.slider("option", "step", s1c);
+					ui.slider("values", 0, s1a);
+					ui.slider("values", 1, s1b);
+					
+					me.l8/*updateSlideValue*/.call(me, ui);
+				}
+				break;
+			case "fileupload":
+				item.selection = [];
+				break;
+			case "combobox":
+				if (item.showpopup == true)
+				{
+					item.selection = [];
+				}
+				else
+				{
+					sctrl = $("[name=c_m1]", ui);
+					sctrl1 = $("[name=c_m2]", ui);
+					sdp = [];
+					if (item.showallvalue == true)
+					{
+						if (item.isnecessary == true)
+						{
+							aname = item.aname || IRm$/*resources*/.r1("L_SELECT_VALUE");
+						}
+						else
+						{
+							aname = item.aname || IRm$/*resources*/.r1("L_ALL_VALUE");
+						}
+						
+						sctrl.attr("placeholder", aname);
+						sctrl1.attr("placeholder", aname);
+						
+						IG$/*mainapp*/._$A/*placeholder*/(sctrl);
+						IG$/*mainapp*/._$A/*placeholder*/(sctrl1);
+						
+						sdp.push({label: aname, value: ""});
+					}
+					
+					dval = item._p1/*main*/.m1/*getDefaultValue*/.call(item._p1/*main*/, item);
+					
+					item._svalues = [];
+					
+					for(i=0; i < data.length; i++)
+					{
+						sdp.push({label: (data[i].disp || data[i].code), value: data[i].code});
+						if (dval && dval == data[i].code)
+						{
+							if (item.rangevalue)
+							{
+								item._svalues.push(
+									{
+										code: data[i].code,
+										text: data[i].disp || data[i].code
+									}
+								);
+							}
+							else
+							{
+								item._svalues = [
+									{
+										code: data[i].code,
+										text: data[i].disp || data[i].code
+									}
+								];
+							}
+						}
+					}
+					
+					if (!item.showallvalue && !item.defaultvalue && sdp.length)
+					{
+						item._svalues = [
+							{
+								code: sdp[0].value,
+								text: sdp[0].label
+							}
+						];
+						
+						if (item.rangevalue)
+						{
+							item._svalues.push({
+								code: sdp[sdp.length-1].value,
+								text: sdp[sdp.length-1].label
+							});
+						}
+					}
+					
+					if (item._svalues && item._svalues.length)
+					{
+						sctrl.val(item._svalues[0].text);
+						
+						if (item.rangevalue)
+						{
+							item._svalues[1] && sctrl1.val(item._svalues[1].text);
+						}
+					}
+					
+					item.sdp = sdp;
+					sctrl.trigger("change");
+				}
+				break;
+			case "radiobox":
+			case "checkbox":
+				if (item.objtype == "checkbox" && item.showpopup == true)
+				{
+					item.selection = [];
+				}
+				else
+				{
+					ui.empty();
+					
+					dp = ui.attr("options");
+					if (item.showallvalue == true)
+					{
+						if (item.isnecessary == true)
+						{
+							aname = item.aname || IRm$/*resources*/.r1("L_SELECT_VALUE");
+						}
+						else
+						{
+							aname = item.aname || IRm$/*resources*/.r1("L_ALL_VALUE");
+						}
+						$("<option value=''>" + aname + "</option>").appendTo(ui);
+					}
+					for(i=0; i < data.length; i++)
+					{
+						// dp[i+1] = new Option(disp && disp.length > i ? disp[i] : data[i], data[i]);
+						$("<option value='" + data[i].code + "'>" + (data[i].disp || data[i].code) + "</option>").appendTo(ui);
+					}
+					
+					item.u2.trigger("change");
+				}
+				break;
+			case "checkbuttons":
+				var td = $("ul", ui),
+					inp,
+					box,
+					aname;
+					
+				td.empty();
+				
+				dval = item._p1/*main*/.m1/*getDefaultValue*/.call(item._p1/*main*/, item);
+				
+				if (item.showallvalue)
+				{
+					aname = item.aname || IRm$/*resources*/.r1("L_SELECT_VALUE");
+					box = $("<li class='igc-chk-sel-all'></li>").appendTo(td);
+					inp = $("<label><input type='checkbox' value=''/><span>" + (aname) + "</span></label>").appendTo(box);
+					inp.bind("click", function() {
+						td.trigger("checkbox_sel_all");
+						
+						item.___prv_event = 1;
+						
+						var s = 0;
+						
+						if ($("input[type='checkbox']", inp).is(':checked'))
+						{
+							s = 1;
+						}
+						
+						$.each(data, function(i, dt) {
+							if (dt.u2)
+							{
+								var dobj = $("input[type='checkbox']", dt.u2);
+								if (s)
+								{
+									dobj.prop("checked", true);
+								}
+								else
+								{
+									dobj.prop("checked", false);
+								}
+								
+								// dobj.trigger("change");
+							}
+						});
+						
+						item.___prv_event = 0;
+						
+						td.trigger("checkboxchanged", null);
+					});
+					
+					if (dval == "ALL")
+					{
+						$("input[type='checkbox']", inp).prop("checked", true);
+					}
+					
+					item._c_a1 = inp;
+				}
+				
+				$.each(data, function(i, dt) {
+					var box = $("<li></li>").appendTo(td),
+						inp = $("<label><input type='checkbox' value='" + dt.code + "'/><span>" + (dt.disp || dt.code) + "</span></label>").appendTo(box),
+						inp_b = $("input[type='checkbox']", inp);
+						
+					dt.u2 = inp;
+					dt.u2b = inp_b;
+					
+					if (dt.code == dval || dt.selected || dval == "ALL")
+					{
+						inp_b.prop("checked", true);
+					}
+					
+					inp_b.bind("change", function() {
+						if (!item.___prv_event)
+						{
+							td.trigger("checkboxchanged", dt);
+						}
+					});
+				});
+				
+				if (item.checkbuttonhor == "T")
+				{
+					$("li", td).css({
+						"float": "left",
+						"paddingRight": 5
+					});
+				}
+				
+				td.trigger("checkboxchanged", null);
+				break;
+			case "radiobuttons":
+				var td = $("ul", ui),
+					inp,
+					box;
+				td.empty();
+				
+				window.rdo_id = window.rdo_id || 0;
+				window.rdo_id++;
+				
+				dval = item._p1/*main*/.m1/*getDefaultValue*/.call(item._p1/*main*/, item);
+				
+				$.each(data, function(i, dt) {
+					box = $("<li></li>").appendTo(td);
+					inp = $("<label><input type='radio' name='radio_" + (window.rdo_id) + "' value='" + dt.code + "'/><span>" + (dt.disp || dt.code) + "</span></label>").appendTo(box);
+					dt.u2 = inp;
+					
+					if ((dval && dt.code == dval) || dt.selected)
+					{
+						$("input[type=radio]", inp).prop("checked", true);
+					}
+					
+					inp.bind("change", function() {
+						setTimeout(function() {
+							td.trigger("radioboxchanged");
+						}, 100);
+					});
+				});
+				
+				td.trigger("radioboxchanged");
+				
+				if (item.checkbuttonhor == "T")
+				{
+					$("li", td).css({
+						"float": "left",
+						"paddingRight": 5
+					});
+				}
+				break;
+			case "text":
+				
+				break;
+			case "calendar":
+				
+				break;
+			case "calendarperiod":
+				break;
+			}
+		}
+		
+		item.iV/*updateValues*/ = false;
+	},
+	
+	_uu1/*updateFilterPrompt*/: function(prompts) {
+		var me = this,
+			filteritems = me._ILb/*sheetoption*/.pff1/*filterItems*/,
+			filteroptions = me._ILb/*sheetoption*/.pff1a/*filteroptions*/,
+			item,
+			i, j,
+			values, v;
+		
+		for (i=0; i < filteritems.length; i++)
+		{
+			item = filteritems[i];
+			
+			if (item.value && item.value.length > 0)
+			{
+				for (j=0; j < item.value.length; j++)
+				{
+					v = item.value[j].value || item.value[j].code;
+					values = (j == 0 ? v : values + ", " + v);
+				}
+				
+				prompts[item.name] = values;
+			}
+		}
+	},
+	
+	_IB4/*getExportData*/: function(sx, sy, docid, d_width, d_height) {
+		var me = this,
+			filteritems = me._ILb/*sheetoption*/.pff1/*filterItems*/,
+			filteroptions = me._ILb/*sheetoption*/.pff1a/*filteroptions*/,
+			ntable = (filteroptions.columnsize ? filteroptions.columnsize : 1),
+			r = [], item,
+			i, j, n=0, mx = sx, my = sy,
+			values, v,
+			tval;
+		
+		for (i=0; i < filteritems.length; i++)
+		{
+			item = filteritems[i];
+			
+			if (n > 0 && n % ntable == 0)
+			{
+				my += 30;
+				mx = sx;
+			}
+			
+			if (item.value && item.value.length > 0)
+			{
+				for (j=0; j < item.value.length; j++)
+				{
+					v = item.value[j].value || item.value[j].code;
+					values = (j == 0 ? v : values + ", " + v);
+				}
+				
+				tval = (item.ltitle || item.title || item.lname || item.name);
+				
+				if (tval && tval.charAt(0) == "$")
+				{
+					tval = IRm$/*resources*/.r1(tval);
+				}
+				
+				tval += " (" + values + ")"
+				
+				r.push("<item type='label' x='" + mx + "' y='" + my + "' d_width='" + d_width + "' d_height='" + d_height + "' docid='" + docid + "'>");
+				r.push("<text>" + tval + "</text>");
+				r.push("</item>");
+			}
+			
+			mx += 100;
+			n += (item.objmerge || 1);
+		}
+			
+		return r.join("");
+	},
+	
+	l7/*getFilter*/: function() {
+		var me = this,
+			i, r = "<FilterData>", j, ui,
+			filteritems = me._ILb/*sheetoption*/.pff1/*filterItems*/,
+			value, operator, value1, value2,
+			item, k;
+		
+		for (i=0; i < filteritems.length; i++)
+		{
+			item = filteritems[i];
+			
+			// if (item.type != "viewselector")
+			// {
+				item.value = [];
+				k = me.l7a/*updateFilterValue*/(item);
+				
+				if (k)
+				{
+					r += k;
+				}
+			// }
+		}
+		
+		r += "</FilterData>";
+		return r;
+	},
+	
+	l7a/*updateFilterValue*/: function(item) {
+		var me = this,
+			i, j, ui, value, disp, operator, value1, value2,
+			tval,
+			valueformat,
+			sctrls,
+			r = "",
+			dateseltype = item.dateseltype;
+		
+		if (item.u2)
+		{
+			ui = item.u2;
+			
+			switch (item.objtype)
+			{
+			case "slider":
+				var i0 = ui.slider("values", 0),
+					i1 = ui.slider("values", 1),
+					min = ui.slider("option", "min"),
+					max = ui.slider("option", "max");
+				
+				if (item.allnumeric == false)
+				{
+					if (i0 > 0 || i1 < item.data.length)
+					{
+						for (j=i0; j < i1; j++)
+						{
+							item.value.push({code: item.data[j].code, value: item.data[j].disp, operator: "EQ"});
+						}
+					}
+				}
+				else if (min < i0 || max > i1)
+				{
+					item.value.push({code: "" + i0, value: "" + i0, operator: "GTE"});
+					item.value.push({code: "" + i1, value: "" + i1, operator: "LTE"});
+				}
+				break;
+			case "calendar":
+				if (dateseltype == "year")
+				{
+					value = $("option:selected", item.dt).val();
+				}
+				else if (dateseltype == "month")
+				{
+					value = item.dt.monthpicker("getDate");
+				}
+				else
+				{
+					value = item.dt.datepicker("getDate");
+				}
+				
+				if (value)
+				{
+					if (dateseltype == "year")
+					{
+					}
+					else
+					{
+						value = value.format("Ymd"); //  + "000000";
+					}
+					item.value.push({code: value, value: value, format: "date"});
+				}
+				break;
+			case "calendarperiod":
+				if (dateseltype == "year")
+				{
+					value1 = $("option:selected", item.dt1).val();
+					value2 = $("option:selected", item.dt2).val();
+				}
+				else if (dateseltype == "month")
+				{
+					value1 = item.dt1.monthpicker("getDate");
+					value2 = item.dt2.monthpicker("getDate");
+					value2 = new Date(value2.getFullYear(), value2.getMonth()+1, 0);
+				}
+				else
+				{
+					value1 = item.dt1.datepicker("getDate");
+					value2 = item.dt2.datepicker("getDate");
+				}
+				
+				if (value1 && value2)
+				{
+					if (dateseltype == "year")
+					{
+						
+					}
+					else
+					{
+						value1 = value1.format("Ymd") + "000000";
+						value2 = value2.format("Ymd") + "235959";
+					}
+					
+					if (Number(value1) < Number(value2))
+					{
+						item.value.push({code: value1, value: value1, operator: "GTE", format: "date"});
+						item.value.push({code: value2, value: value2, operator: "LTE", format: "date"});
+					}
+					else
+					{
+						r = 0;
+					}
+				}
+				break;
+			case "text":
+				var sctrls = [$("[name=c_m1]", ui)];
+				if (item.rangevalue)
+				{
+					sctrls.push($("[name=c_m2]", ui));
+				}
+				
+				$.each(sctrls, function(m, mui) {
+					var tval = mui.val(),
+						i;
+					
+					if (tval)
+					{
+						item.value.push({code: tval, value: tval});
+					}
+				});
+				break;
+			case "fileupload":
+				item.selection = item.selection || [];
+				
+				if (item.selection.length)
+				{
+					item.value.push({code: item.selection[0].code, value: item.selection[0].value});
+				}
+				break;
+			case "combobox":
+				// value = ui.val();
+				// disp = $("option:selected", ui).text();
+				if (item.showpopup)
+				{
+					item.selection = item.selection || [];
+					if (item.selection.length)
+					{
+						item.value.push({code: item.selection[0].code, value: item.selection[0].value});
+					}
+				}
+				else
+				{
+					var sctrls = [$("[name=c_m1]", ui)];
+					if (item.rangevalue)
+					{
+						sctrls.push($("[name=c_m2]", ui));
+					}
+					
+					value = [];
+					
+					$.each(sctrls, function(m, mui) {
+						var tval = mui.val(),
+							placeholder = mui.attr("placeholder"),
+							i;
+						if (!item.rangevalue && tval && item._svalues && item._svalues.length && item._svalues[0].text == tval)
+						{
+							if (!placeholder || (placeholder && tval != placeholder))
+							{
+								value = item._svalues;
+							}
+						}
+						else if (tval && item.sdp && item.sdp.length)
+						{
+							for (i=0; i < item.sdp.length; i++)
+							{
+								if (placeholder && tval == placeholder)
+								{
+									continue;
+								}
+								else if (item.sdp[i].value == tval || item.sdp[i].label == tval)
+								{
+									value.push(
+										{
+											code: item.sdp[i].value,
+											text: item.sdp[i].text || item.sdp[i].label
+										}
+									);
+									break;
+								}
+							}
+						}
+					});
+					
+					if (value && (!item.rangevalue && value.length > 0) || (item.rangevalue && value.length > 1))
+					{
+						for (i=0; i < value.length; i++)
+						{
+							item.value.push({code: value[i].code, value: value[i].text});
+						}
+					}
+				}
+				break;
+			case "checkbox":
+				if (item.showpopup)
+				{
+					item.selection = item.selection || [];
+					for (j=0; j < item.selection.length; j++)
+					{
+						item.value.push({code: item.selection[j].code, value: item.selection[j].value});
+					}
+				}
+				else
+				{
+					value = ui.val() || [];
+					for (j=0; j < value.length; j++)
+					{
+						if (value[j] != "")
+						{
+							item.value.push({code: value[j], value: value[j]});
+						}
+					}
+				}
+				break;
+			case "checkbuttons":
+				if (item.data)
+				{
+					for (j=0; j < item.data.length; j++)
+					{
+						if (item.data[j].u2 && $("input[type='checkbox']", item.data[j].u2).is(':checked'))
+						{
+							item.value.push({code: item.data[j].code, value: item.data[j].value});
+						}
+					}
+				}
+				break;
+			case "radiobuttons":
+				if (item.data)
+				{
+					for (j=0; j < item.data.length; j++)
+					{
+						if (item.data[j].u2 && $("input[type='radio']", item.data[j].u2).is(':checked'))
+						{
+							item.value.push({code: item.data[j].code, value: item.data[j].value});
+						}
+					}
+				}
+				break;
+			case "radiobox":
+				value = ui.val() || [];
+				for (j=0; j < value.length; j++)
+				{
+					if (value[j] != "")
+					{
+						item.value.push({code: value[j], value: value[j]});
+					}
+				}
+				break;
+			}
+			
+			if (item.value && item.value.length > 0)
+			{
+				r += "<Filter>";
+				for (j=0; j < item.value.length; j++)
+				{
+					operator = item.value[j].operator || item.operator || "";
+					valueformat = item.valueformat || "";
+					
+					r += "<Row" + IG$/*mainapp*/._I20/*XUpdateInfo*/(item, "uid;name;type", "s") + 
+						" operator='" + operator + "'" +
+						" title='" + (item.title || "") + "'" + 
+						" useprompt='" + (item.useprompt ? "T" : "F") + "'" + 
+						IG$/*mainapp*/._I20/*XUpdateInfo*/(item.value[j], "format", "s") + ">" + 
+						((item.value[j].code) ? "<code><![CDATA[" + item.value[j].code + "]]></code>" : "") + 
+						((item.value[j].value) ? "<value><![CDATA[" + item.value[j].value + "]]></value>" : "") + 
+						(valueformat ? "<valueformat><![CDATA[" + valueformat + "]]></valueformat>" : "") + 
+						"</Row>";
+				}
+				r += "</Filter>";
+			}
+		}
+		
+		return r;
+	},
+	
+	l8/*updateSlideValue*/: function(slider) {
+		var i, 
+			me = this,
+			slide = $(slider),
+			filteritems = me._ILb/*sheetoption*/.pff1/*filterItems*/,
+			filteritem,
+			handles = slide.children("a"),
+			handle,
+			value;
+	
+		if (handles && handles.length == 2)
+		{
+			for (i=0; i < filteritems.length; i++)
+			{
+				if (filteritems[i].u2 && filteritems[i].u2[0] == slide[0])
+				{
+					filteritem = filteritems[i];
+					break;
+				}
+			}
+			
+			for (i=0; i < handles.length; i++)
+			{
+				value = slide.slider("values", i);
+				
+				if (filteritem && filteritem.data && filteritem.allnumeric == false)
+				{
+					if (filteritem.data.length > value)
+					{
+						value = "" + filteritem.data[value].code;
+					}
+					else
+					{
+						value = "";
+					}
+				}
+				else
+				{
+					value = "" + value;
+				}
+				
+				handle = $(handles[i]);
+				
+				handle.tooltip({
+					track: true,
+					delay: 0,
+					fade: 250,
+					showURL: false
+				});
+				
+				handle[0].tooltipText = value;
+			}
+		}
+	},
+	
+	l8a/*updateSlideValue*/: function(slider, ctrl, left) {
+		var i, 
+			me = this,
+			slide = $(slider),
+			filteritems = me._ILb/*sheetoption*/.pff1/*filterItems*/,
+			filteritem,
+			handles = slide.children("a"),
+			handle,
+			value, 
+			guide;
+	
+		if (handles && handles.length == 2)
+		{
+			for (i=0; i < filteritems.length; i++)
+			{
+				if (filteritems[i].u2 && filteritems[i].u2[0] == slider)
+				{
+					filteritem = filteritems[i];
+					break;
+				}
+			}
+			
+			for (i=0; i < handles.length; i++)
+			{
+				if (ctrl.handle == handles[i])
+				{
+					value = slide.slider("values", i);
+					
+					if (filteritem && filteritem.data && filteritem.allnumeric == false)
+					{
+						if (filteritem.data.length > value)
+						{
+							value = "" + filteritem.data[value].code;
+						}
+						else
+						{
+							value = "";
+						}
+					}
+					else
+					{
+						value = "" + value;
+					}
+					
+					guide = slide.children(".guide");
+					guide.css({left: left}).html(value);
+				}
+			}
+		}
+	},
+	
+	setLoading: function(visible) {
+		var me = this;
+		
+		me.sp/*splash*/[(visible == true) ? "show" : "fadeOut"]();
+	},
+	
+	_IJ3/*initFilter*/: function(vitems, cloaded) {
+		var me = this,
+			filteritems = vitems || me._ILb/*sheetoption*/.pff1/*filterItems*/,
+			item, ui,
+			i,
+			crun = me.c2/*isloaded*/;
+		
+		for (i=0; i < filteritems.length; i++)
+		{
+			item = filteritems[i];
+			if (item.u2)
+			{
+				ui = item.u2;
+				
+				switch (item.objtype)
+				{
+				case "slider":
+					break;
+				case "calendar":
+					break;
+				case "text":
+					var sctrls = [$("[name=c_m1]", ui)];
+					if (item.rangevalue)
+					{
+						sctrls.push($("[name=c_m2]", ui));
+					}
+					
+					$.each(sctrls, function(m, mi) {
+						mi.val("");
+					});
+					break;
+				case "combobox":
+					if (item.showpopup == true)
+					{
+						$("input[type=text]", ui).val("");
+						item.selection = [];
+					}
+					else
+					{
+						$("input[type=text]", ui).val("");
+					}
+					break;
+				case "checkbox":
+					if (item.showpopup == true)
+					{
+						$("input[type=text]", ui).val("");
+						item.selection = [];
+					}
+					else
+					{
+						ui.val([]);
+					}
+					break;
+				case "radiobox":
+					ui.val([]);
+					break;
+				}
+			}
+		}
+		
+		if (cloaded && crun)
+		{
+			this.c1/*firstRun*/();
+		}
+	}
+}
+IG$/*mainapp*/._ICc/*clControlItem*/ = function(node, uctrl, dsmode) {
+	var me = this;
+	me.P1/*parentcontrol*/ = null;
+	me.P2/*subcontrols*/ = [];
+	me.P3/*applicationItem*/ = null;
+	me.P5/*position*/ = {top: 10, left:10, right: null, bottom: null, width: 100, height: 100, percentwidth: null, percentheight: null};
+	me.P6/*ctrlname*/ = "";
+	me.dsmode = dsmode;
+	
+	me.P7/*property*/ = {
+		visible: "true",
+		border: "1",
+		bordercolor: "#e5e5e5",
+		backgroundcolor: "#ffffff",
+		padding: "2"
+	};
+	// me.P8/*events*/ = {};
+	me.uctrl = uctrl;
+	me.actionlist = {};
+	
+	if (me.uctrl && me.uctrl.P4/*ctrltype*/ == "panel" && me.uctrl.P7/*property*/["layout"] == "border")
+	{
+		me.P7/*property*/["title"] = me.P7/*property*/["title"] || " ";
+	}
+	
+	if (node)
+	{
+		me.P4/*ctrltype*/ = node.type;
+		var i, propnode, child, nodename, actname, actobj;
+		
+		me.P5/*position*/ = node.position || null;
+		
+		me.P7/*property*/ = node.properties;
+		me.P6/*ctrlname*/ = node.name;
+		
+		me.P9/*control*/ = me.getControl(me.P4/*ctrltype*/.toLowerCase());
+		
+		me.P3/*applicationItem*/ = node.item;
+		
+		if (node.item)
+		{
+			me.P9/*control*/.aa/*applyApplication*/(me.P3/*applicationItem*/);
+		}
+		
+		me.actionlist = node.actionlist;
+	}
+	
+	me.P10/*measuredRect*/ = {x:0, y:0, w:20, h:20};
+}
+
+IG$/*mainapp*/._ICc/*clControlItem*/.prototype = {
+	P12/*getSelectionData*/: function(itemname) {
+		var me = this,
+			seldata = null;
+		
+		if (me.P9/*control*/ && me.P9/*control*/.P12/*getSelectionData*/) {
+			seldata = me.P9/*control*/.P12/*getSelectionData*/.call(me.P9/*control*/, itemname);
+		}
+		
+		return seldata;
+	},
+	
+	disposeContent: function (ui) {
+		if (ui.control && typeof ui.control != 'undefined')
+		{
+			ui.control.disposeContent(ui.control);
+			ui.control = null;
+		}
+	},
+	
+	P11/*measurePosition*/: function(uctrl, x, y, w, h) {
+		var me = this,
+			p = me.P5/*position*/;
+			m = me.P10/*measuredRect*/;
+		
+		if (p.top != null && p.bottom != null)
+		{
+			m.y = p.top;
+			m.h = h - (p.bottom + p.top);
+		}
+		else if (p.height != null)
+		{
+			m.h = p.height;
+			if (p.top != null)
+			{
+				m.y = p.top;
+			}
+			else if (p.bottom != null)
+			{
+				m.y = h - p.height - p.bottom;
+			}		
+		}
+		else if (p.percentheight != null)
+		{
+			if (p.top != null)
+			{
+				m.y = p.top;
+				m.h = (h - p.top) * 0.01 * p.percentheight;
+			}
+			else if (p.bottom != null)
+			{
+				m.h = (h - p.bottom) * 0.01 * p.percentheight;
+				m.y = (h - m.h - p.bottom);
+			}
+		}
+		
+		if (p.left != null && p.right != null)
+		{
+			m.x = p.left;
+			m.w = w - (p.right + p.left);
+		}
+		else if (p.width != null)
+		{
+			m.w = p.width;
+			if (p.left != null)
+			{
+				m.x = p.left;
+			}
+			else if (p.right != null)
+			{
+				m.x = w - p.width - p.right;
+			}		
+		}
+		else if (p.percentwidth != null)
+		{
+			if (p.left != null)
+			{
+				m.x = p.left;
+				m.w = (w - p.left) * 0.01 * p.percentwidth;
+			}
+			else if (p.right != null)
+			{
+				m.w = (w - p.percentwidth * 0.01 - p.right);
+				m.x = (w - m.w) - p.right;
+			}
+		}
+		
+		m._px = x;
+		m._py = y;
+	},
+	
+	getControl: function(ctrltype) {
+		var me = this;
+		return IG$/*mainapp*/.getControl.call(me, ctrltype, me.dsmode);
+	},
+	
+	i9/*initDesignerMode*/: function(node) {
+		var ctrl = this.P9/*control*/,
+			html;
+		if (ctrl)
+		{
+			html = ctrl._1/*createControl*/.call(ctrl, node);
+		}
+		
+		node.dummy = ctrl;
+		
+		return html;
+	}
+}
+
+IG$/*mainapp*/.getControl = function(ctrltype, dsmode, gsize) {
+	var ctrl = null,
+		me = this;
+		
+	if (gsize)
+	{
+		ctrl = {
+			width: 100,
+			height: 100
+		};
+		
+		if (/(titlelabel|label|button|textbox|datechooser|monthchooser|combobox)/.test(ctrltype))
+		{
+			ctrl.height = 25;
+		}
+	}
+	else
+	{
+		switch (ctrltype)
+		{
+		case "titlelabel":
+			ctrl = new IG$/*mainapp*/._ID4/*ctrlTitleLabel*/(me.P7/*property*/, me, dsmode);
+			break;
+		case "olapreport":
+		case "compositereport":
+			ctrl = new IG$/*mainapp*/._IDd/*ctrlOLAPReport*/(me.P7/*property*/, me, dsmode);
+			break;
+		case "label":
+			ctrl = new IG$/*mainapp*/._ID5/*ctrlLabel*/(me.P7/*property*/, me, dsmode);
+			break;
+		case "textarea":
+			ctrl = new IG$/*mainapp*/._ID8/*ctrlTextArea*/(me.P7/*property*/, me, dsmode);
+			break;
+		case "picture":
+		case "image":
+			ctrl = new IG$/*mainapp*/._ID6/*ctrlPicture*/(me.P7/*property*/, me, dsmode);
+			break;
+		case "button":
+			ctrl = new IG$/*mainapp*/._ID9/*ctrlButton*/(me.P7/*property*/, me, dsmode);
+			break;
+		case "textbox":
+			ctrl = new IG$/*mainapp*/._ID7/*ctrlTextInput*/(me.P7/*property*/, me, dsmode);
+			break;
+		case "datechooser":
+			ctrl = new IG$/*mainapp*/._IDb/*ctrlDateField*/(me.P7/*property*/, me, dsmode);
+			break;
+		case "monthchooser":
+			ctrl = new IG$/*mainapp*/.jj_3/*ctrlMonthField*/(me.P7/*property*/, me, dsmode);
+			break;
+		case "combobox":
+			ctrl = new IG$/*mainapp*/._IDa/*ctrlComboBox*/(me.P7/*property*/, me, dsmode);
+			break;
+		case "panel":
+			ctrl = new IG$/*mainapp*/._IDc/*ctrlPanel*/(me.P7/*property*/, me, dsmode);
+			break;
+		case "treefilter":
+			ctrl = new IG$/*mainapp*/._IDf/*ctrlTreeFilter*/(me.P7/*property*/, me, dsmode);
+			break;
+		case "grid":
+			ctrl = new IG$/*mainapp*/._Imm/*interactiveGrid*/(me.P7/*property*/, me, dsmode);
+			break;
+		case "browser":
+			ctrl = new IG$/*mainapp*/.jj_1/*browserpanel*/(me.P7/*property*/, me, dsmode);
+			break;
+		case "sheetfilter":
+			ctrl = new IG$/*mainapp*/.jj_2/*sheetfilter*/(me.P7/*property*/, me, dsmode);
+			break;
+		case "tabpanel":
+			ctrl = new IG$/*mainapp*/.jj_3/*tabpanel*/(me.P7/*property*/, me, dsmode);
+			break;
+		case "dashboard":
+			ctrl = new IG$/*mainapp*/.jj_5/*dashboard*/(me.P7/*property*/, me, dsmode);
+			break;
+		case "promptfilter":
+			ctrl = new IG$/*mainapp*/.jj_4/*promptfilter*/(me.P7/*property*/, me, dsmode);
+			break;
+		case "checkbox":
+			ctrl = new IG$/*mainapp*/.$iDa/*ctrlCheckbox*/(me.P7/*property*/, me, dsmode);
+			break;
+		case "pivotfilter":
+			ctrl = new IG$/*mainapp*/.jj_M/*pivotfilter*/(me.P7/*property*/, me, dsmode);
+			break;
+		default:
+			ctrl = new IG$/*mainapp*/._ID3/*ctrlNullControl*/(me.P7/*property*/, me, dsmode);
+			break;
+		}
+	
+		ctrl.type = ctrltype;
+	}
+	
+	return ctrl;
+}
+
+IG$/*mainapp*/._ICd/*clValueList*/ = function(xdoc, uid) {
+	var me = this,
+		tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/result/data"),
+		hnode,
+		tchild, 
+		i, sid, sname, delimiter, rnode, tvalues=null, tdescs=null, dnode, val,
+		rprop, cols, tprop,
+		codefield = [], sortfield = [],
+		n_geolat = -1,
+		n_geolng = -1,
+		cf = {}, sf = {},
+		tindex,
+		row,
+		geolat, geolng,
+		data = [],
+		dmode = 0,
+		dn,
+		snode;
+		
+	me.data = data;
+	
+	rnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item/result");
+	
+	if (rnode)
+	{
+		rprop = IG$/*mainapp*/._I1c/*XGetAttrProp*/(rnode);
+		
+		delimiter = rprop["delimiter"];
+		me.pool = rprop["pool"];
+		geolat = rprop["geolat"];
+		geolng = rprop["geolng"];
+		cols = parseInt(rprop["cols"]);
+		codefield = rprop["codefield"];
+		sortfield = rprop["sortfield"];
+		
+		codefield = (codefield && codefield.length > 0) ? codefield.split(",") : [];
+		sortfield = (sortfield && sortfield.length > 0) ? sortfield.split(",") : [];
+	}
+	
+	if (tnode)
+	{
+		hnode = IG$/*mainapp*/._I18/*XGetNode*/(rnode, "Header");
+		tchild = IG$/*mainapp*/._I26/*getChildNodes*/(hnode);
+	}
+	else
+	{
+		tnode = hnode = IG$/*mainapp*/._I18/*XGetNode*/(rnode, "TupleData");
+		if (tnode)
+		{
+			tchild = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+			dmode = 1;
+			cols = 1;
+		}
+	}
+	
+	if (tchild)
+	{
+		if (me.pool && me.pool.indexOf(";") > -1)
+		{
+			me.pool = me.pool.substring(0, me.pool.indexOf(";"));
+		}
+		
+		tindex = -1;
+		
+		for (i=0; i < tchild.length; i++)
+		{
+			tprop = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tchild[i]);
+			if (tprop["uid"] == uid || tprop["name"] == uid)
+			{
+				tindex = i;
+				snode = IG$/*mainapp*/._I18/*XGetNode*/(tchild[i], "DataList");
+			}
+			else if (geolat && (tprop.uid == geolat || tprop.name == geolat))
+			{
+				n_geolat = i;
+			}
+			else if (geolng && (tprop.uid == geolng || tprop.name == geolng))
+			{
+				n_geolng = i;
+			}
+		}
+		
+		for (i=0; i < codefield.length; i++)
+		{
+			cf[parseInt(codefield[i])] = 1;
+		}
+		
+		for (i=0; i < sortfield.length; i++)
+		{
+			sf[parseInt(sortfield[i])] = 1;
+		}
+		
+		tvalues = dmode == 0 ? IG$/*mainapp*/._I24/*getTextContent*/(tnode) : (snode ? IG$/*mainapp*/._I24/*getTextContent*/(snode) : "");
+		
+		tvalues = tvalues.split(delimiter);
+		
+		if (tindex > -1)
+		{
+			i = 0;
+			dn = dmode == 0 ? tvalues.length : tvalues.length - 1;
+			while (i < dn)
+			{
+				if (cols == 1)
+				{
+					data.push({
+						code: tvalues[i]
+					});
+				}
+				else
+				{
+					n = i % cols;
+					
+					if (n == 0)
+					{
+						row = {};
+					}
+					else if (n == cols - 1)
+					{
+						if (!row.code)
+						{
+							row.code = row.text;
+						}
+						data.push(row);
+					}
+					
+					if (n == tindex)
+					{
+						row.text = tvalues[i];
+					}
+					else if (cf[n])
+					{
+						row.code = tvalues[i];
+					}
+					else if (sf[n])
+					{
+						row.sort = tvalues[i];
+					}
+					else if (n_geolat == n)
+					{
+						row.lat = tvalues[i];
+					}
+					else if (n_geolng == n)
+					{
+						row.lng = tvalues[i];
+					}
+				}
+				i++;
+			}
+		}
+	}
+}
+
+IG$/*mainapp*/._ICe/*clEvents*/ = function(node) {
+	var me = this,
+		snode,
+		fnode,
+		snodelist,
+		i, cf, inode, inodes,
+		p;
+	
+	me.eventXML = node;
+	
+	if (node)
+	{
+		me.purpose = IG$/*mainapp*/._I1b/*XGetAttr*/(node, "purpose").toLowerCase();
+		me.eventtype = IG$/*mainapp*/._I1b/*XGetAttr*/(node, "type");
+		me.uid = IG$/*mainapp*/._I1b/*XGetAttr*/(node, "uid");
+		me.name = IG$/*mainapp*/._I1b/*XGetAttr*/(node, "name");
+		me.description = IG$/*mainapp*/._I1b/*XGetAttr*/(node, "description");
+	
+		me.P13/*controlid*/ = null;
+		me.enableoffline = null;
+		me.filters = null;
+		
+		me.iparams = {};
+		me.oparams = {};
+		
+		me.s_iparams = [];
+		me.s_oparams = [];
+		
+		snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "params");
+		
+		if (snode)
+		{
+			inode = IG$/*mainapp*/._I18/*XGetNode*/(snode, "iparams");
+			inodes = (inode ? IG$/*mainapp*/._I26/*getChildNodes*/(inode) : null);
+			if (inodes)
+			{
+				for (i=0; i < inodes.length; i++)
+				{
+					p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(inodes[i]);
+					
+					me.iparams[p.name] = p;
+				}
+			}
+			inode = IG$/*mainapp*/._I18/*XGetNode*/(snode, "oparams");
+			inodes = (inode ? IG$/*mainapp*/._I26/*getChildNodes*/(inode) : null);
+			if (inodes)
+			{
+				for (i=0; i < inodes.length; i++)
+				{
+					p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(inodes[i]);
+					
+					me.oparams[p.name] = p;
+				}
+			}
+		}
+	
+		var purpose = me.purpose;
+		
+		if (purpose == "onlinereport")
+		{
+			snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "item");
+			
+			if (snode)
+			{
+				me.P13/*controlid*/ = IG$/*mainapp*/._I1b/*XGetAttr*/(snode, "controlid");
+				me.item = {};
+				IG$/*mainapp*/._I1f/*XGetInfo*/(me.item, snode, "type;nodepath;uid;name", "s");
+			}
+			
+			fnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "item/Filter");
+			me.__sfilter = new IG$/*mainapp*/._IEb/*clFilterGroup*/();
+			
+			if (fnode)
+			{
+				me.p2/*parseFilter*/(fnode, me.__sfilter);
+			}
+			
+			fnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "item/HavingFilter");
+			me.__shavingfilter = new IG$/*mainapp*/._IEb/*clFilterGroup*/();
+			
+			if (fnode)
+			{
+				me.p2/*parseFilter*/(fnode, me.__shavingfilter);
+			}
+		}
+		else if (purpose == "valuelist")
+		{
+			// <options clearfilter="F" controlid="Combobox1" enableoffline="F" usereportcontent="T"/>
+			snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "options");
+			if (snode)
+			{
+				// me.P13/*controlid*/ = IG$/*mainapp*/._I1b/*XGetAttr*/(snode, "controlid");
+				// me.enableoffline = (IG$/*mainapp*/._I1b/*XGetAttr*/(snode, "enableoffline") === "T") ? true : false;
+				// me.usereportcontent = (IG$/*mainapp*/._I1b/*XGetAttr*/(snode, "usereportcontent") === "T") ? true : false;
+			}
+			
+			snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "options/item");
+			if (snode)
+			{
+				me.item = {};
+				IG$/*mainapp*/._I1f/*XGetInfo*/(me.item, snode, "type;nodepath;uid;name;cubeuid", "s");
+			}
+		}
+		else if (purpose == "execute_script")
+		{
+			// <Script/> <item name="execTestScript" ozid="" type=""> <path/></item><options>execTestScript</options>
+			snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "options/script");
+			if (snode)
+			{
+				me.script = IG$/*mainapp*/._I24/*getTextContent*/(snode);
+			}
+		}
+		else if (purpose == "servercall")
+		{
+			snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "options/plugin");
+			if (snode)
+			{
+				IG$/*mainapp*/._I1f/*XGetInfo*/(me, snode, "jmodule;jmodule_name", "s");
+				me.jmethod = IG$/*mainapp*/._I24/*getTextContent*/(snode);
+			}
+		}
+		else if (purpose == "open_dlg")
+		{
+			snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "options/dialog");
+			
+			if (snode)
+			{
+				IG$/*mainapp*/._I1f/*XGetInfo*/(me, snode, "btntype;btnclose", "s");
+				me.dlgmsg = IG$/*mainapp*/._I1a/*getSubNodeText*/(snode, "dlgmsg");
+				me.dlgtitle = IG$/*mainapp*/._I1a/*getSubNodeText*/(snode, "dlgtitle");
+			}
+		}
+		else if (purpose == "open_win")
+		{
+			snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "options");
+			if (snode)
+			{
+				me.ispopup = IG$/*mainapp*/._I1b/*XGetAttr*/(snode, "ispopup") == "T";
+			}
+			
+			snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "options/item");
+			
+			if (snode)
+			{
+				me.item = {};
+				IG$/*mainapp*/._I1f/*XGetInfo*/(me.item, snode, "type;nodepath;uid;name", "s");
+			}
+		}
+		else if (purpose == "export")
+		{
+			snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "options/exp");
+			
+			if (snode)
+			{
+				// IG$/*mainapp*/._I1f/*XGetInfo*/(me, snode, "exp_out;exp_tmpl", "s");
+				me.exp_tmpl = IG$/*mainapp*/._I1a/*getSubNodeText*/(snode, "exp_tmpl");
+				me.exp_out = IG$/*mainapp*/._I1a/*getSubNodeText*/(snode, "exp_out");
+			}
+		}
+		else if (purpose == "sql")
+		{
+			snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "options/execute_sql");
+			if (snode)
+			{
+				IG$/*mainapp*/._I1f/*XGetInfo*/(me, snode, "dsource;rmode", "s");
+				me.sqlsyntax = IG$/*mainapp*/._I24/*getTextContent*/(snode);
+			}
+			
+			me.columns = [];
+			me.prompts = [];
+			
+			snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "options/columns");
+			
+			if (snode)
+			{
+				snodes = IG$/*mainapp*/._I26/*getChildNodes*/(snode);
+				
+				for (i=0; i < snodes.length; i++)
+				{
+					var p = {};
+					IG$/*mainapp*/._I1f/*XGetInfo*/(p, snodes[i], "name;fieldname;sqlfield;type;datatype;tablename;dataoption_data;dataoption_valuetype;dataoption_datadelimiter;dataoption_coldelimiter;uid;kname", "s");
+					me.columns.push(p);
+				}
+			}
+			
+			snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "options/prompts");
+			
+			if (snode)
+			{
+				snodes = IG$/*mainapp*/._I26/*getChildNodes*/(snode);
+				
+				for (i=0; i < snodes.length; i++)
+				{
+					var p = {};
+					IG$/*mainapp*/._I1f/*XGetInfo*/(p, snodes[i], "name;fieldname;sqlfield;type;datatype;tablename;dataoption_data;dataoption_valuetype;dataoption_datadelimiter;dataoption_coldelimiter;uid;kname", "s");
+					me.prompts.push(p);
+				}
+			}
+		}
+		
+		snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "options/s_iparams");
+			
+		if (snode)
+		{
+			snodes = IG$/*mainapp*/._I26/*getChildNodes*/(snode);
+			
+			for (i=0; i < snodes.length; i++)
+			{
+				var p = {};
+				IG$/*mainapp*/._I1f/*XGetInfo*/(p, snodes[i], "name;kname", "s");
+				me.s_iparams.push(p);
+			}
+		}
+		
+		snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "options/s_oparams");
+			
+		if (snode)
+		{
+			snodes = IG$/*mainapp*/._I26/*getChildNodes*/(snode);
+			
+			for (i=0; i < snodes.length; i++)
+			{
+				var p = {};
+				IG$/*mainapp*/._I1f/*XGetInfo*/(p, snodes[i], "name;kname", "s");
+				me.s_oparams.push(p);
+			}
+		}
+	}
+}
+
+IG$/*mainapp*/._ICe/*clEvents*/.prototype = {
+	p2/*parseFilter*/: function(node, filter) {
+		var me = this;
+		
+		if (node)
+		{
+			var fglist = IG$/*mainapp*/._I26/*getChildNodes*/(node, "FilterGroup"),
+				i;
+
+			if (fglist && fglist.length > 0)
+			{
+				for (i=0; i < fglist.length; i++)
+				{
+					var tgroup = new IG$/*mainapp*/._IEb/*clFilterGroup*/();
+					tgroup.name = IG$/*mainapp*/._I1b/*XGetAttr*/(fglist[i], "name"); 
+					filter.subGroups.push(tgroup);
+					me.parseSubFilter(fglist[i], tgroup);
+				}
+			}
+		}
+	},
+	parseSubFilter: function(fgnode, ugroup) {
+		var i, j,
+			group,
+			sfg,
+			me = this;
+		
+		sfg = IG$/*mainapp*/._I26/*getChildNodes*/(fgnode);
+		
+		if (sfg && sfg.length > 0)
+		{
+			for (j=0; j < sfg.length; j++)
+			{
+				if (IG$/*mainapp*/._I29/*XGetNodeName*/(sfg[j]) == "FilterGroup")
+				{
+					var group = new IG$/*mainapp*/._IEb/*clFilterGroup*/();
+					group.name = IG$/*mainapp*/._I1b/*XGetAttr*/(sfg[j], "name"); 
+					me.parseSubFilter(sfg[j], group);
+					ugroup.subGroups.push(group);
+				}
+				else
+				{
+					ugroup.subConditions.push(new IG$/*mainapp*/._IE9/*clFilter*/(sfg[j]));
+				}
+			}
+		}
+	},
+	
+	getXML: function() {
+		var me = this,
+			i,
+			cf,
+			r = "<event " + IG$/*mainapp*/._I20/*XUpdateInfo*/(me, "purpose;type;name;description", "s") + ">",
+			purpose = me.purpose,
+			t;
+		
+		if (purpose == "onlinereport")
+		{
+			if (me.item)
+			{
+				r += "<item " + IG$/*mainapp*/._I20/*XUpdateInfo*/(me.item, "uid;nodepath;type;name", "s") + ">";
+			}
+			else
+			{
+				r += "<item>";
+			}
+						
+			r += "<Filter>";
+			
+			if (me.__sfilter)
+			{
+				r += me.__sfilter.TX/*getXML*/.call(me.__sfilter);
+			}
+			
+			r += "</Filter>";
+			
+			r += "<HavingFilter>";
+			
+			if (me.__shavingfilter)
+			{
+				r += me.__shavingfilter.TX/*getXML*/.call(me.__shavingfilter);
+			}
+			
+			r += "</HavingFilter>";
+			r += "</item>";
+			
+			r += "<options>";
+			
+		}
+		else if (purpose == "valuelist")
+		{
+			r += "<options controlid='" + (me.P13/*controlid*/ || "") + "' enableoffline='" + (me.enableoffline == true ? "T" : "F") + "'>";
+			
+			if (me.item)
+			{
+				r += "<item" + IG$/*mainapp*/._I20/*XUpdateInfo*/(me.item, "type;nodepath;uid;name;cubeuid", "s") + "/>";
+			}
+		}
+		else if (purpose == "execute_script")
+		{
+			r += "<options><script><![CDATA[" + (me.script || "") + "]]></script>";
+		}
+		else if (purpose == "servercall")
+		{
+			r += "<options>";
+			r += "<plugin jmodule_name='" + (me.jmodule_name || "") + "' jmodule='" + (me.jmodule || "") + "'><![CDATA[" + (me.jmethod || "") + "]]></plugin>";
+		}
+		else if (purpose == "open_dlg")
+		{
+			r += "<options>";
+			r += "<dialog " + IG$/*mainapp*/._I20/*XUpdateInfo*/(me, "btntype;btnclose", "s") + ">";
+			r += "<dlgtitle><![CDATA[" + (me.dlgtitle || "") + "]]></dlgtitle>";
+			r += "<dlgmsg><![CDATA[" + (me.dlgmsg || "") + "]]></dlgmsg>";
+			r += "</dialog>";
+		}
+		else if (purpose == "export")
+		{
+			r += "<options>";
+			r += "<exp>"; // + IG$/*mainapp*/._I20/*XUpdateInfo*/(me, "btntype;btnclose", "s") + ">";
+			r += "<exp_tmpl><![CDATA[" + (me.exp_tmpl || "") + "]]></exp_tmpl>";
+			r += "<exp_out><![CDATA[" + (me.exp_out || "") + "]]></exp_out>";
+			r += "</exp>";
+		}
+		else if (purpose == "open_win")
+		{
+			r += "<options ispopup='" + (me.ispopup ? "T" : "F") + "'>";
+			if (me.item)
+			{
+				r += "<item " + IG$/*mainapp*/._I20/*XUpdateInfo*/(me.item, "uid;nodepath;type;name", "s") + "/>";
+			}
+		}
+		else if (purpose == "sql")
+		{
+			r += "<options>";
+			r += "<execute_sql dsource='" + (me.dsource || "") + "' rmode='" + (me.rmode || "") + "'><![CDATA["
+			r += (me.sqlsyntax || "") + "]]></execute_sql>";
+			
+			if (me.columns)
+			{
+				r += "<columns>";
+				for (i=0; i < me.columns.length; i++)
+				{
+					r += "<column " + IG$/*mainapp*/._I20/*XUpdateInfo*/(me.columns[i], "name;fieldname;sqlfield;type;datatype;tablename;dataoption_data;dataoption_valuetype;dataoption_datadelimiter;dataoption_coldelimiter;uid;kname", "s") + "/>";
+				}
+				r += "</columns>";
+			}
+			
+			if (me.prompts)
+			{
+				r += "<prompts>";
+				for (i=0; i < me.prompts.length; i++)
+				{
+					r += "<prompt " + IG$/*mainapp*/._I20/*XUpdateInfo*/(me.prompts[i], "name;fieldname;sqlfield;type;datatype;tablename;dataoption_data;dataoption_valuetype;dataoption_datadelimiter;dataoption_coldelimiter;uid;kname", "s") + "/>";
+				}
+				r += "</prompts>";
+			}
+		}
+		else
+		{
+			r += "<options>";
+		}
+		
+		if (me.s_iparams)
+		{
+			r += "<s_iparams>";
+			for (i=0; i < me.s_iparams.length; i++)
+			{
+				r += "<param " + IG$/*mainapp*/._I20/*XUpdateInfo*/(me.s_iparams[i], "name;kname", "s") + "/>";
+			}
+			r += "</s_iparams>";
+		}
+		
+		if (me.s_oparams)
+		{
+			r += "<s_oparams>";
+			for (i=0; i < me.s_oparams.length; i++)
+			{
+				r += "<param " + IG$/*mainapp*/._I20/*XUpdateInfo*/(me.s_oparams[i], "name;kname", "s") + "/>";
+			}
+			r += "</s_oparams>";
+		}
+			
+		r += "</options>";
+		
+		r += "<params>";
+		if (me.iparams)
+		{
+			r += "<iparams>";
+			for (k in me.iparams) 
+			{
+				t = me.iparams[k];
+				r += "<param name='" + t.name + "' map_param='" + (t.map_param || "") + "' map_type='" + (t.map_type || "") + "'/>";
+			}
+			r += "</iparams>";
+		}
+		
+		if (me.oparams)
+		{
+			r += "<oparams>";
+			for (k in me.oparams) 
+			{
+				t = me.oparams[k];
+				r += "<param name='" + t.name + "' map_param='" + (t.map_param || "") + "' map_type='" + (t.map_type || "") + "'/>";
+			}
+			r += "</oparams>";
+		}
+		r += "</params>";
+				
+		r += "</event>";
+		
+		return r;
+	}
+}
+
+
+IG$/*mainapp*/.__util = {};
+
+IG$/*mainapp*/.__util.msgbox = function(msg) {
+	IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, msg, null, null, 1, "error");
+}
+
+IG$/*mainapp*/.__util._rcs = function(rcs, msg) {
+	return msg;
+}
+
+IG$/*mainapp*/.__util.v_date = function(dt, sep) {
+	var r = dt,
+		dval;
+	if (dt)
+	{
+		dval = [dt.substring(0, 4), dt.substring(4, 6), dt.substring(6, 8)];
+		r = dval.join(sep);
+	}
+	
+	return r;
+};
+
+IG$/*mainapp*/.__util.v_field = function(v, msg, title) {
+	var r = true;
+	
+	if (!v)
+	{
+		r = false;
+		
+		if (msg)
+		{
+			IG$/*mainapp*/._I54/*alertmsg*/(title || ig$/*appoption*/.appname, msg, null, null, 1, "error");
+		}
+	}
+	
+	return r;
+}
+
+IG$/*mainapp*/._IE0/*controls*/ = {};
+
+IG$/*mainapp*/._ID2/*ctrlBase*/ = function(property, ctrl, dsmode) {
+	var me = this;
+	me.ctrl = ctrl;
+	me.p = [
+		{name: "visible", type: "property", datatype: "boolean", value: true},
+		{name: "border", type: "property", datatype: "number", value: 1},
+		{name: "bordercolor", type: "property", datatype: "string", value: "#e5e5e5"},
+		{name: "backgroundcolor", type: "property", datatype: "string"},
+		{name: "padding", type: "property", datatype: "number", value: 2},
+		{name: "flex", type: "property", datatype: "number", value: 1},
+		{name: "basecls", type: "property", datatype: "string"}
+	];
+	me.property = property;
+	me.P3/*applicationItem*/ = null;
+	
+	me.getter = {};
+	me.setter = {};
+	
+	me.dsmode = dsmode;
+	
+	me.html = $("<div id='" + (ctrl != null ? ctrl.P6/*ctrlname*/ : "") + "' class='ig-db-ctrls'></div>");
+	
+	me.superclass = IG$/*mainapp*/._ID2/*ctrlBase*/;
+	
+	me._ic/*initComponent*/.call(me);
+}
+
+IG$/*mainapp*/._ID2/*ctrlBase*/.prototype = {
+	__pcinit: function() {
+		var me = this,
+			key, 
+			value;
+		me.__pcinit_ = 1;
+		
+		for (key in me.property)
+		{
+			me.set.call(me, key, me.property[key]);
+		}
+		
+		me.__pcinit_ = 0;
+	},
+		
+	get: function(fname) {
+		var me = this;
+		
+		if (me.getter[fname])
+		{
+			return me.getter[fname].call(me);
+		}
+		return null;
+	},
+	
+	set: function(fname, value) {
+		var me = this;
+		if (me.setter[fname])
+		{
+			me.setter[fname].call(me, value);
+		}
+	},
+	
+	val: function(value) {
+		return this[typeof(value) != "undefined" ? "set" : "get"]("text", value);
+	},
+	
+	doGet: function(fname) {
+		var me = this;
+		
+		if (me.getter[fname])
+		{
+			return me.getter[fname].call(me);
+		}
+		return null;
+	},
+	
+	doSet: function(fname, value) {
+		var me = this;
+		if (me.setter[fname])
+		{
+			me.setter[fname].call(me, value);
+		}
+	},
+	
+	invalidate: function() {
+	},
+	
+	updateBorder: function() {
+		var me = this,
+			bsize = (me.dsmode ? 1 : me.property["border"]),
+			borderstyle = "" + bsize + "px solid " + me.property["bordercolor"];
+		me.html.css({border: borderstyle});
+	},
+	
+	_1/*createControl*/: function(layout) {
+		var me = this;
+			
+		me.layout = layout;
+		
+		me.html.bind("click", function(ev) {
+			ev.stopPropagation();
+			ev.preventDefault();
+			ev.stopImmediatePropagation();
+			
+			me._2/*raiseEvent*/.call(me, "click");
+			
+			return false;
+		});
+		
+		me.html.resizable({
+			resize: function(e, ui) {
+				var p = ui.position,
+					s = ui.size,
+					layout = me.layout;
+				layout.position.width = s.width;
+				layout.position.height = s.height;
+				
+				me._2/*raiseEvent*/.call(me, "resize");
+				
+				me.invalidate.call(me);
+			}
+		});
+		
+		me.html.draggable({
+			stop: function(e, ui) {
+				var p = ui.position,
+					layout = me.layout;
+				
+				layout.position.top = p.top;
+				layout.position.left = p.left;
+				
+				me._2/*raiseEvent*/.call(me, "resize");
+				
+				me.invalidate.call(me);
+			}
+		});
+		
+		return me.html;
+	},
+	
+	enabled: function(e) {
+	},
+	
+	_2/*raiseEvent*/: function(ev) {
+		var me = this;
+		me.html.trigger("e_" + ev);
+	},
+	
+	_b1/*_baseUpdateProperty*/: function(kname, value) {
+		var me = this;
+		
+		me.property[kname] = value;
+		
+		switch (kname)
+		{
+		case "visible":
+			if (value == false && !me.dsmode)
+			{
+				me.html.hide();
+			}
+			else
+			{
+				me.html.show();
+			}
+			break;
+		case "border":
+			me.updateBorder();
+			break;
+		case "bordercolor":
+			me.updateBorder();
+			break;
+		case "basecls":
+			value && me.html && me.html.addClass(value);
+			break;
+		}
+	},
+	
+	_ic/*initComponent*/: function() {
+		var me = this;
+		
+		$.each(me.p, function(i, k) {
+			if (k.type == "property")
+			{
+				if (typeof(k.value) != "undefined" && typeof(me.property[k.name]) == "undefined")
+				{
+					me.property[k.name] = k.value;
+				}
+				
+				me.getter[k.name] = function() {
+					return this.property[k.name];
+				}
+				
+				me.setter[k.name] = function(value) {
+					var ovalue = this.property[k.name];
+					this.property[k.name] = value;
+					this._b1/*_baseUpdateProperty*/(k.name, value);
+					this.updateProperty && this.updateProperty(k.name, value);
+				}
+			}
+		});
+	},
+	
+	aa/*applyApplication*/: function (appItem) {
+		var me = this;
+		me.P3/*applicationItem*/ = appItem;
+	},
+	
+	initDrawing: function() {
+		var me = this;
+		me.__pcinit();
+	}
+}
+/******************************************************************
+	control : grid component
+ ******************************************************************/
+
+IG$/*mainapp*/._Imm2/*gridconfig*/ = function() {
+	var me = this;
+	
+	me.sfields = ["fieldname", "name", "flex", "minw", "hidden", "formatstring", "align"];
+	me._c/*columns*/ = [];
+};
+
+IG$/*mainapp*/._Imm2/*gridconfig*/.prototype = {
+	_l1/*loadData*/: function(xdoc) {
+		var me = this,
+			_c = me._c/*columns*/,
+			tnode, tnodes, i, snodes, col, j, p, v;
+		
+		_c.splice(0, _c.length);
+		
+		if (xdoc)
+		{
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/cs");
+			tnodes = tnode ? IG$/*mainapp*/._I26/*getChildNodes*/(tnode) : null;
+			
+			if (tnodes)
+			{
+				for (i=0; i < tnodes.length; i++)
+				{
+					snodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnodes[i]);
+					col = {};
+					for (j=0; j < snodes.length; j++)
+					{
+						p = IG$/*mainapp*/._I1b/*XGetAttr*/(snodes[j], "na");
+						v = IG$/*mainapp*/._I24/*getTextContent*/(snodes[j]);
+						
+						if (/(flex|minw)/.test(p) && v)
+						{
+							v = Number(v);
+						}
+						else if (p == "hidden")
+						{
+							v = (v == "T");
+						}
+						
+						col[p] = v;
+					}
+					_c.push(col);
+				}
+			}
+		}
+	},
+	_l2/*getXML*/: function() {
+		var me = this,
+			t = ["<prop><cs>"],
+			i, _c = me._c/*columns*/,
+			sfields = me.sfields,
+			v, f;
+			
+		for (i=0; i < _c.length; i++)
+		{
+			t.push("<c>");
+			for (j=0; j < sfields.length; j++)
+			{
+				f = sfields[j];
+				v = _c[i][f];
+				if (f == "hidden")
+				{
+					v = (v == true) ? "T" : "F";
+				}
+				t.push("<m na='" + f + "'><![CDATA[" + v + "]]></m>");
+			}
+			t.push("</c>");
+		}
+		
+		t.push("</cs>");
+		t.push("</prop>");
+		
+		return IG$/*mainapp*/._I13/*loadXML*/(t.join(""));
+	}
+};
+ 
+IG$/*mainapp*/._Imm/*interactiveGrid*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/._ID2/*ctrlBase*/, {
+	_ic/*initComponent*/: function() {
+		var me = this;
+		me.activeIndex = 0;
+		me.p.push(
+			{name: "cell_click", type: "event"},
+			{name: "text", type: "property", datatype: "string"},
+			{name: "selectionmode", type: "property", datatype: "string", value: "none",
+				"enum": [
+					{name: "none", value: "none"},
+					{name: "single", value: "single"},
+					{name: "multi", value: "multi"}
+				]
+			},
+			{name: "selheader", type: "property", datatype: "string", value: ""}
+		);
+		
+		me._cinfo = new IG$/*mainapp*/._Imm2/*gridconfig*/();
+		
+		me.superclass.prototype._ic/*initComponent*/.call(me);
+	},
+	
+	pe/*processEvent*/: function(evttype, obj) {
+	},
+
+	invalidate: function () {
+		var me = this,
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.html);
+			
+		me.mcontainer.width(w).height(h);
+		
+		if (me.viewer)
+		{
+			me.viewer.setSize(w, h);
+		}
+	},
+	
+	initDrawing: function () {
+		var me = this,
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.html),
+			actionlist = me.ctrl.actionlist,
+			pdb = me.ctrl.P1/*parentcontrol*/,
+			mcontainer = $("<div></div>").appendTo(me.html),
+			cbtn;
+		
+		me.mcontainer = mcontainer;
+		
+		me._cinfo._l1/*loadData*/(me.layout._xparam);
+		
+		if (!me.viewer)
+		{
+			me.viewer = new $s.gridpanel({
+				renderTo: mcontainer[0],
+				disabled: me.dsmode,
+				columns: [
+		    	],
+		    	listeners: {
+		    		cellclick: function(grid, td, cellIndex, record, tr, rowIndex, e, eopts) {
+		    			if (actionlist["cell_click"])
+						{
+							pdb.M7a/*executeAction*/.call(pdb, actionlist["cell_click"]);
+						}
+		    		}
+		    	}
+			});
+		}
+		
+		me._v1/*validateColumns*/();
+		
+		if (me.dsmode)
+		{
+			cbtn = $("<div class='igc-p-config'><div class='igc-p-config-bg'></div><button>Config</button></div>").appendTo(me.html);
+			$("button", cbtn).bind("click", function() {
+				me.c1/*configComponent*/.call(me);
+			});
+		}
+		me.__pcinit();
+	},
+
+	c1/*configComponent*/: function() {
+		var me = this,
+			pop = new IG$/*mainapp*/._Imm1/*interactiveGridConfig*/({
+				_cinfo: me._cinfo,
+				callback: new IG$/*mainapp*/._I3d/*callBackObj*/(me, function(dlg, sheetview) {
+					me.layout._xparam = me._cinfo._l2/*getXML*/();
+					me._v1/*validateColumns*/();
+				}, me.viewer)
+			});
+		
+		IG$/*mainapp*/._I_5/*checkLogin*/(this, pop);
+	},
+	updateProperty: function(kname, value) {
+		var me = this,
+			viewer = me.viewer,
+			_cinfo = me._cinfo;
+		
+		if (me.dsmode)
+		{
+			return;
+		}
+		
+		switch(kname)
+		{
+		case "report_control":
+			break;
+		case "text":
+			break;
+		case "selectionmode":
+			if (value && _cinfo.selmodel != value)
+			{
+				_cinfo.selmodel = value;
+				me._v1/*validateColumns*/(true);
+			}
+			break;
+		}
+	},
+	
+	_ds/*applyDataSet*/: function(value) {
+		this.viewer.store.loadData(value.v.data);
+	},
+
+	updateLayout: function() {
+		var me = this,
+			dashboard = me.ctrl.dashboard;
+	},
+	
+	_v1/*validateColumns*/: function(recreate) {
+		var me = this,
+			viewer = me.viewer,
+			store, cols = [],
+			_cinfo = me._cinfo,
+			_c = _cinfo._c/*columns*/,
+			ci,
+			i, fields = [], c,
+			actionlist = me.ctrl.actionlist,
+			pdb = me.ctrl.P1/*parentcontrol*/,
+			sm, stype;
+			
+		if (recreate)
+		{
+			viewer.close();
+			
+			if (_cinfo.selmodel == "single" || _cinfo.selmodel == "multi")
+			{
+				stype = "checkboxmodel";
+				sm = {
+					selection: "checkboxmodel",
+					checkSelector: ".x-grid-cell",
+					mode: _cinfo.selmodel == "single" ? "SINGLE" : "MULTI"
+				};
+			}
+			
+			viewer = me.viewer = new $s.gridpanel({
+				renderTo: me.mcontainer[0],
+				selType: stype,
+				selModel: sm,
+				disabled: me.dsmode,
+				columns: [
+		    	],
+		    	listeners: {
+		    		cellclick: function(grid, td, cellIndex, record, tr, rowIndex, e, eopts) {
+		    			if (actionlist["cell_click"])
+						{
+							pdb.M7a/*executeAction*/.call(pdb, actionlist["cell_click"]);
+						}
+		    		}
+		    	}
+			})
+		}
+			
+		if (viewer)
+		{
+			for (i=0; i < _c.length; i++)
+			{
+				ci = _c[i];
+				c = {
+					xtype: "gridcolumn",
+					text: (ci.name || ci.fieldname || ("field_" + i)),
+					dataIndex: ci.fieldname || ("field_" + i),
+					minWidth: ci.minw || 50,
+					hidden: !me.dsmode && ci.hidden ? true : false,
+					align: ci.align || "left"
+				};
+				if (ci.flex)
+				{
+					c.flex = ci.flex;
+				}
+				
+				fields.push(c.dataIndex);
+				cols.push(c);
+			}
+			
+			store = {
+				fields: fields
+			};
+			
+			viewer.reconfigure(store, cols);
+		}
+	},
+
+	P12/*getSelectionData*/: function(param) {
+		var me = this,
+			filteritems,
+			i, j,
+			viewer = me.viewer,
+			berr = [],
+			fitem,
+			bs,
+			rval = [],
+			value,
+			sel, rec;
+
+		if (param && param.name && viewer)
+		{
+			sel = viewer.getSelectionModel().selected;
+			
+			if (sel && sel.length)
+			{
+				rec = sel.items[0];
+				value = rec.get(param.name);
+				value && rval.push({code: value, value: value});
+			}
+		}
+
+		return rval;
+	},
+	
+	selRow: function() {
+		return this.viewer.getSelectionModel().selected;
+	},
+	
+	selRowCnt: function() {
+		var r = this.selRow().length;
+		return r;
+	},
+	
+	selColInfo: function(cindex) {
+		var r,
+			m = this.selRow(),
+			rec, dataindex = cindex,
+			cols = this.viewer.columnManager.columns;
+		
+		if (m && m.length)
+		{
+			rec = m.items[0];
+			if (cols && cols.length > cindex)
+			{
+				dataindex = cols[cindex].dataIndex;
+			}
+			r = rec.get(dataindex);
+		}
+		
+		return r;
+	},
+	
+	cell: function(r, c) {
+		var me = this,
+			cell,
+			viewer = me.viewer,
+			store = viewer.store,
+			i, rec,
+			cols = this.viewer.columnManager.columns,
+			col = cols[c];
+			
+		rec = store.data.items[r];
+		
+		if (rec && col)
+		{
+			cell = rec.get(col.dataIndex);
+		}
+		
+		return cell;
+	}
+});
+
+IG$/*mainapp*/._IE0/*controls*/.grid = new IG$/*mainapp*/._Imm/*interactiveGrid*/({}, null);
+
+if (window.Ext)
+{
+	IG$/*mainapp*/._Imm1/*interactiveGridConfig*/ = $s.extend($s.window, {
+		
+		modal: false,
+		isWindow: true,
+		region:"center",
+		"layout": "fit",
+		
+		closable: false,
+		resizable:false,
+		width: 500,
+		height: 450,
+		
+		_ILa/*reportoption*/: null,
+		
+		callback: null,
+		
+		_IFe/*initF*/: function() {
+			var panel = this,
+				grd = panel.grd;
+				
+			panel._cinfo && grd.store.loadData(panel._cinfo._c/*columns*/);
+		},
+		
+		_t1/*toolbarhandler*/: function(cmd) {
+			var me = this,
+				grd = me.grd,
+				sel,
+				i;
+				
+			switch (cmd)
+			{
+			case "c_add":
+				grd.store.add({
+					minw: 100
+				});
+				break;
+			case "c_del":
+				sel = grd.getSelectionModel().selected;
+				for (i=sel.length-1; i>=0; i--)
+				{
+					grd.store.remove(sel[i]);
+				}
+				break;
+			}
+		},
+		
+		_m/*moveGrid*/: function(grid, direction) {
+			var records = grid.getSelectionModel().getSelection(),
+	    		record = records.length ? records[0] : null;
+	    		
+			if (!record) 
+			{
+				return;
+			}
+			
+			var oindex = grid.getStore().indexOf(record),
+				index = oindex,
+				mobj;
+			
+			if (direction < 0) 
+			{
+				index--;
+				if (index < 0) 
+				{
+					return;
+				}
+			} 
+			else 
+			{
+				index++;
+				if (index >= grid.getStore().getCount()) 
+				{
+					return;
+				}
+			}
+			
+			grid.getStore().remove(record);
+			grid.getStore().insert(index, record);
+			grid.getSelectionModel().select(record, true);
+		},
+		
+		_IFf/*confirmDialog*/: function() {
+			var me = this,
+				_cinfo = me._cinfo,
+				cols = me._cinfo._c/*columns*/,
+				grd = me.grd,
+				sfields = me.sfields,
+				i, rec,
+				c;
+				
+			cols.splice(0, cols.length);
+			
+			for (i=0; i < grd.store.data.length; i++)
+			{
+				rec = grd.store.data.items[i];
+				c = {};
+				$.each(sfields, function(m, k) {
+					c[k] = rec.get(k);
+				});
+				cols.push(c);
+			}
+			
+			me.callback && me.callback.execute();
+			
+			me.close();
+		},
+		
+		initComponent : function() {
+			var panel = this,
+				sfields = this._cinfo.sfields;
+				
+			panel.sfields = sfields;
+			
+			$s.apply(this, {
+				title: IRm$/*resources*/.r1("T_GRD_CFG"),
+				items: [
+					{
+						xtype: "panel",
+						layout: {
+							type: "vbox",
+							align: "stretch"
+						},
+						bodyPadding: 5,
+						tbar: [
+							{
+								text: "Add",
+								handler: function() {
+									this._t1/*toolbarhandler*/("c_add");
+								},
+								scope: this
+							},
+							{
+								text: "Delete",
+								handler: function() {
+									this._t1/*toolbarhandler*/("c_del");
+								},
+								scope: this
+							},
+							{
+								text: "Move Up",
+								handler: function() {
+									var me = this;
+									me._m/*moveGrid*/(me.grd, -1);
+								},
+								scope: this
+							},
+							{
+								text: "Move Down",
+								handler: function() {
+									var me = this;
+									me._m/*moveGrid*/(me.grd, 1);
+								},
+								scope: this
+							}
+						],
+						items: [
+							{
+								xtype: "gridpanel",
+								flex: 1,
+								name: "grd",
+								selType: "checkboxmodel",
+								selModel: {
+									checkSelector: ".x-grid-cell",
+									mode: "MULTI"
+								},
+								sortableColumns: false,
+								plugins: [
+									{
+										ptype: "cellediting",
+										clicksToEdit: true
+									}
+		    	    	    	],
+								store: {
+									fields: sfields
+								},
+								columns: [
+									{
+										text: "Field name",
+										dataIndex: "fieldname",
+										flex: 1,
+										editor: {
+											allowBlank: false
+										}
+									},
+									{
+										text: "Header",
+										dataIndex: "name",
+										flex: 1,
+										editor: {
+											allowBlank: false
+										}
+									},
+									{
+										text: "Min Width",
+										dataIndex: "minw",
+										width: 80,
+										editor: {
+											xtype: "numberfield",
+											allowBlank: false
+										}
+									},
+									{
+										text: "Width Flex",
+										dataIndex: "flex",
+										width: 80,
+										editor: {
+											xtype: "numberfield",
+											allowBlank: true
+										}
+									},
+									{
+										xtype: "checkcolumn",
+										text: "Hidden",
+										dataIndex: "hidden",
+										width: 80
+									},
+									{
+										text: "Align",
+										dataIndex: "align",
+										width: 80,
+										editor: {
+											allowBlank: true
+										}
+									}
+								]
+							}
+						]
+					}
+				],
+				buttons:[
+					"->",
+					{
+						text: IRm$/*resources*/.r1("B_CONFIRM"),
+						handler: function() {
+							this._IFf/*confirmDialog*/();
+						},
+						scope: this
+					}, {
+						text: IRm$/*resources*/.r1("B_CANCEL"),
+						handler:function() {
+							this.close();
+						},
+						scope: this
+					}
+				],
+				listeners: {
+					afterrender: function(ui) {
+						var panel = this;
+						panel.grd = panel.down("[name=grd]");
+						panel._IFe/*initF*/();
+					}
+				}
+			});
+			
+			IG$/*mainapp*/._Imm1/*interactiveGridConfig*/.superclass.initComponent.apply(this, arguments);
+		}
+	});
+}
+/******************************************************************
+	control : pivot design component
+ ******************************************************************/
+if (window.Ext)
+{
+	IG$/*mainapp*/._Iub_/*pivotdesign_base*/ = $s.extend($s.panel, {
+		layout: {
+			type: "vbox",
+			align: "stretch"
+		},
+		
+		initComponent : function() {
+			var me = this;
+			
+			$s.apply(this, {
+				items: [
+					{
+						xtype: "toolbar",
+						items: [
+							{
+								xtype: "button",
+								text: "Pivot Design"
+							},
+							{
+								xtype: "button",
+								text: "Filters"
+							},
+							"->",
+							{
+								xtype: "button",
+								text: "Execute"
+							}
+						]
+					},
+					{
+						xtype: "panel",
+						layout: "card",
+						flex: 1,
+						items: [
+						]
+					}
+				]
+			});
+			
+			IG$/*mainapp*/._Iub_/*pivotdesign_base*/.superclass.initComponent.apply(this, arguments);
+		}
+	});
+}
+
+IG$/*mainapp*/._Iu/*pivotdesign*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/._ID2/*ctrlBase*/, {
+	_ic/*initComponent*/: function() {
+		var me = this;
+		me.activeIndex = 0;
+		me.p.push(
+			{name: "request_run", type: "event"},
+			{name: "text", type: "property", datatype: "string"}
+		);
+		
+		me.superclass.prototype._ic/*initComponent*/.call(me);
+	},
+	
+	pe/*processEvent*/: function(evttype, obj) {
+	},
+
+	invalidate: function () {
+		var me = this,
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.html);
+			
+		me.mcontainer.width(w).height(h);
+		
+		if (me.viewer)
+		{
+			me.viewer.setSize(w, h);
+		}
+	},
+	
+	initDrawing: function () {
+		var me = this,
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.html),
+			actionlist = me.ctrl.actionlist,
+			mcontainer = $("<div></div>").appendTo(me.html),
+			cbtn;
+		
+		me.mcontainer = mcontainer;
+		
+		if (!me.viewer)
+		{
+			me.viewer = new IG$/*mainapp*/._Iub_/*pivotdesign_base*/({
+				renderTo: mcontainer[0]
+			});
+		}
+		
+		me.__pcinit();
+	},
+
+	updateProperty: function(kname, value) {
+		var me = this,
+			viewer = me.viewer,
+			_cinfo = me._cinfo;
+		
+		if (me.dsmode)
+		{
+			return;
+		}
+		
+		switch(kname)
+		{
+		case "report_control":
+			break;
+		case "text":
+			break;
+		case "selectionmode":
+			break;
+		}
+	},
+	
+	updateLayout: function() {
+		var me = this,
+			dashboard = me.ctrl.dashboard;
+	},
+	
+	P12/*getSelectionData*/: function(param) {
+		var me = this,
+			filteritems,
+			i, j,
+			viewer = me.viewer,
+			berr = [],
+			fitem,
+			bs,
+			rval = [],
+			value,
+			sel, rec;
+
+		if (param && param.name && viewer)
+		{
+			sel = viewer.getSelectionModel().selected;
+			
+			if (sel && sel.length)
+			{
+				rec = sel.items[0];
+				value = rec.get(param.name);
+				value && rval.push({code: value, value: value});
+			}
+		}
+
+		return rval;
+	}
+});
+
+IG$/*mainapp*/._IE0/*controls*/.pivotdesign = new IG$/*mainapp*/._Iu/*pivotdesign*/({}, null);
+IG$/*mainapp*/.jj_2/*sheetfilter*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/._ID2/*ctrlBase*/, {
+	_ic/*initComponent*/: function() {
+		var me = this;
+		
+		me.p.push(
+			{name: "report_control", type: "property", datatype: "string", vmode: 1},
+			{name: "filter_id", type: "property", datatype: "string", vmode: 1},
+			{name: "itemclick", type: "event"}
+		);
+		
+		me.superclass.prototype._ic/*initComponent*/.call(me);
+	},
+	
+	pe/*processEvent*/: function(evttype, obj) {
+	},
+	
+	invalidate: function () {
+		var me = this,
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.html);
+	},
+	
+	aa/*applyApplication*/: function (appItem) {
+		this.P3/*applicationItem*/ = appItem;
+	},
+	initDrawing: function () {
+		var me = this,
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.html),
+			actionlist = me.ctrl.actionlist;
+		
+		me.viewer = me.dsmode ? null : new IG$/*mainapp*/._Ied/*dynFilterView*/(me.html, null, me);
+		
+		me.__pcinit();
+	},
+	updateProperty: function(kname, value) {
+		var me = this;
+		
+		if (me.dsmode)
+		{
+			return;
+		}
+		
+		switch(kname)
+		{
+		case "report_control":
+			me.__ivp();
+			break;
+		}
+	},
+	__ivp: function() {
+		var me = this,
+			property = me.property,
+			report_control = property["report_control"],
+			filter_id = property["filter_id"],
+			rptctrl,
+			i,
+			dashboard = me.ctrl.dashboard,
+			dctrl;
+			
+		if (me.dsmode || me.__pcinit_)
+		{
+			return;
+		}
+			
+		if (report_control && dashboard && dashboard.P2/*ControlDict*/)
+		{
+			setTimeout(function() {
+				var dctrl,
+					dobj;
+				dctrl = dashboard.P2/*ControlDict*/[report_control];
+				if (dctrl && filter_id)
+				{
+					dobj = dctrl.P9/*control*/;
+					dobj.negoFilter && dobj.negoFilter.call(dobj, me, filter_id);
+				}
+			}, 20);
+		}
+	}
+});
+
+IG$/*mainapp*/._IE0/*controls*/.sheetfilter = new IG$/*mainapp*/.jj_2/*sheetfilter*/({}, null);
+if (window.Ext)
+{
+	IG$/*mainapp*/.jj_m/*pivotfiltereditor*/ = $s.extend(IG$/*mainapp*/._I57/*IngPanel*/, {
+		layout: "fit",
+		
+		_IJa/*activeSheet*/: 0,
+		
+		_l1/*loadReport*/: function(p) {
+			var me = this,
+				req;
+			
+			me.uid = p.uid;
+			
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+			req.init(me,
+				{
+		            ack: "5",
+		            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: me.uid, revision: me.revision}),
+		            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({})
+		        }, me, function(xdoc) {
+		        	me._ILa/*reportoption*/ = new IG$/*mainapp*/._IEe/*clReports*/(xdoc);
+		        	
+		        	var browser = me.down("[name=browser]"),
+		        		feditor = me.down("[name=feditor]"),
+		        		p_opeditor = me.down("[name=p_opeditor]");
+		        	
+		        	if (me._ILa/*reportoption*/.sheets.length > 0)
+		        	{
+		        		me._ILb/*sheetoption*/ = me._ILa/*reportoption*/.sheets[0];
+		        		me.cubeuid = me._ILb/*sheetoption*/.cubeuid || me._ILa/*reportoption*/.cubeuid;
+		        		var reportmode = me._ILb/*sheetoption*/.reportmode || me._ILa/*reportoption*/.reportmode;
+		        		var values = {};
+						values.type = (reportmode == "rolap") ? "Cube" : "Metric";
+						values.name = values.type;
+						values.nodepath = values.type;
+						values.uid = me.cubeuid || null;
+							
+						values.leaf = false;
+				
+						browser.setRootNode.call(browser, values);
+						
+						browser.show();
+						
+						feditor._ILa/*reportoption*/ = me._ILa/*reportoption*/;
+						feditor._ILb/*sheetoption*/ = me._ILb/*sheetoption*/;
+						
+						feditor.in$t.call(feditor);
+						
+						feditor.show();
+						
+						p_opeditor._ILa/*reportoption*/ = me._ILa/*reportoption*/;
+						p_opeditor._ILb/*sheetoption*/ = me._ILb/*sheetoption*/;
+						p_opeditor.show();
+		        	}
+		        }, false);
+			req._l/*request*/();
+		},
+		
+		sv/*requestSQLResult*/: function(c, cb) {
+			var me = this,
+				feditor = me.down("[name=feditor]");
+			
+			me._lsql = [];
+			me._ldb = [];
+			
+			if (me._ILb/*sheetoption*/ != null && me._ILa/*reportoption*/ != null)
+			{
+				feditor.m1$9/*confirmFilterSetting*/.call(feditor);
+				
+				var pivotxml = me._ILa/*reportoption*/._IJ1/*getCurrentPivot*/.call(me._ILa/*reportoption*/),
+					req = new IG$/*mainapp*/._I3e/*requestServer*/();
+					
+		    	req.init(me, 
+					{
+			            ack: "18",
+			            payload: '<smsg><item uid="' + me.uid + '" option="sql" active="' + me._IJa/*activeSheet*/ + '"/></smsg>',
+			            mbody: pivotxml
+			        }, me, function(xdoc) {
+			        	var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, '/smsg/item/ExecuteQuery'),
+			        		sql;
+			        	if (tnode)
+						{
+							sql = IG$/*mainapp*/._I24/*getTextContent*/(tnode);
+							me._lsql.push(sql);
+						}
+						
+						c && cb && cb.call(c, 1);
+			        }, function(xdoc) {
+						c && cb && cb.call(c, false);
+			        });
+				req._l/*request*/();
+			}
+		},
+		
+		set_count: function(counts) {
+			var me = this,
+				feditor = me.down("[name=feditor]");
+			
+			feditor.set_count.call(feditor, counts);
+		},
+		
+		initComponent: function() {
+			var panel = this;
+			
+			$s.apply(this, {
+				items: [
+					{
+						xtype: "panel",
+						layout: "border",
+						items: [
+							{
+								xtype: "panel",
+								title: IRm$/*resources*/.r1("L_pf_navitree"),
+								layout: "fit",
+								split: true,
+								region: "west",
+								flex: 1,
+								border: 0,
+								items: [
+									new IG$/*mainapp*/._I98/*naviTree*/({
+										showtoolbar: false,
+										name: "browser",
+										hidden: true,
+										cubebrowse: true,
+										collapsible: false,
+										floatable: false,
+										floating: false,
+										ddGroup: "_I$RD_G_",
+										"layout": "fit",
+										enabledrag: true,
+										_search: true,
+										
+										_IHb/*customEventOwner*/: panel,
+										
+										_IHC/*customDoubleClickFunc*/: function(record) {
+											var me = this;
+												p_opeditor = me.down("[name=p_opeditor]"),
+												filter = new IG$/*mainapp*/._IE9/*clFilter*/(null);
+											
+											filter.operator = 6;
+											
+											p_opeditor.m4/*filteritem*/ = filter;
+											p_opeditor._IFd/*init_f*/.call(p_opeditor);
+											p_opeditor.P2C/*itemSelectedHandler*/.call(p_opeditor, record.data);
+										}
+									})
+								]
+							},
+							{
+								xtype: "panel",
+								layout: "border",
+								region: "center",
+								split: true,
+								flex: 2,
+								items: [
+									{
+										xtype: "panel",
+										title: IRm$/*resources*/.r1("L_pf_fedit"),
+										split: true,
+										bodyPadding: 5,
+										layout: "fit",
+										flex: 1,
+										region: "north",
+										items: [
+											new IG$/*mainapp*/._Idba/*filterEditorPanel*/({
+												name: "p_opeditor",
+												hidden: true,
+												autoScroll: false,
+												_cmode: 1,
+												flex: 1
+											})
+										]
+									},
+									{
+										xtype: "panel",
+										split: true,
+										region: "center",
+										title: IRm$/*resources*/.r1("L_pf_filter"),
+										flex: 1,
+										layout: "fit",
+										items: [
+											new IG$/*mainapp*/._Ida/*filterEditorPanel*/({
+									    		name: "feditor",
+									    		hidden: true,
+									    		deferredRender: false,
+									    		bodyPadding: 10
+									    	})
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			});
+			IG$/*mainapp*/.jj_m/*pivotfiltereditor*/.superclass.initComponent.call(this);
+		},
+		listeners: {
+			afterrender: function(tobj) {
+				var me = tobj,
+					p_opeditor = me.down("[name=p_opeditor]"),
+					feditor = me.down("[name=feditor]");
+				
+				p_opeditor.on("add_filter", function(ed) {
+					ed._IFf/*confirmDialog*/.call(ed);
+					var dt = ed.m4/*filteritem*/,
+						tnode;
+						
+					tnode = feditor.rootnode_w.children[0];
+					
+					feditor.rs_mm5/*appendNewCondition*/.call(feditor, [tnode, dt]);
+				});
+				p_opeditor._IFd/*init_f*/.call(p_opeditor);
+			}
+		}
+	});
+}
+
+IG$/*mainapp*/.jj_M/*pivotfilter*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/._ID2/*ctrlBase*/, {
+	_ic/*initComponent*/: function() {
+		var me = this;
+		
+		me.p.push(
+			{name: "report_control", type: "property", datatype: "string", vmode: 1},
+			{name: "filter_id", type: "property", datatype: "string", vmode: 1},
+			{name: "itemclick", type: "event"}
+		);
+		
+		me.superclass.prototype._ic/*initComponent*/.call(me);
+	},
+	
+	pe/*processEvent*/: function(evttype, obj) {
+	},
+	
+	invalidate: function () {
+		var me = this,
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.html);
+			
+		if (me.viewer)
+		{
+			me.r2/*renderto*/.width(w).height(h);
+			me.viewer.setSize(w, h);
+		}
+	},
+	
+	valid: function() {
+		var r = 0;
+		
+		return r;
+	},
+	
+	confirmFilter: function(mode, c, cb) {
+		var me = this,
+			r,
+			ctrl = me.ctrl,
+			dashboard = ctrl.dashboard;
+		
+		me.viewer.sv/*requestSQLResult*/.call(me.viewer, me, function(r) {
+			var cr;
+			
+			if (r != false)
+			{
+				try
+				{
+					cr = cb.call(c, r);
+				}
+				catch (e)
+				{
+					cr = false;
+					IG$/*mainapp*/._I52/*ShowError*/("filter processing script error");
+				}
+			}
+		
+			if (r != false && cr != false)
+			{
+				dashboard.M8/*contEventProc*/.call(dashboard, dashboard);
+			}
+			else
+			{
+				dashboard.M8_/*stopEventProc*/.call(dashboard, dashboard);
+			}
+		});
+	},
+	
+	aa/*applyApplication*/: function (appItem) {
+		this.P3/*applicationItem*/ = appItem;
+	},
+	initDrawing: function () {
+		var me = this,
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.html),
+			renderto = $("<div></div>").appendTo(me.html),
+			actionlist = me.ctrl.actionlist;
+		
+		IG$/*mainapp*/.x_10/*jqueryExtension*/._w(renderto, w);
+    	IG$/*mainapp*/.x_10/*jqueryExtension*/._h(renderto, h);
+    	
+		me.viewer = me.dsmode ? null : new IG$/*mainapp*/.jj_m/*pivotfiltereditor*/({
+			width: IG$/*mainapp*/.x_10/*jqueryExtension*/._w(renderto),
+			height: IG$/*mainapp*/.x_10/*jqueryExtension*/._h(renderto),
+			renderTo: renderto[0]
+		});
+		
+		me.r2/*renderto*/ = renderto;
+		
+		me.__pcinit();
+	},
+	updateProperty: function(kname, value) {
+		var me = this;
+		
+		if (me.dsmode)
+		{
+			return;
+		}
+		
+		switch(kname)
+		{
+		case "report_control":
+			me.__ivp();
+			break;
+		}
+	},
+	__ivp: function() {
+		var me = this,
+			property = me.property,
+			report_control = property["report_control"],
+			filter_id = property["filter_id"],
+			rptctrl,
+			i,
+			dashboard = me.ctrl.dashboard,
+			dctrl;
+			
+		if (me.dsmode || me.__pcinit_)
+		{
+			return;
+		}
+			
+		if (report_control && dashboard && dashboard.P2/*ControlDict*/)
+		{
+			setTimeout(function() {
+				var dctrl,
+					dobj;
+				dctrl = dashboard.P2/*ControlDict*/[report_control];
+				if (dctrl && filter_id)
+				{
+					dobj = dctrl.P9/*control*/;
+					dobj.negoFilter && dobj.negoFilter.call(dobj, me, filter_id);
+				}
+			}, 20);
+		}
+	},
+	
+	set_base_report: function(rpt, cobj, cback) {
+		var panel = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.init(panel,
+			{
+	            ack: "11",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: rpt}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'translate'})
+	        }, panel, function(xdoc) {
+	        	var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+	        		p = (tnode) ? IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnode) : null;
+	        		
+	        	if (p && p.uid)
+	        	{
+	        		panel.viewer._l1/*loadReport*/.call(panel.viewer, p);
+	        	}
+	        }, false);
+		req._l/*request*/();
+	},
+
+	get_sql: function(delimiter) {
+		var me = this;
+		return me.viewer._lsql.join(delimiter || ";");
+	},
+	
+	get_db: function(delimiter) {
+		var me = this;
+		return me.viewer._ldb.join(delimiter || ";");
+	},
+	
+	set_count: function(counts) {
+		this.viewer.set_count.call(this.viewer, counts);
+	}
+});
+
+IG$/*mainapp*/._IE0/*controls*/.pivotfilter = new IG$/*mainapp*/.jj_M/*pivotfilter*/({}, null);
+
+
+
+
+IG$/*mainapp*/._ID3/*ctrlNullControl*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/._ID2/*ctrlBase*/, {
+	_ic/*initComponent*/: function() {
+		var me = this,
+			ctrl = me.ctrl,
+			thelp = $("<div>" + "unknown control: " + ctrl.P6/*ctrlname*/ + "</div>");
+			
+		me.html.append(thelp);
+		me.superclass.prototype._ic/*initComponent*/.call(me);
+	},
+	
+	initDrawing: function () {
+		var me = this;
+		
+		me.html.css({border: '1px solid #a5a5a5'});
+		me.__pcinit();
+	}
+});
+
+
+IG$/*mainapp*/._ID4/*ctrlTitleLabel*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/._ID2/*ctrlBase*/, {
+	_ic/*initComponent*/: function() {
+		var me = this;
+		
+		me.p.push(
+			{name: "text", type: "property", datatype: "string"},
+			{name: "fontsize", type: "property", datatype: "number"},
+			{name: "fontbold", type: "property", datatype: "boolean"},
+			{name: "color", type: "property", datatype: "string"}
+		);
+		
+		me.superclass.prototype._ic/*initComponent*/.call(me);
+	},
+	
+	updateProperty: function(kname, value) {
+		var me = this;
+		
+		switch (kname)
+		{
+		case "text":
+			me.html.text(value);
+			break;
+		case "fontsize":
+			me.html.css({fontSize: value + "px"});
+			break;
+		case "fontbold":
+			me.html.css({fontWeight: (value == true ? "bold" : "normal")});
+			break;
+		case "color":
+			me.html.css({color: (value ? value : "#000")});
+			break;
+		}
+	},
+	
+	initDrawing: function() {
+		var me = this;
+		
+		me.superclass.prototype.initDrawing.call(me);
+		
+		me.html.addClass("ig_title_label");
+	}
+});
+
+IG$/*mainapp*/._IE0/*controls*/.titlelabel = new IG$/*mainapp*/._ID4/*ctrlTitleLabel*/({}, null);
+
+IG$/*mainapp*/._ID5/*ctrlLabel*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/._ID2/*ctrlBase*/, {
+	_ic/*initComponent*/: function() {
+		var me = this;
+		
+		me.p.push(
+			{name: "text", type: "property", datatype: "string"},
+			{name: "fontsize", type: "property", datatype: "number", value: 12},
+			{name: "fontbold", type: "property", datatype: "boolean"},
+			{name: "color", type: "property", datatype: "string"}
+		);
+		
+		me.superclass.prototype._ic/*initComponent*/.call(me);
+	},
+	
+	updateProperty: function(kname, value) {
+		var me = this;
+		
+		switch (kname)
+		{
+		case "text":
+			me.html.text(value);
+			break;
+		case "fontsize":
+			me.html.css({fontSize: value + "px"});
+			break;
+		case "fontbold":
+			me.html.css({fontWeight: (value == true ? "bold" : "normal")});
+			break;
+		case "color":
+			me.html.css({color: (value ? value : "#000")});
+			break;
+		}
+	}
+});
+
+IG$/*mainapp*/._IE0/*controls*/.label = new IG$/*mainapp*/._ID5/*ctrlLabel*/({}, null);
+
+IG$/*mainapp*/._ID6/*ctrlPicture*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/._ID2/*ctrlBase*/, {
+	_ic/*initComponent*/: function() {
+		var me = this;
+		
+		me.image = null;
+		
+		me.p.push(
+			{name: "imagepath", type:"property", datatype: "string", "enum": "resources"}
+		);
+		
+		me.superclass.prototype._ic/*initComponent*/.call(me);
+	},
+
+	initDrawing: function() {
+		var me = this;
+		me.image = $('<img/>');
+		me.image.appendTo(me.html);
+		
+		me.superclass.prototype.initDrawing.call(me);
+	},
+	
+	updateProperty: function(kname, value) {
+		var me = this;
+		
+		switch (kname)
+		{
+		case "imagepath":
+			if (value)
+			{
+				me.image.show();
+				me.image.attr("src", ig$/*appoption*/.servlet + "?sreq=resource&_rcs_=" + value + "&_mts_=" + IG$/*mainapp*/._g$a/*global_mts*/);
+			}
+			else
+			{
+				me.image.hide();
+			}
+			break;
+		}
+	},
+	
+	invalidate: function() {
+		var me = this,
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.html);
+		
+		me.image && me.image.css({width: w + "px", height: h + "px"});
+	}
+});
+
+IG$/*mainapp*/._IE0/*controls*/.image = new IG$/*mainapp*/._ID6/*ctrlPicture*/({}, null);
+
+IG$/*mainapp*/._ID7/*ctrlTextInput*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/._ID2/*ctrlBase*/, {
+	_ic/*initComponent*/: function() {
+		var me = this,
+			dsmode = me.dsmode,
+			div, dnode,
+			htmltext;
+		
+		me.p.push(
+			{name: "text", type: "property", datatype: "string"},
+			{name: "fieldlabel", type: "property", datatype: "string"},
+			{name: "labelwidth", type: "property", datatype: "number", value: 80},
+			{name: "enterkey", type: "event"}
+		)
+		
+		div = $("<table class='igc-form-field'><tr><td id='_1'></td><td id='_2'></td></tr></table>").appendTo(me.html);
+		
+		dnode = $("#_2", div);
+		
+		if (!dsmode)
+		{
+			me.htmlinput = $("<input type='text' autocomplete='off' style='width:100%;height:100%'></input>").appendTo(dnode);
+		}
+		else
+		{
+			me.htmlinput = dnode;
+		}
+		
+		me.superclass.prototype._ic/*initComponent*/.call(me);
+	},
+
+	updateProperty: function(kname, value) {
+		var me = this,
+			lbl = $("#_1", me.html),
+			dom;
+		
+		switch (kname)
+		{
+		case "text":
+			me.htmlinput.val(value);
+			break;
+		case "labelwidth":
+			dom = $("#_1", me.html);
+			IG$/*mainapp*/.x_10/*jqueryExtension*/._w(dom, value);
+			break;
+		case "fieldlabel":
+			if (!value)
+			{
+				lbl.hide();
+			}
+			else
+			{
+				lbl.show();
+				lbl.text(value);
+			}
+			break;
+		}
+	},
+	
+	initDrawing: function () {
+		var me = this,
+			actionlist = me.ctrl.actionlist,
+			pdb = me.ctrl.P1/*parentcontrol*/;
+			
+		me.htmlinput.bind('keyup', function(ev) {
+			if (ev.keyCode == 13 && actionlist["enterkey"])
+			{
+				pdb.M7a/*executeAction*/.call(pdb, actionlist["enterkey"]);
+			}
+		});
+		
+		me.superclass.prototype.initDrawing.call(me);
+	},
+	
+	_c1/*commit*/: function() {
+		var me = this;
+		me.property.text = me.htmlinput.val();
+	},
+	
+	invalidate: function () {
+		var me = this;
+		// me.htmlinput.width(me.html.width()).height(me.html.height());
+	},
+	
+	P12/*getSelectionData*/: function(itemname) {
+		var me = this,
+			value = me.htmlinput.val() || "";
+		return [{code: value, value: value}];
+	}
+});
+
+IG$/*mainapp*/._IE0/*controls*/.textbox = new IG$/*mainapp*/._ID7/*ctrlTextInput*/({}, null);
+
+IG$/*mainapp*/._ID8/*ctrlTextArea*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/._ID2/*ctrlBase*/, {
+	_ic/*initComponent*/: function() {
+		var me = this,
+			dsmode = me.dsmode;
+			
+		me.p.push(
+			{name: "htmltext", type: "property", datatype: "string"},
+			{name: "text", type: "property", datatype: "string"}
+		);
+	
+		if (dsmode)
+		{
+			htmltext = "<div></div>";
+		}
+		else
+		{
+			htmltext = "<textarea></textarea>";
+		}
+		me.htmlinput = $(htmltext);
+		me.htmlinput.appendTo(me.html);
+		
+		me.superclass.prototype._ic/*initComponent*/.call(me);
+	},
+	
+	updateProperty: function(kname, value) {
+		var me = this;
+		
+		switch (kname)
+		{
+		case "htmltext":
+		case "text":
+			me.htmlinput.val(value);
+			break;
+		}
+	},
+		
+	invalidate: function () {
+		var me = this,
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.html);
+		if (me.htmlinput)
+		{
+			IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.htmlinput, w);
+			IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.htmlinput, h);
+		}
+	},
+	
+	_c1/*commit*/: function() {
+		var me = this;
+		me.property.text = me.htmlinput.val();
+	}
+});
+
+IG$/*mainapp*/._IE0/*controls*/.textarea = new IG$/*mainapp*/._ID8/*ctrlTextArea*/({}, null);
+
+IG$/*mainapp*/._ID9/*ctrlButton*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/._ID2/*ctrlBase*/, {
+	_ic/*initComponent*/: function() {
+		var me = this,
+			btnitem,
+			lbl,
+			dsmode = me.dsmode;
+		
+		me.p.push(
+			{name: "label", type: "property", datatype: "string"},
+			{name: "click", type: "event"}
+		);
+		
+		if (dsmode)
+		{
+			btnitem = "<div class='igc-btn igc-unselectable'>" + (me.property.label || "") + "</div>";
+
+			me.htmlbtn = $(btnitem);
+			me.htmlbtn.appendTo(me.html);
+		}
+		else
+		{
+			// btnitem = "<button class='igc-btn igc-unselectable'>" + (me.property.label || "") + "</button>";
+			btnitem = "<button class='igc-btn'>" + (me.property.label || "") + "</button>";
+			
+			me.htmlbtn = $(btnitem);
+			me.htmlbtn.appendTo(me.html);
+			
+			me.htmlbtn.button({
+				icons: {
+					// primary: "ui-icon-gear",
+	        		secondary: "ui-icon-triangle-1-s"
+				}
+			});
+			
+			me.htmlbtn.hover(function() {
+				me.htmlbtn.addClass("igc-btn-over");
+			}, function() {
+				me.htmlbtn.removeClass("igc-btn-over");
+			});
+			
+			me.htmlbtn.bind("click", function() {
+				me.htmlbtn.removeClass("igc-btn-over");
+			});
+		}
+		
+		me.superclass.prototype._ic/*initComponent*/.call(me);
+	},
+	
+	updateProperty: function(kname, value) {
+		var me = this,
+			lbl = me.htmlbtn;
+		
+		switch (kname)
+		{
+		case "label":
+			lbl.html(value);
+			break;
+		}
+	},
+	
+	initDrawing: function () {
+		var me = this,
+			dsmode = me.dsmode,
+			actionlist = me.ctrl.actionlist,
+			pdb = me.ctrl.P1/*parentcontrol*/;
+		
+		me.__pcinit();
+		
+		if (dsmode)
+			return;
+		
+		me.html.bind('click', function() {
+			if (actionlist["click"])
+			{
+				pdb.M7a/*executeAction*/.call(pdb, actionlist["click"]);
+			}
+		});
+	},
+	
+	invalidate: function () {
+		var me = this,
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.html);
+			
+		me.htmlbtn.css({width: (w + "px"), height: (h + "px")});
+	}
+});
+
+IG$/*mainapp*/._IE0/*controls*/.button = new IG$/*mainapp*/._ID9/*ctrlButton*/({}, null);
+
+IG$/*mainapp*/._IDa/*ctrlComboBox*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/._ID2/*ctrlBase*/, {
+	_ic/*initComponent*/: function() {
+		var me = this;
+		me.p.push(
+			{name: "fieldlabel", type: "property", datatype: "string"},
+			{name: "labelwidth", type: "property", datatype: "number", value: 80},
+			{name: "label_names", type: "property", datatype: "string"},
+			{name: "value_names", type: "property", datatype: "string"},
+			{name: "name_delimiter", type: "property", datatype: "string", value: ";"},
+			{name: "text", type: "property", datatype: "string"},
+			{name: "change", type: "event"}
+		);
+		
+		me.combobox = null;
+		me.items = [];
+		
+		me.superclass.prototype._ic/*initComponent*/.call(me);
+	},
+	
+	initDrawing: function () {
+		var me = this,
+			dsmode = me.dsmode,
+			div,
+			dnode;
+		
+		div = $("<table class='igc-form-field'><tr><td id='_1' class='igc-form-label'></td><td id='_2'><div class='igc-form-ctrl'></div></td></tr></table>").appendTo(me.html);
+		
+		dnode = $(".igc-form-ctrl", div);
+		
+		if (dsmode)
+		{
+			me.combobox = $("<div></div>").appendTo(dnode);
+		}
+		else
+		{
+			me.combobox = $("<select></select>").appendTo(dnode);
+			me.combobox.bind("change", function() {
+				var v = $(this).val(),
+					i, store = me.items,
+					rec;
+				
+				if (v && store)
+				{
+					for (i=0; i < store.length; i++)
+					{
+						if (store[i].code == v)
+						{
+							rec = store[i];
+							break;
+						}
+					}
+				}
+				
+				if (rec)
+				{
+					var pdb = me.ctrl.P1/*parentcontrol*/,
+						actionlist = me.ctrl.actionlist;
+						
+					me.property.text = v;
+					pdb.M7a/*executeAction*/.call(pdb, actionlist["change"]);
+				}
+			});
+		}
+		
+		me.superclass.prototype.initDrawing.call(me);
+	},
+	invalidate: function () {
+		var me = this,
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.html),
+			p = me.property,
+			labelwidth = p.labelwidth || 0,
+			fieldlabel = p.fieldlabel || "";
+			
+		if (me.dsmode)
+		{
+			// me.combobox.width(w).height(h);
+		}
+		else
+		{
+			// me.combobox.setSize(w, h);
+			if (fieldlabel && labelwidth)
+			{
+				w -= labelwidth;
+			}
+			me.combobox.width(w).height(h);
+		}
+	},
+	
+	_c1/*commit*/: function() {
+		var me = this;
+	},
+	
+	_ds/*applyDataSet*/: function(value) {
+		var me = this,
+			cols = value.v.cols,
+			data = value.v.data,
+			i, dp = [],
+			p,
+			combobox = me.combobox;
+		
+		combobox.empty();
+		
+		for (i=0; i < data.length; i++)
+		{
+			p = {
+				code: data[i][cols[0].name],
+				text: data[i][cols[cols.length > 1 ? 1 : 0].name]
+			};
+			
+			dp.push(p);
+			
+			combobox.append("<option value='" + p.code + "'>" + p.text + "</option>");
+		}
+		
+		me.items = dp;
+		// me.combobox.store.loadData(dp);
+	},
+	
+	updateProperty: function(kname, value) {
+		var me = this,
+			lbl = $("#_1", me.html),
+			jdom;
+		
+		switch (kname)
+		{
+		case "text":
+			me.sel(value);
+			break;
+		case "labelwidth":
+			jdom = $("#_1", me.html);
+			IG$/*mainapp*/.x_10/*jqueryExtension*/._w(jdom, value);
+			break;
+		case "fieldlabel":
+			if (!value)
+			{
+				lbl.hide();
+			}
+			else
+			{
+				lbl.show();
+				lbl.text(value);
+			}
+			break;
+		case "label_names":
+		case "value_names":
+		case "name_delimiter":
+			clearTimeout(me._vtimer);
+			me._vtimer = setTimeout(function() {
+				me._setData.call(me);
+			}, 20);
+			break;
+		}
+	},
+	
+	P12/*getSelectionData*/: function(itemname) {
+		var me = this;
+		
+		if (me.dsmode) 
+			return null;
+		
+		var strv = me.combobox.getValue(),
+			value = [],
+			i;
+		
+		for (i=0; i < me.combobox.store.data.items.length; i++)
+		{
+			if (me.combobox.store.data.items[i].get("code") == strv)
+			{
+				value.push({
+					code: me.combobox.store.data.items[i].get("code"),
+					text: me.combobox.store.data.items[i].get("text")
+				});
+				break;
+			}
+		}
+		
+		return value;
+	},
+	
+	_setData: function() {
+		var me = this,
+			result = {
+				data: []
+			},
+			i, delim, values, labels,
+			property = me.property, m,
+			rdata = result.data;
+			
+		labels = property.label_names || "";
+		values = property.value_names || "";
+		delim = property.name_delimiter || ";";
+		
+		labels = labels.split(delim);
+		values = values.split(delim);
+		
+		m = Math.max(labels.length, values.length);
+		
+		for (i=0; i < m ; i++)
+		{
+			rdata.push({
+				code: values[i] || labels[i],
+				text: labels[i] || values[i]
+			});
+		}
+			
+		me.loadData(result);
+	},
+		
+	loadData: function(result) {
+		var me = this,
+			i,
+			dp = [],
+			p;
+		
+		for (i=0; i < result.data.length; i++)
+		{
+			p = result.data[i];
+			dp.push({
+				code: p.code,
+				text: p.text || p.code
+			});
+		}
+		me.items = dp;
+		me.combobox.store && me.combobox.store.loadData(dp);
+	},
+	sel: function(r) {
+		var me = this,
+			m, combobox = me.combobox,
+			st = combobox.store,
+			i;
+		if (me.dsmode)
+			return;
+			
+		if (typeof(r) == "undefined")
+		{
+			m = combobox.getValue();
+		}
+		else
+		{
+			if (st.data.items[r])
+			{
+				combobox.setValue(st.data.items[r].get("code"));
+			}
+			else
+			{
+				for (i=0; i < st.data.items.length; i++)
+				{
+					if (st.data.items[i].get("code") == r)
+					{
+						combobox.setValue(r);
+						break;
+					}
+				}
+			}
+		}
+		
+		return m;
+	}
+});
+
+IG$/*mainapp*/._IE0/*controls*/.combobox = new IG$/*mainapp*/._IDa/*ctrlComboBox*/({}, null);
+
+IG$/*mainapp*/.$iDa/*ctrlCheckbox*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/._ID2/*ctrlBase*/, {
+	_ic/*initComponent*/: function() {
+		var me = this;
+		me.p.push(
+			{name: "fieldlabel", type: "property", datatype: "string"},
+			{name: "labelwidth", type: "property", datatype: "number", value: 80},
+			{name: "label_names", type: "property", datatype: "string"},
+			{name: "value_names", type: "property", datatype: "string"},
+			{name: "name_delimiter", type: "property", datatype: "string", value: ";"},
+			{name: "change", type: "event"}
+		);
+		
+		me.viewer = null;
+		
+		me.superclass.prototype._ic/*initComponent*/.call(me);
+	},
+	
+	initDrawing: function () {
+		var me = this,
+			dsmode = me.dsmode,
+			div,
+			dnode;
+		
+		div = $("<table class='igc-form-field'><tr><td id='_1' class='igc-form-label'></td><td id='_2'><div class='igc-form-ctrl'></div></td></tr></table>").appendTo(me.html);
+		
+		dnode = $(".igc-form-ctrl", div);
+		
+		me.viewer = $("<div></div>").appendTo(dnode);
+		
+		me.superclass.prototype.initDrawing.call(me);
+	},
+	invalidate: function () {
+		var me = this,
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.html),
+			p = me.property,
+			labelwidth = p.labelwidth || 0,
+			fieldlabel = p.fieldlabel || "";
+			
+		if (me.dsmode)
+		{
+			// me.combobox.width(w).height(h);
+		}
+		else
+		{
+			// me.combobox.setSize(w, h);
+			if (fieldlabel && labelwidth)
+			{
+				w -= labelwidth;
+			}
+			me.viewer.width(w).height(h);
+		}
+	},
+	
+	_c1/*commit*/: function() {
+		var me = this;
+	},
+	
+	updateProperty: function(kname, value) {
+		var me = this,
+			lbl = $("#_1", me.html),
+			jdom;
+		
+		switch (kname)
+		{
+		case "text":
+			
+			break;
+		case "labelwidth":
+			jdom = $("#_1", me.html);
+			IG$/*mainapp*/.x_10/*jqueryExtension*/._w(jdom, value);
+			break;
+		case "fieldlabel":
+			if (!value)
+			{
+				lbl.hide();
+			}
+			else
+			{
+				lbl.show();
+				lbl.text(value);
+			}
+			break;
+		case "label_names":
+		case "value_names":
+		case "name_delimiter":
+			clearTimeout(me._vtimer);
+			me._vtimer = setTimeout(function() {
+				me._setData.call(me);
+			}, 20);
+			break;
+		}
+	},
+	
+	P12/*getSelectionData*/: function(itemname) {
+		var me = this;
+		
+		if (me.dsmode) 
+			return null;
+		
+//		var strv = me.combobox.getValue(),
+//			value = [],
+//			i;
+		
+//		for (i=0; i < me.combobox.store.data.items.length; i++)
+//		{
+//			if (me.combobox.store.data.items[i].get("code") == strv)
+//			{
+//				value.push({
+//					code: me.combobox.store.data.items[i].get("code"),
+//					text: me.combobox.store.data.items[i].get("text")
+//				});
+//				break;
+//			}
+//		}
+		
+		return value;
+	},
+	
+	_ds/*applyDataSet*/: function(value) {
+		var data = value.data,
+			i, result = {
+				data: []
+			}, dp = result.data;
+		
+		me.loadData(result);
+	},
+		
+	_setData: function() {
+		var me = this,
+			result = {
+				data: []
+			},
+			i, delim, values, labels,
+			property = me.property, m,
+			rdata = result.data;
+			
+		labels = property.label_names || "";
+		values = property.value_names || "";
+		delim = property.name_delimiter || ";";
+		
+		labels = labels.split(delim);
+		values = values.split(delim);
+		
+		m = Math.max(labels.length, values.length);
+		
+		for (i=0; i < m ; i++)
+		{
+			rdata.push({
+				code: values[i] || labels[i],
+				text: labels[i] || values[i]
+			});
+		}
+			
+		me.loadData(result);
+	},
+	
+	loadData: function(result) {
+		var me = this,
+			i,
+			dp = [],
+			p;
+			
+		me.viewer.empty();
+		
+		$.each(result.data, function(i, p) {
+			if (p.code || p.tet)
+			{
+				var m = me.viewer.append("<label><input type='checkbox' value='" + (p.code) + "'>" + p.text + "</label>");
+			}
+		});
+	}
+});
+
+IG$/*mainapp*/._IE0/*controls*/.checkbox = new IG$/*mainapp*/.$iDa/*ctrlCheckbox*/({}, null);
+
+IG$/*mainapp*/._IDb/*ctrlDateField*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/._ID2/*ctrlBase*/, {
+	_ic/*initComponent*/: function() {
+		var me = this;
+		
+		me.p.push(
+			{name: "text", type: "property", datatype: "string"}
+		);
+		
+		me.superclass.prototype._ic/*initComponent*/.call(me);
+	},
+	
+	initDrawing: function () {
+		var me = this,
+			cdate = new Date();
+		
+		me.superclass.prototype.initDrawing.call(me);
+		
+		me.datefield = $("<input class='mec-dateperiod-input' type='text' placeholder='yyyy-mm-dd'></input>").datepicker({
+			monthNames: $.datepicker._defaults.monthNamesShort,
+			buttonImage: "./images/calendar.gif",
+			buttonImageOnly: true,
+			dateFormat: "yy-mm-dd",
+			defaultDate: 0,
+			onSelect: function(dateText, inst) {
+//				me.l5a/*updateHierarchy*/.call(me, filter);
+//				if (showbutton != true)
+//				{
+//					me.l5/*updateFilterValues*/.call(me);
+//				}
+			}
+		}).appendTo(me.html);
+		
+		// me.datefield.setValue(cdate);
+		me.datefield.datepicker("setDate", cdate);
+		
+		$("<div class='mec-dateperiod-button'></div>").appendTo(me.html).bind("click", function() {
+			me.datefield.datepicker("show");
+		});
+		
+		me.property["text"] = me.getValue();
+	},
+	
+	invalidate: function () {
+		var me = this,
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.html);
+			
+		me.datefield.width(w-34).height(h-5);
+	},
+	
+	_c1/*commit*/: function() {
+		var me = this;
+		me.property["text"] = me.getValue();
+	},
+	
+	getValue: function(param) {
+		var dt = this.datefield.datepicker("getDate"),
+			strdt;
+			
+		if (dt)
+		{
+			strdt = dt.format('Ymd');
+			param && param.push({code: strdt, value: strdt});
+		}
+		return strdt;
+	}
+});
+
+IG$/*mainapp*/._IE0/*controls*/.datechooser = new IG$/*mainapp*/._IDb/*ctrlDateField*/({}, null);
+
+IG$/*mainapp*/.jj_3/*ctrlMonthField*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/._ID2/*ctrlBase*/, {
+	_ic/*initComponent*/: function() {
+		var me = this;
+		
+		me.superclass.prototype._ic/*initComponent*/.call(me);
+	},
+	
+	initDrawing: function () {
+		var me = this,
+			cdate = new Date();
+		
+		me.superclass.prototype.initDrawing.call(me);
+		
+		this.datefield = $("<input class='mec-dateperiod-input' type='text'></input>").monthpicker({
+			buttonImage: "./images/calendar.gif",
+			buttonImageOnly: true,
+			pattern: "yyyy-mm",
+			onSelect: function(dateText, inst) {
+				
+			}
+		}).appendTo(me.html);
+	},
+	
+	invalidate: function () {
+		var me = this,
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.html);
+			
+		IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.datefield, w);
+		IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.datefield, h);
+	},
+	
+	getValue: function(param) {
+		var dt = this.datefield.getValue();
+		if (dt)
+		{
+			var strdt = dt.format('Ymd');
+			param.push({code: strdt, value: strdt});
+		}
+	}
+});
+
+IG$/*mainapp*/._IE0/*controls*/.monthchooser = new IG$/*mainapp*/.jj_3/*ctrlMonthField*/({}, null);
+
+IG$/*mainapp*/._IDc/*ctrlPanel*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/._ID2/*ctrlBase*/, {
+	_ic/*initComponent*/: function() {
+		var me = this;
+		
+		me.titleheight = 0;
+		
+		me.p.push(
+			{name: "layout", type: "property", datatype: "string", value: "absolute",
+				"enum": [
+					{name: "absolute", value: "absolute"},
+					{name: "vertical", value: "vbox"},
+					{name: "horizontal", value: "hbox"},
+					{name: "table", value: "table"}
+				]
+			},
+			{name: "region", type: "property", datatype: "string"},
+			{name: "title", type: "property", datatype: "string"},
+			{name: "collapsible", type: "property", datatype: "boolean"}
+		);
+		
+		me.superclass.prototype._ic/*initComponent*/.call(me);
+	},
+	
+	updateProperty: function(kname, value) {
+		var me = this;
+		
+		switch (kname)
+		{
+		case "title":
+			this.paneltitle.text(value);
+		
+			if (value != null && typeof(value) != "undefined" && value != "")
+			{
+				this.paneltitle.show();
+				this.titleheight = 25;
+			}
+			else
+			{
+				this.paneltitle.hide();
+				this.titleheight = 0;
+			}
+			break;
+		case "layout":
+			break;
+		}
+		
+		this.updateLayout();
+	},
+	
+	initDrawing: function () {
+		var me = this,
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.html);
+		
+		me.paneltitle = $("<div class='idv-dbr-title'></div>");
+		me.html.append(me.paneltitle);
+		
+		me.superclass.prototype.initDrawing.call(me);
+	},
+	
+	invalidate: function () {
+		var me = this,
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.html);
+			
+		// me.paneltitle.width(w);
+		
+		me.updateLayout();
+	},
+	
+	updateLayout: function() {
+		var me = this,
+			dashboard = me.ctrl.dashboard;
+		
+		clearTimeout(me._l1/*timer*/);
+		
+		me._l1/*timer*/ = setTimeout(function() {
+			if (dashboard)
+			{
+				dashboard.cL/*changeLayout*/.call(dashboard, me.ctrl);
+			}
+		}, 50);
+	}
+});
+
+IG$/*mainapp*/._IE0/*controls*/.panel = new IG$/*mainapp*/._IDc/*ctrlPanel*/({}, null);
+
+IG$/*mainapp*/._IDd/*ctrlOLAPReport*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/._ID2/*ctrlBase*/, {
+	_ic/*initComponent*/: function() {
+		var me = this;
+		
+		me.canvas = null;
+		me.viewer = null;
+		me.options = null;
+		me.loading = null;
+		me.zoom = false;
+		me.sheetindex = 0;
+		
+		me.hidetoolbar = false;
+		me.hidestatusbar = false;
+		
+		me.p.push(
+			{name: "draw", type: "property", datatype: "string"},
+			{name: "hidetoolbar", type: "property", datatype: "boolean", vmode: 1},
+			{name: "hidestatusbar", type: "property", datatype: "boolean", vmode: 1},
+			{name: "execute_completed", type: "event"}
+		);
+		
+		me.superclass.prototype._ic/*initComponent*/.call(me);
+	},
+	
+	onClickMagHandler: function (e) {
+		var sender = e.data.sender;
+		sender.pe/*processEvent*/("magnifire", sender);
+	},
+	
+	initDrawing: function () {
+		var me = this,
+			renderto = $("<div></div>").appendTo(me.html),
+    		rendermask = $("<div></div>").appendTo(me.html),
+    		w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.html),
+    		h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.html);
+		
+    	IG$/*mainapp*/.x_10/*jqueryExtension*/._w(renderto, w);
+    	IG$/*mainapp*/.x_10/*jqueryExtension*/._h(renderto, h);
+		rendermask.css({position: "absolute", top: 0, left: 0, bottom: 0, right: 0, width: "100%", height: "100%", overflow: "hidden"}).hide();
+		
+		if (!me.ctrl.dsmode)
+		{
+			if (!this.viewer)
+			{
+				this.viewer = new IG$/*mainapp*/._IBe/*ReportView*/({
+					width: IG$/*mainapp*/.x_10/*jqueryExtension*/._w(renderto),
+					height: IG$/*mainapp*/.x_10/*jqueryExtension*/._h(renderto),
+					renderTo: renderto[0],
+					rendermask: rendermask,
+					uid: me.uid,
+					region: "center",
+					collapsible: false,
+					minSize: 100,
+					floatable: false,
+					vmode: 1,
+					title: 0,
+					closeAction: "destroy",
+					header: false
+				});
+				
+				this.viewer.on("afterrender", function(tobj) {
+					me.updateProperty.call(me, "hidetoolbar");
+					me.updateProperty.call(me, "hidestatusbar");
+				}, this);
+			}
+		}
+		
+		me.__pcinit();
+	},
+	
+	clear: function() {
+		var me = this,
+			viewer = me.viewer;
+			
+		viewer && viewer.cL/*clearResult*/.call(viewer);
+	},
+	
+	updateProperty: function(kname) {
+		var me = this,
+			viewer = me.viewer,
+			v = this.property[kname];
+		
+		if (!viewer)
+			return;
+			
+		switch (kname)
+		{
+		case "hidetoolbar":
+			viewer.hiddentoolbar = v;
+			viewer && viewer._2/*toolbar*/ && viewer._2/*toolbar*/.setVisible(v ? false : true);
+			break;
+		case "hidestatusbar":
+			viewer.hiddenstatusbar = v;
+			viewer && viewer.down("[name=_1]").setVisible(v ? false : true);
+			break;
+		}
+	},
+	
+	invalidate: function () {
+		var w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(this.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(this.html);
+		
+		this.viewer && this.viewer.setSize(w, h);
+	},
+	
+	P12/*getSelectionData*/: function(itemname) {
+		return null;
+	},
+	
+	eRun: function(cback, filterxml) {
+		var me = this,
+			viewer = me.viewer,
+			sfilter, hfilter, fdoc,
+			filter,
+			fnode, fnodes, i,
+			params = [],
+			pname, pvalue,
+			pdb = me.ctrl.P1/*parentcontrol*/;
+		
+		viewer.execallback = new IG$/*mainapp*/._I3d/*callBackObj*/(me, function(xdoc, iserror) {
+			var me = this;
+			if (iserror != true)
+			{
+				if (me.ctrl.actionlist)
+				{
+					pdb.M7a/*executeAction*/.call(pdb, me.ctrl.actionlist["execute_completed"]);
+				}
+			}
+		})// cback;
+		
+		if (filterxml)
+		{
+			fdoc = IG$/*mainapp*/._I13/*loadXML*/(filterxml);
+			
+			fnode = IG$/*mainapp*/._I18/*XGetNode*/(fdoc, "/smsg/filters/Filter");
+			
+			if (fnode)
+			{
+				sfilter = new IG$/*mainapp*/._IEb/*clFilterGroup*/();
+				me.p2/*parseFilter*/(fnode, sfilter);
+			}
+			
+			fnode = IG$/*mainapp*/._I18/*XGetNode*/(fdoc, "/smsg/filters/HavingFilter");
+			
+			if (fnode)
+			{
+				hfilter = new IG$/*mainapp*/._IEb/*clFilterGroup*/();
+				me.p2/*parseFilter*/(fnode, hfilter);
+			}
+			
+			fnode = IG$/*mainapp*/._I18/*XGetNode*/(fdoc, "/smsg/params");
+			
+			if (fnode)
+			{
+				fnodes = IG$/*mainapp*/._I26/*getChildNodes*/(fnode);
+				
+				for (i=0; i < fnodes.length; i++)
+				{
+					pname = IG$/*mainapp*/._I1b/*XGetAttr*/(fnodes[i], "name");
+					pvalue = IG$/*mainapp*/._I24/*getTextContent*/(fnodes[i]);
+					
+					params.push({
+						name: pname,
+						value: pvalue
+					})
+				}
+			}
+			
+			if (sfilter && hfilter)
+			{
+				filter = {
+					filter: sfilter,
+					hfilter: hfilter,
+					params: params
+				};
+			}
+		}
+		
+		if (viewer.uid != me.uid)
+		{
+			viewer.uid = me.uid;
+			viewer.__ld/*loaded*/ = false;
+			viewer._IFd/*init_f*/.call(viewer, true);
+		}
+		
+		viewer.__d_c/*dashboard_callback*/ = null;
+		
+		if (viewer.__ld/*loaded*/)
+		{
+			viewer._t$/*toolbarHandler*/.call(viewer, "cmd_run", null, null, filter);
+		}
+		else
+		{
+			viewer.__d_c/*dashboard_callback*/ = new IG$/*mainapp*/._I3d/*callBackObj*/(me, function() {
+				viewer._t$/*toolbarHandler*/.call(viewer, "cmd_run", null, null, filter);
+			});
+		}
+	},
+	
+	p2/*parseFilter*/: function(node, filter) {
+		var me = this;
+		
+		if (node)
+		{
+			var fglist = IG$/*mainapp*/._I26/*getChildNodes*/(node, "FilterGroup"),
+				i;
+
+			if (fglist && fglist.length > 0)
+			{
+				for (i=0; i < fglist.length; i++)
+				{
+					var tgroup = new IG$/*mainapp*/._IEb/*clFilterGroup*/();
+					tgroup.name = IG$/*mainapp*/._I1b/*XGetAttr*/(fglist[i], "name"); 
+					filter.subGroups.push(tgroup);
+					me.parseSubFilter(fglist[i], tgroup);
+				}
+			}
+		}
+	},
+	parseSubFilter: function(fgnode, ugroup) {
+		var i, j,
+			group,
+			sfg,
+			me = this;
+		
+		sfg = IG$/*mainapp*/._I26/*getChildNodes*/(fgnode);
+		
+		if (sfg && sfg.length > 0)
+		{
+			for (j=0; j < sfg.length; j++)
+			{
+				if (IG$/*mainapp*/._I29/*XGetNodeName*/(sfg[j]) == "FilterGroup")
+				{
+					var group = new IG$/*mainapp*/._IEb/*clFilterGroup*/();
+					group.name = IG$/*mainapp*/._I1b/*XGetAttr*/(sfg[j], "name"); 
+					me.parseSubFilter(sfg[j], group);
+					ugroup.subGroups.push(group);
+				}
+				else
+				{
+					ugroup.subConditions.push(new IG$/*mainapp*/._IE9/*clFilter*/(sfg[j]));
+				}
+			}
+		}
+	},
+	
+	aa/*applyApplication*/: function (appItem) {
+		var me = this;
+		me.P3/*applicationItem*/ = appItem;
+		
+		if (me.P3/*applicationItem*/ != null)
+		{
+			me.uid = me.P3/*applicationItem*/.uid;
+			
+			if (!me.dsmode && me.viewer)
+			{
+				me.viewer.uid = me.uid;
+				me.viewer._IFd/*init_f*/.call(me.viewer, true);
+			}
+		}
+	},
+		
+	negoFilter: function(filterctrl, docid) {
+		var me = this;
+		
+		if (me.viewer)
+		{
+			var fctrl = filterctrl.viewer,
+				ubody;
+				
+			ubody = me.viewer.dzone ? me.viewer.dzone._IIb/*getBox*/.call(me.viewer.dzone, docid) : null;
+			
+			if (ubody)
+			{
+				filterctrl.html.empty();
+				filterctrl.viewer = ubody.viewer;
+				ubody.view.c/*contentarea*/.appendTo(filterctrl.html);
+				ubody.view.sp/*splash*/.appendTo(filterctrl.html);
+				ubody.hidden = true;
+			}
+			else
+			{
+				me.viewer.regbody.call(me.viewer, docid, fctrl);
+			}
+		}
+	},
+	destroy: function() {
+		var me = this;
+		
+		if (me.viewer && me.viewer.close)
+		{
+			me.viewer.close();
+		}
+	}
+});
+
+IG$/*mainapp*/._IE0/*controls*/.olapreport = new IG$/*mainapp*/._IDd/*ctrlOLAPReport*/({}, null);
+IG$/*mainapp*/._IE0/*controls*/.compositereport = new IG$/*mainapp*/._IDd/*ctrlOLAPReport*/({}, null);
+
+IG$/*mainapp*/.jj_1/*browserpanel*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/._ID2/*ctrlBase*/, {
+	_ic/*initComponent*/: function() {
+		var me = this;
+		
+		this.p.push(
+			{name: "rootpath", type: "property", datatype: "string"},
+			{name: "visibleitems", type: "property", datatype: "string"},
+			{name: "folder_templates", type: "property", datatype: "string"},
+			{name: "templates", type: "property", datatype: "string"},
+			{name: "collapsible", type: "property", datatype: "boolean"},
+			{name: "foldercollapse", type: "property", datatype: "boolean"},
+			{name: "name_exclude", type: "property", datatype: "string"},
+			{name: "batchload", type: "property", datatype: "boolean"},
+			{name: "itemclick", type: "event"}
+		);
+		
+		me.superclass.prototype._ic/*initComponent*/.call(me);
+	},
+	
+	pe/*processEvent*/: function(evttype, obj) {
+	},
+	invalidate: function () {
+		var w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(this.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(this.html);
+	},
+	aa/*applyApplication*/: function (appItem) {
+		this.P3/*applicationItem*/ = appItem;
+	},
+	
+	initDrawing: function () {
+		var me = this,
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(this.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(this.html),
+			actionlist = me.ctrl.actionlist;
+		
+		// if (me.ctrl.P8/*events*/ && me.ctrl.P8/*events*/['click'])
+		var pdb = me.ctrl.P1/*parentcontrol*/;
+		
+		if (!me.dsmode)
+		{
+			me.html.bind('menu_click', function(e, item) {
+				// pdb.M7/*processRunEvents*/.call(pdb, eventowner.ctrl.P8/*events*/['click']);
+				if (actionlist["itemclick"])
+				{
+					pdb.M7a/*executeAction*/.call(pdb, actionlist["itemclick"], me, item);
+				}
+			});
+		}
+		
+		this.__pcinit();
+	},
+	updateProperty: function(k, value) {
+		var me = this;
+		
+		switch(k)
+		{
+		case "rootpath":
+			me.setRootPath();
+			break;
+		}
+	},
+	setRootPath: function() {
+		var me = this,
+			nodepath = me.property["rootpath"],
+			req,
+			opt = {},
+			mopt = {},
+			ack = "5";
+		
+		me.html.empty();
+		
+		if (nodepath)
+		{
+			opt.uid = nodepath;
+			
+			if (me.property["batchload"] == true)
+			{
+				ack = "11";
+				mopt.typelist = "Dashboard;Report";
+				mopt.pid = nodepath;
+				mopt.option = "search";
+			}
+			
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+			req.init(me, 
+				{
+					ack: ack,
+					payload: IG$/*mainapp*/._I2d/*getItemAddress*/(opt, "uid"),
+					mbody: IG$/*mainapp*/._I2e/*getItemOption*/(mopt)
+				}, me, function(xdoc) {
+					var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, ack == "11" ? "/smsg/result" : "/smsg/item"),
+						p,
+						tnodes = tnode ? IG$/*mainapp*/._I26/*getChildNodes*/(tnode) : null,
+						i,
+						ul;
+					
+					if (tnode)
+					{
+						p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnode);
+						
+						if (p.type == "Folder" || p.type == "Workspace" || ack == "11")
+						{
+							ul = $("<ul></ul>").appendTo(me.html);
+							this.addNodes(tnodes, ul);
+						}
+					}
+				}, false);
+			req._l/*request*/();
+		}
+	},
+	
+	addNodes: function(tnodes, ul) {
+		var me = this,
+			items = [],
+			i, j,
+			p, exnames = me.property["name_exclude"],
+			f_template = me.property["folder_templates"],
+			template = me.property["templates"],
+			exc = 0;
+			
+		exnames = exnames ? exnames.split(";") : null;
+		
+		for (i=0; i < tnodes.length; i++)
+		{
+			p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+			p.tnode = tnodes[i];
+			exc = 0;
+			if (exnames)
+			{
+				for (j=0; j < exnames.length; j++)
+				{
+					if (p.name.indexOf(exnames[j]) > -1)
+					{
+						exc = true;
+						break;
+					}
+				}
+			}
+			!exc && items.push(p);
+		}
+		
+		IG$/*mainapp*/._I10/*sortMeta*/(items);
+		
+		$.each(items, function(i, item) {
+			var li = $("<li></li>").appendTo(ul),
+				div = $("<div></div>").appendTo(li),
+				sul,
+				snodes,
+				tmpl = template;
+			
+			if (item.type == "Folder" || item.type == "Workspace")
+			{
+				tmpl = f_template;
+			}
+			
+			if (tmpl)
+			{
+				tmpl = tmpl.replace("{name}", item.name);
+				tmpl = tmpl.replace("{description}", item.description);
+				tmpl = tmpl.replace("{seq}", "" + i);
+			}
+			else
+			{
+				tmpl = "<span>" + item.name + "</span>";
+			}
+			
+			$(tmpl).appendTo(div);
+			
+			div.bind("click", function() {
+				me.html.trigger("menu_click", item);
+			});
+			
+			if (item.type == "Folder" || item.type == "Workspace")
+			{
+				snodes = IG$/*mainapp*/._I26/*getChildNodes*/(item.tnode);
+				
+				if (snodes && snodes.length > 0)
+				{
+					sul = $("<ul></ul>").appendTo(li);
+					me.addNodes.call(me, snodes, sul);
+				}
+			}
+		});
+	}
+});
+
+IG$/*mainapp*/._IE0/*controls*/.browser = new IG$/*mainapp*/.jj_1/*browserpanel*/({}, null);
+
+IG$/*mainapp*/.jj_3/*tabpanel*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/._ID2/*ctrlBase*/, {
+	_ic/*initComponent*/: function() {
+		var me = this;
+		me.activeIndex = 0;
+		me.p.push(
+		);
+		
+		me.superclass.prototype._ic/*initComponent*/.call(me);
+	},
+	
+	pe/*processEvent*/: function(evttype, obj) {
+	},
+
+	invalidate: function () {
+		var me = this,
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.html);
+	},
+	
+	initDrawing: function () {
+		var me = this,
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.html),
+			actionlist = me.ctrl.actionlist,
+			renderto = $("<div></div>").appendTo(me.html),
+			tabbuttons = $("<ul class='igc-p-tap'></ul>").appendTo(renderto),
+			mainarea = $("<div></div>").appendTo(renderto);
+		
+		me.tabbuttons = tabbuttons;
+		me.mainarea = mainarea;
+		
+		me.__pcinit();
+	},
+	updateProperty: function(kname, value) {
+		var me = this;
+		
+		if (me.dsmode)
+		{
+			return;
+		}
+		
+		switch(kname)
+		{
+		case "report_control":
+			break;
+		}
+	},
+
+	updateLayout: function() {
+		var me = this,
+			dashboard = me.ctrl.dashboard;
+		
+		clearTimeout(me._l1/*timer*/);
+		
+		me._l1/*timer*/ = setTimeout(function() {
+			if (dashboard)
+			{
+				dashboard.cL/*changeLayout*/.call(dashboard, me.ctrl);
+			}
+		}, 50);
+	},
+
+	loadHeader: function(items) {
+		var me = this,
+			tabbuttons = me.tabbuttons,
+			i;
+
+		me.tabitems = items;
+		tabbuttons.empty();
+
+		$.each(items, function(i, item) {
+			var li = $("<li><span>" + (item.title || "Tab " + (i+1)) + "</li>").appendTo(tabbuttons);
+
+			if (me.activeIndex == i)
+			{
+				li.addClass("active");
+			}
+
+			item.__tab_btn = li;
+
+			li.bind("click", function() {
+				me.setActiveItem.call(me, i);
+			})
+		});
+	},
+	
+	getTabHeight: function() {
+		return this.tabbuttons ? this.tabbuttons.height() : 0;
+	},
+
+	setActiveItem: function(index) {
+		var me = this,
+			i;
+
+		if (me.tabitems && me.tabitems.length > index && index > -1)
+		{
+			me.activeIndex = index;
+		}
+
+		if (me.activeIndex > -1 && me.tabitems)
+		{
+			for (i=0; i < me.tabitems.length; i++)
+			{
+				if (index == i)
+				{
+					me.tabitems[i].__tab_btn.addClass("active");
+				}
+				else
+				{
+					me.tabitems[i].__tab_btn.removeClass("active");
+				}
+
+				me.tabitems[i].P9/*controls*/.html[index == i ? "show" : "hide"]();
+			}
+		}
+		// me.updateLayout();
+	}
+});
+
+IG$/*mainapp*/._IE0/*controls*/.tabpanel = new IG$/*mainapp*/.jj_3/*tabpanel*/({}, null);
+
+IG$/*mainapp*/.jj_4/*promptfilter*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/._ID2/*ctrlBase*/, {
+	_ic/*initComponent*/: function() {
+		var me = this;
+		me.activeIndex = 0;
+		me.p.push(
+			{name: "request_run", type: "event"}
+		);
+		
+		me.superclass.prototype._ic/*initComponent*/.call(me);
+	},
+	
+	pe/*processEvent*/: function(evttype, obj) {
+	},
+
+	invalidate: function () {
+		var me = this,
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.html);
+	},
+	
+	initDrawing: function () {
+		var me = this,
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.html),
+			actionlist = me.ctrl.actionlist,
+			mcontainer = $("<div></div>").appendTo(me.html),
+			cbtn;
+
+		if (!me.viewer)
+		{
+			me.sop = new IG$/*mainapp*/._IFc/*sheetfiltercomp*/(me.layout._xparam);
+			me.sop.objtype = "FILTER";
+			me.viewer = new IG$/*mainapp*/._Ied/*dynFilterView*/(mcontainer, me.sop, null, true);
+			me.viewer.callback = new IG$/*mainapp*/._I3d/*callBackObj*/(me, function() {
+				me.html.trigger("e_request_run");
+			});
+		}
+		
+		if (me.dsmode)
+		{
+			cbtn = $("<div class='igc-p-config'><div class='igc-p-config-bg'></div><button>Config</button></div>").appendTo(me.html);
+			$("button", cbtn).bind("click", function() {
+				me.configSheet.call(me);
+			});
+		}
+		me.__pcinit();
+	},
+
+	configSheet: function() {
+		var me = this,
+			pop = new IG$/*mainapp*/._If1/*sheetobj*/({
+				_ILb/*sheetoption*/: me.viewer._ILb/*sheetoption*/, 
+				_ILa/*reportoption*/: null,
+				_md/*creatMode*/: 1,
+				callback: new IG$/*mainapp*/._I3d/*callBackObj*/(me, function(dlg, sheetview) {
+					var tvalue = me.sop.l2/*getXML*/.call(me.sop);
+
+					me.layout._xparam = IG$/*mainapp*/._I13/*loadXML*/(tvalue);
+					me.viewer.l3/*validateItems*/.call(me.viewer);
+				}, me.viewer)
+			});
+		
+		IG$/*mainapp*/._I_5/*checkLogin*/(this, pop);
+	},
+	updateProperty: function(kname, value) {
+		var me = this;
+		
+		if (me.dsmode)
+		{
+			return;
+		}
+		
+		switch(kname)
+		{
+		case "report_control":
+			break;
+		}
+	},
+
+	updateLayout: function() {
+		var me = this,
+			dashboard = me.ctrl.dashboard;
+	},
+
+	P12/*getSelectionData*/: function(param) {
+		var me = this,
+			filteritems,
+			i, j,
+			viewer = me.viewer,
+			berr = [],
+			fitem,
+			bs,
+			rval = [];
+
+		if (param && param.name && viewer)
+		{
+			filteritems = viewer._ILb/*sheetoption*/.pff1/*filterItems*/;
+
+			if (filteritems && filteritems.length)
+			{
+				for (i=0; i < filteritems.length; i++)
+				{
+					if (filteritems[i].name == param.name)
+					{
+						fitem = filteritems[i];
+						break;
+					}
+				}
+
+				if (fitem)
+				{
+					bs = viewer.l5m_/*checkFilterValuesItem*/.call(viewer, fitem, berr, true);
+
+					if (bs)
+					{
+						for (j=0; j < fitem.value.length; j++)
+						{
+							rval.push(fitem.value[j]);
+						}
+					}
+				}
+			}
+		}
+
+		return rval;
+	}
+});
+
+IG$/*mainapp*/._IE0/*controls*/.promptfilter = new IG$/*mainapp*/.jj_4/*promptfilter*/({}, null);
+
+IG$/*mainapp*/.jj_5/*dashboard*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/._ID2/*ctrlBase*/, {
+	_ic/*initComponent*/: function() {
+		var me = this;
+
+		me._v/*viewerRendererd*/ = false;
+		me.p.push(
+		);
+		
+		me.superclass.prototype._ic/*initComponent*/.call(me);
+	},
+	
+	pe/*processEvent*/: function(evttype, obj) {
+	},
+
+	invalidate: function () {
+		var me = this,
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.html);
+
+		if (me.viewer)
+		{
+			me.viewer.setSize(w, h);
+		}
+	},
+
+	initDrawing: function () {
+		var me = this,
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.html),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.html),
+			renderto = $("<div class='igc-db-embed'></div>").appendTo(me.html),
+    		rendermask = $("<div></div>").appendTo(me.html);
+		
+    	IG$/*mainapp*/.x_10/*jqueryExtension*/._w(renderto, w);
+    	IG$/*mainapp*/.x_10/*jqueryExtension*/._h(renderto, h);
+		rendermask.css({position: "absolute", top: 0, left: 0, bottom: 0, right: 0, width: "100%", height: "100%", overflow: "hidden"}).hide();
+
+		if (me.dsmode)
+		{
+			cbtn = $("<div class='igc-p-config'><div class='igc-p-config-bg'></div><button>Config</button></div>").appendTo(me.html);
+			$("button", cbtn).bind("click", function() {
+			});
+		}
+		else
+		{
+			if (!me.viewer)
+			{
+				me.viewer = new IG$/*mainapp*/._IBf/*DashboardView*/({
+					uid: null,
+					width: IG$/*mainapp*/.x_10/*jqueryExtension*/._w(renderto),
+					height: IG$/*mainapp*/.x_10/*jqueryExtension*/._h(renderto),
+					renderTo: renderto[0],
+					rendermask: rendermask,
+					floatable: false,
+					closeAction: "destroy",
+					title: 0,
+					uid: me.uid,
+					collapsible: false,
+					header: false,
+					dsmode: 1,
+					border: 0,
+					sm: 0
+				});
+
+				me.viewer.on("afterrender", function(tobj) {
+					me._v/*viewerRendererd*/ = true;
+				});
+			}
+		}
+		me.__pcinit();
+	},
+
+	updateProperty: function(kname, value) {
+		var me = this;
+		
+		if (me.dsmode)
+		{
+			return;
+		}
+		
+		switch(kname)
+		{
+		case "report_control":
+			break;
+		}
+	},
+
+	updateLayout: function() {
+		var me = this,
+			dashboard = me.ctrl.dashboard;
+	},
+	destroy: function() {
+		var me = this;
+		
+		if (me.viewer && me.viewer.close)
+		{
+			me.viewer.close();
+		}
+	}
+});
+
+IG$/*mainapp*/._IE0/*controls*/.dashboard = new IG$/*mainapp*/.jj_5/*dashboard*/({}, null);
+
+
+//IG$/*mainapp*/._IE0/*controls*/ = {
+//	titlelabel: ,
+//    olapreport: ,
+//    compositereport: ,
+//    label: ,
+//    textarea: ,
+//    image: ,
+//    button: ,
+//    textbox: ,
+//    datechooser: ,
+//    monthchooser: ,
+//    combobox: ,
+//    panel: ,
+//    tabpanel: ,
+//    dashboard: ,
+//	grid: ,
+//	pivotdesign: ,
+//	browser: ,
+//	sheetfilter: ,
+//	promptfilter: ,
+//	
+//};
+/*
+ * Sheet Filtering Component
+ */
+IG$/*mainapp*/._IFc/*sheetfiltercomp*/ = function(node) {
+	var me = this;
+	
+	me.docid = null;
+	me.objtype = null;
+	me.layoutinfo = {};
+	
+	me.pff1/*filterItems*/ = [];
+	me.pff1a/*filteroptions*/ = {
+		showbutton: false,
+		viewtype: "row",
+		brow: 0,
+		columnsize: 1,
+		rowsize: 1,
+		buttonname: null,
+		f_b_desc: null,
+		f_b_scr: null,
+		showrefresh: true,
+		edrill: true
+	};
+	me.sf/*taboption*/ = {};
+
+	me.fparam = "uid;name;nodepath;type;title;objtype;operator;sheetindex;sheetname;showperiodselector;objmerge;crowindex;compcss;isnecessary;useprompt;showallvalue;aname;hfilter;showpopup;rangevalue;rangelabel;tabid;valueformat;"
+				+ "checkbuttonhor;invokejs;useprevcont;showcondition;defaultvalue;dateseltype;yearfrom;yearto;startdate;enddate;cmap_disp;cmap_uid;f_b_clear;f_t_dir;s1a;s1b;s1c;smode;ltitle;lname;f_b_evt;f_b_trg;f_b_trg_all";
+	
+	if (node)
+	{
+		me.l1/*parseContent*/(node);
+	}
+};
+
+IG$/*mainapp*/._IFc/*sheetfiltercomp*/.prototype = {
+	m1/*getDefaultValue*/: function(item) {
+		var me = this,
+			r = item.defaultvalue;
+		
+		if (r && r.indexOf("cyear") > -1)
+		{
+			r = me.m2/*getYearField*/(r);
+		}
+		
+		return r;
+	},
+	
+	m2/*getYearField*/: function(dformat) {
+		var r = null;
+		
+		if (IG$/*mainapp*/._I37/*isNumber*/(dformat))
+		{
+			r = Number(dformat);
+		}
+		else
+		{
+			var c = new Date(),
+				cyear = c.getFullYear(),
+				sval = 0;
+			
+			if (dformat.indexOf("-") > -1)
+			{
+				sval = dformat.substring(dformat.indexOf("-") + 1);
+				sval = Number(sval);
+				sval = sval * -1;
+			}
+			else if (dformat.indexOf("+") > -1)
+			{
+				sval = dformat.substring(dformat.indexOf("+") + 1);
+				sval = Number(sval);
+			}
+			
+			r = cyear + sval;
+		}
+		
+		return r;
+	},
+	
+	l1/*parseContent*/: function(node) {
+		var me = this,
+			i, j, tnode,
+			snodes, dateinfo,
+			filter, dview, fnode, pnode,
+			periodoption;
+		IG$/*mainapp*/._I1f/*XGetInfo*/(me, node, "docid;objtype;playout;tb_prt_i;tb_prt_s", "s");
+		IG$/*mainapp*/._I1f/*XGetInfo*/(me, node, "close;fw;fh;istabview;hidetitle;tb_prt", "b");
+		
+		me.name = IG$/*mainapp*/._I1b/*XGetAttr*/(node, "name");
+		
+		fnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "name");
+		
+		if (fnode)
+		{
+			me.name = IG$/*mainapp*/._I24/*getTextContent*/(fnode);
+		}
+		
+		me.objtype = me.objtype || "PANEL";
+		
+		switch (me.objtype)
+		{
+		case "FILTER":
+			
+			fnode = IG$/*mainapp*/._I19/*getSubNode*/(node, "filteroption");
+			me.pff1a/*filteroptions*/ = {
+				showbutton: false,
+				viewtype: "row",
+				columnsize: 1,
+				buttonname: null,
+				f_b_desc: null,
+				f_b_scr: null,
+				showrefresh: false,
+				brow: 0,
+				rowsize: 1,
+				f_b_clear: "F",
+				f_t_dir: "left",
+				edrill: true,
+				f_b_evt: "F",
+				f_b_trg: "F",
+				f_b_trg_all: "F"
+			};
+			if (fnode)
+			{
+				IG$/*mainapp*/._I1f/*XGetInfo*/(me.pff1a/*filteroptions*/, fnode, "columnsize;rowsize;brow;viewtype;buttonname;showbutton;showrefresh;f_b_desc;f_b_scr;drilltarget;f_b_clear;f_t_dir;edrill;f_b_evt;f_b_trg;f_b_trg_all;f_rotate;f_rotate_timer;f_rotate_field", "s");
+				me.pff1a/*filteroptions*/.showbutton = me.pff1a/*filteroptions*/.showbutton == "T" ? true : false;
+				me.pff1a/*filteroptions*/.showrefresh = me.pff1a/*filteroptions*/.showrefresh == "F" ? false : true;
+				me.pff1a/*filteroptions*/.columnsize = (me.pff1a/*filteroptions*/.columnsize) ? parseInt(me.pff1a/*filteroptions*/.columnsize) : 1;
+				me.pff1a/*filteroptions*/.brow = (me.pff1a/*filteroptions*/.brow) ? parseInt(me.pff1a/*filteroptions*/.brow) : 1;
+				me.pff1a/*filteroptions*/.rowsize = (me.pff1a/*filteroptions*/.rowsize) ? parseInt(me.pff1a/*filteroptions*/.rowsize) : 1;
+				me.pff1a/*filteroptions*/.edrill = me.pff1a/*filteroptions*/.edrill == "F" ? false : me.pff1a/*filteroptions*/.edrill;
+				me.pff1a/*filteroptions*/.f_rotate_timer = parseInt(me.pff1a/*filteroptions*/.f_rotate_timer || 60);
+			}
+			fnode = IG$/*mainapp*/._I19/*getSubNode*/(node, "filters");
+			snodes = IG$/*mainapp*/._I26/*getChildNodes*/(fnode || node, "filter");
+			for (i=0; i < snodes.length; i++)
+			{
+				filter = {};
+				IG$/*mainapp*/._I1f/*XGetInfo*/(filter, snodes[i], me.fparam, "s");
+ 
+				pnode = IG$/*mainapp*/._I19/*getSubNode*/(fnode, "pvalues");
+				if (pnode)
+				{
+					filter.pvalues = IG$/*mainapp*/._I24/*getTextContent*/(pnode);
+				}
+				filter.objmerge = filter.objmerge ? parseInt(filter.objmerge) : 0;
+				filter.isnecessary = filter.isnecessary == "T";
+				filter.useprompt = filter.useprompt == "T";
+				filter.showallvalue = filter.showallvalue == "T";
+				filter.showpopup = filter.showpopup == "T";
+				filter.rangevalue = filter.rangevalue == "T";
+				filter.uid = IG$/*mainapp*/._I06/*formatUID*/(filter.uid);
+				filter.crowindex = filter.crowindex ? parseInt(filter.crowindex) : 0;
+				filter._p1/*main*/ = me;
+				tnode = IG$/*mainapp*/._I19/*getSubNode*/(snodes[i], "periodoption");
+				if (tnode)
+				{
+					tnode = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+					filter.periodlist = [];
+					for (j=0; j < tnode.length; j++)
+					{
+						dateinfo = {};
+						IG$/*mainapp*/._I1f/*XGetInfo*/(dateinfo, tnode[j], "name;value;default", "s");
+						dateinfo["default"] = (dateinfo["default"] == "T");
+						filter.periodlist.push(dateinfo);
+					}
+				}
+				me.pff1/*filterItems*/.push(filter);
+			}
+			break;
+		case "NAVI":
+			break;
+		case "TEXT":
+			snodes = IG$/*mainapp*/._I18/*XGetNode*/(node, "content");
+			me.content = (snodes) ? IG$/*mainapp*/._I24/*getTextContent*/(snodes) : "";
+			snodes = IG$/*mainapp*/._I18/*XGetNode*/(node, "htmlcontent");
+			me.htmlcontent = (snodes) ? IG$/*mainapp*/._I24/*getTextContent*/(snodes) : "";
+			break;
+		case "PANEL":
+			break;
+		case "SHEET":
+			break;
+		case "RPT_VIEW":
+			me.rptoption = {};
+			fnode = IG$/*mainapp*/._I19/*getSubNode*/(node, "rptoption");
+			if (fnode)
+			{
+				me.rptoption = IG$/*mainapp*/._I1c/*XGetAttrProp*/(fnode);
+			}
+			break;
+		case "TAB":
+			me.sf/*taboption*/ = {};
+			fnode = IG$/*mainapp*/._I19/*getSubNode*/(node, "taboption");
+			if (fnode)
+			{
+				me.sf/*taboption*/.showtab = IG$/*mainapp*/._I1b/*XGetAttr*/(fnode, "showtab");
+			}
+			break;
+		}
+	},
+	
+	l2/*getXML*/: function() {
+		var me = this,
+			i, j, filterItems = me.pff1/*filterItems*/,
+			filteroptions = me.pff1a/*filteroptions*/,
+			detailview = me.dff1/*drillItems*/,
+			r = "<control";
+		r += IG$/*mainapp*/._I20/*XUpdateInfo*/(me, "docid;objtype;playout;tb_prt_i;tb_prt_s", "s") +
+		     IG$/*mainapp*/._I20/*XUpdateInfo*/(me, "close;fw;fh;istabview;hidetitle;tb_prt", "b") + ">";
+		
+		r += "<name><![CDATA[" + (me.name || "") + "]]></name>";
+		
+		switch (me.objtype)
+		{
+		case "FILTER":
+			r += "<filteroption" + IG$/*mainapp*/._I20/*XUpdateInfo*/(filteroptions, "showbutton;showrefresh", "b") + " f_b_clear='" + (filteroptions.f_b_clear || "F") + "' f_t_dir='" + (filteroptions.f_t_dir || "left") + "' edrill='" + (filteroptions.edrill ? "T" : "F") + "' f_b_evt='" + (filteroptions.f_b_evt || "F") + "' f_b_trg='" + (filteroptions.f_b_trg || "F") + "' f_b_trg_all='" + (filteroptions.f_b_trg_all || "F") + "' f_rotate='" + (filteroptions.f_rotate || "F") + "' f_rotate_field='" + (filteroptions.f_rotate_field || "") + "'"
+			  + IG$/*mainapp*/._I20/*XUpdateInfo*/(filteroptions, "columnsize;rowsize;brow;viewtype;buttonname;f_b_desc;f_b_scr;drilltarget;f_rotate_timer", "i") + "></filteroption>";
+			  
+			r += "<filters>";
+			for (i=0; i < filterItems.length; i++)
+			{
+				r += "<filter" + IG$/*mainapp*/._I20/*XUpdateInfo*/(filterItems[i], me.fparam, "s") + ">";
+				r += "<pvalues><![CDATA[";
+				if (filterItems[i].pvalues)
+				{
+					r += filterItems[i].pvalues;
+				}
+				r += "]]></pvalues>";
+				if (filterItems[i].periodlist)
+				{
+					r += "<periodoption>";
+					for (j=0; j < filterItems[i].periodlist.length; j++)
+					{
+						r += "<period " + IG$/*mainapp*/._I20/*XUpdateInfo*/(filterItems[i].periodlist[j], "name;value", "s")
+						  + IG$/*mainapp*/._I20/*XUpdateInfo*/(filterItems[i].periodlist[j], "default", "b") + "/>";
+					}
+					r += "</periodoption>";
+				}
+				r += "</filter>";
+			}
+			r += "</filters>";
+			break;
+		case "NAVI":
+			break;
+		case "TEXT":
+			r += "<content><![CDATA[" + (me.content || "") + "]]></content>";
+			r += "<htmlcontent><![CDATA[" + (me.htmlcontent || "") + "]]></htmlcontent>";
+			break;
+		case "PANEL":
+			break;
+		case "SHEET":
+			break;
+		case "TAB":
+			r += "<taboption showtab='" + (me.sf/*taboption*/ ? me.sf/*taboption*/.showtab || "T" : "F") + "'></taboption>";
+			break;
+		case "RPT_VIEW":
+			r += "<rptoption " + (me.rptoption ? IG$/*mainapp*/._I20/*XUpdateInfo*/(me.rptoption, "uid;name;contentfullpath;type", "s") : "") + "/>";
+			break;
+		}
+		
+		r += "</control>";
+		
+		return r;
+	}
+};
+
+/*
+ * Report Text Control
+ */
+IG$/*mainapp*/._IA2/*rfText*/ = function (container, sop) {
+	var me = this;
+	
+	me.container = container;
+	me._ILb/*sheetoption*/ = sop;
+	
+	me.v1/*updateValues*/ = true;
+	
+	me._IFd/*init_f*/();
+};
+
+IG$/*mainapp*/._IA2/*rfText*/.prototype = {
+	_IFd/*init_f*/: function() {
+		var me = this,
+			carea = $("<div class='idv-pnl-html-cnt'></div>").appendTo(me.container);
+		me.c1 = carea;
+		me.c/*contentarea*/ = $("<div class='idv-pnl-html'></div>").appendTo(carea);
+		me.m4/*setText*/();
+	},
+	
+	rX/*removeObj*/: function() {
+	},
+	
+	l3/*validateItems*/: function() {
+		this.m4/*setText*/();
+	},
+	
+	setSize: function(w, h) {
+		var me = this,
+			c1 = me.c1;
+		
+		IG$/*mainapp*/.x_10/*jqueryExtension*/._w(c1, w);
+		IG$/*mainapp*/.x_10/*jqueryExtension*/._h(c1, h);
+	},
+	
+	m4/*setText*/: function() {
+		var me = this,
+			tvalue,
+			finfo = me.finfo,
+			tvalues = [],
+			mvalues = [],
+			mvalue,
+			t,
+			start = 0,
+			end = 0,
+			mpos,
+			mvalue,
+			mat, rvalue,
+			i, j, b,
+			so = me._ILb/*sheetoption*/;
+		
+		tvalue = Base64.decode(so.htmlcontent || so.content || "");
+		mpos = tvalue.indexOf("{", start);
+		
+		while (mpos > -1 && end < tvalue.length)
+		{
+			end = tvalue.indexOf("}", mpos);
+			if (end > -1)
+			{
+				tvalues.push({t: tvalue.substring(start, mpos), m: 0});
+				tvalues.push({t: tvalue.substring(mpos+1, end), m: 1});
+			}
+			else
+			{
+				end = start;
+				tvalues.push({t: tvalue.substring(start, end), m: 0});
+			}
+			start = end+1;
+			mpos = tvalue.indexOf("{", start);
+		}
+		
+		tvalues.push({t: tvalue.substring(start, tvalue.length), m: 0});
+		
+		for (i=0; i < tvalues.length; i++)
+		{
+			t = tvalues[i];
+			if (t.m == 1)
+			{
+				mat = t.t.match(/\[(.*?)\]/g);
+				if (mat && mat.length > 0)
+				{
+					b = finfo ? true : false;
+					
+					if (finfo)
+					{
+						for (j=0; j < mat.length; j++)
+						{
+							rvalue = mat[j].replace(/[\[\]]/g, "");
+							if (finfo[rvalue])
+							{
+								t.t = t.t.replace(new RegExp("\\[" + rvalue + "\\]", "g"), finfo[rvalue].data.join(", ") || "");
+							}
+							else
+							{
+								b = false;
+								break;
+							}
+						}
+					}
+					
+					if (b == true)
+					{
+						mvalues.push(t.t);
+					} 
+				}
+				else
+				{
+					mvalues.push("{" + t.t + "}");
+				}
+			}
+			else
+			{
+				mvalues.push(t.t);
+			}
+		}
+		mvalue = mvalues.join("");
+		me.c/*contentarea*/.html(mvalue);
+	},
+	
+	_ILd/*updateFilterContent*/: function(finfo) {
+		var me = this;
+		me.finfo = finfo;
+		me.m4/*setText*/();
+	}
+};
+
+/*
+ * Report Navi Control
+ */
+IG$/*mainapp*/._IA3/*rfNavi*/ = function (container, sop, rop, report) {
+	var me = this;
+	
+	me.container = container;
+	me._ILb/*sheetoption*/ = sop;
+	me._ILa/*reportoption*/ = rop;
+	me.rpt = report;
+	
+	me.v1/*updateValues*/ = true;
+	
+	me._IFd/*init_f*/();
+};
+
+IG$/*mainapp*/._IA3/*rfNavi*/.prototype = {
+	_IFd/*init_f*/: function() {
+		var me = this,
+			values = {},
+			rop = me._ILa/*reportoption*/,
+			browser;
+		
+		me.c/*contentarea*/ = $("<div></div>").appendTo(me.container);
+		
+		this.browser = browser = new IG$/*mainapp*/._I98/*naviTree*/({
+			renderTo: me.c/*contentarea*/[0],
+			showtoolbar: false,
+			cubebrowse: true,
+			showcheckselect: false,
+			collapsible: false,
+			floatable: false,
+			floating: false,
+			flex: 5,
+			"layout": "fit",
+			enabledrag: true,
+			_IHb/*customEventOwner*/: me,
+			checkStateChanged: me._IO7/*checkStateChangedHandler*/
+			// region: "center",
+			//margins: "0 0 0 0",
+			//cmargins: "0 0 0 0"
+		});
+		
+		values.type = (me._ILa/*reportoption*/.reportmode == "rolap") ? "Cube" : "Metric";
+		values.name = values.type;
+		values.nodepath = values.type;
+		values.uid = me._ILa/*reportoption*/.cubeuid || null;
+			
+		values.leaf = false;
+		
+		browser.store.setRootNode(values);
+	},
+	
+	rX/*removeObj*/: function() {
+		var me = this;
+		me.browser = null;
+	},
+	
+	l3/*validateItems*/: function() {
+		
+	},
+	
+	setSize: function(w, h) {
+		var me = this,
+			c = me.c/*contentarea*/;
+		
+		IG$/*mainapp*/.x_10/*jqueryExtension*/._w(c, w);
+		IG$/*mainapp*/.x_10/*jqueryExtension*/._h(c, h);
+		me.browser.setWidth(w);
+		me.browser.setHeight(h);
+	},
+	
+	_ILd/*updateFilterContent*/: function(finfo) {
+	}
+};
+
+/*
+ * Blank Panel Control
+ */
+IG$/*mainapp*/._IA4/*rfBlankPanel*/ = function (container, sop) {
+	var me = this;
+	
+	me.container = container;
+	me._ILb/*sheetoption*/ = sop;
+	
+	me.v1/*updateValues*/ = true;
+	
+	me._IFd/*init_f*/();
+};
+
+IG$/*mainapp*/._IA4/*rfBlankPanel*/.prototype = {
+	_IFd/*init_f*/: function() {
+		var me = this,
+			values = {},
+			browser;
+		
+		me.c/*contentarea*/ = $("<div></div>").appendTo(me.container);
+
+		if (me.owner && me.owner.b1/*box*/)
+		{
+			me.owner.b1/*box*/.bind("updatecomplete", function() {
+				me.l3/*validateItems*/.call(me);
+			});
+		}
+	},
+	
+	rX/*removeObj*/: function() {
+	},
+	
+	l3/*validateItems*/: function() {
+		var me = this,
+			owner = me.owner,
+			dobj = (owner && owner.docitems && me._ILb/*sheetoption*/ ? owner.docitems[me._ILb/*sheetoption*/.docid] : null),
+			n=0,
+			bf = false,
+			i;
+			
+		if (dobj && dobj.children)
+		{
+			$.each(dobj.children, function(i, item) {
+				if (item.docid)
+				{
+					var di = owner.bodylist[item.docid];
+					n++;
+				}
+			});
+		}
+	},
+	
+	setSize: function(w, h) {
+		var me = this,
+			c = me.c/*contentarea*/;
+		
+		IG$/*mainapp*/.x_10/*jqueryExtension*/._w(c, w);
+		IG$/*mainapp*/.x_10/*jqueryExtension*/._h(c, h);
+	},
+	
+	_ILd/*updateFilterContent*/: function(finfo) {
+	}
+};
+
+/*
+ * Blank TabPanel Control
+ */
+IG$/*mainapp*/._IA5/*rfTabPanel*/ = function (container, sop, owner) {
+	var me = this;
+	
+	me.container = container;
+	me._ILb/*sheetoption*/ = sop;
+	me.owner = owner;
+	
+	if (me.owner && me.owner.b1/*box*/)
+	{
+		me.owner.b1/*box*/.bind("updatecomplete", function() {
+			me.l3/*validateItems*/.call(me);
+		});
+	}
+	
+	me.v1/*updateValues*/ = true;
+	me.active = null;
+	me._IFd/*init_f*/();
+};
+
+IG$/*mainapp*/._IA5/*rfTabPanel*/.prototype = {
+	_IFd/*init_f*/: function() {
+		var me = this,
+			values = {},
+			browser, i,
+			owner = me.owner,
+			ctrls = me.owner ? me.owner.ctrls : null,
+			ctrl, n=0;
+		
+		me.buttons = [];
+		me.c/*contentarea*/ = $("<div></div>").appendTo(me.container);
+		me.tab/*tabarea*/ = $("<div class='idv-dtab-area'></div>").appendTo(me.c/*contentarea*/).hide();
+		me.tabul = $("<ul></ul>").appendTo(me.tab/*tabarea*/);
+		
+		me.l3/*validateItems*/();
+	},
+	
+	rX/*removeObj*/: function() {
+	},
+	
+	l3/*validateItems*/: function() {
+		var me = this,
+			owner = me.owner,
+			dobj = (owner && owner.docitems && me._ILb/*sheetoption*/ ? owner.docitems[me._ILb/*sheetoption*/.docid] : null),
+			n=0,
+			bf = false,
+			i,
+			pactive,
+			tv = me._ILb/*sheetoption*/ && me._ILb/*sheetoption*/.sf/*taboption*/ ? me._ILb/*sheetoption*/.sf/*taboption*/.showtab == "T" : false;
+		
+		me.tab/*tabarea*/[tv || me.editmode ? "show" : "hide"]();
+		me.tabul.empty();
+		
+		me.buttons = [];
+		
+		if (dobj && dobj.children && dobj.children.length > 0)
+		{
+			pactive = dobj.active;
+			
+			if (dobj.active)
+			{
+				for (i=0; i < dobj.children.length; i++)
+				{
+					if (dobj.children[i].docid == dobj.active)
+					{
+						bf = true;
+						break;
+					}
+				}
+				
+				dobj.active = (bf == false) ? null : dobj.active;
+			}
+			
+			$.each(dobj.children, function(i, item) {
+				if (item.docid)
+				{
+					var di = owner.bodylist[item.docid],
+						btn = $("<li><span class='ig-tab-tt'>" + (di.title || "Tab " + i) + "</span></li>").appendTo(me.tabul);
+					if ((dobj.active && dobj.active == item.docid) || (!dobj.active && n == 0))
+					{
+						btn.addClass("selected");
+						dobj.active = item.docid;
+					}
+					
+					btn.docid = item.docid;
+					
+					btn.bind("click", function() {
+						me.s1/*setActiveDoc*/.call(me, item.docid);
+					});
+					
+					me.buttons.push(btn);
+					
+					n++;
+				}
+			});
+			
+			if (pactive != dobj.active && dobj.active)
+			{
+				me.s1/*setActiveDoc*/(dobj.active, true);
+			}
+		}
+	},
+	
+	s1/*setActiveDoc*/: function(docid, bsuspend_run) {
+		var me = this,
+			buttons = me.buttons,
+			owner = me.owner,
+			dobj = (owner && owner.docitems && me._ILb/*sheetoption*/ ? owner.docitems[me._ILb/*sheetoption*/.docid] : null),
+			btn,
+			pdocid = me._ILb/*sheetoption*/.docid,
+			mview,
+			i,
+			mc;
+		
+		for (i=0; i < buttons.length; i++)
+		{
+			btn = buttons[i];
+			if (btn.docid == docid)
+			{
+				btn.addClass("selected");
+			}
+			else
+			{
+				btn.removeClass("selected");
+			}
+		}
+		
+		if (dobj)
+		{
+			dobj.active = docid;
+			
+			for (i=0; i < dobj.children.length; i++)
+			{
+				mc = owner.docitems[dobj.children[i].docid];
+				
+				me.setVisible(mc, mc.docid == docid, bsuspend_run);
+			}
+		}
+	},
+	
+	setVisible: function(ditem, visible, bsuspend_run) {
+		var me = this,
+			i,
+			mc = ditem.lt.ubody;
+		
+		if (!mc)
+		{
+			return;
+		}
+		
+		if (ditem._SP && ditem._SP.length)
+		{
+			for (i=0; i < ditem._SP.length; i++)
+			{
+				ditem._SP[i].setV(visible);
+			}
+		}
+		
+		if (visible)
+		{
+			mc.visible = true;
+			mc.show();
+			
+			if (mc.view && mc.objtype == "RPT_VIEW" && !mc.view._v1d/*validated*/)
+			{
+				mc.view.l3/*validateItems*/.call(mc.view);
+			}
+			
+			mc.objtype == "RPT_VIEW" && mc.view && mc.view._l3/*executeItem*/.call(mc.view);
+			
+			mc.b2/*boxtitle*/.trigger("click");
+			mc.l2/*resizeH*/.call(mc);
+			
+			if (mc.view && mc.view.btabrun == true)
+			{
+				if (bsuspend_run || !mc.view._ILb/*sheetoption*/) // || (mc.view._ILb/*sheetoption*/)) //  &&  !mc.view._ILb/*sheetoption*/.openload))
+				{
+				}
+				else
+				{
+					mc.view._vf/*f_run*/ = false;
+					delete mc.view.btabrun;
+					mc.view._IJ2/*procRunReport*/.call(mc.view, null);
+				}
+			}
+		}
+		else
+		{
+			mc.visible = false;
+			mc.hide();
+		}
+		
+		if (ditem.children)
+		{
+			for (i=0; i < ditem.children.length; i++)
+			{
+				me.setVisible(ditem.children[i], visible, bsuspend_run);
+			}
+		}
+	},
+	
+	setSize: function(w, h) {
+		var me = this,
+			c = me.c/*contentarea*/;
+		
+		IG$/*mainapp*/.x_10/*jqueryExtension*/._w(c, w);
+		IG$/*mainapp*/.x_10/*jqueryExtension*/._h(c, h);
+	},
+	
+	_ILd/*updateFilterContent*/: function(finfo) {
+	}
+};
+
+IG$/*mainapp*/._IA5r/*rfReportViewer*/ = function (container, sop, owner) {
+	var me = this;
+	
+	me.container = container;
+	me._ILb/*sheetoption*/ = sop;
+	me.owner = owner;
+	
+//	if (me.owner && me.owner.b1/*box*/)
+//	{
+//		me.owner.b1/*box*/.bind("updatecomplete", function() {
+//			me.l3/*validateItems*/.call(me);
+//		});
+//	}
+	
+	me.v1/*updateValues*/ = true;
+	me.active = null;
+	me._v1d/*validated*/ = false;
+	me._v2/*validateFilter*/ = true;
+	me._vf/*f_run*/ = true;
+	
+	me.in$f();
+};
+
+IG$/*mainapp*/._IA5r/*rfReportViewer*/.prototype = {
+	in$f: function() {
+		var me = this,
+			values = {},
+			browser, i,
+			owner = me.owner,
+			ctrls = me.owner ? me.owner.ctrls : null,
+			ctrl, n=0;
+		
+		me.c/*contentarea*/ = $("<div class='igc-rpt-view'></div>").appendTo(me.container);
+		
+		// me.l3/*validateItems*/();
+	},
+	
+	_l3/*executeItem*/: function() {
+		var me = this;
+		
+		if (me._v2/*validateFilter*/ || me._vf/*f_run*/)
+		{
+			me._vf/*f_run*/ = false;
+			
+			clearTimeout(me._v3/*validateCall*/);
+			
+			me._v3/*validateCall*/ = setTimeout(function() {
+				me._l4/*executeValidate*/.call(me);
+			}, 50);
+		}
+	},
+	
+	_l4/*executeValidate*/: function() {
+		var me = this,
+			k, i,
+			sheet, sop;
+		
+		if (!me.irpt)
+		{
+			me.l3/*validateItems*/();
+		}
+		else
+		{
+			for (i=0; i < me.irpt.sheets.length; i++)
+			{
+				sheet = me.irpt.sheets[i];
+				sop = sheet._ILb/*sheetoption*/;
+				
+				if (me._df1/*directfilter*/)
+				{
+					auxfilter = sop._IL9/*auxfilter*/;
+					for (fname in me._df1/*directfilter*/)
+					{
+						auxfilter[fname] = me._df1/*directfilter*/[fname];
+					}
+				}
+				
+				if (sheet._IK9/*olapset*/)
+	    		{
+	    			pivotxml = sheet._IK9/*olapset*/._ILa/*reportoption*/._IJ1/*getCurrentPivot*/.call(sheet._IK9/*olapset*/._ILa/*reportoption*/);
+	    			sheet._IK9/*olapset*/._IJ0/*requestUpdateReport*/(pivotxml, "mode", i, sheet);
+	    		}
+	    		else if (sop)
+	    		{
+	   				sheet._IJ2/*procRunReport*/.call(sheet);
+	    		}
+			}
+		}
+		
+		me._df1/*directfilter*/ = null;
+		
+		me._v2/*validateFilter*/ = false;
+	},
+	
+	rX/*removeObj*/: function() {
+	},
+	
+	l3/*validateItems*/: function(runall, isloading) {
+		var me = this,
+			owner = me.owner,
+			n=0,
+			sop = me._ILb/*sheetoption*/,
+			run = !isloading && (me.btabrun || runall);
+			
+		if (sop && sop.docid)
+		{
+			if (sop.rptoption && sop.rptoption.uid)
+			{
+				if (!me.irpt)
+				{
+					me._v1d/*validated*/ = true;
+					
+					var maintab = me.c/*contentarea*/,
+						container = me.owner.dockdiv ? $("<div class='report_container'></div>").appendTo(maintab) : null,
+						rlogic = me.owner.dockdiv ? $("<div style='display:none;'></div>").appendTo(container) : [];
+					
+					if (me.__dx != true)
+					{
+						me.irpt = new IG$/*mainapp*/._IBe/*ReportView*/({
+							uid: sop.rptoption.uid,
+							header: false,
+							hiddenstatusbar: true,
+							hiddentoolbar: true,
+							border: 0,
+							vmode: 1,
+							frameHeader: false,
+							cmode: 1,
+							dockdiv_container: container,
+							cvmode: me.cvmode,
+							auxfilter: me._df1/*directfilter*/,
+							width: me._cw,
+							height: me._ch,
+							renderTo: rlogic[0] || me.c/*contentarea*/[0],
+							_par: me.owner
+						});
+						
+						if (run || isloading)
+						{
+							me.irpt.on("_lc0", function() {
+								me.irpt.un("_lc0");
+								
+								if (isloading)
+								{
+									me.container.trigger("i_ready");
+								}
+								
+								if (run)
+								{
+									me._v2/*validateFilter*/ = true;
+									me._l3/*executeItem*/.call(me);
+								}
+							});
+						}
+						
+						me._df1/*directfilter*/ = null;
+						me._v2/*validateFilter*/ = false;
+					}
+				}
+				else
+				{
+					me.container.trigger("i_ready");
+				}
+				
+				if (me.irpt)
+				{
+					if (me.irpt.uid != sop.rptoption.uid)
+					{
+						me.irpt.uid = sop.rptoption.uid;
+						me.irpt._IFd/*init_f*/.call(me.irpt);
+					}
+					else if (!isloading && me.irpt.__loaded)
+					{
+						me.irpt._IFd/*init_f*/.call(me.irpt);
+					}
+					me._v2/*validateFilter*/ = false;
+				}
+			}
+		}
+	},
+	
+	setSize: function(w, h, force) {
+		var me = this,
+			c = me.c/*contentarea*/;
+			
+		me.pw = me.pw || 0;
+		me.ph = me.ph || 0;
+		
+		me._cw = w;
+		me._ch = h;
+		
+		if (me.irpt && me.irpt.dzone && (force || (Math.abs(me.pw - w) > 5 || Math.abs(me.ph - h) > 5)))
+		{
+			me.pw = w;
+			me.ph = h;
+			IG$/*mainapp*/.x_10/*jqueryExtension*/._w(c, w);
+			IG$/*mainapp*/.x_10/*jqueryExtension*/._h(c, h);
+			
+			if (me.irpt)
+			{
+				me.irpt.setSize(w, h);
+				
+				if (force && !me.irpt.dzone.i2/*sizeapplied*/)
+				{
+					me.irpt.dzone._IM5/*updateDisplay*/.call(me.irpt.dzone, true);
+				}
+			}
+		}
+	},
+	
+	_ILd/*updateFilterContent*/: function(finfo) {
+	}
+};
+IG$/*mainapp*/._IE1/*filteropcodes*/ = {
+	OP_EQUAL: [1, IRm$/*resources*/.r1("L_F_EQ"), "=", "EQUAL", "L_F_EQ"],
+	// OP_NOT_EQUAL: [11, IRm$/*resources*/.r1("L_F_NOT_EQ"), "<>", "NOT EQUAL", "L_F_NOT_EQ"],
+	OP_GTE: [2, IRm$/*resources*/.r1("L_F_GE"), ">=", "GTE", "L_F_GE"],
+	OP_GT: [3, IRm$/*resources*/.r1("L_F_GT"), ">", "GT", "L_F_GT"],
+	OP_LTE: [4, IRm$/*resources*/.r1("L_F_LE"), "<=", "LTE", "L_F_LE"],
+	OP_LT: [5, IRm$/*resources*/.r1("L_F_LT"), "<", "LT", "L_F_LT"],
+	OP_IN: [6, IRm$/*resources*/.r1("L_F_IN"), "In", "IN", "L_F_IN"],
+	OP_LIKE: [7, IRm$/*resources*/.r1("L_F_LIKE"), "Like", "LIKE", "L_F_LIKE"],
+	OP_BETWEEN: [8, IRm$/*resources*/.r1("L_F_BETWEEN"), "Between", "BETWEEN", "L_F_BETWEEN"],
+	// OP_NOTIN: [9, IRm$/*resources*/.r1("L_F_NOTIN"), "Not in", "NOTIN", "L_F_NOTIN"],
+	OP_IS: [10, IRm$/*resources*/.r1("L_F_SQL_IS"), "IS", "IS", "L_F_SQL_IS"]
+};
+
+IG$/*mainapp*/.__pca = [
+	"close;drillreport;isdistinct;fetchall;fw;fh;hidetitle;olap4jsupport;rootsheet;openload;autorefresh;columnfill;enablepivot;enablecache;tb_vch;tb_prt_grd;tb_prt;showlnum;bcluster;edrill;hidemenu;syncrows",
+	"label;pagecount;viewmode;objtype;drilltarget;viewchange;toolbutton;cubeuid;tb_prt_i;tb_prt_s;exportbutton;gridprint",
+	"panelwidth;panelheight", // "viewchange;exportbutton;toolbutton;
+	"measurelocation;customfix;usepaging;pagestyle;dataquerymode;measuretitle",
+	"measureposition;customfixcols;rowperpage;refresh_timer",
+	"isdistinct;fetchall;treeview;columntree;isbigdecimal;showlnum;hidemenu"
+];
+
+IG$/*mainapp*/._dpca/*drilltarget*/ = function(drilltarget) {
+	var me = this;
+	me._1/*parseDrillTarget*/(drilltarget);
+}
+
+IG$/*mainapp*/._dpca/*drilltarget*/.prototype = {
+	_1/*parseDrillTarget*/: function(drilltarget) {
+		var me = this,
+			i, j,
+			tvals,
+			tval,
+			dtval,
+			t1,
+			tname,
+			titem,
+			tparams,
+			tsheets,
+			isdrill;
+		
+		me.tsheets = tsheets = {};	
+		me._e = 0;
+		
+		if (drilltarget)
+		{
+			tvals = drilltarget.split(";");
+			
+			for (i=0; i < tvals.length; i++)
+			{
+				tval = tvals[i];
+				
+				if (tval)
+				{
+					titem = {
+						enabled: false,
+						items: [],
+						item_map: {}
+					};
+					
+					tparams = {
+						enabled: false,
+						items: [],
+						item_map: {}
+					};
+							
+					if (tval.indexOf("^") > -1)
+					{
+						dtval = tval.split("^");
+						tname = dtval[0];
+						isdrill = dtval[1] == "T" ? true : false;
+						t1 = dtval[2] || null;
+						if (t1)
+						{
+							titem.items = t1.split("_");
+							
+							for (j=0; j < titem.items.length; j++)
+							{
+								if (titem.items[j])
+								{
+									titem.enabled = true;
+									titem.item_map[titem.items[j]] = 1;
+								}
+							}
+						}
+						t1 = dtval[3] || null;
+						if (t1)
+						{
+							tparams.items = t1.split("_");
+							
+							for (j=0; j < tparams.items.length; j++)
+							{
+								if (tparams.items[j])
+								{
+									tparams.enabled = true;
+									tparams.item_map[tparams.items[j]] = 1;
+								}
+							}
+						}
+					}
+					else
+					{
+						tname = tval;
+						isdrill = true;
+						titem = {
+							enabled: false,
+							items: [],
+							item_map: {}
+						};
+						
+						tparams = {
+							enabled: false,
+							items: [],
+							item_map: {}
+						};
+					}
+					
+					if (isdrill)
+					{
+						me._e = 1;
+					}
+							
+					me.tsheets[tname] = {
+						name: tname,
+						isdrill: isdrill,
+						tparams: tparams,
+						titem: titem
+					};
+				}
+			}
+		}
+	},
+	_2/*isDrillTarget*/: function(sheetid) {
+		var me = this,
+			sobj = me.tsheets[sheetid];
+		return me._e ? (sobj && sobj.isdrill ? sobj : null) : {
+			name: sheetid,
+			isdrill: sobj ? sobj.isdrill : false,
+			titem: {
+				enabled: false,
+				items: [],
+				item_map: {}
+			},
+			tparams: {
+				enabled: false,
+				items: [],
+				item_map: {}
+			}
+		};
+	}
+};
+
+IG$/*mainapp*/._IE1/*filteropcodes*/._d3/*getOperator*/ = function(value) {
+	var opcodes = IG$/*mainapp*/._IE1/*filteropcodes*/;
+		r = opcodes.OP_EQUAL[0],
+		t;
+
+	t = opcodes["OP_" + value];
+	
+	if(t)
+	{
+		r = t[0];
+	}
+	else
+	{
+		switch(value)
+		{
+		case "NE":
+			r = opcodes.OP_NOT_EQUAL[0];
+			break;
+		case "NOTIN":
+			r = opcodes.OP_IN[0];
+			break;
+		}
+	}
+//	switch (value)
+//	{
+//	case "NE":
+//		r = opcodes.OP_NOT_EQUAL[0];
+//		break;
+//	case "GTE":
+//		r = opcodes.OP_GTE[0];
+//		break;
+//	case "GT": 
+//		r = opcodes.OP_GT[0];
+//		break;
+//	case "LTE":
+//		r = opcodes.OP_LTE[0];
+//		break;
+//	case "LT":
+//		r = opcodes.OP_LT[0];
+//		break;
+//	case "LIKE": 
+//		r = opcodes.OP_LIKE[0];
+//		break;
+//	case "IN":
+//		r = opcodes.OP_IN[0];
+//		break;
+//	case "NOTIN":
+//		// r = opcodes.OP_NOTIN[0];
+//		r = opcodes.OP_IN[0];
+//		break;
+//	case "BETWEEN":
+//		r = opcodes.OP_BETWEEN[0];
+//		break;
+//	case "IS":
+//		r = opcodes.OP_IS[0];
+//		break;
+//	}
+	
+	return r;
+}
+
+IG$/*mainapp*/._IE2/*filterpromptenum*/ = {
+	P_TEXTBOX: 1,
+	P_COMBOBOX: 2,
+	P_DATE: 3,
+	P_SELECT_WIN: 4
+}
+
+IG$/*mainapp*/._IE3/*fontStyle*/ = {
+	P_NONE: 0,
+	P_BOLD: 1,
+	P_ITALIC: 2,
+	P_UNDERLINE: 4
+}
+
+IG$/*mainapp*/._IE4/*clMetaItem*/ = function(node) {
+	var me = this;
+	
+	if (node)
+	{
+		IG$/*mainapp*/._I1f/*XGetInfo*/(me, node, "uid;type;name;description;updatedate");
+		me.uid = IG$/*mainapp*/._I06/*formatUID*/(me.uid);
+		me.itemtype = me.type;
+		me.itemname = me.name;
+	}
+}
+
+IG$/*mainapp*/._Ie4/*highlight*/ = function(node) {
+	var me = this,
+		tnode, values;
+		
+	me.__pca = [
+		"name;delimiter;itemname;uid;operator;stylename;styleuid;apprange;appset"
+	];
+		
+	if (node)
+	{
+		IG$/*mainapp*/._I1f/*XGetInfo*/(me, node, me.__pca[0], "s");
+		tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "values");
+		if (tnode)
+		{
+			values = IG$/*mainapp*/._I24/*getTextContent*/(tnode);
+		}
+		
+		me.values = values;
+	}
+}
+
+IG$/*mainapp*/._Ie4/*highlight*/.prototype = {
+	TX/*getXML*/: function() {
+		var me = this,
+			r;
+		
+		r = [
+			"<hlitem " + IG$/*mainapp*/._I20/*XUpdateInfo*/(me, me.__pca[0], "s") + ">",
+			"<values><![CDATA[" + (me.values || "") + "]]></values>",
+			"</hlitem>"
+		];
+		
+		return r.join("");
+	},
+	
+	g1/*getObj*/: function() {
+		var r = {},
+			me = this;
+		IG$/*mainapp*/._I1d/*CopyObject*/(this, r, me.__pca[0]);
+		IG$/*mainapp*/._I1d/*CopyObject*/(this, r, "seq;values");
+		return r;
+	}
+}
+
+IG$/*mainapp*/._Ib4/*prompt*/ = function(node) {
+	var me = this,
+		tnode;
+		
+	me.__pca = [
+		"uid;name;type;datatype;defaultvalue;allownullvalue;valuetype;datadelimiter;coldelimiter"
+	];
+	if (node)
+	{
+		IG$/*mainapp*/._I1f/*XGetInfo*/(me, node, me.__pca[0], "s");
+		
+		tnode = IG$/*mainapp*/._I19/*getSubNode*/(node, "sql");
+		if (tnode)
+		{
+			me.sql = IG$/*mainapp*/._I24/*getTextContent*/(tnode);
+		}
+		
+		me.L2/*updatePromptEditor*/();
+	}
+}
+
+IG$/*mainapp*/._Ib4/*prompt*/.prototype = {
+	L1/*getXML*/: function(opt) {
+		var me = this,
+			j,
+			r = "<item " + IG$/*mainapp*/._I20/*XUpdateInfo*/(this, me.__pca[0], "s") + (opt || "") + ">";
+		if (me.sql)
+		{
+			r += "<sql><![CDATA[" + me.sql + "]]></sql>";
+		}
+		
+		if (me.values)
+		{
+			r += "<values>"
+			for (j=0; j < me.values.length ;j++)
+			{
+				r += "<value><code><![CDATA[" + (me.values[j].code || "") + "]]></code>"
+					+ "<text><![CDATA[" + (me.values[j].text || "") + "]]></text>"
+					+ "</value>"
+			}
+			r += "</values>";
+		}
+		r += "</item>";
+		
+		return r;
+	},
+	L2/*updatePromptEditor*/: function() {
+		var me = this;
+		if (me.type == "combobox")
+		{
+			me.promptEditor = IG$/*mainapp*/._IE2/*filterpromptenum*/.P_COMBOBOX;
+		}
+	},
+	
+	LD/*loadData*/: function(panel, callback) {
+		var me = this,
+			_d6/*itemList*/ = me._d6/*itemList*/,
+			uid = (_d6/*itemList*/ ? _d6/*itemList*/[0].uid : me.uid),
+			name = (_d6/*itemList*/ ? _d6/*itemList*/[0].name : me.name),
+			req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+			obj, cnt;
+		
+		me.dataLoaded = true;
+		me.data = [];
+		
+		if (_d6/*itemList*/)
+		{
+			cnt = IG$/*mainapp*/._I2e/*getItemOption*/();
+			obj = IG$/*mainapp*/._I2d/*getItemAddress*/({
+				uid: uid, 
+				name: name, 
+				option: "valuelist", 
+				sheetindex: me.sheetindex
+			}, "uid;name;option;sheetindex");
+		}
+		else
+		{
+			cnt = me._ILa/*reportoption*/._IJ1/*getCurrentPivot*/();
+			obj = "<smsg>" + me.L1/*getXML*/(" sheetindex='" + me.sheetindex + "' option='valuelist'") + "</smsg>";
+		}
+		
+		req.init(panel, 
+			{
+				ack: "18",
+				payload: obj,
+				mbody: cnt
+			}, me, me.rs_LD/*loadData*/, null, callback);
+		req._l/*request*/();
+	},
+	
+	rs_LD/*loadData*/: function(xdoc, callback) {
+		var me = this,
+			_d6/*itemList*/ = me._d6/*itemList*/,
+			uid = (_d6/*itemList*/ ? _d6/*itemList*/[0].uid : me.uid),
+			result = new IG$/*mainapp*/._ICd/*clValueList*/(xdoc, uid);
+		
+		me.result = result;
+		
+		if (callback)
+		{
+			callback.execute(xdoc);
+		}
+	},
+	
+	_d2/*getValueDesc*/: function(selvalues) {
+		var r = "";
+		
+		if (selvalues && selvalues.length > 0)
+		{
+			r = selvalues[0].code + (selvalues.length > 1 ? " + (" + (selvalues.length-1) + ")" : "");
+		}
+		
+		return r;
+	}
+}
+
+IG$/*mainapp*/._IE5/*getStyleName*/ = function(mresult, r, c) {
+	if (mresult.styledata.length > r && mresult.styledata[r].length > c && mresult.styledata[r][c] != "")
+	{
+		return " class='" + mresult.styledata[r][c] + "'";
+	}
+	
+	return "";
+}
+
+IG$/*mainapp*/._IE6/*clExport*/ = function(value) {
+	var me = this,
+		k,
+		ep, p, pnode,
+		i, j_param,
+		T0;
+	
+	$s.apply(me, {
+		filterdesc: true,
+		pagenumber: true,
+		showtitle: true,
+		
+		repeatheader: true,
+		footer: false,
+		margine_top: 30,
+		margine_left: 30,
+		margine_right: 30,
+		margine_bottom: 30,
+		
+		startpage: 1,
+		endpage: 20,
+		
+		scaledown: true, 
+		columnfit: true,
+		
+		alldata: true,
+		
+		layout: "portrait",
+		pagesize: "A4",
+		fonttype: "HELVETICA",
+		
+		u_excel: true,
+		u_pdf: true,
+		u_html: true,
+		u_jasper: false,
+		u_csv: true,
+		
+		dinfo: {}
+	});
+	
+	me.j_param = [
+		"jasper_template", "jasper_tmpl_uid", "pdf_output", "pdf_label", "rtf_output", "rtf_label", "ppt_output", "ppt_label", "excel_output", "excel_label",
+		"csv_output", 
+		"html_output", "html_label", "docx_output", "docx_label", "xml_output", "xml_label"
+	];
+	
+	me.__pca = [
+		"layout;pagesize;fonttype;title;footertitle",
+		"filterdesc;pagenumber;showtitle;footer;repeatheader;scaledown;alldata;columnfill;hidemenu;u_excel;u_pdf;u_html;u_csv;u_jasper;u_office",
+		"margine_top;margine_bottom;margine_left;margine_right;startpage;endpage"
+	];
+	
+	if (value)
+	{
+		$.each(["s", "b", "i"], function(i, k) {
+			IG$/*mainapp*/._I1f/*XGetInfo*/(me, value, me.__pca[i], k);
+		});
+		
+		me.jasper = {
+			_1/*loaded*/: true
+		};
+		
+		pnode = IG$/*mainapp*/._I18/*XGetNode*/(value, "jasper");
+		
+		if (pnode)
+		{
+			for (i=0; i < me.j_param.length; i++)
+			{
+				p = me.j_param[i];
+				me["jasper"][p] = IG$/*mainapp*/._I1b/*XGetAttr*/(pnode, p);
+			}
+		}
+		
+		me.otmpl = [];
+		
+		pnode = IG$/*mainapp*/._I18/*XGetNode*/(value, "otmpl");
+		
+		if (pnode)
+		{
+			tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(pnode);
+			
+			for (i=0; i < tnodes.length; i++)
+			{
+				me.otmpl.push(IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]));
+			}
+		}
+		
+		T0 = window.IExport;
+		if (T0)
+		{
+			for (k in T0)
+			{
+				ep = T0[k];
+				me[ep.name] = {
+					loaded: false
+				};
+				pnode = IG$/*mainapp*/._I18/*XGetNode*/(value, ep.name);
+				if (pnode)
+				{
+					me[ep.name]._1/*loaded*/ = true;
+					for (i=0; i < ep.params.length; i++)
+					{
+						p = ep.params[i];
+						me[ep.name][p] = IG$/*mainapp*/._I1b/*XGetAttr*/(pnode, p);
+					}
+				}
+			}
+		}
+		
+		pnode = IG$/*mainapp*/._I18/*XGetNode*/(value, "dockitems");
+			
+		if (pnode)
+		{
+			tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(pnode);
+			for (i=0; i < tnodes.length; i++)
+			{
+				p = {
+					docid: IG$/*mainapp*/._I1b/*XGetAttr*/(tnodes[i], "docid"),
+					overflow: IG$/*mainapp*/._I1b/*XGetAttr*/(tnodes[i], "overflow") == "T" ? true : false,
+					hidden: IG$/*mainapp*/._I1b/*XGetAttr*/(tnodes[i], "hidden") == "T" ? true : false
+				};
+				
+				me.dinfo[p.docid] = p;
+			}
+		}
+		
+		me.init = true;
+	}
+	
+	if (!me.jasper || (me.jasper && !me.jasper._1/*loaded*/))
+	{
+		if (!IG$/*mainapp*/._L51/*sysconfig*/)
+		{
+			IG$/*mainapp*/._l51/*readSysConfig*/(new IG$/*mainapp*/._I3d/*callBackObj*/(me, me.M1/*updateDefault*/, "jasper"));
+		}
+		else
+		{
+			me.M1/*updateDefault*/("jasper");
+		}
+	}
+}
+
+IG$/*mainapp*/._IE6/*clExport*/.prototype = {
+	TX/*getXML*/: function() {
+		var me = this,
+			i,
+			r = "<ExportOption",
+			__t;
+		
+		r += IG$/*mainapp*/._I20/*XUpdateInfo*/(me, me.__pca[0], "s");
+		r += IG$/*mainapp*/._I20/*XUpdateInfo*/(me, me.__pca[1], "b");
+		r += IG$/*mainapp*/._I20/*XUpdateInfo*/(me, me.__pca[2], "i");
+		r += ">";
+		
+		if (me.jasper)
+		{
+			r += "<jasper";
+			r += IG$/*mainapp*/._I20/*XUpdateInfo*/(me.jasper, me.j_param.join(";"), "s");
+			r += "/>";
+		}
+		
+		if (me.otmpl)
+		{
+			r += "<otmpl>";
+			for (i=0; i < me.otmpl.length; i++)
+			{
+				r += "<tmpl " + IG$/*mainapp*/._I20/*XUpdateInfo*/(me.otmpl[i], "uid;type;name;export_type;description", "s") + "/>";
+			}
+			r += "</otmpl>";
+		}
+		
+		__t = window.IExport;
+		
+		if (__t)
+		{
+			var k,
+				ep, p, lparam,
+				i;
+				
+			for (k in __t)
+			{
+				ep = __t[k];
+				if (me[ep.name])
+				{
+					lparam = ep.params.join(";");
+					r += "<" + ep.name + " " + IG$/*mainapp*/._I20/*XUpdateInfo*/(me[ep.name], lparam, "s") + "/>";
+				}
+			}
+		}
+		
+		r += "</ExportOption>";
+		
+		return r;
+	},
+	M1/*updateDefault*/: function(opt) {
+		var me = this,
+			sysconfig = IG$/*mainapp*/._L51/*sysconfig*/,
+			jout,
+			i;
+		
+		if (sysconfig)
+		{
+			switch (opt)
+			{
+			case "jasper":
+				jout = sysconfig.JASPER_OUTPUT;
+				if (jout && jout.value)
+				{
+					jout = jout.value.split(";");
+					me[opt] = me[opt] || {};
+					
+					for (i=0; i < jout.length; i++)
+					{
+						me[opt][jout[i] + "_output"] = "T";
+					}
+				}
+				jout = sysconfig.JASPER_TEMPLATE;
+				if (jout && jout.value)
+				{
+					me[opt].jasper_template = jout.value;
+				}
+				break;
+			}
+		}
+	}
+};
+
+IG$/*mainapp*/._IE7/*clCellOption*/ = function(node) {
+	var me = this;
+	
+	me.basetype = 0;
+	me.valuemax = 0;
+	me.valuemin = 0;
+	me.cellwidth = 50;
+	me.cellheight = 20;
+	me.direction = "horizontal";
+	
+	me.axismetric = [];
+	
+	me.__pca = [
+		"basedatatype;basetype;cellheight;cellwidth;mctype;uid;valuemax;valuemin;linecolor;fillcolor",
+		"direction",
+		"separatecolumn",
+		"nodepath;description;memo;name;pid;sortorder;type;uid;activeformula;rankcount;aggrfunc;disp_title;hidecolumn;timeformat"
+	];
+	
+	if (node)
+	{
+		var tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "CellOption"),
+			snode,
+			tnodes,
+			i,
+			xitem,
+			valuemetric;
+			
+		if (tnode)
+		{
+			IG$/*mainapp*/._I1f/*XGetInfo*/(me, tnode, me.__pca[0], "i");
+			IG$/*mainapp*/._I1f/*XGetInfo*/(me, tnode, me.__pca[1], "s");
+			IG$/*mainapp*/._I1f/*XGetInfo*/(me, tnode, me.__pca[2], "b");
+			
+			me.uid = IG$/*mainapp*/._I06/*formatUID*/(me.uid);
+			
+			snode = IG$/*mainapp*/._I18/*XGetNode*/(tnode, "AxisMetric");
+		
+			if (snode)
+			{
+				tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(snode);
+				for (i=0; i < tnodes.length; i++)
+				{
+					xitem = {};
+					IG$/*mainapp*/._I1f/*XGetInfo*/(xitem, tnodes[i], me.__pca[3], "s");
+					xitem.itemtype = xitem.type;
+					me.axismetric.push(xitem);
+				}
+			}
+			
+			snode = IG$/*mainapp*/._I18/*XGetNode*/(tnode, "ValueMetric");
+			
+			if (snode)
+			{
+				valuemetric = me.valuemetric = {};
+				IG$/*mainapp*/._I1f/*XGetInfo*/(valuemetric, snode, me.__pca[3], "s");
+				valuemetric.itemtype = valuemetric.type;
+			}
+		}
+		
+		tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "objinfo");
+		
+		if (tnode)
+		{
+			me.cubeuid = IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "cubeuid");
+			me.cubeuid = IG$/*mainapp*/._I06/*formatUID*/(me.cubeuid);
+		}
+	}
+}
+
+IG$/*mainapp*/._IE7/*clCellOption*/.prototype = {
+	C_1/*getXML*/: function () {
+		var i,
+			xitem,
+			me = this,
+			r = "<CellOption",
+			valuemetric = me.valuemetric;
+			
+		r += IG$/*mainapp*/._I20/*XUpdateInfo*/(me, me.__pca[0], "i");
+		r += IG$/*mainapp*/._I20/*XUpdateInfo*/(me, me.__pca[1], "s");
+		r += IG$/*mainapp*/._I20/*XUpdateInfo*/(me, me.__pca[2], "b");
+		
+		r += ">";
+		
+		if (me.axismetric)
+		{
+			r += "<AxisMetric>"
+			for (i=0; i < me.axismetric.length; i++)
+			{
+				xitem = me.axismetric[i];
+				xitem.type = xitem.itemtype || xitem.type;
+			 	r += "<item " + IG$/*mainapp*/._I20/*XUpdateInfo*/(xitem, me.__pca[3], "s") + "/>";
+			}
+			r += "</AxisMetric>";
+		}
+
+		if (valuemetric)
+		{
+			valuemetric.type = valuemetric.itemtype || valuemetric.type;
+			r += "<ValueMetric" + IG$/*mainapp*/._I20/*XUpdateInfo*/(valuemetric, __m, "s") + "/>";
+		}
+		
+		r += "</CellOption>";
+		
+		return r;
+	}
+}
+
+IG$/*mainapp*/._IE8/*clItems*/ = function(node, incsub) {
+	var me = this,
+		snode, snodes,
+		i, sitem;
+	
+	me.__pca = [
+		"uid;name;lname;itemtype;type;nodepath;memo;pid;sortorder;description;activeformula;rankcount;aggrfunc;disp_title;hidecolumn;timeformat"
+	];
+	
+	if (node)
+	{
+		IG$/*mainapp*/._I1f/*XGetInfo*/(me, node, me.__pca[0], "s");
+		me.itemtype = me.type;
+		
+		switch (me.itemtype)
+		{
+		case "CellChart":
+		case "ChartMeasure":
+			me.C_2/*parseCellChart*/(node);
+			break;
+		}
+		
+		if (incsub)
+		{
+			sitem = me.sitems = [];
+			
+			snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "sitems");
+			if (snode)
+			{
+				snodes = IG$/*mainapp*/._I26/*getChildNodes*/(snode);
+				
+				for (i=0; i < snodes.length; i++)
+				{
+					sitem = new IG$/*mainapp*/._IE8/*clItems*/(snodes[i], incsub);
+					sitems.push(sitem);
+				}
+			}
+		}
+	}
+}
+
+IG$/*mainapp*/._IE8/*clItems*/.prototype = {
+	_I1d/*CopyObject*/: function(item, obj) {
+		var me = this;
+		IG$/*mainapp*/._I1d/*CopyObject*/(obj, item, me.__pca[0]);
+		item.itemtype = item.type || item.itemtype;
+	},
+	
+	C_2/*parseCellChart*/: function(node) {
+		this.celloption = new IG$/*mainapp*/._IE7/*clCellOption*/(node);
+	},
+	
+	C_1/*getItemXML*/: function(incsub) {
+		var me = this,
+			r, i,
+			sitems = me.sitems,
+			celloption = me.celloption;
+			
+		me.type = me.itemtype || me.type;
+			
+		r = "<item"
+			+ IG$/*mainapp*/._I20/*XUpdateInfo*/(me, me.__pca[0], "s");
+//			  + " type='" + (me.itemtype || me.type) + "'", 
+		
+		if (incsub && sitems)
+		{
+			r += "><sitems>";
+			for (i=0; i < sitems.length; i++)
+			{
+				r += sitems[i].C_1/*getXML*/(incsub);
+			}
+			r += "</sitems></item>";
+		}
+		else if (me.itemtype == "ChartMeasure" && celloption)
+		{
+			r += ">" + celloption.C_1/*getXML*/();
+			r += "<objinfo cubeuid='" + (celloption.cubeuid || "") + "'/>";
+			r += "</item>";
+		}
+		else
+		{
+			r += "/>";
+		}
+		return r;
+	}
+}
+
+IG$/*mainapp*/._IE9/*clFilter*/ = function(node) {
+	var me = this;
+	
+	me._d6/*itemList*/ = [];
+	me.l_item = [];
+	
+	me.delimiter = ";";
+	
+	me._d5/*parseNode*/(node);
+}
+
+IG$/*mainapp*/._IE9/*clFilter*/.prototype = {
+	_d4/*getDesc*/: function() {
+		var me = this,
+			r = "",
+			i,
+			_d6/*itemList*/ = me._d6/*itemList*/;
+		
+		for (i=0; i < _d6/*itemList*/.length; i++)
+		{
+			r = (i == 0) ? _d6/*itemList*/[i].name : r + ", " + _d6/*itemList*/[i].name;
+		}
+		
+		r += "\n" + me._d1/*getOperatorDesc*/(me.operator, me.opisnot, 1) + "\n(";
+		
+		if (me.valuetype == "field")
+		{
+			r += (me.l_item && me.l_item.length ? me.l_item[0].name : "");
+			if (me.operator == 8)
+			{
+				r += " AND " + (me.l_item && me.l_item.length > 1 ? me.l_item[1].name : "");
+			}
+		}
+		else
+		{
+			r += me._d2/*getValueDesc*/(me.values);
+		}
+		
+		r += ")";
+		
+		return r.substring(0, 50);
+	},
+	_d2/*getValueDesc*/: function(values) {
+		var me = this,
+			r = "",
+			i;
+		
+		if (values && values.length > 0)
+		{
+			for (i=0; i < values.length; i++)
+			{
+				r += (i > 0) ? me.delimiter : "";
+				r += (values[i].text) ? values[i].text : values[i].code;
+			}
+		}
+		
+		return r;
+	},
+	_d5/*parseNode*/: function(node) {
+		var me = this,
+			i,
+			tnode,
+			child,
+			item,
+			p,
+			p_enum = IG$/*mainapp*/._IE2/*filterpromptenum*/;
+		
+		me._d6/*itemList*/ = [];
+		me.values = [];
+		me._d7/*isprompt*/ = false;
+		me._d8/*iscustom*/ = false;
+		me.delimiter = ";";
+		
+		if (node)
+		{
+			me.operator = IG$/*mainapp*/._IE1/*filteropcodes*/._d3/*getOperator*/(IG$/*mainapp*/._I1b/*XGetAttr*/(node, "operator"));
+			me.opisnot = IG$/*mainapp*/._I1b/*XGetAttr*/(node, "opisnot") == "T";
+			me._d9/*issqlvalue*/ = (IG$/*mainapp*/._I1b/*XGetAttr*/(node, "issqlvalue") == "T") ? true : false;
+			me.authname = IG$/*mainapp*/._I1b/*XGetAttr*/(node, "authname");
+			me.authuid = IG$/*mainapp*/._I1b/*XGetAttr*/(node, "authuid");
+			me.active = (IG$/*mainapp*/._I1b/*XGetAttr*/(node, "active") == "T") ? true : false;
+			
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "items");
+			
+			if (tnode && tnode.hasChildNodes())
+			{
+				child = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+				
+				for (i=0; i < child.length; i++)
+				{
+					item = new IG$/*mainapp*/._IE8/*clItems*/(child[i]);
+					me._d6/*itemList*/.push(item);
+				}
+			}
+			
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "l_items");
+			
+			if (tnode && tnode.hasChildNodes())
+			{
+				child = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+				
+				for (i=0; i < child.length; i++)
+				{
+					item = new IG$/*mainapp*/._IE8/*clItems*/(child[i]);
+					me.l_item.push(item);
+				}
+			}
+			
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "Values");
+			
+			if (tnode && tnode.hasChildNodes())
+			{
+				me.valuetype = IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "valuetype");
+				
+				me._d8/*iscustom*/ = (IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "custom") == "T") ? true : false;
+				me.delimiter = IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "delimiter") || ";";
+				
+				if (IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "prompt") == "T")
+				{
+					me._d7/*isprompt*/ = true;
+					
+					switch (IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "prompteditor"))
+					{
+						case "2":
+							p = p_enum.P_COMBOBOX;
+							break;
+						case "3":
+							p = p_enum.P_DATE;
+							break;
+						case "4":
+							p = p_enum.P_SELECT_WIN;
+							break;
+						default:
+							p = p_enum.P_TEXTBOX;
+							break;
+					}
+					
+					me.promptEditor = p;
+				}
+				else
+				{
+					me._d7/*isprompt*/ = false;
+				}
+				
+				child = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+				
+				for (i=0; i < child.length; i++)
+				{ 
+					var v = {code: null, value: null},
+						vnode = child[i],
+						cnode = IG$/*mainapp*/._I18/*XGetNode*/(vnode, "code");
+					
+					if (cnode)
+					{
+						v.code = IG$/*mainapp*/._I24/*getTextContent*/(cnode);
+					}
+					
+					cnode = IG$/*mainapp*/._I18/*XGetNode*/(vnode, "text");
+					
+					if (cnode)
+					{
+						v.text = IG$/*mainapp*/._I24/*getTextContent*/(cnode);
+					}
+					
+					if (v.code)
+					{
+						me.values.push(v);
+					}
+				}
+			}
+		}
+	},
+	
+	_d1/*getOperatorDesc*/: function(op, opisnot, isdesc) {
+		var opcodes = IG$/*mainapp*/._IE1/*filteropcodes*/,
+			opvalue = "EQUAL",
+			oploc = "L_F_EQ";
+		
+		switch (op)
+		{
+		case opcodes.OP_GTE[0]:
+			opvalue = "GTE";
+			oploc = opcodes.OP_GTE[4];
+			break;
+		case opcodes.OP_GT[0]:
+			opvalue = "GT";
+			oploc = opcodes.OP_GT[4];
+			break;
+		case opcodes.OP_LTE[0]:
+			opvalue = "LTE";
+			oploc = opcodes.OP_LTE[4];
+			break;
+		case opcodes.OP_LT[0]:
+			opvalue = "LT";
+			oploc = opcodes.OP_LT[4];
+			break;
+		case opcodes.OP_LIKE[0]:
+			opvalue = "LIKE";
+			oploc = opcodes.OP_LIKE[4];
+			break;
+		case opcodes.OP_IN[0]:
+			opvalue = "IN";
+			oploc = opcodes.OP_IN[4];
+			break;
+//		case opcodes.OP_NOTIN[0]:
+//			opvalue = "NOTIN";
+//			oploc = opcodes.OP_NOTIN[4];
+//			break;
+		case opcodes.OP_BETWEEN[0]:
+			opvalue = "BETWEEN";
+			oploc = opcodes.OP_BETWEEN[4];
+			break;
+		case opcodes.OP_IS[0]:
+			opvalue = "IS";
+			oploc = opcodes.OP_IS[4];
+			break;
+		}
+		
+		if (isdesc)
+		{
+			opvalue = IRm$/*resources*/.r1(oploc + (opisnot ? "_NOT" : ""));
+		}
+		
+		return opvalue;
+	},
+	
+	TX/*getXML*/: function() {
+		var me = this,
+			r = "<Condition",
+			opvalue = "EQUAL",
+			i,
+			_d6/*itemList*/ = me._d6/*itemList*/;
+		
+		opvalue = me._d1/*getOperatorDesc*/(me.operator);
+	
+		r += " operator='" + opvalue + "'";
+		r += " issqlvalue='" + ((me._d9/*issqlvalue*/) ? "T" : "F") + "'";
+		r += " opisnot='" + (me.opisnot ? "T" : "F") + "'"
+		r += (me.authname ? " authname='" + me.authname + "'" : "");
+		r += (me.authuid ? " authuid='" + me.authuid +"'" : "");
+		r += (me.authuid && me.authname ? (me.active ? " active='T'" : "active='F'") : "");
+		r += ">";
+		
+		r += "<items>";
+		
+		for (i=0; i < _d6/*itemList*/.length; i++)
+		{
+			var mitem = _d6/*itemList*/[i];
+			r += mitem.C_1/*getItemXML*/();
+		}
+		
+		r += "</items>";
+		
+		r += "<Expression>";
+		
+		r += "<![CDATA[" + (me.expression || "") + "]]>";
+		
+		r += "</Expression>";
+		
+		r += "<l_items>";
+		
+		for (i=0; i < me.l_item.length; i++)
+		{
+			r += me.l_item[i].C_1/*getItemXML*/();
+		}
+		
+		r += "</l_items>";
+		
+		r += "<Values";
+		r += " valuetype='" + (me.valuetype || "") + "'";
+		r += " prompt='" + ((me._d7/*isprompt*/) ? "T" : "F") + "'";
+		r += " prompteditor='" + me.promptEditor + "'";
+		r += " custom='" + ((me._d8/*iscustom*/) ? "T" : "F") + "'";
+		r += " delimiter='" + (me.delimiter || ";") + "'";
+		r += ">";
+		
+		if (me.values)
+		{
+			for (i=0; i < me.values.length; i++)
+			{
+				r += "<value>";
+				
+				if (me.values[i].code)
+				{
+					r += "<code>";
+					r += "<![CDATA[" + (me.values[i].code || "") + "]]>";
+					r += "</code>";
+				}
+				
+				if (me.values[i].value)
+				{
+					r += "<value>";
+					r += "<![CDATA[" + (me.values[i].value || "") + "]]>";
+					r += "</value>";
+				}
+	
+				r += "</value>";
+			}
+		}
+		
+		r += "</Values>";
+		r += "</Condition>";
+		
+		return r;
+	},
+	
+	LD/*loadData*/: function(panel, callback) {
+		var me = this,
+			uid = me._d6/*itemList*/[0].uid,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		
+		me.dataLoaded = true;
+		me.data = [];
+		
+		req.init(panel, 
+			{
+				ack: "18",
+				payload: "<smsg><item uid='" + uid + "' option='valuelist'/></smsg>",
+				mbody: IG$/*mainapp*/._I2e/*getItemOption*/()
+			}, me, me.rs_LD/*loadData*/, null, callback);
+		req._l/*request*/();
+	},
+	rs_LD/*loadData*/: function(xdoc, callback) {
+		var me = this,
+			uid = me._d6/*itemList*/[0].uid,
+			result = new IG$/*mainapp*/._ICd/*clValueList*/(xdoc, uid);
+		
+		me.result = result;
+		
+		if (callback)
+		{
+			callback.execute();
+		}
+	}
+};
+
+IG$/*mainapp*/._IEa/*relations*/ = function(node) {
+	var me = this,
+		tnode;
+		
+	me.__pca = [
+		"nodepath;datatype;name;tablename;type"
+	];
+
+	tnode = IG$/*mainapp*/._I19/*getSubNode*/(node, "source");
+	me.source = (tnode ? IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnode) : {});
+	tnode = IG$/*mainapp*/._I19/*getSubNode*/(node, "target");
+	me.target = (tnode ? IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnode) : {});
+}
+
+IG$/*mainapp*/._IEa/*relations*/.prototype = {
+	TX/*getXML*/: function() {
+		var me = this,
+			r = "<Link join='" + (me.join || "inner") + "' operator='" + (me.operator || "=") + "'>";
+		
+		r += "<source" + IG$/*mainapp*/._I20/*XUpdateInfo*/(me.source, me.__pca[0], "s") + "/>";
+		r += "<target" + IG$/*mainapp*/._I20/*XUpdateInfo*/(me.target, me.__pca[0], "s") + "/>";
+		
+		r += "</Link>";
+		
+		return r;
+	},
+	MX/*makeInfo*/: function() {
+		var me = this,
+			source = me.source,
+			target = me.target;
+			
+		me.joinfrom = (source ? (source.tablename || "") + "." + (source.name || "") : "");
+		me.jointo = (target ? (target.tablename || "") + "." + (target.name || "") : "");
+		me.joincondition = me.condition || "=";
+	}
+};
+
+IG$/*mainapp*/._IEb/*clFilterGroup*/ = function(node) {
+	var me = this,
+		p;
+	
+	if (node)
+	{
+		p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(node);
+		me.name = p.name;
+		me.authuid = p.authuid;
+		me.authname = p.authname;
+		me.active = (p.active == "T" ? true : false);
+	}
+	
+	me.subGroups = [];
+	me.subConditions = [];
+}
+
+IG$/*mainapp*/._IEb/*clFilterGroup*/.prototype = {
+	T1/*findItem*/: function(uid) {
+		var me = this,
+			r = this.T1a/*findSubItem*/(uid, me);
+		return r;
+	},
+	
+	T1a/*findSubItem*/: function(uid, group) {
+		var i, j,
+			r,
+			condition,
+			_dff = group.subConditions,
+			_dfs = group.subGroups,
+			_d6/*itemList*/;
+			
+		for (i=0; i < _dff.length; i++)
+		{
+			condition = _dff[i];
+			_d6/*itemList*/ = condition._d6/*itemList*/;
+			if (_d6/*itemList*/ && _d6/*itemList*/.length > 0)
+			{
+				for (j=0; j < _d6/*itemList*/.length; j++)
+				{
+					if (_d6/*itemList*/[j].uid == uid)
+					{
+						r = condition;
+						break;
+					}
+				}
+			}
+			
+			if (r)
+			{
+				break;
+			}
+		}
+		
+		if (!r)
+		{
+			for (i=0; i < _dfs.length; i++)
+			{
+				r = this.T1a/*findSubItem*/(uid, _dfs[i]);
+				if (r)
+				{
+					break;
+				}
+			}
+		}
+		
+		return r;
+	},
+	
+	TX/*getXML*/: function()
+	{
+		var me = this,
+			x = "",
+			i,
+			cf,
+			cg,
+			isauthfilter = false,
+			subConditions = me.subConditions,
+			subGroups = me.subGroups;
+			
+		if (me.authuid && me.authname)
+		{
+			isauthfilter = true;
+			x += "<Filter authuid='" + me.authuid + "' authname='" + me.authname + "' active='" + (me.active ? "T" : "F") + "'>";
+		}
+	
+		if (subConditions.length > 0 || subGroups.length > 0)
+		{
+			x += "<FilterGroup";
+			x += (me.name) ? " name='" + me.name + "'>" : ">";
+			
+			if (subConditions.length > 0)
+			{
+				for (i=0; i < subConditions.length; i++)
+				{
+					cf = subConditions[i];
+					x += cf.TX/*getXML*/();
+				}
+			}
+			
+			if (subGroups.length > 0)
+			{
+				for (i=0; i < subGroups.length; i++)
+				{
+					cg = subGroups[i];
+					x += cg.TX/*getXML*/();
+				}
+			}
+			
+			x += "</FilterGroup>";
+		}
+		
+		if (isauthfilter)
+		{
+			x += "</Filter>";
+		}
+		
+		return x;
+	}
+}
+
+IG$/*mainapp*/._IEc/*clChartOption*/ = function(node) {
+	var me = this,
+		i,
+		t,
+		opt,
+		vnode, vnodes, bobj;
+	
+	me.charttype = "cartesian";
+	me.ctangle = 30;
+	me.ctdepth = 30;
+	me.drillcharttype = [];
+	me.legendposition = "BOTTOM_CENTER";
+	me.matminuscolor = 16711931;
+	me.matshowgrid = true;
+	me.matshowplot = true;
+	me.matusedropshadow = true;
+	me.precision = 0;
+	me.maxchartresult = 200;
+	me.showlegend = true;
+	me.subtype = "column";
+	me.tooltip = "[[category]] [[value]]";
+	me.zoomdirection = "left";
+	me.zoomrange = 10;
+	me.pieinnerradius = 0;
+	me.pielabeldist = 20;
+	me.pielayout = "h";
+		
+	me.timeseriesduration = 1000;
+	me.bmaprow = true;
+	me.bmapsize = 10;
+	me.p_bands = [];
+	
+	me.cindicator = null;
+	me.xlabel = true;
+	me.xaxisrot = true;
+	me.xstagl = 1;
+	me.xstep = 1;
+	me.ytickint = 0;
+	
+	me.__pca = [
+		"animate;drillyaxismax;enabledrill;enablezoom;enabledragselect;legendboxsizing;matshowgrid;matshowplot;matusedropshadow;showlegend;lgndfloating;showtitle;stack;stackperc;usedualaxis;useformula;swapaxis;bmaprow;bmapyaxis;dl_enable;dl_marker;dl_inside;useformatvalue;showvalue;tm_l_alg;xlabel;xaxisrot",
+		"chartprovider;charttype;legendposition;subtype;title;titleposition;tooltip;yvalueformat;zoomdirection;drillcharttype;andersonspecies;relationgroups;renderas;dualaxisitem;dl_marker_l;dl_enable_l;maptype;mapcategory;yaxisformat;yaxismin;yaxismax;nat_timefield;nat_datafield;nat_groupfield;nat_xdata;nat_ydata;nat_vdata;timeseriesfield;bmapsizeaxisfield;bmapyaxisfield;colorset;yaxisformat2;yaxismin2;yaxismax2;pielayout;yaxistitle;yaxistitle2;dl_align;tm_l_cl;chd_method",
+		"ctangle;ctdepth;drillviewmode;legendboxsize;matminuscolor;matpluscolor;matwidth;zoomrange;rel_range1;rel_range2;comp_range0;comp_range1;pieinnerradius;pielabeldist;precision;maxchartresult;timeseriesduration;bmapsize;xstagl;xstep;ytickint"
+	];
+	
+	if (node)
+	{
+		IG$/*mainapp*/._I1f/*XGetInfo*/(me, node, me.__pca[0], "b");
+		IG$/*mainapp*/._I1f/*XGetInfo*/(me, node, me.__pca[1], "s");
+		IG$/*mainapp*/._I1f/*XGetInfo*/(me, node, me.__pca[2], "i");
+		
+		if (IG$/*mainapp*/.cSET/*chartOptionSet*/)
+		{
+			IG$/*mainapp*/._I1f/*XGetInfo*/(me, node, IG$/*mainapp*/.cSET/*chartOptionSet*/, "s", 1);
+		}
+		
+		var drillcharttype = me.drillcharttype,
+			renderas = me.renderas,
+			dualaxisitem = me.dualaxisitem,
+			dl_marker_l = me.dl_marker_l,
+			dl_enable_l = me.dl_enable_l;
+		me.drillcharttype = drillcharttype && drillcharttype.split ? drillcharttype.split(";") : [];
+		me.renderas = renderas && renderas.split ? renderas.split(";") : [];
+		me.dualaxisitem = dualaxisitem && dualaxisitem.split ? dualaxisitem.split(";") : [];
+		me.dl_marker_l = dl_marker_l && dl_marker_l.split ? dl_marker_l.split(";") : [];
+		me.dl_enable_l = dl_enable_l && dl_enable_l.split ? dl_enable_l.split(";") : [];
+		dualaxisitem = me.dualaxisitem;
+		dl_marker_l = me.dl_marker_l;
+		dl_enable_l = me.dl_enable_l;
+		
+		vnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "cunittext");
+
+		if (vnode)
+		{
+			me.cunittext = IG$/*mainapp*/._I24/*getTextContent*/(vnode);
+		}
+		
+		vnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "piedatalabel");
+
+		if (vnode)
+		{
+			me.piedatalabel = IG$/*mainapp*/._I24/*getTextContent*/(vnode);
+		}
+		
+		vnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "p_bands");
+		
+		if (vnode)
+		{
+			vnodes = IG$/*mainapp*/._I26/*getChildNodes*/(vnode);
+			for (i=0; i < vnodes.length; i++)
+			{
+				bobj = new IG$/*mainapp*/._Ifb_n/*chartplotbandobject*/(vnodes[i]);
+				me.p_bands.push(bobj);
+			}
+		}
+		
+		vnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "cindicator");
+		
+		if (vnode)
+		{
+			me.cindicator = Base64.decode(IG$/*mainapp*/._I24/*getTextContent*/(vnode));
+		}
+	}
+	
+	me.chartcategory = [	
+		{charttype: "", subtype: ""},
+		{charttype: "cartesian", subtype: "column"},
+		{charttype: "cartesian", subtype: "line"},
+		{charttype: "cartesian", subtype: "spline"},
+		{charttype: "cartesian", subtype: "area"},
+		{charttype: "cartesian", subtype: "bar"},
+		{charttype: "scrollable", subtype: "scrollable"},
+		
+		{charttype: "pie", subtype: "pie"},
+		{charttype: "pie", subtype: "doughnut"},
+		{charttype: "bubble", subtype: "bubble"},
+		{charttype: "scatter", subtype: "scatter"},
+		{charttype: "radar", subtype: "radar"},
+		
+		{charttype: "map", subtype: "map"},
+		
+		{charttype: "matrix", subtype: "matrix"},
+		{charttype: "candlestick", subtype: "candlestick"},
+		{charttype: "ohlc", subtype: "ohlc"},
+		
+		{charttype: "datagrid", subtype: "datagrid"}
+	];
+	
+	me.getChartInfo = function(id) {
+		var i,
+			chartcategory = me.chartcategory,
+			r = chartcategory[0];
+		
+		for (i=0; i < chartcategory.length; i++)
+		{
+			chartcategory[i].id = i;
+			if (chartcategory[i].id == id)
+			{
+				r = chartcategory[i];
+				break;
+			}
+		}
+		
+		return r;
+	}
+	
+	me.getChartInfoBySubType = function(subtype) {
+		var i,
+			r,
+			me = this,
+			chartcategory = me.chartcategory;
+		
+		for (i=0; i < chartcategory.length; i++)
+		{
+			if (chartcategory[i].subtype == subtype)
+			{
+				r = chartcategory[i];
+				r.id = i;
+				break;
+			}
+		}
+		
+		return r;
+	}
+}
+
+IG$/*mainapp*/._IEc/*clChartOption*/.prototype = {
+	TX/*getXML*/: function() {
+		var me = this,
+			i,
+			r = "<ChartOption",
+			drillcharttype = me.drillcharttype,
+			dualaxisitem = me.dualaxisitem,
+			dl_marker_l = me.dl_marker_l,
+			dl_enable_l = me.dl_enable_l,
+			renderas = me.renderas,
+			cs, csm = [], csk = [], cn;
+		
+		me.drillcharttype = drillcharttype && drillcharttype.length ? drillcharttype.join(";")	: null;
+		me.dualaxisitem = dualaxisitem && dualaxisitem.length ? dualaxisitem.join(";") : null;
+		me.dl_marker_l = dl_marker_l && dl_marker_l.length ? dl_marker_l.join(";") : null;
+		me.dl_enable_l = dl_enable_l && dl_enable_l.length ? dl_enable_l.join(";") : null;
+		me.renderas = renderas && renderas.length ? renderas.join(";") : null;
+		
+		r += IG$/*mainapp*/._I20/*XUpdateInfo*/(me, me.__pca[0], "b");
+		r += IG$/*mainapp*/._I20/*XUpdateInfo*/(me, me.__pca[1], "s");
+		r += IG$/*mainapp*/._I20/*XUpdateInfo*/(me, me.__pca[2], "i");
+		
+		dualaxisitem = me.dualaxisitem;
+		me.dualaxisitem = dualaxisitem ? dualaxisitem.split(";") : [];
+		drillcharttype = me.drillcharttype;
+		me.drillcharttype = drillcharttype ? drillcharttype.split(";") : [];
+		renderas = me.renderas;
+		me.renderas = renderas ? renderas.split(";") : [];
+		
+		dl_marker_l = me.dl_marker_l;
+		me.dl_marker_l = dl_marker_l ? dl_marker_l.split(";") : [];
+		dl_enable_l = me.dl_enable_l;
+		me.dl_enable_l = dl_enable_l ? dl_enable_l.split(";") : [];
+		
+		if (IG$/*mainapp*/.cSET/*chartOptionSet*/)
+		{
+			cs = IG$/*mainapp*/.cSET/*chartOptionSet*/.split(";");
+			
+			for (i=0; i < cs.length; i++)
+			{
+				if (cs[i] && cs[i].substring(0, "cdata_".length) == "cdata_")
+				{
+					csk.push(cs[i]);
+				}
+				else
+				{
+					csm.push(cs[i]);
+				}
+			}
+			
+			r += IG$/*mainapp*/._I20/*XUpdateInfo*/(me, csm.join(";"), "s");
+		}
+		
+		r += ">";
+		
+		for (i=0; i < csk.length; i++)
+		{
+			cn = csk[i];
+			if (cn && me[cn])
+			{
+				r += "<" + cn + "><![CDATA[" + me[cn] + "]]></" + cn + ">";
+			}
+		}
+		
+		if (me.cunittext)
+		{
+			r += "<cunittext><![CDATA[" + me.cunittext + "]]></cunittext>";
+		}
+		
+		if (me.piedatalabel)
+		{
+			r += "<piedatalabel><![CDATA[" + me.piedatalabel + "]]></piedatalabel>";
+		}
+
+		if (me.p_bands && me.p_bands.length > 0)
+		{
+			r += "<p_bands>";
+			for (i=0; i < me.p_bands.length; i++)
+			{
+				r += me.p_bands[i]._2/*getText*/();
+			}
+			r += "</p_bands>";
+		}
+		
+		if (me.cindicator)
+		{
+			r += "<cindicator><![CDATA[" + Base64.encode(me.cindicator || "") + "]]></cindicator>";
+		}
+		
+		r += "</ChartOption>"
+		return r;
+	}
+}
+
+IG$/*mainapp*/._IEd/*clROption*/ = function(node) {
+	var me = this,
+		script, promptvalue,
+		snode;
+	me.s1/*showSummary*/ = true;
+	me.s2/*showScript*/ = true;
+	me.s3/*scriptcontent*/ = "";
+	me.s4/*rprompt*/ = "";
+	me.smw/*minwidth*/ = 0;
+	me.smh/*minheight*/ = 0;
+	me.pgs = 2000;
+	
+	// me.s4c/*rpromptcontrols*/ = null;
+	// me.s4p/*rpromptvalues*/ = null;
+	
+	if (node)
+	{
+		IG$/*mainapp*/._I1f/*XGetInfo*/(me, node, "s1;s2", "b");
+		IG$/*mainapp*/._I1f/*XGetInfo*/(me, node, "smw;smh;pgs", "i");
+		
+		snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "script");
+		if (snode)
+		{
+			script = IG$/*mainapp*/._I24/*getTextContent*/(snode);
+			if (script)
+			{
+				me.s3/*scriptcontent*/ = Base64.decode(script);
+			}
+		}
+		snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "prompt");
+		if (snode)
+		{
+			promptvalue = IG$/*mainapp*/._I24/*getTextContent*/(snode);
+			if (promptvalue)
+			{
+				me.s4/*rprompt*/ = Base64.decode(promptvalue);
+			}
+		}
+	}
+}
+
+IG$/*mainapp*/._IEd/*clROption*/.prototype = {
+	TX/*getXML*/: function() {
+		var me = this,
+			i, s4p,
+			r = "<ROption";
+		
+		me.FFr/*updatePromptValues*/();
+		
+		r += IG$/*mainapp*/._I20/*XUpdateInfo*/(me, "s1;s2", "b");
+		r += IG$/*mainapp*/._I20/*XUpdateInfo*/(me, "smw;smh;pgs", "i");
+		r += "><script>";
+		r += "<![CDATA[" + Base64.encode(me.s3/*scriptcontent*/) + "]]>";
+		r += "</script>";
+		r += "<prompt>";
+		r += "<![CDATA[" + Base64.encode(me.s4/*rprompt*/) + "]]>";
+		r += "</prompt>";
+		r += "<promptvalues>";
+		if (me.s4p/*rpromptvalues*/ && me.s4p/*rpromptvalues*/.length > 0)
+		{
+			s4p = me.s4p/*rpromptvalues*/;
+			for (i=0; i < s4p.length; i++)
+			{
+				r += "<prompt name='" + s4p[i].name + "'>";
+				r += "<value><![CDATA[" + s4p[i].value + "]]></value>";
+				r += "</prompt>";
+			}
+		}
+		r += "</promptvalues>";
+		r += "</ROption>";
+		return r;
+	},
+	
+	FFr/*updatePromptValues*/: function() {
+		var me = this,
+			controls = me.s4c/*rpromptcontrols*/,
+			values = [], // me.s4p/*rpromptvalues*/,
+			ctltype,
+			ctrl,
+			r = true,
+			items = controls ? controls.items : null,
+			item;
+			
+		if (items && items.length)
+		{
+			controls.error = null;
+			
+			for (i=0; i < items.length; i++)
+			{
+				item = items[i],
+				ctltype = item.type;
+				ctrl = item.ctrl;
+				
+				switch (ctltype.toLowerCase())
+				{
+				case "combobox":
+					item.value = $("option:selected", ctrl).val();
+					break;
+				case "textinput":
+					item.value = ctrl.val();
+					break;
+				}
+				
+				values.push({
+					name: item.name,
+					value: item.value
+				});
+			}
+		}
+		
+		me.s4p/*rpromptvalues*/ = values;
+		
+		return r;
+	}
+}
+
+IG$/*mainapp*/._IEdP/*clPyahonOption*/ = function(node) {
+    var me = this;
+    
+    if (node)
+	{
+		snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "script");
+		if (snode)
+		{
+			script = IG$/*mainapp*/._I24/*getTextContent*/(snode);
+			if (script)
+			{
+				me.s3/*scriptcontent*/ = Base64.decode(script);
+			}
+		}
+	}
+}
+
+IG$/*mainapp*/._IEdP/*clPyahonOption*/.prototype = {
+    TX/*getXML*/: function() {
+        var me = this,
+            r =["<python>"];
+        
+        r.push("<script>");
+		r.push("<![CDATA[" + Base64.encode(me.s3/*scriptcontent*/ || "") + "]]>");
+		r.push("</script>");
+        
+        r.push("</python>");
+        
+        return r.join("");
+    }
+}
+
+IG$/*mainapp*/._IEe/*clReports*/ = function(xdoc) {
+	var me = this;
+	me.reports = [];
+	me.sheets = [];
+	
+	me.__cs = [];
+
+	me.__pca = IG$/*mainapp*/.__pca;
+	
+	me.PC(xdoc);
+}
+
+IG$/*mainapp*/._IEe/*clReports*/.prototype = {
+	PC: function(xdoc) {
+		var me = this,
+			banode,
+			cnode,
+			cnodes,
+			enode,
+			ctrl,
+			i, j,
+			_lmap = {},
+			sql_prompts,
+			item,
+			layoutinfo,
+			sheet,
+			sj,
+			_nm = "/smsg/item",
+			T0, T1;
+		
+		me.sheets = [];
+		me.reports = [];
+		me.__cs = T0 = {
+			m: {},
+			l: []
+		};
+		me.b_sc_load = "F";
+		me.ploader = 1;
+		me.phideloader = 1;
+		
+		me.itemtype = "Report";
+		layoutinfo = me.layoutinfo = {
+			type: "mondrian",
+			draggable: false,
+			objtype: "_dc",
+			_direction: 0, // 0 horizontal, 1 vertical
+			width: null,
+			height: null,
+			children: []
+		};
+		me.ctrls = {};
+		me.sql_prompts = [];
+		
+		if (xdoc)
+		{
+			banode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, _nm);
+			IG$/*mainapp*/._I1f/*XGetInfo*/(me, banode, "type;nodepath;uid;name");
+			me.itemtype = me.type;
+			
+			cnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, _nm + "/objinfo");
+
+			if (cnode)
+			{
+				me.reportversion = IG$/*mainapp*/._I1b/*XGetAttr*/(cnode, "version");
+			}
+			
+			cnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, _nm + "/sel_cube");
+			
+			if (cnode)
+			{
+				T0.d = IG$/*mainapp*/._I1b/*XGetAttr*/(cnode, "default");
+				
+				cnodes = IG$/*mainapp*/._I26/*getChildNodes*/(cnode);
+				
+				for (i=0; i < cnodes.length; i++)
+				{
+					p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(cnodes[i]);
+					
+					if (!T0.m[p.uid])
+					{
+						T0.m[p.uid] = p;
+						T0.l.push(p);
+					}
+				}
+				
+				if (!T0.d && T0.l.length)
+				{
+					T0.d = T0.l[0].uid;
+				}
+			}
+			
+			if (me.cubeuid && !T0.m[me.cubeuid])
+			{
+				p = {
+					uid: me.cubeuid,
+					name: me.cubeuid
+				};
+				T0.m[me.cubeuid] = p;
+				T0.l.push(p);
+			}
+
+			cnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, _nm + "/sql_prompts");
+			
+			if (cnode)
+			{
+				cnodes = IG$/*mainapp*/._I26/*getChildNodes*/(cnode);
+				
+				for (i=0; i < cnodes.length; i++)
+				{
+					T1 = cnodes[i];
+					me.sql_prompts.push({
+						name: IG$/*mainapp*/._I1b/*XGetAttr*/(T1, "name"),
+						value: IG$/*mainapp*/._I24/*getTextContent*/(T1),
+						defaultValue: IG$/*mainapp*/._I24/*getTextContent*/(T1)
+					});
+				}
+			}
+						
+			cnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, _nm + "/Pivot");
+			if (cnode)
+			{
+				me.b_sc_load = IG$/*mainapp*/._I1b/*XGetAttr*/(cnode, "b_sc_load") || "F";
+				me.ploader = IG$/*mainapp*/._I1b/*XGetAttr*/(cnode, "ploader") == "F" ? 0 : 1;
+				me.phideloader = IG$/*mainapp*/._I1b/*XGetAttr*/(cnode, "phideloader") == "F" ? 0 : 1;
+			
+				cnodes = IG$/*mainapp*/._I26/*getChildNodes*/(cnode);
+				
+				for (i=0; i < cnodes.length; i++)
+				{
+					if (IG$/*mainapp*/._I29/*XGetNodeName*/(cnodes[i]) == "Sheet")
+					{
+						var sheet = new IG$/*mainapp*/._IEf/*clReport*/(cnodes[i], me.itemtype, false);
+						sql_prompts = sheet.sql_prompts = [];
+						
+						for (j=0; j < me.sql_prompts.length; j++)
+						{
+							sj = me.sql_prompts[j];
+							
+							sql_prompts.push({
+								name: sj.name,
+								values: [
+									{
+										code: sj.value,
+										text: sj.value
+									}
+								]
+							});
+						}
+						me.sheets.push(sheet);
+						
+						if (sheet.cubeuid && !T0.m[sheet.cubeuid])
+						{
+							p = {
+								uid: sheet.cubeuid,
+								name: sheet.cubeuid
+							};
+							T0.m[sheet.cubeuid] = p;
+							T0.l.push(p);
+						}
+					}
+				}
+			}
+			
+			enode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, _nm + "/ExportOption");
+			me.exportOption = new IG$/*mainapp*/._IE6/*clExport*/(enode);
+			
+			enode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, _nm + "/LayoutInfo");
+			
+			if (enode)
+			{
+				var linfo = IG$/*mainapp*/._I24/*getTextContent*/(enode),
+					layout = linfo.split("|"),
+					layout_root,
+					linfo = [],
+					l, ls, lname, lvalue;
+				
+				layoutinfo.type = IG$/*mainapp*/._I1b/*XGetAttr*/(enode, "type") || "dock";
+			
+				for (i=0; i < layout.length; i++)
+				{
+					if (layout[i])
+					{
+						l = layout[i].split(",");
+						ls = {};
+						for (j=0; j < l.length; j++)
+						{
+							lname = l[j].substring(0, l[j].indexOf("="));
+							lvalue = l[j].substring(l[j].indexOf("=") + 1);
+							ls[lname] = lvalue;
+						}
+						ls.objtype = ls.objtype || "PANEL";
+						linfo.push(ls);
+					}
+				}
+				
+				layoutinfo.items = linfo;
+				
+				if (layoutinfo.type == "dock")
+				{
+					layoutinfo.type = "bubble";
+					layoutinfo.layout = {
+						isroot: true,
+						item: null
+					};
+					
+					var items = layoutinfo.items,
+						ds = [],
+						m,
+						rmap = {};
+					
+					for (i=0; i < items.length; i++)
+					{
+						item = items[i];
+						item.top = item.top || [];
+						item.left = item.left || [];
+						item.right = item.right || [];
+						item.bottom = item.bottom || [];
+						item.inner = item.inner || [];
+				
+						if (!item.r)
+						{
+							ds.push(item);
+						}
+				
+						if (item.r)
+						{
+							m = rmap[item.r];
+							
+							if (!m)
+							{
+								m = rmap[item.r] = [];
+							}
+							
+							m.push(item);
+						}
+					}
+					
+					me.tr1/*transferLayoutInfo*/(ds, layoutinfo.layout, rmap, true);
+				}
+				else if (layoutinfo.type == "mondrian")
+				{
+					me.savelayoutinfo = layoutinfo;
+					
+					var rmap = {},
+						k, pobj,
+					
+					layoutinfo = layout_root = me.layoutinfo = {
+						type: "mondrian",
+						objtype: "_dc",
+						children: [],
+						_direction: 0,
+						width: null,
+						height: null
+					};
+					
+					for (i=0; i < linfo.length; i++)
+					{
+						item = linfo[i];
+						if (!item.r && !layout_root.docid)
+						{
+							layout_root.docid = item.docid;
+							layout_root._direction = parseInt(item.d) || 0;
+							layout_root.width = Number(item.width);
+							layout_root.height = Number(item.height);
+							
+							rmap[layout_root.docid] = layout_root;
+						}
+						else
+						{
+							rmap[item.docid] = {
+								docid: item.docid,
+								width: Number(item.width),
+								height: Number(item.height),
+								objtype: item.objtype,
+								_r: item.r,
+								children: [],
+								_direction: parseInt(item.d)
+							};
+						}
+					}
+					
+					for (i=0; i < linfo.length; i++)
+					{
+						item = rmap[linfo[i].docid];
+						
+						if (item && item._r && rmap[item._r])
+						{
+							pobj = rmap[item._r];
+							pobj.children.push(item);
+							item.parent = pobj;
+						}
+					}
+				}
+				else
+				{
+					me.savelayoutinfo = layoutinfo;
+					
+					layoutinfo.layout = {
+						isroot: true,
+						item: null
+					};
+					
+					var items = layoutinfo.items,
+						rmap = {},
+						rootitem,
+						pds;
+					
+					for (i=0; i < items.length; i++)
+					{
+						item = items[i];
+						item.mm = {
+							left: item.left,
+							top: item.top,
+							bottom: item.bottom,
+							right: item.right,
+							inner: item.inner
+						};
+						
+						item.left = [];
+						item.right = [];
+						item.bottom = [];
+						item.top = [];
+						item.inner = [];
+						
+						rmap[item.docid] = item;
+					}
+					
+					for (i=0; i < items.length; i++)
+					{
+						pds = items[i];
+						
+						$.each(["top", "left", "right", "bottom", "inner"], function(t, tp) {
+							pds[tp] = pds[tp] || [];
+							var pkey = pds.mm[tp],
+								k,
+								pnode;
+							pkey = (pkey ? pkey.split(";") : []);
+							for (k=0; k < pkey.length; k++)
+							{
+								if (pkey[k] && rmap[pkey[k]])
+								{
+									pnode = rmap[pkey[k]];
+									pnode._cr = true;
+									if (!pnode.parent)
+									{
+										pnode.parent = {
+											loc: tp,
+											node: pds
+										};
+									
+										pds[tp].push(pnode);
+									}
+								}
+							}
+						});
+					}
+					
+					for (i=0; i < items.length; i++)
+					{
+						item = items[i];
+						if (item._cr != true)
+						{
+							item.parent = {
+								isroot: true
+							};
+							layoutinfo.layout.item = item;
+							break;
+						}
+					}
+				}
+			}
+			
+			enode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, _nm + "/Controls");
+		
+			if (enode)
+			{
+				cnodes = IG$/*mainapp*/._I26/*getChildNodes*/(enode);
+				
+				for (i=0; i < cnodes.length; i++)
+				{
+					ctrl = new IG$/*mainapp*/._IFc/*sheetfiltercomp*/(cnodes[i]);
+					me.ctrls[ctrl.docid] = ctrl;
+				}
+				
+				if (me.sheets)
+				{
+					for (i=0; i < me.sheets.length; i++)
+					{
+						sheet = me.sheets[i];
+						var docid = sheet.layoutinfo.docid,
+							ctrl = me.ctrls[docid];
+						
+						if (ctrl)
+						{
+							ctrl.fw/*fixedwidth*/ = sheet.fw/*fixedwidth*/;
+							ctrl.fh/*fixedheight*/ = sheet.fh/*fixedheight*/;
+							ctrl.hidetitle = sheet.hidetitle;
+						}
+					}
+				}
+			}
+		}
+	},
+	
+	tr1/*transferLayoutInfo*/: function(items, layout, rmap, isroot, upanel, pp, _lpds) {
+		var me = this,
+			i,
+			order = {
+				north: 0,
+				west: 1,
+				east: 2,
+				south: 3
+			},
+			pds,
+			mpds,
+			ppds,
+			n = 0,
+			dm,
+			m,
+			vlayout,
+			lpds;
+				
+		items.sort(function(a, b) {
+			var as = order[a.p],
+				bs = order[b.p];
+				
+			return as - bs;
+		});
+		
+		if (!isroot)
+		{
+			pds = layout;
+			pds.top = pds && pds.top || [];
+			pds.left = pds && pds.left || [];
+			pds.right = pds && pds.right || [];
+			pds.bottom = pds && pds.bottom || [];
+			pds.inner = pds && pds.inner || [];
+		}
+		
+		ppds = null;
+		
+		if (upanel)
+		{
+			pds = layout;
+			
+			if (items.length > 0)
+			{
+				items[0].p = pp;
+				ppds = _lpds;
+			}
+		}
+		
+		for (i=0; i < items.length; i++)
+		{
+			vlayout = items[i];
+			
+			lpds = ppds;
+			
+			if (items[i].objtype == "PANEL")
+			{
+				vlayout = mpds || pds || (isroot && layout.item ? layout.item : vlayout);
+
+				ppds = null;
+			}
+			else if (n == 0 && isroot)
+			{
+				layout.item = items[i];
+				pds = items[i];
+				pds.parent = {
+					isroot: true
+				};
+				
+				ppds = pds.p;
+				mpds = pds;
+				n++;
+			}
+			else
+			{
+				mpds = items[i];
+				
+				if (!ppds)
+				{
+					items[i].parent = {
+						loc: "top",
+						node: pds
+					};
+					pds.top.push(items[i]);
+					ppds = "north";
+				}
+				else
+				{
+					switch (items[i].p)
+					{
+					case "north":
+						items[i].parent = {
+							loc: "top",
+							node: pds
+						};
+						pds.top.push(items[i]);
+						break;
+					case "east":
+						items[i].parent = {
+							loc: "bottom",
+							node: pds
+						};
+						pds.bottom.push(items[i]);
+						break;
+					case "west":
+						items[i].parent = {
+							loc: "bottom",
+							node: pds
+						};
+						pds.bottom.push(items[i]);
+						break;
+					case "south":
+						items[i].parent = {
+							loc: "bottom",
+							node: pds
+						};
+						pds.bottom.push(items[i]);
+						pds = items[i];
+						break;
+					}
+					
+					ppds = items[i].p;
+				}
+				
+				n++;
+			}
+			
+			if (rmap[items[i].docid])
+			{
+				dm = rmap[items[i].docid];
+				me.tr1/*transferLayoutInfo*/(dm, vlayout, rmap, false, items[i].objtype == "PANEL" ? true : false, items[i].p, lpds);
+			}
+		}
+	},
+
+	_IJ1/*getCurrentPivot*/: function() {
+		var i, j,
+			r,
+			nr,
+			sheet,
+			ctrlname,
+			ctrl,
+			me = this,
+			rptitem,
+			chartPivot,
+			cco/*chartOption*/,
+			itemstyle,
+			sql_prompts,
+			Xsf/*sheetformula*/,
+			dff1/*drillitems*/,
+			sortoption,
+			dashboardfilter,
+			_dfilter,
+			_dff,
+			_dfs,
+			gfilter,
+			exportOption = me.exportOption,
+			pivotxml = ["<smsg><item uid='" + me.uid 
+					 + "' name='" + IG$/*mainapp*/._I48/*escapeXMLString*/(me.name) 
+					 + "' nodepath='" + IG$/*mainapp*/._I48/*escapeXMLString*/(me.nodepath) 
+					 + "' type='" + me.itemtype + "'>"],
+					 
+			T0 = me.__cs,
+			__ap;
+			
+		__ap = function(val) {
+			pivotxml.push(val);
+		};
+		
+		__ap("<objinfo version='1.2'/>");
+		
+		__ap("<sel_cube default='" + (T0.d || "") + "'>");
+		
+		for (r=0; r < T0.l.length; r++)
+		{
+			__ap("<item " + IG$/*mainapp*/._I20/*XUpdateInfo*/(T0.l[r], "uid;name;type;nodepath;requirepwd;pool;pooluid", "s") + "/>");
+		}
+		
+		__ap("</sel_cube>");
+				 
+		__ap("<Pivot b_sc_load='" + (me.b_sc_load || "F") + "' ploader='" + (me.ploader ? "T" : "F") + "' phideloader='" + (me.phideloader ? "T" : "F") + "'>");
+	
+		for (r=0; r < me.sheets.length; r++)
+		{
+			sheet = me.sheets[r];
+			
+			sheet.columnfix = sheet.columnfix || "F";
+			sheet.customfixcols = sheet.customfixcols || 0;
+			sheet.usepaging = sheet.usepaging || "F";
+			sheet.rowperpage = sheet.rowperpage || 20;
+			sheet.pagestyle = sheet.pagestyle || "normal";
+			sheet.measureformat = sheet.measureformat || "";
+			sheet.measureformatname = sheet.measureformatname || "";
+			
+			__ap(sheet._IJ1/*getCurrentPivot*/.call(sheet, me));
+		}
+		
+		__ap("</Pivot>");
+		
+		__ap("<LayoutInfo type='mondrian'><![CDATA[" + (me.savelayoutinfo || "") + "]]></LayoutInfo>");
+		__ap("<Controls>");
+		for (ctrlname in me.ctrls)
+		{
+			ctrl = me.ctrls[ctrlname];
+			__ap(ctrl.l2/*getXML*/.call(ctrl));
+		}
+		__ap("</Controls>");
+		
+		_dfilter = me._dfilter;
+		
+		if (_dfilter)
+		{
+			__ap("<dfilter>");
+			_dff = _dfilter.filter;
+			if (_dff)
+			{
+				__ap("<Filter>");
+				_dfs = _dff.subGroups;
+				if (_dfs && _dfs.length > 0)
+				{
+					for (i=0; i < _dfs.length; i++)
+					{
+						__ap(_dfs[i].TX/*getXML*/());
+					}
+				}
+				__ap("</Filter>");
+			}
+			
+			_dff = _dfilter.hfilter;
+			if (_dff)
+			{
+				__ap("<HavingFilter>");
+				_dfs = _dff.subGroups;
+				if (_dfs && _dfs.length > 0)
+				{
+					for (i=0; i < _dfs.length; i++)
+					{
+						__ap(_dfs[i].TX/*getXML*/());
+					}
+				}
+				__ap("</HavingFilter>");
+			}
+			
+			_dff = _dfilter.params;
+			if (_dff)
+			{
+				__ap("<params>");
+				for (i=0; i < _dff.length; i++)
+				{
+					__ap("<param name='" + _dff[i].name + "'><value><![CDATA[" + _dff[i].value + "]]></value></param>");
+				}
+				__ap("</params>");
+			}
+			__ap("</dfilter>");
+		}
+		
+		if (exportOption)
+		{
+			__ap(exportOption.TX/*getXML*/());
+		}
+		__ap("</item></smsg>");
+		
+		return pivotxml.join("");
+	}
+}
+
+IG$/*mainapp*/._IEf/*clReport*/ = function(node, itemtype) {
+	var banode,
+		pivot,
+		cnodes,
+		cnode,
+		i,
+		me = this;
+		
+	me.itemtype = itemtype;
+	me._IL9/*auxfilter*/ = {};
+	me.objtype = "SHEET";
+	me.layoutinfo = {};
+	
+	me.__pca = IG$/*mainapp*/.__pca;
+	
+	me.c$a/*parseReport*/(node);
+}
+
+IG$/*mainapp*/._IEf/*clReport*/.prototype = {
+	needPrompt: function() {
+		var me = this,
+			prompts = [],
+			i, _dff, _dfs;
+			
+		me.checkPrompt(me.filter, prompts);
+		
+		_dff = me.sql_prompts;
+		if (_dff && _dff.length > 0)
+		{
+			for (i=0; i < _dff.length; i++)
+			{
+				prompts.push(_dff[i]);
+			}
+		}
+		
+		_dff = me.sqloption;
+		_dfs = _dff ? _dff.prompts : null;
+		if (_dfs && _dfs.length > 0)
+		{
+			for (i=0; i < _dfs.length; i++)
+			{
+				prompts.push(_dfs[i]);
+			}
+		}
+		
+		return prompts;
+	},
+	
+	g1/*getItem*/: function(idx, pos) {
+		var me = this,
+			m,
+			i, dp;
+		
+		switch(pos)
+		{
+		case 1:
+			dp = me.rows;
+			break;
+		case 2:
+			dp = me.cols;
+			break;
+		case 3:
+			dp = me.measures;
+			break;
+		}
+		
+		if (dp && dp[idx])
+		{
+			m = dp[idx];
+		}
+		
+		return m;
+	},
+
+	checkPrompt: function(filter, prompts) {
+		var me = this,
+			r = false,
+			i,
+			_dfs = filter ? filter.subConditions : null,
+			_dfg = filter ? filter.subGroups : null;
+			
+		if (_dfs && _dfs.length > 0)
+		{
+			for (i=0; i < _dfs.length; i++)
+			{
+				if (_dfs[i]._d7/*isprompt*/)
+				{
+					prompts.push(_dfs[i]);
+				}
+			}
+		}
+		
+		if (_dfg && _dfg.length > 0)
+		{
+			for (i=0; i < _dfg.length; i++)
+			{
+				me.checkPrompt(_dfg[i], prompts);
+			}
+		}
+		
+		return r;
+	},
+	
+	_IJ1/*getCurrentPivot*/: function(me) {
+		var pivotxml,
+			sheet = this,
+			i, nr,
+			_dff, _dfs,
+			rptitem,
+			chartPivot,
+			cco/*chartOption*/,
+			sql_prompts,
+			gfilter,
+			itemstyle,
+			Xsf/*sheetformula*/,
+			dff1/*drillitems*/,
+			sortoption,
+			dashboardfilter,
+			__ap;
+		
+		pivotxml = [
+			"<Sheet " + IG$/*mainapp*/._I20/*XUpdateInfo*/(sheet, me.__pca[0], "b")
+			+ IG$/*mainapp*/._I20/*XUpdateInfo*/(sheet, me.__pca[1], "s")
+			+ IG$/*mainapp*/._I20/*XUpdateInfo*/(sheet, me.__pca[2], "i")
+			+ ">" + "<name><![CDATA[" + (sheet.name || "") + "]]></name>"
+			+ "<Pivot "
+			+ IG$/*mainapp*/._I20/*XUpdateInfo*/(sheet, me.__pca[3], "s")
+			+ IG$/*mainapp*/._I20/*XUpdateInfo*/(sheet, me.__pca[4], "i")
+			+ IG$/*mainapp*/._I20/*XUpdateInfo*/(sheet, me.__pca[5], "b")
+			+ ">"];
+			
+		__ap = function(val) {
+			pivotxml.push(val);
+		};
+		
+		$.each([
+			{
+				a: "RowDimensions",
+				b: sheet.rows
+			},
+			{
+				a: "ColumnDimensions",
+				b: sheet.cols
+			},
+			{
+				a: "Measures",
+				b: sheet.measures
+			},
+			{
+				a: "QueryItems",
+				b: sheet.queryItems
+			},
+			{
+				a: "Clusters",
+				b: sheet.clusters
+			}
+		], function(n, m) {
+			var i;
+			__ap("<" + m.a + ">");
+			for (i=0; i < m.b.length; i++)
+			{
+				__ap(m.b[i].C_1/*getItemXML*/());
+			}
+			__ap("</" + m.a + ">");
+		});
+		
+		if (sheet.c1)
+		{
+			__ap("<c1>" + sheet.c1.C_1/*getItemXML*/() + "</c1>");
+		}
+		
+		__ap("<rptitems>");
+		for (nr=0; nr < sheet.rptitems.length; nr++)
+		{
+			rptitem = sheet.rptitems[nr];
+			__ap("<rptitem" + IG$/*mainapp*/._I20/*XUpdateInfo*/(rptitem, "name;measureposition;measuretitle", "s") + ">");
+			
+			$.each([
+				{
+					a: "rows",
+					b: rptitem.rows
+				},
+				{
+					a: "columns",
+					b: rptitem.cols
+				},
+				{
+					a: "measures",
+					b: rptitem.measures
+				}
+			], function(n, m) {
+				var j;
+				if (m.b && m.b.length)
+				{
+					__ap("<" + m.a + ">");
+					for (j=0; j < m.b.length; j++)
+					{
+						__ap(m.b[j].C_1/*getItemXML*/());
+					}
+					__ap("</" + m.a + ">");
+				}
+			});
+			
+			if (rptitem.c1)
+			{
+				__ap("<c1>" + rptitem.c1.C_1/*getItemXML*/() + "</c1>");
+			}
+			
+			if (rptitem.ext_title)
+			{
+				__ap("<ext_title><![CDATA[" + rptitem.ext_title + "]]></ext_title>");
+			}
+			
+			if (rptitem.filter)
+			{
+				__ap("<Filter>");
+				_dff = rptitem.filter;
+				_dfs = _dff ? _dff.subGroups : null;
+				if (_dfs && _dfs.length > 0)
+				{
+					for (i=0; i < _dfs.length; i++)
+					{
+						__ap(_dfs[i].TX/*getXML*/());
+					}
+				}
+				__ap("</Filter>");
+			}
+			
+			if (rptitem.havingfilter)
+			{
+				__ap("<HavingFilter>");
+				_dff = rptitem.havingfilter;
+				_dfs = _dff ? _dff.subGroups : null;
+				if (_dfs && _dfs.length > 0)
+				{
+					for (i=0; i < _dfs.length; i++)
+					{
+						__ap(_dfs[i].TX/*getXML*/());
+					}
+				}
+				__ap("</HavingFilter>");
+			}
+			
+			__ap("</rptitem>");
+		}
+		__ap("</rptitems></Pivot><UserDefinedGroup/>");
+		
+		chartPivot = sheet.chartPivot;
+		cco/*chartOption*/ = sheet.cco/*chartOption*/;
+		
+		
+		if (sheet.sqloption)
+		{
+			__ap("<ExecuteSQL dbpool='" + (sheet.sqloption.dbpool || "") + "'"
+				+ " querytool='F'"
+				+ "><SQL><![CDATA["
+				+ (sheet.sqloption.sql || "")
+				+ "]]></SQL>");
+			
+			if (sheet.sqloption.columns)
+			{
+				__ap("<columns>" + IG$/*mainapp*/._I4e/*ColumnsToString*/(sheet.sqloption.columns, "item") + "</columns>");
+			}
+			
+			if (sheet.sqloption.prompts)
+			{
+				__ap("<prompts>");
+				for (i=0; i < sheet.sqloption.prompts.length; i++)
+				{
+					__ap(sheet.sqloption.prompts[i].L1/*getXML*/());
+				}
+				__ap("</prompts>");
+			}
+					 
+			
+	  		__ap("</ExecuteSQL>");
+		}
+		
+		sql_prompts = sheet.sql_prompts;
+		
+		if (sql_prompts || (window._report_prompt && window._report_prompt.length))
+		{
+			__ap("<sql_prompts>");
+			if (sql_prompts && sql_prompts.length)
+			{
+				for (i=0; i < sql_prompts.length; i++)
+				{
+					__ap("<prompt name='" + sql_prompts[i].name + "'><values>");
+					for (j=0; j < sql_prompts[i].values.length ;j++)
+					{
+						__ap("<value><code><![CDATA[" + (sql_prompts[i].values[j].code || "") + "]]></code>"
+							+ "<text><![CDATA[" + (sql_prompts[i].values[j].text || "") + "]]></text>"
+							+ "</value>");
+					}
+					__ap("</values></prompt>");
+				}
+			}
+			if (window._report_prompt && window._report_prompt.length)
+			{
+				for (i=0; i < window._report_prompt.length; i++)
+				{
+					if (window._report_prompt[i].name && window._report_prompt[i].values)
+					{
+						__ap("<prompt name='" + window._report_prompt[i].name + "'><values>");
+						for (j=0; j < window._report_prompt[i].values.length ;j++)
+						{
+							__ap("<value><code><![CDATA[" + (window._report_prompt[i].values[j].code || "") + "]]></code>"
+								+ "<text><![CDATA[" + (window._report_prompt[i].values[j].text || "") + "]]></text>"
+								+ "</value>");
+						}
+						__ap("</values></prompt>");
+					}
+				}
+			}
+			__ap("</sql_prompts>");
+		}
+					
+		__ap("<Filter>");
+		_dff = sheet.filter;
+		_dfs = _dff ? _dff.subGroups : null;
+		if (_dfs && _dfs.length > 0)
+		{
+			for (i=0; i < _dfs.length; i++)
+			{
+				__ap(_dfs[i].TX/*getXML*/());
+			}
+		}
+
+		__ap("</Filter>");
+		
+		__ap("<HavingFilter>");
+		_dff = sheet.havingfilter;
+		_dfs = _dff ? _dff.subGroups : null;
+		if (_dfs && _dfs.length > 0)
+		{
+			for (i=0; i < _dfs.length; i++)
+			{
+				__ap(_dfs[i].TX/*getXML*/());
+			}
+		}
+		__ap("</HavingFilter>");
+		
+		if (sheet._IL9/*auxfilter*/)
+		{
+			__ap("<AuxFilter>");
+			for (var key in sheet._IL9/*auxfilter*/)
+			{
+				__ap(sheet._IL9/*auxfilter*/[key]);
+			}
+			__ap("</AuxFilter>");
+		}
+		
+		if (sheet.mdf)
+		{
+			__ap("<gridfilter>");
+			for (var key in sheet.mdf)
+			{
+				gfilter = sheet.mdf[key];
+				if (gfilter && gfilter.op)
+				{
+					__ap("<c i='" + key + "' op='" + gfilter.op + "'><v1><![CDATA[" + (gfilter.val1 || "") + "]]></v1><v2><![CDATA[" + (gfilter.val2 || "") + "]]></v2></c>");
+				}
+			}
+			__ap("</gridfilter>");
+		}
+		
+		__ap("<MeasureOption><measureformat><![CDATA[" + Base64.encode(sheet.measureformat || "") + "]]></measureformat>");
+		__ap("<measureformatname><![CDATA[" + Base64.encode(sheet.measureformatname || "") + "]]></measureformatname>");
+		__ap("</MeasureOption>");
+		
+		__ap("<Style><item>");
+		itemstyle = sheet.itemstyle;
+		if (itemstyle)
+		{
+			for (i=0; i < itemstyle.length; i++)
+			{
+				__ap(itemstyle[i].tx/*getXML*/());
+			}
+		}
+		__ap("</item></Style>");
+		__ap("<SheetFormula>");
+		Xsf/*sheetformula*/ = sheet.Xsf/*sheetformula*/;
+		if (Xsf/*sheetformula*/)
+		{
+			for (i=0; i < Xsf/*sheetformula*/.length; i++)
+			{
+				__ap(Xsf/*sheetformula*/[i].TX/*getXML*/());
+			}
+		}
+		__ap("</SheetFormula>");
+		__ap("<DetailView>");
+		dff1/*drillitems*/ = sheet.dff1/*drillitems*/;
+		for (i=0; i < dff1/*drillitems*/.length; i++)
+		{
+			__ap("<view" + IG$/*mainapp*/._I20/*XUpdateInfo*/(dff1/*drillitems*/[i], "uid;name;nodepath;type;sheetindex;sheetname;titem;tparams", "s") + " showintab='" + (sheet.dff1/*drillitems*/[i].showintab ? "T" : "F") + "'></view>");
+		}
+		__ap("</DetailView><CellOption/>");
+		__ap(cco/*chartOption*/.TX/*getXML*/());
+		__ap(sheet.rro/*ROption*/.TX/*getXML*/());
+        __ap(sheet.pro/*pythonOption*/.TX/*getXML*/());
+		sortoption = sheet.sortoption;
+		__ap("<SortOption"
+			+ IG$/*mainapp*/._I20/*XUpdateInfo*/(sortoption, "showlastrank;sortbyvalue", "b")
+			+ IG$/*mainapp*/._I20/*XUpdateInfo*/(sortoption, "sortcount", "i")
+			+ IG$/*mainapp*/._I20/*XUpdateInfo*/(sortoption, "sortmethod;sortmeasure;sortorder;sortorder_type;sortorder_memo;sortpartition", "s")
+			+ "/>");
+		dashboardfilter = sheet.dashboardfilter;
+		if (dashboardfilter && dashboardfilter.length > 0)
+		{
+			__ap("<DashboardFilter>");
+			for (i=0; i < dashboardfilter.length; i++)
+			{
+				__ap(IG$/*mainapp*/._I25/*toXMLString*/(dashboardfilter[i]));
+			}
+			__ap("</DashboardFilter>");
+		}
+		__ap("<WebLayout");
+		if (sheet.layoutinfo)
+		{
+			__ap(IG$/*mainapp*/._I20/*XUpdateInfo*/(sheet.layoutinfo, "headerposition;region;docid", "s"));
+			__ap(IG$/*mainapp*/._I20/*XUpdateInfo*/(sheet.layoutinfo, "width;height", "i"));
+			__ap(IG$/*mainapp*/._I20/*XUpdateInfo*/(sheet.layoutinfo, "collapsed", "b"));
+		}
+		__ap("></WebLayout><result uid='" + (sheet.resultuid || "") + "'/></Sheet>");
+		
+		return pivotxml.join("");
+	},
+	
+	mL/*isdrill*/: function(dobj, renderer) {
+		var me = this,
+			r = 1,
+			cl = renderer.cl,
+			i, dp;
+		
+		if (dobj.titem && cl)
+		{
+			r = 0;
+			
+			switch(cl.position)
+			{
+			case 1:
+				dp = me.rows;
+				break;
+			case 2:
+				dp = me.cols;
+				break;
+			case 3:
+				dp = me.measures;
+				break;
+			}
+			
+			if (dp && dp[cl.index] && dobj.titem.indexOf(dp[cl.index].uid) > -1)
+			{
+				r = 1;
+			}
+		}
+		
+		return r;
+	},
+
+	c$a/*parseReport*/: function(node) {
+		var me = this,
+			enode,
+			opt,
+			label, value, tnode, dview,
+			layoutinfo,
+			m_prt = {};
+		
+		me.enablepivot = true;
+		me.customfix = "F";
+		me.customfixcols = 0;
+		me.rowperpage = 20;
+		me.usepaging = "F";
+		me.pagestyle = "normal";
+		me.dataquerymode = "M_PIVOT";
+		me.viewmode = "grid";
+		me.viewchange = "T";
+		me.toolbutton = "F";
+		me.openload = true;
+		me.autorefresh = false;
+		me.refresh_timer = 60;
+		me.edrill = false;
+		me.syncrows = true;
+		
+		if (node)
+		{
+			me.columnfill = true;
+			IG$/*mainapp*/._I1f/*XGetInfo*/(me, node, me.__pca[0], "b");
+			IG$/*mainapp*/._I1f/*XGetInfo*/(me, node, me.__pca[1], "s");
+			IG$/*mainapp*/._I1f/*XGetInfo*/(m_prt, node, me.__pca[2], "s");
+			
+			if (m_prt.viewchange)
+			{
+				me.tb_vch = m_prt.viewchange == "T";
+			}
+			
+			if (m_prt.toolbutton)
+			{
+				me.tb_prt = m_prt.toolbutton == "T";
+			}
+			
+			if (m_prt.gridprint)
+			{
+				me.tb_prt_grd = m_prt.gridprint == "T";
+			}
+			
+			if (m_prt.exportbutton)
+			{
+				me.tb_prt_i = m_prt.exportbutton.toLowerCase();
+			}
+			
+			me.cubeuid = IG$/*mainapp*/._I06/*formatUID*/(me.cubeuid);
+			me.objtype = me.objtype || "SHEET";
+			IG$/*mainapp*/._I1f/*XGetInfo*/(me, node, "resultlimit;layoutmode", "i");
+			
+			me.name = IG$/*mainapp*/._I1b/*XGetAttr*/(node, "name");
+			
+			pivot = IG$/*mainapp*/._I18/*XGetNode*/(node, "name");
+			
+			if (pivot)
+			{
+				me.name = IG$/*mainapp*/._I24/*getTextContent*/(pivot);
+			}
+			
+			pivot = IG$/*mainapp*/._I18/*XGetNode*/(node, "Pivot");
+			
+			if (pivot)
+			{
+				IG$/*mainapp*/._I1f/*XGetInfo*/(me, pivot, me.__pca[3], "s");
+				IG$/*mainapp*/._I1f/*XGetInfo*/(me, pivot, me.__pca[4], "i");
+				IG$/*mainapp*/._I1f/*XGetInfo*/(me, pivot, me.__pca[5], "b");
+				
+				if (me.dataquerymode == "T")
+				{
+					me.dataquerymode = "M_DATA";
+				}
+				else if (me.dataquerymode == "F")
+				{
+					me.dataquerymode = "M_PIVOT";
+				}
+			}
+		}
+		else
+		{
+			me.measurelocation = "column";
+			me.measureposition = 0;
+			me.isdistinct = false;
+			me.fetchall = false;
+			me.showlnum = false;
+			me.hidemenu = false;
+			me.measuretitle = "F";
+			me.ext_title = null;
+			
+			me.openload = true;
+			me.columnfill = true;
+			me.viewchange = "T";
+			me.toolbutton = "F";
+		}
+		
+		me.rows = [];
+		me.cols = [];
+		me.measures = [];
+		me.clusters = [];
+		me.query = [];
+		me.queryItems = [];
+		me.rptitems = [];
+		
+		var i,
+			j,
+			snode,
+			nodes,
+			sf,
+			tn, tns,
+			rpt;
+		
+		if (node && pivot)
+		{
+			$.each([
+				{
+					a: "RowDimensions", 
+					b: me.rows
+				},
+				{
+					a: "ColumnDimensions",
+					b: me.cols
+				},
+				{
+					a: "Measures",
+					b: me.measures
+				},
+				{
+					a: "QueryItems",
+					b: me.queryItems
+				},
+				{
+					a: "Clusters",
+					b: me.clusters
+				}
+			], function(n, m) {
+				var snode = IG$/*mainapp*/._I18/*XGetNode*/(pivot, m.a),
+					nodes = IG$/*mainapp*/._I26/*getChildNodes*/(snode),
+					item, i;
+					
+				for (i=0; i < nodes.length; i++)
+				{
+					item = new IG$/*mainapp*/._IE8/*clItems*/(nodes[i]);
+					m.b.push(item);
+				}
+			});
+			
+			tn = IG$/*mainapp*/._I18/*XGetNode*/(pivot, "c1/item");
+				
+			if (tn)
+			{
+				me.c1 = new IG$/*mainapp*/._IE8/*clItems*/(tn, true);
+			}
+			
+			snode = IG$/*mainapp*/._I18/*XGetNode*/(pivot, "rptitems");
+			nodes = IG$/*mainapp*/._I26/*getChildNodes*/(snode);
+			for (i=0; i < nodes.length; i++)
+			{
+				rpt = {
+					rows: [],
+					measures: [],
+					cols: []
+				};
+				
+				me.rptitems.push(rpt);
+				
+				IG$/*mainapp*/._I1f/*XGetInfo*/(rpt, nodes[i], "name;measureposition;measuretitle", "s");
+				
+				$.each([
+					{
+						a: "columns",
+						b: rpt.cols
+					},
+					{
+						a: "measures",
+						b: rpt.measures
+					}
+				], function(n, m) {
+					var tn = IG$/*mainapp*/._I18/*XGetNode*/(nodes[i], m.a),
+						tns, j,
+						item;
+					if (tn)
+					{
+						tns = IG$/*mainapp*/._I26/*getChildNodes*/(tn);
+						for (j=0; j < tns.length; j++)
+						{
+							item = new IG$/*mainapp*/._IE8/*clItems*/(tns[j], true);
+							m.b.push(item);
+						}
+					}
+				});
+				
+				tn = IG$/*mainapp*/._I18/*XGetNode*/(nodes[i], "c1/item");
+				
+				if (tn)
+				{
+					rpt.c1 = new IG$/*mainapp*/._IE8/*clItems*/(tn, true);
+				}
+				
+				tn = IG$/*mainapp*/._I18/*XGetNode*/(nodes[i], "ext_title");
+				
+				if (tn)
+				{
+					rpt.ext_title = IG$/*mainapp*/._I24/*getTextContent*/(tn);
+				}
+				
+				rpt.filter = new IG$/*mainapp*/._IEb/*clFilterGroup*/();
+				rpt.havingfilter = new IG$/*mainapp*/._IEb/*clFilterGroup*/();
+				
+				tnode = IG$/*mainapp*/._I18/*XGetNode*/(nodes[i], "Filter");
+				me.p2/*parseFilter*/(tnode, rpt.filter);
+				
+				tnode = IG$/*mainapp*/._I18/*XGetNode*/(nodes[i], "HavingFilter");
+				me.p2/*parseFilter*/(tnode, rpt.havingfilter);
+			}
+		}
+		
+		me.Xsf/*sheetformula*/ = [];
+		me.si = 0;
+		me.sortoption = {};
+		me.dff1/*drillItems*/ = [];
+		
+		me.chartPivot = {clusters: [], rows: [], measures: []};
+		
+		me.filter = new IG$/*mainapp*/._IEb/*clFilterGroup*/();
+		me.havingfilter = new IG$/*mainapp*/._IEb/*clFilterGroup*/();
+		
+		if (node)
+		{
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "ChartOption");
+			me.cco/*chartOption*/ = new IG$/*mainapp*/._IEc/*clChartOption*/(tnode);
+			
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "ROption");
+			me.rro/*ROption*/ = new IG$/*mainapp*/._IEd/*clROption*/(tnode);
+            
+            tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "python");
+            me.pro/*pythonOption*/ = new IG$/*mainapp*/._IEdP/*clPyahonOption*/(tnode);
+			
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "ChartPivot");
+			
+			if (tnode)
+				me.p1/*parseChartPivot*/(tnode);
+			
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "Filter");
+			me.p2/*parseFilter*/(tnode, me.filter);
+			
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "HavingFilter");
+			me.p2/*parseFilter*/(tnode, me.havingfilter);
+			
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "Style");
+			me.p3/*parseStyle*/(tnode);
+			
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "MeasureOption");
+			if (tnode)
+			{
+				$.each(["measureformat", "measureformatname"], function(n, s) {
+					var snode = IG$/*mainapp*/._I18/*XGetNode*/(tnode, s);
+					if (snode)
+					{
+						me[s] = IG$/*mainapp*/._I24/*getTextContent*/(snode);
+						if (me[s])
+						{
+							me[s] = Base64.decode(me[s]);
+						}
+					}
+				});				
+			}
+			
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "SortOption");
+			if (tnode)
+			{
+				me.sortoption = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnode);
+				me.sortoption.sortbyvalue = me.sortoption.sortbyvalue == "F" ? false : true;
+				me.sortoption.showlastrank = me.sortoption.showlastrank == "T";
+			}
+			
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "result");
+			if (tnode)
+			{
+				me.resultuid = IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "uid");
+			}
+			
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "SheetFormula");
+			
+			if (tnode)
+			{
+				nodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+				for (i=0; i < nodes.length; i++)
+				{
+					sf = new IG$/*mainapp*/._IF0/*clSheetFormula*/(nodes[i]);
+					if (sf.fid && sf.fid.indexOf("_") > -1)
+					{
+						me.si = Math.max(me.si, parseInt(sf.fid.substring(sf.fid.indexOf("_") + 1)) + 1);
+					}
+					else
+					{
+						sf.fid = "formula_" + me.si;
+						me.si++;
+					}
+					me.Xsf/*sheetformula*/.push(sf);
+				}
+			}
+			
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "DetailView");
+			
+			if (tnode)
+			{
+				snodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+				for (i=0; i < snodes.length; i++)
+				{
+					dview = {};
+					IG$/*mainapp*/._I1f/*XGetInfo*/(dview, snodes[i], "uid;name;nodepath;type;sheetindex;sheetname;showintab;titem;tparams", "s");
+					dview.showintab = (dview.showintab == "T") ? true : false;
+					me.dff1/*drillItems*/.push(dview);
+				}
+			}
+			
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "ExecuteSQL");
+			
+			if (tnode)
+			{
+				var snode = IG$/*mainapp*/._I18/*XGetNode*/(tnode, "SQL"),
+					sc,
+					sqloption;
+				sqloption = me.sqloption = {};
+				sqloption.dbpool = IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "dbpool");
+				sqloption.querytool = "T";
+				if (snode)
+				{
+					sqloption.sql = IG$/*mainapp*/._I24/*getTextContent*/(snode);
+				}
+				snode = IG$/*mainapp*/._I18/*XGetNode*/(tnode, "columns");
+				if (snode)
+				{
+					sc = IG$/*mainapp*/._I26/*getChildNodes*/(snode);
+					if (sc && sc.length > 0)
+					{
+						sqloption.columns = [];
+						for (i=0; i < sc.length; i++)
+						{
+							var column = IG$/*mainapp*/._I4f/*parseColumn*/(sc[i]);
+							sqloption.columns.push(column);
+						}
+					}
+				}
+				
+				snode = IG$/*mainapp*/._I18/*XGetNode*/(tnode, "prompts");
+				if (snode)
+				{
+					sc = IG$/*mainapp*/._I26/*getChildNodes*/(snode);
+					if (sc && sc.length > 0)
+					{
+						sqloption.prompts = [];
+						for (i=0; i < sc.length; i++)
+						{
+							var prompt = new IG$/*mainapp*/._Ib4/*prompt*/(sc[i]);
+							sqloption.prompts.push(prompt);
+						}
+					}
+				}
+			}
+			
+			layoutinfo = me.layoutinfo = {};
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "WebLayout");
+			
+			if (tnode)
+			{
+				IG$/*mainapp*/._I1f/*XGetInfo*/(layoutinfo, tnode, "headerposition;region;docid", "s");
+				IG$/*mainapp*/._I1f/*XGetInfo*/(layoutinfo, tnode, "width;height", "i");
+				IG$/*mainapp*/._I1f/*XGetInfo*/(layoutinfo, tnode, "collapsed", "b");
+			}
+		}
+		else
+		{
+			me.cco/*chartOption*/ = new IG$/*mainapp*/._IEc/*clChartOption*/();
+			me.rro/*ROption*/ = new IG$/*mainapp*/._IEd/*clROption*/();
+            me.pro/*pythonOption*/ = new IG$/*mainapp*/._IEdP/*clPyahonOption*/();
+		}
+	},
+	p3/*parseStyle*/: function(node) {
+		var me = this,
+			i,
+			itemnode,
+			child,
+			st;
+		
+		me.itemstyle = [];
+		
+		if (node)
+		{
+			itemnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "item"); 
+			child = IG$/*mainapp*/._I26/*getChildNodes*/(itemnode);
+			
+			for (i=0; i < child.length; i++)
+			{
+				st = new IG$/*mainapp*/._IF7/*clReportStyle*/(child[i]);
+				me.itemstyle.push(st);
+			}
+		}
+	},
+	p1/*parseChartPivot*/: function(node) {
+		var me = this,
+			i,
+			tnode, child,
+			item,
+			chartPivot = me.chartPivot;
+		
+		$.each([
+			{
+				a: "ClusterDimensions",
+				b: chartPivot.clusters
+			},
+			{
+				a: "RowDimensions",
+				b: chartPivot.rows
+			},
+			{
+				a: "Measures",
+				b: chartPivot.measures
+			}
+		], function(n, m) {
+			var tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, m.a),
+				i, item;
+			if (tnode)
+			{
+				child = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+				for (i=0; i < child.length; i++)
+				{
+					item = new IG$/*mainapp*/._IE8/*clItems*/(child[i]);
+					m.b.push(item);
+				}
+			}
+		});
+	},
+	p2/*parseFilter*/: function(node, filter) {
+		var me = this;
+		
+		if (node)
+		{
+			var fglist = IG$/*mainapp*/._I26/*getChildNodes*/(node, "FilterGroup"),
+				i;
+	
+			if (fglist && fglist.length > 0)
+			{
+				for (i=0; i < fglist.length; i++)
+				{
+					var tgroup = new IG$/*mainapp*/._IEb/*clFilterGroup*/();
+					tgroup.name = IG$/*mainapp*/._I1b/*XGetAttr*/(fglist[i], "name"); 
+					filter.subGroups.push(tgroup);
+					me.parseSubFilter(fglist[i], tgroup);
+				}
+			}
+		}
+	},
+	parseSubFilter: function(fgnode, ugroup) {
+		var i, j,
+			group,
+			sfg,
+			me = this;
+		
+		sfg = IG$/*mainapp*/._I26/*getChildNodes*/(fgnode);
+		
+		if (sfg && sfg.length > 0)
+		{
+			for (j=0; j < sfg.length; j++)
+			{
+				if (IG$/*mainapp*/._I29/*XGetNodeName*/(sfg[j]) == "FilterGroup")
+				{
+					var group = new IG$/*mainapp*/._IEb/*clFilterGroup*/();
+					group.name = IG$/*mainapp*/._I1b/*XGetAttr*/(sfg[j], "name"); 
+					me.parseSubFilter(sfg[j], group);
+					ugroup.subGroups.push(group);
+				}
+				else
+				{
+					ugroup.subConditions.push(new IG$/*mainapp*/._IE9/*clFilter*/(sfg[j]));
+				}
+			}
+		}
+	},
+	
+	Uc/*checkCubeAvailable*/: function(cubeuid) {
+		var me = this,
+			r = 1,
+			n = me.rows.length + me.cols.length + me.measures.length + me.clusters.length;
+		
+		if (n > 0)
+		{
+			r = (me.cubeuid == cubeuid); 
+		}
+		
+		return r;
+	}
+};
+
+IG$/*mainapp*/._IF0/*clSheetFormula*/ = function(node) {
+	var me = this,
+		tnode,
+		expr;
+	
+	me.__pca = [
+		"baseuid;direction;stylename;title;type;fid;showtoprow;groupresults",
+		"separatecolumn;subtotalbase;usecolumnformat"
+	];
+	
+	if (node)
+	{
+		IG$/*mainapp*/._I1f/*XGetInfo*/(me, node, me.__pca[0], "s");
+		IG$/*mainapp*/._I1f/*XGetInfo*/(me, node, me.__pca[1], "b");
+		
+		IG$/*mainapp*/._I1fx/*XGetInfo*/(me, node, "formatstring");
+		
+		tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "Expression");
+		
+		if (tnode)
+		{
+			expr = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnode);
+			$.each(expr, function(k, o) {
+				me[k] = o;
+			});
+			me.expression = IG$/*mainapp*/._I24/*getTextContent*/(tnode);
+		}
+	}
+}
+
+IG$/*mainapp*/._IF0/*clSheetFormula*/.prototype = {
+	TX/*getXML*/: function() {
+		var me = this,
+			r, props;
+		
+		props = me.g1/*getProperties*/();
+		
+		r = "<Formula"
+		  + IG$/*mainapp*/._I20/*XUpdateInfo*/(me, me.__pca[0], "s")
+		  + IG$/*mainapp*/._I20/*XUpdateInfo*/(me, me.__pca[1], "b")
+		  + "><Expression";
+		
+		if (props)
+		{
+			$.each(props, function(k, o) {
+				if (me[o.name])
+				{
+					r += " " + o.name + "='" + me[o.name] + "'";
+				}
+			});
+		}
+		  
+		r += "><![CDATA[" + (me.expression ? me.expression : "") + "]]></Expression>"
+		  + (me.formatstring ? "<formatstring><![CDATA[" + (me.formatstring) + "]]></formatstring>" : "")
+		  + "</Formula>";
+		
+		return r;
+	},
+	p1/*getRecord*/: function(rec) {
+		var me = this,
+			__pca = me.__pca,
+			row,
+			i, j,
+			props;
+		
+		for (i=0; i < __pca.length; i++)
+		{
+			row = __pca[i].split(";");
+			
+			for (j=0; j < row.length; j++)
+			{
+				me[row[j]] = rec.get(row[j]);
+			}
+		}
+		
+		me.expression = rec.get("expression");
+		me.formatstring = rec.get("formatstring");
+		
+		props = me.g1/*getProperties*/();
+		
+		if (props)
+		{
+			$.each(props, function(k, o) {
+				me[o.name] = rec.get(o.name);
+			});
+		}
+	},
+	
+	g1/*getProperties*/: function() {
+		var me = this,
+			fm = IG$/*mainapp*/._IEFc/*formulas*/,
+			props;
+		
+		$.each(fm, function(k, t) {
+			if (t.expr == me.expression)
+			{
+				props = t.params;
+				
+				return false;
+			}
+		});
+		
+		return props;
+	}
+}
+
+IG$/*mainapp*/._IF1/*clSheetResult*/ = function(xdoc, maxrowcount) {
+	var me = this,
+		i, j,
+		node = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item/Sheet");
+	
+	me.rows = parseInt(IG$/*mainapp*/._I1b/*XGetAttr*/(node, "rowcount"));
+	me.cols = parseInt(IG$/*mainapp*/._I1b/*XGetAttr*/(node, "columncount"));
+	me.srow = IG$/*mainapp*/._I1b/*XGetAttr*/(node, "startrow");
+	me.srow = (me.srow) ? parseInt(me.srow) : 0;
+	me.colfix = 0;
+	me.rowfix = 0;
+	me.delim = IG$/*mainapp*/._I1b/*XGetAttr*/(node, "delimiter");
+	
+	me.merge = [];
+	me.styles = {};
+	
+	me.header = [];
+	me.data = [];
+	
+	var tnode,
+		tchild,
+		c,
+		tvalue;
+	
+	tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "Header");
+	if (tnode)
+	{
+		tchild = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+		for (i=0; i < tchild.length; i++)
+		{
+			c = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tchild[i]);
+			me.header.push(c);
+		}
+	}
+	
+	tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "Data");
+	if (tnode)
+	{
+		tvalue = IG$/*mainapp*/._I24/*getTextContent*/(tnode);
+	}
+	else
+	{
+		tvalue = IG$/*mainapp*/._I24/*getTextContent*/(node);
+	}
+	
+	var tarr = tvalue.split(me.delim),
+		trow = [],
+		nrow = 0,
+		ncol = 0;
+	
+	for (i=0; i < tarr.length; i++)
+	{
+		var tdata = {text:tarr[i], mrow:nrow, mcol:ncol, merged:0, stylename:null, chart:null};
+		trow.push(tdata);
+		
+		ncol++;
+		
+		if (i > 0 && ncol == me.cols)
+		{
+			if (nrow == 0 && me.header.length == 0)
+			{
+				for (j=0; j < trow.length; j++)
+				{
+					c = {fieldid: "column_" + j, name: trow[j].text, type: "string"};
+					me.header.push(c);
+				}
+			}
+			else
+			{
+				me.data.push(trow);
+			}
+			trow = [];
+			ncol = 0;
+			nrow++;
+			
+			if (maxrowcount && nrow > maxrowcount)
+			{
+				break;
+			}
+		}
+	}
+}
+
+IG$/*mainapp*/._IF2/*clResults*/ = function(xdoc, tnode) {
+	var me = this,
+		node = tnode || IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/results"),
+		nodes,
+		snode,
+		result,
+		i;
+	
+	me.results = [];
+	
+	me.r_stat = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/r_results");
+	
+	me._IL8/*jobid*/ = IG$/*mainapp*/._I1b/*XGetAttr*/(node, "jobid");
+	nodes = IG$/*mainapp*/._I26/*getChildNodes*/(node);
+	
+	for (i=0; i < nodes.length; i++)
+	{
+		snode = nodes[i];
+		result = new IG$/*mainapp*/._IF4/*clResult*/(snode);
+		me.results.push(result);
+	}
+}
+
+IG$/*mainapp*/._IF3/*clValueList*/ = function(node) {
+	var me = this,
+		i,
+		tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "Data"),
+		tvalue = IG$/*mainapp*/._I24/*getTextContent*/(tnode),
+		arr,
+		data;
+		
+	me.item = IG$/*mainapp*/._I1c/*XGetAttrProp*/(node);
+	data = me.data = [];
+	
+	arr = tvalue.split(me.item.delimiter);
+	
+	for (i=0; i < arr.length-1; i++)
+	{
+		data.push({code: arr[i]});
+	}
+}
+
+IG$/*mainapp*/._IF4/*clResult*/ = function(node) {
+	var me = this,
+		mnode,
+		mnodevalue,
+		amerge,
+		n, ma, sl,
+		snode,
+		snodes,
+		delim,
+		sdelim = ";",
+		params,
+		i;
+	
+	params = me._params = {};
+	
+	me.m1/*havenoresult*/ = true;
+	
+	if (!node)
+		return;
+	
+	IG$/*mainapp*/._I1f/*XGetInfo*/(me, node, "rows;cols;col;row;pagestart;pageend;source", "i");
+	me.colfix = me.col; me.rowfix = me.row;
+	IG$/*mainapp*/._I1f/*XGetInfo*/(me, node, "delimiter;clustercode;clustervalue;cache;cache_time;u_cache_time", "s");
+	delim = me.delim = me.delimiter;
+	me.clustercode = me.clustercode.split(delim);
+	me.clustervalue = me.clustervalue.split(delim);
+	me.clusterdesc = "";
+	
+	me.cache = (me.cache == "T" || me.cache == "true");
+	
+	me.m1/*havenoresult*/ = (me.rows > me.rowfix) ? false : true;
+	
+	for (i=0; i < me.clustercode.length; i++)
+	{
+		me.clusterdesc += (i > 0 ? " " : "") + (me.clustervalue[i] || me.clustercode[i]);
+	}
+	
+	mnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "parameters");
+	
+	if (mnode)
+	{
+		snodes = IG$/*mainapp*/._I26/*getChildNodes*/(mnode);
+		for (n=0; n < snodes.length; n++)
+		{
+			params[IG$/*mainapp*/._I1b/*XGetAttr*/(snodes[n], "name")] = IG$/*mainapp*/._I24/*getTextContent*/(snodes[n]);
+		}
+	}
+	
+	mnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "MergeRange");
+	me.merge = [];
+	
+	me.styles = {};
+	
+	if (mnode)
+	{
+		mnodevalue = IG$/*mainapp*/._I24/*getTextContent*/(mnode);
+		amerge = mnodevalue.split(";");
+		
+		for (n=0; n < amerge.length; n++)
+		{
+			if (amerge[n] != "")
+			{
+				ma = amerge[n].split(",");
+				me.merge.push(ma);
+			}
+		}
+	}
+	
+	snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "Styles");
+	if (snode)
+	{
+		me.c_cset = IG$/*mainapp*/._I1b/*XGetAttr*/(snode, "c_cset"); 
+		snodes = IG$/*mainapp*/._I26/*getChildNodes*/(snode);
+		
+		for (n=0; n < snodes.length; n++)
+		{
+			sl = new IG$/*mainapp*/._IF9/*clStyle*/(snodes[n], false);
+			me.styles[sl.name] = sl;
+		}
+	}
+	
+	snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "Stats");
+	me.fs_/*statistics*/ = [];
+	var statobj,
+		statnode, sn,
+		treeinfo, trow, treemap = {},
+		mval,
+		cr, cc,
+		mr, mc, data, geodata;
+	
+	if (snode)
+	{
+		snodes = IG$/*mainapp*/._I26/*getChildNodes*/(snode);
+		for (n=0; n < snodes.length; n++)
+		{
+			statobj = {col: Number(IG$/*mainapp*/._I1b/*XGetAttr*/(snodes[n], "colindex"))};
+			statnode = IG$/*mainapp*/._I26/*getChildNodes*/(snodes[n]);
+			for (sn=0; sn < statnode.length; sn++)
+			{
+				statobj[IG$/*mainapp*/._I29/*XGetNodeName*/(statnode[sn])] = IG$/*mainapp*/._I24/*getTextContent*/(statnode[sn]);
+			}
+			me.fs_/*statistics*/.push(statobj);
+		}
+	}
+	
+	snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "curvefit/bands");
+	
+	if (snode)
+	{
+		snodes = IG$/*mainapp*/._I26/*getChildNodes*/(snode);
+		me.__bands = snodes;
+	}
+	
+	me.stylemap = null;
+	
+	snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "StyleMap");
+	if (snode)
+	{
+		me.stylemap = {};
+		var st = IG$/*mainapp*/._I24/*getTextContent*/(snode);
+		st = st.split(delim);
+		for (n=0; n < st.length-1; n++)
+		{
+			me.stylemap[n] = st[n];
+		}
+	}
+	
+	snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "FilterDesc");
+	
+	if (snode)
+	{
+		me.f_/*filterdesc*/ = IG$/*mainapp*/._I24/*getTextContent*/(snode);
+	}
+	
+	snode = IG$/*mainapp*/._I18/*XGetNode*/(node, "TreeInfo");
+	if (snode)
+	{
+		treeinfo = IG$/*mainapp*/._I24/*getTextContent*/(snode);
+		if (treeinfo && treeinfo != "")
+		{
+			treeinfo = treeinfo.split(";");
+			this.hastree = true;
+			for (i=0; i < treeinfo.length; i++)
+			{
+				trow = treeinfo[i].split(",");
+				treeinfo[i] = {
+					r: parseInt(trow[0]),
+					c: parseInt(trow[1]),
+					d: parseInt(trow[2]),
+					p: trow[3],
+					e: trow[4],
+					hc: trow[5] == "1",
+					h: trow[6] == "1",
+					hm: parseInt(trow[7])
+				};
+				
+				treemap["" + treeinfo[i].r + "_" + treeinfo[i].c] = treeinfo[i];
+			}
+		}
+	}
+	
+	var tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "TableData"),
+		p,
+		dchild, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, stname, arow, r, k, i,
+		r1, r2, c1, c2, cell, key, tj,
+		mcell,
+		mchart, nn, nno;
+	
+	data = me.data = [];
+	geodata = me.geodata = [];
+	
+	if (tnode)
+	{
+		snodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode);
+
+		if (snodes.length > 0)
+		{
+			for (n=0; n < snodes.length; n++)
+			{
+				// text;value;code;style;pos;mi;ist;pi
+				p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(snodes[n]);
+				if (p.lat && p.lng)
+				{
+					geodata.push({
+						row: n,
+						lat: p.lat,
+						lng: p.lng,
+						c: (p.c == "T"),
+						cc: p.c == "T" ? parseInt(p.cc) : -1
+					});
+				}
+				dchild = IG$/*mainapp*/._I26/*getChildNodes*/(snodes[n]);
+				nno = {};
+				for (nn=0; nn < dchild.length; nn++)
+				{
+					nno[IG$/*mainapp*/._I29/*XGetNodeName*/(dchild[nn])] = dchild[nn];
+				}
+				a0 = IG$/*mainapp*/._I24/*getTextContent*/(nno.t);
+				a0 = (a0 ? a0.split(delim) : null); // text
+				a1 = IG$/*mainapp*/._I24/*getTextContent*/(nno.v);
+				a1 = (a1 ? a1.split(delim) : null); // value
+				a2 = IG$/*mainapp*/._I24/*getTextContent*/(nno.c).split(delim); // code
+				a3 = IG$/*mainapp*/._I24/*getTextContent*/(nno.s).split(sdelim); // style
+				a4 = IG$/*mainapp*/._I24/*getTextContent*/(nno.p).split(sdelim); // position
+				a5 = IG$/*mainapp*/._I24/*getTextContent*/(nno.m).split(sdelim); // metric indexes
+				a6 = IG$/*mainapp*/._I24/*getTextContent*/(nno.i).split(sdelim); // istitle
+				a7 = IG$/*mainapp*/._I24/*getTextContent*/(nno.pi).split(sdelim); // pi
+				a8 = nno.rs ? IG$/*mainapp*/._I24/*getTextContent*/(nno.rs).split(sdelim) : null; // pi
+				a9 = nno.cc ? IG$/*mainapp*/._I24/*getTextContent*/(nno.cc).split(sdelim) : null; // color
+				a10 = nno.cm ? IG$/*mainapp*/._I24/*getTextContent*/(nno.cm).split(sdelim) : null; // color
+				
+				arow = [];
+
+				for (r=0; r < me.cols; r++) 
+				{
+					cell = {
+						_n_: p.i,
+						text: a0 ? a0[r] : (a1 ? a1[r] : a2[r]), 
+						mrow:0, 
+						mcol:0, 
+						merged:0, 
+						stylename: (me.stylemap ? me.stylemap[parseInt(a3[r])] : a3[r]), 
+						chart:null,
+						position: parseInt(a4[r] || -1),
+						code: a2[r] || null,
+						value: a1 ? a1[r] || null : null,
+						index: parseInt(a5[r] || -1),
+						title: parseInt(a6[r] || -1),
+						pindex: parseInt(a7[r] || -1),
+						cc: a9 ? a9[r] : null,
+						si: a8 ? a8[r] : null,
+						cm: a10 && a10[r] ? parseInt(a10[r]) : -1
+					};
+					
+					key = "" + n + "_" + r;
+					
+					if (treeinfo && treemap[key])
+					{
+						cell.celltree = {
+							depth: treemap[key].d,
+							ptext: treemap[key].p,
+							haschild: treemap[key].hc,
+							parent: null,
+							opened: treemap[key].e == "1",
+							h: treemap[key].h,
+							hm: treemap[key].hm
+						};
+						if (cell.celltree.ptext)
+						{
+							for (tj=n-1; tj>=0; tj--)
+							{
+								if (data[tj][r].code == cell.celltree.ptext && data[tj][r].celltree && data[tj][r].celltree.depth == cell.celltree.depth-1)
+								{
+									data[tj][r].celltree.haschild = true;
+									cell.celltree.parent = data[tj][r];
+									break;
+								}
+							}
+						}
+						
+						if (arow.length > 0)
+						{
+							if (arow[0].mcelltree)
+							{
+								arow[0].mcelltree.push(r);
+							}
+							else
+							{
+								arow[0].mcelltree = [r];
+							}
+						}
+						else
+						{
+							cell.mcelltree = [r];
+						}
+					}
+					arow.push(cell);
+				}
+				
+				data.push(arow);
+			}
+		}
+		
+		for (n=0; n < me.merge.length; n++)
+		{
+			r1 = parseInt(me.merge[n][0]);
+			r2 = parseInt(me.merge[n][1]);
+			c1 = parseInt(me.merge[n][2]);
+			c2 = parseInt(me.merge[n][3]);
+			
+			mval = 0;
+			
+			if (r2 > data.length - 1)
+			{
+				r2 = data.length-1;
+			}
+			
+			for (k=r1; k < r2+1; k++)
+			{
+				for (t=c1; t < c2+1; t++)
+				{
+					mr = r2 - r1;
+					mc = c2 - c1;
+					
+					mcell = data[k][t]; 
+					mval = mcell.merged;
+					
+					if (k == r1 && t == c1)
+					{
+						if (c2 - c1 > 0)
+						{
+							mval |= 2;
+						}
+						if (r2 - r1 > 0)
+						{
+							mval |= 1;
+						}
+					}
+					/*
+					else if (k == r2 && t == c2)
+					{
+						me.data[k][t].merged = 2;
+					}
+					*/
+					else
+					{
+						if (c2 - c1 > 0)
+						{
+							mval |= 4;
+						}
+						if (r2 - r1 > 0)
+						{
+							mval |= 8;
+						}
+					}
+					
+					cr = mcell.mrow;
+					cc = mcell.mcol;
+					mcell.merged = mval;
+					mcell.mrow = Math.max(mr, cr);
+					mcell.mcol = Math.max(mc, cc);
+					
+					// mcell.text += "(" + mval + "," + mcell.mrow + "," + mcell.mcol + ")";
+				}
+			}
+		}
+	}
+	
+	var minode = IG$/*mainapp*/._I18/*XGetNode*/(node, "MicroChart");
+	me.microcharts = [];
+	
+	if (minode)
+	{
+		snodes = IG$/*mainapp*/._I26/*getChildNodes*/(minode);
+		
+		if (snodes.length > 0)
+		{
+			for (n=0; n < snodes.length; n++)
+			{
+				mchart = new IG$/*mainapp*/._IF5/*clMicroChart*/(snodes[n]);
+				me.microcharts.push(mchart);
+				if (me.data.length > mchart.rowIndex && me.data[mchart.rowIndex].length > mchart.colIndex)
+				{
+					me.data[mchart.rowIndex][mchart.colIndex].chart = mchart;
+				}
+			}
+		}
+	}
+	
+	minode = IG$/*mainapp*/._I18/*XGetNode*/(node, "hidden_columns");
+	me.hidden_columns = [];
+	
+	if (minode)
+	{
+		var st = IG$/*mainapp*/._I24/*getTextContent*/(minode);
+		
+		if (st)
+		{
+			st = st.split(",");
+			for (n=0; n < st.length; n++)
+			{
+				if (st[n])
+				{
+					me.hidden_columns.push(parseInt(st[n]));
+				}
+			}
+		}
+	}
+}
+
+IG$/*mainapp*/._IF5/*clMicroChart*/ = function(node) {
+	var me = this,
+		cdata;
+	
+	me.rowIndex = -1;
+	me.colIndex = -1;
+	
+	if (node)
+	{
+		me.rowIndex = parseInt(IG$/*mainapp*/._I1b/*XGetAttr*/(node, "row"));
+		me.colIndex = parseInt(IG$/*mainapp*/._I1b/*XGetAttr*/(node, "col"));
+		
+		cdata = new IG$/*mainapp*/._IF6/*clMicroChartData*/(node);
+		me.chartData = cdata;
+	}
+}
+
+IG$/*mainapp*/._IF6/*clMicroChartData*/ = function(node) {
+	var me = this,
+		ndata,
+		nmeasurenames,
+		series,
+		childs,
+		seriesdata = [],
+		adata, dnode, sdata, codedata, dispdata,
+		n, i;
+	
+	IG$/*mainapp*/._I1f/*XGetInfo*/(me, node, "w;h;mctype", "i");
+	IG$/*mainapp*/._I1f/*XGetInfo*/(me, node, "linecolor;fillcolor", "s");
+	ndata = IG$/*mainapp*/._I24/*getTextContent*/(IG$/*mainapp*/._I18/*XGetNode*/(node, "Data"));
+	nmeasurenames = IG$/*mainapp*/._I24/*getTextContent*/(IG$/*mainapp*/._I18/*XGetNode*/(node, "SeriesNames"));
+	
+	series = IG$/*mainapp*/._I18/*XGetNode*/(node, "SeriesList");
+	childs = IG$/*mainapp*/._I26/*getChildNodes*/(series);
+	
+	for (n=0; n < childs.length; n++)
+	{
+		dnode = IG$/*mainapp*/._I18/*XGetNode*/(childs[n], "Datum");
+		sdata = IG$/*mainapp*/._I24/*getTextContent*/(dnode);
+		dnode = IG$/*mainapp*/._I18/*XGetNode*/(childs[n], "Code");
+		codedata = IG$/*mainapp*/._I24/*getTextContent*/(dnode);
+		dnode = IG$/*mainapp*/._I18/*XGetNode*/(childs[n], "Disp");
+		dispdata = IG$/*mainapp*/._I24/*getTextContent*/(dnode);
+		
+		adata = sdata.split(";");
+		adata.deleteRow(adata.length - 1);
+		
+		for (i=0; i < adata.length; i++)
+		{
+			adata[i] = parseFloat(adata[i]);
+		}
+		
+		seriesdata.push({data: adata, element: dispdata.split(";")});
+	}
+	
+	me.elementdata = ndata.split(";");
+	me.seriesnames = nmeasurenames.split(";");
+	me.seriesdata = seriesdata;
+}
+
+IG$/*mainapp*/._IF7/*clReportStyle*/ = function(node, type, custom) {
+	var tnode,
+		me = this;
+	
+	me.itemtype = type;
+	me.custom = custom;
+	me.rptseq = "0";
+	
+	if (node)
+	{
+		me.nodename = IG$/*mainapp*/._I29/*XGetNodeName*/(node);
+		me.basestylename = IG$/*mainapp*/._I1b/*XGetAttr*/(node, "basestylename");
+		me.name = IG$/*mainapp*/._I1b/*XGetAttr*/(node, "name");
+		me.rptseq = IG$/*mainapp*/._I1b/*XGetAttr*/(node, "rptseq") || "0";
+		me.uid = IG$/*mainapp*/._I1b/*XGetAttr*/(node, "uid");
+		me.fid = IG$/*mainapp*/._I1b/*XGetAttr*/(node, "fid") || "";
+		
+		tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "Header");
+		me.hs/*headerstyle*/ = new IG$/*mainapp*/._IF8/*clReportItemStyle*/(tnode, "Header");
+		tnode = IG$/*mainapp*/._I18/*XGetNode*/(node, "Data");
+		me.ds/*datastyle*/ = new IG$/*mainapp*/._IF8/*clReportItemStyle*/(tnode, "Data");
+	}
+}
+
+IG$/*mainapp*/._IF7/*clReportStyle*/.prototype = {
+	_IFb/*applyBaseStyle*/: function(base) {
+		var me = this;
+		me.hs/*headerstyle*/._IFb/*applyBaseStyle*/(base.hs/*headerstyle*/);
+		me.ds/*datastyle*/._IFb/*applyBaseStyle*/(base.ds/*datastyle*/);
+	},
+	Mb_15a/*forceBaseStyle*/: function(base) {
+		var me = this;
+		me.hs/*headerstyle*/.Mb_15a/*forceBaseStyle*/(base.hs/*headerstyle*/);
+		me.ds/*datastyle*/.Mb_15a/*forceBaseStyle*/(base.ds/*datastyle*/);
+	},
+	Mb_16/*removeBaseStyle*/: function(base) {
+		var me = this;
+		me.hs/*headerstyle*/.Mb_16/*removeBaseStyle*/(base.hs/*headerstyle*/);
+		me.ds/*datastyle*/.Mb_16/*removeBaseStyle*/(base.ds/*datastyle*/);
+	},
+	tx/*getXML*/: function(bs) {
+		var me = this,
+			nodename = me.nodename,
+			r = "<" + nodename + IG$/*mainapp*/._I20/*XUpdateInfo*/(me, "basestylename;name;uid;rptseq;fid", "s") + ">"
+			  + ((me.hs/*headerstyle*/) ? me.hs/*headerstyle*/.tx((bs ? bs.hs/*headerstyle*/ : null)) : "")
+			  + ((me.ds/*datastyle*/) ? me.ds/*datastyle*/.tx((bs ? bs.ds/*datastyle*/ : null)) : "")
+			  + "</" + nodename + ">";
+			  
+		return r;
+	}
+};
+
+IG$/*mainapp*/._IF8/*clReportItemStyle*/ = function(node, nodename) {
+	var me = this;
+	me.objinfo = "name;backcolor;bordercolor;forecolor;formatstring;fontsize;nullvalue;fontstyle;paddingbottom;paddingleft;paddingright;paddingtop;textalign;width;widthmode;borderbottom;borderright;columnwidth;autowidth;cssname";
+	me.nodename = nodename;
+	
+	me.__pca = [
+		"name;backcolor;bordercolor;forecolor;fontsize;nullvalue;autowidth;cssname",
+		"fontstyle;paddingbottom;paddingleft;paddingright;paddingtop;textalign;width;widthmode;borderright;borderbottom;columnwidth"
+	];
+	
+	if (node)
+	{
+		// name="Formula" nullvalue="" paddingbottom="2" paddingleft="2" paddingright="2" paddingtop="2" textalign="1" width="100" widthmode="0"
+		IG$/*mainapp*/._I1f/*XGetInfo*/(me, node, me.__pca[0], "s");
+		IG$/*mainapp*/._I1f/*XGetInfo*/(me, node, me.__pca[1], "i");
+		IG$/*mainapp*/._I1fx/*XGetInfo*/(me, node, "template");
+		IG$/*mainapp*/._I1fx/*XGetInfo*/(me, node, "formatstring");
+	}
+}
+
+IG$/*mainapp*/.$gv/*getColorValue*/ = function(value) {
+	var r = "",
+		t,
+		i, n;
+	
+	if (value && value != "")
+	{
+		if (value.length > 0 && value.charAt(0) == "#")
+			r = value;
+		else
+		{
+			t = Number(value).toString(16);
+			n = t.length;
+			for (i=0; i < 6 - n; i++)
+			{
+				t = "0" + t;
+			}
+			r = "#" + t;
+		}
+	}
+	
+	return r;
+}
+
+IG$/*mainapp*/.$gc/*getColorCode*/ = function(value) {
+	var r;
+	
+	if (value.length > 0 && value.charAt(0) == "#")
+	{
+		var t = value.substring(1);
+		r = parseInt(t, 16);
+	}
+	
+	return r;
+}
+
+IG$/*mainapp*/._IF8/*clReportItemStyle*/.prototype = {
+	tx/*getXML*/: function(bs) {
+		var me = this,
+			i,
+			m1 = me.__pca[0],
+			m2 = me.__pca[1],
+			m3, m4, key;
+	
+		if (bs)
+		{
+			m3 = m1.split(";");
+			m4 = [];
+			
+			for (i=0; i < m3.length; i++)
+			{
+				key = m3[i];
+				if (key != "name" && me[key] != bs[key])
+				{
+					m4.push(key);
+				}
+			}
+			
+			m1 = m4.join(";");
+			
+			m3 = m2.split(";");
+			m4 = [];
+			
+			for (i=0; i < m2.length; i++)
+			{
+				key = m3[i];
+				if (key != "name" && me[key] != bs[key])
+				{
+					m4.push(key);
+				}
+			}
+			
+			m2 = m4.join(";");
+		}
+		
+		var r = "<" + me.nodename
+			  + IG$/*mainapp*/._I20/*XUpdateInfo*/(me, m1, "s")
+			  + IG$/*mainapp*/._I20/*XUpdateInfo*/(me, m2, "i")
+			  + ">"
+			  + (me.formatstring ? "<formatstring><![CDATA[" + (me.formatstring) + "]]></formatstring>" : "")
+			  + (me.template ? "<template><![CDATA[" + (me.template) + "]]></template>" : "")
+			  + "</" + me.nodename + ">";
+			  
+		return r;
+	},
+	
+	_IFb/*applyBaseStyle*/: function(base) {
+		var me = this,
+			cnames = me.objinfo.split(";"),
+			i, key;
+		
+		for (i=0; i < cnames.length; i++)
+		{
+			key = cnames[i];
+			if (key != "name" && (typeof me[key] == "undefined" || me[key] == null))
+			{
+				me[key] = base[key];
+			}
+		}
+	},
+	
+	Mb_15a/*forceBaseStyle*/: function(base) {
+		var me = this,
+			cnames = me.objinfo.split(";"),
+			i, key;
+		
+		for (i=0; i < cnames.length; i++)
+		{
+			key = cnames[i];
+			me[key] = base[key];
+		}
+	},
+	
+	Mb_16/*removeBaseStyle*/: function(base) {
+		var me = this,
+			cnames = me.objinfo.split(";"),
+			i, key;
+		
+		for (i=0; i < cnames.length; i++)
+		{
+			key = cnames[i];
+			if (key != "name" && me[key] == base[key])
+			{
+				me[key] = null;
+			}
+		}
+	}
+}
+
+IG$/*mainapp*/._IF9/*clStyle*/ = function(node, baddcss) {
+	var me = this,
+		cssstyle,
+		talign;
+	
+	IG$/*mainapp*/._I1f/*XGetInfo*/(me, node, "name;nullvalue;fontsize;gradient;backcolor1;backcolor2;str_backcolor1;str_backcolor2;backalpha1;backalpha2;bordercolor;borderthickness;padleft;padright;padtop;padbottom;textalign;fontstyle;color;fontsize;borderbottom;borderright;columnwidth;autowidth;cssname", "s");
+	IG$/*mainapp*/._I1fx/*XGetInfo*/(me, node, "formatstring");
+	IG$/*mainapp*/._I1fx/*XGetInfo*/(me, node, "template");
+	
+	me.padleft = Number(me.padleft);
+	me.padright = Number(me.padright);
+	me.padtop = Number(me.padtop);
+	me.padbottom = Number(me.padbottom);
+	
+	talign = "left";
+	switch (me.textalign)
+	{
+	case "1":
+	case "4":
+	case "7":
+		talign = "left";
+		break;
+	case "2":
+	case "5":
+	case "8":
+		talign = "center";
+		break;
+	case "3":
+	case "6":
+	case "9":
+		talign = "right";
+		break;
+	}
+	
+	if (baddcss)
+	{
+		cssstyle = "<style> ." + me.name + "{ color:" + me.color + "; text-align: " + talign + "; } </style>";
+		$("body").append(cssstyle);
+	}
+}
+
+IG$/*mainapp*/._IFa/*clMapLoc*/ = function(loctype) {
+	var me = this;
+	me.loctype = loctype;
+	me.loaded = false;
+	me.data = [];
+}
+
+IG$/*mainapp*/._IFa/*clMapLoc*/.prototype = {
+	getGeoPosition: function(sloc) {
+		var loc;
+		if (typeof(data[sloc]) != "undefined")
+		{
+			loc = data[sloc];
+		}
+		
+		return loc;
+	},
+
+	parseMapData: function (node) {
+		var me = this,
+			i,
+			keyvalue,
+			o = [];
+			
+		$.each(["LOCCODE", "SLOC", "SPLOC", "LAT", "LNG"], function(i, n) {
+			var m = IG$/*mainapp*/._I24/*getTextContent*/(IG$/*mainapp*/._I18/*XGetNode*/(node, n)).split(";");
+			o.push(m);
+		});
+		
+		for (i=0; i < o[0].length - 1; i++)
+		{
+			keyvalue = o[0][i];
+			switch (me.keyname)
+			{
+			case "sloc":
+				keyvalue = o[1][i];
+				break;
+			case "ploc":
+				keyvalue = o[2][i];
+				break;
+			}
+			me.data[keyvalue] = {loccode: o[0][i], sloc: o[1][i], lat: o[2][i], lng: o[3][i]};
+		}
+	}
+}
+
+IG$/*mainapp*/.iff/*clCodeMapping*/ = function(xdoc) {
+	var me = this;
+	me.dtype = "static";
+	me.coldelim = "\t";
+	me.rowdim = "\n";
+	me.dvalues = [];
+	// me.i_cset = false;
+	me.i_cdata = [];
+	
+	xdoc && me.p1/*parseXML*/(xdoc);
+}
+
+IG$/*mainapp*/.iff/*clCodeMapping*/.prototype = {
+	p1/*parseXML*/: function(xdoc) {
+		var me = this,
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+			t, ts, i, p,
+			drow,
+			cmap = {};
+		
+		if (tnode)
+		{
+			me.ditem = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnode);
+			
+			t = IG$/*mainapp*/._I18/*XGetNode*/(tnode, "objinfo");
+		
+			if (t)
+			{
+				me.dtype = IG$/*mainapp*/._I1b/*XGetAttr*/(t, "dtype");
+			}
+			
+			t = IG$/*mainapp*/._I18/*XGetNode*/(tnode, me.dtype == "static" ? "static_data" : "sql_data");
+			ts = t ? IG$/*mainapp*/._I24/*getTextContent*/(t) : null;
+			
+			me.displabel = t ? IG$/*mainapp*/._I1b/*XGetAttr*/(t, "displabel") : null;
+			
+			if (me.dtype == "static" && ts)
+			{
+				drow = ts.split(me.rowdim);
+				for (i=0; i < drow.length; i++)
+				{
+					p = drow[i].split(me.coldelim);
+					p[1] && me.dvalues.push({code: p[0], value: p[1]});
+				}
+			}
+			else if (me.dtype == "sql" && t)
+			{
+				me.dsql = ts;
+				me.ds = IG$/*mainapp*/._I1b/*XGetAttr*/(t, "ds");
+			}
+			
+			t = IG$/*mainapp*/._I18/*XGetNode*/(tnode, "sqljoin");
+			if (t)
+			{
+				if (me.dtype == "sqljoin")
+				{
+					me.ds = IG$/*mainapp*/._I1b/*XGetAttr*/(t, "ds");
+				}
+				$.each(["codeschema", "codetable", "codetableuid", 
+					"codefield", "valuefield", "sortfield", 
+					"codemapping", "viewmode", "displabel"], function(i, f) {
+					me[f] = IG$/*mainapp*/._I1b/*XGetAttr*/(t, f);
+				});
+				
+				$.each(["codefilter1", "codefilter2", "codefilter3"], function(i, f) {
+					var k = IG$/*mainapp*/._I19/*getSubNode*/(t, f);
+					
+					if (k)
+					{
+						me[f] = IG$/*mainapp*/._I24/*getTextContent*/(k);
+					}
+				});
+			}
+			
+			t = IG$/*mainapp*/._I18/*XGetNode*/(tnode, "i_cdata");
+			
+			if (t)
+			{
+				me.i_cset = IG$/*mainapp*/._I1b/*XGetAttr*/(t, "i_cset") == "T";
+				
+				ts = IG$/*mainapp*/._I24/*getTextContent*/(t);
+			
+				if (ts)
+				{
+					drow = ts.split(me.rowdim);
+					for (i=0; i < drow.length; i++)
+					{
+						p = drow[i].split(me.coldelim);
+						if (p[1])
+						{
+							me.i_cdata.push({value: p[0], color: p[1]});
+							cmap[p[0]] = p[1];
+						}
+					}
+					
+					if (me.dtype == "static")
+					{
+						for (i=0; i < me.dvalues.length; i++)
+						{
+							if (cmap[me.dvalues[i].code])
+							{
+								me.dvalues[i].color = cmap[me.dvalues[i].code];
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	p2/*getXML*/: function() {
+		var me = this,
+			r = ["<smsg><item"],
+			i,
+			dvalues = me.dvalues,
+			dtype = me.dtype,
+			i_cdata = me.i_cdata;
+		
+		r.push(IG$/*mainapp*/._I20/*XUpdateInfo*/(me.ditem, "name;description;uid", "s") + ">");
+		r.push("<objinfo dtype='" + (dtype || "static") + "'></objinfo>");
+		
+		if (dtype == "static")
+		{
+			r.push("<static_data" + (me.displabel ? " displabel='" + me.displabel + "'" : "") + "><![CDATA[")
+			for (i=0; i < dvalues.length; i++)
+			{
+				i > 0 && r.push("\n");
+				r.push((dvalues[i].code || "") + "\t" + (dvalues[i].value || ""));
+			}
+			r.push("]]></static_data>");
+		}
+		else if (dtype == "sql")
+		{
+			r.push("<sql_data ds='" + (me.ds || "") + "'" + (me.displabel ? " displabel='" + me.displabel + "'" : "") + "><![CDATA[")
+			r.push(me.dsql || "");
+			r.push("]]></sql_data>");
+		}
+		
+		r.push("<sqljoin");
+		$.each(["ds", "codeschema", "codetable", "codetableuid", 
+			"codefield", "valuefield", "sortfield", 
+			"codemapping", "viewmode", "displabel"], function(i, f) {
+			if (me[f])
+			{
+				r.push(" " + f + "='" + me[f] + "'");
+			}
+		});
+		
+		r.push(">");
+			
+		$.each(["codefilter1", "codefilter2", "codefilter3"], function(i, f) {
+			if (me[f])
+			{
+				r.push("<" + f + "><![CDATA[" + me[f] + "]]></" + f + ">");
+			}
+		});
+		
+		r.push("</sqljoin>");
+		
+		r.push("<i_cdata i_cset='" + (me.i_cset ? "T" : "F") + "'><![CDATA[");
+		
+		for (i=0; i < i_cdata.length; i++)
+		{
+			i > 0 && r.push("\n");
+			r.push((i_cdata[i].value || "") + "\t" + (i_cdata[i].color || ""));
+		}
+		
+		r.push("]]></i_cdata>");
+		
+		r.push("</item></smsg>");
+		
+		return r.join("");
+	},
+	
+	get: function(pval) {
+		return this[pval];
+	},
+	
+	set: function(pval, p) {
+		this[pval] = p;
+	}
+}
+
+IG$/*mainapp*/.ifg/*classmodule*/ = function(xdoc) {
+	var me = this;
+	me.modules = [];
+	me.objinfo = {};
+	me.cls = "";
+	xdoc && me.p1/*parseXML*/(xdoc);
+}
+
+IG$/*mainapp*/.ifg/*classmodule*/.prototype = {
+	p1/*parseXML*/: function(xdoc) {
+		var me = this,
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+			t, ts, i, p, tp, j;
+		
+		if (tnode)
+		{
+			me.ditem = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnode);
+			
+			t = IG$/*mainapp*/._I18/*XGetNode*/(tnode, "objinfo");
+			
+			me.objinfo = t ? IG$/*mainapp*/._I1c/*XGetAttrProp*/(t) : {};
+			
+			t = IG$/*mainapp*/._I18/*XGetNode*/(tnode, "cls");
+			
+			me.cls = t ? IG$/*mainapp*/._I24/*getTextContent*/(t) : "";
+			
+			t = IG$/*mainapp*/._I18/*XGetNode*/(tnode, "modules");
+			
+			ts = t ? IG$/*mainapp*/._I26/*getChildNodes*/(t) : null;
+			
+			if (ts)
+			{
+				for (i=0; i < ts.length; i++)
+				{
+					p = {
+						name: IG$/*mainapp*/._I1b/*XGetAttr*/(ts[i], "name"),
+						iparams: [],
+						oparams: []
+					};
+					
+					t = IG$/*mainapp*/._I18/*XGetNode*/(ts[i], "description");
+					p.description = t ? IG$/*mainapp*/._I24/*getTextContent*/(t) : null;
+					
+					t = IG$/*mainapp*/._I18/*XGetNode*/(ts[i], "script");
+					p.script = t ? IG$/*mainapp*/._I24/*getTextContent*/(t) : null;
+					
+					$.each(["iparams", "oparams"], function(n, k) {
+						var t = IG$/*mainapp*/._I18/*XGetNode*/(ts[i], k),
+							tp,
+							j;
+					
+						if (t)
+						{
+							tp = IG$/*mainapp*/._I26/*getChildNodes*/(t);
+							for (j=0; j < tp.length; j++)
+							{
+								p[k].push(IG$/*mainapp*/._I1c/*XGetAttrProp*/(tp[j]));
+							}
+						}
+					});
+					
+					me.modules.push(p);
+				}
+			}
+		}
+	},
+	p2/*getXML*/: function() {
+		var me = this,
+			r = ["<smsg><item"],
+			i,
+			md;
+		
+		r.push(IG$/*mainapp*/._I20/*XUpdateInfo*/(me.ditem, "name;description;uid", "s") + ">");
+		r.push("<objinfo" + IG$/*mainapp*/._I20/*XUpdateInfo*/(me.objinfo, "ds", "s") + "></objinfo>");
+		r.push("<cls><![CDATA[" + (me.cls || "") + "]]></cls>");
+		r.push("<modules>");
+		
+		for (i=0; i < me.modules.length; i++)
+		{
+			md = me.modules[i];
+			r.push("<module name='" + md.name + "'>");
+			r.push("<description><![CDATA[" + (md.description || "") + "]]></description>");
+			r.push("<script><![CDATA[" + (md.script || "") + "]]></script>");
+			$.each(["iparams", "oparams"], function(j, k) {
+				var n,	
+					module = md[k];
+					
+				r.push("<" + k + ">");
+				if (module)
+				{
+					for (n=0; n < module.length; n++)
+					{
+						r.push("<param name='" + module[n].name + "'></param>");
+					}
+				}
+				r.push("</" + k + ">");
+			});
+			
+			r.push("</module>");
+		}
+		r.push("</modules>");
+		r.push("</item></smsg>");
+		
+		return r.join("");
+	}
+}
+IG$/*mainapp*/.m$sm/*svgloader*/ = function(container) {
+	var me = this;
+	me.l5/*container*/ = container;
+	me.mindex = 0;
+}
+
+IG$/*mainapp*/.m$sm/*svgloader*/.prototype = {
+	load: function(fname) {
+		var me = this;
+		if (me.loaded == fname)
+		{
+			me.m1/*resizeTo*/.call(me);
+			$(me.l5/*container*/).trigger("svgloaded");
+			return;
+		}
+		me.l5/*container*/.empty();
+		
+		$.ajax({
+			url: fname,
+			dataType: "text",
+			type: "GET",
+			cache: true,
+			complete: function(xhr, status) {
+			
+			},
+			success: function(data, status, xhr) {
+				var xdoc = IG$/*mainapp*/._I13/*loadXML*/(data);
+				me.loaded = fname;
+				me.l1/*loadSVG*/.call(me, xdoc);
+				$(me.l5/*container*/).trigger("svgloaded");
+			},
+			error: function(xhr, status, err) {
+				
+			}
+		});	
+	},
+	
+	l1/*loadSVG*/: function(xdoc) {
+		var me = this,
+			tnode, tnodes,
+			container = me.l5/*container*/,
+			tparam, scale,
+			xscale, yscale, i,
+			tfactor, nw, nh, mw, mh, my, mx,
+			mscale = 1, mxscale = 1, myscale=1,
+			vbox;
+		
+		me.mapid = {};
+		me.l4/*gparam*/ = {
+			cx: 0,
+			cy: 0,
+			cwidth: IG$/*mainapp*/.x_10/*jqueryExtension*/._w(container),
+			cheight: IG$/*mainapp*/.x_10/*jqueryExtension*/._h(container),
+			
+			sx: 0,
+			sy: 0,
+			swidth: IG$/*mainapp*/.x_10/*jqueryExtension*/._w(container),
+			sheight: IG$/*mainapp*/.x_10/*jqueryExtension*/._h(container)
+		};
+		tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/svg");
+		
+		me.l6/*paper*/ = Raphael(container[0], 0, 0, me.l4/*gparam*/.cwidth, me.l4/*gparam*/.cheight);
+		
+		me.legend = $("<ul class='map-legend'></ul>").appendTo(container).hide();
+		
+		if (tnode)
+		{
+			tparam = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnode);
+			
+			
+			me.l4/*gparam*/.sx = (tparam.x) ? me.l3/*getVal*/(tparam.x) : me.l4/*gparam*/.sx;
+			me.l4/*gparam*/.sy = (tparam.y) ? me.l3/*getVal*/(tparam.y) : me.l4/*gparam*/.sy;
+			
+			me.l4/*gparam*/.swidth = (tparam.width) ? me.l3/*getVal*/(tparam.width) : me.l4/*gparam*/.swidth;
+			me.l4/*gparam*/.sheight = (tparam.height) ? me.l3/*getVal*/(tparam.height) : me.l4/*gparam*/.sheight;
+			
+			vbox = tparam.viewBox;
+			vbox = (vbox) ? vbox.split(" ") : null;
+			if (vbox)
+			{
+				for (i=0; i < vbox.length; i++)
+				{
+					vbox[i] = me.l3/*getVal*/(vbox[i]);
+				}
+				
+				vbox = vbox[0] == me.l4/*gparam*/.sx && 
+				vbox[1] == me.l4/*gparam*/.sy &&
+				vbox[2] == me.l4/*gparam*/.swidth &&
+				vbox[3] == me.l4/*gparam*/.sheight ? null : vbox;
+			}
+			
+			me.l4/*gparam*/.vbox = vbox;
+			
+			me.l6/*paper*/.setSize(me.l4/*gparam*/.cwidth, me.l4/*gparam*/.cheight);
+						
+			var p = {
+				isroot: true,
+				id: null,
+				children: [],
+				childmap: {},
+				d: [],
+				set: me.l6/*paper*/.set()
+			};
+
+			me.l2/*recurseNode*/(tnode, p, tfactor);
+			me.p/*mainpage*/ = p;
+			
+			
+			me.m1/*resizeTo*/.call(me);
+		}
+	},
+	
+	Y1/*prepareLegend*/: function() {
+		var me = this,
+			legend = me.legend,
+			mapseries = me.mapdata.measures;
+			
+		legend.empty();
+		me.legidx = 0;
+		if (mapseries && mapseries.length > 0)
+		{
+			legend.show();
+			$.each(mapseries, function(i, map) 
+			{
+				$("<li class='map-legend-item'>" + (map.name || map.text) + "</li>")
+					.appendTo(legend)
+					.bind("click", function() {
+						me.legidx = i;
+						me.applyColor.call(me, i);
+					});
+			});
+		}
+		else
+		{
+			legend.hide();
+		}
+	},
+	
+	l2/*recurseNode*/: function(tnode, parent, tfactor) {
+		var me = this,
+			i, 
+			tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode),
+			nodename, p, path,
+			paper = me.l6/*paper*/, pval;
+		for (i=0; i < tnodes.length; i++)
+		{
+			nodename = IG$/*mainapp*/._I29/*XGetNodeName*/(tnodes[i]);
+			pval = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+			if (nodename == "g")
+			{
+				p = {
+					isroot: true,
+					id: pval.id,
+					name: pval.name || pval.id,
+					children: [],
+					childmap: {},
+					d: [],
+					set: paper.set()
+				};
+				parent.set.push(p.set);
+				parent.children.push(p);
+				parent.childmap[p.id || "noid"] = p;
+				me.mapid[p.id || "noid"] = p;
+				me.l2/*recurseNode*/(tnodes[i], p, tfactor);
+			}
+			else if (nodename == "path")
+			{
+				path = paper.path(pval.d);
+				
+				parent.d.push(path);
+				delete pval.d;
+				path.attr(path);
+				parent.set.push(path);
+				// path.transform(tfactor);
+			}
+		}
+	},
+	
+	l3/*getVal*/: function(val) {
+		val = val.replace(/px/, "");
+		return Number(val);
+	},
+	
+	m1/*resizeTo*/: function() {
+		var me = this,
+			tnode, tnodes,
+			container = me.l5/*container*/,
+			tparam, scale,
+			xscale, yscale,
+			mscale = 1, mxscale=1, myscale=1,
+			paper = me.l6/*paper*/,
+			tfactor, nw, nh, mw, mh, my, mx,
+			vbox,
+			cw, ch, sw, sh,
+			p = me.p/*mainpage*/;
+		
+		me.l4/*gparam*/.cwidth = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(container);
+		me.l4/*gparam*/.cheight = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(container);
+		
+		vbox = me.l4/*gparam*/.vbox;
+		
+		cw = me.l4/*gparam*/.cwidth; 
+		ch = me.l4/*gparam*/.cheight;
+		sw = me.l4/*gparam*/.swidth; 
+		sh = me.l4/*gparam*/.sheight;
+			
+		if (vbox)
+		{
+			mxscale = vbox[2] / sw;
+			myscale = vbox[3] / sh;
+			mscale = Math.min(mxscale, myscale);
+		}
+		
+		xscale = cw / sw;
+		yscale = ch / sh;
+		scale = Math.min(xscale, yscale) * mscale;
+		
+		me.l6/*paper*/.setSize(cw, ch);
+		
+		mw = (cw - sw * scale) / 2;
+		mh = (ch - sh * scale) / 2;
+		tfactor = "s" + (scale) + "," + scale + ",0,0" + "t" + mw + "," + mh;
+		
+		p.set.transform(tfactor);
+	},
+	
+	loadData: function(chartoption) {
+		var me = this;
+		
+		me.mapdata = chartoption;
+		
+		me.Y1/*prepareLegend*/();
+		
+		me.applyColor(0);
+	},
+	
+	applyColor: function(idx) {
+		var me = this, i,
+			min, max, mindex,
+			maxdepth = 155,
+			mapdata = me.mapdata,
+			c, depth, mincolor = me.mapdata.mincolor || "#ff0000", maxcolor = me.mapdata.maxcolor || "#0000ff",
+			legend = me.legend;
+		
+		me.legidx = idx;
+		
+		mindex = idx;
+		mindex= (mindex < mapdata.measures.length) ? mindex : 0;
+		
+		legenditems = legend.children("li");
+		
+		if (legenditems && legenditems.length > 0)
+		{
+			for (i=0; i < legenditems.length; i++)
+			{
+				$(legenditems[i]).removeClass("map-legend-selected");
+				if (i == mindex)
+				{
+					$(legenditems[i]).addClass("map-legend-selected");
+				}
+			}
+		}
+		
+		min = mapdata.measures[mindex].min;
+		max = mapdata.measures[mindex].max;
+		$.each(mapdata.point, function(i, m) {
+			var m = m.data[mindex];
+			if (isNaN(m) == false)
+			{
+				depth = ((max - m) * maxdepth) / (max - min);
+				c = IG$/*mainapp*/._I15/*interpolateColor*/(mincolor, maxcolor, maxdepth, depth);
+				
+				if (me.mapid[i])
+				{
+					me.mapid[i].set.attr({fill: c});
+				}
+			}
+		});
+	}
+};
+IG$/*mainapp*/._I94/*olapReportView*/ = function(uid, canvas, owner, fsize) {
+	var me = this;
+	
+	me.mresult = null;
+	me._ILa/*reportoption*/ = null;
+	me._ILb/*sheetoption*/ = null;
+	me.uid = uid;
+	me._IL8/*jobid*/ = null;
+	me.container = canvas;
+	me.owner = owner;
+	me.width = 0;
+	me.height = 0;
+	me.ctrl = null;
+	me.fsize = fsize;
+	me.sheetobj = null;
+	
+	me._0x030/*mgrid*/ = new IG$/*mainapp*/.cMa/*DataGridView*/();
+	
+	me._0x030/*mgrid*/._ILb/*sheetoption*/ = me._ILb/*sheetoption*/;
+	me._0x030/*mgrid*/.size = me.fsize;
+	me._0x030/*mgrid*/.initialize(me.owner);
+	me._0x030/*mgrid*/.sheetobj = me.sheetobj;
+	
+	if (me._0x030/*mgrid*/.ctx)
+	{
+		var ownerct = me,
+			ctx = me._0x030/*mgrid*/.ctx;
+		
+		ctx.bind({
+			itemclick: function(renderer) {
+			},
+			doubleclick: function(renderer) {
+			},
+			selectionchanged: function(renderer) {
+			},
+			menu: function(el) {
+			}
+		});
+	}
+	
+	me._IN0/*applyOptions*/();
+}
+
+IG$/*mainapp*/._I94/*olapReportView*/.prototype = {
+	_tsm/*selectedCells*/: function() {
+		return this._0x030/*mgrid*/.selectedItems;
+	},
+	
+	dor/*drawOlapResult*/: function (ispageview, _is_sc, _hcell, cresult) {
+		var me = this,
+			treeview = me._ILb/*sheetoption*/ ? me._ILb/*sheetoption*/.treeview : false,
+			columntree = me._ILb/*sheetoption*/ ? me._ILb/*sheetoption*/.columntree : false,
+			showlnum = me._ILb/*sheetoption*/ ? me._ILb/*sheetoption*/.showlnum : false,
+			hidemenu = me._ILb/*sheetoption*/ ? me._ILb/*sheetoption*/.hidemenu : false,
+			mdf = me._ILb/*sheetoption*/ ? me._ILb/*sheetoption*/.mdf : null,
+			data,
+			measurerow,
+			nwidth, nheight,
+			mfixcol = -1,
+			i, j, hc, hr, orow, oc, oj, om,
+			hrow, hm = 0, hmm,
+			n;
+		
+		nwidth = (me.width > 0 ? me.width : me._0x030/*mgrid*/._d/*cwidth*/);
+		nheight = (me.height > 0 ? me.height : me._0x030/*mgrid*/._e/*cheight*/);
+		
+		if (nwidth > 0 && nheight > 0)
+		{
+			me._0x030/*mgrid*/._d/*cwidth*/ = nwidth;
+			me._0x030/*mgrid*/._e/*cheight*/ = nheight;
+		}
+		
+		// console.log(">> 1", me._0x030/*mgrid*/.cwidth, me._0x030/*mgrid*/.cheight);
+		
+		me._0x030/*mgrid*/._6/*treeRow*/ = -1;
+		me._0x030/*mgrid*/._5/*treeCol*/ = -1;
+		
+		me._0x030/*mgrid*/._3/*fixedRow*/ = 0;
+		me._0x030/*mgrid*/._4/*fixedCol*/ = 0;
+		
+		if (me._ILb/*sheetoption*/ && me._ILb/*sheetoption*/.customfix == "T" && me._ILb/*sheetoption*/.customfixcols > -1)
+		{
+			mfixcol = me._ILb/*sheetoption*/.customfixcols;
+		}
+		
+		if (me.mresult != null && me.mresult.data != null && me.mresult.data.length > 0)
+		{
+			if (_hcell && cresult)
+			{
+				hc = _hcell.c;
+				hr = _hcell.r;
+				hmm = _hcell.celltree.hm;
+				
+				orow = me.mresult.data[hr];
+				_hcell.celltree.h = 0;
+				_hcell.celltree.haschild = true;
+				_hcell.celltree.depth = _hcell.celltree.depth || 0;
+				
+				for (i=cresult.rowfix; i < cresult.data.length; i++)
+				{
+					hrow = cresult.data[i];
+					
+					if (hmm == 2)
+					{
+						for (j=0; j < me.mresult.colfix - cresult.colfix; j++)
+						{
+							oj = orow[hc - j];
+							
+							if (oj.merged == 0)
+							{
+								oj.merged = 1;
+							}
+							
+							oc = {
+								_n_: oj._n_,
+								c: oj.c,
+								cc: oj.cc,
+								cm: oj.cm,
+								code: oj.code,
+								h: oj.h,
+								index: oj.index,
+								mcol: oj.mcol,
+								menus: null,
+								merged: 0,
+								mrow: oj.mrow,
+								pindex: oj.pindex,
+								position: oj.position,
+								r: oj.r,
+								selected: false,
+								si: oj.si,
+								stylename: oj.stylename,
+								text: oj.text,
+								title: oj.title,
+								value: oj.value,
+								celltree: {
+								}
+							};
+							
+							oc.merged |= 8;
+							oc.celltree.parent = _hcell;
+							oc.celltree.depth = _hcell.celltree.depth + 1;
+							hrow.splice(hc - _hcell.celltree.depth + j, 0, oc);
+						}
+						
+						om = hrow[hc + 1]; 
+						om.celltree = om.celltree || {};
+						om.celltree.depth = _hcell.celltree.depth + 1;
+						om.celltree.parent = _hcell;
+						om.celltree.nd = 1;
+						hrow[0].mcelltree = hrow[0].mcelltree || [];
+						hrow[0].mcelltree.push(hc+1);
+					}
+					else if (hmm == 1)
+					{
+						oc = hrow[hc];
+						oc.celltree = oc.celltree || {};
+						oc.celltree.parent = _hcell;
+						oc.celltree.depth = _hcell.celltree.depth + 1;
+						hrow[0].mcelltree = hrow[0].mcelltree || [];
+						hrow[0].mcelltree.push(hc);
+					}
+					
+					if (i == cresult.rowfix && hc > 0)
+					{
+						for (j=0; j < hc; j++)
+						{
+							if (orow[j].merged == 0)
+							{
+								orow[j].merged |= 1;
+							}
+						}
+					}
+					
+					for (j=0; j < hc; j++)
+					{
+						hrow[j].merged = 0;
+						hrow[j].merged |= 8;
+					}
+					
+					me.mresult.data.splice(hr + (++hm), 0, hrow);
+				}
+			}
+			else
+			{
+				me._0x030/*mgrid*/.styles = me.mresult.styles;
+				me._0x030/*mgrid*/.showlnum = showlnum;
+				me._0x030/*mgrid*/.hidemenu = hidemenu;
+			}
+			
+			if (treeview == true)
+			{
+				me._0x030/*mgrid*/._4/*fixedCol*/ = (me.mresult.colfix > 0 ? 1 : 0);
+				me._0x030/*mgrid*/._3/*fixedRow*/ = me.mresult.rowfix;
+				me._0x030/*mgrid*/._5/*treeCol*/ = (me.mresult.colfix > 0 ? 0 : -1);
+				
+				data = me.gtr/*generateTreeData*/(me.mresult.data, me.mresult.colfix, me.mresult.rowfix, me.mresult.styles);
+			}
+			else
+			{
+				data = me.mresult.data;
+				
+				if (showlnum)
+				{
+					for (i=0; i < data.length; i++)
+					{
+						n = (data[i].length) ? Number(data[i][0]._n_) - me.mresult.rowfix : 0;
+						data[i].splice(0, 0, {
+							_n_: n,
+							chart: null,
+							code: "",
+							index: 0,
+							mcol: 0,
+							merged: 0,
+							mrow: 0,
+							pindex: 0,
+							position: 9,
+							stylename: "LineNumber_" + (i < me.mresult.rowfix ? "title" : "data"),
+							text: (i < me.mresult.rowfix ? "" : "" + (n+1)),
+							title: 0,
+							value: null
+						});
+					}
+				}
+				me._0x030/*mgrid*/._4/*fixedCol*/ = me.mresult.colfix + (showlnum ? 1 : 0);
+				me._0x030/*mgrid*/._3/*fixedRow*/ = me.mresult.rowfix;
+			}
+			
+			if (mfixcol > -1)
+			{
+				me._0x030/*mgrid*/._4/*fixedCol*/ = mfixcol;
+			}
+			
+			if (columntree == true)
+			{
+				me._0x030/*mgrid*/._3/*fixedRow*/ = me.mresult.rowfix; // (me.mresult.rowfix > 0 ? 1 : 0);
+				me._0x030/*mgrid*/._6/*treeRow*/ = me.mresult.rowfix;
+				
+				// move measurelocation
+				if (me._ILb/*sheetoption*/.cols.length > 0 && me._ILb/*sheetoption*/.measurelocation == "column")
+				{
+					measurerow = me._ILb/*sheetoption*/.cols.length - me._ILb/*sheetoption*/.measureposition;
+					if (measurerow > 0)
+					{
+						// data = me.gtk/*moveMeasureRow*/(data, me._0x030/*mgrid*/.fixedCol, me.mresult.rowfix, measurerow);
+					}
+					data = me.gtc/*generateTreeColumn*/(data, me._0x030/*mgrid*/._4/*fixedCol*/, me.mresult.rowfix, me.mresult.styles);
+				}
+			}
+		}
+		
+		me._IN0/*applyOptions*/();
+		
+		me._0x030/*mgrid*/.__trow = (data ? data.length : 0);
+		me._0x030/*mgrid*/.__tpstart = 0;
+		me._0x030/*mgrid*/.__tpend = 0;
+		me._0x030/*mgrid*/.__gflt = mdf;
+		
+		if (ispageview == false && (me.mresult.pagestart > 0 || me.mresult.pageend < me.mresult.rows))
+		{
+			me._0x030/*mgrid*/.__tpstart = me.mresult.pagestart;
+			me._0x030/*mgrid*/.__tpend = me.mresult.pageend;
+			me._0x030/*mgrid*/.__trow = me.mresult.rows;
+		}
+		
+		me._0x030/*mgrid*/.setDataProvider(data || [], undefined, me.mresult.hidden_columns);
+	},
+	
+	gtk/*moveMeasureRow*/: function(mdata, colfix, rowfix, measurerow) {
+		var data = [],
+			i, j, colmove = [], actmove = [], row, schild,
+			pmeasure;
+			
+		for (i=colfix; i < mdata[measurerow].length; i++)
+		{
+			mcell = mdata[measurerow][i];
+			colmove.push({
+				cindex: i,
+				mindex: mcell.index,
+				cname: mcell.code
+			});
+			pmeasure = mcell.code;
+		}
+		
+		colmove.sort(function(a, b) {
+			var r = 0;
+			if (a.mindex == b.mindex)
+			{
+				if (a.cindex > b.cindex)
+				{
+					r = 1;
+				}
+				else if (a.cindex < b.cindex)
+				{
+					r = -1;
+				}	
+			}
+			else 
+			{
+				r = (a.mindex > b.mindex) ? 1 : -1;
+			}
+			return r;
+		});
+		
+		for (i=0; i < colmove.length; i++)
+		{
+			actmove.push(colmove[i].cindex);
+		}
+		
+		for (i=0; i < mdata.length; i++)
+		{
+			row = [];
+			for (j=0; j < mdata[i].length; j++)
+			{
+				if (j < colfix)
+				{
+					row.push(mdata[i][j]);
+				}
+				else
+				{
+					row.push(mdata[i][actmove[j-colfix]]);
+				}
+			}
+			
+			if (row[0].children && row[0].children.length > 0)
+			{
+				schild = this.gtk2/*moveMeasureRowChildren*/(row[0].children, actmove, colfix);
+				row[0].children = schild;
+			}
+			
+			if (i == measurerow)
+			{
+				data.splice(0, 0, row);
+			}
+			else
+			{
+				data.push(row);
+			}
+		}
+		
+		return data;
+	},
+	
+	gtk2/*moveMeasureRowChildren*/: function(child, actmove, colfix) {
+		var i, j,
+			schild = [], srow, ichild;
+		for (i=0; i < child.length; i++)
+		{
+			srow = [];
+			for (j=0; j < child[i].length; j++)
+			{
+				if (j < colfix)
+				{
+					srow.push(child[i][j]);
+				}
+				else
+				{
+					srow.push(child[i][actmove[j-colfix]]);
+				}
+			}
+			
+			if (srow[0].children && srow[0].children.length > 0)
+			{
+				ichild = this.gtk2/*moveMeasureRowChildren*/(srow[0].children, actmove, colfix);
+				srow[0].children = ichild;
+			}
+			schild.push(srow);
+		}
+		
+		return schild;
+	},
+	
+	gtc/*generateTreeColumn*/: function(mdata, colfix, rowfix, styles) {
+		var me = this,
+			data = [],
+			i, j, k, nj, k,
+			prow = [], row, mrow, mcell, hrow, finalcols, dcell, pcell, depths, depth,
+			spcols = [],
+			pval, cval, nval;
+		
+		for (i=0; i < rowfix; i++)
+		{
+			row = mdata[i];
+			
+			mrow = [];
+		
+			for (j=0; j < row.length; j++)
+			{
+				mcell = this.gmr/*getCellValue*/(row[j], j);
+				mrow.push(mcell);
+			}
+			
+			data.push(mrow);
+		}
+		
+		for (i=0; i < rowfix; i++)
+		{
+			row = data[i];
+			pcell = null;
+			
+			if (i < rowfix-1)
+			{
+				for (j=row.length-1; j>=colfix; j--)
+				{
+					pcell = (j > colfix) ? row[j-1] : null;
+					if ((pcell != null && row[j].text != pcell.text) || j == colfix)
+					{
+						depth = i;
+						if (row[j].haschild === true)
+						{
+							depth = row[j].depth;
+						}
+						if (i == 0 || (i > 0 && depth == i))
+						{
+							for (k=0; k < rowfix; k++)
+							{
+								if (k < i)
+								{
+									dcell = this.gmr/*getCellValue*/(data[k][j], i);
+									dcell.haschild = true;
+									dcell.depth = depth;
+									data[k].splice(j, 0, dcell);
+								}
+								else
+								{
+									dcell = this.gmr/*getCellValue*/(row[j], i);
+									dcell.haschild = true;
+									dcell.depth = depth;
+									data[k].splice(j, 0, dcell);
+								}
+							}
+						}
+					}
+				}
+			}
+			
+			pcell = null;
+			depths = [];
+			for (j=0; j < rowfix; j++)
+			{
+				depths[j] = null;
+			}
+			
+			k = -1;
+			
+			for (j=colfix; j < row.length; j++)
+			{
+				if (row[j].haschild === true)
+				{
+					depths[row[j].depth] = j;
+					k = j;
+					if (row[j].depth > 0 && depths[row[j].depth-1] != null)
+					{
+						row[j].parent = row[depths[row[j].depth-1]];
+					}
+				}
+				else if (k > -1)
+				{
+					row[j].parent = row[k];
+				}
+			}
+		}
+		
+		row = data[rowfix-1];
+		
+		for (i=row.length-1; i >= 0; i--)
+		{
+			if (row[i].haschild == true)
+			{
+				spcols.push(i);
+			}
+		}
+		
+		// calculate merge again
+		for (i=0; i < rowfix; i++)
+		{
+			row = data[i];
+			for (j=colfix; j < row.length; j++)
+			{
+				pval = (j == colfix) ? null : row[j-1].code;
+				cval = row[j].code;
+				nval = (j + 1 < row.length) ? row[j+1].code : null;
+				
+				if (cval == pval == nval)
+				{
+					row[j].merged = 4;
+				}
+				else if (cval == pval)
+				{
+					row[j].merged = 4;
+				}
+				else if (cval == nval)
+				{
+					row[j].merged = 2;
+				}
+			}
+		} 
+		
+		for (i=rowfix; i < mdata.length; i++)
+		{
+			mrow = [];
+			row = mdata[i];
+			
+			for (j=0; j < row.length; j++)
+			{
+				mcell = row[j];
+				mrow.push(mcell);
+			}
+			
+			me.gmx/*updateColumnTreeData*/(mrow, spcols, i, 0, data[rowfix-1], rowfix, colfix, styles);
+			
+			data.push(mrow);
+		}
+		
+		return data;
+	},
+	
+	gmx/*updateColumnTreeData*/: function(row, spcols, rowindex, mi, headerrow, rowfix, colfix, styles) {
+		var me = this,
+			j, i, tval,
+			mcell, startcell, scol, rvalues = [], style, tnum, mc;
+		for (j=spcols.length-1; j >= 0; j--)
+		{
+			scol = spcols[j];
+			mcell = this.gmr/*getCellValue*/(row[scol], rowindex);
+			mcell.code = null;
+			mcell.value = null;
+			mcell.text = null;
+			
+			row.splice(spcols[j], 0, mcell);
+		}
+		
+		for (j=0; j < rowfix; j++)
+		{
+			rvalues.push(0);
+		}
+		
+		for (j=row.length-1; j >= colfix; j--)
+		{
+			startcell = headerrow[j];
+			
+			if (startcell.haschild == true)
+			{
+				mc = row[j];
+				row[j].code = rvalues[startcell.depth  + 1];
+				row[j].value = row[j].code;
+				row[j].text = row[j].code;
+				if (styles && styles[mc.stylename])
+				{
+					style = styles[mc.stylename];
+					tnum = Number(mc.code);
+					if (style.formatstring && isNaN(tnum) == false)
+					{
+						mc.text = tnum.format(style.formatstring);
+						mc.value = mc.text;
+					}
+				}
+				rvalues[startcell.depth + 1] = 0;
+				rvalues[startcell.depth] += Number(row[j].code);
+			}
+			else
+			{
+				rvalues[rvalues.length - 1] += Number(row[j].code);
+			}
+		}
+		
+		if (row[0].children && row[0].children.length > 0)
+		{
+			for (i=0; i < row[0].children.length; i++)
+			{
+				me.gmx/*updateColumnTreeData*/(row[0].children[i], spcols, rowindex, 1, headerrow, rowfix, colfix, styles);
+			}
+		}
+	},
+	
+	gmt/*dupFinalTree*/: function(rvalue, dcell) {
+		var i, j,
+			r = [],
+			mr, dchild;
+			
+		if (rvalue && rvalue.children && rvalue.children.length > 0)
+		{
+			for (i=0; i < rvalue.children.length; i++)
+			{
+				dchild = this.gmr/*getCellValue*/(null, -1);
+				dcell.children.push(dchild);
+				mr = this.gmt/*dupFinalTree*/(rvalue.children[i], dchild);
+				if (mr && mr.length > 0)
+				{
+					for (j=0; j < mr.length; j++)
+					{
+						r.push(mr[j]);
+					}
+				}
+				else
+				{
+					r.push(dchild);
+				}
+			}
+		}
+		else if (dcell)
+		{
+			r.push(dcell);
+		}
+		
+		return r;
+	},
+	
+	gmr/*getCellValue*/: function(rvalue, j) {
+		var mcell;
+		
+		if (rvalue)
+		{
+			mcell = {
+				code: rvalue.code,
+				chart: rvalue.chart,
+				index: rvalue.index,
+				mcol: rvalue.mcol,
+				merged: 0,
+				pindex: rvalue.pindex,
+				position: rvalue.position,
+				stylename: rvalue.stylename,
+				text: rvalue.text,
+				title: rvalue.title,
+				value: rvalue.value,
+				treeinfo: rvalue.treeinfo || {},
+				children: rvalue.children || [],
+				ccol: j,
+				parent: rvalue.parent
+			};
+		}
+		else
+		{
+			mcell = {
+				code: "",
+				chart: null,
+				index: null,
+				mcol: null,
+				merged: 0,
+				pindex: null,
+				position: null,
+				stylename: null,
+				text: null,
+				title: null,
+				value: null,
+				treeinfo: {},
+				children: [],
+				ccol: j,
+				parent: null
+			};
+		}
+		
+		return mcell;
+	},
+	
+	gmd/*duplicateCellValue*/: function(rvalue, svalue) {
+		rvalue.code = svalue.code;
+		rvalue.chart = svalue.chart;
+		rvalue.index = svalue.index;
+		rvalue.mcol = svalue.mcol;
+		rvalue.pindex = svalue.pindex;
+		rvalue.position = svalue.position;
+		rvalue.stylename = svalue.stylename;
+		rvalue.text = svalue.text;
+		rvalue.title = svalue.title;
+		rvalue.value = svalue.value;
+	},
+	
+	gtr/*generateTreeData*/: function(mdata, colfix, rowfix, styles) {
+		var me = this,
+			data = [],
+			i, j, k,
+			pcol = [], row, mrow, mcell, prow, n, ncolcnt = mdata[0].length - colfix, style, tnum;
+		
+		for (i=0; i < colfix; i++)
+		{
+			pcol.push({
+				row: null,
+				depth: 0
+			});
+		}
+		
+		for (i=0; i < mdata.length; i++)
+		{
+			row = mdata[i];
+			
+			if (i < rowfix)
+			{
+				mrow = [];
+				
+				for (j=0; j < row.length; j++)
+				{
+					mcell = this.gmr/*getCellValue*/(row[j], j);
+					
+					if (j < colfix)
+					{
+						if (j == 0)
+						{
+							mrow.push(mcell);
+						}
+						else
+						{
+							// mcell.parent = mrow[0];
+							// mrow[0].children.push(mcell);
+						}
+					}
+					else
+					{
+						// mcell.parent = mrow[0];
+						mrow.push(mcell);
+					}
+				}
+				
+				data.push(mrow);
+			}
+			else
+			{
+			
+				for (j=0; j < row.length; j++)
+				{
+					mrow = null;
+					
+					mcell = this.gmr/*getCellValue*/(row[j], j);
+					
+					if (j < colfix)
+					{
+						if (pcol[j].row == null || (pcol[j].row && pcol[j].row[0].code != row[j].code))
+						{
+							prow = pcol[j].row;
+							
+							mrow = [];
+							mrow.push(mcell);
+							
+							mcell.treeinfo.depth = j;
+							
+							if (j == 0)
+							{
+								pcol[j].row = mrow;
+								data.push(mrow);
+							}
+							else
+							{
+								prow = pcol[j-1].row;
+								// case when grad total collapsing
+								if (prow[0].position == 4)
+								{
+									pcol[j].row = prow;
+									mcell.parent = prow[0];
+								}
+								else
+								{
+									pcol[j].row = mrow;
+									prow[0].children.push(mrow);
+									mcell.parent = prow[0];
+								}
+							}
+							
+							for (k=j+1; k < colfix; k++)
+							{
+								pcol[k].row = null;
+							}
+							pcol[j].depth = j;
+						}
+						else if (pcol[j])
+						{
+							// do nothing
+						}
+					}
+					else
+					{
+						n = pcol.length - 1;
+						pcol[n].row.push(mcell);
+					}
+				}
+			}
+		}
+		
+		for (i=rowfix; i < data.length; i++)
+		{
+			mrow = data[i];
+			
+			svalues = me.ms/*getSubTotals*/(mrow, ncolcnt, styles);
+		}
+		
+		return data;
+	},
+	
+	ms/*getSubTotals*/: function(d, ncolcnt, styles) {
+		var me = this,
+			i, j,
+			svalues = [],
+			mvalues, style, tnum,
+			mc, isgrandtotal=false,
+			nval;
+		
+		for (i=0; i < ncolcnt; i++)
+		{
+			svalues.push({
+				v: null,
+				c: null
+			});
+		}
+			
+		if (d.length > 1)
+		{
+			if (d[0].position == 4)
+			{
+				isgrandtotal = true;
+				return svalues;
+			}
+			
+			for (i=0; i < ncolcnt; i++)
+			{
+				// if (d[i+1].position != 4)
+				// {
+					nval = Number(d[i+1].code);
+					nval = isNaN(nval) ? 0 : nval;
+					svalues[i].v = (svalues[i].v == null) ? nval : svalues[i].v + nval;
+					svalues[i].c = d[i+1];
+				// }
+			}
+		}
+		else if (d[0].children && d[0].children.length > 0)
+		{
+			for (i=0; i < d[0].children.length; i++)
+			{
+				mvalues = me.ms/*getSubTotals*/(d[0].children[i], ncolcnt, styles);
+				for (j=0; j < mvalues.length; j++)
+				{
+					if (mvalues[j].c)
+					{
+						svalues[j].v = (svalues[j].v == null) ? Number(mvalues[j].v) : svalues[j].v + Number(mvalues[j].v);
+						svalues[j].c = mvalues[j].c;
+					}
+				}
+			}
+			
+			for (i=0; i < svalues.length; i++)
+			{
+				mc = {
+					code: svalues[i].v,
+					chart: null,
+					index: svalues[i].c ? svalues[i].c.index : null,
+					mcol: svalues[i].c ? svalues[i].c.mcol : null,
+					merged: 0,
+					pindex: svalues[i].c ? svalues[i].c.pindex : null,
+					position: svalues[i].c ? svalues[i].c.position : null,
+					stylename: svalues[i].c ? svalues[i].c.stylename : null,
+					text: "" + svalues[i].v,
+					title: svalues[i].c ? svalues[i].c.title : null,
+					value: svalues[i].v
+				};
+				
+				if (styles && styles[mc.stylename])
+				{
+					style = styles[mc.stylename];
+					tnum = Number(mc.code);
+					if (style.formatstring && isNaN(tnum) == false)
+					{
+						mc.text = tnum.format(style.formatstring);
+						mc.value = mc.text;
+					}
+				}
+				
+				d.push(mc);
+			}
+		}
+		
+		return svalues;
+	},
+	
+	_IN0/*applyOptions*/: function(rop, sop) {
+		var me = this;
+		
+		if (rop && sop)
+		{
+			me._ILa/*reportoption*/ = rop;
+			me._ILb/*sheetoption*/ = sop;
+			
+			me._0x030/*mgrid*/._ILb/*sheetoption*/ = sop;
+		}
+		
+		if (me._ILb/*sheetoption*/)
+		{
+			me._0x030/*mgrid*/.columnfill = me._ILb/*sheetoption*/.columnfill;
+		}
+	},
+	
+	Mm12/*invalidateSize*/: function () {
+		this.dor/*drawOlapResult*/();
+	}
+}
+IG$/*mainapp*/._I95/*olapChartView*/ = function(rpc, uid, container, tw, th) {
+	var i,
+		me = this,
+		bg,
+		logo,
+		hscroll, hend, hup, hdown;
+
+	me.rpc = rpc;
+
+	me.mresult = null;
+	me._ILa/*reportoption*/ = null;
+	me._ILb/*sheetoption*/ = null;
+	me.uid = uid;
+	me._IL8/*jobid*/ = null;
+	me.P1/*maincontainer*/ = $(container);
+	me.ctrl = null;
+
+	me._mc/*masterCharts*/ = [];
+	me.detailChart = null;
+
+	me.isHighChart = false;
+	me.selectedData = null;
+	me.ddt/*drillDepth*/ = 0;
+
+	me.f4/*onClickEventHandler*/ = null;
+	me.f4a/*onClickEventOwner*/ = null;
+
+	me.drawmode = null;
+	me.rfctimer = -1;
+	me.pw = -1;
+	me.ph = -1;
+
+	me.ti = 0;
+	me.scrollsize = 13;
+	me.scrollX = 0;
+	
+	me._sep = IG$/*mainapp*/.sX/*seperator*/;
+	
+	
+	me.PJ2/*jcontainer*/ = $("<div></div>").appendTo(me.P1/*maincontainer*/);
+	me.PJ2/*jcontainer*/.css({position: "absolute", top: 0, bottom: 0, left: 0, right: 0});
+	tw = tw || IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.P1/*maincontainer*/);
+	th = th || IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.P1/*maincontainer*/);
+	IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.PJ2/*jcontainer*/, tw);
+	IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.PJ2/*jcontainer*/, th);
+
+	me.container = me.PJ2/*jcontainer*/[0];
+
+	me.PJ3/*fcontainer*/ = $("<div class='idv-filter-desc'></div>").appendTo(me.P1/*maincontainer*/).hide();
+	me.PJ3/*fcontainer*/.bind("click", function() {
+		$(this).fadeOut();
+	});
+	me.PJ4/*scontainer*/ = $("<div class='m-chart-selection'></div>").appendTo(me.P1/*maincontainer*/).hide();
+	$("<div class='m-chart-selection-bg'></div>").appendTo(me.PJ4/*scontainer*/);
+	
+	me._bN/*bandFormula*/ = $("<div class='igc-cfit-formula'></div>").appendTo(me.P1/*maincontainer*/).hide();
+
+	bg = $("<div class='m-chart-selection-boxtop'></div>").appendTo(me.PJ4/*scontainer*/);
+	me.PJ4a/*sbox*/ = $("<div class='m-chart-selection-box'></div>").appendTo(bg);
+
+	if (ig$/*appoption*/.chartlogo && ig$/*appoption*/.chartlogo.enabled)
+	{
+		logo = $("<div class='" + ig$/*appoption*/.chartlogo.clsname + "'></div>").appendTo(me.P1/*maincontainer*/).hide();
+
+		setTimeout(function() {
+			logo.fadeIn(2000);
+		}, 500);
+	}
+
+   	IG$/*mainapp*/._I0a/*drawLicenseTag*/(me.P1/*maincontainer*/);
+
+	me.reghscroll = $('<div class="m-datagrid-scroll m-datagrid-hscroll"></div>')
+		.css({height: me.scrollsize})
+		.hide()
+		.appendTo(me.P1/*maincontainer*/);
+	
+//	hup = $('<div class="m-datagrid-track-up icon-caret-right"></div>').appendTo(me.reghscroll);
+//	hdown = $('<div class="m-datagrid-track-down icon-caret-left"></div>').appendTo(me.reghscroll);
+//	
+//	hup.bind("click", function(ev) {
+//		ev.preventDefault();
+//		ev.stopImmediatePropagation();
+//		
+//		
+//	});
+	
+	me.hscroll = hscroll = $('<div class="m-datagrid-track m-datagrid-track-h"></div>').appendTo(me.reghscroll);
+
+	me.reghscrollthumb = $('<div class="m-datagrid-scrollthumb m-datagrid-scrollthumb-h"></div>')
+		.css({height: (me.scrollsize), width: 20})
+		.appendTo(hscroll);
+
+	hend = $('<div class="m-datagrid-end m-datagrid-end-h">')
+		.css({height: (me.scrollsize), width: 5})
+		.appendTo(me.reghscrollthumb);
+
+	me.reghscroll.bind({
+		click: function(ev) {
+			var dgrid = me;
+			if (dgrid.mv == false)
+			{
+				dgrid.onscrollmouseclick.call(dgrid, me, ev, "h");
+			}
+			return false;
+		}
+	});
+
+	me.reghscrollthumb[0].eventtarget = 'horizontal';
+
+	me.reghscrollthumb.bind({
+		mousedown: function(ev) {
+			var dgrid = me;
+			dgrid.mv = true;
+			dgrid.onthumbmousedown.call(dgrid, this, ev, "h");
+		},
+		mouseup: function(ev) {
+			var dgrid = me;
+			dgrid.onthumbmouseup.call(dgrid, this, ev, "h");
+		}
+	});
+
+	me._m1/*unitcontainer*/ = $("<div class='chart-unit-content'></div>").appendTo(me.P1/*maincontainer*/).hide();
+}
+
+IG$/*mainapp*/._I95/*olapChartView*/.prototype = {
+	onthumbmousedown: function(elem, ev, direction) {
+		var owner = this;
+
+		if (ev)
+		{
+			ev.preventDefault();
+			ev.stopImmediatePropagation();
+
+			owner.dt1 = new Date().getTime();
+			owner.thumbbuttondown = true;
+			owner.thumbMouseStartX = ev.pageX;
+			owner.thumbMouseStartY = ev.pageY;
+			owner.sx = owner.scrollX;
+			owner.sy = owner.scrollY;
+			owner.isScrolling = true;
+			owner.scrolltarget = elem.eventtarget;
+
+			owner.registerGlobalEvent(direction);
+		}
+
+		return false;
+	},
+
+	onthumbmouseup: function(elem, ev, direction) {
+		var me = this,
+			owner = me,
+			cdt = new Date().getTime();
+
+		if (ev && me.dt1 && me.dt1 > -1 && cdt - me.dt1 < 200)
+		{
+			var je = $(elem),
+				offset = je.offset(),
+				px = ev.pageX - offset.left,
+				py = ev.pageY - offset.top,
+				pw = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(je),
+				ph = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(je),
+				nsx = me.scrollX,
+				nsy = me.scrollY,
+				step, inc;
+
+			me.dt1 = -1;
+
+			event.stopPropagation();
+
+			if (me.ge)
+			{
+				$(document).unbind(me.ge);
+				me.ge = null;
+			}
+
+			me.globalMouseUp.call(me, ev, direction);
+
+			owner.thumbbuttondown = false;
+			owner.thumbMouseStartX = -1;
+			owner.thumbMouseStartY = -1;
+
+			if (direction == "v")
+			{
+				inc = (py > ph / 2) ? 0.1 : -0.1;
+				step = Math.min(owner.theight - owner.cheight, (owner.cheight - owner.fixedRowHeight) * 0.1);
+				nsy = nsy + step * inc;
+				nsy = (nsy < 0) ? 0 : Math.min(nsy, owner.theight - owner.cheight);
+				
+				if (isNaN(nsy))
+					return;
+			}
+			else if (direction == "h")
+			{
+				inc = (px > pw / 2) ? 0.1 : -0.1;
+				step = step = Math.min(owner.twidth - owner.cwidth, (owner.cwidth - owner.fixedColWidth) * 0.1);
+				nsx = nsx + step * inc;
+				nsx = (nsx < 0) ? 0 : Math.min(nsx, owner.twidth - owner.cwidth);
+				
+				if (isNaN(nsx))
+					return;
+			}
+			
+			if (owner.scrollX != nsx || owner.scrollY != nsy)
+			{
+				owner.scrollX = nsx;
+				owner.scrollY = nsy;
+
+				owner.updateThumbPosition.call(owner);
+
+				// this.reghscrollthumb.css({left: owner.scrollX )
+
+				if (owner.thumbTimer > -1)
+				{
+					clearTimeout(owner.thumbTimer);
+				}
+
+				// owner.thumbTimer = setTimeout(function() {
+					owner.onthumbtimer.call(owner);
+				//}, 50);
+			}
+		}
+	},
+
+	registerGlobalEvent: function(direction) {
+		var owner = this;
+
+		var _globalMouseDown = function(ev) {
+			owner.globalMouseDown.call(owner, ev, direction);
+			return false;
+		};
+
+		var _globalMouseMove = function(ev) {
+			ev.stopPropagation();
+			owner.mv = true;
+			owner.globalMouseMove.call(owner, ev, direction);
+			return false;
+		};
+
+		var _globalMouseUp = function(ev) {
+			ev.stopPropagation();
+			owner.mv = true;
+
+			owner.globalMouseUp.call(owner, ev, direction);
+			$(document).unbind({
+				mousedown: _globalMouseDown,
+				mousemove: _globalMouseMove,
+				mouseup: _globalMouseUp
+			});
+			return false;
+		};
+
+		this.ge = {
+			mousedown: _globalMouseDown,
+			mousemove: _globalMouseMove,
+			mouseup: _globalMouseUp
+		};
+
+		$(document).bind({
+			mousedown: _globalMouseDown,
+			mousemove: _globalMouseMove,
+			mouseup: _globalMouseUp
+		});
+	},
+
+	globalMouseDown: function(ev, direction) {
+	},
+
+	globalMouseMove: function(ev, direction) {
+		var owner = this;
+		ev.preventDefault();
+		ev.stopImmediatePropagation();
+
+		if (owner)
+		{
+			owner.scrollHandler.call(owner, {x: ev.pageX, y: ev.pageY}, direction);
+		}
+	},
+
+	globalMouseUp: function(ev, direction) {
+		var owner = this;
+		owner.isScrolling = false;
+		owner.isDragging = false;
+
+		owner.ge = null;
+
+		setTimeout(function(){
+			owner.mv = false;
+		}, 50);
+	},
+
+	scrollHandler: function(pt, direction) {
+		var owner = this,
+			me = this,
+			reghscroll = me.reghscroll,
+			reghscrollthumb = me.reghscrollthumb,
+			mx = pt.x - owner.thumbMouseStartX,
+			nsx = owner.scrollX;
+
+		nsx = Math.min(IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.hscroll), Math.max(0, owner.sx + mx));
+
+		if (owner.scrollX != nsx)
+		{
+			owner.scrollX = nsx;
+
+			owner.updateThumbPosition.call(owner);
+
+			if (owner.thumbTimer > -1)
+			{
+				clearTimeout(owner.thumbTimer);
+			}
+
+			owner.thumbTimer = setTimeout(function() {
+				owner.onthumbtimer.call(owner);
+			}, 100);
+		}
+	},
+
+	onthumbtimer: function() {
+		var me = this,
+			sx = 0;
+
+		if (me.__sch/*scrollhandler*/ && me.__sch/*scrollhandler*/.f)
+		{
+			sx = Math.floor((me.scrollX * me.mresult.rows) / me.thumbhwidth);
+			me.__sch/*scrollhandler*/.f.call(me.__sch/*scrollhandler*/.o, me, sx);
+		}
+	},
+
+	updateThumbPosition: function() {
+		var me = this,
+			thumbsize = 30,
+			hpos = (this.scrollX * this.sh);
+
+		this.reghscrollthumb.css({left: Math.min(this.scrollX, IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.hscroll) - IG$/*mainapp*/.x_10/*jqueryExtension*/._w(this.reghscrollthumb))});
+	},
+
+	onscrollmouseclick: function(elem, ev, direction) {
+		var owner = this;
+
+		ev.stopPropagation();
+
+		var nsx = owner.scrollX,
+			inc = 0,
+			step,
+			offset = owner.reghscrollthumb.offset();
+
+		inc = (offset.left > ev.pageX) ? -1 : 1;
+		step = owner.thumbhwidth * owner.sh;
+		nsx += step * inc;
+		nsx = Math.floor(nsx);
+		nsx = Math.min(IG$/*mainapp*/.x_10/*jqueryExtension*/._w(owner.hscroll) - owner.thumbcalc, Math.max(0, nsx));
+		if (owner.scrollX == nsx)
+			return;
+
+		owner.scrollX = nsx;
+
+		owner.updateThumbPosition.call(owner);
+
+		clearTimeout(owner.thumbTimer);
+
+		owner.thumbTimer = setTimeout(function() {
+			owner.onthumbtimer.call(owner);
+		}, 50);
+	},
+
+	pj3/*setFilterInfo*/: function(desc) {
+		var me = this,
+			fcontainer = me.PJ3/*fcontainer*/,
+			items,
+			i, d, value;
+
+		if (desc && desc != "")
+		{
+			if (me.ddt/*drillDepth*/ > 0)
+			{
+				// fcontainer.css({top: 30});
+			}
+			items = desc.split("\n");
+			d = "";
+			for (i=0; i < items.length; i++)
+			{
+				if (items[i] != "")
+				{
+					value = items[i].substring(0, 40);
+					d = (d == "") ? value : d + "<br>" + value;
+				}
+			}
+			if (d != "")
+			{
+				fcontainer.html(d).show();
+			}
+			
+			clearTimeout(me.__fc);
+			
+			me.__fc = setTimeout(function() {
+				fcontainer.fadeOut();
+			}, 2000);
+		}
+		else
+		{
+			fcontainer.empty();
+			fcontainer.hide();
+		}
+	},
+
+	pj4/*showHideSelection*/: function(visible) {
+		var me = this,
+			scontainer = me.PJ4/*scontainer*/;
+
+		if (visible == true)
+		{
+			scontainer.show();
+		}
+		else if (visible === false)
+		{
+			scontainer.hide();
+		}
+		else
+		{
+			scontainer.toggle();
+		}
+	},
+
+	Mm12/*invalidateSize*/: function(w, h) {
+		var chartview = this;
+
+		var p1 = chartview.P1/*maincontainer*/,
+			p2 = chartview.PJ2/*jcontainer*/;
+
+		h = h - 10;
+
+		IG$/*mainapp*/.x_10/*jqueryExtension*/._w(p2, w);
+		IG$/*mainapp*/.x_10/*jqueryExtension*/._h(p2, h);
+
+		this.cwidth = w;
+		this.cheight = h;
+
+		if (chartview.rfctimer > -1)
+		{
+			clearTimeout(chartview.rfctimer);
+		}
+
+		chartview.rfctimer = setTimeout(
+			function() {
+				chartview.Mm12a/*updateDisplayList*/.call(chartview, w, h);
+			}, 200);
+	},
+
+	Mm12a/*updateDisplayList*/: function(w, h) {
+		var me = this,
+			treemap = me.treemap,
+			bindc = me.bindc,
+			chartdrawing,
+			scontainer = me.PJ4/*scontainer*/,
+			i, tw, th, n,
+			pielayout = me._ILb/*sheetoption*/ ? me._ILb/*sheetoption*/.cco/*chartOption*/.pielayout : null;
+
+		me.rfctimer = -1;
+
+		if (Math.abs(me.pw - w) < 5 && Math.abs(me.ph - h) < 5)
+		{
+			return;
+		}
+
+		me.pw = w;
+		me.ph = h;
+
+		if (me.pw < 5 || me.ph < 5)
+		{
+			return;
+		}
+
+		switch (me.drawmode)
+		{
+		case "highchart":
+			if (me._mc/*masterCharts*/ && me._mc/*masterCharts*/.length > 0)
+			{
+				if (pielayout == "h")
+				{
+					tw = w / me._mc/*masterCharts*/.length;
+					th = h;
+				}
+				else if (pielayout == "h")
+				{
+					th = h / me._mc/*masterCharts*/.length;
+					tw = w;
+				}
+				else
+				{
+					tw = w;
+					th = h;
+				}
+
+				// for (i=0; i < me._mc/*masterCharts*/.length; i++)
+				$.each(me._mc/*masterCharts*/, function(i, mchart) {
+					$(mchart.renderTo).css({
+						position: "absolute",
+						left: (pielayout == "h" ? tw * i : 0),
+						top: (pielayout == "v" ? th * i : 0),
+						width: tw,
+						height: th
+					});
+
+					mchart.setSize.call(mchart, tw, th, doAnimation = true);
+					mchart.renderTo && $(mchart.renderTo).hide().show(0);
+				});
+			}
+			break;
+		case "echart":
+			if (me._mc/*masterCharts*/ && me._mc/*masterCharts*/.length > 0)
+			{
+				if (pielayout == "h")
+				{
+					tw = w / me._mc/*masterCharts*/.length;
+					th = h;
+				}
+				else if (pielayout == "h")
+				{
+					th = h / me._mc/*masterCharts*/.length;
+					tw = w;
+				}
+				else
+				{
+					tw = w;
+					th = h;
+				}
+
+				// for (i=0; i < me._mc/*masterCharts*/.length; i++)
+				$.each(me._mc/*masterCharts*/, function(i, mchart) {
+					$(mchart.renderTo).css({
+						position: "absolute",
+						left: (pielayout == "h" ? tw * i : 0),
+						top: (pielayout == "v" ? th * i : 0),
+						width: tw,
+						height: th
+					});
+
+					mchart.resize.call(mchart, {width: tw, height: th});
+				});
+			}
+			break;
+		case "treemap":
+			if (treemap && treemap.map)
+			{
+				// treemap.position.call(treemap, treemap.data.dom, 0, treemap.ti, w, h - treemap.ty);
+				// treemap.layout.call(treemap, treemap.data, me.ti, w, h - treemap.ty);
+				treemap.box.css({
+					top: treemap.ty,
+					left: 0,
+					width: w,
+					height: h - treemap.ty
+				});
+
+				treemap.map.setSize(w, h - treemap.ty);
+				treemap.map.renderTo && $(treemap.map.renderTo).hide().show(0);
+			}
+			break;
+		case "bindc":
+			if (bindc && bindc.container)
+			{
+				IG$/*mainapp*/.x_10/*jqueryExtension*/._w(bindc.container, w);
+				IG$/*mainapp*/.x_10/*jqueryExtension*/._h(bindc.container, h);
+			}
+			break;
+		case "qavis":
+			if(me.qavis)
+			{
+				me.qavis.c9/*updateDisplayList*/.call(me.qavis);
+			}
+			break;
+		case "dcust":
+			if (me.dcust)
+			{
+				me.dcr/*drawChartResult*/(w, h);
+			}
+			break;
+		case "protovis":
+			if (me.vis)
+			{
+				$(me.container).empty();
+				me.vis = null;
+				
+				me.dcr/*drawChartResult*/(w, h);
+			}
+			break;
+		case "bubblemap":
+			if (me.bmap)
+			{
+				me.dcr/*drawChartResult*/(w, h);
+			}
+			break;
+		case "custom":
+			if (me.customchart)
+			{
+				// me.dcr/*drawChartResult*/(w, h);
+				me.customchart.updatedisplay.call(me.customchart, me, w, h);
+			}
+		}
+	},
+
+	Umx/*updateSelection*/: function(filters, cols, box) {
+		var me = this,
+			fs = filters,
+			cs = cols,
+			bx = box;
+		if (me.uMX/*updateSelectionTimer*/)
+		{
+			clearTimeout(me.uMX/*updateSelectionTimer*/);
+		}
+
+		me.uMX/*updateSelectionTimer*/ = setTimeout(function() {
+			me.aUmx/*updateSelection*/.call(me, fs, cs, bx);
+		}, 800);
+	},
+
+	aUmx/*updateSelection*/: function(filters, cols, box) {
+		var me = this,
+			mresult = me.mresult,
+			data = mresult.data,
+			fc = mresult.colfix,
+			fr = mresult.rowfix,
+			tc = (data.length > 0) ? data[0].length : 0,
+			i, j, n,
+			sel = [], fname, filter, v, col, val,
+			scontainer = me.PJ4/*scontainer*/,
+			p1, p2;
+
+		if (filters)
+		{
+			for (i=fr; i < data.length; i++)
+			{
+				// filter names
+				v = true;
+				for (j=0; j < cols.length; j++)
+				{
+					fname = cols[j];
+					filter = filters[fname];
+
+					if (filter && isNaN(filter.min) == false && isNaN(filter.max) == false)
+					{
+						col = j + fc;
+						val = data[i][col].code;
+						val = (val != "") ? Number(val) : 0;
+						if (val < filter.min || val > filter.max)
+						{
+							v = false;
+							break;
+						}
+					}
+				}
+
+				if (v)
+				{
+					sel.push(i);
+				}
+			}
+		}
+		else if (box && cols)
+		{
+			for (i=0; i < cols.length; i++)
+			{
+				if (cols[i] == box.px)
+				{
+					px = i+fc;
+				}
+				else if (cols[i] == box.py)
+				{
+					py = i+fc;
+				}
+			}
+
+			for (i=fr; i < data.length; i++)
+			{
+				v = true;
+				p1 = data[i][px].code;
+				p2 = data[i][py].code;
+				p1 = (p1 != "") ? Number(p1) : 0;
+				p2 = (p2 != "") ? Number(p2) : 0;
+				p1 = (isNaN(p1) ? 0 : p1);
+				p2 = (isNaN(p2) ? 0 : p2);
+
+				if (p1 < box.x1 || p1 > box.x2 || p2 < box.y1 || p2 > box.y2)
+				{
+					v = false;
+				}
+
+				if (v)
+				{
+					sel.push(i);
+				}
+			}
+		}
+
+		// update table
+		var sbox = me.PJ4a/*sbox*/,
+			tb = $("<table></table>"),
+			th;
+
+		sbox.empty();
+		$("<span>" + (sel.length) + " / " + data.length + " Items selected</span>&nbsp;&nbsp;&nbsp;&nbsp;<br><br>").appendTo(sbox);
+		var clipbutton = $("<div class='clipbutton'>Select All</div>").appendTo(sbox);
+		clipbutton.bind("click", function() {
+			IG$/*mainapp*/._I47/*selectAll*/(tb);
+		});
+		tb.appendTo(sbox);
+
+		for (i=0; i < fr; i++)
+		{
+			th = $("<tr></tr>").appendTo(tb);
+
+			for (j=0; j < tc; j++)
+			{
+				th.append($("<th>" + data[i][j].text + "</th>"));
+			}
+		}
+
+		for (i=0; i < sel.length; i++)
+		{
+			th = $("<tr></tr>").appendTo(tb);
+			n = sel[i];
+			for (j=0; j < tc; j++)
+			{
+				th.append($("<td>" + data[n][j].text + "</td>"));
+			}
+		}
+
+		tb.bind("selectstart", function() {
+			return true;
+		});
+	},
+
+
+	JJ$6/*drawBubbleMap*/: function(mresult) {
+		var i,
+			j,
+			data = mresult.data,
+			fc = mresult.colfix,
+			fr = mresult.rowfix,
+			title,
+			fields = [],
+			matrixdata = [],
+			row,
+			tn,
+			c,
+			r,
+			nval = 0,
+			me = this,
+			xs = [], ys = [], bubbledata = [],
+			xmap = {}, ymap = {}, axisx = [], axisy = [], xinc=0, yinc=0,
+			bmaprow = me.cop.bmaprow,
+			bmapyaxis = me.cop.bmapyaxis,
+			isbmapyaxis;
+
+		me.drawmode = "bubblemap";
+
+		if (bmapyaxis == false && fc == 2)
+		{
+			isbmapyaxis = false;
+			for (i=fr; i < data.length; i++)
+			{
+				if (data[i].length > fc)
+				{
+					nval = Number(data[i][fc].code) || 0;
+					nval = (nval < 0) ? 0 : nval;
+				}
+				
+				if (nval > 0)
+				{
+					bubbledata.push(nval);
+					
+					for (j=0; j < fc; j++)
+					{
+						c = data[i][j];
+						tn = c.text || c.code;
+						if (j == 0)
+						{
+							if (!xmap[tn])
+							{
+								xmap[tn] = {
+									inc: xinc++
+								};
+								axisx.push(tn);
+							}
+							xs.push(xmap[tn].inc);
+						}
+						else if (j == 1)
+						{
+							if (!ymap[tn])
+							{
+								ymap[tn] = {
+									inc: yinc++
+								};
+								axisy.push(tn);
+							}
+							ys.push(ymap[tn].inc);
+						}
+					}
+				}
+			}
+		}
+		else
+		{
+			isbmapyaxis = true;
+			var rowval;
+			for (i=0; i < fr; i++)
+			{
+				for (j=fc; j < data[i].length; j++)
+				{
+					c = data[i][j];
+					tn = c.text || c.code;
+					if (i == 0)
+					{
+						axisy.push(tn);
+					}
+					else
+					{
+						axisy[j-fc] += me._sep + tn;
+					}
+				}
+			}
+
+			for (i=fr; i < data.length; i++)
+			{
+				rowval = "";
+				for (j=0; j < data[i].length; j++)
+				{
+					c = data[i][j];
+					tn = c.text || c.code;
+					if (j < fc)
+					{
+						rowval = (j == 0) ? tn : rowval + me._sep + tn;
+					}
+					else
+					{
+						if (j == fc)
+						{
+							axisx.push(rowval);
+						}
+						xs.push(i-fr);
+						ys.push(j - fc);
+
+						nval = Number(tn) || 0;
+						nval = (nval < 0) ? 0 : nval;
+						bubbledata.push(nval);
+					}
+				}
+			}
+		}
+
+		r = me.bmap = Raphael(me.container);
+
+		var jdom = $(me.container),
+			w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(jdom),
+			h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(jdom);
+			
+		if (bubbledata.length)
+		{
+			r.dotchart(0, 0, w, h, xs, ys, bubbledata, {
+				symbol: "o",
+				max: me.cop.bmapsize,
+				heat: true,
+				axis: "0 0 1 1",
+				axisxstep: Math.min(axisx.length-1, 20),
+				axisystep: Math.min(axisy.length-1, 20),
+				axisxlabels: axisx,
+				axisxtype: " ",
+				axisytype: " ",
+				axisylabels: axisy
+			}).hover(function () {
+				this.marker = this.marker || r.tag(this.x, this.y,
+					axisx[this.X] + "\n" + axisy[this.Y] + "\n" + this.value
+				, 0, this.r + 2).insertBefore(this);
+				this.marker.show();
+			}, function () {
+				this.marker && this.marker.hide();
+			}).click(function() {
+				var sender = null,
+					param = null;
+	
+				if (isbmapyaxis == false)
+				{
+					sender = {
+						name: axisx[this.X] + IG$/*mainapp*/.sX/*seperator*/ + axisy[this.Y]
+					},
+					param = {
+						point: {
+							category: this.value
+						}
+					};
+				}
+				else
+				{
+					sender = {
+						name: axisx[this.X]
+					},
+					param = {
+						point: {
+							category: axisy[this.Y]
+						}
+					};
+				}
+	
+				(sender && param) &&
+				me.p1/*processClickEvent*/.call(me, sender, param);
+			});
+		}
+	},
+
+
+	disposeContent: function(ui) {
+		var i,
+			cobj,
+			hc;
+
+		for (i=ui._mc/*masterCharts*/.length - 1; i>= 0; i--)
+		{
+			try
+			{
+				cobj = ui._mc/*masterCharts*/[i];
+				cobj && cobj.destroy && cobj.destroy();
+				cobj && cobj.dispose && cobj.dispose();
+			}
+			catch (e)
+			{
+			}
+			ui._mc/*masterCharts*/[i] = null;
+		}
+
+		ui._mc/*masterCharts*/ = [];
+		
+		$(".i-sschart-cnt", ui.container).empty();
+		
+		if (ui.customchart && ui.customchart.destroy)
+		{
+			ui.customchart.destroy();
+			ui.customchart = null;
+		}
+		
+		if (ui.vis)
+		{
+			$(ui.container).empty();
+			ui.vis = null;
+		}
+
+//		if (ui.masterChart != null && typeof ui.masterChart != "undefined")
+//		{
+//			ui.masterChart && ui.masterChart.destroy();
+//			ui.masterChart = null;
+//		}
+	},
+
+	dcr/*drawChartResult*/: function (w, h, isthumb, ispageview) {
+		var cret = null,
+			me = this,
+			mresult = me.mresult,
+			charttype,
+			cop,
+			cinfo,
+			useformula,
+			timeseriesfield,
+			ps = false,
+			bdatas, tw;
+
+		me.pw = (w > 0 ? w : me.pw);
+		me.ph = (h > 0 ? h : me.ph);
+
+		me._m1/*unitcontainer*/.hide();
+
+		if (mresult)
+		{
+			if (ispageview == false)
+			{
+				if (mresult.pagestart > 0 && me.scrollX == 0)
+				{
+					isthumb = true;
+					ps = true;
+					var mcr = me._ILb/*sheetoption*/.cco/*chartOption*/,
+						maxchartresult = mcr.maxchartresult;
+
+					bdatas = Math.min(mresult.data.length, (maxchartresult > 0 ? maxchartresult : mresult.data.length));
+					me.sh = bdatas / mresult.rows;
+					me.scrollX = (mresult.pagestart + 20) * w / mresult.rows;
+				}
+			}
+
+			if (!isthumb)
+			{
+				me.sh = 1;
+				me.scrollX = 0;
+			}
+
+			me.cop = me._ILb/*sheetoption*/.cco/*chartOption*/;
+			cop = me.cop;
+			me.rct/*rendercharttype*/ = cop.charttype;
+			me.rcs/*rendersubtype*/ = cop.subtype;
+			useformula = cop.useformula;
+			timeseriesfield = cop.timeseriesfield;
+
+			if (cop.cunittext)
+			{
+				me._m1/*unitcontainer*/.empty();
+				me._m1/*unitcontainer*/.append("<span>" + cop.cunittext + "</span>");
+				me._m1/*unitcontainer*/.show();
+			}
+
+			me.pj3/*setFilterInfo*/(mresult.f_/*filterdesc*/ || "");
+
+			if (me.ddt/*drillDepth*/ > 0 && cop.drillcharttype && cop.drillcharttype.length > me.ddt/*drillDepth*/ - 1 && cop.drillcharttype[me.ddt/*drillDepth*/ - 1] != "")
+			{
+				cinfo = cop.getChartInfo(parseInt(cop.drillcharttype[me.ddt/*drillDepth*/ - 1]));
+				me.rct/*rendercharttype*/ = cinfo.charttype;
+				me.rcs/*rendersubtype*/ = cinfo.subtype;
+			}
+
+			if (me.rct/*rendercharttype*/ == "map")
+			{
+				me.isHighChart = false;
+				me.l3/*drawMapChart*/(mresult);
+			}
+			else if (me.rct/*rendercharttype*/ == "treemap")
+			{
+				me.isHighChart = false;
+				me.ti = 0;
+				me.l3a/*drawTreeMapChart*/(mresult);
+			}
+			else if (me.rct/*rendercharttype*/ == "bindc")
+			{
+				me.isHighChart = false;
+				me.l3b/*drawIndicator*/(mresult, me.rct/*rendercharttype*/);
+			}
+			else if (me.rct/*rendercharttype*/ == "matrix")
+			{
+				me.isHighChart = false;
+				me.JJ$3/*drawMatrixChart*/(mresult);
+			}
+			else if (me.rct/*rendercharttype*/ == "bubblemap")
+			{
+				me.isHighChart = false;
+				me.JJ$6/*drawBubbleMap*/(mresult);
+			}
+			else if (window.d3 && (me.rct/*rendercharttype*/ == "parallel" ||
+					 me.rct/*rendercharttype*/ == "performancemap" ||
+					 me.rct/*rendercharttype*/ == "boxplot" ||
+					 me.rct/*rendercharttype*/ == "networkdiagram_pos" ||
+					 me.rct/*rendercharttype*/ == "networkdiagram_neg" ||
+					 me.rct/*rendercharttype*/ == "matrixdiagram" ||
+					 me.rct/*rendercharttype*/ == "anderson" ||
+					 me.rct/*rendercharttype*/ == "forcelayout" ||
+					 me.rct/*rendercharttype*/ == "chord" ||
+					 me.rct/*rendercharttype*/ == "sunburst"))
+			{
+				me.isHighChart = false;
+				me.JJ$4/*drawProtovisChart*/(me.rct/*rendercharttype*/, mresult);
+			}
+			else if (window.d3 && (me.rct/*rendercharttype*/ == "bullet" ||
+					 me.rct/*rendercharttype*/ == "nation"))
+			{
+				me.isHighChart = false;
+				me.JJ$4a/*drawD3CustomChart*/(me.rct/*rendercharttype*/, mresult);
+			}
+			else if (IG$/*mainapp*/.__c_/*chartoption*/ && IG$/*mainapp*/.__c_/*chartoption*/.chartext && IG$/*mainapp*/.__c_/*chartoption*/.chartext[me.rct/*rendercharttype*/])
+			{
+				me.drawmode = "custom";
+				me.isHighChart = false;
+				if (!me.customchart)
+				{
+					me.customchart = new IG$/*mainapp*/.__c_/*chartoption*/.chartext[me.rct/*rendercharttype*/](me);
+				}
+				try
+				{
+					me.customchart.drawChart.call(me.customchart, me, mresult);
+				}
+				catch (e)
+				{
+					setTimeout(function() {
+						IG$/*mainapp*/._I52/*ShowError*/("Error on chart drawing : " + e.message);
+					}, 100);
+				}
+			}
+			else
+			{
+				me.isHighChart = true;
+				cret = me._l1/*drawCartesian*/(mresult, w, h, (ps ? false : isthumb));
+			}
+
+			if (!isthumb || ps == true)
+			{
+				if (me.sh < 1)
+				{
+					tstyle = {left: 0};
+					tstyle.width = w;
+					
+					me.reghscroll.show();
+					me.thumbhwidth = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.hscroll); //  * me.sh;
+					thumbcalc = Math.max(30, me.thumbhwidth * me.sh);
+					me.thumbcalc = thumbcalc;
+					me.reghscrollthumb.css({left: Math.min(me.scrollX, me.thumbhwidth - thumbcalc), width: thumbcalc});
+					
+					me.reghscroll.css(tstyle);
+					me.regh = true;
+				}
+				else
+				{
+					me.regh = false;
+					me.reghscroll.hide();
+				}
+			}
+		}
+
+		return cret;
+	},
+
+	l1/*entryLoginMap*/: function(thisobj) {
+		this.l3/*drawMapChart*/(this.mresult);
+	},
+
+	l2/*loadMapData*/: function(sloc, ploc, mapid, keyname, cview) {
+		var panel = this;
+		var req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.init(panel,
+			{
+				ack: "11",
+				payload: "<smsg><item code='" + sloc + "' pcode='" + ploc + "'/></smsg>",
+				mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "geomap"})
+			}, panel, panel.rs_l2/*loadMapData*/, null, [mapid, keyname, cview]);
+		req._l/*request*/();
+	},
+
+
+	rs_l2/*loadMapData*/: function(xdoc, params) {
+		var mnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/MapData");
+		var mapid = params[0];
+		var keyname = params[1];
+		var cview = params[2];
+
+		if (mnode != null)
+		{
+			var map = new IG$/*mainapp*/._IFa/*clMapLoc*/(mapid);
+			map.keyname = keyname;
+			map.parseMapData(mnode);
+			IG$/*mainapp*/._I5f/*geoDatas*/[mapid] = map;
+
+			cview.l3/*drawMapChart*/(cview.mresult);
+		}
+	},
+
+	area: function(pts) {
+	   var area=0;
+	   var nPts = pts.length;
+	   var j=nPts-1;
+	   var p1; var p2;
+
+	   for (var i=0;i<nPts;j=i++) {
+		  p1=pts[i]; p2=pts[j];
+		  area+=p1.lng*p2.lat;
+		  area-=p1.lat*p2.lng;
+	   }
+	   area/=2;
+	   return area;
+	},
+
+	
+
+	l3b/*drawIndicator*/: function(mresult, ctype) {
+		var me = this,
+			indc = null,
+			dp = [],
+			ea = [],
+			ma = [],
+			i, j,
+			r, mvalue, cols = (mresult.data.length > 0 ? mresult.data[0].length : 0);
+
+		for (i=mresult.rowfix; i < mresult.data.length; i++)
+		{
+			r = [];
+			for (j=0; j < mresult.data[i].length; j++)
+			{
+				mvalue = mresult.data[i][j].code || mresult.data[i][j].text;
+				r.push(mvalue);
+			}
+			dp.push(r);
+		}
+
+		for (i=0; i < mresult.colfix; i++)
+		{
+			ea.push({
+				i: i
+			});
+		}
+
+		for (i=mresult.colfix; i < cols; i++)
+		{
+			ma.push({
+				i: i
+			});
+		}
+
+		switch (ctype)
+		{
+		case "bindc":
+			indc = new m$Bl($(me.container));
+			indc.ea = ea;
+			indc.ma = ma;
+			indc.mv = null;
+			break;
+		}
+
+		if (indc)
+		{
+			indc.loadData.call(indc, dp);
+		}
+
+		me.drawmode = ctype;
+		me.bindc = indc;
+	},
+	
+	_s1/*selectPointsByDrag*/: function(chart, e) {
+		Highcharts.each(chart.series, function (series) {
+            Highcharts.each(series.points, function (point) {
+                if (point.x >= e.xAxis[0].min && point.x <= e.xAxis[0].max && point.y >= e.yAxis[0].min && point.y <= e.yAxis[0].max) 
+                {
+                    point.select(true, true);
+                }
+            });
+        });
+		
+        var points = chart.getSelectedPoints.call(chart);
+
+        this.p1/*processClickEvent*/(chart, points);
+	},
+	
+	_s3/*unselectByClick*/: function(chart, e, isdrill) {
+		var me = this,
+			points = chart.getSelectedPoints(),
+			ctime = new Date().getTime();
+		
+		if (me.rcs/*rendersubtype*/ == "syncchart")
+		{
+	        if (points.length > 0) 
+	        {
+	            Highcharts.each(points, function (point) {
+	                point.select(false);
+	            });
+	        }
+	    }
+        else
+        {
+        	if (me._st && (ctime - me._st) < 500)
+        	{
+        		if (points.length > 0) 
+		        {
+		            Highcharts.each(points, function (point) {
+		                point.select(false);
+		            });
+		        }
+		        
+        		me.p1/*processClickEvent*/.call(me, chart, null);
+        	}
+        	
+        	me._st = ctime;
+        }
+	},
+	
+	u_/*measureTextSize*/: function(size, text) {
+		var me = this,
+			cobj = {
+				fontSize: size
+			},
+			s = {};
+			
+		if (!me.measurediv)
+		{
+			me.measurediv = $('<div class="m-datagrid-cell-measure"></div>')
+				.appendTo($("body"));
+		}
+		
+		me.measurediv.show();
+		me.measurediv.css(cobj);
+		me.measurediv.html(text || "&nbsp;");
+		
+		s.height = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(me.measurediv); // .height();
+		s.width = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(me.measurediv); // .width() + 2;
+		
+		return s;
+	},
+	
+	dP/*getPieLabel*/: function(piedatalabel, tobj) {
+		var fmt = piedatalabel || "<b>{name}</b>: {percent} %",
+			n;
+		n = fmt.indexOf("{name}");
+		if (n > -1)
+		{
+			fmt = fmt.substring(0, n) + tobj.point.name + fmt.substring(n + "{name}".length);
+		}
+		n = fmt.indexOf("{percent}");
+		if (n > -1)
+		{
+			fmt = fmt.substring(0, n) + Highcharts.numberFormat(tobj.percentage, 1) + fmt.substring(n + "{percent}".length);
+		}
+		n = fmt.indexOf("{value}");
+		if (n > -1)
+		{
+			fmt = fmt.substring(0, n) + (tobj.point.fval || Highcharts.numberFormat(tobj.y, 0)) + fmt.substring(n + "{value}".length);
+		}
+		return fmt;
+	},
+
+	_l1/*drawCartesian*/: function (mresult, w, h, isthumb) {
+		var i,
+			j,
+			data = mresult.data,
+			fc = mresult.colfix,
+			fr = mresult.rowfix,
+			hidden_columns = mresult.hidden_columns || {},
+			hasdualaxis,
+			me = this,
+
+			xticks = [],
+			n = 1,
+			ename,
+			series = [],
+			ci,
+			labels = [],
+			bpointchart = 0,
+			bpolarchart = 0,
+			bscatter = 0,
+			bfixedp = 0,
+			bsync = 0,
+			bsync_l = -1,
+			bdatas,
+			cfr,
+			scrollX,
+			
+			mcr = me._ILb/*sheetoption*/.cco/*chartOption*/,
+			swapaxis = mcr.swapaxis,
+			useformula = mcr.useformula,
+			maxchartresult = mcr.maxchartresult,
+			timeseriesfield = mcr.timeseriesfield,
+			useformatvalue = mcr.useformatvalue,
+			measures = me._ILb/*sheetoption*/.measures,
+			f, _c, _uc, _fc,
+			lbl, lbl_i, lbl_c, lbl_k, lblnames = {},
+			mtitle,
+			cf = [];
+
+		var tc = (data && data.length > 0) ? data[0].length : 0;
+		var tr = (data ? data.length : 0);
+
+		// line, spline, area, areaspline, column, bar, pie and scatter
+		var rcs/*rendersubtype*/ = me.rcs/*rendersubtype*/,
+			spvalue = [];
+
+		me.drawmode = "highchart";
+
+		if (rcs/*rendersubtype*/ == "radar")
+		{
+			bpolarchart = 1;
+		}
+		else if (rcs/*rendersubtype*/ == "fixedplacement")
+		{
+			bfixedp = 1;
+		}
+		else if (rcs/*rendersubtype*/ == "syncchart")
+		{
+			bsync_l = (measures && measures.length > 1) ? measures.length : -1;
+			bsync = bsync_l > 1 ? 1 : 0;
+		}
+		
+		bdatas = Math.min(data.length, (maxchartresult > 0 ? maxchartresult : data.length));
+		me._dlen = bdatas;
+		cfr = fr;
+		
+		if (!isthumb)
+		{
+			if (mresult.pagestart > 0 || mresult.rows > mresult.pageend)
+			{
+				me.sh = bdatas / mresult.rows;
+			}
+			else if (maxchartresult > 0 && maxchartresult < data.length)
+			{
+				me.sh = maxchartresult / data.length;
+			}
+		}
+		else
+		{
+			scrollX = Math.floor((me.scrollX * mresult.rows) / me.thumbhwidth);
+			cfr += scrollX;
+			bdatas = Math.min(data.length, bdatas + scrollX);
+		}
+		
+		var coptions = [],
+			coption = {},
+			titleposition = mcr.titleposition || "",
+			c_cset = mcr.colorset || mresult.c_cset,
+			spacingBottom = 1;
+		
+		if (IG$/*mainapp*/.__c_/*chartoption*/ && IG$/*mainapp*/.__c_/*chartoption*/.chartcolors && IG$/*mainapp*/.__c_/*chartoption*/.chartcolors[c_cset])
+		{
+			coption.colors =  IG$/*mainapp*/.__c_/*chartoption*/.chartcolors[c_cset];
+		}
+
+		if (fc+1 < tc && (rcs/*rendersubtype*/ == "scatter" || rcs/*rendersubtype*/ == "bubble"))
+		{
+			var s,
+				pvalue;
+				//pmax = null,
+				// pmin = null,
+				// prange = null,
+				// zvalue;
+
+			bpointchart = 1;
+
+			if (rcs/*rendersubtype*/ == "bubble")
+			{
+				bscatter = 1;
+				
+//				if (!swapaxis && fc+2 < tc)
+//				{
+//					bscatter = 1;
+//
+//					for (i=fr; i < data.length; i++)
+//					{
+//						zvalue = me.mvalue(data[i][fc+2], useformatvalue) || 0;
+//						pmax = (i == fr) ? zvalue : Math.max(pmax, zvalue);
+//						pmin = (i == fr) ? zvalue : Math.min(pmin, zvalue);
+//					}
+//
+//					prange = 30 / (pmax - pmin);
+//				}
+//				else if (swapaxis && fr+2 < tr)
+//				{
+//					bscatter = 1;
+//
+//					for (i=fc; i < tc; i++)
+//					{
+//						zvalue = me.mvalue(data[fr+2][i], useformatvalue) || 0;
+//						pmax = (i == fc) ? zvalue : Math.max(pmax, zvalue);
+//						pmin = (i == fc) ? zvalue : Math.min(pmin, zvalue);
+//					}
+//
+//					prange = 30 / (pmax - pmin);
+//				}
+			}
+
+			if (swapaxis)
+			{
+				for (i=fc; i < Math.min(tc, (maxchartresult > 0 ? maxchartresult : tc)); i++)
+				{
+					var val = {x: me.mvalue(data[fr][i], useformatvalue), y: me.value(data[fr+1][i], useformatvalue)};
+
+					if (bscatter && fr+2  < tr)
+					{
+						zvalue = me.mvalue(data[fr+2][i], useformatvalue);
+//						zvalue = (zvalue - pmin) * prange + 2;
+
+//						val.marker = {
+//							radius: zvalue
+//						}
+						val.z = zvalue;
+					}
+
+					var sname;
+					for (j=0; j < fr; j++)
+					{
+						sname = (j == 0) ? data[j][i].text : sname + me._sep + data[j][i].text;
+					}
+
+					val.name = sname;
+					val.datarow = j;
+
+					cvalue = data[0][j].text;
+
+					if (cvalue != pvalue)
+					{
+						s = new Object();
+						s.name = cvalue;
+						s.data = [val];
+						series.push(s);
+					}
+					else if (s)
+					{
+						s.data.push(val);
+					}
+
+					pvalue = cvalue;
+				}
+			}
+			else
+			{
+				for (i=fr; i < Math.min(data.length, (maxchartresult > 0 ? maxchartresult : data.length)); i++)
+				{
+					var val = {x: me.mvalue(data[i][fc], useformatvalue), y: me.mvalue(data[i][fc+1], useformatvalue)};
+
+					if (bscatter && fc+2  < tc)
+					{
+						zvalue = me.mvalue(data[i][fc+2], useformatvalue);
+//						zvalue = (zvalue - pmin) * prange + 2;
+
+//						val.marker = {
+//							radius: zvalue
+//						};
+						val.z = zvalue;
+					}
+
+					var sname;
+					for (j=0; j < fc; j++)
+					{
+						sname = (j == 0) ? data[i][j].text : sname + me._sep + data[i][j].text;
+					}
+
+					val.name = sname;
+					val.datarow = i;
+
+					cvalue = data[i][0].text;
+
+					if (cvalue != pvalue)
+					{
+						s = new Object();
+						s.name = cvalue;
+						s.data = [val];
+						series.push(s);
+					}
+					else if (s)
+					{
+						s.data.push(val);
+					}
+
+					pvalue = cvalue;
+				}
+			}
+		}
+		else
+		{
+			if (swapaxis == true)
+			{
+				for (i=fr; i < tr; i++)
+				{
+					for (j=0; j < fc; j++)
+					{
+						lbl_i = data[i][j].text;
+						lbl = (j==0) ? lbl_i : lbl + lbl_i;
+					}
+					var s = new Object();
+					s.name = lbl;
+					s.data = [];
+					series.push(s);
+					spvalue.push(0);
+				}
+			}
+			else
+			{
+				for (i=fc; i < tc; i++)
+				{
+					lbl_k = -1;
+					lbl = "";
+					if (bsync)
+					{
+						for (j=0; j < fr; j++)
+						{
+							lbl_c = data[j][i];
+							if (lbl_c.position == 3)
+							{
+								lbl_k = lbl_c.pindex;
+								lblnames[lbl_k] = lbl_c.text;
+								continue;
+							}
+							lbl_i = lbl_c.text;
+							lbl = (j==0) ? lbl_i : lbl + me._sep + lbl_i;
+						}
+					}
+					else
+					{
+						for (j=0; j < fr; j++)
+						{
+							lbl_i = data[j][i].text;
+							lbl = (j==0) ? lbl_i : lbl + me._sep + lbl_i;
+						}
+					}
+					var s = new Object();
+					s.name = lbl || lblnames[lbl_k];
+					s.meas_k = lbl_k;
+					s.data = [];
+					series.push(s);
+					spvalue.push(0);
+				}
+			}
+
+			var m = Math.max((swapaxis == true ? tc : data.length), 20),
+				bformula = false,
+				iswaterfall = me.rcs/*rendersubtype*/ == "waterfall" && mcr.stack == false,
+				np,
+				_com;
+
+			if (swapaxis == true)
+			{
+				for (i=fc; i < Math.min(tc, (maxchartresult > 0 ? maxchartresult : tc)); i++)
+				{
+					bformula = false;
+
+					for (j=0; j < fr; j++)
+					{
+						ename = (j == 0) ? data[j][i].text : ename + IG$/*mainapp*/.sX/*seperator*/ + data[j][i].text;
+						if (data[j][i].position == 4)
+						{
+							bformula = true;
+							break;
+						}
+					}
+					if (bformula == false || useformula == true)
+					{
+						ci = 0;
+						for (j=fr; j < tr; j++)
+						{
+							var f = me.mvalue(data[j][i], useformatvalue);
+							if (isNaN(f) == true)
+							{
+								series[ci].data.push(null);
+							}
+							else
+							{
+								if (bpolarchart)
+								{
+									series[ci].data.push(f);
+								}
+								else
+								{
+									// series[ci].data.push([ename, f]);
+									np = series[ci].data.length;
+									series[ci].data.push({
+										name: ename,
+										x: i - fc,
+										y: (iswaterfall && np > 0) ? f - spvalue[ci] : f,
+										fval: data[j][i].text
+									});
+
+									spvalue[ci] = f;
+								}
+							}
+							ci++;
+						}
+
+						xticks.push(ename);
+						n++;
+					}
+				}
+			}
+			else
+			{
+				_uc = (tc == fc+1) ? 1 : 0;
+				
+				for (i=cfr; i < bdatas; i++)
+				{
+					bformula = false;
+					_c = null;
+					ename = "";
+
+					for (j=0; j < fc; j++)
+					{
+						if (typeof(hidden_columns[j]) != "undefined")
+							continue;
+						
+						ename = (!ename) ? data[i][j].text : ename + IG$/*mainapp*/.sX/*seperator*/ + data[i][j].text;
+						if (data[i][j].position == 4)
+						{
+							bformula = true;
+							break;
+						}
+						_c = _uc && data[i][j].cc ? data[i][j].cc : _c;
+					}
+					if (bformula == false || useformula == true)
+					{
+						ci = 0;
+						for (j=fc; j < tc; j++)
+						{
+							f = me.mvalue(data[i][j], useformatvalue);
+							
+							if (isNaN(f) == true)
+							{
+								series[ci].data.push({
+									name: ename,
+									x: i - cfr,
+									y: null,
+									fval: null
+								});
+							}
+							else
+							{
+								if (bpolarchart)
+								{
+									series[ci].data.push(f);
+								}
+								else
+								{
+									// series[ci].data.push([ename, f]);
+									np = series[ci].data.length;
+									_com = {
+										name: ename,
+										x: i - cfr,
+										y: (iswaterfall && np > 0) ? f - spvalue[ci] : f,
+										fval: data[i][j].text
+									};
+									
+									if (!_c && data[i][j].cm > -1)
+									{
+										var colors = coption.colors || (Highcharts.theme ? Highcharts.theme.colors : null) || Highcharts.getOptions().colors;
+										if (colors)
+										{
+											_fc = me._int/*interpolate*/(data[i][j].cm, colors[ci % colors.length]);
+										}
+									}
+									
+									if (_c || _fc)
+									{
+										_com.color = _c || _fc;
+									}
+									
+									_fc = 0;
+									
+									series[ci].data.push(_com);
+
+									spvalue[ci] = f;
+								}
+							}
+							ci++;
+						}
+
+						xticks.push(ename);
+						n++;
+					}
+				}
+			}
+		}
+
+		coption.chart = {
+			animation: false,
+			renderTo: me.container,
+			defaultSeriesType: (bfixedp ? null : "area"),
+			reflow: false,
+			alignTicks: true,
+			borderWidth: 0,
+			spacingBottom: spacingBottom
+		};
+
+		if (bpolarchart)
+		{
+			coption.chart.polar = true;
+			coption.pane = {
+				size: "80%"
+			};
+		}
+
+		if (mcr.showtitle == true)
+		{
+			coption.title = {text: mcr.title};
+
+			if (titleposition.indexOf("BOTTOM_") > -1)
+			{
+				coption.title.floating = true;
+				coption.chart.marginBottom  = 50;
+				coption.title.y = h - 30;
+			}
+
+			if (titleposition.indexOf("_LEFT") > -1)
+			{
+				coption.title.align = "left";
+			}
+			else if (titleposition.indexOf("_RIGHT") > -1)
+			{
+				coption.title.align = "right";
+			}
+		}
+		else
+		{
+			coption.title = {
+				text: ""
+			};
+		}
+		
+		if (!bfixedp)
+		{
+			coption.chart.defaultSeriesType = IG$/*mainapp*/._I36/*getSeriesType*/(rcs);
+		}
+
+		// coption.subtitle = {text: "Source:"};
+		
+		if (mcr.enabledragselect)
+		{
+			coption.chart.zoomType = "xy";
+			coption.chart.events = {
+				selection: function(e) {
+					me._s1/*selectPointsByDrag*/.call(me, this, e);
+					return false; // Don't zoom
+				},
+            	click: function(e) {
+            		me._s3/*unselectByClick*/.call(me, this, e, 1);
+            	}
+            };
+		}
+		else
+		{
+			coption.chart.events = {
+            	click: function(e) {
+            		me._s3/*unselectByClick*/.call(me, this, e, 0);
+            	}
+            };
+		}
+			
+		if (!bpointchart)
+		{
+			if (mcr.enablezoom && !mcr.enabledragselect)
+			{
+				coption.chart.zoomType = "xy";
+			}
+			
+			var xlabels = {
+				labels: {
+					maxStaggerLines: 2,
+					formatter: function() {
+						// var s = (this.value.split ? this.value.split(IG$/*mainapp*/.sX/*seperator*/) : [this.value]);
+						// return s.join("<br>");
+						return this.value;
+					}
+				} //, rotation: 320
+			};
+			
+			if (mcr.xlabel == false)
+			{
+				xlabels.labels.enabled = false;
+			}
+			else
+			{
+				if (mcr.xaxisrot == false)
+				{
+					xlabels.labels.autoRotation = false;
+					
+					if (mcr.xstagl > 0)
+					{
+						xlabels.labels.staggerLines = mcr.xstagl;
+						xlabels.labels.maxStaggerLines = mcr.xstagl;
+					}
+					
+					if (mcr.xstep > 1)
+					{
+						xlabels.labels.step = mcr.xstep;
+					}
+				}
+			}
+			
+			coption.xAxis = {
+				categories: xticks,
+				labels: xlabels.labels,
+				showLastTickLabel: true,
+				align: "left",
+				events: {
+					setExtremes: function (event) {
+						if (Math.abs(this.options.labels.rotation) == 90)
+						{
+							var labelWidth = parseInt(this.options.labels.style.lineHeight) + 2,
+								plotAreaWidth = parseInt(this.chart.plotBox.width),
+								labelsCount = Math.floor(plotAreaWidth / labelWidth),
+								pointsCount,
+								step;
+
+							if (event.max !== null && event.max !== undefined)
+							{
+								pointsCount = Math.round(event.max - event.min);
+							}
+							else
+							{
+								pointsCount = Math.round(this.dataMax - this.dataMin);
+							}
+
+							step = Math.ceil(pointsCount / (labelsCount * (this.tickInterval == null ? 1 : this.tickInterval)));
+
+							this.update({
+								labels: {
+									step: step
+								}
+							}, true);
+						}
+					}
+				}
+			};
+		}
+		else
+		{
+			coption.chart.zoomType = "xy";
+
+			coption.xAxis = {
+				startOnTick: true,
+				endOnTick: true,
+				showLastLabel: true
+			};
+		}
+
+		if (mcr.e3d_en == "T")
+		{
+			coption.chart.options3d = {
+				enabled: true,
+				alpha: Number(mcr.e3d_al),
+				beta: Number(mcr.e3d_be),
+				depth: Number(mcr.e3d_de),
+				viewDistance: Number(mcr.e3d_vd)
+			};
+		}
+
+		var eventowner = this,
+			cnt,
+			p_off = 0,
+			ylabels = {
+			formatter: function() {
+				// ###.####
+				var yaxisformat = mcr.yaxisformat,
+					p = 0,
+					value = this.value, 
+					postfix = "",
+					pval, n, i,
+					c;
+				
+				if (yaxisformat)
+				{
+					n = yaxisformat.indexOf(".");
+					if (n > -1)
+					{
+						for (i=n+1; i < yaxisformat.length; i++)
+						{
+							c = yaxisformat.charAt(i);
+							if (c == "#" || c == "0")
+							{
+								p++;
+							}
+						}
+					}
+					
+					n = yaxisformat.indexOf("%");
+					if (n > -1)
+					{
+						pval = (n-1) > 0 ? yaxisformat.charAt(n-1) : null;
+						
+						if (pval == "'")
+						{
+							
+						}
+						else
+						{
+							value = value * 100;
+						}
+						
+						postfix = " %";
+					}
+				}
+				
+				return Highcharts.numberFormat(value, p) + postfix;
+			}
+		};
+
+		var ytitle = {
+			text: mcr.yaxistitle || null
+		};
+		coption.yAxis = {title: ytitle, labels: ylabels};
+
+		if (mcr.yaxismax != "" && IG$/*mainapp*/._I37/*isNumber*/(mcr.yaxismax) == true)
+		{
+			coption.yAxis.max = Number(mcr.yaxismax);
+		}
+
+		if (mcr.yaxismin != "" && IG$/*mainapp*/._I37/*isNumber*/(mcr.yaxismin) == true)
+		{
+			coption.yAxis.min = Number(mcr.yaxismin);
+		}
+		
+		if (mcr.ytickint > 0)
+		{
+			coption.yAxis.tickInterval = mcr.ytickint;
+		}
+
+		if (bpolarchart)
+		{
+			coption.yAxis.gridLineInterpolation = "polygon";
+			coption.yAxis.lineWidth = 0;
+		}
+		
+		coption.legend = {
+			margin: 2
+		};
+
+		if (mcr.showlegend == true)
+		{
+			coption.legend.enabled = true;
+			mcr.legendposition = mcr.legendposition || "BOTTOM_CENTER";
+
+			coption.legend.verticalAlign = mcr.legendposition.indexOf("BOTTOM_") > -1 ? "bottom" :
+				(mcr.legendposition.indexOf("TOP_") > -1 ? "top" : "middle");
+			coption.legend.align = (mcr.legendposition.indexOf("LEFT_") > -1) ? "left" :
+				((mcr.legendposition.indexOf("RIGHT_") > -1) ? "right" : "center");
+			if (coption.legend.align == "center")
+			{
+				if (mcr.legendposition.indexOf("_RIGHT") > -1)
+				{
+					coption.legend.x = 200;
+				}
+				else if (mcr.legendposition.indexOf("_LEFT") > -1)
+				{
+					coption.legend.x = - w / 2 + 200;
+				}
+
+				coption.legend.layout = "horizontal";
+			}
+			else
+			{
+				if (mcr.legendposition.indexOf("_TOP") > -1)
+				{
+					coption.legend.verticalAlign = "top";
+				}
+				else if (mcr.legendposition.indexOf("_BOTTOM") > -1)
+				{
+					coption.legend.verticalAlign = "bottom";
+				}
+
+				coption.legend.layout = "vertical";
+			}
+		}
+		else
+		{
+			coption.legend.enabled = false;
+		}
+		
+		if (mcr.lgndfloating)
+		{
+			coption.legend.floating = true;
+			coption.legend.borderWidth = 1;
+            coption.legend.backgroundColor = (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF';
+		}
+
+		var marker = {
+				enabled: mcr.dl_marker ? true : false, 
+				states: {
+					hover: {
+						enabled: true
+					}
+				}
+			},
+			dobj,
+			options3d = coption.chart ? coption.chart.options3d : null;
+		if (/(pie|doughnut|funnel|pyramid)/.test(me.rcs/*rendersubtype*/))
+		{
+			coption.tooltip = {
+				formatter: function() {
+					return this.point.name + "<br>" + Highcharts.numberFormat(this.y, mcr.precision || 0) + " (" + Highcharts.numberFormat(this.percentage, 1) + " %)";
+				}
+			};
+			
+			coption.plotOptions = {
+				pie: {
+					allowPointSelect: true,
+					cursor: "pointer",
+					innerSize: ("" + (me.rcs/*rendersubtype*/ == "doughnut" ? (mcr.pieinnerradius > 20 ? mcr.pieinnerradius : 40) : (mcr.pieinnerradius || 0)) + "%"),
+					dataLabels: {
+						enabled: true,
+						// color: Highcharts.theme.textColor || "#000000",
+						distance: mcr.pielabeldist,
+						// connectColor: Highcharts.theme.textColor || "#000000",
+						formatter: function () {
+							return me.dP/*getPieLabel*/(mcr.piedatalabel, this);
+						}
+					},
+					events: {
+						click: function(param) {
+							eventowner.p1/*processClickEvent*/.call(eventowner, this, param);
+						}
+					}
+				}
+			};
+			
+			if (options3d && options3d.enabled)
+			{
+				delete options3d["viewDistance"];
+			}
+
+			coption.chart.renderTo = null;
+
+			if (!mcr.pielayout)
+			{
+				series.splice(1, series.length - 1);
+			}
+
+			$.each(series, function(k, serie) {
+
+				var cnt = $("<div class='i-sschart-cnt'></div>").appendTo(me.container),
+					ocnt = $(me.container),
+					owidth = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(ocnt),
+					oheight = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(ocnt),
+					ow = owidth / series.length,
+					oh = oheight / series.length,
+					toption = $.extend(true, {}, coption),
+					i, csv,
+					mw = 0,
+					mtitle;
+				
+				if (toption.title && toption.title.text)
+				{
+					mtitle = toption.title.text;
+					mtitle = IG$/*mainapp*/._I46/*replaceAll*/(mtitle, "{SERIES}", serie.name);
+					toption.title.text = mtitle;
+				}
+				
+				if (mcr.pielayout == "h")
+				{
+					IG$/*mainapp*/.x_10/*jqueryExtension*/._w(cnt, ow);
+					IG$/*mainapp*/.x_10/*jqueryExtension*/._h(cnt, oheight);
+					cnt.css({left: p_off});
+					p_off += ow;
+				}
+				else if (mcr.pielayout == "v")
+				{
+					IG$/*mainapp*/.x_10/*jqueryExtension*/._h(cnt, oh);
+					IG$/*mainapp*/.x_10/*jqueryExtension*/._w(cnt, owidth);
+					cnt.css({top: p_off});
+					p_off += oh;
+				}
+
+				toption.chart = {
+					renderTo: cnt[0],
+					type: me.rcs/*rendersubtype*/,
+					spacingBottom: spacingBottom
+				};
+				
+				if (coption.chart.options3d)
+				{
+					toption.chart.options3d = coption.chart.options3d;
+				}
+
+				toption.plotOptions = {
+					pie: {
+						allowPointSelect: true,
+						cursor: "pointer",
+						innerSize: coption.plotOptions.pie.innerSize,
+						dataLabels: {
+							enabled: true,
+							// color: Highcharts.theme.textColor || "#000000",
+							distance: mcr.pielabeldist,
+							// connectColor: Highcharts.theme.textColor || "#000000",
+							formatter: function () {
+								return me.dP/*getPieLabel*/(mcr.piedatalabel, this);
+							}
+						},
+						events: {
+							click: function(param) {
+								eventowner.p1/*processClickEvent*/.call(eventowner, this, param);
+							}
+						}
+					}
+				};
+				
+				if (options3d)
+				{
+					toption.plotOptions.pie.depth = options3d.depth;
+				}
+				
+				if (/(funnel|pyramid)/.test(me.rcs/*rendersubtype*/))
+				{
+					toption.plotOptions = toption.plotOptions || {};
+					toption.plotOptions[me.rcs/*rendersubtype*/] = {
+						dataLabels: {
+							enabled: true,
+							softConnector: true,
+							inside: true,
+							distance: mcr.pielabeldist,
+							color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black',
+							formatter: function () {
+								return me.dP/*getPieLabel*/(mcr.piedatalabel, this);
+							}
+						}
+					};
+					
+					for (i=0; i < serie.data.length; i++)
+					{
+						csv = me.dP/*getPieLabel*/(mcr.piedatalabel, {
+							point: {
+								name: serie.data[i].name,
+								fval: serie.data[i].fval
+							},
+							percentage: 99.9
+						});
+						
+						cs = me.u_/*measureTextSize*/(10, csv);
+						mw = Math.max(cs.width + 10, mw);
+					}
+					
+					mw = mw + mcr.pielabeldist;
+					
+					if (mw > owidth * 0.5)
+					{
+						mw = owidth * 0.5;
+					}
+					
+					toption.chart.marginRight = mw;
+					
+					if (me.rcs/*rendersubtype*/ == "funnel")
+					{
+						toption.plotOptions.funnel.neckWidth = "30%";
+						toption.plotOptions.funnel.neckHeight = "25%";
+					}
+				}
+
+				serie.type = me.rcs/*rendersubtype*/ == "doughnut" ? "pie" : me.rcs/*rendersubtype*/;
+				toption.series = [serie];
+				coptions.push(toption);
+			});
+		}
+		else
+		{
+			for (i=0; i < series.length; i++)
+			{
+				if (!bfixedp && mcr.renderas && mcr.renderas.length > i && mcr.renderas[i])
+				{
+					series[i].type = IG$/*mainapp*/._I36/*getSeriesType*/(mcr.renderas[i]);
+				}
+				
+				if (mcr.dl_enable && mcr.dl_enable_l && mcr.dl_enable_l.length > i && mcr.dl_enable_l[i] == "F")
+				{
+					series[i].dataLabels = {
+						enabled: false
+					};
+				}
+				
+//				if (mcr.dl_marker && mcr.dl_marker_l && mcr.dl_marker_l.length > i && mcr.dl_marker_l[i] == "F")
+//				{
+//					series[i].dataLabels = {
+//						enabled: false
+//					};
+//				}
+
+				if (me.rcs/*rendersubtype*/ == "waterfall")
+				{
+					series[i].upColor = Highcharts.getOptions().colors[2];
+					series[i].color = Highcharts.getOptions().colors[3];
+				}
+			}
+
+			if (mcr.usedualaxis == true && mcr.dualaxisitem && mcr.dualaxisitem.length > -1 && series.length > 1)
+			{
+				for (i=0; i < series.length; i++)
+				{
+					if (mcr.dualaxisitem.length > i && mcr.dualaxisitem[i] == "T")
+					{
+						hasdualaxis = true;
+						break;
+					}
+				}
+
+				if (hasdualaxis == true)
+				{
+					var dyax = {
+						title: {
+							text: mcr.yaxistitle2 || null,
+							enabled: mcr.yaxistitle ? true : false
+						},
+						opposite: true,
+						labels: {
+							formatter: function() {
+								var yaxisformat = mcr.yaxisformat2,
+									p = 0;
+								if (yaxisformat && yaxisformat.indexOf(".") > -1)
+								{
+									p = yaxisformat.length - yaxisformat.lastIndexOf(".") - 1;
+								}
+								return Highcharts.numberFormat(this.value, p);
+							}
+						}
+					};
+
+					if (mcr.yaxismax2 != "" && IG$/*mainapp*/._I37/*isNumber*/(mcr.yaxismax2) == true)
+					{
+						dyax.max = Number(mcr.yaxismax2);
+					}
+
+					if (mcr.yaxismin2 != "" && IG$/*mainapp*/._I37/*isNumber*/(mcr.yaxismin2) == true)
+					{
+						dyax.min = Number(mcr.yaxismin);
+					}
+					coption.yAxis = [coption.yAxis];
+					coption.yAxis.push(dyax);
+
+					for (i=0; i < mcr.dualaxisitem.length; i++)
+					{
+						if (series.length > i && mcr.dualaxisitem[i] == "T")
+						{
+							series[i].yAxis = 1;
+						}
+					}
+				}
+			}
+
+			coption.tooltip = {
+//					formatter: function() {
+//						return this.point.name + "<br>" + Highcharts.numberFormat(this.y, mcr.precision || 0) + " (" + Highcharts.numberFormat(this.percentage, 1) + " %)";
+//					}
+
+				formatter: function() {
+					var r,
+						i;
+					if (bfixedp)
+					{
+						if (this.points && this.points.length)
+						{
+							r = this.points[0].x + "<br>";
+							for (i=0; i < this.points.length; i++)
+							{
+								r += (i > 0 ? "<br>" : "") + "<b>" + this.points[i].series.name + "</b> " + (this.points[i].fval || Highcharts.numberFormat(this.points[i].y, 0));
+							}
+						}
+					}
+					else if (bpointchart)
+					{
+						r = this.series.name + "<br>" 
+							+ (this.point ? this.point.name || "" : "") + "<br>" 
+							+ "X: " + this.x + "<br>" 
+							+ "Y: " + (this.point.fval || Highcharts.numberFormat(this.y, 0));
+					}
+					else
+					{
+						r = this.series.name + "<br>" 
+							+ this.x + "<br>" 
+							+ (this.point.fval || Highcharts.numberFormat(this.y, 0));
+					}
+					return r;
+				}
+			};
+			
+			coption.plotOptions = {};
+			coption.plotOptions.column = {
+                turboThreshold: mcr.maxchartresult || 1000,
+				allowPointSelect: true,
+				events: {
+					click: function(param) {
+						eventowner.p1/*processClickEvent*/.call(eventowner, this, param);
+						return false;
+					}
+				}
+			};
+
+			coption.plotOptions.area = {
+                turboThreshold: mcr.maxchartresult || 1000,
+				allowPointSelect: true,
+				marker: marker,
+				events: {
+					click: function(param) {
+						eventowner.p1/*processClickEvent*/.call(eventowner, this, param);
+					}
+				}
+			};
+			
+			coption.plotOptions.areaspline = {
+                turboThreshold: mcr.maxchartresult || 1000,
+				allowPointSelect: true,
+				marker: marker,
+				events: {
+					click: function(param) {
+						eventowner.p1/*processClickEvent*/.call(eventowner, this, param);
+					}
+				}
+			};
+
+			coption.plotOptions.line = {
+                turboThreshold: mcr.maxchartresult || 1000,
+				allowPointSelect: true,
+				marker: marker,
+				events: {
+					click: function(param) {
+						eventowner.p1/*processClickEvent*/.call(eventowner, this, param);
+					}
+				}
+			};
+			
+			coption.plotOptions.spline = {
+                turboThreshold: mcr.maxchartresult || 1000,
+				allowPointSelect: true,
+				marker: marker,
+				events: {
+					click: function(param) {
+						eventowner.p1/*processClickEvent*/.call(eventowner, this, param);
+					}
+				}
+			};
+
+			coption.plotOptions.bar = {
+                turboThreshold: mcr.maxchartresult || 1000,
+				allowPointSelect: true,
+				events: {
+					click: function(param) {
+						eventowner.p1/*processClickEvent*/.call(eventowner, this, param);
+					}
+				}
+			};
+			
+			coption.plotOptions.bubble = {
+                turboThreshold: mcr.maxchartresult || 1000,
+				maxSize: 120,
+				minSize: 8
+			};
+
+			// dobj = coption.plotOptions[coption.chart.defaultSeriesType];
+			
+			if (mcr.dl_enable)
+			{
+				$.each(["column", "area", "areaspline", "line", "spline", "bar"], function(i, k) {
+					var dobj = coption.plotOptions[k];
+					
+					dobj.dataLabels = {
+						enabled: true,
+						align: mcr.dl_align || "center",
+						inside: mcr.dl_inside,
+						formatter: function() {
+							return this.point.fval || Highcharts.numberFormat(this.y, 0);
+						}
+					};
+				});
+			}
+
+			if (bpointchart)
+			{
+				coption.plotOptions.scatter = {
+					allowPointSelect: true,
+                    turboThreshold: mcr.maxchartresult || 1000,
+					marker: {
+						symbol: "circle",
+						radius: 5,
+						states: {
+							hover: {
+								enabled: true
+							}
+						}
+					},
+					states: {
+						hover: {
+							marker: {
+								enabled: false
+							}
+						}
+					}
+				}
+			}
+
+			if (mcr.p_bands && mcr.p_bands.length > 0)
+			{
+				var yaxis = coption.yAxis.length ? coption.yAxis[0] : coption.yAxis,
+					xaxis = coption.xAxis && coption.xAxis.length ? coption.xAxis[0] : coption.xAxis,
+					band,
+					pb;
+
+				yaxis.plotBands = [];
+				yaxis.plotLines = [];
+				
+				if (xaxis)
+				{
+					xaxis.plotBands = [];
+					xaxis.plotLines = [];
+				}
+
+				for (i=0; i < mcr.p_bands.length; i++)
+				{
+					bp = mcr.p_bands[i];
+					bp.mresult = mresult;
+
+					if (bp.enabled)
+					{
+						band = {
+							label: {
+								text: bp.name
+							},
+							color: bp.color
+						};
+						
+						if (bp.btype == "curvefit")
+						{
+							cf.push(bp);
+						}
+						else
+						{
+							if (bp.isxaxis)
+							{
+								if (bp.btype == "band")
+								{
+									band.from = bp._v1(bp.value_1, true); // Number(bp.value_1);
+									band.to = bp._v1(bp.value_2, true); // Number(bp.value_2);
+									xaxis.plotBands.push(band);
+								}
+								else
+								{
+									band.value = bp._v1(bp.value_1, true); // Number(bp.value_1);
+									band.width = Number(bp.borderwidth) || 2;
+									xaxis.plotLines.push(band);
+								}
+							}
+							else
+							{
+								if (bp.btype == "band")
+								{
+									band.from = bp._v1(bp.value_1); // Number(bp.value_1);
+									band.to = bp._v1(bp.value_2); // Number(bp.value_2);
+									yaxis.plotBands.push(band);
+								}
+								else
+								{
+									band.value = bp._v1(bp.value_1); // Number(bp.value_1);
+									band.width = Number(bp.borderwidth) || 2;
+									yaxis.plotLines.push(band);
+								}
+							}
+						}
+					}
+				}
+			}
+
+			if (mcr.stack == true && me.rcs/*rendersubtype*/ != "waterfall")
+			{
+				switch (this.rcs/*rendersubtype*/)
+				{
+				case "area":
+					coption.plotOptions.area.stacking = (mcr.stackperc ? "percent" : "normal");
+					break;
+				default:
+					if (coption.plotOptions.series == null || typeof coption.plotOptions.series == "undefined")
+					{
+						coption.plotOptions.series = {};
+					}
+					coption.plotOptions.series.stacking = (mcr.stackperc ? "percent" : "normal");
+					break;
+				}
+			}
+
+			if (!bfixedp && coption.renderas && coption.renderas.length > 0)
+			{
+				for (i=0; i < coption.renderas.length; i++)
+				{
+					if (coption.renderas[i] != "" && series.length > i)
+					{
+						var rtype = IG$/*mainapp*/._I36/*getSeriesType*/(coption.renderas[i])
+						series[i].type = rtype;
+					}
+				}
+			}
+			
+			if (bsync)
+			{
+				$(me.container).bind('mousemove touchmove', function (e) {
+			        var chart,
+			            point,
+			            i;
+					if (!me._mc/*masterCharts*/)
+						return;
+						
+			        for (i = 0; i < me._mc/*masterCharts*/.length; i = i + 1) {
+			            chart = me._mc/*masterCharts*/[i];
+			            if (chart)
+			            {
+				            e = chart.pointer.normalize(e); // Find coordinates within the chart
+				            point = chart.series[0].searchPoint(e, true); // Get the hovered point
+				
+				            if (point) {
+				                point.onMouseOver(); // Show the hover marker
+				                chart.tooltip.refresh(point); // Show the tooltip
+				                chart.xAxis[0].drawCrosshair(e, point); // Show the crosshair
+				            }
+				        }
+			        }
+			    });
+			    
+				var xaxis = coption.xAxis = coption.xAxis || {};
+				xaxis.crosshair = true;
+				xaxis.events = xaxis.events || {};
+				xaxis.events.setExtremes = function(e) {
+			        var thisChart = this.chart;
+			
+			        if (e.trigger !== 'syncExtremes') { // Prevent feedback loop
+			            Highcharts.each(me._mc/*masterCharts*/, function (chart) {
+			                if (chart !== thisChart) 
+			                {
+			                    if (chart.xAxis[0].setExtremes) // It is null while updating
+			                    { 
+			                        chart.xAxis[0].setExtremes(e.min, e.max, undefined, false, { trigger: 'syncExtremes' });
+			                    }
+			                }
+			            });
+			        }
+			    };
+			    
+				coption.chart.renderTo = null;
+				coption.chart.marginLeft = 60; // Keep all charts left aligned
+                coption.chart.zoomType = "x";
+
+				$.each(lblnames, function(k, lblname) {
+					var cnt = $("<div class='i-sschart-cnt'></div>").appendTo(me.container),
+						ocnt = $(me.container),
+						owidth = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(ocnt),
+						oheight = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(ocnt),
+						ow = owidth / bsync_l,
+						oh = oheight / bsync_l,
+						toption = $.extend(true, {}, coption),
+						serie = [],
+						i;
+	
+//					if (mcr.pielayout == "h")
+//					{
+//						IG$/*mainapp*/.x_10/*jqueryExtension*/._w(cnt, ow);
+//						IG$/*mainapp*/.x_10/*jqueryExtension*/._h(cnt, oheight);
+//						cnt.css({left: p_off});
+//						p_off += ow;
+//					}
+//					else if (mcr.pielayout == "v")
+//					{
+						IG$/*mainapp*/.x_10/*jqueryExtension*/._h(cnt, oh);
+						IG$/*mainapp*/.x_10/*jqueryExtension*/._w(cnt, owidth);
+						cnt.css({top: p_off});
+						p_off += oh;
+//					}
+	
+					toption.chart.renderTo = cnt[0];
+					
+					for (i=0; i < series.length; i++)
+					{
+						if (series[i].meas_k == k)
+						{
+							serie.push(series[i]);
+						}
+					}
+	
+					toption.series = serie;
+					coptions.push(toption);
+				});
+			}
+			else
+			{
+				coption.series = series;
+				coptions.push(coption);
+			}
+		}
+		
+		if (bfixedp)
+		{
+			coption.chart.type = "column";
+			coption.plotOptions.column.grouping = false;
+			coption.plotOptions.column.shadow = false;
+			coption.plotOptions.column.borderWidth = 0;
+			coption.tooltip = coption.tooltip || {};
+			coption.tooltip.shared = true;
+			
+			var s1 = 0,
+				s2 = 0;
+			
+			for (i=0; i < coption.series.length; i++)
+			{
+				coption.series[i].pointPadding = (coption.series.length > 2 ? 0.3 : 0.2) + (coption.series[i].yAxis ? s2 : s1) / 10;
+				coption.series[i].pointPlacement = (coption.series.length > 2 ? (coption.series[i].yAxis ? 0.2 : -0.2) : 0);
+				
+				if (!coption.series[i].yAxis && s1 == 0)
+				{
+					coption.series[i].color = "rgba(165,170,217,1)";
+				}
+				else if (!coption.series[i].yAxis && s1 == 1)
+				{
+					coption.series[i].color = "rgba(126,86,134,.9)";
+				}
+				else if ((coption.series[i].yAxis && s2 == 0) || (!coption.series[i].yAxis && s1 == 2))
+				{
+					coption.series[i].color = "rgba(248,161,63,1)";
+				}
+				else if ((coption.series[i].yAxis && s2 == 1) || (!coption.series[i].yAxis && s1 == 3))
+				{
+					coption.series[i].color = "rgba(186,60,61,.9)";
+				}
+				
+				if (coption.series[i].yAxis)
+				{
+					s2++;
+				}
+				else
+				{
+					s1++;
+				}
+			}
+		}
+		
+		if (cf.length)
+		{
+			for (i=0; i < coptions.length; i++)
+			{
+				coptions[i].__cf = cf;
+			}
+		}
+
+		return coptions;
+	},
+	
+	_int/*interpolate*/: function(v, c) {
+		var nc = null,
+			r, g, b,
+			a;
+		
+		if (c && c.charAt(0) == "#")
+		{
+			r = c.substring(1, 3);
+			g = c.substring(3, 5);
+			b = c.substring(5, 7);
+			
+			r = parseInt(r, 16);
+			g = parseInt(g, 16);
+			b = parseInt(b, 16);
+			
+			a = (v / 255) * 0.75 + 0.25;
+			
+			nc = "rgba(" + r + "," + g + "," + b + "," + a + ")";
+		}
+		
+		return nc;
+	},
+	
+	p1/*processClickEvent*/: function(sender, param) {
+		var me = this;
+		
+		me._p1a && clearTimeout(me._p1a);
+		
+		me._p1a = setTimeout(function() {
+			me.p1a/*processClickHandler*/.call(me, sender, param);
+		}, 250);
+	},
+
+	p1a/*processClickHandler*/: function(sender, param) {
+		if (sender)
+		{
+			var me = this,
+				seriesnames = [],
+				categnames = [],
+                datarows = [],
+				seriesname,
+				categname,
+				eventowner,
+				sep = IG$/*mainapp*/.sX/*seperator*/,
+				mresult = this.mresult,
+				cname,
+				swapaxis = me._ILb/*sheetoption*/.cco/*chartOption*/.swapaxis,
+				c = -1, r = -1, m,
+				_p;
+				
+			if (!param && (!me.selectedData || (me.selectedData && !me.selectedData.length)))
+			{
+				return;
+			}
+			
+			me.selectedData = [];
+            
+            if (me.cop.charttype == "scatter" || me.cop.charttype == "bubble")
+            {
+                if (param && param.length)
+                {
+                    for (m=0; m < param.length; m++)
+                    {
+                        _p = param[m];
+                        if (_p.datarow > -1)
+                        {
+                            datarows.push(_p.datarow);
+                        }
+                    }
+                }
+                else if (param)
+                {
+                    if (param.datarow > -1)
+                    {
+                        datarows.push(param.datarow);
+                    }
+                }
+            }
+            else
+            {
+                if (param && param.length)
+                {
+                    for (m=0; m < param.length; m++)
+                    {
+                        _p = param[m];
+                        seriesnames.push(_p.series ? _p.series.name : _p.name);
+                        categnames.push(_p.category || _p.name || "");
+                    }
+                }
+                else if (param)
+                {
+                    seriesnames.push(sender.series ? sender.series.name : sender.name);
+                    categnames.push(param.point ? param.point.category || param.point.name : "");
+                }
+            }
+            
+			param && param.point && param.point.select && param.point.select(true, false);
+            
+            if (datarows.length)
+            {
+                for (m=0; m < datarows.length; m++)
+                {
+                    r = datarows[m];
+                    c = mresult.colfix - 1;
+                    
+                    if (r > -1 && c > -1)
+                    {
+                        mresult.data[r][c].r = r;
+                        mresult.data[r][c].c = c;
+                        this.selectedData.push(mresult.data[r][c]);
+                    }
+                }
+            }
+			else
+            {
+                for (m=0; m < seriesnames.length; m++)
+                {
+                    seriesname = seriesnames[m];
+                    categname = categnames[m];
+                    
+                    if (swapaxis == true)
+                    {
+                        for (i=mresult.colfix; i < mresult.data[0].length; i++)
+                        {
+                            cname = "";
+        
+                            for (j=0; j < mresult.rowfix; j++)
+                            {
+                                cname += mresult.data[j][i].text + sep;
+                            }
+        
+                            if (cname == categname + sep)
+                            {
+                                c = i;
+                                break;
+                            }
+                        }
+        
+                        if (seriesname)
+                        {
+                            for (i=mresult.rowfix; i < mresult.data.length; i++)
+                            {
+                                cname = "";
+        
+                                for (j=0; j < mresult.colfix; j++)
+                                {
+                                    cname += mresult.data[i][j].text + sep;
+                                }
+        
+                                if (cname == seriesname + sep)
+                                {
+                                    r = i;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        for (i=mresult.rowfix; i < mresult.data.length; i++)
+                        {
+                            cname = "";
+        
+                            for (j=0; j < mresult.colfix; j++)
+                            {
+                                cname += mresult.data[i][j].text + sep;
+                            }
+        
+                            if (cname == categname + sep)
+                            {
+                                r = i;
+                                break;
+                            }
+                        }
+        
+                        if (seriesname)
+                        {
+                            for (i=mresult.colfix; i < mresult.cols; i++)
+                            {
+                                cname = "";
+        
+                                for (j=0; j < mresult.rowfix; j++)
+                                {
+                                    cname += mresult.data[j][i].text + sep;
+                                }
+        
+                                if (cname == seriesname + sep)
+                                {
+                                    c = i;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+        
+                    if (c > -1 && r > -1)
+                    {
+                        mresult.data[r][c].r = r;
+                        mresult.data[r][c].c = c;
+                        this.selectedData.push(mresult.data[r][c]);
+                    }
+                }
+            }
+
+			if (me.f4/*onClickEventHandler*/ && me.f4a/*onClickEventOwner*/)
+			{
+				me.f4/*onClickEventHandler*/.call(me.f4a/*onClickEventOwner*/, me);
+			}
+
+			if (me.ctrl && me.ctrl.events && me.ctrl.events["itemclick"])
+			{
+				var pdb = eventowner.ctrl.dashboard,
+					actionlist = eventowner.ctrl.actionlist;
+
+				pdb.M7a/*executeAction*/.call(pdb, actionlist["itemclick"]);
+			}
+		}
+	},
+
+	__r1/*requestData*/: function(option) {
+		var me = this,
+			rpc = me.rpc;
+
+		rpc.__r1/*requestData*/.call(rpc, me, option);
+	},
+
+	_IB4/*getExportData*/: function() {
+		var me = this,
+			chart,
+			svg, svgns, svgnode, svgchild,
+			expdata = "";
+
+		switch (me.drawmode)
+		{
+		case "highchart":
+			if (me._mc/*masterCharts*/ && me._mc/*masterCharts*/.length > 0)
+			{
+				chart = me._mc/*masterCharts*/[0];
+				svg = chart.getSVG();
+				expdata =  "<ImageData type='svg'><![CDATA[" + Base64.encode(svg) + "]]></ImageData>";
+			}
+			break;
+		case "qavis":
+			break;
+		case "protovis":
+			if (me.vis)
+			{
+				svgnode = IG$/*mainapp*/._I17/*getFirstChild*/(me.container);
+
+				IG$/*mainapp*/._I23/*XSetAttr*/(svgnode, "xmlns:xlink", "http://www.w3.org/1999/xlink");
+				IG$/*mainapp*/._I23/*XSetAttr*/(svgnode, "xmlns", "http://www.w3.org/2000/svg");
+				IG$/*mainapp*/._I23/*XSetAttr*/(svgnode, "version", "1.1");
+
+				svg = IG$/*mainapp*/._I25/*toXMLString*/(svgnode);
+
+				expdata =  "<ImageData type='svg'><![CDATA[" + Base64.encode(svg) + "]]></ImageData>";
+			}
+			break;
+		case "dcust":
+			if (me.dcust)
+			{
+				svgnode = IG$/*mainapp*/._I17/*getFirstChild*/(me.container);
+
+				IG$/*mainapp*/._I23/*XSetAttr*/(svgnode, "xmlns:xlink", "http://www.w3.org/1999/xlink");
+				IG$/*mainapp*/._I23/*XSetAttr*/(svgnode, "xmlns", "http://www.w3.org/2000/svg");
+				IG$/*mainapp*/._I23/*XSetAttr*/(svgnode, "version", "1.1");
+
+				svg = IG$/*mainapp*/._I25/*toXMLString*/(svgnode);
+
+				expdata =  "<ImageData type='svg'><![CDATA[" + Base64.encode(svg) + "]]></ImageData>";
+			}
+		case "treemap":
+			if (me.treemap && me.treemap.map)
+			{
+				svg = me.treemap.map.getSVG.call(me.treemap.map);
+				expdata =  "<ImageData type='svg'><![CDATA[" + Base64.encode(svg) + "]]></ImageData>";
+			}
+			break;
+		case "bubblemap":
+			if (me.bmap)
+			{
+				svg = me.bmap.toSVG.call(me.bmap);
+				expdata =  "<ImageData type='svg'><![CDATA[" + Base64.encode(svg) + "]]></ImageData>";
+			}
+			break;
+		case "custom":
+			if (me.customchart && me.customchart.getSVG)
+			{
+				svg = me.customchart.getSVG.call(me.customchart);
+				if (svg)
+				{
+					expdata =  "<ImageData type='svg'><![CDATA[" + Base64.encode(svg) + "]]></ImageData>";
+				}
+			}
+			break;
+		}
+
+		return expdata;
+	},
+	
+	mvalue: function(cell, useformatvalue) {
+		var r,
+			t;
+		if (useformatvalue)
+		{
+			t = cell.text;
+	
+			if (t.indexOf(",") > -1)
+			{
+				t = t.split(",");
+				t = t.join("");
+			}
+	
+			r = Number(t);
+		}
+		else
+		{
+			r = Number(cell.code)
+		}
+	
+		return r;
+	},
+	
+	_dn/*dynamicLoad*/: function(f) {
+		var me = this,
+			scmap = ig$/*appoption*/.scmap,
+			scripts = [],
+			i,
+			isie8 = false,
+			browser = window.bowser;
+		
+		isie8  = (browser.msie && browser.version < 9) ? true : false;
+		
+		$.each(
+			[
+				[
+					isie8 ? "./js/excanvas.js" : null,
+					"./js/protovis-d3.3.js",
+					isie8 ? null : "./js/d3.js",
+					"./js/d3.tip.js",
+					"./js/d3.geo.js",
+					"./js/g.raphael.js",
+					"./js/g.dot.js"
+				],
+				[
+					"./js/modules/heatmap.js", 
+					"./js/modules/treemap.js"
+				],
+				scmap.igc6,
+				scmap.igco,
+				scmap.igcb
+			], function(n, ar) {
+				var i;
+				for (i=0; i < ar.length; i++)
+				{
+					ar[i] && scripts.push(ar[i]);
+				}
+			}
+		);
+				
+		IG$/*mainapp*/.x03/*getScriptCache*/(scripts, new IG$/*mainapp*/._I3d/*callBackObj*/(me, function() {
+			var me = this;
+			f.call(me);
+		}));
+	},
+	
+	JJ$4/*drawProtovisChart*/: function(rct/*rendercharttype*/, mresult) {
+		var me = this;
+			
+		me._dn/*dynamicLoad*/(function() {
+			var me = this;
+			me.JJ$4/*drawProtovisChart*/.call(me, rct/*rendercharttype*/, mresult);
+		});
+	},
+	
+	l3a/*drawTreeMapChart*/: function(mresult) {
+		var me = this;
+		
+		me._dn/*dynamicLoad*/(function() {
+			var me = this;
+			me.l3a/*drawTreeMapChart*/.call(me, mresult);
+		});
+	},
+	
+	JJ$4a/*drawD3CustomChart*/: function(rct/*rendercharttype*/, mresult) {
+		var me = this;
+		
+		me._dn/*dynamicLoad*/(function() {
+			var me = this;
+			me.JJ$4a/*drawD3CustomChart*/.call(me, rct/*rendercharttype*/, mresult);
+		});
+	},
+	
+	JJ$3/*drawMatrixChart*/: function(mresult) {
+		var me = this;
+		
+		me._dn/*dynamicLoad*/(function() {
+			var me = this;
+			me.JJ$3/*drawMatrixChart*/.call(me, mresult);
+		});
+	},
+	l3/*drawMapChart*/: function(mresult) {
+		var me = this;
+		
+		me._dn/*dynamicLoad*/(function() {
+			var me = this;
+			me.l3/*drawMapChart*/.call(me, mresult);
+		});
+	},
+	l4/*drawProtoVisMapChart*/: function(mresult) {
+		var me = this;
+		
+		me._dn/*dynamicLoad*/(function() {
+			var me = this;
+			me.l4/*drawProtoVisMapChart*/.call(me, mresult);
+		});
+	},
+	l5/*drawD3MapChart*/: function(mresult) {
+		var me = this;
+		
+		me._dn/*dynamicLoad*/(function() {
+			var me = this;
+			me.l5/*drawD3MapChart*/.call(me, mresult);
+		});
+	},
+	l5a/*drawD3ExtMapChart*/: function() {
+		var me = this;
+		
+		me._dn/*dynamicLoad*/(function() {
+			var me = this;
+			me.l5a/*drawD3ExtMapChart*/.call(me);
+		});
+	},
+	l6/*drawGSAPIMapChart*/: function() {
+		var me = this;
+		
+		me._dn/*dynamicLoad*/(function() {
+			var me = this;
+			me.l6/*drawGSAPIMapChart*/.call(me);
+		});
+	}
+}
+
+IG$/*mainapp*/._IKa/*reqolap*/ = function () {
+	this._IL8/*jobid*/ = null;
+	this.panel = null; 
+	this.uid = null;
+	this.sheet = null;
+	this.chart = null;
+	
+	this._ILa/*reportoption*/ = null;
+	this.ctrlsource = null;
+	
+	// this.pivotxml
+};
+
+IG$/*mainapp*/._IKa/*reqolap*/.prototype = {
+	_IKb/*requestPivotResult*/: function(pivotxml, pelement, activesheet, drawtype, startpage, endpage, callback, schedule_job, is_scroll, no_update) {
+		var me = this,
+			_IL8/*jobid*/ = me._IL8/*jobid*/,
+			uid = me.uid,
+			rop = me._ILa/*reportoption*/,
+			pwd,
+			ctrl,
+			jobid = me.panel.jobid;
+			
+		if (schedule_job)
+		{
+			jobid = schedule_job.jobid;
+		}
+		
+		ctrl = pelement || me.sheet || me.chart;
+		
+		me._IR3/*requestPivotResult*/(null, [ctrl, activesheet, drawtype, pivotxml, startpage, endpage, jobid, callback, schedule_job, is_scroll, no_update]);
+		
+//		var req = new IG$/*mainapp*/._I3e/*requestServer*/();
+//		req.init(me.panel, 
+//			{
+//	            ack: "18",
+//				payload: "<smsg><item option='getjobid'/></smsg>",
+//				mbody: "<smsg></smsg>"
+//	        }, me, me._IR3/*requestPivotResult*/, null, [ctrl, activesheet, drawtype, pivotxml, startpage]);
+//		req.atld/*stoploading*/ = false;
+//		req._l/*request*/();
+	},
+	
+	_IR3/*requestPivotResult*/: function(xdoc, params) {
+		var me = this,
+			_IL8/*jobid*/ = me._IL8/*jobid*/,
+			uid = me.uid,
+			rop = me._ILa/*reportoption*/,
+			pwd,
+			ctrl = params[0],
+			activesheet = params[1],
+			drawtype = params[2],
+			pivotxml = params[3],
+			startpage = params[4],
+			endpage = params[5],
+			// jnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+			// jobid = IG$/*mainapp*/._I1b/*XGetAttr*/(jnode, "uid"),
+			jobid = params[6],
+			callback = params[7],
+			schedule_job = params[8],
+			is_scroll = params[9],
+			no_update = params[10],
+			ispagechange = "F";
+		
+		if (typeof(startpage) != "undefined")
+		{
+			ispagechange = "T";
+		}
+		
+		startpage = startpage || 0;
+		
+		if (rop && rop.poolname && IG$/*mainapp*/.dbp[rop.poolname])
+		{
+			pwd = IG$/*mainapp*/.dbp[rop.poolname];
+		}
+		
+		// me.panel.jobid = jobid;
+		
+		var req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.init(me.panel, 
+			{
+	            ack: "18",
+				payload: "<smsg><item uid='" + uid + "' option='pivot' active='" + activesheet + "' pivotresult='T'" + (pwd ? " pwd='" + pwd + "'" : "") + " jobid='" + (jobid || "") + "' startpage='" + startpage + "' endpage='" + (endpage || "") + "' ispagechange='" + ispagechange + "' theme_id='" + (ig$/*appoption*/.theme_id || "") + "'/></smsg>",
+				mbody: pivotxml
+	        }, me, me.r_IKb/*requestPivotResult*/, function(xdoc) {
+	        	callback && callback.execute({
+	        		xdoc: xdoc,
+	        		iserror: true
+	        	});
+	        }, [ctrl, activesheet, drawtype, callback, schedule_job, is_scroll, no_update]);
+		req._l/*request*/();
+	},
+	
+	r_IKb/*requestPivotResult*/: function(xdoc, params) {
+		var me = this,
+			_IK2/*mresults*/ = new IG$/*mainapp*/._IF2/*clResults*/(xdoc),
+			ctrl = params[0],
+			activesheet = params[1],
+			drawtype = params[2],
+			callback = params[3],
+			schedule_job = params[4],
+			is_scroll = params[5],
+			no_update = params[6],
+			hier_cell = params[7],
+			viewmode;
+			
+		_IK2/*mresults*/._job = schedule_job;
+		_IK2/*mresults*/._is_sc = is_scroll;
+		_IK2/*mresults*/._hcell = hier_cell;
+		
+		if (window.m$dor)
+		{
+			try
+			{
+				window.m$dor(this, _IK2/*mresults*/);
+			}
+			catch (e)
+			{
+				IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1('M_ERR_C_REP_PROC'), null, this.panel, 1, "error");
+			}
+		}
+		
+		if (!no_update)
+		{
+			me._IR2/*refreshControls*/(viewmode, activesheet, _IK2/*mresults*/, ctrl, drawtype);
+		}
+		
+		if (this.panel)
+		{
+			this.panel.setLoading(false);
+		}
+		
+		callback && callback.execute({
+			iserror: false,
+			mresults: _IK2/*mresults*/
+		});
+	},
+	
+//	_IQf/*continueReportOption*/: function(dlg) {
+//		var me = this;
+//		
+//		if (dlg.cubeobj)
+//		{
+//			var cubeuid = dlg.cubeobj.uid;
+//			var reporttype = dlg.reporttype;
+//			
+//			me._IR4/*setPivotRootCube*/.call(me, cubeuid);
+//			me._ILa/*reportoption*/ = new IG$/*mainapp*/._IEe/*clReports*/(me.tempReportXML);
+//			me._ILa/*reportoption*/.cubeuid = cubeuid;
+//			me._ILa/*reportoption*/.reportmode = reporttype;
+//		}
+//	},
+	
+	// Load report content from server for first report use
+	_IR0/*requestOlapResult*/: function(uid, drawtype, activesheet, filterxml, callback) {
+		this._ILa/*reportoption*/ = null;
+		this.uid = uid;
+		var me = this;
+	
+		var req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.init(me.panel, 
+			{
+	            ack: "18",
+				payload: "<smsg><item option='getjobid'/></smsg>",
+				mbody: "<smsg></smsg>"
+	        }, me, me._IR1/*requestOlapResult*/, null, [activesheet, drawtype, filterxml, callback]);
+		req._l/*request*/();
+	},
+	
+	_IR1/*requestOlapResult*/: function(xdoc, params) { 
+		var req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+			activesheet = params[0],
+			drawtype = params[1],
+			filterxml = params[2],
+			callback = params[3],
+			me = this,
+			uid = this.uid,
+			jnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+			jobid = IG$/*mainapp*/._I1b/*XGetAttr*/(jnode, "uid");
+		
+		me.panel.jobid = jobid;
+		
+		req.init(me.panel, 
+			{
+	            cacheid: '',
+			    refresh: '',
+	            ack: "5",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: uid, jobid: jobid, theme_id: ig$/*appoption*/.theme_id}, "uid;jobid;theme_id"),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/()
+	        }, me, me.rs__IR0/*requestOlapResult*/, function(xdoc){
+	        	callback && callback.execute({
+	        		xdoc: xdoc,
+	        		iserror: true
+	        	});
+	        }, [drawtype, activesheet, filterxml, jobid, callback]);
+		req._l/*request*/();
+	},
+	
+	rs__IR0/*requestOlapResult*/: function(xdoc, params) {
+		var me = this,
+			drawtype = params[0],
+			activesheet = params[1],
+			filterxml = params[2],
+			jobid = params[3],
+			callback = params[4],
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, '/smsg/item'),
+			i,
+			itemtype = IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, 'type').toLowerCase();
+		
+		if (me.panel)
+		{
+			if (me.panel._IIf/*customLoad*/)
+			{
+				me.panel._IIf/*customLoad*/.call(me.panel, true);
+			}
+			else
+			{
+				me.panel.setLoading(true, true);
+			}
+		}
+		
+		if (itemtype == 'compositereport')
+		{
+			var doc = IG$/*mainapp*/._I25/*toXMLString*/(xdoc);
+			me._ILa/*reportoption*/ = new IG$/*mainapp*/._IEf/*clReport*/(xdoc, null);
+			me._ILa/*reportoption*/.reports[0].viewmode = 'grid';
+	        me._IJ0/*requestUpdateReport*/.call(me, doc, 'grid');
+	        me.panel.F1/*doCompositeLayout*/.call(me.panel, me._ILa/*reportoption*/);
+	        
+	        callback && callback.execute();
+		}
+		else
+		{
+			var root = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item/Pivot");
+	        if (!root)
+	        {
+	        	if (me.panel)
+	        	{
+	        		me.panel.setLoading(false);
+	        	}
+	        	
+	        	me.tempReportXML = xdoc;
+	        	
+	        	callback && callback.execute();
+	        	
+	        	//var dlgReportOption = new IG$/*mainapp*/._IB6/*reportOption*/();
+	        	//dlgReportOption.callback = new IG$/*mainapp*/._I3d/*callBackObj*/(me, me._IQf/*continueReportOption*/);
+	        	//dlgReportOption.show();
+	        	return;
+	        }
+	        
+			me._ILa/*reportoption*/ = new IG$/*mainapp*/._IEe/*clReports*/(xdoc);
+			 
+			if (drawtype == "mode")
+			{
+				if (me.panel != null)
+				{
+					me.panel._ILa/*reportoption*/ = this._ILa/*reportoption*/;
+				}
+			}
+			
+			if (filterxml)
+			{
+				var fdoc = IG$/*mainapp*/._I13/*loadXML*/(filterxml),
+					fnode = IG$/*mainapp*/._I18/*XGetNode*/(fdoc, '/smsg/Filter'),
+					filters = [];
+				
+				if (fnode && IG$/*mainapp*/._I1b/*XGetAttr*/(fnode, "source") == "dashboard")
+				{
+					filters = IG$/*mainapp*/._I26/*getChildNodes*/(fnode);
+					me._ILa/*reportoption*/.sheets[activesheet].dashboardfilter = filters;
+				}
+			}
+			
+			if (!root)
+		    {
+		    	if (me.panel)
+		    	{
+		    		me.panel.setLoading(false);
+		    	}
+		    	
+		    	callback && callback.execute();
+		    	//var dlgReportOption = new IG$/*mainapp*/._IB6/*reportOption*/();
+		    	//dlgReportOption.show();
+		    }
+		    else
+		    {
+		    	var doc = me._ILa/*reportoption*/._IJ1/*getCurrentPivot*/(); // IG$/*mainapp*/._I25/*toXMLString*/(xdoc);
+		        me._IJ0/*requestUpdateReport*/.call(me, doc, drawtype, activesheet, jobid, callback);
+		    }
+		}
+	},
+	
+	_IJ0/*requestUpdateReport*/: function(pivotxmlcontent, drawtype, activesheet, sheet, callback, hide_loader) {
+		var me = this;
+		
+		if (me.panel._IIf/*customLoad*/)
+		{
+			!hide_loader && me.panel._IIf/*customLoad*/.call(me.panel, true);
+		}
+		else
+		{
+			!hide_loader && me.panel.setLoading(true, true);
+		}
+		
+		var req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.init(me.panel, 
+			{
+	            ack: "18",
+				payload: "<smsg><item option='getjobid' djobid='" + (me.panel.jobid || "") + "' theme_id='" + (ig$/*appoption*/.theme_id || "") + "'/></smsg>",
+				mbody: "<smsg></smsg>"
+	        }, me, function(tdoc) {
+	        	var op = me._ILa/*reportoption*/.reportmode == "rolap" ? "run" : 
+					me._ILa/*reportoption*/.reportmode == "sql" ? "sqlrun" : "run",
+					req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+					rop = me._ILa/*reportoption*/,
+					pwd,
+					jnode = IG$/*mainapp*/._I18/*XGetNode*/(tdoc, "/smsg/item"),
+					jobid = IG$/*mainapp*/._I1b/*XGetAttr*/(jnode, "uid");;
+				
+				if (rop && rop.poolname && IG$/*mainapp*/.dbp[rop.poolname])
+				{
+					pwd = IG$/*mainapp*/.dbp[rop.poolname];
+				}
+				
+				me.panel.jobid = jobid;
+				
+				req.init(me.panel, 
+					{
+			            ack: "18",
+						payload: "<smsg><item uid='" + (this.uid ? this.uid : '') + "' option='" + op + "' active='" + activesheet + "' pivotresult='T'" + (pwd ? " pwd='" + pwd + "'" : "") + " jobid='" + (jobid || "") + "' theme_id='" + (ig$/*appoption*/.theme_id || "") + "'/></smsg>",
+						mbody: pivotxmlcontent
+			        }, me, me.r_IJ0/*requestUpdateReport*/, function(xdoc) {
+			        	callback && callback.execute({
+			        		xdoc: xdoc,
+			        		iserror: true
+			        	});
+			        }, [drawtype, activesheet, callback]);
+				req._l/*request*/();
+	        }, null);
+		req.atld/*stoploading*/ = false;
+		req._l/*request*/();
+	},
+	
+	r_IJ0/*requestUpdateReport*/: function(xdoc, params) {
+		var me = this,
+			drawtype = params[0],
+			activesheet = params[1],
+			callback = params[2],
+			viewmode;
+		
+		me.panel.setLoading(false);
+		
+		var _IK2/*mresults*/ = new IG$/*mainapp*/._IF2/*clResults*/(xdoc),
+			iscomposite;
+			
+		if (window.m$dor)
+		{
+			try
+			{
+				window.m$dor(this, _IK2/*mresults*/);
+			}
+			catch (e)
+			{
+				IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1('M_ERR_C_REP_PROC'), null, this.panel, 1, "error");
+			}
+		}
+		
+		me._IL8/*jobid*/ = _IK2/*mresults*/._IL8/*jobid*/;
+		me.panel.jobid = me._IL8/*jobid*/; 
+		
+		me._IR2/*refreshControls*/(viewmode, activesheet, _IK2/*mresults*/, null, drawtype);
+		
+		callback && callback.execute();
+	},
+	
+	_IR2/*refreshControls*/: function(viewmode, activesheet, _IK2/*mresults*/, ctrl, drawtype) {
+		var me = this,
+			iscomposite,
+			i,
+			masterChart,
+			isrendered = true;
+		
+		if (ctrl && ctrl.dcr/*drawChartResult*/)
+		{
+			var jdom = $(ctrl.container),
+				w = IG$/*mainapp*/.x_10/*jqueryExtension*/._w(jdom),
+	    		h = IG$/*mainapp*/.x_10/*jqueryExtension*/._h(jdom),
+	    		d;
+	    		
+			ctrl.mresult = _IK2/*mresults*/.results[0];
+			var drawchart = ctrl.dcr/*drawChartResult*/.call(ctrl, w, h);
+			
+			ctrl.drawchart = drawchart;
+		
+			if (ctrl.isHighChart == true)
+			{
+				ctrl.disposeContent.call(ctrl, ctrl);
+				
+				if (ctrl.drawmode == "echart")
+				{
+					for (i=0; i < drawchart.length; i++)
+					{
+						d = drawchart[i];
+						masterChart = echarts.init(d.chart.renderTo, null, {
+							renderer: "svg"
+						});
+						masterChart.setOption(d);
+						ctrl._mc/*masterCharts*/.push(masterChart);
+					}
+				}
+				else
+				{
+					for (i=0; i < drawchart.length; i++)
+					{
+						masterChart = new Highcharts.Chart(drawchart[i]); //, function(masterChart) {panel.createDetail(masterChart)});
+						ctrl._mc/*masterCharts*/.push(masterChart);
+					}
+				}
+			}
+		}
+		else if (ctrl && ctrl.dor/*drawOlapResult*/)
+		{
+			ctrl.mresult = _IK2/*mresults*/.results[0];
+			ctrl.dor/*drawOlapResult*/.call(ctrl);
+		}
+		else if (this.ctrlsource == 'report')
+		{
+			if (me._ILa/*reportoption*/.iscomposite == true)
+			{
+				viewmode = 'grid';
+				me._ILa/*reportoption*/._IK2/*mresults*/ = _IK2/*mresults*/;
+			}
+			else
+			{
+				viewmode = me._ILa/*reportoption*/.sheets[activesheet].viewmode;
+				me._ILa/*reportoption*/.sheets[activesheet]._IK2/*mresults*/ = _IK2/*mresults*/;
+			}
+			
+			isrendered = me.panel.__dx == true ? false : true;
+			
+			if (isrendered)
+			{
+				me.panel._d/*drawResults*/.call(me.panel, viewmode, _IK2/*mresults*/);
+			}
+		}
+		else if (this.ctrlsource == 'dashboard')
+		{
+			iscomposite = me._ILa/*reportoption*/.iscomposite;
+			
+			me.sheet._ILa/*reportoption*/ = me._ILa/*reportoption*/;
+			me.sheet._ILb/*sheetoption*/ = (iscomposite == false) ? me._ILa/*reportoption*/.sheets[0] : me._ILa/*reportoption*/.compositereports[0];
+			me.sheet._ILb/*sheetoption*/.viewmode = drawtype ? drawtype : me.sheet._ILb/*sheetoption*/.viewmode;
+			
+			switch (me.sheet._ILb/*sheetoption*/.viewmode)
+			{
+			case "grid":
+				me.sheet._cv/*changeView*//*setActiveItem*/.call(me.sheet, 0);
+				me.sheet._IJe/*procLoadResult*/.call(me.sheet, _IK2/*mresults*/);
+				break;
+			case "chart":
+				me.sheet._cv/*changeView*//*setActiveItem*/.call(me.sheet, 1);
+				me.sheet._IJe/*procLoadResult*/.call(me.sheet, _IK2/*mresults*/);
+				break;
+			case "r":
+				me.sheet._cv/*changeView*//*setActiveItem*/.call(me.sheet, 1);
+				me.sheet._IJe/*procLoadResult*/.call(me.sheet, _IK2/*mresults*/);
+				break;
+			}
+		}
+	}
+}
+
+
+

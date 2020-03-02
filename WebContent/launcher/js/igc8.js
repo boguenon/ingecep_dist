@@ -1,1 +1,128 @@
-var IRm$={};IRm$.locale=[];IRm$.r1=function(a,c){if(!IRm$.currentLocale){var b;IRm$.currentLocale=IRm$.locale[0];for(b=0;b<IRm$.locale.length;b++){if(IRm$.locale[b].locale==window.useLocale){IRm$.currentLocale=IRm$.locale[b];break}}}var d=a;if(IRm$.currentLocale&&IRm$.currentLocale.data[a]){d=ig$.vmode==1?a+"*":IRm$.currentLocale.data[a]}else{d=(ig$.vmode==1?"x ":"")+a}if(d&&c){if(typeof(c)=="string"){c=[c]}if(c.length==1){d=d.replace("@",c[0])}else{for(b=0;b<c.length;b++){d=d.replace("@"+(b+1),c[b])}}}return d};IRm$.r2_d=function(a){if(a&&a.func){a.func.call(a.scope)}};IRm$.r2=function(d){var c=null,b=new IG$._I3e(),a=window.useLocale;b.init(c,{ack:"5",payload:IG$._I2d({uid:"/SYS_Config/locale/"+a}),mbody:IG$._I2e({option:""}),mts:"INGECEP"},c,function(l){var p=IG$._I18(l,"/smsg/item"),o,k,h,g,n,f,e,m;if(p){o=IG$._I26(p);m={locale:a,data:{}};for(k=0;k<o.length;k++){f=IG$._I1b(o[k],"name");e=IG$._I24(o[k]);m.data[f]=e}IRm$.locale.push(m)}if(d&&d.func){d.func.call(d.scope)}},function(){if(d&&d.func){d.func.call(d.scope)}});b._l()};
+/*
+amplixbi.com on MPLIX project
+Copyright(c) 2011 amplixbi.com
+http://www.amplixbi.com/
+*/
+/*
+This file is part of INGECEP
+
+Copyright (c) 2011-2013 INGECEP Inc
+
+Contact:  http://www.ingecep.com/contact
+
+If you are unsure which license is appropriate for your use, please contact the sales department
+at http://www.ingecep.com/contact.
+
+*/
+var IRm$/*resources*/ = {};
+
+IRm$/*resources*/.locale = [];
+
+IRm$/*resources*/.r1 = function(rcsid, rvalue) {
+	if (!IRm$/*resources*/.currentLocale)
+	{
+		var i;
+		
+		IRm$/*resources*/.currentLocale = IRm$/*resources*/.locale[0];
+		
+		for (i=0; i < IRm$/*resources*/.locale.length; i++)
+		{
+			if (IRm$/*resources*/.locale[i].locale == window.useLocale)
+			{
+				IRm$/*resources*/.currentLocale = IRm$/*resources*/.locale[i];
+				break;
+			}
+		}
+	}
+	
+	var r = rcsid; // ? (IRm$/*resources*/.currentLocale.data[rcsid] || '!RESOURCE_EMPTY!') : null;
+	
+	if (IRm$/*resources*/.currentLocale && IRm$/*resources*/.currentLocale.data[rcsid])
+	{
+		r = ig$/*appoption*/.vmode == 1 ? rcsid + "*" : IRm$/*resources*/.currentLocale.data[rcsid];
+	}
+	else
+	{
+		r = (ig$/*appoption*/.vmode == 1 ? "x " : "") + rcsid;
+	}
+	
+	if (r && rvalue)
+	{
+		if (typeof(rvalue) == "string")
+		{
+			rvalue = [rvalue];
+		}
+		
+		if (rvalue.length == 1)
+		{
+			r = r.replace('@', rvalue[0]);
+		}
+		else
+		{
+			for (i=0; i < rvalue.length; i++)
+			{
+				r = r.replace("@" + (i+1), rvalue[i]);
+			}
+		}
+	}
+	return r;
+}
+
+IRm$/*resources*/.r2_d/*loadResources*/ = function(bproc) {
+	if (bproc && bproc.func)
+	{
+		bproc.func.call(bproc.scope);
+	}
+}
+
+IRm$/*resources*/.r2/*loadResources*/ = function(bproc) {
+	var me = null,
+		req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+		lc = window.useLocale;
+		
+	req.init(me, 
+		{
+            ack: "5",
+            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: "/SYS_Config/locale/" + lc}),
+            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: ""}),
+            mts: "INGECEP"
+        }, me, function(xdoc) {
+        	var t = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+        		tnodes,
+        		i, j, snodes,
+        		loc, sname, svalue,
+        		sloc;
+        		
+        	if (t)
+        	{
+        		tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(t);
+        		
+        		sloc = {
+    				locale: lc,
+    				data: {}
+    			};
+	        			
+        		for (i=0; i < tnodes.length; i++)
+        		{
+    				sname = IG$/*mainapp*/._I1b/*XGetAttr*/(tnodes[i], "name");
+    				svalue = IG$/*mainapp*/._I24/*getTextContent*/(tnodes[i]);
+    				sloc.data[sname] = svalue;
+        		}
+        		
+        		IRm$/*resources*/.locale.push(sloc);
+        	}
+        	
+        	if (bproc && bproc.func)
+        	{
+        		bproc.func.call(bproc.scope);
+        	}
+        }, function() {
+        	if (bproc && bproc.func)
+        	{
+        		bproc.func.call(bproc.scope);
+        	}
+        });
+	req._l/*request*/();
+}
+
+
