@@ -1,3 +1,4 @@
+// show login
 IG$._I89 = function(callback, rs) // show login screen
 {
 	$("#idv-mnu-pnl").hide();
@@ -61,13 +62,21 @@ IG$._I89 = function(callback, rs) // show login screen
 			var fkey = "sso_sim_b6118e61573e4aaa_key_map:";
 			if (IG$._I83)
 			{
+				// login 함수
 				IG$._I83.rm1$8.call(IG$._I83, fkey, "", progress, window.m$mts, 
 					// login error handler
 					new IG$._I3d(this, function(xdoc) {
 						// move to portal login page if necessary
-						sform.fadeOut();
+						
 						progress.hide();
+						
+						/* 로그인 재시도 요청 필요할 경우 */
+						/*
+						sform.fadeOut();
 						mc.fadeIn();
+						*/
+						/* 로그인에 실패 메시지 표시 */
+						$("span", $(".login-sso-msg"), sform).html("로그인 중 오류가 발생하였습니다. 다시 시도해 주십시오.");
 					})
 				);
 			}
@@ -75,9 +84,16 @@ IG$._I89 = function(callback, rs) // show login screen
 			{
 				IG$._I85(fkey, "", progress, null, new IG$._I3d(this, function(xdoc) {
 					// move to portal login page if necessary
-					sform.fadeOut();
+					
 					progress.hide();
+					
+					/* 로그인 재시도 요청 필요할 경우 */
+					/*
+					sform.fadeOut();
 					mc.fadeIn();
+					*/
+					/* 로그인에 실패 메시지 표시 */
+					$("span", $(".login-sso-msg"), sform).html("로그인 중 오류가 발생하였습니다. 다시 시도해 주십시오.");
 				}));
 			}
 		}, 10);
