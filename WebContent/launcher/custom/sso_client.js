@@ -28,7 +28,7 @@ IG$._I89 = function(callback, rs) // show login screen
 		+ "<div class='login-sso-msg'><span>" + 
 			(useLocale == "ko_KR" ? "잠시만 기다려 주십시오." : "") + 
 			(useLocale == "en_US" ? "Please Wait a minutes." : "")
-			+ "<span></div>"
+			+ "<span><button id='btn_try_again' style='position:absolute;top:10px;right:10px;display:none;'>로그인 다시 시도</button></div>"
 			+ "<div id='license'>Licensed to: INGECEP</div>";
 		lf += "</div></div>";
 	  	
@@ -40,6 +40,57 @@ IG$._I89 = function(callback, rs) // show login screen
 	}
 	
 	mc = $(".login-mc", lform);
+	
+	$("#btn_try_again", sform).bind("click", function(e) {
+		e.preventDefault();
+		e.stopPropagation();
+		
+		sform.show();
+		mc.hide();
+		progress.show();
+		// request automatic login
+		setTimeout(function() {
+			var fkey = "sso_sim_b6118e61573e4aaa_key_map:";
+			if (IG$._I83)
+			{
+				// login 함수
+				IG$._I83.rm1$8.call(IG$._I83, fkey, "", progress, window.m$mts, 
+					// login error handler
+					new IG$._I3d(this, function(xdoc) {
+						// move to portal login page if necessary
+						
+						progress.hide();
+						
+						/* 로그인 재시도 요청 필요할 경우 */
+						/*
+						sform.fadeOut();
+						mc.fadeIn();
+						*/
+						/* 로그인에 실패 메시지 표시 */
+						$("span", $(".login-sso-msg"), sform).html("로그인 중 오류가 발생하였습니다. 다시 시도해 주십시오.");
+						$("#btn_try_again", sform).show();
+					})
+				);
+			}
+			else
+			{
+				IG$._I85(fkey, "", progress, null, new IG$._I3d(this, function(xdoc) {
+					// move to portal login page if necessary
+					
+					progress.hide();
+					
+					/* 로그인 재시도 요청 필요할 경우 */
+					/*
+					sform.fadeOut();
+					mc.fadeIn();
+					*/
+					/* 로그인에 실패 메시지 표시 */
+					$("span", $(".login-sso-msg"), sform).html("로그인 중 오류가 발생하였습니다. 다시 시도해 주십시오.");
+					$("#btn_try_again", sform).show();
+				}));
+			}
+		}, 10);
+	});
 	
 	lform.css({zIndex: 99});
 	if (browser.msie)
@@ -77,6 +128,7 @@ IG$._I89 = function(callback, rs) // show login screen
 						*/
 						/* 로그인에 실패 메시지 표시 */
 						$("span", $(".login-sso-msg"), sform).html("로그인 중 오류가 발생하였습니다. 다시 시도해 주십시오.");
+						$("#btn_try_again", sform).show();
 					})
 				);
 			}
@@ -94,6 +146,7 @@ IG$._I89 = function(callback, rs) // show login screen
 					*/
 					/* 로그인에 실패 메시지 표시 */
 					$("span", $(".login-sso-msg"), sform).html("로그인 중 오류가 발생하였습니다. 다시 시도해 주십시오.");
+					$("#btn_try_again", sform).show();
 				}));
 			}
 		}, 10);
