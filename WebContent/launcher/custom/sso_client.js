@@ -129,7 +129,7 @@ IG$._I89 = function(callback, rs) // show login screen
 						/* 로그인에 실패 메시지 표시 */
 						$("span", $(".login-sso-msg"), sform).html("로그인 중 오류가 발생하였습니다. 다시 시도해 주십시오.");
 						$("#btn_try_again", sform).show();
-					})
+					}), true // no encryption
 				);
 			}
 			else
