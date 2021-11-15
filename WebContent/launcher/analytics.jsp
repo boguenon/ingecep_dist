@@ -38,6 +38,7 @@
 var useLocale = "<%=lang%>";
 var m$mts = "<%=mts%>";
 var m$_d = "";
+var use_session_key = true;
 
 // default theme
 // ig$/*appoption*/.theme_id = "DarkBrown";
