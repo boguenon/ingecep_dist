@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>amplixBI</title>
+    <meta http-equiv="X-UA-Compatible" content="chrome=IE8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	
+    <link rel="icon" href="favicon.png" type="image/png">
+    <script type="text/javascript" src="./main/js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+$(document).ready(function() {
+	console.log("test");
+	
+	var ifrm = $("#ifrm");
+	
+	ifrm.attr("src", "http://127.0.0.1:8580/ingecep_sa/launcher/navi_wb.jsp?lang=ko_KR&mts=0122483f-0155fb46&_d=371#&p1=report&p2=01349323-0112d3f7");
+})
+    </script>
+</head>
+<body class="index nav-light hoverable">
+
+<iframe id="ifrm" src="" width="100%" height="400px"</iframe>
+
+</body>
+</html>
