@@ -11,9 +11,9 @@ var ig$/*appoption*/ = {
 	basemap: "googlemap",
 	appInfo: {
 		appversion:'1.2',
-		apprelease:'1.2.060'
+		apprelease:'1.2.060',
+		cache: "202304121039"
 	},
-	isdev: true,
 	register: false,
 	file_encoding: [
 		{name: "UTF-8", value: "UTF-8"},
@@ -29,7 +29,7 @@ var ig$/*appoption*/ = {
 		regdb: ["admins"]
 	},
 	geo_encoding: [
-		{name: "SGIS", value: "com.mplix.geo.SGIS"}
+		{name: "SGIS", value: "com.ingecep.geo.SGIS"}
 	],
 	chartlogo: {
 		enabled: false,
@@ -71,14 +71,5 @@ var ig$/*appoption*/ = {
 		{code: "ko_KR", disp: "Korean", l1: "사용자 아이디", l2: "패스워드", l3: "로그인"},
 		{code: "ja_JP", disp: "Japan", l1: "ユ?ザ?ID", l2: "パスワ?ド", l3: "ログイン"}
 	]
-	// configuration options for sheet toolbar
-//	,sheet_toolbar = [
-//		{name: "Custom1", key: "custom1", label: "Custom1", cls: "igc-btn-text", handler: function(view, key) {
-//			window._btn_handler(view, key);
-//		}},
-//		{name: "Custom2", key: "custom2", label: "Custom2", cls: "igc-btn-text", handler: function(view, key) {
-//			window._btn_handler(view, key);
-//		}}
-//	]
 	// hide_report_help: true
 };

@@ -1,1 +1,1857 @@
-IG$.CI7_=function(a){var b=this;b.sid=0;b._a={map:{},root:{name:"Menu",sid:99,level:-1,option:{},description:"Top Menu",expanded:true,children:[]}};b._a.map[99]=b._a.root;a&&b._1(a)};IG$.CI7_.prototype={_1:function(h){var l=this,c=IG$._I18(h,"/smsg/item"),d,k,e,b,g,f,a,m;if(c){l.item=IG$._I1c(c);d=IG$._I18(c,"menustructure");d&&l._4(l._a.root,d);d=IG$._I18(c,"menuitems");if(d){k=IG$._I26(d);for(g=0;g<k.length;g++){a=IG$._I1b(k[g],"sid");m=l._a.map[a];if(m){e=IG$._I26(k[g]);m.items=[];for(f=0;f<e.length;f++){b=IG$._I1c(e[f]);m.items.push(b)}}}}}},_2:function(){var c=this,b=[],a=[];b.push("<menustructure>");b.push(c._3(c._a.root,a));b.push("</menustructure>");b.push("<menuitems>");b.push(a.join(""));b.push("</menuitems>");return b.join("")},_3:function(g,a){var e=this,c,b,f,d="";d+="<option>";for(b in g.option){d+=(g.option[b])?"<opt name='"+b+"'><![CDATA["+g.option[b]+"]]></opt>":""}d+="</option>";if(g.children){for(c=0;c<g.children.length;c++){f=g.children[c];d+="<menu"+IG$._I20(f,"sid;name;description")+">";d+=e._3(f,a);d+="</menu>";if(f.items){a.push("<menuitem sid='"+f.sid+"'>");for(b=0;b<f.items.length;b++){a.push("<menu"+IG$._I20(f.items[b],"uid;name;type;nodepath")+"/>")}a.push("</menuitem>")}}}return d},_4:function(c,b){var h=this,g=IG$._I26(b),d,f,e,a,k;for(f=0;f<g.length;f++){k=IG$._I29(g[f]);if(k=="menu"){a=IG$._I1c(g[f]);a.children=[];a.option={};a.level=c.level+1;h._a.map[a.sid]=a;h.sid=Math.max(h.sid,parseInt(a.sid)+1);c.children.push(a);h._4(a,g[f])}else{if(k=="option"){d=IG$._I26(g[f]);for(e=0;e<d.length;e++){c.option[IG$._I1b(d[e],"name")]=IG$._I24(d[e])}}}}}};if(window.Ext){IG$._I7a_=$s.extend($s.window,{modal:true,title:"Page Config",layout:"fit",width:400,autoHeight:true,_1:function(){var b=this,a;if(b.item){a=b.item.option;b.down("[name=ltype]").setValue(a.ltype||"");b.down("[name=_h]").setValue(a.html);b.down("[name=_t]").setValue(a.tmpl);b.down("[name=_ra]").setValue(a.rptl);b.rptl_uid=a.rptl_uid;b.down("[name=_s]").setValue(a.scrp)}},_2:function(){var b=this,a=b.down("[name=ltype]").getValue();$.each(["_h","_r","_t"],function(d,c){b.down("[name="+c+"]").setVisible(a&&"_"+a.charAt(0)==c?true:false)})},_3:function(){var b=this,a;if(b.item){a=b.item.option;a.ltype=b.down("[name=ltype]").getValue();a.html=b.down("[name=_h]").getValue();a.tmpl=b.down("[name=_t]").getValue();a.rptl=b.down("[name=_ra]").getValue();a.rptl_uid=b.rptl_uid;a.scrp=b.down("[name=_s]").getValue()}this.close()},initComponent:function(){var a=this;$s.apply(this,{items:[{xtype:"panel",layout:"anchor",bodyPadding:10,defaults:{anchor:"100%"},items:[{xtype:"combobox",fieldLabel:"Load Type",name:"ltype",queryMode:"local",editable:false,valueField:"value",displayField:"name",store:{xtype:"store",fields:["name","value"],data:[{name:"No Action",value:""},{name:"Template",value:"template"},{name:"Load HTML",value:"html"},{name:"Open Report",value:"report"}]},listeners:{change:function(){this._2()},scope:this}},{xtype:"textfield",name:"_h",fieldLabel:"Default HTMLPage"},{xtype:"fieldcontainer",name:"_r",layout:"hbox",fieldLabel:"Report",items:[{xtype:"textfield",name:"_ra",readOnly:true,flex:1},{xtype:"button",text:"..",handler:function(){var b=this,c=new IG$._I96({visibleItems:"workspace;folder;report;dashboard",u5x:{cubebrowse:false},callback:new IG$._I3d(b,function(e){var d=b.down("[name=_ra]");d.setValue(e.name);b.rptl_uid=e.uid})});IG$._I_5(this,c)},scope:this}]},{xtype:"combobox",name:"_t",queryMode:"local",fieldLabel:"Template Name",editable:false,valueField:"value",displayField:"name",store:{xtype:"store",fields:["name","value"]}},{xtype:"textfield",fieldLabel:"After Javascript",name:"_s"}]}],buttons:[{text:IRm$.r1("B_CONFIRM"),handler:function(){var b=this;b._3()},scope:this},{text:IRm$.r1("B_CLOSE"),handler:function(){this.close()},scope:this}]});IG$._I7a_.superclass.initComponent.call(this)},listeners:{afterrender:function(a){this._1()}}})}IG$._I7_=$s.extend(IG$._I57,{scroll:false,initialized:false,hideMode:"offsets",layout:"fit",bodyPadding:5,border:0,l1:function(){var c=this,b,a="/SYS_Config/dashboardmenu";b=new IG$._I3e();b.showerror=false;b.init(c,{ack:"5",payload:IG$._I2d({uid:a}),mbody:IG$._I2e({option:""})},c,c._l1,function(d){var g=true,f,e=IG$._I27(d);if(e=="0x1400"){f=new IG$._I3e();f.init(c,{ack:"31",payload:IG$._I2d({address:a,name:"dashboardmenu",type:"PrivateContent"}),mbody:"<smsg></smsg>"},c,c.l1);f._l();g=false}return g});b._l()},_l1:function(a){var c=this,b=c.down("[name=menust]");c.c1=new IG$.CI7_(a);b.store.setRootNode(c.c1._a.root)},_l2:function(h){var i=this,d=i.down("[name=menust]"),a=d.getSelectionModel().selected,e=i.c1,b=e._a,f,g,c;switch(h){case 0:if(a&&a.length>0){f={name:"New Menu",sid:""+(i.c1.sid++)};b.map[f.sid]=f;a.items[0].appendChild(f,false,true);a.items[0].expand()}break;case 1:if(a&&a.length>0){c=a.items[0];if(!c.isRoot()){g=c.get("sid");delete b.map[g];c.remove()}}break;case 2:i._m3(d,-1,false);break;case 3:i._m3(d,1,false);break;case 4:i._m3(d,1,true);break}},_l3:function(){var f=this,b=f.down("[name=menust]"),c=b.store.getRootNode(),a={children:[]},g=f.c1,e,d=g._a;f._l8();f._l5(d,c,a);d.root.children=a.children},_l5:function(d,b,a){var c,c,f,e=[],g;for(c=0;c<b.childNodes.length;c++){f=b.childNodes[c];g={name:f.get("name"),sid:f.get("sid"),description:f.get("description"),items:[],children:[],level:a.level+1,option:{}};if(d.map[g.sid]){g.items=d.map[g.sid].items;g.option=d.map[g.sid].option}a.children.push(g);if(f.hasChildNodes()){this._l5(d,f,g)}}},l4:function(b){var a=this;switch(b){case 0:a._l3();a._l6();break}},_l6:function(){var c=this,b=new IG$._I3e(),d=c.c1,a;a="<smsg><item>";a+=d._2.call(d);a+="</item></smsg>";b.init(c,{ack:"31",payload:IG$._I2d({uid:d.item.uid}),mbody:a},c,function(e){IG$._I54(ig$.appname,IRm$.r1("M_SAVED"),null,null,0,"success")});b._l()},_m2:function(d,e){var b=d.getSelectionModel().getSelection(),a=b&&b.length?b[0]:null;if(!a){return}var c=d.getStore().indexOf(a);if(e<0){c--;if(c<0){return}}else{c++;if(c>=d.getStore().getCount()){return}}d.getStore().remove(a);d.getStore().insert(c,a);d.getSelectionModel().select(a,true)},_m3:function(e,h,d){var b=e.getSelectionModel().getSelection(),a=b&&b.length?b[0]:null;if(!a){return}var g=a.parentNode,c=g.indexOf(a),f;if(d){f=g.parentNode;if(!f){return}g.remove(a);f.insert(f.childNodes.length,a);e.getSelectionModel().select(a,true)}else{if(h<0){c--;if(c<0){return}}else{c++;if(c>=g.childNodes.length){return}}g.remove(a);g.insert(c,a);e.getSelectionModel().select(a,true)}},_l7:function(k){var l=this,h=l.down("[name=mgrid]"),a,c,f=l.c1,b=f._a,g,d,e;switch(k){case 0:break;case 1:a=h.getSelectionModel().selected;for(g=0;g<a.length;g++){c=a.items[g];h.store.remove(c);e=b.map[c.get("sid")];if(e){for(d=0;d<e.items.length;d++){if(e.items[d].uid==c.get("uid")){e.items.splice(d,1);break}}}}break;case 2:l._m2(h,-1);break;case 3:l._m2(h,1);break}},_IQ9:function(a,f){var e=this,d=e.down("[name=mg]"),c,g=[],b;for(c=0;c<a.length;c++){b=a[c].type.toLowerCase();if((/report|folder/).test(b)){g.push(a[c])}}d.store.loadData(g)},_l8:function(){var k=this,f=k.down("[name=menust]"),c=f.getSelectionModel().selected,j=k.down("[name=mgrid]"),g=k.c1,d=g._a,b,h,e,a;if(c&&c.length>0){a=c.items[0].get("sid");b=d.map[a];b.items=[];for(h=0;h<j.store.data.items.length;h++){e=j.store.data.items[h];b.items.push({uid:e.get("uid"),name:e.get("name"),type:e.get("type"),sid:a,nodepath:e.get("nodepath")})}}},_1:function(f){var b=this,d=b.c1,c=d._a.map,a=f.get("sid");var e=new IG$._I7a_({item:(a=="")?d._a.root:c[a]});IG$._I_5(this,e)},initComponent:function(){var a=this;$s.apply(this,{items:[{xtype:"panel",layout:{type:"vbox",align:"stretch"},border:0,defaults:{anchor:"100%"},items:[{xtype:"panel",border:0,flex:1,layout:{type:"border"},tbar:[{text:IRm$.r1("B_SAVE"),handler:function(){this.l4(0)},scope:this},{text:IRm$.r1("L_REFRESH"),handler:function(){this.l1()},scope:this}],items:[{xtype:"panel",region:"center",flex:2,border:0,layout:"border",items:[{xtype:"treepanel",region:"center",flex:1,title:"Menu Structures",name:"menust",rootVisible:true,plugins:[{ptype:"cellediting"}],store:{xtype:"treestore",proxy:{type:"memory"},fields:["name","description","sid"]},columns:[{xtype:"treecolumn",text:IRm$.r1("B_TITLE"),dataIndex:"name",editor:"textfield",minWidth:200},{text:IRm$.r1("B_DESC"),dataIndex:"description",editor:"textfield",flex:1,minWidth:200},{xtype:"actioncolumn",width:50,items:[{iconCls:"icon-grid-config",tooltip:IRm$.r1("B_CONFIG_ITEM"),handler:function(d,h,c,f,g,b){this._1(b)},scope:this}]}],listeners:{beforeselect:function(c,b,d,e){this._l8()},cellclick:function(c,f,r,k,q,s,n,o){var p=this,b=k.get("sid"),l=p.down("[name=mgrid]"),j=p.c1,d=j._a,g=[],h;if(d.map[b]){g=d.map[b].items||[]}for(h=0;h<g.length;h++){g[h].sid=b}l.store.loadData(g)},scope:this},tbar:[{text:IRm$.r1("L_ADD_NEW"),handler:function(){a._l2.call(a,0)}},{text:IRm$.r1("L_REMOVE_SELECTED"),handler:function(){a._l2.call(a,1)}},{text:IRm$.r1("B_MOVE_UP"),handler:function(){a._l2.call(a,2)}},{text:IRm$.r1("B_MOVE_DOWN"),handler:function(){a._l2.call(a,3)}},{text:"Move Left",hidden:true,handler:function(){a._l2.call(a,4)}}]},{xtype:"gridpanel",region:"south",name:"mgrid",selModel:{selection:"checkboxmodel",checkSelector:".x-grid-cell"},viewConfig:{plugins:[{ptype:"gridviewdragdrop",ddGroup:"_I$RD_G_",enableDrop:true,enableDrag:false}]},split:true,flex:1,title:IRm$.r1("L_C_ITEMS"),tbar:[{text:IRm$.r1("L_ADD_NEW"),hidden:true,handler:function(){this._l7(0)},scope:this},{text:IRm$.r1("L_REMOVE_SELECTED"),handler:function(){this._l7(1)},scope:this},{text:IRm$.r1("B_MOVE_UP"),handler:function(){this._l7(2)},scope:this},{text:IRm$.r1("B_MOVE_DOWN"),handler:function(){this._l7(3)},scope:this}],store:{xtype:"store",fields:["uid","name","nodepath","type","sid"]},columns:[{text:IRm$.r1("B_NAME"),dataIndex:"name"},{text:IRm$.r1("B_TYPE"),dataIndex:"type"},{text:IRm$.r1("B_DESC"),dataIndex:"description"},{text:IRm$.r1("B_LOC"),dataIndex:"nodepath",flex:1}]}]},{xtype:"panel",region:"east",split:true,collapsible:true,collapsed:false,flex:1,title:IRm$.r1("L_NAVIGATOR"),layout:{type:"vbox",align:"stretch"},items:[new IG$._Idd({name:"mtree",flex:1,gridupdate:{handler:a._IQ9,scope:a}}),{xtype:"gridpanel",name:"mg",viewConfig:{plugins:[{ptype:"gridviewdragdrop",ddGroup:"_I$RD_G_",enableDrop:false,enableDrag:true}]},flex:1,store:{xtype:"store",fields:["uid","name","type","nodepath"]},columns:[{text:IRm$.r1("B_NAME"),dataIndex:"name"},{text:IRm$.r1("B_TYPE"),dataIndex:"type"},{text:IRm$.r1("B_LOC"),dataIndex:"nodepath"}]}]}]}]}]});IG$._I7_.superclass.initComponent.call(this)},listeners:{afterrender:function(a){this.l1()}}});IG$._I7e=function(){};IG$._N12=IG$.x_c(IG$.pb,{layout:"card",customAddTab:function(b,a){var d=this,c=d.getComponent(b);if(c){IG$._I7e(2);d.setActiveTab(c)}else{IG$._I7e(2);a.id=b;c=d.add(a);d.setActiveTab(c)}},m1$7:function(k,g,m,f,a,n,i,h){var o,e=this.getComponent(g+"_"+k),d,c=IG$.breadcrumbs,l=$(".breadcrumb",c.body.dom);if(e){IG$._I7e(2);this.setActiveTab(e);l.empty();$("<li><span class='link'>"+(e.title||m)+"</span></li>").appendTo(l);if(h&&e.applyOption){e.applyOption.call(e,h)}if(g=="dashboard"){var j=this.getComponent("dashboardedit_"+k);if(j){if(e.uid&&e.uid.length>0){e.M1.call(e)}}}}else{h=h||{};h.header=false;h._iv="dashboard";d=IG$._I61(k,g,m,f,n,h);if(d){d.address=f;d.title=m;l.empty();$("<li><span class='link'>"+m+"</span></li>").appendTo(l);if(i){for(o in i){d[o]=i[o]}}if(d.isWindow==true){if(!IG$.ps[d.address]){IG$.ps[d.address]=d;d.on("close",function(){delete IG$.ps[d.address]});d.show()}}else{IG$._I7e(2);d.id=g+"_"+k;var b=this.add(d);this.setActiveTab(b)}}else{a=false}}if(a==true){lastHist="lang="+useLocale+"&p1="+g+"&p2="+k;hist.addHistory(lastHist)}},i1:function(){},iLL:function(){var a=IG$.__1,d=$("#igc_login_user"),e,c,b;if(IG$._I83&&IG$._I83.jS1){b=IG$._I83.jS1;c=b.username;d.html(c);if(!a._1){a._1=true;this.L1(a)}IG$.$1(b.tmpl);if(!IG$._I83.jS1.__bdmenu){IG$._I83.jS1.__bdmenu=1;d.bind("click",function(){})}}},L1:function(a){var e=this,d=a.down("[name=navbar]"),h=a.down("[name=sidebar_sc]"),g=a.down("[name=sidebar]"),b=$(d.body.dom),f=IG$._I83.jS2,c;c=$("#nav_mgrmenu",b)[f?"show":"hide"]();c.bind("click",function(){IG$._I65("CMD_D_MENU")});c=$(".sidebar-btn-d-menu",h.body.dom);c.bind("click",function(){g.getLayout().setActiveItem(0)});c=$(".sidebar-btn-n-menu",h.body.dom);c.bind("click",function(){if(!e.floaded){e._1.call(e)}g.getLayout().setActiveItem(1)});e.L2(a,b)},L2:function(g,d){var h=this,b=g.down("[name=sidebar_m0]"),c=$("#sidebar",b.body.dom),e=$(".navbar-top-menu",d),f=$(".navbar-brand",d),i,a;e.empty();a=$("<ul class='igc-smenu-main'></ul>").appendTo(c);i=new IG$._I3e();i.showerror=false;i.init(h,{ack:"5",payload:IG$._I2d({uid:"/SYS_Config/dashboardmenu"}),mbody:IG$._I2e({option:""})},h,function(j){var m=new IG$.CI7_(j),l=m._a.root,n=$("<ul class='igc-tmenu-main'></ul>").appendTo(e),k;l.option&&h._2.call(h,l);f.bind("click",function(){l.option&&h._2.call(h,l)});$.each(l.children,function(q,p){var o=$("<li><span class='igc-tnav-item'>"+p.name+"</span></li>").appendTo(n);o.bind("click",function(){a.empty();h.L3(a,p,0)})});if(ig$.dashboard_custom&&ig$.dashboard_custom.menu_loaded){ig$.dashboard_custom.menu_loaded.call(h,l,h,a)}k=ig$.c_menus;if(k&&k.menus){$.each(k.menus,function(q,p){var o=$("<li><span class='igc-tnav-item igc-tnav-citem "+(p.css||"")+"'>"+p.name+"</span></li>").appendTo(n);o.bind("click",function(){a.empty();h.L3(a,p,0,1)})})}});i._l()},L3:function(a,d,e,c){var b=this;$.each([d.children,d.items],function(g,f){f&&$.each(f,function(q,k){var p=$("<li><div class='indicator'></div></li>").appendTo(a),j=$("<div class='igc-nav-item'>"+k.name+"</div>").appendTo(p),h,m,l,n=false;j.hover(function(){$(".indicator",p).addClass("igc-hover")},function(){$(".indicator",p).removeClass("igc-hover")});n=(!c&&k.children&&k.children.length>0)||k.type=="Folder"||(k.items&&k.items.length>0)?true:false;if(n){l=$("<div class='igc-submenu-expand'>&gt;</div>").appendTo(p);h=$("<ul class='submenu'></ul>").appendTo(p);h.hide();var o=function(r){r.stopPropagation();if(!k.loaded&&k.type=="Folder"){var i=new IG$._I3e();i.showerror=false;i.init(b,{ack:"5",payload:IG$._I2d({uid:k.uid}),mbody:IG$._I2e({option:""})},b,function(s){var w=IG$._I18(s,"/smsg/item"),v=(w?IG$._I26(w):null),t,u;k.items=[];k.loaded=true;if(v){for(t=0;t<v.length;t++){u=IG$._I1c(v[t]);if((/Report|Folder|Dashboard/).test(u.type)){k.items.push(u)}}IG$._I10(k.items);b.L3.call(b,h,k,e+1);h.show()}});i._l()}else{h.toggle()}};l.bind("click",o);j.bind("click",o);b.L3.call(b,h,k,e+1)}else{if(c){j.bind("click",function(i){if(k.handler){k.handler.call(this,k)}})}else{if(k.uid){j.bind("click",function(i){b.m1$7.call(b,k.uid,k.type.toLowerCase(),k.name,k.nodepath,false,false)})}}}})})},setActiveTab:function(a){this.setActiveItem(a)},_1:function(){var a=this,b=new IG$._I3e();b.init(a,{ack:"11",payload:IG$._I2d({}),mbody:IG$._I2e({option:"favorites"})},a,a.rs__1,null,null);b._l()},rs__1:function(f){var k=this,e,g=IG$.__1,a=g.down("[name=sidebar_m1]"),c=IG$._I18(f,"/smsg"),h=(c)?IG$._I26(c):null,j=[],b;k.floaded=true;if(h){b=$("#sidebar_fav",a.el.dom);b=$(".navbar-top-menu",b),b.empty();for(e=0;e<h.length;e++){j.push(IG$._I1c(h[e]))}k.L3(b,{children:null,items:j},0)}},_2:function(g){var f=this,c=g.option,b=c.ltype,a,e,d;switch(b){case"html":a=c.html;a&&f._3(g,c,a);break;case"report":if(c.rptl_uid){if(c.rptl_item){d=c.rptl_item;f.m1$7.call(f,d.uid,d.type.toLowerCase(),d.name,d.nodepath,false,false)}else{e=new IG$._I3e();e.init(f,{ack:"11",payload:IG$._I2d({uid:c.rptl_uid}),mbody:IG$._I2e({option:"translate"})},f,function(h){var j=this,k=IG$._I18(h,"/smsg/item"),i;if(k){i=IG$._I1c(k);c.rptl_item=i;j.m1$7.call(j,i.uid,i.type.toLowerCase(),i.name,i.nodepath,false,false)}},false);e._l()}}break}},_3:function(d,b,a){var c=this,f="tpage_"+d.sid,e=this.getComponent(f);IG$._I7e(2);if(e){this.setActiveTab(e)}else{e=Ext.create(Ext.panel.Panel,{layout:"fit",name:f,id:f,autoScroll:true,autoLoad:{url:a,callback:function(){if(b.scrp&&window[b.scrp]){var g=this.down("[name="+f+"]");window[b.scrp].call(c,d,g)}},scope:this}});this.add(e);this.setActiveTab(e)}},initComponent:function(){var a=this;a.callParent(arguments)},listeners:{beforeadd:function(a,c,b,d){c.closable=false;c.setTitle(null)}}});IG$._n2=function(c,b,e,a){var d=new IG$._I3e();d.init(null,{ack:"11",payload:IG$._I2d({uid:c}),mbody:IG$._I2e({option:"translate"})},null,function(f){var k=IG$._I18(f,"/smsg/item"),g=IG$._I1b(k,"uid"),i=IG$._I1b(k,"type").toLowerCase(),m=IG$._I1b(k,"name"),j=IG$._I1b(k,"nodepath"),h=(IG$._I1b(k,"manage")=="T"||IG$._I1b(k,"writable")=="T")?true:false,l=false;if(i=="dashboard"&&b=="dashboardedit"){i=b}else{if(i=="export"){l=true;i="report"}}IG$._I7d.m1$7.call(IG$._I7d,g,i,m,j,(typeof(a)=="undefined"?true:a),h,null,e)},null);d._l()};IG$._I8b=function(){var b=$("#loginWindow"),a=$("#userid");b.hide()};IG$.$1=function(a){};IG$._$$1=function(e,d,c,f){var a=null;var b=new IG$._I3e();b.init(a,{ack:"23",payload:"<smsg></smsg>",mbody:"<smsg></smsg>"},a,function(l){var g=this,o=IG$._I18(l,"/smsg"),p=IG$._I18(l,"/smsg/item"),i;if(p){p1=IG$._I1a(p,"p1");p2=IG$._I1a(p,"p2");if(p1&&p2){IG$._I3a=p1;IG$._I3b=p2;var g=this,j=e.val(),m=d.val(),k=c.val(),h,n;if(m!=k){IG$._I54(ig$.appname,"Password is not match with confirm value",null,null,1,"error");return}h=IG$._I3c([j,m]);j=h[0];m=h[1];n=new IG$._I3e();n.init(g,{ack:"28",payload:IG$._I2d({address:"/user"}),mbody:IG$._I2e({option:"changepassword",password:m,oldpassword:j})},g,function(q){f&&f.execute()},null);n._l()}}},null);b._l()};$(document).ready(function(){$("#lpt","#loading").css("width","80%");IRm$.r2({func:function(){$("#lpt","#loading").css("width","100%");setTimeout(function(){var c,b;IG$.lE.rcsloaded=true;b={closeText:IRm$.r1("L_C_CLOSE"),prevText:IRm$.r1("L_C_PREV"),nextText:IRm$.r1("L_C_NEXT"),currentText:IRm$.r1("L_C_CUR"),monthNames:IRm$.r1("L_C_M_NAMES").split("#"),monthNamesShort:IRm$.r1("L_C_M_NAMES_S").split("#"),dayNames:IRm$.r1("L_C_D_NAMES").split("#"),dayNamesShort:IRm$.r1("L_C_D_NAMES_S").split("#"),dayNamesMin:IRm$.r1("L_C_D_NAMES_M").split("#"),weekHeader:IRm$.r1("L_C_W_H"),firstDay:0,isRTL:false,showMonthAfterYear:true,yearSuffix:IRm$.r1("L_C_YR_SFX")};$.datepicker.setDefaults(b);IG$.r_cl_lc=b;IG$._I7d=new IG$._N12({});var h=$(document),d=$("body"),f=new IG$.pb({layout:{type:"vbox",align:"stretch"},renderTo:$("body"),items:[{xtype:"container",region:"north",name:"navbar",contentEl:"#navbar",height:45},{xtype:"container",layout:{type:"hbox",align:"stretch"},flex:1,items:[{xtype:"container",region:"west",name:"sidebarpanel",media:{minWidth:768},width:190,layout:{type:"vbox",align:"stretch"},items:[{xtype:"container",height:40,name:"sidebar_sc",contentEl:"#sidebar-shortcuts",hidden:true},{xtype:"container",flex:1,name:"sidebar",layout:"card",items:[{xtype:"container",name:"sidebar_m0",contentEl:"#sidebar"},{xtype:"container",name:"sidebar_m1",contentEl:"#sidebar_fav"},{xtype:"container",name:"sidebar_m2"}]}]},{xtype:"container",flex:1,layout:{type:"vbox",align:"stretch"},items:[{xtype:"container",name:"breadcrumbs",contentEl:"#breadcrumbs",height:30},{xtype:"container",name:"maintab",border:1,flex:1,layout:"fit",items:[IG$._I7d]}]}]}],listeners:{afterrender:function(k){var i=$("#navbar_dmenu",k.body.dom),l=k.down("[name=sidebarpanel]");if(i){i.bind("click",function(){var m=$(l._el.dom);m.toggle();m.css({zIndex:2000})})}}}});f.setSize(d.width(),d.height());var j=-1;$(window).resize(function(){if(j){clearTimeout(j)}j=setTimeout(function(){f.setSize(d.width(),d.height())},10)});IG$.__1=f;IG$.breadcrumbs=f.down("[name=breadcrumbs]");setTimeout(function(){$("#loading").fadeOut({remove:true});$("#loading-mask").fadeOut({remove:true})},150);var e=$.cookie("lui")||"";var a="";IG$._I88(e,a,true);IG$._I14();var g=new IG$._I3e();g.init(null,{ack:"11",payload:IG$._I2d({}),mbody:IG$._I2e({option:"ls",mts:(window.m$mts||""),lang:(window.useLocale||"")})},null,function(i){var m=IG$._I18(i,"/smsg"),l=false;if(m){var k=IG$._I1b(m,"uuid");if(k){l=true;IG$._I83.callback=new IG$._I3d(this,IG$._I8b);IG$._I83.uuid=k;IG$._I83.mts={sid:IG$._I1b(m,"mts"),name:IG$._I1b(m,"mts_name")};IG$._g$a=IG$._I83.mts.sid;if(window.m$mts&&IG$._I83.mts.name!=window.m$mts&&IG$._I83.mts.sid!=window.m$mts){IG$._I8a(new IG$._I3d(this,IG$._I8b));return}IG$._I83.lastLogin={lastaccesstime:IG$._I1b(m,"lastaccesstime"),lastaccesshost:IG$._I1b(m,"lastaccesshost"),lastaccessaddr:IG$._I1b(m,"lastaccessaddr"),accesshost:IG$._I1b(m,"accesshost"),accessaddr:IG$._I1b(m,"accessaddr"),accesstime:IG$._I1b(m,"accesstime")};if(IG$._I7d){IG$._I7d.iLL.call(IG$._I7d)}IG$._I83.Js4.call(IG$._I83,false)}}if(l==false){IG$._I89(new IG$._I3d(this,IG$._I8b),0)}},function(){IG$._I89(new IG$._I3d(this,IG$._I8b),0);return true});g._l()},300)}})});
+/*
+amplixbi.com on MPLIX project
+Copyright(c) 2011 amplixbi.com
+http://www.amplixbi.com/
+*/
+/*
+This file is part of INGECEP
+
+Copyright (c) 2011-2013 INGECEP Inc
+
+Contact:  http://www.ingecep.com/contact
+
+If you are unsure which license is appropriate for your use, please contact the sales department
+at http://www.ingecep.com/contact.
+
+*/
+IG$/*mainapp*/.CI7_/*dashboardmenustructure*/ = function(xdoc) {
+	var me = this;
+	
+	me.sid = 0;
+	
+	me._a/*menustructure*/ = {
+		map: {},
+		root: {
+			name: "Menu",
+			sid: 99,
+			level: -1,
+			option: {},
+			description: "Top Menu",
+			expanded: true,
+			children: [
+			]
+		}
+	};
+	
+	me._a/*menustructure*/.map[99] = me._a/*menustructure*/.root;
+	
+	xdoc && me._1/*parse*/(xdoc);
+}
+
+IG$/*mainapp*/.CI7_/*dashboardmenustructure*/.prototype = {
+	_1/*parse*/: function(xdoc) {
+		var me = this,
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+			snode,
+			tnodes, snodes,
+			p, i, j, sid, pitems;
+		
+		if (tnode)
+		{
+			me.item = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnode);
+			snode = IG$/*mainapp*/._I18/*XGetNode*/(tnode, "menustructure");
+			snode && me._4/*parseMenuNode*/(me._a/*menustructure*/.root, snode);
+			
+			snode = IG$/*mainapp*/._I18/*XGetNode*/(tnode, "menuitems");
+			if (snode)
+			{
+				tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(snode);
+				for (i=0; i < tnodes.length; i++)
+				{
+					sid = IG$/*mainapp*/._I1b/*XGetAttr*/(tnodes[i], "sid");
+					pitems = me._a/*menustructure*/.map[sid];
+					if (pitems)
+					{
+						snodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnodes[i]);
+						pitems.items = [];
+						for (j=0; j < snodes.length; j++)
+						{
+							p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(snodes[j]);
+							pitems.items.push(p);
+						}
+					}
+				}
+			}
+		}
+	},
+	
+	_2/*getxml*/: function() {
+		var me = this,
+			r = [],
+			m = [];
+		
+		r.push("<menustructure>");
+		r.push(me._3/*getNode*/(me._a/*menustructure*/.root, m));
+		r.push("</menustructure>");
+		
+		r.push("<menuitems>");
+		r.push(m.join(""));
+		r.push("</menuitems>");
+		
+		return r.join("");
+	},
+	
+	_3/*getNode*/: function(tnode, m) {
+		var me = this,
+			i, j,
+			p,
+			r = "";
+		
+		r += "<option>";
+		for (j in tnode.option)
+		{
+			r += (tnode.option[j]) ? "<opt name='" + j + "'><![CDATA[" + tnode.option[j] + "]]></opt>" : "";
+		}
+		r += "</option>";					
+				
+		if (tnode.children)
+		{
+			for (i=0; i < tnode.children.length; i++)
+			{
+				p = tnode.children[i];
+				r += "<menu" + IG$/*mainapp*/._I20/*XUpdateInfo*/(p, "sid;name;description") + ">";
+				r += me._3/*getNode*/(p, m);
+				r += "</menu>";
+				
+				if (p.items)
+				{
+					m.push("<menuitem sid='" + p.sid + "'>");
+					for (j=0; j < p.items.length; j++)
+					{
+						m.push("<menu" + IG$/*mainapp*/._I20/*XUpdateInfo*/(p.items[j], "uid;name;type;nodepath") + "/>");
+					}
+					m.push("</menuitem>");
+				}
+			}
+		}
+		
+		return r;
+	},
+	
+	_4/*parseMenuNode*/: function(pobj, tnode) {
+		var me = this,
+			tnodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnode),
+			snodes,
+			i, j, p,
+			tname;
+			
+		for (i=0; i < tnodes.length; i++)
+		{
+			tname = IG$/*mainapp*/._I29/*XGetNodeName*/(tnodes[i]);
+			
+			if (tname == "menu")
+			{
+				p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+				p.children = [];
+				p.option = {};
+				p.level = pobj.level + 1;
+				me._a/*menustructure*/.map[p.sid] = p;
+				me.sid = Math.max(me.sid, parseInt(p.sid)+1);
+				pobj.children.push(p);
+				
+				me._4/*parseMenuNode*/(p, tnodes[i]);
+			}
+			else if (tname == "option")
+			{
+				snodes = IG$/*mainapp*/._I26/*getChildNodes*/(tnodes[i]);
+				for (j=0; j < snodes.length; j++)
+				{
+					pobj.option[IG$/*mainapp*/._I1b/*XGetAttr*/(snodes[j], "name")] = IG$/*mainapp*/._I24/*getTextContent*/(snodes[j]);
+				}
+			}
+		}
+	}
+}
+
+if (window.Ext)
+{
+	IG$/*mainapp*/._I7a_/*dashboardmenuconfig*/ = $s.extend($s.window, {
+		modal: true,
+		title: "Page Config",
+		layout: "fit",
+		width: 400,
+		autoHeight: true,
+		
+		_1/*initApp*/: function() {
+			var me = this,
+				option;
+			if (me.item)
+			{
+				option = me.item.option;
+				me.down("[name=ltype]").setValue(option.ltype || "");
+				me.down("[name=_h]").setValue(option.html);
+				me.down("[name=_t]").setValue(option.tmpl);
+				me.down("[name=_ra]").setValue(option.rptl);
+				me.rptl_uid = option.rptl_uid;
+				me.down("[name=_s]").setValue(option.scrp);
+			}
+		},
+		
+		_2/*changeLayout*/: function() {
+			var me = this,
+				ltype = me.down("[name=ltype]").getValue();
+			
+			$.each(["_h", "_r", "_t"], function(i, t) {
+				me.down("[name=" + t + "]").setVisible(ltype && "_" + ltype.charAt(0) == t ? true : false);
+			});
+		},
+		
+		_3/*confirmChanges*/: function() {
+			var me = this,
+				option;
+			if (me.item)
+			{
+				option = me.item.option;
+				option.ltype = me.down("[name=ltype]").getValue();
+				option.html = me.down("[name=_h]").getValue();
+				option.tmpl = me.down("[name=_t]").getValue();
+				option.rptl = me.down("[name=_ra]").getValue();
+				option.rptl_uid = me.rptl_uid;
+				option.scrp = me.down("[name=_s]").getValue();
+			}
+			
+			this.close();
+		},
+		
+		initComponent: function() {
+	    	var me = this;
+	    	
+	    	$s.apply(this, {
+	    		items: [
+	    			{
+	    				xtype: "panel",
+	    				layout: "anchor",
+	    				bodyPadding: 10,
+	    				defaults: {
+	    					anchor: "100%"
+	    				},
+	    				items: [
+	    					{
+	    						xtype: "combobox",
+	    						fieldLabel: "Load Type",
+	    						name: "ltype",
+	    						queryMode: "local",
+	    						editable: false,
+	    						valueField: "value",
+	    						displayField: "name",
+	    						store: {
+	    							xtype: "store",
+	    							fields: ["name", "value"],
+	    							data: [
+	    								{name: "No Action", value: ""},
+	    								{name: "Template", value: "template"},
+	    								{name: "Load HTML", value: "html"},
+	    								{name: "Open Report", value: "report"}
+	    							]
+	    						},
+	    						listeners: {
+	    							change: function() {
+	    								this._2/*changeLayout*/();
+	    							},
+	    							scope: this
+	    						}
+	    					},
+	    					{
+	    						xtype: "textfield",
+	    						name: "_h",
+	    						fieldLabel: "Default HTMLPage"
+	    					},
+	    					{
+	    						xtype: "fieldcontainer",
+	    						name: "_r",
+	    						layout: "hbox",
+	    						fieldLabel: "Report",
+	    						items: [
+	    							{
+	    								xtype: "textfield",
+	    								name: "_ra",
+	    								readOnly: true,
+	    								flex: 1
+	    							},
+	    							{
+	    								xtype: "button",
+	    								text: "..",
+	    								handler: function() {
+	    									var me = this,
+		    									dlgitemsel = new IG$/*mainapp*/._I96/*metaSelectDlg*/({
+		    									visibleItems: "workspace;folder;report;dashboard",
+		    									u5x/*treeOptions*/: {
+		    										cubebrowse: false
+		    									},
+		    									callback: new IG$/*mainapp*/._I3d/*callBackObj*/(me, function(item) {
+	    											var _ra = me.down("[name=_ra]");
+	    											_ra.setValue(item.name);
+	    											me.rptl_uid = item.uid;
+	    										})
+		    								});
+		    								IG$/*mainapp*/._I_5/*checkLogin*/(this, dlgitemsel);
+	    								},
+	    								scope: this
+	    							}
+	    						]
+	    					},
+	    					{
+	    						xtype: "combobox",
+	    						name: "_t",
+	    						queryMode: "local",
+	    						fieldLabel: "Template Name",
+	    						editable: false,
+	    						valueField: "value",
+	    						displayField: "name",
+	    						store: {
+	    							xtype: "store",
+	    							fields: ["name", "value"]
+	    						}
+	    					},
+	    					{
+	    						xtype: "textfield",
+	    						fieldLabel: "After Javascript",
+	    						name: "_s"
+			    			}
+	    				]
+	    			}
+	    		],
+	    		buttons: [
+	    			{
+						text: IRm$/*resources*/.r1("B_CONFIRM"),
+						handler: function() {
+							var me = this;
+							me._3/*confirmChanges*/();
+						},
+						scope: this
+					},
+					{
+						text: IRm$/*resources*/.r1('B_CLOSE'),
+						handler: function() {
+							this.close();
+						},
+						scope: this
+					}
+	    		]
+	    	});
+	    	
+	    	IG$/*mainapp*/._I7a_/*dashboardmenuconfig*/.superclass.initComponent.call(this);
+	    },
+	    listeners: {
+	    	afterrender: function(tobj) {
+	    		this._1/*initApp*/();
+	    	}
+	    }
+	});
+}
+
+IG$/*mainapp*/._I7_/*dashboardmenu*/ = $s.extend(IG$/*mainapp*/._I57/*IngPanel*/, {
+	scroll: false,
+	initialized: false,
+	hideMode: 'offsets',
+	"layout": "fit",
+	bodyPadding: 5,
+	border: 0,
+	
+	l1/*loadContent*/: function() {
+		var me = this,
+			req,
+			uid = "/SYS_Config/dashboardmenu";
+		
+		req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.showerror = false;
+		req.init(me, 
+			{
+	            ack: "5",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: uid}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: ''})
+	        }, me, me._l1/*rs_loadContent*/, function(xdoc) {
+	        	var r = true,
+					req,
+					errcode = IG$/*mainapp*/._I27/*getErrorCode*/(xdoc);
+				
+				if (errcode == "0x1400")
+				{
+					req = new IG$/*mainapp*/._I3e/*requestServer*/();
+					req.init(me, 
+						{
+				            ack: "31",
+				            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: uid, name: "dashboardmenu", type: "PrivateContent"}),
+				            mbody: "<smsg></smsg>"
+				        }, me, me.l1/*loadContent*/);
+					req._l/*request*/();
+					r = false;
+				}
+				
+				return r
+	        });
+		req._l/*request*/();
+	},
+	
+	_l1/*rs_loadContent*/: function(xdoc) {
+		var me = this,
+			menust = me.down("[name=menust]");
+			
+		me.c1/*appinfo*/ = new IG$/*mainapp*/.CI7_/*dashboardmenustructure*/(xdoc);
+		menust.store.setRootNode(me.c1/*appinfo*/._a/*menustructure*/.root);
+	},
+	
+	_l2/*menusthandler*/: function(act) {
+		var me = this,
+			menust = me.down("[name=menust]"),
+			sel = menust.getSelectionModel().selected,
+			appinfo = me.c1/*appinfo*/,
+    		m = appinfo._a/*menustructure*/,
+    		sobj,
+    		suid,
+    		srec;
+			
+		switch (act)
+		{
+		case 0:
+			if (sel && sel.length > 0)
+			{
+				sobj = {
+					name: "New Menu",
+					sid: "" + (me.c1/*appinfo*/.sid++)
+				};
+				m.map[sobj.sid] = sobj;
+				
+				sel.items[0].appendChild(sobj, false, true);
+				sel.items[0].expand();
+			}
+			break;
+		case 1:
+			if (sel && sel.length > 0)
+			{
+				srec = sel.items[0];
+				if (!srec.isRoot())
+				{
+					suid = srec.get("sid");
+					delete m.map[suid];
+					srec.remove(); // parentNode.remove(srec);
+				}
+			}
+			break;
+		case 2:
+			me._m3/*moveTreeGridSelection*/(menust, -1, false);
+			break;
+		case 3:
+			me._m3/*moveTreeGridSelection*/(menust, 1, false);
+			break;
+		case 4:
+			me._m3/*moveTreeGridSelection*/(menust, 1, true);
+			break;
+		}
+	},
+	
+	_l3/*updateContent*/: function() {
+		var me = this,
+			menust = me.down("[name=menust]"),
+			menuroot = menust.store.getRootNode(),
+			mobj = {
+				children: []
+			},
+			appinfo = me.c1/*appinfo*/,
+			cnt,
+			omenu = appinfo._a/*menustructure*/;
+		
+		me._l8/*updateCurrent*/();
+		me._l5/*updatenode*/(omenu, menuroot, mobj);
+		omenu.root.children = mobj.children;
+	},
+	
+	_l5/*updatenode*/: function(omenu, mnode, mobj) {
+		var i,
+			i, pnode,
+			mtree = [],
+			cobj;
+		
+		for (i=0; i < mnode.childNodes.length; i++)
+		{
+			pnode = mnode.childNodes[i];
+			cobj = {
+				name: pnode.get("name"),
+				sid: pnode.get("sid"),
+				description: pnode.get("description"),
+				items: [],
+				children: [],
+				level: mobj.level+1, 
+				option: {}
+			};
+			
+			if (omenu.map[cobj.sid])
+			{
+				cobj.items = omenu.map[cobj.sid].items;
+				cobj.option = omenu.map[cobj.sid].option;
+			}
+			
+			mobj.children.push(cobj);
+			
+			if (pnode.hasChildNodes())
+			{
+				this._l5/*updatenode*/(omenu, pnode, cobj);
+			}
+		}
+	},
+	
+	l4/*maintoolbar*/: function(cmd) {
+		var me = this;
+		
+		switch(cmd)
+		{
+		case 0: /*savecontent*/
+			me._l3/*updateContent*/();
+			me._l6/*saveContent*/();
+			break;
+		}
+	},
+	
+	_l6/*saveContent*/: function() {
+		var me = this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/(),
+			appinfo = me.c1/*appinfo*/,
+			cnt;
+		
+		cnt = "<smsg><item>";
+		cnt += appinfo._2/*getxml*/.call(appinfo);
+		cnt += "</item></smsg>";
+			
+		req.init(me, 
+			{
+	            ack: "31",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: appinfo.item.uid}),
+	            mbody: cnt
+	        }, me, function(xdoc) {
+	        	IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, IRm$/*resources*/.r1("M_SAVED"), null, null, 0, "success");
+	        });
+		req._l/*request*/();
+	},
+	
+	_m2/*moveGridSelection*/: function(grid, direction) {
+    	var records = grid.getSelectionModel().getSelection(),
+    		record = records && records.length ? records[0] : null;
+    		
+		if (!record) 
+		{
+			return;
+		}
+		
+		var index = grid.getStore().indexOf(record);
+		
+		if (direction < 0) 
+		{
+			index--;
+			if (index < 0) 
+			{
+				return;
+			}
+		} 
+		else 
+		{
+			index++;
+			if (index >= grid.getStore().getCount()) 
+			{
+				return;
+			}
+		}
+		grid.getStore().remove(record);
+		grid.getStore().insert(index, record);
+		grid.getSelectionModel().select(record, true);
+    },
+    
+    _m3/*moveTreeGridSelection*/: function(grid, direction, move_left) {
+    	var records = grid.getSelectionModel().getSelection(),
+    		record = records && records.length ? records[0] : null;
+    		
+		if (!record) 
+		{
+			return;
+		}
+		
+		var pnode = record.parentNode,
+			index = pnode.indexOf(record),
+			ppnode;
+		
+		if (move_left)
+		{
+			ppnode = pnode.parentNode;
+			
+			if (!ppnode)
+			{
+				return;
+			}
+			
+			pnode.remove(record);
+			ppnode.insert(ppnode.childNodes.length, record);
+			grid.getSelectionModel().select(record, true);
+		}
+		else
+		{
+			if (direction < 0) 
+			{
+				index--;
+				if (index < 0) 
+				{
+					return;
+				}
+			} 
+			else 
+			{
+				index++;
+				if (index >= pnode.childNodes.length) 
+				{
+					return;
+				}
+			}
+			
+			pnode.remove(record);
+			pnode.insert(index, record);
+			grid.getSelectionModel().select(record, true);
+		}
+    },
+	
+	_l7/*toolbar_content*/: function(act) {
+		var me = this,
+			mgrid = me.down("[name=mgrid]"),
+			sel, rec,
+			appinfo = me.c1/*appinfo*/,
+			m = appinfo._a/*menustructure*/,
+			i, j, sobj;
+		
+		switch(act)
+		{
+		case 0: // add item
+			break;
+		case 1: // remove item
+			sel = mgrid.getSelectionModel().selected;
+			for (i=0; i < sel.length; i++)
+			{
+				rec = sel.items[i];
+				mgrid.store.remove(rec);
+				
+				sobj = m.map[rec.get("sid")];
+				
+				if (sobj)
+				{
+					for (j=0; j < sobj.items.length; j++)
+					{
+						if (sobj.items[j].uid == rec.get("uid"))
+						{
+							sobj.items.splice(j, 1);
+							break;
+						}
+					}
+				}
+			}
+			break;
+		case 2:	// move up
+			me._m2/*moveGridSelection*/(mgrid, -1);
+			break;
+		case 3: // move down
+			me._m2/*moveGridSelection*/(mgrid, 1);
+			break;
+		}
+	},
+	
+	_IQ9/*updateGridContent*/: function(datas, item) {
+		var me = this,
+			mg = me.down("[name=mg]"),
+			i, ndata = [],
+			t;
+			
+		for (i=0; i < datas.length; i++)
+		{
+			t = datas[i].type.toLowerCase();
+			if ((/report|folder/).test(t))
+			{
+				ndata.push(datas[i]);
+			}
+		}
+											
+		mg.store.loadData(ndata);
+	},
+	
+	_l8/*updateCurrent*/: function() {
+		var me = this,
+			menust = me.down("[name=menust]"),
+			sel = menust.getSelectionModel().selected,
+			mgrid = me.down("[name=mgrid]"),
+			appinfo = me.c1/*appinfo*/,
+			m = appinfo._a/*menustructure*/,
+			p, i, rec,
+			sid;
+			
+		if (sel && sel.length > 0)
+		{
+			sid = sel.items[0].get("sid");
+			p = m.map[sid];
+			p.items = [];
+			for (i=0; i < mgrid.store.data.items.length; i++)
+			{
+				rec = mgrid.store.data.items[i];
+				p.items.push({
+					uid: rec.get("uid"),
+					name: rec.get("name"),
+					type: rec.get("type"),
+					sid: sid,
+					nodepath: rec.get("nodepath")
+				});
+			}
+		}
+	},
+	
+	_1/*configPage*/: function(rec) {
+		var me = this,
+			cinfo = me.c1/*appinfo*/,
+			map = cinfo._a/*menustructure*/.map,
+			sid = rec.get("sid");
+			
+		var dlg = new IG$/*mainapp*/._I7a_/*dashboardmenuconfig*/({
+			item: (sid == "") ? cinfo._a/*menustructure*/.root : map[sid]
+		});
+		IG$/*mainapp*/._I_5/*checkLogin*/(this, dlg);
+	},
+	
+	initComponent: function(){
+    	var me = this;
+    	
+    	$s.apply(this, {
+    		items: [
+    			{
+    				xtype: "panel",
+    				layout: {
+    					type: "vbox",
+    					align: "stretch"
+    				},
+    				border: 0,
+    				defaults: {
+    					anchor: "100%"
+    				},
+    				items: [
+    					{
+    						xtype: "panel",
+    						border: 0,
+    						flex: 1,
+    						layout: {
+    							type: "border"
+    						},
+    						tbar: [
+    							{
+    								text: IRm$/*resources*/.r1("B_SAVE"),
+    								handler: function() {
+    									this.l4/*maintoolbar*/(0);
+    								},
+    								scope: this
+    							},
+    							{
+    								text: IRm$/*resources*/.r1("L_REFRESH"),
+    								handler: function() {
+    									this.l1/*loadContent*/();
+    								},
+    								scope: this
+    							}
+    						],
+    						items: [
+    							{
+    								xtype: "panel",
+    								region: "center",
+    								flex: 2,
+    								border: 0,
+    								layout: "border",
+    								items: [
+		    							{
+		    								xtype: "treepanel",
+		    								region: "center",
+		    								flex: 1,
+		    								title: "Menu Structures",
+		    								name: "menust",
+		    								
+		    								rootVisible: true,
+		    								plugins: [
+		    									{
+		    										ptype: "cellediting"
+		    									}
+		    								],
+		    								store: {
+		    									xtype: "treestore",
+		    									proxy: {
+													type: "memory"
+												},
+												fields: [
+													"name", "description", "sid"
+												]
+		    								},
+		    								columns: [
+		    									{
+		    										xtype: "treecolumn",
+		    										text: IRm$/*resources*/.r1("B_TITLE"),
+		    										dataIndex: "name",
+		    										editor: "textfield",
+		    										minWidth: 200
+		    									},
+		    									{
+		    										text: IRm$/*resources*/.r1("B_DESC"),
+		    										dataIndex: "description",
+		    										editor: "textfield",
+		    										flex: 1,
+		    										minWidth: 200
+		    									},
+		    									{
+		    										xtype: "actioncolumn",
+		    										width: 50,
+		    										items: [
+			    										{
+															iconCls: "icon-grid-config",
+															tooltip: IRm$/*resources*/.r1("B_CONFIG_ITEM"),
+															handler: function (grid, rowIndex, colIndex, item, e, record) {
+																this._1/*configPage*/(record);
+															},
+															scope: this
+														}
+													]
+		    									}
+		    								],
+		    								listeners: {
+		    									beforeselect: function(tobj, record, index, eopts) {
+		    										this._l8/*updateCurrent*/();
+		    									},
+		    									cellclick: function(tobj, td, cellIndex, record, tr, rowIndex, e, eOpts) {
+		    										var me = this,
+		    											sid = record.get("sid"),
+		    											mgrid = me.down("[name=mgrid]"),
+		    											appinfo = me.c1/*appinfo*/,
+		    											m = appinfo._a/*menustructure*/,
+		    											dp = [], i;
+		    										
+		    										if (m.map[sid])
+		    										{
+		    											dp = m.map[sid].items || [];
+		    										}
+		    										
+		    										for (i=0; i < dp.length; i++)
+		    										{
+		    											dp[i].sid = sid;
+		    										}
+		    										
+		    										mgrid.store.loadData(dp);
+		    									},
+		    									scope: this
+		    								},
+		    								tbar: [	
+		    									{
+		    										text: IRm$/*resources*/.r1("L_ADD_NEW"),
+		    										handler: function() {
+		    											me._l2/*menusthandler*/.call(me, 0);
+		    										}
+		    									},
+		    									{
+		    										text: IRm$/*resources*/.r1("L_REMOVE_SELECTED"),
+		    										handler: function() {
+		    											me._l2/*menusthandler*/.call(me, 1);
+		    										}
+		    									},
+		    									{
+		    										text: IRm$/*resources*/.r1("B_MOVE_UP"),
+		    										handler: function() {
+		    											me._l2/*menusthandler*/.call(me, 2);
+		    										}
+		    									},
+		    									{
+		    										text: IRm$/*resources*/.r1("B_MOVE_DOWN"),
+		    										handler: function() {
+		    											me._l2/*menusthandler*/.call(me, 3);
+		    										}
+		    									},
+		    									{
+		    										text: "Move Left",
+		    										hidden: true,
+		    										handler: function() {
+		    											me._l2/*menusthandler*/.call(me, 4);
+		    										}
+		    									}
+		    								]
+		    							},
+		    							
+		    							{
+		    								xtype: "gridpanel",
+		    								region: "south",
+		    								name: "mgrid",
+		    								selModel: {
+		    									selection: "checkboxmodel",
+		    									checkSelector: ".x-grid-cell"
+		    								},
+		    								viewConfig: {
+												plugins: [
+													{
+														ptype: "gridviewdragdrop",
+														ddGroup: "_I$RD_G_",
+														enableDrop: true,
+														enableDrag: false
+													}
+												]
+											},
+		    								split: true,
+		    								flex: 1,
+		    								title: IRm$/*resources*/.r1("L_C_ITEMS"),
+		    								tbar: [
+		    									{
+		    										text: IRm$/*resources*/.r1("L_ADD_NEW"),
+		    										hidden: true,
+		    										handler: function() {
+		    											this._l7/*toolbar_content*/(0);
+		    										},
+		    										scope: this
+		    									},
+		    									{
+		    										text: IRm$/*resources*/.r1("L_REMOVE_SELECTED"),
+		    										handler: function() {
+		    											this._l7/*toolbar_content*/(1);
+		    										},
+		    										scope: this
+		    									},
+		    									{
+		    										text: IRm$/*resources*/.r1("B_MOVE_UP"),
+		    										handler: function() {
+		    											this._l7/*toolbar_content*/(2);
+		    										},
+		    										scope: this
+		    									},
+		    									{
+		    										text: IRm$/*resources*/.r1("B_MOVE_DOWN"),
+		    										handler: function() {
+		    											this._l7/*toolbar_content*/(3);
+		    										},
+		    										scope: this
+		    									}
+		    								],
+		    								store: {
+		    									xtype: "store",
+		    									fields: [
+		    										"uid", "name", "nodepath", "type", "sid"
+		    									]
+		    								},
+		    								columns: [
+		    									{
+		    										text: IRm$/*resources*/.r1("B_NAME"),
+		    										dataIndex: "name"
+		    									},
+		    									{
+		    										text: IRm$/*resources*/.r1("B_TYPE"),
+		    										dataIndex: "type"
+		    									},
+		    									{
+		    										text: IRm$/*resources*/.r1("B_DESC"),
+		    										dataIndex: "description"
+		    									},
+		    									{
+		    										text: IRm$/*resources*/.r1("B_LOC"),
+		    										dataIndex: "nodepath",
+		    										flex: 1
+		    									}
+		    								]
+		    							}
+		    						]
+		    					},
+    							{
+    								xtype: "panel",
+    								region: "east",
+    								split: true,
+    								collapsible: true,
+    								collapsed: false, // true,
+    								flex: 1,
+    								title: IRm$/*resources*/.r1("L_NAVIGATOR"),
+    								layout: {
+    									type: "vbox",
+    									align: "stretch"
+    								},
+    								items: [
+    									new IG$/*mainapp*/._Idd/*explorerTree*/({
+    										name: "mtree",
+    										flex: 1,
+											gridupdate: {
+												handler: me._IQ9/*updateGridContent*/,
+												scope: me
+											}
+										}),
+										{
+											xtype: "gridpanel",
+											name: "mg",
+											viewConfig: {
+												plugins: [
+													{
+														ptype: "gridviewdragdrop",
+														ddGroup: "_I$RD_G_",
+														enableDrop: false,
+														enableDrag: true
+													}
+												]
+											},
+											flex: 1,
+											store: {
+												xtype: "store",
+												fields: [
+													"uid", "name", "type", "nodepath"
+												]
+											},
+											columns: [
+												{
+													text: IRm$/*resources*/.r1("B_NAME"),
+													dataIndex: "name"
+												},
+												{
+													text: IRm$/*resources*/.r1("B_TYPE"),
+													dataIndex: "type"
+												},
+												{
+													text: IRm$/*resources*/.r1("B_LOC"),
+													dataIndex: "nodepath"
+												}
+											]
+										}
+    								]
+    							}
+    						]
+    					}
+    				]
+    			}
+    		]
+    	});
+    	
+    	IG$/*mainapp*/._I7_/*dashboardmenu*/.superclass.initComponent.call(this);
+    },
+    listeners: {
+    	afterrender: function(tobj) {
+    		this.l1/*loadContent*/();
+    	}
+    }
+});
+
+IG$/*mainapp*/._I7e/*changeApp*/ = function() {
+}
+
+IG$/*mainapp*/._N12/*MainPanel*/ = IG$/*mainapp*/.x_c/*extend*/(IG$/*mainapp*/.pb, {
+	layout: "card",
+	
+	customAddTab: function(uid, ext_panel) {
+		var me = this,
+			tab = me.getComponent(uid);
+			
+		if (tab)
+		{
+			IG$/*mainapp*/._I7e/*changeApp*/(2);
+			me.setActiveTab(tab);
+		}
+		else
+		{
+			IG$/*mainapp*/._I7e/*changeApp*/(2);
+			ext_panel.id = uid;
+			tab = me.add(ext_panel);
+			me.setActiveTab(tab);
+		}
+	},
+	
+    m1$7/*navigateApp*/: function(uid, itemtype, itemname, itemaddr, baddhistory, writable, option, toption) {
+    	var key,
+    		tab = this.getComponent(itemtype + "_" + uid),
+    		pitem,
+    		breadcrumbs = IG$/*mainapp*/.breadcrumbs,
+			breadcrumb = $(".breadcrumb", breadcrumbs.body.dom);
+    		
+    	if (tab)
+    	{
+    		IG$/*mainapp*/._I7e/*changeApp*/(2);
+    		
+    		this.setActiveTab(tab);
+    		
+    		breadcrumb.empty();
+			$("<li><span class='link'>" + (tab.title || itemname) + "</span></li>").appendTo(breadcrumb);
+    		
+    		if (toption && tab.applyOption)
+    		{
+    			tab.applyOption.call(tab, toption);
+    		}
+    		
+    		if (itemtype == "dashboard")
+    		{
+    			var teditor = this.getComponent("dashboardedit" + "_" + uid);
+    			if (teditor)
+    			{
+    				if (tab.uid && tab.uid.length > 0)
+		    		{
+		   				tab.M1/*procRunDashboard*/.call(tab);
+		    		}
+    			}
+    		}
+    	}
+    	else
+    	{
+    		toption = toption || {};
+    		toption.header = false;
+    		toption._iv/*igcviewmode*/ = "dashboard";
+    		
+    		pitem = IG$/*mainapp*/._I61/*createAppPanel*/(uid, itemtype, itemname, itemaddr, writable, toption);
+    		
+    		if (pitem)
+    		{
+    			pitem.address = itemaddr;
+    			pitem.title = itemname; // IG$/*mainapp*/._I28/*getTabTitle*/(itemname);
+    			
+    			breadcrumb.empty();
+    			$("<li><span class='link'>" + itemname + "</span></li>").appendTo(breadcrumb);
+    			
+    			if (option)
+    			{
+    				for (key in option)
+    				{
+    					pitem[key] = option[key];
+    				}
+    			}
+    			
+    			if (pitem.isWindow == true)
+    			{
+    				if (!IG$/*mainapp*/.ps[pitem.address])
+    				{
+    					IG$/*mainapp*/.ps[pitem.address] = pitem;
+    					pitem.on("close", function() {
+    						delete IG$/*mainapp*/.ps[pitem.address];
+    					});
+    					pitem.show();
+    				}
+    			}
+    			else
+    			{
+    				IG$/*mainapp*/._I7e/*changeApp*/(2);
+    				pitem.id = itemtype + "_" + uid;
+    				var p = this.add(pitem);
+    				this.setActiveTab(p);
+    			}
+    		}
+    		else
+    		{
+    			baddhistory = false;
+    		}
+    	}
+    	
+    	if (baddhistory == true)
+    	{
+    		lastHist = 'lang=' + useLocale + '&p1=' + itemtype + '&p2=' + uid;
+    		hist.addHistory(lastHist);
+    	}
+    },
+	
+	i1/*initRecentVisit*/ : function(){
+		// when login user changed
+	},
+	
+	iLL/*updateLoginInfo*/: function() {
+		// when get userdetail finished
+		var viewport = IG$/*mainapp*/.__1/*viewport*/,
+			llogin = $("#igc_login_user"),
+			ltime,
+			lmsg,
+			logininfo;
+		
+		if (IG$/*mainapp*/._I83/*dlgLogin*/ && IG$/*mainapp*/._I83/*dlgLogin*/.jS1/*loginInfo*/)
+		{
+			logininfo = IG$/*mainapp*/._I83/*dlgLogin*/.jS1/*loginInfo*/;
+			lmsg = logininfo.username;
+			llogin.html(lmsg);
+			
+			if (!viewport._1/*loadInit*/)
+			{
+				viewport._1/*loadInit*/ = true;
+				this.L1/*loadInit*/(viewport);
+			}
+			
+			IG$/*mainapp*/.$1/*loadApp*/(logininfo.tmpl);
+			
+			if (!IG$/*mainapp*/._I83/*dlgLogin*/.jS1/*loginInfo*/.__bdmenu)
+			{
+				IG$/*mainapp*/._I83/*dlgLogin*/.jS1/*loginInfo*/.__bdmenu = 1;
+				llogin.bind("click", function() {
+					
+				});
+			}
+		}
+	},
+	
+	L1/*loadInit*/: function(viewport) {
+		var me = this,
+			navbar = viewport.down("[name=navbar]"),
+			sidebar_sc = viewport.down("[name=sidebar_sc]"),
+			sidebar = viewport.down("[name=sidebar]"),
+			dnavbar = $(navbar.body.dom),
+			
+			isadmin = IG$/*mainapp*/._I83/*dlgLogin*/.jS2/*isAdmin*/,
+			btn;
+		
+		btn = $("#nav_mgrmenu", dnavbar)[isadmin ? "show" : "hide"]();
+		btn.bind("click", function() {
+			IG$/*mainapp*/._I65/*procMenuCommand*/("CMD_D_MENU");
+		});
+		
+		btn = $(".sidebar-btn-d-menu", sidebar_sc.body.dom);
+		btn.bind("click", function() {
+			sidebar.getLayout().setActiveItem(0);
+		});
+		
+		btn = $(".sidebar-btn-n-menu", sidebar_sc.body.dom);
+		btn.bind("click", function() {
+			if (!me.floaded)
+			{
+				me._1/*loadFavorites*/.call(me);
+			}
+			sidebar.getLayout().setActiveItem(1);
+		});
+		
+		me.L2/*loadMenu*/(viewport, dnavbar);
+	},
+	
+	L2/*loadMenu*/: function(viewport, dnavbar) {
+		var me = this,
+			sidebar_m0 = viewport.down("[name=sidebar_m0]"),
+			sarea = $("#sidebar", sidebar_m0.body.dom),
+			darea = $(".navbar-top-menu", dnavbar),
+			nbase = $(".navbar-brand", dnavbar),
+			req, snav;
+		
+		darea.empty();
+		
+		snav = $("<ul class='igc-smenu-main'></ul>").appendTo(sarea);
+		
+		req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		req.showerror = false;
+		req.init(me, 
+			{
+	            ack: "5",
+	            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: "/SYS_Config/dashboardmenu"}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: ''})
+	        }, me, function(xdoc) {
+	        	var appinfo = new IG$/*mainapp*/.CI7_/*dashboardmenustructure*/(xdoc),
+	        		root = appinfo._a/*menustructure*/.root,
+	        		unav = $("<ul class='igc-tmenu-main'></ul>").appendTo(darea),
+	        		vmenus;
+	        		
+	        	root.option && me._2/*loadPage*/.call(me, root);
+	        	
+	        	nbase.bind("click", function() {
+	        		root.option && me._2/*loadPage*/.call(me, root);
+	        	});
+	        	
+	        	$.each(root.children, function(n, item) {
+	        		var li = $("<li><span class='igc-tnav-item'>" + item.name + "</span></li>").appendTo(unav);
+	        		li.bind("click", function() {
+	        			snav.empty();
+	        			me.L3/*makeMenu*/(snav, item, 0);
+	        		});
+	        	});
+	        	
+	        	if (ig$/*appoption*/.dashboard_custom && ig$/*appoption*/.dashboard_custom.menu_loaded)
+	        	{
+	        		ig$/*appoption*/.dashboard_custom.menu_loaded.call(me, root, me, snav);
+	        	}
+	        	
+	        	vmenus = ig$/*appoption*/.c_menus;
+	        	
+	        	if (vmenus && vmenus.menus)
+	        	{
+	        		$.each(vmenus.menus, function(n, item) {
+	        			var li = $("<li><span class='igc-tnav-item igc-tnav-citem " + (item.css || "") + "'>" + item.name + "</span></li>").appendTo(unav);
+		        		li.bind("click", function() {
+		        			snav.empty();
+		        			me.L3/*makeMenu*/(snav, item, 0, 1);
+		        		});
+	        		});
+	        	}
+	        	//this.L3/*makeMenu*/(unav, root, 0);
+	        });
+		req._l/*request*/();
+	},
+	
+	L3/*makeMenu*/: function(darea, tnode, level, c_item) {
+		var me = this;
+		
+		$.each([tnode.children, tnode.items], function(n, arr) {
+			arr && $.each(arr, function(t, node) {
+				var li = $("<li><div class='indicator'></div></li>").appendTo(darea),
+					btn = $("<div class='igc-nav-item'>" + node.name + "</div>").appendTo(li),
+					smenu, i,
+					sexp,
+					hassub = false;
+					
+				btn.hover(function() {
+						$(".indicator", li).addClass("igc-hover");
+					},
+					function() {
+						$(".indicator", li).removeClass("igc-hover");
+					}
+				);
+				
+				hassub = (!c_item && node.children && node.children.length > 0) || node.type == "Folder" || (node.items && node.items.length > 0) ? true : false;
+				
+				if (hassub)
+				{
+					sexp = $("<div class='igc-submenu-expand'>&gt;</div>").appendTo(li);
+					smenu = $("<ul class='submenu'></ul>").appendTo(li);
+					smenu.hide();
+					
+					var mfunc = function(e) {
+						e.stopPropagation();
+						if (!node.loaded && node.type == "Folder")
+						{
+							var req = new IG$/*mainapp*/._I3e/*requestServer*/();
+							req.showerror = false;
+							req.init(me, 
+								{
+						            ack: "5",
+						            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: node.uid}),
+						            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: ''})
+						        }, me, function(xdoc) {
+						        	var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+						        		tnodes = (tnode ? IG$/*mainapp*/._I26/*getChildNodes*/(tnode) : null),
+						        		i,
+						        		p;
+						        	
+						        	node.items = [];
+						        	node.loaded = true;
+						        		
+						        	if (tnodes)
+						        	{
+						        		for (i=0; i < tnodes.length; i++)
+						        		{
+						        			p = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]);
+						        			if ((/Report|Folder|Dashboard/).test(p.type))
+						        			{
+						        				node.items.push(p);
+						        			}
+						        		}
+						        		IG$/*mainapp*/._I10/*sortMeta*/(node.items);
+						        		me.L3/*makeMenu*/.call(me, smenu, node, level+1);
+						        		smenu.show();
+						        	}
+						        });
+							req._l/*request*/();
+						}
+						else
+						{
+							smenu.toggle();
+						}
+					};
+					
+					sexp.bind("click", mfunc);
+					btn.bind("click", mfunc);
+					me.L3/*makeMenu*/.call(me, smenu, node, level+1);
+				}
+				else
+				{
+					if (c_item)
+					{
+						btn.bind("click", function(e) {
+							if (node.handler)
+							{
+								node.handler.call(this, node);
+							}
+						});
+					}
+					else if (node.uid)
+					{
+						btn.bind("click", function(e) {
+							me.m1$7/*navigateApp*/.call(me, node.uid, node.type.toLowerCase(), node.name, node.nodepath, false, false);
+						});
+					}
+				}
+			});
+		});
+	},
+	
+	setActiveTab: function(tb) {
+		this.setActiveItem(tb);
+	},
+	
+	_1/*loadFavorites*/: function() {
+		var panel=this,
+			req = new IG$/*mainapp*/._I3e/*requestServer*/();
+		
+		req.init(panel, 
+			{
+	            ack: "11",
+	        	payload: IG$/*mainapp*/._I2d/*getItemAddress*/({}),
+	            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'favorites'})
+	        }, panel, panel.rs__1/*loadFavorites*/, null, null);
+		req._l/*request*/();
+	},
+	
+	rs__1/*loadFavorites*/: function(xdoc) {
+		var me = this,
+			i,
+			viewport = IG$/*mainapp*/.__1/*viewport*/,
+			sidebar_m1 = viewport.down("[name=sidebar_m1]"),
+			tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg"),
+			tnodes = (tnode) ? IG$/*mainapp*/._I26/*getChildNodes*/(tnode) : null,
+			d = [],
+			el;
+			
+		me.floaded = true;
+		
+		if (tnodes)
+		{
+			el = $("#sidebar_fav", sidebar_m1.el.dom);
+			el = $(".navbar-top-menu", el),
+			el.empty();
+			
+			for (i=0; i < tnodes.length; i++)
+			{
+				d.push(IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnodes[i]));
+			}
+			
+			me.L3/*makeMenu*/(el, {
+					children: null,
+					items: d
+				}, 0);
+		}
+	},
+	
+	_2/*loadPage*/: function(item) {
+		var me = this,
+			opt = item.option,
+			ltype = opt.ltype,
+			url,
+			req, citem;
+			
+		switch (ltype)
+		{
+		case "html":
+			url = opt.html;
+			url && me._3/*loadHTML*/(item, opt, url);
+			break;
+		case "report":
+			if (opt.rptl_uid)
+			{
+				if (opt.rptl_item)
+				{
+					citem = opt.rptl_item;
+					me.m1$7/*navigateApp*/.call(me, citem.uid, citem.type.toLowerCase(), citem.name, citem.nodepath, false, false);
+				}
+				else
+				{
+					req = new IG$/*mainapp*/._I3e/*requestServer*/();
+					req.init(me,
+						{
+				            ack: "11",
+				            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: opt.rptl_uid}),
+				            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: 'translate'})
+				        }, me, function(xdoc) {
+				        	var me = this,
+								tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+								citem;
+		
+							if (tnode)
+							{
+								citem = IG$/*mainapp*/._I1c/*XGetAttrProp*/(tnode);
+								opt.rptl_item = citem;
+								me.m1$7/*navigateApp*/.call(me, citem.uid, citem.type.toLowerCase(), citem.name, citem.nodepath, false, false);
+							}
+				        }, false);
+					req._l/*request*/();
+				}
+			}
+			break;
+		}
+	},
+	
+	_3/*loadHTML*/: function(item, opt, url) {
+		var me = this,
+			tid = "tpage_" + item.sid,
+			p = this.getComponent(tid);
+		
+		IG$/*mainapp*/._I7e/*changeApp*/(2);
+		
+		if (p)
+		{
+			this.setActiveTab(p);
+		}
+		else
+		{
+			p = Ext.create(Ext.panel.Panel, {
+				layout: "fit",
+				name: tid,
+				id: tid,
+				autoScroll: true,
+				autoLoad: {
+	            	url: url, 
+	            	callback: function() {
+	            		if (opt.scrp && window[opt.scrp])
+	            		{
+	            			var m = this.down("[name=" + tid + "]");
+	            			window[opt.scrp].call(me, item, m);
+	            		}
+	            	}, 
+	            	scope: this
+	            }
+			});
+			
+			this.add(p);
+			this.setActiveTab(p);
+		}
+	},
+	
+	//inherit docs
+    initComponent: function() {
+        var me = this;
+
+        me.callParent(arguments);
+    },
+    listeners: {
+    	beforeadd: function(tobj, component, index, eOpts) {
+    		component.closable = false;
+    		component.setTitle(null);
+    	}
+    }
+});
+
+IG$/*mainapp*/._n2/*navigateMenuByUID*/ = function(uid, hashtype, param, bhist)
+{
+	var req = new IG$/*mainapp*/._I3e/*requestServer*/();
+	
+	req.init(null, 
+		{
+            ack: "11",
+            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({uid: uid}),
+            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "translate"})
+        }, null, function(xdoc) {
+        	var node = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+				itemuid = IG$/*mainapp*/._I1b/*XGetAttr*/(node, "uid"),
+				typename = IG$/*mainapp*/._I1b/*XGetAttr*/(node, "type").toLowerCase(),
+				itemname = IG$/*mainapp*/._I1b/*XGetAttr*/(node, "name"),
+				itemaddr = IG$/*mainapp*/._I1b/*XGetAttr*/(node, "nodepath"),
+				writable = (IG$/*mainapp*/._I1b/*XGetAttr*/(node, "manage") == 'T' || IG$/*mainapp*/._I1b/*XGetAttr*/(node, "writable") == 'T') ? true : false,
+				isexport = false; 
+				
+			if (typename == 'dashboard' && hashtype == 'dashboardedit')
+			{
+				typename = hashtype;
+			}
+			else if (typename == "export")
+			{
+				isexport = true;
+				typename = "report";
+			}
+			
+			IG$/*mainapp*/._I7d/*mainPanel*/.m1$7/*navigateApp*/.call(IG$/*mainapp*/._I7d/*mainPanel*/, itemuid, typename, itemname, itemaddr, (typeof(bhist) == "undefined" ? true : bhist), writable, null, param);
+        }, null);
+	req._l/*request*/();
+};
+IG$/*mainapp*/._I8b/*showLoginProc*/ = function() {
+	var lform = $('#loginWindow'),
+		uid = $("#userid");
+	lform.hide();
+}
+
+IG$/*mainapp*/.$1/*loadApp*/ = function(tmpl) {
+	
+};
+
+IG$/*mainapp*/._$$1/*changePassword*/ = function(u1, u2, u3, callback) {
+	var panel = null;
+		
+	var req = new IG$/*mainapp*/._I3e/*requestServer*/();
+	req.init(panel, 
+		{
+            ack: "23",
+            payload: '<smsg></smsg>',
+            mbody: '<smsg></smsg>'
+        }, panel, function(xdoc) {
+        	var panel = this,
+				root = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg"),
+				item = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, "/smsg/item"),
+				ltoken;
+			
+			if (item)
+			{
+				p1 = IG$/*mainapp*/._I1a/*getSubNodeText*/(item, "p1");
+				p2 = IG$/*mainapp*/._I1a/*getSubNodeText*/(item, "p2");
+				
+				if (p1 && p2)
+				{
+					IG$/*mainapp*/._I3a/*rsaPublicKeyModulus*/ = p1;
+					IG$/*mainapp*/._I3b/*rsaPpublicKeyExponent*/ = p2;
+					var panel = this,
+						opasswd = u1.val(),
+						npass1 = u2.val(),
+						npass2 = u3.val(),
+						enc,
+						req;
+					
+					if (npass1 != npass2)
+					{
+						IG$/*mainapp*/._I54/*alertmsg*/(ig$/*appoption*/.appname, 'Password is not match with confirm value', null, null, 1, "error");
+						return;
+					}
+					
+					enc = IG$/*mainapp*/._I3c/*encryptkey*/([opasswd, npass1]);
+					opasswd = enc[0];
+					npass1 = enc[1];
+					
+					req = new IG$/*mainapp*/._I3e/*requestServer*/();
+					req.init(panel, 
+		    			{
+			                ack: "28",
+				            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({address: "/user"}),
+				            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "changepassword", password: npass1, oldpassword: opasswd})
+			            }, panel, function(xdoc) {
+			            	callback && callback.execute();
+			            }, null);
+				    req._l/*request*/();
+				}
+			}
+        }, null);
+    req._l/*request*/();
+};
+
+$(document).ready(function() {
+    $("#lpt", "#loading").css("width", "80%");
+    
+	IRm$/*resources*/.r2/*loadResources*/({
+		func: function() {
+			$("#lpt", "#loading").css("width", "100%");
+			
+			setTimeout(function() {
+				var i,
+					copt;
+					
+	    		IG$/*mainapp*/.lE/*loadExtend*/.rcsloaded = true;
+	    		
+	    		copt = {
+					closeText: IRm$/*resources*/.r1("L_C_CLOSE"),
+					prevText: IRm$/*resources*/.r1("L_C_PREV"),
+					nextText: IRm$/*resources*/.r1("L_C_NEXT"),
+					currentText: IRm$/*resources*/.r1("L_C_CUR"),
+					monthNames: IRm$/*resources*/.r1("L_C_M_NAMES").split("#"),
+					monthNamesShort: IRm$/*resources*/.r1("L_C_M_NAMES_S").split("#"),
+					dayNames: IRm$/*resources*/.r1("L_C_D_NAMES").split("#"),
+					dayNamesShort: IRm$/*resources*/.r1("L_C_D_NAMES_S").split("#"),
+					dayNamesMin: IRm$/*resources*/.r1("L_C_D_NAMES_M").split("#"),
+					weekHeader: IRm$/*resources*/.r1("L_C_W_H"),
+					firstDay: 0,
+					isRTL: false,
+					showMonthAfterYear: true,
+					yearSuffix: IRm$/*resources*/.r1("L_C_YR_SFX")
+				};
+				
+				$.datepicker.setDefaults(copt);
+				
+				IG$/*mainapp*/.r_cl_lc/*calendar_locale*/ = copt;
+	    		
+	    		IG$/*mainapp*/._I7d/*mainPanel*/ = new IG$/*mainapp*/._N12/*MainPanel*/({
+	    		});
+	    		
+			    var doc = $(document),
+			    	bd = $("body"),
+			    	viewport = new IG$/*mainapp*/.pb({
+				        "layout": {
+				        	type: "vbox",
+				        	align: "stretch"
+				        },
+				        renderTo: $("body"),
+				        items:[ 
+				        	{
+				        		xtype: "container",
+				        		region: "north",
+				        		name: "navbar",
+				        		contentEl: "#navbar",
+				        		height: 45
+				        	},
+				        	{
+				        		xtype: "container",
+				        		layout: {
+				        			type: "hbox",
+				        			align: "stretch"
+				        		},
+				        		flex: 1,
+				        		items: [
+						        	{
+						        		xtype: "container",
+						        		region: "west",
+						        		name: "sidebarpanel",
+						        		media: {
+						        			minWidth: 768
+						        		},
+						        		width: 190,
+						        		layout: {
+						        			type: "vbox",
+						        			align: "stretch"
+						        		},
+						        		items: [
+						        			{
+								        		xtype: "container",
+								        		height: 40,
+								        		name: "sidebar_sc",
+								        		contentEl: "#sidebar-shortcuts",
+								        		hidden: true
+								        	},
+								        	{
+								        		xtype: "container",
+								        		flex: 1,
+								        		name: "sidebar",
+								        		layout: "card",
+								        		items: [
+								        			{
+								        				xtype: "container",
+								        				name: "sidebar_m0",
+								        				contentEl: "#sidebar"
+								        			},
+								        			{
+								        				xtype: "container",
+								        				name: "sidebar_m1",
+								        				contentEl: "#sidebar_fav"
+								        			},
+								        			{
+								        				xtype: "container",
+								        				name: "sidebar_m2"
+								        			}
+								        		]
+								        	}
+								        ]
+								    },
+						        	{
+						        		xtype: "container",
+						        		flex: 1,
+						        		layout: {
+						        			type: "vbox",
+						        			align: "stretch"
+						        		},
+						        		items: [
+						        			{
+						        				xtype: "container",
+						        				name: "breadcrumbs",
+						        				contentEl: "#breadcrumbs",
+						        				height: 30
+						        			},
+						        			{
+						        				xtype: "container",
+						        				name: "maintab",
+						        				border: 1,
+						        				flex: 1,
+						        				layout: "fit",
+						        				items: [
+						        					IG$/*mainapp*/._I7d/*mainPanel*/
+						        				]
+						        			}
+						        		]
+						        	}
+						        ]
+						    }
+						],
+						listeners: {
+							afterrender: function(tobj) {
+								var navbar_dmenu = $("#navbar_dmenu", tobj.body.dom),
+									sidebarpanel = tobj.down("[name=sidebarpanel]");
+								
+								if (navbar_dmenu)
+								{
+									navbar_dmenu.bind("click", function() {
+										var eldom = $(sidebarpanel._el.dom);
+										eldom.toggle();
+										
+										eldom.css({zIndex: 2000});
+									});
+								}
+							}
+						}
+				    });
+			    
+			    viewport.setSize(bd.width(), bd.height());
+			    
+			    var w_timer = -1;
+			    
+			    $(window).resize(function() {
+			    	if (w_timer)
+			    	{
+			    		clearTimeout(w_timer);
+			    	}
+			    	w_timer = setTimeout(function() {
+			    		viewport.setSize(bd.width(), bd.height());
+			    	}, 10);
+			    });
+			    
+			    IG$/*mainapp*/.__1/*viewport*/ = viewport;
+			    IG$/*mainapp*/.breadcrumbs = viewport.down("[name=breadcrumbs]");
+			    			    
+				setTimeout(function(){
+			        $('#loading').fadeOut({remove:true});
+			        $('#loading-mask').fadeOut({remove:true});
+			    }, 150);
+	    		
+	    		var uid = $.cookie("lui") || "";
+				var upd = "";
+					
+				IG$/*mainapp*/._I88/*createLoginPanel*/(uid, upd, true);
+				IG$/*mainapp*/._I14/*loadMapData*/();
+				
+				var req = new IG$/*mainapp*/._I3e/*requestServer*/();
+				req.init(null, 
+					{
+				        ack: "11",
+			            payload: IG$/*mainapp*/._I2d/*getItemAddress*/({}),
+			            mbody: IG$/*mainapp*/._I2e/*getItemOption*/({option: "ls", mts: (window.m$mts || ""), lang: (window.useLocale || "")})
+				    }, null, 
+				    function(xdoc){
+				    	//check out server login proc
+				    	//var xmlmessage = IG$/*mainapp*/._I25/*toXMLString*/(xdoc),
+				    	var tnode = IG$/*mainapp*/._I18/*XGetNode*/(xdoc, '/smsg'),
+				    		islogin = false;
+				    	
+				    	if (tnode)
+				    	{
+				    		var uuid = IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, 'uuid');
+				    		
+				    		if (uuid)
+				    		{
+				    			islogin = true;
+				    			IG$/*mainapp*/._I83/*dlgLogin*/.callback = new IG$/*mainapp*/._I3d/*callBackObj*/(this, IG$/*mainapp*/._I8b/*showLoginProc*/);
+				    			IG$/*mainapp*/._I83/*dlgLogin*/.uuid = uuid; 
+				    			
+				    			IG$/*mainapp*/._I83/*dlgLogin*/.mts = {
+				    				sid: IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "mts"),
+				    				name: IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "mts_name")
+				    			};
+				    			
+				    			IG$/*mainapp*/._g$a/*global_mts*/ = IG$/*mainapp*/._I83/*dlgLogin*/.mts.sid; 
+				    			
+				    			if (window.m$mts && IG$/*mainapp*/._I83/*dlgLogin*/.mts.name != window.m$mts && IG$/*mainapp*/._I83/*dlgLogin*/.mts.sid != window.m$mts)
+				    			{
+				    				IG$/*mainapp*/._I8a/*showLogout*/(new IG$/*mainapp*/._I3d/*callBackObj*/(this, IG$/*mainapp*/._I8b/*showLoginProc*/));
+				    				return;
+				    			}
+				    			
+				    			IG$/*mainapp*/._I83/*dlgLogin*/.lastLogin = {
+				    				lastaccesstime: IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "lastaccesstime"),
+				    				lastaccesshost: IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "lastaccesshost"),
+				    				lastaccessaddr: IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "lastaccessaddr"),
+				    				accesshost: IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "accesshost"),
+									accessaddr: IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "accessaddr"),
+									accesstime: IG$/*mainapp*/._I1b/*XGetAttr*/(tnode, "accesstime")
+				    			};
+				    			
+				    			if (IG$/*mainapp*/._I7d/*mainPanel*/)
+				    			{
+				    				IG$/*mainapp*/._I7d/*mainPanel*/.iLL/*updateLoginInfo*/.call(IG$/*mainapp*/._I7d/*mainPanel*/);
+				    			}
+				    			IG$/*mainapp*/._I83/*dlgLogin*/.Js4/*getUserDetail*/.call(IG$/*mainapp*/._I83/*dlgLogin*/, false);
+				    		}
+				    	}
+				    	
+				    	if (islogin == false)
+				    	{
+				    		IG$/*mainapp*/._I89/*showLogin*/(new IG$/*mainapp*/._I3d/*callBackObj*/(this, IG$/*mainapp*/._I8b/*showLoginProc*/), 0);
+				    	}
+				    },
+				    function(){
+				    	IG$/*mainapp*/._I89/*showLogin*/(new IG$/*mainapp*/._I3d/*callBackObj*/(this, IG$/*mainapp*/._I8b/*showLoginProc*/), 0);
+				    	return true;
+				    });
+				
+				req._l/*request*/();
+				
+				
+			}, 300);
+		}
+	});
+});
+

@@ -59,11 +59,6 @@ ig$/*appoption*/.mainmenu = {
 							acls: "ig_dbcon"
 						},
 						{
-							rcs: "L_DATASET",
-							cmd: "CMD_DATASET",
-							acls: "ig_dataset"
-						},
-						{
 							rcs: "L_REG_TABLE",
 							acls: "ig_table",
 							cmd: "CMD_TABLE_REGISTER"
@@ -82,6 +77,11 @@ ig$/*appoption*/.mainmenu = {
 							rcs: "L_MGR_DASHBOARD",
 							acls: "ig_dbd",
 							cmd: "CMD_DBD_MGR"
+						},
+                        {
+							rcs: "L_DATASET",
+							cmd: "CMD_DATASET",
+							acls: "ig_dataset"
 						}
 					]
 				},
